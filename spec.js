@@ -8,6 +8,13 @@ const IGNORES = ['@todo:']
 let cBuffer = {}
 var ignoreMode = false
 
+/**
+ * Process the lines in sequence and control workflow.
+ *
+ * @param  {string} element [A line from the input file array]
+ * @param  {integer} index   [Position of the line in the array]
+ * @return {true}         [returns true]
+ */
 function processLines(element, index) {
 
   let line = element.trim()
@@ -30,13 +37,22 @@ function processLines(element, index) {
 
 /**
  * STARTING: Load input file and process each line.
+ *
  */
 console.log('** Starting Program...');
-let lines = FileOps.loadFile('./input/test.ts')
-//let lines = loadTs('./input/sp-client-platform.typeDoc.ts')
-lines.forEach(processLines);
-console.log(`** Read input file, ${lines.length} lines`)
+
+let markdowns = FileOps.walkFiles('./markdown')
+markdowns.forEach(name => FileOps.remove(`./markdown/${name}`))
 
 
-FileOps.writeFile(lines, './markdown/output.md')
-console.log(`** Wrote file`)
+let files = FileOps.walkFiles('./input')
+files.forEach(processFile)
+
+function processFile(fileName) {
+	console.log(`** Processing ${fileName}`);
+  let lines = FileOps.loadFile(`./input/${fileName}`)
+  lines.forEach(processLines);
+  console.log(`** Read input file, ${lines.length} lines`)
+  FileOps.writeFile(lines, `./markdown/${fileName}.md`)
+  console.log(`** Wrote file`)
+}
