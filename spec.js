@@ -32,7 +32,13 @@ function processLines(element, index) {
     return
   }
   else {
-    //console.log('Processing: ' + index + ' ' + line);
+    if (ignoreMode) {
+
+    }
+    else {
+
+    }
+
   }
 }
 
