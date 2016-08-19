@@ -31,6 +31,16 @@ export function writeFile(lines=[], path=''){
   }
 }
 
+export function writeObject(o={}, path=''){
+  try {
+			let j = JSON.stringify(o, null, 2)
+      fs.writeFileSync(path, j)
+  }
+  catch(e)
+  {
+    console.log(`Error loading the input file with string input, path: ${path}, ${e}`)
+  }
+}
 
 export function remove(path=''){
   try {

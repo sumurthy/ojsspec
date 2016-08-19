@@ -4,24 +4,6 @@
  * Implements the minimal functionality for a webpart. This class also provides a bunch of parameter
  * validate and access to readonly properties like the displayMode, properties, manifest, instanceId,
  * domElement, and so on...
- * 
- * The following methods in
- * the BaseClientSideWebPart have no functionality and are intended to be overridden
- * by the derived webpart:
- * 
- *    render       Render the webpart inside the provided dom element.
- * 
- * The following methods provide default implementations but may be overridden by the
- * derived webpart:
- * 
- *    constructor  Use super() as the first line in derived webpart's constructor.
- *    dispose      (optional) Dispose any resources it is holding on to e.g. dom Elements, server resources.
- *    serialize    Update webPartData in the derived web part and then call super.serialize().
- *    onEvent      (optional) event handler
- * 
- * The following methods are not intended to be overridden.
- * 
- *    renderError  Render an error message in the webpart container dom element.
  */
 declare class BaseClientSideWebPart<P> implements IClientSideWebPart {
   /**
@@ -38,8 +20,10 @@ declare class BaseClientSideWebPart<P> implements IClientSideWebPart {
    * your implementation dependent on the behaviours in the following code.
    */
   protected configureStartInternal(): void;
+
   /**
-   * @see IClientSideWebPart.ts
+   * Connects the web parts
+   * @param {string[]} ids collection of strings
    */
   public connectWebParts(ids: string[]): void;
   /**
@@ -55,31 +39,35 @@ declare class BaseClientSideWebPart<P> implements IClientSideWebPart {
    */
   protected displayMode: DisplayMode;
 
-  /**
-   * @see IClientSideWebPart.ts
-   */
+ /**
+ * [dispose description]
+ */
   public dispose(): void;
-  /**
-   * Root DOM element of the Web Part.
-   * @readonly
-   */
-  protected domElement: HTMLElement;
+
+	/**
+	 * [domElement description]
+	 * @type {HTMLElement}
+	 */
+	protected domElement: HTMLElement;
+
+	/**
+	 * [getPropertyPaneSettings description]
+	 * @return {IPropertyPaneData} [description]
+	 */
+  public getPropertyPaneSettings(): IPropertyPaneData;
 
   /**
-   * @see IClientSideWebPart.ts
-   */
-  public getPropertyPaneSettings(): IPropertyPaneData;
-  /**
-   * Host of the Web Part.
+   * [host description]
+   * @type {IWebPartHost}
    * @readonly
    */
   protected host: IWebPartHost;
 
-
-  /**
-   * Instance ID of the Web Part.
-   * @readonly
-   */
+	/**
+	 * [instanceId description]
+	 * @type {string}
+	 * @readonly
+	 */
   protected instanceId: string;
   /**
    * Web Part's manifest.
@@ -90,6 +78,7 @@ declare class BaseClientSideWebPart<P> implements IClientSideWebPart {
   /**
    * @see IClientSideWebPart.ts
    */
+	
   public onBeforeRender < T >(): Promise<T>;
   /**
    * @see IClientSideWebPart.ts
@@ -151,7 +140,7 @@ declare class BaseClientSideWebPart<P> implements IClientSideWebPart {
   protected renderedOnce: boolean;
   /**
    * Render an error message in the web part display area.  Also logs the error message to the IWebPartHost logger.
-   * 
+   *
    * @class {BaseClientSideWebPart}
    * @return {void}
    */
@@ -174,7 +163,7 @@ declare class BaseClientSideWebPart<P> implements IClientSideWebPart {
  * SharePoint Client-side Applications can use the SharePoint Canvas to enable rich content authoring
  * as part of their experience. The SharePoint canvas provides Rich Text Editing capabilities, SharePoint
  * Client-side WebPart aggregation and hosting, and a beautiful railed design experience.
- * 
+ *
  * @public
  */
 declare class Canvas {
@@ -199,14 +188,14 @@ declare class Canvas {
   /**
    * Display the Canvas' Toolbox at a given row. If the Toolbox is already open, the Toolbox will close
    * at its previous row and re-open at the new row.
-   * 
+   *
    * @return A boolean indicating whether the Toolbox successfully opened.
    */
   public openToolbox(row: number): boolean;
   /**
    * Get the preview image url generated from webpart manager if it is available.
    * The preview image is the first preview image provided by a webpart
-   * 
+   *
    * @return the URL of the preview image
    */
   public previewUrl: string;
@@ -221,7 +210,7 @@ declare class Canvas {
    * Serialize the current contents of the Canvas. The serialized string is in a HTML format understood by
    * SharePoint's Rich Text Field. The returned string can be crawled by search. Modifying the returned
    * string outside of the Canvas is not supported.
-   * 
+   *
    * @return Serialized representation of the Canvas at the time the method is invoked.
    */
   public serialize(): string;
@@ -335,7 +324,7 @@ enum HostType {
 
 /**
  * Client Side Web Part Interface.
- * 
+ *
  * The `render` API is mandatory to be implemented by a Web Part. All other APIs have default implementations in the
  * BaseClientSideWebPart and should be overridden on a need basis.
  */
@@ -343,27 +332,27 @@ interface IClientSideWebPart {
   /**
    * Event for the webpart to start the configuration panel. A webpart needs to implement this API if they
    * want to implement a completely custom property pane.
-   * 
+   *
    * @alpha
    */
   configureStart ?: () => void;
   /**
    * Connect this webpart to other webparts. The list of connected webpart ids is persisted in the persisted
    * store. That way when the webparts re-render the infrastructure knows how to re-connect them.
-   * 
+   *
    * @alpha
    */
   connectWebParts(ids: string[]): void;
   /**
    * Dispose the webpart and any other resources it is holding on to e.g. DOM elements, server resources etc...
-   * 
+   *
    * @alpha
    * @return {void}
    */
   dispose(): void;
   /**
    * Get property pane settings
-   * 
+   *
    * @alpha
    * @return {IPropertyPaneData}
    */
@@ -371,7 +360,7 @@ interface IClientSideWebPart {
   /**
    * This API should be used to perform long running operations before rendering the Web Part. The loading indicator
    * is displayed during the lifetime of this method.
-   * 
+   *
    * @alpha
    */
   onBeforeRender < T >(): Promise<T>;
@@ -380,41 +369,41 @@ interface IClientSideWebPart {
    * is expected to override this API when the Web Part's state is not fully reflected in the property bag i.e.
    * (this.properties). In the overridden method, the Web Part developer is expected to update the state of the Web
    * Part property bag. This way the Web Part serialization process will use the upto date state of the Web Part.
-   * 
+   *
    * @return - reference to searchable properties and properties that need link fixup. Please read
    * the documentation of IHtmlProperties interface for more details.
-   * 
+   *
    * @alpha
    */
   onBeforeSerialize(): IHtmlProperties;
   /**
    * Receives a custom event notification from the host page or another webpart. ReservedEventNames
    * defines some common events. Each webpart may process webpart specific events.
-   * 
+   *
    * @return {void}
-   * 
+   *
    * @alpha
    */
   onEvent ? < T >(eventName: string, eventObject: IWebPartEvent<T>): void;
   /**
    * optional property for preview/thumbnail image for the webpart
-   * 
+   *
    * @alpha
    */
   previewUrl ?: string;
   /**
    * This API should is called to render the Web Part in the specified display mode i.e. Read or Edit. This API is
    * mandatory and hence is required to be implented by a Web Part.
-   * 
+   *
    * @alpha
    */
   render(mode: DisplayMode, data?: IWebPartData): void;
   /**
    * This API is called to obtain the serialized state of the Web Part instance data. The serialized state can be
    * stored in a perstant databsae and deserialized to re-render the Web Part.
-   * 
+   *
    * @return - The instance data of the Web Part properties.
-   * 
+   *
    * @alpha
    */
   serialize(): IWebPartData;
@@ -472,7 +461,7 @@ interface ICustomPropertyPaneFieldProps {
 
 /**
  * @copyright Microsoft Corporation. All rights reserved.
- * 
+ *
  * @file Eventing related interfaces
  * Event object
  */
@@ -511,15 +500,15 @@ interface IEventCallback<T> {
  * Structure of the data that a webpart developer can return on the onBeforeSerialize() API.
  * The outcome contains 3 kay/value dictionaries for properties that need to be search indexed.
  * Both keys and values are expected to be strings and will be HTML encoded during serialization.
- * 
+ *
  * {
  *   searchableProperties: { 'prop1': 'value_of_prop1' },
  *   linkProperties: { 'prop2': 'http://www.contoso.com/page1.aspx' },
  *   imageLinkPropertes: { 'prop3': 'http://www.contoso.com/imag.png' }
  * }
- * 
+ *
  * This input would get translated to the following HTML string.
- * 
+ *
  * "<div data-sp-prop-name='prop1'>value1</div>
  * <link data-sp-prop-name='prop2' href='http://www.contoso.com/page1.aspx'>
  * <img data-sp-prop-name='prop2' href='http://www.contoso.com/image.png'>"
@@ -867,7 +856,7 @@ interface IReactWebPartProps extends IWebPartProps {
   /**
    * The display mode for the summary links component. It is either Read or Edit.
    * This value is read from web part and passed to here.
-   * 
+   *
    * @type {DisplayMode}
    */
   mode: DisplayMode;
@@ -889,7 +878,7 @@ interface IShell extends IServiceScopeProvider {
    * It implements special enhancements such as configuring default headers, adding
    * an "X-RequestDigest" header for write operations, and collecting telemetry
    * to help the service monitor the performance and reliability of the application.
-   * 
+   *
    * For communicating with non-SharePoint services, use BasicHttpClient instead.
    */
   httpClient: HttpClient;
@@ -1099,7 +1088,7 @@ interface IWebPartHost {
    * It implements special enhancements such as configuring default headers, adding
    * an "X-RequestDigest" header for write operations, and collecting telemetry
    * to help the service monitor the performance and reliability of the application.
-   * 
+   *
    * For communicating with non-SharePoint services, use BasicHttpClient instead.
    */
   httpClient: HttpClient;
@@ -1552,4 +1541,3 @@ enum WebPartConfigurationEvent {
   ConfigurationComplete = 1,
   OpenComplete = 2
 }
-

@@ -1,5 +1,6 @@
 //import {loadFile, writeFile}  from './modules/fileops'
 import * as FileOps from './modules/fileops'
+import * as Objects from './modules/objects'
 
 const SKIP = ['///', '']
 const C_START = '/**'
@@ -22,16 +23,13 @@ function processLines(element, index) {
   let secondWord = line.split(' ',2)[1]
 
   if (SKIP.includes(firstWord)) {
-    console.log('Skipping ' + element);
     return;
   }
   else if (IGNORES.includes(secondWord)) {
     ignoreMode = true
-    console.log("entering ignore more " + line)
     return
   }
   else {
-    console.log('Processing: ' + index + ' ' + line);
   }
 }
 
@@ -40,9 +38,23 @@ function processLines(element, index) {
  *
  */
 console.log('** Starting Program...');
-
 let markdowns = FileOps.walkFiles('./markdown')
 markdowns.forEach(name => FileOps.remove(`./markdown/${name}`))
+
+let c = JSON.parse(JSON.stringify(Objects.classObj))
+c.name = "hello"
+c.descr = "hello desc"
+c.type = "type"
+console.log(c);
+FileOps.writeObject(c, `./markdown/one.json`)
+
+let c2 = JSON.parse(JSON.stringify(Objects.classObj))
+c2.name = "hello2"
+c2.descr = "hello desc2"
+console.log(c2);
+FileOps.writeObject(c2, `./markdown/two.json`)
+
+
 
 
 let files = FileOps.walkFiles('./input')

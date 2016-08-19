@@ -1,0 +1,13 @@
+{
+  "name": "hello",
+  "type": "type",
+  "constr": {
+    "parameters": [],
+    "returnType": "",
+    "descr": ""
+  },
+  "properties": [],
+  "methods": [],
+  "functions": [],
+  "descr": "hello desc"
+}
