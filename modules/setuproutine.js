@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6282fdab93d485b53c1a1c15b83e2c8d7c383fd6
 import FileOps from './fileops'
 
 module.exports = {
