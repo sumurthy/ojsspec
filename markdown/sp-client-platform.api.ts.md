@@ -41,6 +41,7 @@ declare class BaseClientSideWebPart<P> implements IClientSideWebPart {
   /**
    * @see IClientSideWebPart.ts
    */
+
   public connectWebParts(ids: string[]): void;
   /**
    * Indicates whether the Web Part's configuration is reactive or not.
