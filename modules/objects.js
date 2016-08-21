@@ -13,13 +13,14 @@ module.exports = {
     },
     method: {
         name: "",
+				signature: "",
         descr: "",
         returnType: "",
         parameters: []
     },
     property: {
         name: "",
-        "accessType": "",
+        accessType: "",
         descr: "",
         type: "",
         readOnly: true
@@ -30,12 +31,5 @@ module.exports = {
         type: "",
         req: true
     },
-    enumObj: {
-        entries: []
-    },
-
-    enumEntry: {
-        key: "",
-        val: ""
-    }
+    enums: {}
 }

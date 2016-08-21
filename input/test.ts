@@ -1,5 +1,27 @@
 /**
  * Implements the minimal functionality for a webpart. This class also provides a bunch of parameter
+<<<<<<< HEAD
+ * validate and access to readonly properties like the displayMode, properties, manifest, instanceId,
+ * domElement, and so on...
+ *
+ * The following methods in
+ * the BaseClientSideWebPart have no functionality and are intended to be overridden
+ * by the derived webpart:
+ *
+ *    render       Render the webpart inside the provided dom element.
+ *
+ * The following methods provide default implementations but may be overridden by the
+ * derived webpart:
+ *
+ *    constructor  Use super() as the first line in derived webpart's constructor.
+ *    dispose      (optional) Dispose any resources it is holding on to e.g. dom Elements, server resources.
+ *    serialize    Update webPartData in the derived web part and then call super.serialize().
+ *    onEvent      (optional) event handler
+ *
+ * The following methods are not intended to be overridden.
+ *
+=======
+>>>>>>> 6282fdab93d485b53c1a1c15b83e2c8d7c383fd6
  *    renderError  Render an error message in the webpart container dom element.
  */
 declare class BaseClientSideWebPart<P> implements IClientSideWebPart {
@@ -7,7 +29,16 @@ declare class BaseClientSideWebPart<P> implements IClientSideWebPart {
    * Contructor for the BaseClientSideWebPart
    * If a sub classe overrids the constructor, it needs to call super(context) as the first line of constructor
    */
+<<<<<<< HEAD
+	/**
+	 * [constructor description]
+	 * @param  {IWebPartContext} ctx [description]
+	 * @return {[type]}              [description]
+	 */
+	constructor(ctx: IWebPartContext);
+=======
   constructor(ctx: IWebPartContext);
+>>>>>>> 6282fdab93d485b53c1a1c15b83e2c8d7c383fd6
   /**
    * Clear the error message from the web part display area.
    */
@@ -134,6 +165,10 @@ declare class BaseClientSideWebPart<P> implements IClientSideWebPart {
    * @class {BaseClientSideWebPart}
    * @return {void}
    */
+<<<<<<< HEAD
+
+=======
+>>>>>>> 6282fdab93d485b53c1a1c15b83e2c8d7c383fd6
   protected renderError(error: Error): void;
   /**
    * @see IClientSideWebPart.ts

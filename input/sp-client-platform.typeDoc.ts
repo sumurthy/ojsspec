@@ -4,24 +4,6 @@
  * Implements the minimal functionality for a webpart. This class also provides a bunch of parameter
  * validate and access to readonly properties like the displayMode, properties, manifest, instanceId,
  * domElement, and so on...
- *
- * The following methods in
- * the BaseClientSideWebPart have no functionality and are intended to be overridden
- * by the derived webpart:
- *
- *    render       Render the webpart inside the provided dom element.
- *
- * The following methods provide default implementations but may be overridden by the
- * derived webpart:
- *
- *    constructor  Use super() as the first line in derived webpart's constructor.
- *    dispose      (optional) Dispose any resources it is holding on to e.g. dom Elements, server resources.
- *    serialize    Update webPartData in the derived web part and then call super.serialize().
- *    onEvent      (optional) event handler
- *
- * The following methods are not intended to be overridden.
- *
- *    renderError  Render an error message in the webpart container dom element.
  */
 declare class BaseClientSideWebPart<P> implements IClientSideWebPart {
   /**
@@ -38,10 +20,11 @@ declare class BaseClientSideWebPart<P> implements IClientSideWebPart {
    * your implementation dependent on the behaviours in the following code.
    */
   protected configureStartInternal(): void;
-  /**
-   * @see IClientSideWebPart.ts
-   */
 
+  /**
+   * Connects the web parts
+   * @param {string[]} ids collection of strings
+   */
   public connectWebParts(ids: string[]): void;
   /**
    * Indicates whether the Web Part's configuration is reactive or not.
@@ -56,31 +39,35 @@ declare class BaseClientSideWebPart<P> implements IClientSideWebPart {
    */
   protected displayMode: DisplayMode;
 
-  /**
-   * @see IClientSideWebPart.ts
-   */
+ /**
+ * [dispose description]
+ */
   public dispose(): void;
-  /**
-   * Root DOM element of the Web Part.
-   * @readonly
-   */
-  protected domElement: HTMLElement;
+
+	/**
+	 * [domElement description]
+	 * @type {HTMLElement}
+	 */
+	protected domElement: HTMLElement;
+
+	/**
+	 * [getPropertyPaneSettings description]
+	 * @return {IPropertyPaneData} [description]
+	 */
+  public getPropertyPaneSettings(): IPropertyPaneData;
 
   /**
-   * @see IClientSideWebPart.ts
-   */
-  public getPropertyPaneSettings(): IPropertyPaneData;
-  /**
-   * Host of the Web Part.
+   * [host description]
+   * @type {IWebPartHost}
    * @readonly
    */
   protected host: IWebPartHost;
 
-
-  /**
-   * Instance ID of the Web Part.
-   * @readonly
-   */
+	/**
+	 * [instanceId description]
+	 * @type {string}
+	 * @readonly
+	 */
   protected instanceId: string;
   /**
    * Web Part's manifest.
@@ -91,6 +78,7 @@ declare class BaseClientSideWebPart<P> implements IClientSideWebPart {
   /**
    * @see IClientSideWebPart.ts
    */
+
   public onBeforeRender < T >(): Promise<T>;
   /**
    * @see IClientSideWebPart.ts
@@ -286,8 +274,11 @@ declare class ClientSideApplication {
   public suiteNavConfiguration(): ISuiteNavManagerConfiguration;
 }
 
+
 /**
- * Combines any number of URL paths.
+ * [combineURLPaths description]
+ * @param  {string[]} ...url [description]
+ * @return {string}          [description]
  */
 export function combineURLPaths(...url: string[]): string;
 
@@ -1196,6 +1187,11 @@ declare class PageContext implements IPageContext {
  * and ApplicationContext classes.  It defines the "state" of these objects.
  */
 declare class PageContextItem {
+	/**
+	 * [constructor description]
+	 * @param  {PageContext} pageContext [description]
+	 * @return {[type]}                  [description]
+	 */
   constructor(pageContext: PageContext);
   /**
    * Returns the PageContext that owns this object.  You can use this to find
@@ -1279,12 +1275,18 @@ export function PropertyPaneLink(targetProperty: string, properties: ILinkProps)
 export function PropertyPaneSlider(targetProperty: string, properties: ISliderProps): IPropertyPaneField;
 
 /**
- * Helper method to create a TextField on the PropertyPane.
+ * [PropertyPaneTextField description]
+ * @param  {string}             targetProperty [description]
+ * @param  {ITextFieldProps}    properties     [description]
+ * @return {IPropertyPaneField}                [description]
  */
 export function PropertyPaneTextField(targetProperty: string, properties: ITextFieldProps): IPropertyPaneField;
 
 /**
- * Helper method to create a Toggle on the PropertyPane.
+ * [PropertyPaneToggle description]
+ * @param  {string}             targetProperty [description]
+ * @param  {IToggleProps}       properties     [description]
+ * @return {IPropertyPaneField}                [description]
  */
 export function PropertyPaneToggle(targetProperty: string, properties: IToggleProps): IPropertyPaneField;
 
@@ -1296,6 +1298,11 @@ declare class ReactWebPart<P> extends BaseClientSideWebPart<P> {
   constructor(context: IWebPartContext,
       componentType: React.ComponentClass<IReactWebPartProps>);
   public dispose(): void;
+	/**
+	 * [render description]
+	 * @param {DisplayMode}  mode [description]
+	 * @param {IWebPartData} data [description]
+	 */
   public render(mode: DisplayMode, data?: IWebPartData): void;
 }
 
@@ -1546,6 +1553,7 @@ declare class TextResourceRequest {
 
 /**
  * WebPart PropertyPane configuration events
+ * some sample text
  */
 enum WebPartConfigurationEvent {
   ApplyClicked = 4,
@@ -1553,3 +1561,12 @@ enum WebPartConfigurationEvent {
   ConfigurationComplete = 1,
   OpenComplete = 2
 }
+
+/**
+ * [PropertyPaneTextField description]
+ * @param  {string}             targetProperty [description of targetProperty]
+ * Continued description of the parameter.
+ * @param  {ITextFieldProps}    properties     [description of properties]
+ * @return {IPropertyPaneField}                [description]
+ */
+export function PropertyPaneTextField(targetProperty: string, properties: ITextFieldProps): IPropertyPaneField;
