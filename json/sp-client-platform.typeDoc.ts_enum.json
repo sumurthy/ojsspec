@@ -155,7 +155,7 @@
     ]
   },
   "WebPartConfigurationEvent": {
-    "descr": "WebPart PropertyPane configuration events\nsome sample text",
+    "descr": "WebPart PropertyPane configuration events\n  some sample text",
     "values": [
       [
         "ApplyClicked",

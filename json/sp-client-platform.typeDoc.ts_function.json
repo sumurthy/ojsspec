@@ -1,10 +1,187 @@
 {
-  "PropertyPaneTextField": {
-    "signature": "PropertyPaneTextField(targetProperty: string, properties: ITextFieldProps): IPropertyPaneField",
-    "returnType": "IPropertyPaneField",
-    "params": [
-      "targetProperty: string",
-      "properties: ITextFieldProps"
-    ]
-  }
+  "items": [
+    {
+      "combineURLPaths": {
+        "signature": "combineURLPaths(...url: string[]): string",
+        "returnType": "string",
+        "params": [
+          {
+            "name": "...url",
+            "dataType": "string[]",
+            "descr": "[description]"
+          }
+        ]
+      }
+    },
+    {
+      "getPathNameFromAbsoluteUrl": {
+        "signature": "getPathNameFromAbsoluteUrl(url: string): string",
+        "returnType": "string",
+        "params": [
+          {
+            "name": "url",
+            "dataType": "string",
+            "descr": ""
+          }
+        ]
+      }
+    },
+    {
+      "PropertyPaneCheckbox": {
+        "signature": "PropertyPaneCheckbox(targetProperty: string, properties: ICheckboxProps): IPropertyPaneField",
+        "returnType": "IPropertyPaneField",
+        "params": [
+          {
+            "name": "targetProperty",
+            "dataType": "string",
+            "descr": ""
+          },
+          {
+            "name": "properties",
+            "dataType": "ICheckboxProps",
+            "descr": ""
+          }
+        ]
+      }
+    },
+    {
+      "PropertyPaneDropdown": {
+        "signature": "PropertyPaneDropdown(targetProperty: string, properties: IDropdownProps): IPropertyPaneField",
+        "returnType": "IPropertyPaneField",
+        "params": [
+          {
+            "name": "targetProperty",
+            "dataType": "string",
+            "descr": ""
+          },
+          {
+            "name": "properties",
+            "dataType": "IDropdownProps",
+            "descr": ""
+          }
+        ]
+      }
+    },
+    {
+      "PropertyPaneHeading": {
+        "signature": "PropertyPaneHeading(properties: IPropertyPaneHeadingProps): IPropertyPaneField",
+        "returnType": "IPropertyPaneField",
+        "params": [
+          {
+            "name": "properties",
+            "dataType": "IPropertyPaneHeadingProps",
+            "descr": ""
+          }
+        ]
+      }
+    },
+    {
+      "PropertyPaneLabel": {
+        "signature": "PropertyPaneLabel(targetProperty: string, properties: ILabelProps): IPropertyPaneField",
+        "returnType": "IPropertyPaneField",
+        "params": [
+          {
+            "name": "targetProperty",
+            "dataType": "string",
+            "descr": ""
+          },
+          {
+            "name": "properties",
+            "dataType": "ILabelProps",
+            "descr": ""
+          }
+        ]
+      }
+    },
+    {
+      "PropertyPaneLink": {
+        "signature": "PropertyPaneLink(targetProperty: string, properties: ILinkProps): IPropertyPaneField",
+        "returnType": "IPropertyPaneField",
+        "params": [
+          {
+            "name": "targetProperty",
+            "dataType": "string",
+            "descr": ""
+          },
+          {
+            "name": "properties",
+            "dataType": "ILinkProps",
+            "descr": ""
+          }
+        ]
+      }
+    },
+    {
+      "PropertyPaneSlider": {
+        "signature": "PropertyPaneSlider(targetProperty: string, properties: ISliderProps): IPropertyPaneField",
+        "returnType": "IPropertyPaneField",
+        "params": [
+          {
+            "name": "targetProperty",
+            "dataType": "string",
+            "descr": ""
+          },
+          {
+            "name": "properties",
+            "dataType": "ISliderProps",
+            "descr": ""
+          }
+        ]
+      }
+    },
+    {
+      "PropertyPaneTextField": {
+        "signature": "PropertyPaneTextField(targetProperty: string, properties: ITextFieldProps): IPropertyPaneField",
+        "returnType": "IPropertyPaneField",
+        "params": [
+          {
+            "name": "targetProperty",
+            "dataType": "string",
+            "descr": "[description]"
+          },
+          {
+            "name": "properties",
+            "dataType": "ITextFieldProps",
+            "descr": "[description]"
+          }
+        ]
+      }
+    },
+    {
+      "PropertyPaneToggle": {
+        "signature": "PropertyPaneToggle(targetProperty: string, properties: IToggleProps): IPropertyPaneField",
+        "returnType": "IPropertyPaneField",
+        "params": [
+          {
+            "name": "targetProperty",
+            "dataType": "string",
+            "descr": "[description]"
+          },
+          {
+            "name": "properties",
+            "dataType": "IToggleProps",
+            "descr": "[description]"
+          }
+        ]
+      }
+    },
+    {
+      "PropertyPaneTextField": {
+        "signature": "PropertyPaneTextField(targetProperty: string, properties: ITextFieldProps): IPropertyPaneField",
+        "returnType": "IPropertyPaneField",
+        "params": [
+          {
+            "name": "targetProperty",
+            "dataType": "string",
+            "descr": "[description of targetProperty]"
+          },
+          {
+            "name": "properties",
+            "dataType": "ITextFieldProps",
+            "descr": "[description of properties]"
+          }
+        ]
+      }
+    }
+  ]
 }

@@ -11,6 +11,7 @@ const C_END = '*/'
 const BLOCK_END = '}'
 const IGNORES = ['@todo:']
 const CLASSDEF = 'declare class'
+const INTERFACEDEF = 'interface'
 const ENUM = 'enum'
 const FUNCTION = 'function '
 const NEWLINE = '\n  '
@@ -25,12 +26,16 @@ let cmode = false
 let nClass = 0
 let nFunction = 0
 let nEnum = 0
+let nInterface = 0
 
 // GLOBAL - TYPES OF OBJECT
 let enumObj = {}
 let enumKey = ''
 let classObj = {}
-let functionObj = {}
+let interfaceObj = {}
+let functionObj = {
+	'items' : []
+}
 let methodObj = {}
 let paramObj = {}
 let propObj = {}
@@ -43,11 +48,17 @@ function file_reset() {
 		nClass = 0
 		nFunction = 0
 		nEnum = 0
+		nInterface = 0
 		mode = ''
 		enumObj = {}
 		enumKey = ''
 		classObj = {}
-		functionObj = {}
+		functionObj = {
+			'items' : []
+		}
+		interfaceObj = {
+			'items' : []
+		}
 		methodObj = {}
 		paramObj = {}
 		propObj = {}
@@ -55,12 +66,12 @@ function file_reset() {
 		commentObject = {
 			'param' : []
 		}
+		comment_reset()
 }
 
 function block_end_reset() {
 
 		classObj = {}
-		functionObj = {}
 		methodObj = {}
 		paramObj = {}
 		propObj = {}
@@ -68,10 +79,17 @@ function block_end_reset() {
 		commentObject = {
 			'param' : []
 		}
+		comment_reset()
 }
 
 function block_begin_reset() {
 		generalDesc = ''
+}
+
+function comment_reset() {
+	let commentObject = {
+		'param' : []
+	}
 }
 
 /**
@@ -105,6 +123,7 @@ function processLines(element, index) {
 	else if (firstWord === C_START) {
 		cmode = true
 		generalDesc = ''
+		comment_reset()
 		return
 	}
 	else if (firstWord === COMMENT) {
@@ -116,14 +135,13 @@ function processLines(element, index) {
 			//
 			switch (secondWord) {
 				case '@param':
-					console.log('HO HO HO HO HO HO ');
 					//4th word has param name and 5th has the description. Those are the only important ones to consider
 					//* @param  {string}             targetProperty [description]
 					//Split and Remove entries that have empty strings
 					// (since we are compacting the line, we don't have to do ``.map((s) => s.trim()).filter((e) => e)` at the end of the split)
 				  var arr = line.split(' ')
 					if (arr[3] !== undefined) {
-						commentObject['param'].push([arr[3]], arr.slice(4).join(' '))
+						commentObject['param'].push([arr[3], arr.slice(4).join(' ')])
 					}
 					break;
 				default:
@@ -142,19 +160,18 @@ function processLines(element, index) {
 	}
 	else if (firstWord === C_END) {
 		cmode = false
-		if (index > 1550) {
-			console.log(`~~ ${JSON.stringify(commentObject)}`);
-		}
+	}
+	else if (line.includes(INTERFACEDEF)) {
+		nInterface++
+		mode = 'INTERFACE'
+		return
 	}
 	else if (line.includes(CLASSDEF)) {
 		nClass++
-		console.log('class start ' + ' ' + nClass + ' ' + line);
-
 		mode = 'CLASS'
 		return
 	}
 	else if (line.includes(ENUM)) {
-		console.log('Enum start ' + line);
 		nEnum++
 		mode = 'ENUM'
 		enumObj[secondWord] = {}
@@ -165,21 +182,45 @@ function processLines(element, index) {
 		return
 	}
 	else if (line.includes(FUNCTION)) {
-		console.log('function start ' + line);
 		var name = line.split('(')[0].split(' ').pop()
-		functionObj[name] = {} // JSON.parse(JSON.stringify(Objects.method))
-		functionObj[name]['signature'] = line.split('function ')[1]
-		functionObj[name]['returnType'] = line.split(': ').pop() //func return type`
-		var p = BETWEEN_BRACKETS.exec(line)[1] //anything between brackets?
-		if (p !== null) {
-			functionObj[name]['params'] = BETWEEN_BRACKETS.exec(line)[1].split(', ') //between brackets list
-		}
-		else {
-			functionObj[name]['params'] = []
-		}
-
+		// Build a function object
+		var f = {}
+		f[name] = {} // JSON.parse(JSON.stringify(Objects.method))
+		f[name]['signature'] = line.split('function ')[1]
+		f[name]['returnType'] = line.split(': ').pop()
+		var p = BETWEEN_BRACKETS.exec(line)[1]
+		//f[name]['params'] = []
+		f[name]['params'] = Utils.buildParamList(p, commentObject['param'])
+		// Break into a util.function
+		// f[name]['params'] = build_param_list(p, commentObject['param'])
+		//
+		// if (p !== null) { //anything between brackets?
+		// 	 var parray = p.split(', ') //between brackets list
+		// 	 // Build a parameter object.
+		// 	 parray.forEach((e) => {
+		// 		 var ta = e.split(':').map((_) => _.trim())
+		// 		 var fp = {}
+		// 		 fp['name'] = ta[0]
+		// 		 fp['dataType'] = ta[1]
+		// 		 fp['descr'] = ''
+		// 		 // For each element, determine if there is a @param description. If so, add description element to function object
+		// 		 var descr = commentObject['param']
+		// 		 if (descr.length > 0) {
+		// 			 descr.forEach((d) => {
+		// 				 if (d[0] === ta[0]) {
+		// 				 		fp['descr'] = d[1]
+		// 				 }
+		// 			 })
+		// 		 }
+		// 		 f[name]['params'].push(fp)
+		// 	 })
+		// }
+		// end-break
+		
+		functionObj['items'].push(f)
 		nFunction++
 		mode = 'FUNCTION'
+		comment_reset()
 		return
 	}
 	else {
@@ -191,7 +232,6 @@ function processLines(element, index) {
 
 				var v = line.replace(',','').split('=').map((s) => s.trim())
 				v.push(generalDesc)
-				console.log(`Writing ENUM entry to, ${enumKey} : ${v}`)
 				enumObj[enumKey]['values'].push(v)
 				break;
 			case 'FUNCTION':
@@ -233,6 +273,6 @@ function processFile(fileName) {
 	console.log(`*** Writing FUNCTION file ${enumObj}`)
   FileOps.writeObject(functionObj, `./json/${fileName}_function.json`)
 
-  console.log(`class = ${nClass}, function = ${nFunction}, enum = ${nEnum}`);
+  console.log(`interface = ${nInterface}, class = ${nClass}, function = ${nFunction}, enum = ${nEnum}`);
 	file_reset()
 }
