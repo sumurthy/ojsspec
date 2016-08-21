@@ -1,0 +1,10 @@
+{
+  "PropertyPaneTextField": {
+    "signature": "PropertyPaneTextField(targetProperty: string, properties: ITextFieldProps): IPropertyPaneField",
+    "returnType": "IPropertyPaneField",
+    "params": [
+      "targetProperty: string",
+      "properties: ITextFieldProps"
+    ]
+  }
+}

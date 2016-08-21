@@ -78,7 +78,7 @@ declare class BaseClientSideWebPart<P> implements IClientSideWebPart {
   /**
    * @see IClientSideWebPart.ts
    */
-	
+
   public onBeforeRender < T >(): Promise<T>;
   /**
    * @see IClientSideWebPart.ts
@@ -274,8 +274,11 @@ declare class ClientSideApplication {
   public suiteNavConfiguration(): ISuiteNavManagerConfiguration;
 }
 
+
 /**
- * Combines any number of URL paths.
+ * [combineURLPaths description]
+ * @param  {string[]} ...url [description]
+ * @return {string}          [description]
  */
 export function combineURLPaths(...url: string[]): string;
 
@@ -1184,6 +1187,11 @@ declare class PageContext implements IPageContext {
  * and ApplicationContext classes.  It defines the "state" of these objects.
  */
 declare class PageContextItem {
+	/**
+	 * [constructor description]
+	 * @param  {PageContext} pageContext [description]
+	 * @return {[type]}                  [description]
+	 */
   constructor(pageContext: PageContext);
   /**
    * Returns the PageContext that owns this object.  You can use this to find
@@ -1267,12 +1275,18 @@ export function PropertyPaneLink(targetProperty: string, properties: ILinkProps)
 export function PropertyPaneSlider(targetProperty: string, properties: ISliderProps): IPropertyPaneField;
 
 /**
- * Helper method to create a TextField on the PropertyPane.
+ * [PropertyPaneTextField description]
+ * @param  {string}             targetProperty [description]
+ * @param  {ITextFieldProps}    properties     [description]
+ * @return {IPropertyPaneField}                [description]
  */
 export function PropertyPaneTextField(targetProperty: string, properties: ITextFieldProps): IPropertyPaneField;
 
 /**
- * Helper method to create a Toggle on the PropertyPane.
+ * [PropertyPaneToggle description]
+ * @param  {string}             targetProperty [description]
+ * @param  {IToggleProps}       properties     [description]
+ * @return {IPropertyPaneField}                [description]
  */
 export function PropertyPaneToggle(targetProperty: string, properties: IToggleProps): IPropertyPaneField;
 
@@ -1284,6 +1298,11 @@ declare class ReactWebPart<P> extends BaseClientSideWebPart<P> {
   constructor(context: IWebPartContext,
       componentType: React.ComponentClass<IReactWebPartProps>);
   public dispose(): void;
+	/**
+	 * [render description]
+	 * @param {DisplayMode}  mode [description]
+	 * @param {IWebPartData} data [description]
+	 */
   public render(mode: DisplayMode, data?: IWebPartData): void;
 }
 
@@ -1534,6 +1553,7 @@ declare class TextResourceRequest {
 
 /**
  * WebPart PropertyPane configuration events
+ * some sample text
  */
 enum WebPartConfigurationEvent {
   ApplyClicked = 4,
@@ -1541,3 +1561,12 @@ enum WebPartConfigurationEvent {
   ConfigurationComplete = 1,
   OpenComplete = 2
 }
+
+/**
+ * [PropertyPaneTextField description]
+ * @param  {string}             targetProperty [description of targetProperty]
+ * Continued description of the parameter.
+ * @param  {ITextFieldProps}    properties     [description of properties]
+ * @return {IPropertyPaneField}                [description]
+ */
+export function PropertyPaneTextField(targetProperty: string, properties: ITextFieldProps): IPropertyPaneField;
