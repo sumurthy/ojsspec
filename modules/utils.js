@@ -32,4 +32,9 @@ module.exports = {
     }
     return out
   }
+
+  readAhead: (lines = []) => {
+
+    return []
+  }
 }

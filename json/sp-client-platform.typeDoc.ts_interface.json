@@ -1,0 +1,166 @@
+{
+  "items": [
+    {
+      "IClientSideWebPart": {
+        "extendsName": null,
+        "descr": "Client Side Web Part Interface.\n  The `render` API is mandatory to be implemented by a Web Part. All other APIs have default implementations in the\n  BaseClientSideWebPart and should be overridden on a need basis."
+      }
+    },
+    {
+      "IClientSideWebPartStatusRenderer": {
+        "extendsName": null,
+        "descr": "Interface to be implemented by a component that should display the loading indicator and\n  error messages for a webpart."
+      }
+    },
+    {
+      "ICustomPropertyPaneFieldProps": {
+        "extendsName": null,
+        "descr": "CustomPropertyField props."
+      }
+    },
+    {
+      "IEvent<T>": {
+        "extendsName": null,
+        "descr": "Event object"
+      }
+    },
+    {
+      "IEventAggregator": {
+        "extendsName": null,
+        "descr": "Publis APIs for the EventAggregator. Event names must follow the following format\n  \"eventName:action\" e.g. \"configure:start\" and \"configure:end\""
+      }
+    },
+    {
+      "IEventCallback<T>": {
+        "extendsName": null,
+        "descr": "Event callback"
+      }
+    },
+    {
+      "IHtmlProperties": {
+        "extendsName": null,
+        "descr": "Structure of the data that a webpart developer can return on the onBeforeSerialize() API.\n  The outcome contains 3 kay/value dictionaries for properties that need to be search indexed.\n  Both keys and values are expected to be strings and will be HTML encoded during serialization.\n  {\n  searchableProperties: { 'prop1': 'value_of_prop1' },\n  linkProperties: { 'prop2': 'http://www.contoso.com/page1.aspx' },\n  imageLinkPropertes: { 'prop3': 'http://www.contoso.com/imag.png' }\n  }\n  This input would get translated to the following HTML string.\n  \"<div data-sp-prop-name='prop1'>value1</div>\n  <link data-sp-prop-name='prop2' href='http://www.contoso.com/page1.aspx'>\n  <img data-sp-prop-name='prop2' href='http://www.contoso.com/image.png'>\""
+      }
+    },
+    {
+      "IOdataList": {
+        "extendsName": null,
+        "descr": "Represents an OData SP.List object. For more information about this object\n  see the MSDN documentation here:\n  https://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+      }
+    },
+    {
+      "IOdataListItem": {
+        "extendsName": null,
+        "descr": "Represents an OData SP.ListItem object. For more information about this object\n  see the MSDN documentation here:\n  https://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+      }
+    },
+    {
+      "IOdataUser": {
+        "extendsName": null,
+        "descr": "Represents an OData SP.User object. For more information about this object\n  see the MSDN documentation here:\n  https://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+      }
+    },
+    {
+      "IOdataUserId": {
+        "extendsName": null,
+        "descr": "Represents an OData SP.UserId object. For more information about this object\n  see the MSDN documentation here:\n  https://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+      }
+    },
+    {
+      "IOdataWeb": {
+        "extendsName": null,
+        "descr": "Represents an OData SP.Web object. For more information about this object\n  see the MSDN documentation here:\n  https://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+      }
+    },
+    {
+      "IOnCustomPropertyFieldChanged": {
+        "extendsName": null,
+        "descr": "CustomPropertyFieldChanged contract."
+      }
+    },
+    {
+      "IPropertyPaneField": {
+        "extendsName": null,
+        "descr": "PropertyPane field."
+      }
+    },
+    {
+      "IPropertyPaneGroup": {
+        "extendsName": null,
+        "descr": "PropertyPane group. Group is part of the PropertyPanePage."
+      }
+    },
+    {
+      "IPropertyPaneHeader": {
+        "extendsName": null,
+        "descr": "PropertyPane header.\n  This header remains same for all the pages."
+      }
+    },
+    {
+      "IPropertyPanePage": {
+        "extendsName": null,
+        "descr": "PropertyPane page."
+      }
+    },
+    {
+      "IPropertyPaneSettings": {
+        "extendsName": null,
+        "descr": "Web Part configuration settings"
+      }
+    },
+    {
+      "IReactWebPartProps": {
+        "extendsName": "IWebPartProps",
+        "descr": ""
+      }
+    },
+    {
+      "IShell": {
+        "extendsName": "IServiceScopeProvider",
+        "descr": "The system shell manages the initial loading of the scripts for a client-side application,\n  as well as constructin the ClientSideApplication object, and initializing key services such\n  as the page chrome, page context, HTTP client, etc."
+      }
+    },
+    {
+      "ISuiteNavManagerConfiguration": {
+        "extendsName": null,
+        "descr": "Interface for the Suite Nav Manager Configuration"
+      }
+    },
+    {
+      "IWebPartConfigurationEventCallback": {
+        "extendsName": null,
+        "descr": "Configuration event callback"
+      }
+    },
+    {
+      "IWebPartContext": {
+        "extendsName": "ICommonWebPartContext",
+        "descr": "Context object that needs to be passed to the WebPart constructor."
+      }
+    },
+    {
+      "IWebPartData": {
+        "extendsName": "IClientSideWebPartManifestBase",
+        "descr": "This structure represents the the serialized state of a webpart. When the serialize() API is called on\n  a webpart, the output should be this structure. The structure of the 'properties' field is owned by the\n  webpart and is specific to the webpart. Each webpart can decide the set of properties it wants to\n  serialialize."
+      }
+    },
+    {
+      "IWebPartEvent<T>": {
+        "extendsName": "IEvent<T>",
+        "descr": "Structure representing webpart - webpart events"
+      }
+    },
+    {
+      "IWebPartHost": {
+        "extendsName": null,
+        "descr": ""
+      }
+    },
+    {
+      "TextResource": {
+        "extendsName": null,
+        "descr": ""
+      }
+    }
+  ]
+}

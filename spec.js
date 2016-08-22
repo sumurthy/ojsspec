@@ -8,6 +8,7 @@ const SKIP = ['///', '']
 const C_START = '/**'
 const COMMENT = '*'
 const C_END = '*/'
+const BLOCK_BEGIN = '{'
 const BLOCK_END = '}'
 const IGNORES = ['@todo:']
 const CLASSDEF = 'declare class'
@@ -32,7 +33,10 @@ let nInterface = 0
 let enumObj = {}
 let enumKey = ''
 let classObj = {}
-let interfaceObj = {}
+let interfaceObj = {
+	'items' : []
+}
+let interfaceName = ''
 let functionObj = {
 	'items' : []
 }
@@ -59,6 +63,7 @@ function file_reset() {
 		interfaceObj = {
 			'items' : []
 		}
+		interfaceName = ''
 		methodObj = {}
 		paramObj = {}
 		propObj = {}
@@ -79,7 +84,9 @@ function block_end_reset() {
 		commentObject = {
 			'param' : []
 		}
+		interfaceName = ''
 		comment_reset()
+
 }
 
 function block_begin_reset() {
@@ -105,6 +112,12 @@ function processLines(element, index) {
 
   let firstWord = line.split(' ',1)[0]
   let secondWord = line.split(' ',2)[1]
+	if (line.includes(BLOCK_BEGIN)) {
+		iBlock++;
+	}
+	if (line.includes(BLOCK_END)) {
+		iBlock--;
+	}
 
   if (SKIP.includes(firstWord)) {
     return;
@@ -113,7 +126,7 @@ function processLines(element, index) {
   //   ignoreMode = true
   //   return
   // }
-  else if (firstWord === BLOCK_END) {
+  else if (firstWord === BLOCK_END && iBlock == 0) {
 		mode = ''
 		//Write out the file CLASS file
 		//
@@ -130,7 +143,7 @@ function processLines(element, index) {
 		if (secondWord === undefined) {
 			return
 		}
-		else if (secondWord !== undefined && secondWord.startsWith(ATSYMBOL)) {
+		else if (secondWord.startsWith(ATSYMBOL)) {
 			// PROCESS @param, etc.
 			//
 			switch (secondWord) {
@@ -164,6 +177,22 @@ function processLines(element, index) {
 	else if (line.includes(INTERFACEDEF)) {
 		nInterface++
 		mode = 'INTERFACE'
+		interfaceName = secondWord
+		var extendsName = null
+		if (line.split('extends ').length > 1) {
+			extendsName = line.split('extends ')[1].split(' {')[0]
+		}
+		// Build a interface object
+		var o = {}
+		o[interfaceName] = {} // JSON.parse(JSON.stringify(Objects.method))
+		o[interfaceName]['extendsName'] = extendsName
+		o[interfaceName]['descr'] = generalDesc
+		interfaceObj['items'].push(o)
+		interfaceObj['properties'] = []
+		interfaceObj['functions'] = []
+		interfaceObj['objects'] = []
+
+		comment_reset()
 		return
 	}
 	else if (line.includes(CLASSDEF)) {
@@ -191,40 +220,22 @@ function processLines(element, index) {
 		var p = BETWEEN_BRACKETS.exec(line)[1]
 		//f[name]['params'] = []
 		f[name]['params'] = Utils.buildParamList(p, commentObject['param'])
-		// Break into a util.function
-		// f[name]['params'] = build_param_list(p, commentObject['param'])
-		//
-		// if (p !== null) { //anything between brackets?
-		// 	 var parray = p.split(', ') //between brackets list
-		// 	 // Build a parameter object.
-		// 	 parray.forEach((e) => {
-		// 		 var ta = e.split(':').map((_) => _.trim())
-		// 		 var fp = {}
-		// 		 fp['name'] = ta[0]
-		// 		 fp['dataType'] = ta[1]
-		// 		 fp['descr'] = ''
-		// 		 // For each element, determine if there is a @param description. If so, add description element to function object
-		// 		 var descr = commentObject['param']
-		// 		 if (descr.length > 0) {
-		// 			 descr.forEach((d) => {
-		// 				 if (d[0] === ta[0]) {
-		// 				 		fp['descr'] = d[1]
-		// 				 }
-		// 			 })
-		// 		 }
-		// 		 f[name]['params'].push(fp)
-		// 	 })
-		// }
-		// end-break
-		
 		functionObj['items'].push(f)
 		nFunction++
 		mode = 'FUNCTION'
 		comment_reset()
 		return
 	}
+
+	// The Big Else....
+
 	else {
 		switch (mode) {
+			case 'INTERFACE':
+
+
+				break;
+
 			case 'CLASS':
 
 				break;
@@ -250,15 +261,6 @@ console.log('** Starting Program...')
 SetUp.cleanupOutput('./markdown')
 SetUp.cleanupOutput('./json')
 
-// Temp
-			// let c = JSON.parse(JSON.stringify(Objects.classObj))
-			// c.name = "hello"
-			// c.descr = "hello desc"
-			// c.type = "type"
-			// console.log(c);
-			// FileOps.writeObject(c, `./markdown/one.json`)
-// end Temp
-
 let files = FileOps.walkFiles('./input')
 files.forEach(processFile)
 
@@ -272,6 +274,8 @@ function processFile(fileName) {
   FileOps.writeObject(enumObj, `./json/${fileName}_enum.json`)
 	console.log(`*** Writing FUNCTION file ${enumObj}`)
   FileOps.writeObject(functionObj, `./json/${fileName}_function.json`)
+	console.log(`*** Writing INTERFACE file ${enumObj}`)
+  FileOps.writeObject(interfaceObj, `./json/${fileName}_interface.json`)
 
   console.log(`interface = ${nInterface}, class = ${nClass}, function = ${nFunction}, enum = ${nEnum}`);
 	file_reset()
