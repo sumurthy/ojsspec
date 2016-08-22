@@ -357,9 +357,9 @@ interface IClientSideWebPart {
    * Get property pane settings
    *
    * @alpha
-   * @return {IPropertyPaneData}
+   * @return {IPropertyPaneData} [Return description of IPropertyPaneData]
    */
-  getPropertyPaneSettings ?: () => IPropertyPaneData;
+  getPropertyPaneSettings : (ids: string[]) => IPropertyPaneData;
   /**
    * This API should be used to perform long running operations before rendering the Web Part. The loading indicator
    * is displayed during the lifetime of this method.
@@ -387,6 +387,7 @@ interface IClientSideWebPart {
    *
    * @alpha
    */
+
   onEvent ? < T >(eventName: string, eventObject: IWebPartEvent<T>): void;
   /**
    * optional property for preview/thumbnail image for the webpart
@@ -426,9 +427,11 @@ interface IClientSideWebPartStatusRenderer {
    * Clear the loading indicator.
    */
   clearLoadingIndicator(domElement: Element): void;
-  /**
-   * Display a loading spinner.
-   */
+	/**
+	 * [displayLoadingIndicator description]
+	 * @param {Element} domElement     [description]
+	 * @param {string}  loadingMessage [description]
+	 */
   displayLoadingIndicator(domElement: Element, loadingMessage: string): void;
   /**
    * Render the provided error message in the webpart container div.
@@ -517,6 +520,9 @@ interface IEventCallback<T> {
  * <img data-sp-prop-name='prop2' href='http://www.contoso.com/image.png'>"
  */
 interface IHtmlProperties {
+	/**
+	 * Some object
+	 */
   imageLinkProperties: {
     [ propName: string ]: string
   }
@@ -588,6 +594,10 @@ interface IOdataListItem {
   ContentTypeId: {
     StringValue: string
   }
+	/**
+	 * [ID description]
+	 * @type {number}
+	 */
   ID: number;
   Title: string;
   /**
@@ -1278,7 +1288,12 @@ export function PropertyPaneSlider(targetProperty: string, properties: ISliderPr
  * [PropertyPaneTextField description]
  * @param  {string}             targetProperty [description]
  * @param  {ITextFieldProps}    properties     [description]
- * @return {IPropertyPaneField}                [description]
+ * @return {IPropertyPaneField}                some random description of the files
+ * and the invaluable information provided
+ * in these lines
+ * can only be matched by the
+ * non existance of these commentz
+ *
  */
 export function PropertyPaneTextField(targetProperty: string, properties: ITextFieldProps): IPropertyPaneField;
 

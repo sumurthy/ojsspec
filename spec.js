@@ -17,12 +17,13 @@ const ENUM = 'enum'
 const FUNCTION = 'function '
 const NEWLINE = '\n  '
 const ATSYMBOL = '@'
-const BETWEEN_BRACKETS = /\(([^)]+)\)/;
 
+let ignore_lines = []
 let cBuffer = {}
 let ignoreMode = false
 let mode = ''
 let cmode = false
+let iBlock = 0
 
 let nClass = 0
 let nFunction = 0
@@ -33,13 +34,9 @@ let nInterface = 0
 let enumObj = {}
 let enumKey = ''
 let classObj = {}
-let interfaceObj = {
-	'items' : []
-}
+let interfaceObj = {}
 let interfaceName = ''
-let functionObj = {
-	'items' : []
-}
+let functionObj = {}
 let methodObj = {}
 let paramObj = {}
 let propObj = {}
@@ -57,12 +54,8 @@ function file_reset() {
 		enumObj = {}
 		enumKey = ''
 		classObj = {}
-		functionObj = {
-			'items' : []
-		}
-		interfaceObj = {
-			'items' : []
-		}
+		functionObj = {}
+		interfaceObj = {}
 		interfaceName = ''
 		methodObj = {}
 		paramObj = {}
@@ -106,8 +99,11 @@ function comment_reset() {
  * @param  {integer} index   [Position of the line in the array]
  * @return {true}         [returns true]
  */
-function processLines(element, index) {
+function processLines(element = '', index = 0, lines = []) {
 
+	if (ignore_lines.includes(index)) {
+		return
+	}
   let line = element.replace(/\s+/g,' ').trim().replace(';','')
 
   let firstWord = line.split(' ',1)[0]
@@ -120,7 +116,7 @@ function processLines(element, index) {
 	}
 
   if (SKIP.includes(firstWord)) {
-    return;
+    return
 	}
   // else if (IGNORES.includes(secondWord)) {
   //   ignoreMode = true
@@ -154,20 +150,33 @@ function processLines(element, index) {
 					// (since we are compacting the line, we don't have to do ``.map((s) => s.trim()).filter((e) => e)` at the end of the split)
 				  var arr = line.split(' ')
 					if (arr[3] !== undefined) {
-						commentObject['param'].push([arr[3], arr.slice(4).join(' ')])
+						var o = Utils.readCommentAhead(lines, arr.slice(4).join(' '), index )
+						ignore_lines = o['skip']
+						commentObject['param'].push([arr[3], o['descr']])
 					}
 					break;
+				case '@return':
+					var arr = line.split(' ')
+					if (arr[3] !== undefined) {
+							var o = Utils.readCommentAhead(lines, arr.slice(3).join(' '), index )
+							ignore_lines = o['skip']
+							commentObject['returnDescr'] = o['descr']
+					}
+					break
 				default:
-
 			}
 		}
 		else {
-			if (generalDesc.length > 0) {
-					generalDesc = generalDesc + NEWLINE + line.substr(2)
-			}
-			else {
-					generalDesc = line.substr(2)
-			}
+			//
+			// if (generalDesc.length > 0) {
+			// 		generalDesc = generalDesc + NEWLINE + line.substr(2)
+			// }
+			// else {
+			// 		generalDesc = line.substr(2)
+			// }
+			var o = Utils.readCommentAhead(lines, line.substr(2), index )
+			ignore_lines = o['skip']
+			generalDesc = o['descr']
 		}
 		return
 	}
@@ -184,14 +193,12 @@ function processLines(element, index) {
 		}
 		// Build a interface object
 		var o = {}
-		o[interfaceName] = {} // JSON.parse(JSON.stringify(Objects.method))
-		o[interfaceName]['extendsName'] = extendsName
-		o[interfaceName]['descr'] = generalDesc
-		interfaceObj['items'].push(o)
-		interfaceObj['properties'] = []
-		interfaceObj['functions'] = []
-		interfaceObj['objects'] = []
-
+		interfaceObj[interfaceName] = {} // JSON.parse(JSON.stringify(Objects.method))
+		interfaceObj[interfaceName]['extendsName'] = extendsName
+		interfaceObj[interfaceName]['descr'] = generalDesc
+		interfaceObj[interfaceName]['properties'] = []
+		interfaceObj[interfaceName]['objects'] = []
+		interfaceObj[interfaceName]['methods'] = []
 		comment_reset()
 		return
 	}
@@ -213,14 +220,16 @@ function processLines(element, index) {
 	else if (line.includes(FUNCTION)) {
 		var name = line.split('(')[0].split(' ').pop()
 		// Build a function object
-		var f = {}
-		f[name] = {} // JSON.parse(JSON.stringify(Objects.method))
-		f[name]['signature'] = line.split('function ')[1]
-		f[name]['returnType'] = line.split(': ').pop()
-		var p = BETWEEN_BRACKETS.exec(line)[1]
-		//f[name]['params'] = []
-		f[name]['params'] = Utils.buildParamList(p, commentObject['param'])
-		functionObj['items'].push(f)
+		functionObj[name] = {} // JSON.parse(JSON.stringify(Objects.method))
+		functionObj[name]['signature'] = line.split('function ')[1]
+		functionObj[name]['returnType'] = line.split(': ').pop()
+		if (commentObject['returnDescr'] === undefined) {
+			functionObj[name]['returnDescr'] = null
+		}
+		else {
+			functionObj[name]['returnDescr'] = commentObject['returnDescr']
+		}
+		functionObj[name]['params'] = Utils.buildParamList(line, commentObject['param'])
 		nFunction++
 		mode = 'FUNCTION'
 		comment_reset()
@@ -232,7 +241,35 @@ function processLines(element, index) {
 	else {
 		switch (mode) {
 			case 'INTERFACE':
+				// interfaceObj['properties'] = []
+				// interfaceObj['objects'] = []
+				// interfaceObj['methods'] = []
 
+				if (line.includes(') =>')) {
+					var f = {}
+					f[firstWord] = {}
+
+					f[firstWord]['descr'] = generalDesc
+					f[firstWord]['isOptional'] = (secondWord.includes('?')) ? true : false
+					f[firstWord]['returnType'] = line.split('=> ').pop()
+					f[firstWord]['returnDescr'] = (commentObject['returnDescr'] === undefined) ?
+						null : commentObject['returnDescr']
+					f[firstWord]['params'] = Utils.buildParamList(line, commentObject['param'])
+					interfaceObj[interfaceName]['properties'].push(f)
+				}
+				else if (line.includes(')') && line.includes('(')) { // has brackets
+					var m = {}
+					var name = Utils.getName(firstWord)
+					m[name] = {}
+
+					m[name]['descr'] = generalDesc
+					m[name]['genericType'] = Utils.genericInside(line.split('(')[0])
+					m[name]['returnType'] = line.split(':').pop()
+					m[name]['returnDescr'] = (commentObject['returnDescr'] === undefined) ?
+						null : commentObject['returnDescr']
+					m[name]['params'] = Utils.buildParamList(line, commentObject['param'])
+					interfaceObj[interfaceName]['methods'].push(m)
+				}
 
 				break;
 
@@ -246,10 +283,8 @@ function processLines(element, index) {
 				enumObj[enumKey]['values'].push(v)
 				break;
 			case 'FUNCTION':
-
 				break;
 			default:
-
 		}
   }
 }

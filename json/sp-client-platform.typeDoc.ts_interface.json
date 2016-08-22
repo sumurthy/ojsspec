@@ -1,166 +1,586 @@
 {
-  "items": [
-    {
-      "IClientSideWebPart": {
-        "extendsName": null,
-        "descr": "Client Side Web Part Interface.\n  The `render` API is mandatory to be implemented by a Web Part. All other APIs have default implementations in the\n  BaseClientSideWebPart and should be overridden on a need basis."
+  "IClientSideWebPart": {
+    "extendsName": null,
+    "descr": "Client Side Web Part Interface. \n \nThe `render` API is mandatory to be implemented by a Web Part. All other APIs have default implementations in the \nBaseClientSideWebPart and should be overridden on a need basis.",
+    "properties": [
+      {
+        "configureStart": {
+          "descr": "Event for the webpart to start the configuration panel. A webpart needs to implement this API if they \nwant to implement a completely custom property pane. \n",
+          "isOptional": true,
+          "returnType": "void",
+          "returnDescr": null,
+          "params": []
+        }
+      },
+      {
+        "getPropertyPaneSettings": {
+          "descr": "Get property pane settings \n",
+          "isOptional": false,
+          "returnType": "IPropertyPaneData",
+          "returnDescr": "[Return description of IPropertyPaneData]",
+          "params": [
+            {
+              "name": "ids",
+              "dataType": "string[]",
+              "descr": ""
+            }
+          ]
+        }
       }
-    },
-    {
-      "IClientSideWebPartStatusRenderer": {
-        "extendsName": null,
-        "descr": "Interface to be implemented by a component that should display the loading indicator and\n  error messages for a webpart."
+    ],
+    "objects": [],
+    "methods": [
+      {
+        "connectWebParts": {
+          "descr": "Connect this webpart to other webparts. The list of connected webpart ids is persisted in the persisted \nstore. That way when the webparts re-render the infrastructure knows how to re-connect them. \n",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "ids",
+              "dataType": "string[]",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "dispose": {
+          "descr": "Dispose the webpart and any other resources it is holding on to e.g. DOM elements, server resources etc... \n",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": []
+        }
+      },
+      {
+        "onBeforeRender": {
+          "descr": "This API should be used to perform long running operations before rendering the Web Part. The loading indicator \nis displayed during the lifetime of this method. \n",
+          "genericType": "T",
+          "returnType": " Promise<T>",
+          "returnDescr": "[Return description of IPropertyPaneData]",
+          "params": []
+        }
+      },
+      {
+        "onBeforeSerialize": {
+          "descr": "This API is called before a Web Part is serialized. The default implementation is a NOP. A Web Part developer is \nis expected to override this API when the Web Part's state is not fully reflected in the property bag i.e. \n(this.properties). In the overridden method, the Web Part developer is expected to update the state of the Web \nPart property bag. This way the Web Part serialization process will use the upto date state of the Web Part. \n",
+          "genericType": null,
+          "returnType": " IHtmlProperties",
+          "returnDescr": "reference to searchable properties and properties that need link fixup. Please read \nthe documentation of IHtmlProperties interface for more details. \n",
+          "params": []
+        }
+      },
+      {
+        "onEvent": {
+          "descr": "Receives a custom event notification from the host page or another webpart. ReservedEventNames \ndefines some common events. Each webpart may process webpart specific events. \n",
+          "genericType": "T",
+          "returnType": " void",
+          "returnDescr": "reference to searchable properties and properties that need link fixup. Please read \nthe documentation of IHtmlProperties interface for more details. \n",
+          "params": [
+            {
+              "name": "eventName",
+              "dataType": "string",
+              "descr": ""
+            },
+            {
+              "name": "eventObject",
+              "dataType": "IWebPartEvent<T>",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "render": {
+          "descr": "This API should is called to render the Web Part in the specified display mode i.e. Read or Edit. This API is \nmandatory and hence is required to be implented by a Web Part. \n",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": "reference to searchable properties and properties that need link fixup. Please read \nthe documentation of IHtmlProperties interface for more details. \n",
+          "params": [
+            {
+              "name": "mode",
+              "dataType": "DisplayMode",
+              "descr": ""
+            },
+            {
+              "name": "data?",
+              "dataType": "IWebPartData",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "serialize": {
+          "descr": "This API is called to obtain the serialized state of the Web Part instance data. The serialized state can be \nstored in a perstant databsae and deserialized to re-render the Web Part. \n",
+          "genericType": null,
+          "returnType": " IWebPartData",
+          "returnDescr": "The instance data of the Web Part properties. \n",
+          "params": []
+        }
       }
-    },
-    {
-      "ICustomPropertyPaneFieldProps": {
-        "extendsName": null,
-        "descr": "CustomPropertyField props."
+    ]
+  },
+  "IClientSideWebPartStatusRenderer": {
+    "extendsName": null,
+    "descr": "Interface to be implemented by a component that should display the loading indicator and \nerror messages for a webpart.",
+    "properties": [],
+    "objects": [],
+    "methods": [
+      {
+        "clearError": {
+          "descr": "Clear the webpart error message.",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "domElement",
+              "dataType": "HTMLElement",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "clearLoadingIndicator": {
+          "descr": "Clear the loading indicator.",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "domElement",
+              "dataType": "Element",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "displayLoadingIndicator": {
+          "descr": "[displayLoadingIndicator description]",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "domElement",
+              "dataType": "Element",
+              "descr": "[description]"
+            },
+            {
+              "name": "loadingMessage",
+              "dataType": "string",
+              "descr": "[description]"
+            }
+          ]
+        }
+      },
+      {
+        "renderError": {
+          "descr": "Render the provided error message in the webpart container div.",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "domElement",
+              "dataType": "HTMLElement",
+              "descr": "[description]"
+            },
+            {
+              "name": "error",
+              "dataType": "Error | string",
+              "descr": ""
+            }
+          ]
+        }
       }
-    },
-    {
-      "IEvent<T>": {
-        "extendsName": null,
-        "descr": "Event object"
+    ]
+  },
+  "ICustomPropertyPaneFieldProps": {
+    "extendsName": null,
+    "descr": "CustomPropertyField props.",
+    "properties": [
+      {
+        "onDispose": {
+          "descr": "Event callback for onDispose",
+          "isOptional": true,
+          "returnType": "void",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "elem",
+              "dataType": "HTMLElement",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "onRender:": {
+          "descr": "onRender will be called once the custom field mounted to the host element.",
+          "isOptional": false,
+          "returnType": "void",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "elem",
+              "dataType": "HTMLElement",
+              "descr": ""
+            },
+            {
+              "name": "context",
+              "dataType": "any",
+              "descr": ""
+            },
+            {
+              "name": "onChanged?",
+              "dataType": "IOnCustomPropertyFieldChanged",
+              "descr": ""
+            }
+          ]
+        }
       }
-    },
-    {
-      "IEventAggregator": {
-        "extendsName": null,
-        "descr": "Publis APIs for the EventAggregator. Event names must follow the following format\n  \"eventName:action\" e.g. \"configure:start\" and \"configure:end\""
+    ],
+    "objects": [],
+    "methods": []
+  },
+  "IEvent<T>": {
+    "extendsName": null,
+    "descr": "Event object",
+    "properties": [],
+    "objects": [],
+    "methods": []
+  },
+  "IEventAggregator": {
+    "extendsName": null,
+    "descr": "Publis APIs for the EventAggregator. Event names must follow the following format \n\"eventName:action\" e.g. \"configure:start\" and \"configure:end\"",
+    "properties": [],
+    "objects": [],
+    "methods": [
+      {
+        "raiseEvent": {
+          "descr": "Raise an event",
+          "genericType": "T",
+          "returnType": " void",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "eventName",
+              "dataType": "string",
+              "descr": ""
+            },
+            {
+              "name": "eventObject",
+              "dataType": "IEvent<T>",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "subscribeByEventName": {
+          "descr": "Subscribe for an event from all sources",
+          "genericType": "T",
+          "returnType": " void",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "eventName",
+              "dataType": "string",
+              "descr": ""
+            },
+            {
+              "name": "subscriberId",
+              "dataType": "string",
+              "descr": ""
+            },
+            {
+              "name": "callback",
+              "dataType": "IEventCallback<T>",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "subscribeBySourceId": {
+          "descr": "Subscribe for all events from a specific source.",
+          "genericType": "T",
+          "returnType": " void",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "sourceId",
+              "dataType": "string",
+              "descr": ""
+            },
+            {
+              "name": "subscriberId",
+              "dataType": "string",
+              "descr": ""
+            },
+            {
+              "name": "callback",
+              "dataType": "IEventCallback<T>",
+              "descr": ""
+            }
+          ]
+        }
       }
-    },
-    {
-      "IEventCallback<T>": {
-        "extendsName": null,
-        "descr": "Event callback"
+    ]
+  },
+  "IEventCallback<T>": {
+    "extendsName": null,
+    "descr": "Event callback",
+    "properties": [],
+    "objects": [],
+    "methods": []
+  },
+  "IHtmlProperties": {
+    "extendsName": null,
+    "descr": "Structure of the data that a webpart developer can return on the onBeforeSerialize() API. \nThe outcome contains 3 kay/value dictionaries for properties that need to be search indexed. \nBoth keys and values are expected to be strings and will be HTML encoded during serialization. \n \n{ \nsearchableProperties: { 'prop1': 'value_of_prop1' }, \nlinkProperties: { 'prop2': 'http://www.contoso.com/page1.aspx' }, \nimageLinkPropertes: { 'prop3': 'http://www.contoso.com/imag.png' } \n} \n \nThis input would get translated to the following HTML string. \n \n\"<div data-sp-prop-name='prop1'>value1</div> \n<link data-sp-prop-name='prop2' href='http://www.contoso.com/page1.aspx'> \n<img data-sp-prop-name='prop2' href='http://www.contoso.com/image.png'>\"",
+    "properties": [],
+    "objects": [],
+    "methods": []
+  },
+  "IOdataList": {
+    "extendsName": null,
+    "descr": "Represents an OData SP.List object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx",
+    "properties": [],
+    "objects": [],
+    "methods": []
+  },
+  "IOdataListItem": {
+    "extendsName": null,
+    "descr": "Represents an OData SP.ListItem object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx",
+    "properties": [],
+    "objects": [],
+    "methods": []
+  },
+  "IOdataUser": {
+    "extendsName": null,
+    "descr": "Represents an OData SP.User object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx",
+    "properties": [],
+    "objects": [],
+    "methods": []
+  },
+  "IOdataUserId": {
+    "extendsName": null,
+    "descr": "Represents an OData SP.UserId object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx",
+    "properties": [],
+    "objects": [],
+    "methods": []
+  },
+  "IOdataWeb": {
+    "extendsName": null,
+    "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx",
+    "properties": [],
+    "objects": [],
+    "methods": []
+  },
+  "IOnCustomPropertyFieldChanged": {
+    "extendsName": null,
+    "descr": "CustomPropertyFieldChanged contract.",
+    "properties": [],
+    "objects": [],
+    "methods": []
+  },
+  "IPropertyPaneField": {
+    "extendsName": null,
+    "descr": "PropertyPane field.",
+    "properties": [],
+    "objects": [],
+    "methods": []
+  },
+  "IPropertyPaneGroup": {
+    "extendsName": null,
+    "descr": "PropertyPane group. Group is part of the PropertyPanePage.",
+    "properties": [],
+    "objects": [],
+    "methods": []
+  },
+  "IPropertyPaneHeader": {
+    "extendsName": null,
+    "descr": "PropertyPane header. \nThis header remains same for all the pages.",
+    "properties": [],
+    "objects": [],
+    "methods": []
+  },
+  "IPropertyPanePage": {
+    "extendsName": null,
+    "descr": "PropertyPane page.",
+    "properties": [],
+    "objects": [],
+    "methods": []
+  },
+  "IPropertyPaneSettings": {
+    "extendsName": null,
+    "descr": "Web Part configuration settings",
+    "properties": [],
+    "objects": [],
+    "methods": []
+  },
+  "IReactWebPartProps": {
+    "extendsName": "IWebPartProps",
+    "descr": "",
+    "properties": [],
+    "objects": [],
+    "methods": []
+  },
+  "IShell": {
+    "extendsName": "IServiceScopeProvider",
+    "descr": "The system shell manages the initial loading of the scripts for a client-side application, \nas well as constructin the ClientSideApplication object, and initializing key services such \nas the page chrome, page context, HTTP client, etc.",
+    "properties": [],
+    "objects": [],
+    "methods": []
+  },
+  "ISuiteNavManagerConfiguration": {
+    "extendsName": null,
+    "descr": "Interface for the Suite Nav Manager Configuration",
+    "properties": [
+      {
+        "hamburgerCallback:": {
+          "descr": "Callback to use when suite nav hamburger button is clicked. If not specified, \nsuite nav's hamburger button will not be shown.",
+          "isOptional": false,
+          "returnType": "void",
+          "returnDescr": null,
+          "params": []
+        }
+      },
+      {
+        "modifySuiteNavData:": {
+          "descr": "Callback used to modify the Suite Nav to be app specific.",
+          "isOptional": false,
+          "returnType": "ISuiteNavData",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "suiteNavData",
+              "dataType": "ISuiteNavData",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "suiteNavPostRenderCallback:": {
+          "descr": "Callback to use when suite nav basic shell has render.",
+          "isOptional": false,
+          "returnType": "void",
+          "returnDescr": null,
+          "params": []
+        }
       }
-    },
-    {
-      "IHtmlProperties": {
-        "extendsName": null,
-        "descr": "Structure of the data that a webpart developer can return on the onBeforeSerialize() API.\n  The outcome contains 3 kay/value dictionaries for properties that need to be search indexed.\n  Both keys and values are expected to be strings and will be HTML encoded during serialization.\n  {\n  searchableProperties: { 'prop1': 'value_of_prop1' },\n  linkProperties: { 'prop2': 'http://www.contoso.com/page1.aspx' },\n  imageLinkPropertes: { 'prop3': 'http://www.contoso.com/imag.png' }\n  }\n  This input would get translated to the following HTML string.\n  \"<div data-sp-prop-name='prop1'>value1</div>\n  <link data-sp-prop-name='prop2' href='http://www.contoso.com/page1.aspx'>\n  <img data-sp-prop-name='prop2' href='http://www.contoso.com/image.png'>\""
+    ],
+    "objects": [],
+    "methods": [
+      {
+        "disableSuiteNav": {
+          "descr": "Function that prevents the suiteNav from loading",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": []
+        }
+      },
+      {
+        "isSuiteNavDisabled": {
+          "descr": "Callback to use when suite nav hamburger button is clicked. If not specified, \nsuite nav's hamburger button will not be shown.",
+          "genericType": null,
+          "returnType": " boolean",
+          "returnDescr": null,
+          "params": []
+        }
       }
-    },
-    {
-      "IOdataList": {
-        "extendsName": null,
-        "descr": "Represents an OData SP.List object. For more information about this object\n  see the MSDN documentation here:\n  https://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+    ]
+  },
+  "IWebPartConfigurationEventCallback": {
+    "extendsName": null,
+    "descr": "Configuration event callback",
+    "properties": [],
+    "objects": [],
+    "methods": []
+  },
+  "IWebPartContext": {
+    "extendsName": "ICommonWebPartContext",
+    "descr": "Context object that needs to be passed to the WebPart constructor.",
+    "properties": [
+      {
+        "configureStart": {
+          "descr": "Function to open PropertyPane",
+          "isOptional": true,
+          "returnType": "void",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "id",
+              "dataType": "string",
+              "descr": ""
+            },
+            {
+              "name": "propertyPaneState?",
+              "dataType": "PropertyPaneState",
+              "descr": ""
+            }
+          ]
+        }
       }
-    },
-    {
-      "IOdataListItem": {
-        "extendsName": null,
-        "descr": "Represents an OData SP.ListItem object. For more information about this object\n  see the MSDN documentation here:\n  https://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+    ],
+    "objects": [],
+    "methods": []
+  },
+  "IWebPartData": {
+    "extendsName": "IClientSideWebPartManifestBase",
+    "descr": "This structure represents the the serialized state of a webpart. When the serialize() API is called on \na webpart, the output should be this structure. The structure of the 'properties' field is owned by the \nwebpart and is specific to the webpart. Each webpart can decide the set of properties it wants to \nserialialize.",
+    "properties": [],
+    "objects": [],
+    "methods": []
+  },
+  "IWebPartEvent<T>": {
+    "extendsName": "IEvent<T>",
+    "descr": "Structure representing webpart - webpart events",
+    "properties": [],
+    "objects": [],
+    "methods": []
+  },
+  "IWebPartHost": {
+    "extendsName": null,
+    "descr": "",
+    "properties": [
+      {
+        "setDirty": {
+          "descr": "Resource loader",
+          "isOptional": true,
+          "returnType": "void",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "instanceId",
+              "dataType": "string",
+              "descr": ""
+            },
+            {
+              "name": "data?",
+              "dataType": "any",
+              "descr": ""
+            }
+          ]
+        }
       }
-    },
-    {
-      "IOdataUser": {
-        "extendsName": null,
-        "descr": "Represents an OData SP.User object. For more information about this object\n  see the MSDN documentation here:\n  https://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
-      }
-    },
-    {
-      "IOdataUserId": {
-        "extendsName": null,
-        "descr": "Represents an OData SP.UserId object. For more information about this object\n  see the MSDN documentation here:\n  https://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
-      }
-    },
-    {
-      "IOdataWeb": {
-        "extendsName": null,
-        "descr": "Represents an OData SP.Web object. For more information about this object\n  see the MSDN documentation here:\n  https://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
-      }
-    },
-    {
-      "IOnCustomPropertyFieldChanged": {
-        "extendsName": null,
-        "descr": "CustomPropertyFieldChanged contract."
-      }
-    },
-    {
-      "IPropertyPaneField": {
-        "extendsName": null,
-        "descr": "PropertyPane field."
-      }
-    },
-    {
-      "IPropertyPaneGroup": {
-        "extendsName": null,
-        "descr": "PropertyPane group. Group is part of the PropertyPanePage."
-      }
-    },
-    {
-      "IPropertyPaneHeader": {
-        "extendsName": null,
-        "descr": "PropertyPane header.\n  This header remains same for all the pages."
-      }
-    },
-    {
-      "IPropertyPanePage": {
-        "extendsName": null,
-        "descr": "PropertyPane page."
-      }
-    },
-    {
-      "IPropertyPaneSettings": {
-        "extendsName": null,
-        "descr": "Web Part configuration settings"
-      }
-    },
-    {
-      "IReactWebPartProps": {
-        "extendsName": "IWebPartProps",
-        "descr": ""
-      }
-    },
-    {
-      "IShell": {
-        "extendsName": "IServiceScopeProvider",
-        "descr": "The system shell manages the initial loading of the scripts for a client-side application,\n  as well as constructin the ClientSideApplication object, and initializing key services such\n  as the page chrome, page context, HTTP client, etc."
-      }
-    },
-    {
-      "ISuiteNavManagerConfiguration": {
-        "extendsName": null,
-        "descr": "Interface for the Suite Nav Manager Configuration"
-      }
-    },
-    {
-      "IWebPartConfigurationEventCallback": {
-        "extendsName": null,
-        "descr": "Configuration event callback"
-      }
-    },
-    {
-      "IWebPartContext": {
-        "extendsName": "ICommonWebPartContext",
-        "descr": "Context object that needs to be passed to the WebPart constructor."
-      }
-    },
-    {
-      "IWebPartData": {
-        "extendsName": "IClientSideWebPartManifestBase",
-        "descr": "This structure represents the the serialized state of a webpart. When the serialize() API is called on\n  a webpart, the output should be this structure. The structure of the 'properties' field is owned by the\n  webpart and is specific to the webpart. Each webpart can decide the set of properties it wants to\n  serialialize."
-      }
-    },
-    {
-      "IWebPartEvent<T>": {
-        "extendsName": "IEvent<T>",
-        "descr": "Structure representing webpart - webpart events"
-      }
-    },
-    {
-      "IWebPartHost": {
-        "extendsName": null,
-        "descr": ""
-      }
-    },
-    {
-      "TextResource": {
-        "extendsName": null,
-        "descr": ""
-      }
-    }
-  ]
+    ],
+    "objects": [],
+    "methods": []
+  },
+  "TextResource": {
+    "extendsName": null,
+    "descr": "",
+    "properties": [],
+    "objects": [],
+    "methods": []
+  }
 }

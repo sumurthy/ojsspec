@@ -1,8 +1,4 @@
 1. Use TypeScript AST to generate the intermediary JSONs.
-2. @param or any other parameters doesn't take more than 1 line. Fix it using the array element:
-    function processLines(element, index, array) {
-      ...
-    }
 3. Modules are not supported. Need recursive way to support them.
 4. HANDLE THIS TYPE OF DATA:
   interface IHtmlProperties {
@@ -20,4 +16,3 @@
     properties: ICheckboxProps | ITextFieldProps | IToggleProps | IDropdownProps |
     ICustomPropertyPaneFieldProps | ILabelProps | ISliderProps | IChoiceGroupProps |
     IButtonProps | ILinkProps | any;
-6. Implement @return (similar to parameter)
