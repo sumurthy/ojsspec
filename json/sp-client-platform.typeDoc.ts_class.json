@@ -1,0 +1,1505 @@
+{
+  "BaseClientSideWebPart": {
+    "implementsName": "IClientSideWebPart",
+    "genericType": "P",
+    "descr": "Implements the minimal functionality for a webpart. This class also provides a bunch of parameter \nvalidate and access to readonly properties like the displayMode, properties, manifest, instanceId, \ndomElement, and so on...",
+    "properties": [
+      {
+        "protected disableReactivePropertyChanges": {
+          "descr": "Indicates whether the Web Part's configuration is reactive or not. \nReactive - Changes made in the PropertyPane are transmitted to the Web Part instantly \nNon-reactive - Changes are transmitted to the Web Part only after 'Apply' click.",
+          "isOptional": false,
+          "type": " boolean",
+          "isCollection": false
+        }
+      },
+      {
+        "protected displayMode": {
+          "descr": "Display mode of the Web Part.",
+          "isOptional": false,
+          "type": " DisplayMode",
+          "isCollection": false
+        }
+      },
+      {
+        "protected domElement": {
+          "descr": "[domElement description]",
+          "isOptional": false,
+          "type": " HTMLElement",
+          "isCollection": false
+        }
+      },
+      {
+        "protected host": {
+          "descr": "[host description]",
+          "isOptional": false,
+          "type": " IWebPartHost",
+          "isCollection": false
+        }
+      },
+      {
+        "protected instanceId": {
+          "descr": "[instanceId description]",
+          "isOptional": false,
+          "type": " string",
+          "isCollection": false
+        }
+      },
+      {
+        "protected manifest": {
+          "descr": "Web Part's manifest.",
+          "isOptional": false,
+          "type": " IClientSideWebPartManifest<any>",
+          "isCollection": false
+        }
+      },
+      {
+        "protected properties": {
+          "descr": "Property bag of the Web Part.",
+          "isOptional": false,
+          "type": " P",
+          "isCollection": false
+        }
+      },
+      {
+        "protected propertyPaneSettings": {
+          "descr": "Configuration settings of the Web Part for the PropertyPane.",
+          "isOptional": false,
+          "type": " IPropertyPaneSettings",
+          "isCollection": false
+        }
+      },
+      {
+        "protected renderedFromDefaultProperties": {
+          "descr": "Indicates whether the Web Part was rendered from the default properties, \nas opposed to using serialized values from the last time that the web part was saved.",
+          "isOptional": false,
+          "type": " boolean",
+          "isCollection": false
+        }
+      },
+      {
+        "protected renderedOnce": {
+          "descr": "Indicates whether the Web Part has been rendered once or not.",
+          "isOptional": false,
+          "type": " boolean",
+          "isCollection": false
+        }
+      }
+    ],
+    "methods": [
+      {
+        "constructor": {
+          "descr": "Contructor for the BaseClientSideWebPart \nIf a sub classe overrids the constructor, it needs to call super(context) as the first line of constructor",
+          "genericType": null,
+          "returnType": "BaseClientSideWebPart",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "ctx",
+              "dataType": "IWebPartContext",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "protected": {
+          "descr": "Clear the error message from the web part display area.",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": []
+        }
+      },
+      {
+        "protected": {
+          "descr": "!!! WARNING !!! Microsoft owns the right to change any line of code below this line. Please do not make \nyour implementation dependent on the behaviours in the following code.",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": []
+        }
+      },
+      {
+        "public": {
+          "descr": "Connects the web parts",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "ids",
+              "dataType": "string[]",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "public": {
+          "descr": "[dispose description]",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": []
+        }
+      },
+      {
+        "public": {
+          "descr": "[getPropertyPaneSettings description]",
+          "genericType": null,
+          "returnType": " IPropertyPaneData",
+          "returnDescr": null,
+          "params": []
+        }
+      },
+      {
+        "public": {
+          "descr": "",
+          "genericType": "T",
+          "returnType": " Promise<T>",
+          "returnDescr": null,
+          "params": []
+        }
+      },
+      {
+        "public": {
+          "descr": "",
+          "genericType": null,
+          "returnType": " IHtmlProperties",
+          "returnDescr": null,
+          "params": []
+        }
+      },
+      {
+        "public": {
+          "descr": "",
+          "genericType": "T",
+          "returnType": " void",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "eventName",
+              "dataType": "string",
+              "descr": ""
+            },
+            {
+              "name": "eventObject",
+              "dataType": "IWebPartEvent<T>",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "protected": {
+          "descr": "Event handler for the property change on the PropertyPane.",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "propertyPath",
+              "dataType": "string",
+              "descr": ""
+            },
+            {
+              "name": "newValue",
+              "dataType": "any",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "protected": {
+          "descr": "Event handler called when the configuration is completed for the Web Part. \nConfigurationComplete event is fired when user switches between web parts \nwhile the PropertyPane is open, and this event handler is called for the \npreviously selected web part.",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": []
+        }
+      },
+      {
+        "protected": {
+          "descr": "Event handler called when the PropertyPane is rendered.",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": []
+        }
+      },
+      {
+        "protected": {
+          "descr": "Event handler called when the changes are applied on the PropertyPane. \nThis is called only in the case of non-reactive PropertyPane.",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": []
+        }
+      },
+      {
+        "public": {
+          "descr": "",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "mode",
+              "dataType": "DisplayMode = DisplayMode.Read",
+              "descr": ""
+            },
+            {
+              "name": "data?",
+              "dataType": "IWebPartData",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "protected": {
+          "descr": "Render an error message in the web part display area. Also logs the error message to the IWebPartHost logger. \n",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "error",
+              "dataType": "Error",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "public": {
+          "descr": "",
+          "genericType": null,
+          "returnType": " IWebPartData",
+          "returnDescr": null,
+          "params": []
+        }
+      },
+      {
+        "protected": {
+          "descr": "Updates the Web Part data.",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "webPartData",
+              "dataType": "IWebPartData",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "public": {
+          "descr": "validates the common params within the context.",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "context",
+              "dataType": "ICommonWebPartContext",
+              "descr": ""
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "Canvas": {
+    "implementsName": null,
+    "genericType": null,
+    "descr": "SharePoint Client-side Applications can use the SharePoint Canvas to enable rich content authoring \nas part of their experience. The SharePoint canvas provides Rich Text Editing capabilities, SharePoint \nClient-side WebPart aggregation and hosting, and a beautiful railed design experience. \n",
+    "properties": [
+      {
+        "constructor(serviceScope": {
+          "descr": "Construct a new instance of the Canvas.",
+          "isOptional": false,
+          "type": " ServiceScope,",
+          "isCollection": false
+        }
+      },
+      {
+        "container": {
+          "descr": "Construct a new instance of the Canvas.",
+          "isOptional": false,
+          "type": " HTMLElement,",
+          "isCollection": false
+        }
+      },
+      {
+        "mode": {
+          "descr": "Construct a new instance of the Canvas.",
+          "isOptional": false,
+          "type": " DisplayMode,",
+          "isCollection": false
+        }
+      },
+      {
+        "serializedCanvas?": {
+          "descr": "Construct a new instance of the Canvas.",
+          "isOptional": false,
+          "type": " string,",
+          "isCollection": false
+        }
+      },
+      {
+        "scrollThreshold?": {
+          "descr": "Construct a new instance of the Canvas.",
+          "isOptional": false,
+          "type": " number)",
+          "isCollection": false
+        }
+      },
+      {
+        "public count": {
+          "descr": "",
+          "isOptional": false,
+          "type": " number",
+          "isCollection": false
+        }
+      },
+      {
+        "public previewUrl": {
+          "descr": "Get the preview image url generated from webpart manager if it is available. \nThe preview image is the first preview image provided by a webpart \n",
+          "isOptional": false,
+          "type": " string",
+          "isCollection": false
+        }
+      }
+    ],
+    "methods": [
+      {
+        "handleCanvasChanged?:": {
+          "descr": "Construct a new instance of the Canvas.",
+          "genericType": null,
+          "returnType": " () => void,",
+          "returnDescr": null,
+          "params": []
+        }
+      },
+      {
+        "public": {
+          "descr": "Unmount the Canvas from the container it was constructed with.",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": "number of controls in the Canvas.",
+          "params": []
+        }
+      },
+      {
+        "public": {
+          "descr": "Display the Canvas' Toolbox at a given row. If the Toolbox is already open, the Toolbox will close \nat its previous row and re-open at the new row. \n",
+          "genericType": null,
+          "returnType": " boolean",
+          "returnDescr": "number of controls in the Canvas.",
+          "params": [
+            {
+              "name": "row",
+              "dataType": "number",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "public": {
+          "descr": "Render the Canvas into its container DOM element. The Canvas will use the DisplayMode it was \nconstructed with. \nIf the Canvas has already been rendered once, the Canvas will clear its contents and then, if present, \nuse 'serializedCanvas' to rehydrate itself.",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": "number of controls in the Canvas.",
+          "params": [
+            {
+              "name": "serializedCanvas?",
+              "dataType": "string",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "public": {
+          "descr": "Serialize the current contents of the Canvas. The serialized string is in a HTML format understood by \nSharePoint's Rich Text Field. The returned string can be crawled by search. Modifying the returned \nstring outside of the Canvas is not supported. \n",
+          "genericType": null,
+          "returnType": " string",
+          "returnDescr": "number of controls in the Canvas.",
+          "params": []
+        }
+      }
+    ]
+  },
+  "ClientSideApplication": {
+    "implementsName": null,
+    "genericType": null,
+    "descr": "This is the system base class for client-side applications. It manages the overall \nlife cycle of your application, and is the first entry point for your code to start \nexecuting when the page loads. The two main events are onLoad() which occurs first, \nand onRender() which occurs after the shell has initialized the environment and \ncompleted rendering the page chrome.",
+    "properties": [
+      {
+        "protected domElement": {
+          "descr": "Returns the DOM element where the application is expected to render its content. \nThe domElement will be undefined until the onRender() event occurs. \nIMPORTANT: The application should not access DOM elements outside of this subtree, \nas they are system-defined and may change over time.",
+          "isOptional": false,
+          "type": " HTMLDivElement",
+          "isCollection": false
+        }
+      },
+      {
+        "protected shell": {
+          "descr": "Returns a reference to the shell, which is a global singleton object that contains \nthe main service classes.",
+          "isOptional": false,
+          "type": " IShell",
+          "isCollection": false
+        }
+      }
+    ],
+    "methods": [
+      {
+        "constructor": {
+          "descr": "This is the system base class for client-side applications. It manages the overall \nlife cycle of your application, and is the first entry point for your code to start \nexecuting when the page loads. The two main events are onLoad() which occurs first, \nand onRender() which occurs after the shell has initialized the environment and \ncompleted rendering the page chrome.",
+          "genericType": null,
+          "returnType": "ClientSideApplication",
+          "returnDescr": null,
+          "params": []
+        }
+      },
+      {
+        "public": {
+          "descr": "RESERVED FOR INTERNAL USAGE. This method is invoked automatically by the system shell. \nThe application code should not call it directly.",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "shell",
+              "dataType": "IShell",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "protected": {
+          "descr": "This life cycle event occurs immediately after the shell has loaded the application, \nbefore the DOM is constructed. Applications can use this event to load scripts \nor start asynchronous operations that need to occur early in the lifecycle. \nInside the onLoad() event, applications may also modify the rendering of various \npage chrome elements, for example by calling this.shell.suiteNav.setComponentVisibility(false).",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": []
+        }
+      },
+      {
+        "protected": {
+          "descr": "This lifecycle event occurs after the shell has constructed the DOM for the page chrome. \nAt this time, the domElement property will be initialized, and the application can begin \nrendering its own DOM elements.",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": []
+        }
+      },
+      {
+        "public": {
+          "descr": "RESERVED FOR INTERNAL USAGE. This method is invoked automatically by the system shell. \nThe application code should not call it directly.",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "domElement",
+              "dataType": "HTMLDivElement",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "public": {
+          "descr": "Returns a reference to the shell, which is a global singleton object that contains \nthe main service classes.",
+          "genericType": null,
+          "returnType": " ISuiteNavManagerConfiguration",
+          "returnDescr": null,
+          "params": []
+        }
+      }
+    ]
+  },
+  "EventAggregator": {
+    "implementsName": "IEventAggregator",
+    "genericType": null,
+    "descr": "Event Aggregator",
+    "properties": [],
+    "methods": [
+      {
+        "public": {
+          "descr": "Raise an event",
+          "genericType": "T",
+          "returnType": " void",
+          "returnDescr": "[description]",
+          "params": [
+            {
+              "name": "eventName",
+              "dataType": "string",
+              "descr": ""
+            },
+            {
+              "name": "eventObject",
+              "dataType": "IEvent<T>",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "public": {
+          "descr": "Subscribe for an event from all sources",
+          "genericType": "T",
+          "returnType": " void",
+          "returnDescr": "[description]",
+          "params": [
+            {
+              "name": "eventName",
+              "dataType": "string",
+              "descr": ""
+            },
+            {
+              "name": "subscriberId",
+              "dataType": "string",
+              "descr": ""
+            },
+            {
+              "name": "callback",
+              "dataType": "IEventCallback<T>",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "public": {
+          "descr": "Subscribe for all events from a specific source.",
+          "genericType": "T",
+          "returnType": " void",
+          "returnDescr": "[description]",
+          "params": [
+            {
+              "name": "sourceId",
+              "dataType": "string",
+              "descr": ""
+            },
+            {
+              "name": "subscriberId",
+              "dataType": "string",
+              "descr": ""
+            },
+            {
+              "name": "callback",
+              "dataType": "IEventCallback<T>",
+              "descr": ""
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "GuidHelpers": {
+    "implementsName": null,
+    "genericType": null,
+    "descr": "Get's the path name from an absolute url.",
+    "properties": [],
+    "methods": [
+      {
+        "public": {
+          "descr": "Get's the path name from an absolute url.",
+          "genericType": null,
+          "returnType": " string",
+          "returnDescr": null,
+          "params": []
+        }
+      },
+      {
+        "public": {
+          "descr": "Example: \"/Guid(d5369f3b-bd7a-412a-9c0f-7f0650bb5489)/\" \n-> 'd5369f3b-bd7a-412a-9c0f-7f0650bb5489' \nExample: \"{d5369f3b-bd7a-412a-9c0f-7f0650bb5489}\" \n-> 'd5369f3b-bd7a-412a-9c0f-7f0650bb5489'",
+          "genericType": null,
+          "returnType": " string",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "guid",
+              "dataType": "string",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "public": {
+          "descr": "Example: \"/Guid(d5369f3b-bd7a-412a-9c0f-7f0650bb5489)/\" \n-> 'd5369f3b-bd7a-412a-9c0f-7f0650bb5489' \nExample: \"{d5369f3b-bd7a-412a-9c0f-7f0650bb5489}\" \n-> 'd5369f3b-bd7a-412a-9c0f-7f0650bb5489'",
+          "genericType": null,
+          "returnType": " boolean",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "guid",
+              "dataType": "string",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "public": {
+          "descr": "Example: \"/Guid(d5369f3b-bd7a-412a-9c0f-7f0650bb5489)/\" \n-> 'd5369f3b-bd7a-412a-9c0f-7f0650bb5489' \nExample: \"{d5369f3b-bd7a-412a-9c0f-7f0650bb5489}\" \n-> 'd5369f3b-bd7a-412a-9c0f-7f0650bb5489'",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "guid",
+              "dataType": "string",
+              "descr": ""
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "PageContext": {
+    "implementsName": "IPageContext",
+    "genericType": null,
+    "descr": "The page context represents contextual information about the SharePoint page that \nis currently being viewed, such as its site URL, the client side application ID, \nthe current user, etc. The page context objects themselves represent key information \nthat is needed e.g. to identify the site/web/list/listitem in a REST service call, \nbut it is not a full cache with invalidation and change notifications. If your \napplication maintains such a cache, it can keep the PageContext up to date by \nmeans of methods such as SPListItem.updateOdataObject().",
+    "properties": [
+      {
+        "public application": {
+          "descr": "Contextual information for the client-side application.",
+          "isOptional": false,
+          "type": " ApplicationContext",
+          "isCollection": false
+        }
+      },
+      {
+        "public core": {
+          "descr": "Contextual information for the SharePoint SPPageContextInfo object \nIf unsure whether this object is initialized, check the SPPageContextInfo.state property first.",
+          "isOptional": false,
+          "type": " PageContextCore",
+          "isCollection": false
+        }
+      },
+      {
+        "public list": {
+          "descr": "Contextual information for the SharePoint list that is hosting the page. \nIf unsure whether this object is initialized, check the SPList.state property first.",
+          "isOptional": false,
+          "type": " SPList",
+          "isCollection": false
+        }
+      },
+      {
+        "public listItem": {
+          "descr": "Contextual information for the SharePoint list item that stores data for the page. \nIf unsure whether this object is initialized, check the SPListItem.state property first.",
+          "isOptional": false,
+          "type": " SPListItem",
+          "isCollection": false
+        }
+      },
+      {
+        "public quickLaunch": {
+          "descr": "Contextual quick launch navigation information for the page. \nIf unsure whether this object is initialized, check the SPNavigation.state property first.",
+          "isOptional": false,
+          "type": " SPNavigationNodeCollection",
+          "isCollection": false
+        }
+      },
+      {
+        "public site": {
+          "descr": "Contextual information for the SharePoint site collection that is hosting the page. \nIf unsure whether this object is initialized, check the SPSite.state property first.",
+          "isOptional": false,
+          "type": " SPSite",
+          "isCollection": false
+        }
+      },
+      {
+        "public topNav": {
+          "descr": "Top navigation information for the page. \nIf unsure whether this object is initialized, check the SPNavigation.state property first.",
+          "isOptional": false,
+          "type": " SPNavigationNodeCollection",
+          "isCollection": false
+        }
+      },
+      {
+        "public urlQueryParameters": {
+          "descr": "Object for retrieving the current page's query parameter values.",
+          "isOptional": false,
+          "type": " UrlQueryParameterCollection",
+          "isCollection": false
+        }
+      },
+      {
+        "public user": {
+          "descr": "Contextual information for the current SharePoint user \nIf unsure whether this object is initialized, check the SPPageContextInfo.state property first.",
+          "isOptional": false,
+          "type": " SPUser",
+          "isCollection": false
+        }
+      },
+      {
+        "public web": {
+          "descr": "Contextual information for the SharePoint site (\"web\") that is hosting the page. \nIf unsure whether this object is initialized, check the SPWeb.state property first.",
+          "isOptional": false,
+          "type": " SPWeb",
+          "isCollection": false
+        }
+      }
+    ],
+    "methods": [
+      {
+        "constructor": {
+          "descr": "The page context represents contextual information about the SharePoint page that \nis currently being viewed, such as its site URL, the client side application ID, \nthe current user, etc. The page context objects themselves represent key information \nthat is needed e.g. to identify the site/web/list/listitem in a REST service call, \nbut it is not a full cache with invalidation and change notifications. If your \napplication maintains such a cache, it can keep the PageContext up to date by \nmeans of methods such as SPListItem.updateOdataObject().",
+          "genericType": null,
+          "returnType": "PageContext",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "serviceScope",
+              "dataType": "ServiceScope",
+              "descr": ""
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "PageContextItem": {
+    "implementsName": null,
+    "genericType": null,
+    "descr": "This is an abstract base class for the SPSite, SPWeb, SPList, SPListItem, \nand ApplicationContext classes. It defines the \"state\" of these objects.",
+    "properties": [
+      {
+        "public state": {
+          "descr": "Indicates whether the context item is uninitialized, waiting to be loaded, \nor ready to use.",
+          "isOptional": false,
+          "type": " PageContextItemState",
+          "isCollection": false
+        }
+      }
+    ],
+    "methods": [
+      {
+        "constructor": {
+          "descr": "[constructor description]",
+          "genericType": null,
+          "returnType": "PageContextItem",
+          "returnDescr": "[description]",
+          "params": [
+            {
+              "name": "pageContext",
+              "dataType": "PageContext",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "public": {
+          "descr": "Returns the PageContext that owns this object. You can use this to find \nother related objects, e.g. the parent SPWeb for an SPList.",
+          "genericType": null,
+          "returnType": " PageContext",
+          "returnDescr": "[description]",
+          "params": []
+        }
+      },
+      {
+        "protected": {
+          "descr": "Reports an error if the object has already been loaded.",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": "[description]",
+          "params": []
+        }
+      }
+    ]
+  },
+  "PreloadedPageData": {
+    "implementsName": null,
+    "genericType": null,
+    "descr": "THIS CLASS IS DEPRECATED. Use the PageContext class instead.",
+    "properties": [
+      {
+        "public appId": {
+          "descr": "Returns the client-side application identifier for the current application. \nExample: '00000000-0000-0000-0000-000000000000'",
+          "isOptional": false,
+          "type": " string",
+          "isCollection": false
+        }
+      },
+      {
+        "public static instance": {
+          "descr": "Returns the global singleton instance for this class.",
+          "isOptional": false,
+          "type": " PreloadedPageData",
+          "isCollection": false
+        }
+      },
+      {
+        "public userKey": {
+          "descr": "Returns the system user key.",
+          "isOptional": false,
+          "type": " string",
+          "isCollection": false
+        }
+      },
+      {
+        "public userLoginName": {
+          "descr": "Returns the current user's login name.",
+          "isOptional": false,
+          "type": " string",
+          "isCollection": false
+        }
+      },
+      {
+        "public webAbsoluteUrl": {
+          "descr": "Returns the current user's login name.",
+          "isOptional": false,
+          "type": " string",
+          "isCollection": false
+        }
+      },
+      {
+        "public webServerRelativeUrl": {
+          "descr": "Returns the server-relative URL for the current SharePoint site ('web'). \nExample: '/sites/PubSite'",
+          "isOptional": false,
+          "type": " string",
+          "isCollection": false
+        }
+      },
+      {
+        "public webTitle": {
+          "descr": "Returns the the title of the current SPWeb.",
+          "isOptional": false,
+          "type": " string",
+          "isCollection": false
+        }
+      }
+    ],
+    "methods": [
+      {
+        "constructor": {
+          "descr": "THIS CLASS IS DEPRECATED. Use the PageContext class instead.",
+          "genericType": null,
+          "returnType": "PreloadedPageData",
+          "returnDescr": null,
+          "params": []
+        }
+      }
+    ]
+  },
+  "ReactWebPart": {
+    "implementsName": null,
+    "genericType": "P",
+    "descr": "Implement some common functionality for a base React webpart. All React based \nwebparts are expected to inherit from this class.",
+    "properties": [
+      {
+        "constructor(context": {
+          "descr": "Implement some common functionality for a base React webpart. All React based \nwebparts are expected to inherit from this class.",
+          "isOptional": false,
+          "type": " IWebPartContext,",
+          "isCollection": false
+        }
+      },
+      {
+        "componentType": {
+          "descr": "Implement some common functionality for a base React webpart. All React based \nwebparts are expected to inherit from this class.",
+          "isOptional": false,
+          "type": " React.ComponentClass<IReactWebPartProps>)",
+          "isCollection": false
+        }
+      }
+    ],
+    "methods": [
+      {
+        "public": {
+          "descr": "Implement some common functionality for a base React webpart. All React based \nwebparts are expected to inherit from this class.",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": []
+        }
+      },
+      {
+        "public": {
+          "descr": "[render description]",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "mode",
+              "dataType": "DisplayMode",
+              "descr": ""
+            },
+            {
+              "name": "data?",
+              "dataType": "IWebPartData",
+              "descr": ""
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "SPList": {
+    "implementsName": null,
+    "genericType": null,
+    "descr": "This class is primarily used with the PageContext class. It provides contextual \ninformation for the SharePoint site collection that is hosting the page.",
+    "properties": [
+      {
+        "public description": {
+          "descr": "The description of the list.",
+          "isOptional": false,
+          "type": " string",
+          "isCollection": false
+        }
+      },
+      {
+        "public id": {
+          "descr": "The GUID that identifies the SPList on the server.",
+          "isOptional": false,
+          "type": " string",
+          "isCollection": false
+        }
+      },
+      {
+        "public parentWeb": {
+          "descr": "The parent SPWeb that this list belongs to.",
+          "isOptional": false,
+          "type": " SPWeb",
+          "isCollection": false
+        }
+      },
+      {
+        "public title": {
+          "descr": "The title of the list.",
+          "isOptional": false,
+          "type": " string",
+          "isCollection": false
+        }
+      }
+    ],
+    "methods": [
+      {
+        "constructor": {
+          "descr": "This class is primarily used with the PageContext class. It provides contextual \ninformation for the SharePoint site collection that is hosting the page.",
+          "genericType": null,
+          "returnType": "SPList",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "pageContext",
+              "dataType": "PageContext",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "public": {
+          "descr": "Returns an ODATA object containing additional information for this list, if available. \nOtherwise, this returns undefined. If your application fetches this data itself, it \ncan call updateOdataObject() to update the context.",
+          "genericType": null,
+          "returnType": " IOdataList",
+          "returnDescr": null,
+          "params": []
+        }
+      },
+      {
+        "public": {
+          "descr": "Assigns all properties of the object, then assigns the \"state\" property \nto PageContextItemState.Ready.",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "args",
+              "dataType": "ISPListArgs",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "public": {
+          "descr": "Updates the ODATA object that will be returned when getOdataObject() is called. \nThis allows the application to share its data with other objects (e.g. web parts) \nto avoid unnecessary REST calls.",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "value",
+              "dataType": "IOdataList",
+              "descr": ""
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "SPListItem": {
+    "implementsName": null,
+    "genericType": null,
+    "descr": "This class is primarily used with the PageContext class. It provides contextual \ninformation for the SharePoint list item associated with the current page.",
+    "properties": [
+      {
+        "public id": {
+          "descr": "Returns the integer that identifies this list item on the server. These integers \nare assigned in increasing order.",
+          "isOptional": false,
+          "type": " number",
+          "isCollection": false
+        }
+      },
+      {
+        "public parentList": {
+          "descr": "Returns the SPList that this list item belongs to.",
+          "isOptional": false,
+          "type": " SPList",
+          "isCollection": false
+        }
+      }
+    ],
+    "methods": [
+      {
+        "constructor": {
+          "descr": "This class is primarily used with the PageContext class. It provides contextual \ninformation for the SharePoint list item associated with the current page.",
+          "genericType": null,
+          "returnType": "SPListItem",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "pageContext",
+              "dataType": "PageContext",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "public": {
+          "descr": "Returns an ODATA object containing additional information for this list item, if available. \nOtherwise, this returns undefined. If your application fetches this data itself, it \ncan call updateOdataObject() to update the context.",
+          "genericType": null,
+          "returnType": " IOdataListItem",
+          "returnDescr": null,
+          "params": []
+        }
+      },
+      {
+        "public": {
+          "descr": "Assigns all properties of the object, then assigns the \"state\" property \nto PageContextItemState.Ready.",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "args",
+              "dataType": "ISPListItemArgs",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "public": {
+          "descr": "Updates the ODATA object that will be returned when getOdataObject() is called. \nThis allows the application to share its data with other objects (e.g. web parts) \nto avoid unnecessary REST calls.",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "value",
+              "dataType": "IOdataListItem",
+              "descr": ""
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "SPNavigationNode": {
+    "implementsName": null,
+    "genericType": null,
+    "descr": "This class is primarily used with the PageContext class. It provides quick launch \nnavigation information for the hosting application.",
+    "properties": [
+      {
+        "public id": {
+          "descr": "The numeric ID that identifies the SPNavigationNode on the server.",
+          "isOptional": false,
+          "type": " number",
+          "isCollection": false
+        }
+      }
+    ],
+    "methods": [
+      {
+        "constructor": {
+          "descr": "This class is primarily used with the PageContext class. It provides quick launch \nnavigation information for the hosting application.",
+          "genericType": null,
+          "returnType": "SPNavigationNode",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "pageContext",
+              "dataType": "PageContext",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "public": {
+          "descr": "Returns an ODATA object containing additional navigation information if available. \nOtherwise, this returns undefined. If your application fetches thiscls \ndata itself, it can call updateOdataObject() to update the context.",
+          "genericType": null,
+          "returnType": " IOdataNavigationNode",
+          "returnDescr": null,
+          "params": []
+        }
+      },
+      {
+        "public": {
+          "descr": "Assigns all properties of the object, then assigns the \"state\" property \nto PageContextItemState.Ready.",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "args",
+              "dataType": "ISPNavigationNodeArgs",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "public": {
+          "descr": "Updates the ODATA object that will be returned when getOdataObject() is called. \nThis allows the application to share its data with other objects (e.g. web parts) \nto avoid unnecessary REST calls.",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "value",
+              "dataType": "IOdataNavigationNode",
+              "descr": ""
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "SPNavigationNodeCollection": {
+    "implementsName": null,
+    "genericType": null,
+    "descr": "This class is primarily used with the PageContext class. It provides navigation \ninformation for the hosting application.",
+    "properties": [
+      {
+        "public items": {
+          "descr": "Returns all navigation nodes in the collection. \nReturns all navigation nodes in the collection.",
+          "isOptional": false,
+          "type": " SPNavigationNode",
+          "isCollection": false
+        }
+      }
+    ],
+    "methods": [
+      {
+        "constructor": {
+          "descr": "This class is primarily used with the PageContext class. It provides navigation \ninformation for the hosting application.",
+          "genericType": null,
+          "returnType": "SPNavigationNodeCollection",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "pageContext",
+              "dataType": "PageContext",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "public": {
+          "descr": "Returns an ODATA object containing additional navigation information if available. \nOtherwise, this returns undefined. If your application fetches this \ndata itself, it can call updateOdataObject() to update the context.",
+          "genericType": null,
+          "returnType": " IOdataNavigationNode[]",
+          "returnDescr": null,
+          "params": []
+        }
+      },
+      {
+        "public": {
+          "descr": "Updates the ODATA object that will be returned when getOdataObject() is called. \nThis allows the application to share its data with other objects (e.g. web parts) \nto avoid unnecessary REST calls.",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "value",
+              "dataType": "IOdataNavigationNode[]",
+              "descr": ""
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "SPSite": {
+    "implementsName": null,
+    "genericType": null,
+    "descr": "This class is primarily used with the PageContext class. It provides contextual \ninformation for the SharePoint site collection that hosts the page.",
+    "properties": [
+      {
+        "public id": {
+          "descr": "The GUID that identifies the SPSite on the server.",
+          "isOptional": false,
+          "type": " string",
+          "isCollection": false
+        }
+      },
+      {
+        "public serverRelativeUrl": {
+          "descr": "Returns a server-relative URL for this SPSite. \nExample: \"/sites/PubSite\"",
+          "isOptional": false,
+          "type": " string",
+          "isCollection": false
+        }
+      },
+      {
+        "public title": {
+          "descr": "Returns the title of the current site collection.",
+          "isOptional": false,
+          "type": " string",
+          "isCollection": false
+        }
+      }
+    ],
+    "methods": [
+      {
+        "constructor": {
+          "descr": "This class is primarily used with the PageContext class. It provides contextual \ninformation for the SharePoint site collection that hosts the page.",
+          "genericType": null,
+          "returnType": "SPSite",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "pageContext",
+              "dataType": "PageContext",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "public": {
+          "descr": "Assigns all properties of the object, then assigns the \"state\" property \nto PageContextItemState.Ready.",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "args",
+              "dataType": "ISPSiteArgs",
+              "descr": ""
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "SPUser": {
+    "implementsName": null,
+    "genericType": null,
+    "descr": "This class is primarily used with the PageContext class. It provides contextual \ninformation for the current user visiting the page.",
+    "properties": [
+      {
+        "public id": {
+          "descr": "The ID that identifies the SPUser on the server.",
+          "isOptional": false,
+          "type": " number",
+          "isCollection": false
+        }
+      }
+    ],
+    "methods": [
+      {
+        "constructor": {
+          "descr": "This class is primarily used with the PageContext class. It provides contextual \ninformation for the current user visiting the page.",
+          "genericType": null,
+          "returnType": "SPUser",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "pageContext",
+              "dataType": "PageContext",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "public": {
+          "descr": "Returns an ODATA object containing additional information for this user, if available. \nOtherwise, this returns undefined. If your application fetches this data itself, it \ncan call updateOdataObject() to update the context.",
+          "genericType": null,
+          "returnType": " IOdataUser",
+          "returnDescr": null,
+          "params": []
+        }
+      },
+      {
+        "public": {
+          "descr": "Assigns all properties of the object, then assigns the \"state\" property \nto PageContextItemState.Ready.",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "args",
+              "dataType": "ISPUserArgs",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "public": {
+          "descr": "Updates the ODATA object that will be returned when getOdataObject() is called. \nThis allows the application to share its data with other objects (e.g. web parts) \nto avoid unnecessary REST calls.",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "value",
+              "dataType": "IOdataUser",
+              "descr": ""
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "SPWeb": {
+    "implementsName": null,
+    "genericType": null,
+    "descr": "This class is primarily used with the PageContext class. It provides contextual \ninformation for the SharePoint site (\"web\") that hosts the page.",
+    "properties": [
+      {
+        "public id": {
+          "descr": "The GUID that identifies the SPWeb on the server.",
+          "isOptional": false,
+          "type": " string",
+          "isCollection": false
+        }
+      },
+      {
+        "public parentSite": {
+          "descr": "Returns the parent site collection that this site (\"web\") belongs to.",
+          "isOptional": false,
+          "type": " SPSite",
+          "isCollection": false
+        }
+      },
+      {
+        "public serverRelativeUrl": {
+          "descr": "Returns a server-relative URL for this SPWeb. \nExample: \"/sites/PubSite/SubWeb\"",
+          "isOptional": false,
+          "type": " string",
+          "isCollection": false
+        }
+      },
+      {
+        "public title": {
+          "descr": "Returns the title of the SharePoint site.",
+          "isOptional": false,
+          "type": " string",
+          "isCollection": false
+        }
+      }
+    ],
+    "methods": [
+      {
+        "constructor": {
+          "descr": "This class is primarily used with the PageContext class. It provides contextual \ninformation for the SharePoint site (\"web\") that hosts the page.",
+          "genericType": null,
+          "returnType": "SPWeb",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "pageContext",
+              "dataType": "PageContext",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "public": {
+          "descr": "Returns an ODATA object containing additional information for this SharePoint site (\"web\"), \nif available. Otherwise, this returns undefined. If your application fetches this \ndata itself, it can call updateOdataObject() to update the context.",
+          "genericType": null,
+          "returnType": " IOdataWeb",
+          "returnDescr": null,
+          "params": []
+        }
+      },
+      {
+        "public": {
+          "descr": "Assigns all properties of the object, then assigns the \"state\" property \nto PageContextItemState.Ready.",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "args",
+              "dataType": "ISPWebArgs",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "public": {
+          "descr": "Updates the ODATA object that will be returned when getOdataObject() is called. \nThis allows the application to share its data with other objects (e.g. web parts) \nto avoid unnecessary REST calls.",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "value",
+              "dataType": "IOdataWeb",
+              "descr": ""
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "TextResourceRequest": {
+    "implementsName": null,
+    "genericType": null,
+    "descr": "",
+    "properties": [
+      {
+        "public key": {
+          "descr": "",
+          "isOptional": false,
+          "type": " string",
+          "isCollection": false
+        }
+      },
+      {
+        "public url": {
+          "descr": "",
+          "isOptional": false,
+          "type": " string",
+          "isCollection": false
+        }
+      }
+    ],
+    "methods": []
+  }
+}

@@ -1,6 +1,6 @@
 1. Use TypeScript AST to generate the intermediary JSONs.
 3. Modules are not supported. Need recursive way to support them.
-4. HANDLE THIS TYPE OF DATA:
+4. HANDLE OBJECT TYPE OF DATA: (similar to module/object data type support)
   interface IHtmlProperties {
     imageLinkProperties: {
       [ propName: string ]: string
@@ -16,3 +16,5 @@
     properties: ICheckboxProps | ITextFieldProps | IToggleProps | IDropdownProps |
     ICustomPropertyPaneFieldProps | ILabelProps | ISliderProps | IChoiceGroupProps |
     IButtonProps | ILinkProps | any;
+    (Do this outside as a first step of file processing)
+6.

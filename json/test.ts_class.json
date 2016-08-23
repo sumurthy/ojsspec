@@ -1,0 +1,355 @@
+{
+  "BaseClientSideWebPart": {
+    "implementsName": "IClientSideWebPart",
+    "genericType": "P",
+    "descr": "Implements the minimal functionality for a webpart. This class also provides a bunch of parameter \n<<<<< HEAD * validate and access to readonly properties like the displayMode, properties, manifest, instanceId, \ndomElement, and so on... \n \nThe following methods in \nthe BaseClientSideWebPart have no functionality and are intended to be overridden \nby the derived webpart: \n \nrender Render the webpart inside the provided dom element. \n \nThe following methods provide default implementations but may be overridden by the \nderived webpart: \n \nconstructor Use super() as the first line in derived webpart's constructor. \ndispose (optional) Dispose any resources it is holding on to e.g. dom Elements, server resources. \nserialize Update webPartData in the derived web part and then call super.serialize(). \nonEvent (optional) event handler \n \nThe following methods are not intended to be overridden. \n \n===== >>>>>>> 6282fdab93d485b53c1a1c15b83e2c8d7c383fd6 * renderError Render an error message in the webpart container dom element.",
+    "properties": [
+      {
+        "<<<<<<< HEAD /**": {
+          "descr": "Contructor for the BaseClientSideWebPart \nIf a sub classe overrids the constructor, it needs to call super(context) as the first line of constructor",
+          "isOptional": false,
+          "type": "<<<<<<< HEAD /**",
+          "isCollection": false
+        }
+      },
+      {
+        ">>>>>>> 6282fdab93d485b53c1a1c15b83e2c8d7c383fd6 /**": {
+          "descr": "[constructor description]",
+          "isOptional": false,
+          "type": ">>>>>>> 6282fdab93d485b53c1a1c15b83e2c8d7c383fd6 /**",
+          "isCollection": false
+        }
+      },
+      {
+        "protected disableReactivePropertyChanges": {
+          "descr": "Indicates whether the Web Part's configuration is reactive or not. \nReactive - Changes made in the PropertyPane are transmitted to the Web Part instantly \nNon-reactive - Changes are transmitted to the Web Part only after 'Apply' click.",
+          "isOptional": false,
+          "type": " boolean",
+          "isCollection": false
+        }
+      },
+      {
+        "protected displayMode": {
+          "descr": "Display mode of the Web Part.",
+          "isOptional": false,
+          "type": " DisplayMode",
+          "isCollection": false
+        }
+      },
+      {
+        "protected domElement": {
+          "descr": "Root DOM element of the Web Part.",
+          "isOptional": false,
+          "type": " HTMLElement",
+          "isCollection": false
+        }
+      },
+      {
+        "protected host": {
+          "descr": "Host of the Web Part.",
+          "isOptional": false,
+          "type": " IWebPartHost",
+          "isCollection": false
+        }
+      },
+      {
+        "protected instanceId": {
+          "descr": "Instance ID of the Web Part.",
+          "isOptional": false,
+          "type": " string",
+          "isCollection": false
+        }
+      },
+      {
+        "protected manifest": {
+          "descr": "Web Part's manifest.",
+          "isOptional": false,
+          "type": " IClientSideWebPartManifest<any>",
+          "isCollection": false
+        }
+      },
+      {
+        "protected properties": {
+          "descr": "Property bag of the Web Part.",
+          "isOptional": false,
+          "type": " P",
+          "isCollection": false
+        }
+      },
+      {
+        "protected propertyPaneSettings": {
+          "descr": "Configuration settings of the Web Part for the PropertyPane.",
+          "isOptional": false,
+          "type": " IPropertyPaneSettings",
+          "isCollection": false
+        }
+      },
+      {
+        "protected renderedFromDefaultProperties": {
+          "descr": "Indicates whether the Web Part was rendered from the default properties, \nas opposed to using serialized values from the last time that the web part was saved.",
+          "isOptional": false,
+          "type": " boolean",
+          "isCollection": false
+        }
+      },
+      {
+        "protected renderedOnce": {
+          "descr": "Indicates whether the Web Part has been rendered once or not.",
+          "isOptional": false,
+          "type": " boolean",
+          "isCollection": false
+        }
+      },
+      {
+        "<<<<<<< HEAD": {
+          "descr": "Render an error message in the web part display area. Also logs the error message to the IWebPartHost logger. \n",
+          "isOptional": false,
+          "type": "<<<<<<< HEAD",
+          "isCollection": false
+        }
+      }
+    ],
+    "methods": [
+      {
+        "constructor": {
+          "descr": "[constructor description]",
+          "genericType": null,
+          "returnType": "BaseClientSideWebPart",
+          "returnDescr": "[description]",
+          "params": [
+            {
+              "name": "ctx",
+              "dataType": "IWebPartContext",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "=======": {
+          "descr": "[constructor description]",
+          "genericType": null,
+          "returnType": " IWebPartContext)",
+          "returnDescr": "[description]",
+          "params": [
+            {
+              "name": "ctx",
+              "dataType": "IWebPartContext",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "protected": {
+          "descr": "Clear the error message from the web part display area.",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": "[description]",
+          "params": []
+        }
+      },
+      {
+        "protected": {
+          "descr": "!!! WARNING !!! Microsoft owns the right to change any line of code below this line. Please do not make \nyour implementation dependent on the behaviours in the following code.",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": "[description]",
+          "params": []
+        }
+      },
+      {
+        "public": {
+          "descr": "",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": "[description]",
+          "params": [
+            {
+              "name": "ids",
+              "dataType": "string[]",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "public": {
+          "descr": "",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": "[description]",
+          "params": []
+        }
+      },
+      {
+        "public": {
+          "descr": "",
+          "genericType": null,
+          "returnType": " IPropertyPaneData",
+          "returnDescr": "[description]",
+          "params": []
+        }
+      },
+      {
+        "public": {
+          "descr": "",
+          "genericType": "T",
+          "returnType": " Promise<T>",
+          "returnDescr": "[description]",
+          "params": []
+        }
+      },
+      {
+        "public": {
+          "descr": "",
+          "genericType": null,
+          "returnType": " IHtmlProperties",
+          "returnDescr": "[description]",
+          "params": []
+        }
+      },
+      {
+        "public": {
+          "descr": "",
+          "genericType": "T",
+          "returnType": " void",
+          "returnDescr": "[description]",
+          "params": [
+            {
+              "name": "eventName",
+              "dataType": "string",
+              "descr": ""
+            },
+            {
+              "name": "eventObject",
+              "dataType": "IWebPartEvent<T>",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "protected": {
+          "descr": "Event handler for the property change on the PropertyPane.",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": "[description]",
+          "params": [
+            {
+              "name": "propertyPath",
+              "dataType": "string",
+              "descr": ""
+            },
+            {
+              "name": "newValue",
+              "dataType": "any",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "protected": {
+          "descr": "Event handler called when the configuration is completed for the Web Part. \nConfigurationComplete event is fired when user switches between web parts \nwhile the PropertyPane is open, and this event handler is called for the \npreviously selected web part.",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": "[description]",
+          "params": []
+        }
+      },
+      {
+        "protected": {
+          "descr": "Event handler called when the PropertyPane is rendered.",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": "[description]",
+          "params": []
+        }
+      },
+      {
+        "protected": {
+          "descr": "Event handler called when the changes are applied on the PropertyPane. \nThis is called only in the case of non-reactive PropertyPane.",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": "[description]",
+          "params": []
+        }
+      },
+      {
+        "public": {
+          "descr": "",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": "[description]",
+          "params": [
+            {
+              "name": "mode",
+              "dataType": "DisplayMode = DisplayMode.Read",
+              "descr": ""
+            },
+            {
+              "name": "data?",
+              "dataType": "IWebPartData",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "=======": {
+          "descr": "Render an error message in the web part display area. Also logs the error message to the IWebPartHost logger. \n",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": "[description]",
+          "params": [
+            {
+              "name": "error",
+              "dataType": "Error",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "public": {
+          "descr": "",
+          "genericType": null,
+          "returnType": " IWebPartData",
+          "returnDescr": "[description]",
+          "params": []
+        }
+      },
+      {
+        "protected": {
+          "descr": "Updates the Web Part data.",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": "[description]",
+          "params": [
+            {
+              "name": "webPartData",
+              "dataType": "IWebPartData",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "public": {
+          "descr": "validates the common params within the context.",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": "[description]",
+          "params": [
+            {
+              "name": "context",
+              "dataType": "ICommonWebPartContext",
+              "descr": ""
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -7,7 +7,7 @@
       {
         "name": "...url",
         "dataType": "string[]",
-        "descr": "[description]"
+        "descr": ""
       }
     ]
   },
@@ -128,24 +128,24 @@
       {
         "name": "targetProperty",
         "dataType": "string",
-        "descr": "[description of targetProperty] \nContinued description of the parameter."
+        "descr": ""
       },
       {
         "name": "properties",
         "dataType": "ITextFieldProps",
-        "descr": "[description of properties]"
+        "descr": ""
       }
     ]
   },
   "PropertyPaneToggle": {
     "signature": "PropertyPaneToggle(targetProperty: string, properties: IToggleProps): IPropertyPaneField",
     "returnType": "IPropertyPaneField",
-    "returnDescr": "[description]",
+    "returnDescr": null,
     "params": [
       {
         "name": "targetProperty",
         "dataType": "string",
-        "descr": "[description]"
+        "descr": ""
       },
       {
         "name": "properties",
