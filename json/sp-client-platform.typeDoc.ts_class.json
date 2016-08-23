@@ -10,7 +10,8 @@
           "isOptional": false,
           "type": " boolean",
           "isCollection": false
-        }
+        },
+        "accessModifier": "protected"
       },
       {
         "protected displayMode": {
@@ -18,7 +19,8 @@
           "isOptional": false,
           "type": " DisplayMode",
           "isCollection": false
-        }
+        },
+        "accessModifier": "protected"
       },
       {
         "protected domElement": {
@@ -26,7 +28,8 @@
           "isOptional": false,
           "type": " HTMLElement",
           "isCollection": false
-        }
+        },
+        "accessModifier": "protected"
       },
       {
         "protected host": {
@@ -34,7 +37,8 @@
           "isOptional": false,
           "type": " IWebPartHost",
           "isCollection": false
-        }
+        },
+        "accessModifier": "protected"
       },
       {
         "protected instanceId": {
@@ -42,7 +46,8 @@
           "isOptional": false,
           "type": " string",
           "isCollection": false
-        }
+        },
+        "accessModifier": "protected"
       },
       {
         "protected manifest": {
@@ -50,7 +55,8 @@
           "isOptional": false,
           "type": " IClientSideWebPartManifest<any>",
           "isCollection": false
-        }
+        },
+        "accessModifier": "protected"
       },
       {
         "protected properties": {
@@ -58,7 +64,8 @@
           "isOptional": false,
           "type": " P",
           "isCollection": false
-        }
+        },
+        "accessModifier": "protected"
       },
       {
         "protected propertyPaneSettings": {
@@ -66,7 +73,8 @@
           "isOptional": false,
           "type": " IPropertyPaneSettings",
           "isCollection": false
-        }
+        },
+        "accessModifier": "protected"
       },
       {
         "protected renderedFromDefaultProperties": {
@@ -74,7 +82,8 @@
           "isOptional": false,
           "type": " boolean",
           "isCollection": false
-        }
+        },
+        "accessModifier": "protected"
       },
       {
         "protected renderedOnce": {
@@ -82,7 +91,8 @@
           "isOptional": false,
           "type": " boolean",
           "isCollection": false
-        }
+        },
+        "accessModifier": "protected"
       }
     ],
     "methods": [
@@ -92,6 +102,7 @@
           "genericType": null,
           "returnType": "BaseClientSideWebPart",
           "returnDescr": null,
+          "signature": "IWebPartContext)",
           "params": [
             {
               "name": "ctx",
@@ -107,6 +118,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": null,
+          "signature": "clearError(): void",
           "params": []
         }
       },
@@ -116,6 +128,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": null,
+          "signature": "configureStartInternal(): void",
           "params": []
         }
       },
@@ -125,6 +138,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": null,
+          "signature": "connectWebParts(ids: string[]): void",
           "params": [
             {
               "name": "ids",
@@ -140,6 +154,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": null,
+          "signature": "dispose(): void",
           "params": []
         }
       },
@@ -149,6 +164,7 @@
           "genericType": null,
           "returnType": " IPropertyPaneData",
           "returnDescr": null,
+          "signature": "getPropertyPaneSettings(): IPropertyPaneData",
           "params": []
         }
       },
@@ -158,6 +174,7 @@
           "genericType": "T",
           "returnType": " Promise<T>",
           "returnDescr": null,
+          "signature": "onBeforeRender < T >(): Promise<T>",
           "params": []
         }
       },
@@ -167,6 +184,7 @@
           "genericType": null,
           "returnType": " IHtmlProperties",
           "returnDescr": null,
+          "signature": "onBeforeSerialize(): IHtmlProperties",
           "params": []
         }
       },
@@ -176,6 +194,7 @@
           "genericType": "T",
           "returnType": " void",
           "returnDescr": null,
+          "signature": "onEvent < T >(eventName: string, eventObject: IWebPartEvent<T>): void",
           "params": [
             {
               "name": "eventName",
@@ -196,6 +215,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": null,
+          "signature": "onPropertyChange(propertyPath: string, newValue: any): void",
           "params": [
             {
               "name": "propertyPath",
@@ -216,6 +236,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": null,
+          "signature": "onPropertyConfigurationComplete(): void",
           "params": []
         }
       },
@@ -225,6 +246,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": null,
+          "signature": "onPropertyPaneRendered(): void",
           "params": []
         }
       },
@@ -234,6 +256,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": null,
+          "signature": "onPropertyPaneSave(): void",
           "params": []
         }
       },
@@ -243,6 +266,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": null,
+          "signature": "render(mode: DisplayMode = DisplayMode.Read, data?: IWebPartData): void",
           "params": [
             {
               "name": "mode",
@@ -263,6 +287,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": null,
+          "signature": "renderError(error: Error): void",
           "params": [
             {
               "name": "error",
@@ -278,6 +303,7 @@
           "genericType": null,
           "returnType": " IWebPartData",
           "returnDescr": null,
+          "signature": "serialize(): IWebPartData",
           "params": []
         }
       },
@@ -287,6 +313,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": null,
+          "signature": "updateIWebPartData(webPartData: IWebPartData): void",
           "params": [
             {
               "name": "webPartData",
@@ -302,6 +329,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": null,
+          "signature": "static validateCommonParams(context: ICommonWebPartContext): void",
           "params": [
             {
               "name": "context",
@@ -324,7 +352,8 @@
           "isOptional": false,
           "type": " ServiceScope,",
           "isCollection": false
-        }
+        },
+        "accessModifier": "constructor(serviceScope:"
       },
       {
         "container": {
@@ -332,7 +361,8 @@
           "isOptional": false,
           "type": " HTMLElement,",
           "isCollection": false
-        }
+        },
+        "accessModifier": "container:"
       },
       {
         "mode": {
@@ -340,7 +370,8 @@
           "isOptional": false,
           "type": " DisplayMode,",
           "isCollection": false
-        }
+        },
+        "accessModifier": "mode:"
       },
       {
         "serializedCanvas?": {
@@ -348,7 +379,8 @@
           "isOptional": false,
           "type": " string,",
           "isCollection": false
-        }
+        },
+        "accessModifier": "serializedCanvas?:"
       },
       {
         "scrollThreshold?": {
@@ -356,7 +388,8 @@
           "isOptional": false,
           "type": " number)",
           "isCollection": false
-        }
+        },
+        "accessModifier": "scrollThreshold?:"
       },
       {
         "public count": {
@@ -364,7 +397,8 @@
           "isOptional": false,
           "type": " number",
           "isCollection": false
-        }
+        },
+        "accessModifier": "public"
       },
       {
         "public previewUrl": {
@@ -372,7 +406,8 @@
           "isOptional": false,
           "type": " string",
           "isCollection": false
-        }
+        },
+        "accessModifier": "public"
       }
     ],
     "methods": [
@@ -382,6 +417,7 @@
           "genericType": null,
           "returnType": " () => void,",
           "returnDescr": null,
+          "signature": "() => void,",
           "params": []
         }
       },
@@ -391,6 +427,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": "number of controls in the Canvas.",
+          "signature": "dispose(): void",
           "params": []
         }
       },
@@ -400,6 +437,7 @@
           "genericType": null,
           "returnType": " boolean",
           "returnDescr": "number of controls in the Canvas.",
+          "signature": "openToolbox(row: number): boolean",
           "params": [
             {
               "name": "row",
@@ -415,6 +453,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": "number of controls in the Canvas.",
+          "signature": "render(serializedCanvas?: string): void",
           "params": [
             {
               "name": "serializedCanvas?",
@@ -430,6 +469,7 @@
           "genericType": null,
           "returnType": " string",
           "returnDescr": "number of controls in the Canvas.",
+          "signature": "serialize(): string",
           "params": []
         }
       }
@@ -446,7 +486,8 @@
           "isOptional": false,
           "type": " HTMLDivElement",
           "isCollection": false
-        }
+        },
+        "accessModifier": "protected"
       },
       {
         "protected shell": {
@@ -454,7 +495,8 @@
           "isOptional": false,
           "type": " IShell",
           "isCollection": false
-        }
+        },
+        "accessModifier": "protected"
       }
     ],
     "methods": [
@@ -464,6 +506,7 @@
           "genericType": null,
           "returnType": "ClientSideApplication",
           "returnDescr": null,
+          "signature": "constructor()",
           "params": []
         }
       },
@@ -473,6 +516,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": null,
+          "signature": "load(shell: IShell): void",
           "params": [
             {
               "name": "shell",
@@ -488,6 +532,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": null,
+          "signature": "onLoad(): void",
           "params": []
         }
       },
@@ -497,6 +542,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": null,
+          "signature": "onRender(): void",
           "params": []
         }
       },
@@ -506,6 +552,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": null,
+          "signature": "render(domElement: HTMLDivElement): void",
           "params": [
             {
               "name": "domElement",
@@ -521,6 +568,7 @@
           "genericType": null,
           "returnType": " ISuiteNavManagerConfiguration",
           "returnDescr": null,
+          "signature": "suiteNavConfiguration(): ISuiteNavManagerConfiguration",
           "params": []
         }
       }
@@ -538,6 +586,7 @@
           "genericType": "T",
           "returnType": " void",
           "returnDescr": "[description]",
+          "signature": "raiseEvent < T >(eventName: string, eventObject: IEvent<T>): void",
           "params": [
             {
               "name": "eventName",
@@ -558,6 +607,7 @@
           "genericType": "T",
           "returnType": " void",
           "returnDescr": "[description]",
+          "signature": "subscribeByEventName < T >(eventName: string, subscriberId: string, callback: IEventCallback<T>): void",
           "params": [
             {
               "name": "eventName",
@@ -583,6 +633,7 @@
           "genericType": "T",
           "returnType": " void",
           "returnDescr": "[description]",
+          "signature": "subscribeBySourceId < T >(sourceId: string, subscriberId: string, callback: IEventCallback<T>): void",
           "params": [
             {
               "name": "sourceId",
@@ -616,6 +667,7 @@
           "genericType": null,
           "returnType": " string",
           "returnDescr": null,
+          "signature": "static generateGuid(): string",
           "params": []
         }
       },
@@ -625,6 +677,7 @@
           "genericType": null,
           "returnType": " string",
           "returnDescr": null,
+          "signature": "static getNormalized(guid: string): string",
           "params": [
             {
               "name": "guid",
@@ -640,6 +693,7 @@
           "genericType": null,
           "returnType": " boolean",
           "returnDescr": null,
+          "signature": "static isValid(guid: string): boolean",
           "params": [
             {
               "name": "guid",
@@ -655,6 +709,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": null,
+          "signature": "static requireValid(guid: string): void",
           "params": [
             {
               "name": "guid",
@@ -677,7 +732,8 @@
           "isOptional": false,
           "type": " ApplicationContext",
           "isCollection": false
-        }
+        },
+        "accessModifier": "public"
       },
       {
         "public core": {
@@ -685,7 +741,8 @@
           "isOptional": false,
           "type": " PageContextCore",
           "isCollection": false
-        }
+        },
+        "accessModifier": "public"
       },
       {
         "public list": {
@@ -693,7 +750,8 @@
           "isOptional": false,
           "type": " SPList",
           "isCollection": false
-        }
+        },
+        "accessModifier": "public"
       },
       {
         "public listItem": {
@@ -701,7 +759,8 @@
           "isOptional": false,
           "type": " SPListItem",
           "isCollection": false
-        }
+        },
+        "accessModifier": "public"
       },
       {
         "public quickLaunch": {
@@ -709,7 +768,8 @@
           "isOptional": false,
           "type": " SPNavigationNodeCollection",
           "isCollection": false
-        }
+        },
+        "accessModifier": "public"
       },
       {
         "public site": {
@@ -717,7 +777,8 @@
           "isOptional": false,
           "type": " SPSite",
           "isCollection": false
-        }
+        },
+        "accessModifier": "public"
       },
       {
         "public topNav": {
@@ -725,7 +786,8 @@
           "isOptional": false,
           "type": " SPNavigationNodeCollection",
           "isCollection": false
-        }
+        },
+        "accessModifier": "public"
       },
       {
         "public urlQueryParameters": {
@@ -733,7 +795,8 @@
           "isOptional": false,
           "type": " UrlQueryParameterCollection",
           "isCollection": false
-        }
+        },
+        "accessModifier": "public"
       },
       {
         "public user": {
@@ -741,7 +804,8 @@
           "isOptional": false,
           "type": " SPUser",
           "isCollection": false
-        }
+        },
+        "accessModifier": "public"
       },
       {
         "public web": {
@@ -749,7 +813,8 @@
           "isOptional": false,
           "type": " SPWeb",
           "isCollection": false
-        }
+        },
+        "accessModifier": "public"
       }
     ],
     "methods": [
@@ -759,6 +824,7 @@
           "genericType": null,
           "returnType": "PageContext",
           "returnDescr": null,
+          "signature": "ServiceScope)",
           "params": [
             {
               "name": "serviceScope",
@@ -781,7 +847,8 @@
           "isOptional": false,
           "type": " PageContextItemState",
           "isCollection": false
-        }
+        },
+        "accessModifier": "public"
       }
     ],
     "methods": [
@@ -791,6 +858,7 @@
           "genericType": null,
           "returnType": "PageContextItem",
           "returnDescr": "[description]",
+          "signature": "PageContext)",
           "params": [
             {
               "name": "pageContext",
@@ -806,6 +874,7 @@
           "genericType": null,
           "returnType": " PageContext",
           "returnDescr": "[description]",
+          "signature": "getPageContext(): PageContext",
           "params": []
         }
       },
@@ -815,6 +884,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": "[description]",
+          "signature": "validateLoad(): void",
           "params": []
         }
       }
@@ -831,7 +901,8 @@
           "isOptional": false,
           "type": " string",
           "isCollection": false
-        }
+        },
+        "accessModifier": "public"
       },
       {
         "public static instance": {
@@ -839,7 +910,8 @@
           "isOptional": false,
           "type": " PreloadedPageData",
           "isCollection": false
-        }
+        },
+        "accessModifier": "public"
       },
       {
         "public userKey": {
@@ -847,7 +919,8 @@
           "isOptional": false,
           "type": " string",
           "isCollection": false
-        }
+        },
+        "accessModifier": "public"
       },
       {
         "public userLoginName": {
@@ -855,7 +928,8 @@
           "isOptional": false,
           "type": " string",
           "isCollection": false
-        }
+        },
+        "accessModifier": "public"
       },
       {
         "public webAbsoluteUrl": {
@@ -863,7 +937,8 @@
           "isOptional": false,
           "type": " string",
           "isCollection": false
-        }
+        },
+        "accessModifier": "public"
       },
       {
         "public webServerRelativeUrl": {
@@ -871,7 +946,8 @@
           "isOptional": false,
           "type": " string",
           "isCollection": false
-        }
+        },
+        "accessModifier": "public"
       },
       {
         "public webTitle": {
@@ -879,7 +955,8 @@
           "isOptional": false,
           "type": " string",
           "isCollection": false
-        }
+        },
+        "accessModifier": "public"
       }
     ],
     "methods": [
@@ -889,6 +966,7 @@
           "genericType": null,
           "returnType": "PreloadedPageData",
           "returnDescr": null,
+          "signature": "constructor()",
           "params": []
         }
       }
@@ -905,7 +983,8 @@
           "isOptional": false,
           "type": " IWebPartContext,",
           "isCollection": false
-        }
+        },
+        "accessModifier": "constructor(context:"
       },
       {
         "componentType": {
@@ -913,7 +992,8 @@
           "isOptional": false,
           "type": " React.ComponentClass<IReactWebPartProps>)",
           "isCollection": false
-        }
+        },
+        "accessModifier": "componentType:"
       }
     ],
     "methods": [
@@ -923,6 +1003,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": null,
+          "signature": "dispose(): void",
           "params": []
         }
       },
@@ -932,6 +1013,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": null,
+          "signature": "render(mode: DisplayMode, data?: IWebPartData): void",
           "params": [
             {
               "name": "mode",
@@ -959,7 +1041,8 @@
           "isOptional": false,
           "type": " string",
           "isCollection": false
-        }
+        },
+        "accessModifier": "public"
       },
       {
         "public id": {
@@ -967,7 +1050,8 @@
           "isOptional": false,
           "type": " string",
           "isCollection": false
-        }
+        },
+        "accessModifier": "public"
       },
       {
         "public parentWeb": {
@@ -975,7 +1059,8 @@
           "isOptional": false,
           "type": " SPWeb",
           "isCollection": false
-        }
+        },
+        "accessModifier": "public"
       },
       {
         "public title": {
@@ -983,7 +1068,8 @@
           "isOptional": false,
           "type": " string",
           "isCollection": false
-        }
+        },
+        "accessModifier": "public"
       }
     ],
     "methods": [
@@ -993,6 +1079,7 @@
           "genericType": null,
           "returnType": "SPList",
           "returnDescr": null,
+          "signature": "PageContext)",
           "params": [
             {
               "name": "pageContext",
@@ -1008,6 +1095,7 @@
           "genericType": null,
           "returnType": " IOdataList",
           "returnDescr": null,
+          "signature": "getOdataObject(): IOdataList",
           "params": []
         }
       },
@@ -1017,6 +1105,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": null,
+          "signature": "load(args: ISPListArgs): void",
           "params": [
             {
               "name": "args",
@@ -1032,6 +1121,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": null,
+          "signature": "updateOdataObject(value: IOdataList): void",
           "params": [
             {
               "name": "value",
@@ -1054,7 +1144,8 @@
           "isOptional": false,
           "type": " number",
           "isCollection": false
-        }
+        },
+        "accessModifier": "public"
       },
       {
         "public parentList": {
@@ -1062,7 +1153,8 @@
           "isOptional": false,
           "type": " SPList",
           "isCollection": false
-        }
+        },
+        "accessModifier": "public"
       }
     ],
     "methods": [
@@ -1072,6 +1164,7 @@
           "genericType": null,
           "returnType": "SPListItem",
           "returnDescr": null,
+          "signature": "PageContext)",
           "params": [
             {
               "name": "pageContext",
@@ -1087,6 +1180,7 @@
           "genericType": null,
           "returnType": " IOdataListItem",
           "returnDescr": null,
+          "signature": "getOdataObject(): IOdataListItem",
           "params": []
         }
       },
@@ -1096,6 +1190,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": null,
+          "signature": "load(args: ISPListItemArgs): void",
           "params": [
             {
               "name": "args",
@@ -1111,6 +1206,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": null,
+          "signature": "updateOdataObject(value: IOdataListItem): void",
           "params": [
             {
               "name": "value",
@@ -1133,7 +1229,8 @@
           "isOptional": false,
           "type": " number",
           "isCollection": false
-        }
+        },
+        "accessModifier": "public"
       }
     ],
     "methods": [
@@ -1143,6 +1240,7 @@
           "genericType": null,
           "returnType": "SPNavigationNode",
           "returnDescr": null,
+          "signature": "PageContext)",
           "params": [
             {
               "name": "pageContext",
@@ -1158,6 +1256,7 @@
           "genericType": null,
           "returnType": " IOdataNavigationNode",
           "returnDescr": null,
+          "signature": "getOdataObject(): IOdataNavigationNode",
           "params": []
         }
       },
@@ -1167,6 +1266,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": null,
+          "signature": "load(args: ISPNavigationNodeArgs): void",
           "params": [
             {
               "name": "args",
@@ -1182,6 +1282,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": null,
+          "signature": "updateOdataObject(value: IOdataNavigationNode): void",
           "params": [
             {
               "name": "value",
@@ -1204,7 +1305,8 @@
           "isOptional": false,
           "type": " SPNavigationNode",
           "isCollection": false
-        }
+        },
+        "accessModifier": "public"
       }
     ],
     "methods": [
@@ -1214,6 +1316,7 @@
           "genericType": null,
           "returnType": "SPNavigationNodeCollection",
           "returnDescr": null,
+          "signature": "PageContext)",
           "params": [
             {
               "name": "pageContext",
@@ -1229,6 +1332,7 @@
           "genericType": null,
           "returnType": " IOdataNavigationNode[]",
           "returnDescr": null,
+          "signature": "getOdataObject(): IOdataNavigationNode[]",
           "params": []
         }
       },
@@ -1238,6 +1342,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": null,
+          "signature": "updateOdataObject(value: IOdataNavigationNode[]): void",
           "params": [
             {
               "name": "value",
@@ -1260,7 +1365,8 @@
           "isOptional": false,
           "type": " string",
           "isCollection": false
-        }
+        },
+        "accessModifier": "public"
       },
       {
         "public serverRelativeUrl": {
@@ -1268,7 +1374,8 @@
           "isOptional": false,
           "type": " string",
           "isCollection": false
-        }
+        },
+        "accessModifier": "public"
       },
       {
         "public title": {
@@ -1276,7 +1383,8 @@
           "isOptional": false,
           "type": " string",
           "isCollection": false
-        }
+        },
+        "accessModifier": "public"
       }
     ],
     "methods": [
@@ -1286,6 +1394,7 @@
           "genericType": null,
           "returnType": "SPSite",
           "returnDescr": null,
+          "signature": "PageContext)",
           "params": [
             {
               "name": "pageContext",
@@ -1301,6 +1410,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": null,
+          "signature": "load(args: ISPSiteArgs): void",
           "params": [
             {
               "name": "args",
@@ -1323,7 +1433,8 @@
           "isOptional": false,
           "type": " number",
           "isCollection": false
-        }
+        },
+        "accessModifier": "public"
       }
     ],
     "methods": [
@@ -1333,6 +1444,7 @@
           "genericType": null,
           "returnType": "SPUser",
           "returnDescr": null,
+          "signature": "PageContext)",
           "params": [
             {
               "name": "pageContext",
@@ -1348,6 +1460,7 @@
           "genericType": null,
           "returnType": " IOdataUser",
           "returnDescr": null,
+          "signature": "getOdataObject(): IOdataUser",
           "params": []
         }
       },
@@ -1357,6 +1470,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": null,
+          "signature": "load(args: ISPUserArgs): void",
           "params": [
             {
               "name": "args",
@@ -1372,6 +1486,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": null,
+          "signature": "updateOdataObject(value: IOdataUser): void",
           "params": [
             {
               "name": "value",
@@ -1394,7 +1509,8 @@
           "isOptional": false,
           "type": " string",
           "isCollection": false
-        }
+        },
+        "accessModifier": "public"
       },
       {
         "public parentSite": {
@@ -1402,7 +1518,8 @@
           "isOptional": false,
           "type": " SPSite",
           "isCollection": false
-        }
+        },
+        "accessModifier": "public"
       },
       {
         "public serverRelativeUrl": {
@@ -1410,7 +1527,8 @@
           "isOptional": false,
           "type": " string",
           "isCollection": false
-        }
+        },
+        "accessModifier": "public"
       },
       {
         "public title": {
@@ -1418,7 +1536,8 @@
           "isOptional": false,
           "type": " string",
           "isCollection": false
-        }
+        },
+        "accessModifier": "public"
       }
     ],
     "methods": [
@@ -1428,6 +1547,7 @@
           "genericType": null,
           "returnType": "SPWeb",
           "returnDescr": null,
+          "signature": "PageContext)",
           "params": [
             {
               "name": "pageContext",
@@ -1443,6 +1563,7 @@
           "genericType": null,
           "returnType": " IOdataWeb",
           "returnDescr": null,
+          "signature": "getOdataObject(): IOdataWeb",
           "params": []
         }
       },
@@ -1452,6 +1573,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": null,
+          "signature": "load(args: ISPWebArgs): void",
           "params": [
             {
               "name": "args",
@@ -1467,6 +1589,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": null,
+          "signature": "updateOdataObject(value: IOdataWeb): void",
           "params": [
             {
               "name": "value",
@@ -1489,7 +1612,8 @@
           "isOptional": false,
           "type": " string",
           "isCollection": false
-        }
+        },
+        "accessModifier": "public"
       },
       {
         "public url": {
@@ -1497,7 +1621,8 @@
           "isOptional": false,
           "type": " string",
           "isCollection": false
-        }
+        },
+        "accessModifier": "public"
       }
     ],
     "methods": []

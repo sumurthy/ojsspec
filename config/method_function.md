@@ -1,4 +1,4 @@
-## Method Details
+## Function Details
 
 <api>
 ### %apisignature%

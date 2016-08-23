@@ -119,6 +119,7 @@ var self = module.exports = {
     }
     m[name]['returnDescr'] = (commentObject['returnDescr'] === undefined) ?
       null : commentObject['returnDescr']
+    m[name]['signature'] = line.substr(line.indexOf(" ") + 1);
     m[name]['params'] = self.buildParamList(line, commentObject['param'])
     return m
   },

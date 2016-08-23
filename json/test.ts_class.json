@@ -10,7 +10,8 @@
           "isOptional": false,
           "type": "<<<<<<< HEAD /**",
           "isCollection": false
-        }
+        },
+        "accessModifier": "<<<<<<<"
       },
       {
         ">>>>>>> 6282fdab93d485b53c1a1c15b83e2c8d7c383fd6 /**": {
@@ -18,7 +19,8 @@
           "isOptional": false,
           "type": ">>>>>>> 6282fdab93d485b53c1a1c15b83e2c8d7c383fd6 /**",
           "isCollection": false
-        }
+        },
+        "accessModifier": ">>>>>>>"
       },
       {
         "protected disableReactivePropertyChanges": {
@@ -26,7 +28,8 @@
           "isOptional": false,
           "type": " boolean",
           "isCollection": false
-        }
+        },
+        "accessModifier": "protected"
       },
       {
         "protected displayMode": {
@@ -34,7 +37,8 @@
           "isOptional": false,
           "type": " DisplayMode",
           "isCollection": false
-        }
+        },
+        "accessModifier": "protected"
       },
       {
         "protected domElement": {
@@ -42,7 +46,8 @@
           "isOptional": false,
           "type": " HTMLElement",
           "isCollection": false
-        }
+        },
+        "accessModifier": "protected"
       },
       {
         "protected host": {
@@ -50,7 +55,8 @@
           "isOptional": false,
           "type": " IWebPartHost",
           "isCollection": false
-        }
+        },
+        "accessModifier": "protected"
       },
       {
         "protected instanceId": {
@@ -58,7 +64,8 @@
           "isOptional": false,
           "type": " string",
           "isCollection": false
-        }
+        },
+        "accessModifier": "protected"
       },
       {
         "protected manifest": {
@@ -66,7 +73,8 @@
           "isOptional": false,
           "type": " IClientSideWebPartManifest<any>",
           "isCollection": false
-        }
+        },
+        "accessModifier": "protected"
       },
       {
         "protected properties": {
@@ -74,7 +82,8 @@
           "isOptional": false,
           "type": " P",
           "isCollection": false
-        }
+        },
+        "accessModifier": "protected"
       },
       {
         "protected propertyPaneSettings": {
@@ -82,7 +91,8 @@
           "isOptional": false,
           "type": " IPropertyPaneSettings",
           "isCollection": false
-        }
+        },
+        "accessModifier": "protected"
       },
       {
         "protected renderedFromDefaultProperties": {
@@ -90,7 +100,8 @@
           "isOptional": false,
           "type": " boolean",
           "isCollection": false
-        }
+        },
+        "accessModifier": "protected"
       },
       {
         "protected renderedOnce": {
@@ -98,7 +109,8 @@
           "isOptional": false,
           "type": " boolean",
           "isCollection": false
-        }
+        },
+        "accessModifier": "protected"
       },
       {
         "<<<<<<< HEAD": {
@@ -106,7 +118,8 @@
           "isOptional": false,
           "type": "<<<<<<< HEAD",
           "isCollection": false
-        }
+        },
+        "accessModifier": "<<<<<<<"
       }
     ],
     "methods": [
@@ -116,6 +129,7 @@
           "genericType": null,
           "returnType": "BaseClientSideWebPart",
           "returnDescr": "[description]",
+          "signature": "IWebPartContext)",
           "params": [
             {
               "name": "ctx",
@@ -131,6 +145,7 @@
           "genericType": null,
           "returnType": " IWebPartContext)",
           "returnDescr": "[description]",
+          "signature": "constructor(ctx: IWebPartContext)",
           "params": [
             {
               "name": "ctx",
@@ -146,6 +161,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": "[description]",
+          "signature": "clearError(): void",
           "params": []
         }
       },
@@ -155,6 +171,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": "[description]",
+          "signature": "configureStartInternal(): void",
           "params": []
         }
       },
@@ -164,6 +181,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": "[description]",
+          "signature": "connectWebParts(ids: string[]): void",
           "params": [
             {
               "name": "ids",
@@ -179,6 +197,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": "[description]",
+          "signature": "dispose(): void",
           "params": []
         }
       },
@@ -188,6 +207,7 @@
           "genericType": null,
           "returnType": " IPropertyPaneData",
           "returnDescr": "[description]",
+          "signature": "getPropertyPaneSettings(): IPropertyPaneData",
           "params": []
         }
       },
@@ -197,6 +217,7 @@
           "genericType": "T",
           "returnType": " Promise<T>",
           "returnDescr": "[description]",
+          "signature": "onBeforeRender < T >(): Promise<T>",
           "params": []
         }
       },
@@ -206,6 +227,7 @@
           "genericType": null,
           "returnType": " IHtmlProperties",
           "returnDescr": "[description]",
+          "signature": "onBeforeSerialize(): IHtmlProperties",
           "params": []
         }
       },
@@ -215,6 +237,7 @@
           "genericType": "T",
           "returnType": " void",
           "returnDescr": "[description]",
+          "signature": "onEvent < T >(eventName: string, eventObject: IWebPartEvent<T>): void",
           "params": [
             {
               "name": "eventName",
@@ -235,6 +258,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": "[description]",
+          "signature": "onPropertyChange(propertyPath: string, newValue: any): void",
           "params": [
             {
               "name": "propertyPath",
@@ -255,6 +279,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": "[description]",
+          "signature": "onPropertyConfigurationComplete(): void",
           "params": []
         }
       },
@@ -264,6 +289,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": "[description]",
+          "signature": "onPropertyPaneRendered(): void",
           "params": []
         }
       },
@@ -273,6 +299,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": "[description]",
+          "signature": "onPropertyPaneSave(): void",
           "params": []
         }
       },
@@ -282,6 +309,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": "[description]",
+          "signature": "render(mode: DisplayMode = DisplayMode.Read, data?: IWebPartData): void",
           "params": [
             {
               "name": "mode",
@@ -302,6 +330,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": "[description]",
+          "signature": ">>>>>>> 6282fdab93d485b53c1a1c15b83e2c8d7c383fd6 protected renderError(error: Error): void",
           "params": [
             {
               "name": "error",
@@ -317,6 +346,7 @@
           "genericType": null,
           "returnType": " IWebPartData",
           "returnDescr": "[description]",
+          "signature": "serialize(): IWebPartData",
           "params": []
         }
       },
@@ -326,6 +356,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": "[description]",
+          "signature": "updateIWebPartData(webPartData: IWebPartData): void",
           "params": [
             {
               "name": "webPartData",
@@ -341,6 +372,7 @@
           "genericType": null,
           "returnType": " void",
           "returnDescr": "[description]",
+          "signature": "static validateCommonParams(context: ICommonWebPartContext): void",
           "params": [
             {
               "name": "context",

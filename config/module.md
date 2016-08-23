@@ -2,7 +2,7 @@
 # %module% external module
 </module>
 
-<classes>
+<class>
 
 ## Classes
 
@@ -10,9 +10,9 @@
 |:-------------|:---------------|
 >| [%name%](%link%)     | %description% |
 
-</classes>
+</class>
 
-<interfaces>
+<interface>
 
 ## Interfaces
 
@@ -20,9 +20,9 @@
 |:-------------|:---------------|
 >| [%name%](%link%)     | %description%  |
 
-</interfaces>
+</interface>
 
-<functions>
+<function>
 
 ## Functions
 
@@ -30,13 +30,13 @@
 |:-------------|:------|:---------------|
 >| [%name%](%link%) |Returns    | %description%  |
 
-</functions>
+</function>
 
-<enumerations>
+<enumeration>
 ### Enumerations
 
 | Enumeration	   | Description|
 |:-----------|:------------|
 >|%name%     | %description% |
 
-</enumerations>
+</enumeration>
