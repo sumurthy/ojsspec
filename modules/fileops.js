@@ -2,25 +2,44 @@ let fs = require ('fs')
 let nl = require('os').EOL;
 
 module.exports  = {
-  walkFiles: (path='') => {
+  walkFiles: (path='', pattern=null) => {
     try {
-        return fs.readdirSync(path)
+        var fl = fs.readdirSync(path)
+				if (pattern) {
+					var fo = fl.filter((e) => e.includes(pattern))
+					return fo
+				}
+				else {
+					return fl
+				}
     }
     catch(e)
     {
       console.log(`Error reading input directory, path: ${path}, ${e}`)
+			throw e
     }
   },
 
   loadFile: (path='') => {
     try {
-        return fs.readFileSync(path).toString().split(nl)
+        return fs.readFileSync(path, 'utf8').toString().split(nl)
     }
     catch(e)
     {
       console.log(`Error loading the input file, path: ${path}, ${e}`)
+			throw e
     }
   },
+	loadJson: (path='') => {
+		try {
+				return fs.readFileSync(path, 'utf8').toString()
+		}
+		catch(e)
+		{
+			console.log(`Error loading the input JSON file, path: ${path}, ${e}`)
+			throw e
+		}
+	},
 
   writeFile:  (lines=[], path='') => {
     try {
@@ -29,6 +48,7 @@ module.exports  = {
     catch(e)
     {
       console.log(`Error loading the input file, path: ${path}, ${e}`)
+			throw e
     }
   },
 
@@ -39,6 +59,7 @@ module.exports  = {
     catch(e)
     {
       console.log(`Error loading the input file with string input, path: ${path}, ${e}`)
+			throw e
     }
   },
 
@@ -49,6 +70,7 @@ module.exports  = {
     catch(e)
     {
       console.log(`Error removing the output file, path: ${path}, ${e}`)
+			throw e
     }
   }
 }

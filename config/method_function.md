@@ -2,7 +2,9 @@
 
 <api>
 ### %apisignature%
+
 %apidescription%
+
 <parameters>
 #### Parameters
 %noparam%
@@ -13,11 +15,6 @@
 </parameters>
 #### Returns
 %returntype%
-
-<example>
-#### Example
-%examplelines%
-</example>
 
 </api>
 

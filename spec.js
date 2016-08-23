@@ -34,7 +34,7 @@ let nInterface = 0
 let enumObj = {}
 let enumKey = ''
 let classObj = {}
-let interfaceObj = {}
+let iObj = {}
 let interfaceName = ''
 let className = ''
 let functionObj = {}
@@ -56,7 +56,7 @@ function file_reset() {
 		enumKey = ''
 		classObj = {}
 		functionObj = {}
-		interfaceObj = {}
+		iObj = {}
 		interfaceName = ''
 		methodObj = {}
 		paramObj = {}
@@ -193,12 +193,12 @@ function processLines(element = '', index = 0, lines = []) {
 			extendsName = line.split('extends ')[1].split(BLOCK_BEGIN)[0].trim()
 		}
 		// Build a interface object
-		interfaceObj[interfaceName] = {} // JSON.parse(JSON.stringify(Objects.method))
-		interfaceObj[interfaceName]['extendsName'] = extendsName
-		interfaceObj[interfaceName]['descr'] = generalDesc
-		interfaceObj[interfaceName]['properties'] = []
-		interfaceObj[interfaceName]['objects'] = []
-		interfaceObj[interfaceName]['methods'] = []
+		iObj[interfaceName] = {} // JSON.parse(JSON.stringify(Objects.method))
+		iObj[interfaceName]['extendsName'] = extendsName
+		iObj[interfaceName]['descr'] = generalDesc
+		iObj[interfaceName]['properties'] = []
+		iObj[interfaceName]['objects'] = []
+		iObj[interfaceName]['methods'] = []
 		comment_reset()
 		return
 	}
@@ -255,9 +255,9 @@ function processLines(element = '', index = 0, lines = []) {
 	else {
 		switch (mode) {
 			case 'INTERFACE':
-				// interfaceObj['properties'] = []
-				// interfaceObj['objects'] = []
-				// interfaceObj['methods'] = []
+				// iObj['properties'] = []
+				// iObj['objects'] = []
+				// iObj['methods'] = []
 
 				if (line.includes(') =>')) {
 					//var f = Utils.processFunction(line, generalDesc, commentObject)
@@ -270,7 +270,7 @@ function processLines(element = '', index = 0, lines = []) {
 					f[firstWord]['returnDescr'] = (commentObject['returnDescr'] === undefined) ?
 						null : commentObject['returnDescr']
 					f[firstWord]['params'] = Utils.buildParamList(line, commentObject['param'])
-					interfaceObj[interfaceName]['properties'].push(f)
+					iObj[interfaceName]['properties'].push(f)
 				}
 				else if (line.includes(')') && line.includes('(')) { // has brackets
 					var m = {}
@@ -283,7 +283,7 @@ function processLines(element = '', index = 0, lines = []) {
 					m[name]['returnDescr'] = (commentObject['returnDescr'] === undefined) ?
 						null : commentObject['returnDescr']
 					m[name]['params'] = Utils.buildParamList(line, commentObject['param'])
-					interfaceObj[interfaceName]['methods'].push(m)
+					iObj[interfaceName]['methods'].push(m)
 				}
 				else if (line.includes(BLOCK_BEGIN)) {
 					// Handle object
@@ -299,7 +299,7 @@ function processLines(element = '', index = 0, lines = []) {
 					p[name]['isOptional'] = (secondWord.includes('?')) ? true : false
 					p[name]['type'] = lastWord.replace('[]', '')
 					p[name]['isCollection'] = (secondWord.includes('[]')) ? true : false
-					interfaceObj[interfaceName]['properties'].push(p)
+					iObj[interfaceName]['properties'].push(p)
 				}
 
 				break;
@@ -337,7 +337,6 @@ function processLines(element = '', index = 0, lines = []) {
  * STARTING: Load input files and process each file and each line within.
  */
 console.log('** Starting Program...')
-SetUp.cleanupOutput('./markdown')
 SetUp.cleanupOutput('./json')
 
 let files = FileOps.walkFiles('./input')
@@ -354,7 +353,7 @@ function processFile(fileName) {
 	console.log(`*** Writing FUNCTION file ${enumObj}`)
   FileOps.writeObject(functionObj, `./json/${fileName}_function.json`)
 	console.log(`*** Writing INTERFACE file ${enumObj}`)
-  FileOps.writeObject(interfaceObj, `./json/${fileName}_interface.json`)
+  FileOps.writeObject(iObj, `./json/${fileName}_interface.json`)
 	console.log(`*** Writing CLASS file ${enumObj}`)
   FileOps.writeObject(classObj, `./json/${fileName}_class.json`)
 
