@@ -1,5 +1,6 @@
 {
   "combineURLPaths": {
+    "descr": "[combineURLPaths description]",
     "signature": "combineURLPaths(...url: string[]): string",
     "returnType": "string",
     "returnDescr": "[description]",
@@ -12,6 +13,7 @@
     ]
   },
   "getPathNameFromAbsoluteUrl": {
+    "descr": "Get's the path name from an absolute url.",
     "signature": "getPathNameFromAbsoluteUrl(url: string): string",
     "returnType": "string",
     "returnDescr": null,
@@ -24,6 +26,7 @@
     ]
   },
   "PropertyPaneCheckbox": {
+    "descr": "Helper method to create a Checkbox on the PropertyPane.",
     "signature": "PropertyPaneCheckbox(targetProperty: string, properties: ICheckboxProps): IPropertyPaneField",
     "returnType": "IPropertyPaneField",
     "returnDescr": null,
@@ -41,6 +44,7 @@
     ]
   },
   "PropertyPaneDropdown": {
+    "descr": "Helper method to create a Dropdown on the PropertyPane.",
     "signature": "PropertyPaneDropdown(targetProperty: string, properties: IDropdownProps): IPropertyPaneField",
     "returnType": "IPropertyPaneField",
     "returnDescr": null,
@@ -58,6 +62,7 @@
     ]
   },
   "PropertyPaneHeading": {
+    "descr": "Helper method to create a Heading on the PropertyPane.",
     "signature": "PropertyPaneHeading(properties: IPropertyPaneHeadingProps): IPropertyPaneField",
     "returnType": "IPropertyPaneField",
     "returnDescr": null,
@@ -70,6 +75,7 @@
     ]
   },
   "PropertyPaneLabel": {
+    "descr": "Helper method to create a Label on the PropertyPane.",
     "signature": "PropertyPaneLabel(targetProperty: string, properties: ILabelProps): IPropertyPaneField",
     "returnType": "IPropertyPaneField",
     "returnDescr": null,
@@ -87,6 +93,7 @@
     ]
   },
   "PropertyPaneLink": {
+    "descr": "Helper method to create a Link on the PropertyPane.",
     "signature": "PropertyPaneLink(targetProperty: string, properties: ILinkProps): IPropertyPaneField",
     "returnType": "IPropertyPaneField",
     "returnDescr": null,
@@ -104,6 +111,7 @@
     ]
   },
   "PropertyPaneSlider": {
+    "descr": "Helper method to create a Slider on the PropertyPane.",
     "signature": "PropertyPaneSlider(targetProperty: string, properties: ISliderProps): IPropertyPaneField",
     "returnType": "IPropertyPaneField",
     "returnDescr": null,
@@ -121,6 +129,7 @@
     ]
   },
   "PropertyPaneTextField": {
+    "descr": "Continued description of the parameter.",
     "signature": "PropertyPaneTextField(targetProperty: string, properties: ITextFieldProps): IPropertyPaneField",
     "returnType": "IPropertyPaneField",
     "returnDescr": "[description]",
@@ -138,6 +147,7 @@
     ]
   },
   "PropertyPaneToggle": {
+    "descr": "[PropertyPaneToggle description]",
     "signature": "PropertyPaneToggle(targetProperty: string, properties: IToggleProps): IPropertyPaneField",
     "returnType": "IPropertyPaneField",
     "returnDescr": null,

@@ -2,26 +2,8 @@
   "BaseClientSideWebPart": {
     "implementsName": "IClientSideWebPart",
     "genericType": "P",
-    "descr": "Implements the minimal functionality for a webpart. This class also provides a bunch of parameter \n<<<<< HEAD * validate and access to readonly properties like the displayMode, properties, manifest, instanceId, \ndomElement, and so on... \n \nThe following methods in \nthe BaseClientSideWebPart have no functionality and are intended to be overridden \nby the derived webpart: \n \nrender Render the webpart inside the provided dom element. \n \nThe following methods provide default implementations but may be overridden by the \nderived webpart: \n \nconstructor Use super() as the first line in derived webpart's constructor. \ndispose (optional) Dispose any resources it is holding on to e.g. dom Elements, server resources. \nserialize Update webPartData in the derived web part and then call super.serialize(). \nonEvent (optional) event handler \n \nThe following methods are not intended to be overridden. \n \n===== >>>>>>> 6282fdab93d485b53c1a1c15b83e2c8d7c383fd6 * renderError Render an error message in the webpart container dom element.",
+    "descr": "Implements the minimal functionality for a webpart. This class also provides a bunch of parameter \nvalidate and access to readonly properties like the displayMode, properties, manifest, instanceId, \ndomElement, and so on... \n \nThe following methods in \nthe BaseClientSideWebPart have no functionality and are intended to be overridden \nby the derived webpart: \n \nrender Render the webpart inside the provided dom element. \n \nThe following methods provide default implementations but may be overridden by the \nderived webpart: \n \nconstructor Use super() as the first line in derived webpart's constructor. \ndispose (optional) Dispose any resources it is holding on to e.g. dom Elements, server resources. \nserialize Update webPartData in the derived web part and then call super.serialize(). \nonEvent (optional) event handler \n \nThe following methods are not intended to be overridden. \n \nrenderError Render an error message in the webpart container dom element.",
     "properties": [
-      {
-        "<<<<<<< HEAD /**": {
-          "descr": "Contructor for the BaseClientSideWebPart \nIf a sub classe overrids the constructor, it needs to call super(context) as the first line of constructor",
-          "isOptional": false,
-          "type": "<<<<<<< HEAD /**",
-          "isCollection": false
-        },
-        "accessModifier": "<<<<<<<"
-      },
-      {
-        ">>>>>>> 6282fdab93d485b53c1a1c15b83e2c8d7c383fd6 /**": {
-          "descr": "[constructor description]",
-          "isOptional": false,
-          "type": ">>>>>>> 6282fdab93d485b53c1a1c15b83e2c8d7c383fd6 /**",
-          "isCollection": false
-        },
-        "accessModifier": ">>>>>>>"
-      },
       {
         "protected disableReactivePropertyChanges": {
           "descr": "Indicates whether the Web Part's configuration is reactive or not. \nReactive - Changes made in the PropertyPane are transmitted to the Web Part instantly \nNon-reactive - Changes are transmitted to the Web Part only after 'Apply' click.",
@@ -111,15 +93,6 @@
           "isCollection": false
         },
         "accessModifier": "protected"
-      },
-      {
-        "<<<<<<< HEAD": {
-          "descr": "Render an error message in the web part display area. Also logs the error message to the IWebPartHost logger. \n",
-          "isOptional": false,
-          "type": "<<<<<<< HEAD",
-          "isCollection": false
-        },
-        "accessModifier": "<<<<<<<"
       }
     ],
     "methods": [
@@ -130,22 +103,6 @@
           "returnType": "BaseClientSideWebPart",
           "returnDescr": "[description]",
           "signature": "IWebPartContext)",
-          "params": [
-            {
-              "name": "ctx",
-              "dataType": "IWebPartContext",
-              "descr": ""
-            }
-          ]
-        }
-      },
-      {
-        "=======": {
-          "descr": "[constructor description]",
-          "genericType": null,
-          "returnType": " IWebPartContext)",
-          "returnDescr": "[description]",
-          "signature": "constructor(ctx: IWebPartContext)",
           "params": [
             {
               "name": "ctx",
@@ -325,12 +282,12 @@
         }
       },
       {
-        "=======": {
+        "protected": {
           "descr": "Render an error message in the web part display area. Also logs the error message to the IWebPartHost logger. \n",
           "genericType": null,
           "returnType": " void",
           "returnDescr": "[description]",
-          "signature": ">>>>>>> 6282fdab93d485b53c1a1c15b83e2c8d7c383fd6 protected renderError(error: Error): void",
+          "signature": "renderError(error: Error): void",
           "params": [
             {
               "name": "error",

@@ -16,7 +16,7 @@ let moduleT = []
 let WRITE_BACK = ['#', '|', '*', '_']
 let TAKE_ACTION = ['%']
 let TAKE_REPEAT_ACTION = ['>']
-let MARK_REGION = ['<']
+let NEW_REGION = ['<']
 let IGNORE = ['/']
 
 
@@ -37,16 +37,47 @@ function file_reset() {
 	mdout = []
 	skipFlag = false
 }
-
+function getLinkForType(type='') {
+	if ((Object.keys(iObj).includes(type)) || (Object.keys(classObj).includes(type))) {
+		return `[${type}](${type}.md)`
+	}
+	else {
+		return type
+	}
+}
 function set_region(tline = '') {
-
+	skipFlag = false
 	if (tline.includes('</')) {
 		region = 'none'
 	}
 	else {
 		region = Utils.genericInside(tline).replace('/','')
+		switch (region) {
+			case 'class':
+				if (Object.keys(classObj).length === 0) {
+					skipFlag = true
+				}
+				break;
+			case 'interface':
+				if (Object.keys(iObj).length === 0) {
+					skipFlag = true
+				}
+				break;
+			case 'function':
+				if (Object.keys(functionObj).length === 0) {
+					skipFlag = true
+				}
+				break;
+			case 'enumeration':
+				if (Object.keys(enumObj).length === 0) {
+					skipFlag = true
+				}
+				break;
+			default:
+
+		}
 	}
-	console.log(region);
+
 	return
 }
 
@@ -58,7 +89,26 @@ function doSub(tline = '') {
 	return tline
 }
 
-function addClasses(tline='', type='') {
+var dFunction = {
+
+	classGenIndividual: function(e='') {
+		console.log('');
+	},
+
+	interfaceGenIndividual: function (e='') {
+		console.log('interface GenIndividual');
+	},
+
+	functionGenIndividual: function (e='') {
+		console.log('FuncGenIndividual');
+	},
+
+	enumerationGenIndividual: function (e='') {
+		console.log('EnumGenIndividual');
+	}
+}
+
+function addRegions(tline='', type='') {
 	var o = {}
 	switch (type) {
 		case 'class':
@@ -70,20 +120,30 @@ function addClasses(tline='', type='') {
 		case 'function':
 			o = functionObj
 			break;
+		case 'enumeration':
+			o = enumObj
+			break;
 		default:
 	}
 	Object.keys(o).forEach((e) => {
 			var mline = dclone(tline).substr(1)
 			mline = mline.replace('%name%', e)
-			mline = mline.replace('%link%', `${e.toLowerCase()}.md`)
+			mline = mline.replace('%link%', `${e}`)
 			//Get first sentence
 			var descr = o[e]['descr']
 			if (descr) {
 				descr = descr.split('.')[0].replace(/\n/g, ' ')
 			}
-			console.log(descr);
 			mline = mline.replace('%description%', descr)
+			// For return function add Markdown HyperLink
+			if (type === 'function') {
+					var returnLink = getLinkForType(o[e]['returnType'])
+					mline = mline.replace('%returns%', returnLink)
+			}
 			mdout.push(mline)
+			// Dynamically call the function to generate the individual md files
+			dFunction[`${type}GenIndividual`](e)
+
 	})
 }
 
@@ -95,7 +155,7 @@ function genModuleView(){
 			var key = tline[0] || '*'
 			var key2 = tline.substring(0,2)
 
-			if (MARK_REGION.includes(key)) {
+			if (NEW_REGION.includes(key)) {
 				set_region(tline)
 				return
 			}
@@ -110,22 +170,17 @@ function genModuleView(){
 
 				 if (hasVar) tline = doSub(tline)
 				 mdout.push(tline)
-				 console.log('write back' + tline);
 			}
 		  else if (TAKE_ACTION.includes(key)) {
-			 	 console.log('take action');
 		  }
 			else if (TAKE_REPEAT_ACTION.includes(key)) {
 				switch (region) {
 					case 'class':
 					case 'function':
 					case 'interface':
-						addClasses(tline, region)
-						break;
 					case 'enumeration':
-						//addEnums(tline)
+						addRegions(tline, region)
 						break;
-
 					default:
 
 				}
@@ -148,6 +203,7 @@ inputFiles.forEach((e) => {
 
 	moduleName = e.split('.')[0]
 	genModuleView()
+	file_reset()
 
 })
 

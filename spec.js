@@ -235,6 +235,7 @@ function processLines(element = '', index = 0, lines = []) {
 		var name = line.split('(')[0].split(' ').pop()
 		// Build a function object
 		functionObj[name] = {} // JSON.parse(JSON.stringify(Objects.method))
+		functionObj[name]['descr'] = generalDesc
 		functionObj[name]['signature'] = line.split('function ')[1]
 		functionObj[name]['returnType'] = line.split(': ').pop()
 		if (commentObject['returnDescr'] === undefined) {
@@ -316,6 +317,7 @@ function processLines(element = '', index = 0, lines = []) {
 					iBlock--
 				}
 				else {
+					console.log(line);
 					var p = Utils.processProperty(line, generalDesc)
 					classObj[className]['properties'].push(p)
 				}

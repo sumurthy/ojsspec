@@ -1,6 +1,5 @@
 /**
  * Implements the minimal functionality for a webpart. This class also provides a bunch of parameter
-<<<<<<< HEAD
  * validate and access to readonly properties like the displayMode, properties, manifest, instanceId,
  * domElement, and so on...
  *
@@ -20,25 +19,15 @@
  *
  * The following methods are not intended to be overridden.
  *
-=======
->>>>>>> 6282fdab93d485b53c1a1c15b83e2c8d7c383fd6
  *    renderError  Render an error message in the webpart container dom element.
  */
 declare class BaseClientSideWebPart<P> implements IClientSideWebPart {
-  /**
-   * Contructor for the BaseClientSideWebPart
-   * If a sub classe overrids the constructor, it needs to call super(context) as the first line of constructor
-   */
-<<<<<<< HEAD
 	/**
 	 * [constructor description]
 	 * @param  {IWebPartContext} ctx [description]
 	 * @return {[type]}              [description]
 	 */
-	constructor(ctx: IWebPartContext);
-=======
   constructor(ctx: IWebPartContext);
->>>>>>> 6282fdab93d485b53c1a1c15b83e2c8d7c383fd6
   /**
    * Clear the error message from the web part display area.
    */
@@ -165,10 +154,6 @@ declare class BaseClientSideWebPart<P> implements IClientSideWebPart {
    * @class {BaseClientSideWebPart}
    * @return {void}
    */
-<<<<<<< HEAD
-
-=======
->>>>>>> 6282fdab93d485b53c1a1c15b83e2c8d7c383fd6
   protected renderError(error: Error): void;
   /**
    * @see IClientSideWebPart.ts

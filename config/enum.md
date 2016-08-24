@@ -1,8 +1,9 @@
-<enums>
-# Enumerations
+<enum>
+# %enumname% enumeration
+%enumdescr%
 
-| Option	   | Returns	| Description| Requirements|
-|:-------------|:-------|:-----------|:------------|
->|%name%      | %type% | %description% | %enumreq% |
+| Option	   | Description|
+|:-------------|:-------|
+>|%value%      | %descr% |
 
-</enums>
+</enum>
