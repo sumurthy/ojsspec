@@ -17,8 +17,8 @@ let interfaceName = ''
 let moduleT = []
 let classInterfaceT = []
 
-let WRITE_BACK = ['#', '|', '*', '_']
-let TAKE_ACTION = ['%']
+let WRITE_BACK = ['#', '|', '*', '_', '%']
+
 let TAKE_REPEAT_ACTION = ['>']
 let NEW_REGION = ['<']
 let IGNORE = ['/']
@@ -87,6 +87,14 @@ function set_region(tline = '') {
 
 function doSub(tline = '') {
 	if (tline.includes('%module%'))	tline = tline.replace('%module%', moduleName)
+	if (tline.includes('%resourcename%'))	tline = tline.replace('%resourcename%', className)
+
+	return tline
+}
+
+
+function doSubClass(tline = '') {
+	if (tline.includes('%description%'))	tline = tline.replace('%module%', classObj[className]['descr'])
 	if (tline.includes('%resourcename%'))	tline = tline.replace('%resourcename%', className)
 
 	return tline
@@ -213,24 +221,25 @@ function genClassView(){
 
 			if (WRITE_BACK.includes(key)) {
 
-				 if (hasVar) tline = doSub(tline)
-				 mdout.push(tline)
+				 if (hasVar) tline = doSubClass(tline)
+				 mem_mdout.push(tline)
 			}
-		  else if (TAKE_ACTION.includes(key)) {
-		  }
+
 			else if (TAKE_REPEAT_ACTION.includes(key)) {
 				switch (region) {
 					case 'property':
-					case 'method':
 						addMembers(tline, region, className)
+						break
+					case 'method':
+
 						break;
 					default:
 
 				}
 			}
 		})
-		console.log(`*** Writing Module file for ${moduleName}`)
-		FileOps.writeFile(mdout, `./markdown/${moduleName}_module.md`)
+		console.log(`*** Writing Class file for ${className}`)
+		FileOps.writeFile(mem_mdout, `./markdown/${className}.md`)
 }
 
 function genModuleView(){
@@ -257,8 +266,7 @@ function genModuleView(){
 				 if (hasVar) tline = doSub(tline)
 				 mdout.push(tline)
 			}
-		  else if (TAKE_ACTION.includes(key)) {
-		  }
+
 			else if (TAKE_REPEAT_ACTION.includes(key)) {
 				switch (region) {
 					case 'class':
@@ -279,8 +287,15 @@ function genModuleView(){
 console.log('** Starting Program...')
 SetUp.cleanupOutput('./markdown')
 
-moduleT = FileOps.loadFile('./config/module.md')
-classInterfaceT = FileOps.loadFile('./config/class_interface.md')
+try {
+	moduleT = FileOps.loadFile('./config/module.md')
+	classInterfaceT = FileOps.loadFile('./config/class.md')
+} catch (e) {
+	console.log(`Error Loading config files.`)
+	throw e
+} finally {
+
+}
 
 let inputFiles = FileOps.walkFiles('./input', '.ts')
 inputFiles.forEach((e) => {

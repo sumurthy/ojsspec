@@ -105,22 +105,28 @@ var self = module.exports = {
     var lastWord = line.split(':').pop()
 
     var name = self.getName(firstWord)
-    m[name] = {}
+
     if (classMethod) {
       m['accessModifier'] = firstWord
     }
-    m[name]['descr'] = descr
-    m[name]['genericType'] = self.genericInside(line.split('(')[0])
+		if (line.includes('constructor')) {
+			m['signature'] = line
+		}
+		else {
+			m['signature'] = line.substr(line.indexOf(" ") + 1);
+
+		}
+    m['descr'] = descr
+    m['genericType'] = self.genericInside(line.split('(')[0])
     if (name === 'constructor') {
-        m[name]['returnType'] = parentName
+        m['returnType'] = parentName
     }
     else {
-        m[name]['returnType'] = lastWord
+        m['returnType'] = lastWord
     }
-    m[name]['returnDescr'] = (commentObject['returnDescr'] === undefined) ?
+    m['returnDescr'] = (commentObject['returnDescr'] === undefined) ?
       null : commentObject['returnDescr']
-    m[name]['signature'] = line.substr(line.indexOf(" ") + 1);
-    m[name]['params'] = self.buildParamList(line, commentObject['param'])
+    m['params'] = self.buildParamList(line, commentObject['param'])
     return m
   },
   processProperty: (line='', descr='') => {
@@ -128,7 +134,7 @@ var self = module.exports = {
     var firstWord = line.split(' ',1)[0]
     var secondWord = line.split(' ',2)[1]
     var lastWord = line.split(':').pop()
-    
+
     p['accessModifier'] = firstWord
     p['descr'] = descr
     p['isOptional'] = (secondWord.includes('?')) ? true : false

@@ -218,7 +218,7 @@ function processLines(element = '', index = 0, lines = []) {
 		classObj[className]['genericType'] = Utils.genericInside(line.split(' ')[2])
 		classObj[className]['descr'] = generalDesc
 		classObj[className]['properties'] = {}
-		classObj[className]['methods'] = []
+		classObj[className]['methods'] = {}
 		comment_reset()
 		return
 	}
@@ -309,7 +309,13 @@ function processLines(element = '', index = 0, lines = []) {
 				if (line.includes(')') && line.includes('(')) { // has brackets
 
 					var m = Utils.processMethod(line, generalDesc, commentObject, className)
-					classObj[className]['methods'].push(m)
+					var name
+					if (line.includes('constructor')) {
+							classObj[className]['methods']['constructor'] = m
+					}
+					else {
+						classObj[className]['methods'][secondWord.split('(')[0].trim()] = m
+					}
 				}
 				else if (line.includes(BLOCK_BEGIN)) {
 					// Handle object
