@@ -128,13 +128,12 @@ var self = module.exports = {
     var firstWord = line.split(' ',1)[0]
     var secondWord = line.split(' ',2)[1]
     var lastWord = line.split(':').pop()
-    var name = line.split(':')[0]
-    p[name] = {}
+    
     p['accessModifier'] = firstWord
-    p[name]['descr'] = descr
-    p[name]['isOptional'] = (secondWord.includes('?')) ? true : false
-    p[name]['type'] = lastWord.replace('[]', '')
-    p[name]['isCollection'] = (secondWord.includes('[]')) ? true : false
+    p['descr'] = descr
+    p['isOptional'] = (secondWord.includes('?')) ? true : false
+    p['type'] = lastWord.replace('[]', '')
+    p['isCollection'] = (secondWord.includes('[]')) ? true : false
     return p
   }
 }

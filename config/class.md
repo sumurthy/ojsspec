@@ -1,20 +1,20 @@
-<resource>
+<object>
 # %resourcename% resource type
 
 %resourcedescription%
 
-</resource>
+</object>
 
-<properties>
+<property>
 ### Properties
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
 >|%name%      | %access% | %type% | %description% |
 
-</properties>
+</property>
 
-<methods>
+<method>
 
 ## Methods
 
@@ -23,4 +23,4 @@
 >|%name%      | %access% | %type% | %description% |
 
 
-</methods>
+</method>

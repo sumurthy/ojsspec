@@ -196,7 +196,8 @@ function processLines(element = '', index = 0, lines = []) {
 		iObj[interfaceName] = {} // JSON.parse(JSON.stringify(Objects.method))
 		iObj[interfaceName]['extendsName'] = extendsName
 		iObj[interfaceName]['descr'] = generalDesc
-		iObj[interfaceName]['properties'] = []
+		iObj[interfaceName]['properties'] = {}
+		iObj[interfaceName]['functions'] = {}
 		iObj[interfaceName]['objects'] = []
 		iObj[interfaceName]['methods'] = []
 		comment_reset()
@@ -216,7 +217,7 @@ function processLines(element = '', index = 0, lines = []) {
 		classObj[className]['implementsName'] = implementsName
 		classObj[className]['genericType'] = Utils.genericInside(line.split(' ')[2])
 		classObj[className]['descr'] = generalDesc
-		classObj[className]['properties'] = []
+		classObj[className]['properties'] = {}
 		classObj[className]['methods'] = []
 		comment_reset()
 		return
@@ -271,7 +272,7 @@ function processLines(element = '', index = 0, lines = []) {
 					f[firstWord]['returnDescr'] = (commentObject['returnDescr'] === undefined) ?
 						null : commentObject['returnDescr']
 					f[firstWord]['params'] = Utils.buildParamList(line, commentObject['param'])
-					iObj[interfaceName]['properties'].push(f)
+					iObj[interfaceName]['functions'][firstWord] = f
 				}
 				else if (line.includes(')') && line.includes('(')) { // has brackets
 					var m = {}
@@ -300,7 +301,7 @@ function processLines(element = '', index = 0, lines = []) {
 					p[name]['isOptional'] = (secondWord.includes('?')) ? true : false
 					p[name]['type'] = lastWord.replace('[]', '')
 					p[name]['isCollection'] = (secondWord.includes('[]')) ? true : false
-					iObj[interfaceName]['properties'].push(p)
+					iObj[interfaceName]['properties'][firstWord] = p
 				}
 
 				break;
@@ -319,7 +320,7 @@ function processLines(element = '', index = 0, lines = []) {
 				else {
 					console.log(line);
 					var p = Utils.processProperty(line, generalDesc)
-					classObj[className]['properties'].push(p)
+					classObj[className]['properties'][secondWord] = p
 				}
 				break;
 			case 'ENUM':

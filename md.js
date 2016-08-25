@@ -8,10 +8,14 @@ let classObj = {}
 let enumObj = {}
 let region = ''
 let mdout = []
+let mem_mdout = []
 let skipFlag = false
 let moduleName = ''
+let className = ''
+let interfaceName = ''
 
 let moduleT = []
+let classInterfaceT = []
 
 let WRITE_BACK = ['#', '|', '*', '_']
 let TAKE_ACTION = ['%']
@@ -35,6 +39,7 @@ function file_reset() {
 	enumObj = {}
 	region = ''
 	mdout = []
+	mem_mdout = []
 	skipFlag = false
 }
 function getLinkForType(type='') {
@@ -74,7 +79,6 @@ function set_region(tline = '') {
 				}
 				break;
 			default:
-
 		}
 	}
 
@@ -82,10 +86,9 @@ function set_region(tline = '') {
 }
 
 function doSub(tline = '') {
-	if (tline.includes('%module%')) {
-		console.log(`replace with ${moduleName}`);
-		tline = tline.replace('%module%', moduleName)
-	}
+	if (tline.includes('%module%'))	tline = tline.replace('%module%', moduleName)
+	if (tline.includes('%resourcename%'))	tline = tline.replace('%resourcename%', className)
+
 	return tline
 }
 
@@ -93,6 +96,8 @@ var dFunction = {
 
 	classGenIndividual: function(e='') {
 		console.log('');
+		className = e
+		genClassView()
 	},
 
 	interfaceGenIndividual: function (e='') {
@@ -125,6 +130,7 @@ function addRegions(tline='', type='') {
 			break;
 		default:
 	}
+
 	Object.keys(o).forEach((e) => {
 			var mline = dclone(tline).substr(1)
 			mline = mline.replace('%name%', e)
@@ -142,9 +148,89 @@ function addRegions(tline='', type='') {
 			}
 			mdout.push(mline)
 			// Dynamically call the function to generate the individual md files
+
 			dFunction[`${type}GenIndividual`](e)
 
 	})
+}
+
+
+function addMembers(tline='', type='', name='') {
+	var o = {}
+	switch (type) {
+		case 'property':
+			o = classObj[className]['properties']
+			break;
+		case 'method':
+			o = classObj[className]['methods']
+			break;
+		case 'function':
+			o = o = classObj[className]['functions']
+			break;
+
+		default:
+	}
+
+	Object.keys(o).forEach((e) => {
+			var mline = dclone(tline).substr(1)
+			mline = mline.replace('%name%', e)
+			mline = mline.replace('%access%', `${o[e]['accessModifier']}`)
+			mline = mline.replace('%type%', `${o[e]['dataType']}`)
+			//Get first sentence
+			var descr = o[e]['descr']
+			if (descr) {
+				descr = descr.split('.')[0].replace(/\n/g, ' ')
+			}
+			mline = mline.replace('%description%', descr)
+			// For return function add Markdown HyperLink
+			// if (type === 'function') {
+			// 		var returnLink = getLinkForType(o[e]['returnType'])
+			// 		mline = mline.replace('%returns%', returnLink)
+			// }
+			mem_mdout.push(mline)
+	})
+}
+
+function genClassView(){
+	console.log(`Processing Class file creation`);
+	var o = classObj[className]
+
+		classInterfaceT.forEach((tline) => {
+			tline = tline.trim()
+			var key = tline[0] || '*'
+			var key2 = tline.substring(0,2)
+
+			if (NEW_REGION.includes(key)) {
+				set_region(tline)
+				return
+			}
+
+			if (skipFlag) {
+				return
+			}
+
+			var hasVar = tline.includes('%') ? true  : false
+
+			if (WRITE_BACK.includes(key)) {
+
+				 if (hasVar) tline = doSub(tline)
+				 mdout.push(tline)
+			}
+		  else if (TAKE_ACTION.includes(key)) {
+		  }
+			else if (TAKE_REPEAT_ACTION.includes(key)) {
+				switch (region) {
+					case 'property':
+					case 'method':
+						addMembers(tline, region, className)
+						break;
+					default:
+
+				}
+			}
+		})
+		console.log(`*** Writing Module file for ${moduleName}`)
+		FileOps.writeFile(mdout, `./markdown/${moduleName}_module.md`)
 }
 
 function genModuleView(){
@@ -194,6 +280,7 @@ console.log('** Starting Program...')
 SetUp.cleanupOutput('./markdown')
 
 moduleT = FileOps.loadFile('./config/module.md')
+classInterfaceT = FileOps.loadFile('./config/class_interface.md')
 
 let inputFiles = FileOps.walkFiles('./input', '.ts')
 inputFiles.forEach((e) => {

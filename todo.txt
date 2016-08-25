@@ -17,4 +17,4 @@
     ICustomPropertyPaneFieldProps | ILabelProps | ISliderProps | IChoiceGroupProps |
     IButtonProps | ILinkProps | any;
     (Do this outside as a first step of file processing)
-6.
+6. properties/methods/functions: [{},{},{}] or {{}, {}, {}} ?
