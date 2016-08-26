@@ -16,6 +16,7 @@ let interfaceName = ''
 
 let moduleT = []
 let classInterfaceT = []
+let methodfuncT = []
 
 let WRITE_BACK = ['#', '|', '*', '_', '%']
 
@@ -51,6 +52,26 @@ function getLinkForType(type='') {
 		return type
 	}
 }
+
+function set_region_member(tline = '', member={}) {
+	skipFlag = false
+	if (tline.includes('</')) {
+		region = 'none'
+	}
+	else {
+		region = Utils.genericInside(tline).replace('/','')
+		switch (region) {
+			case 'parameter':
+				if (Object.keys(member['parameters']).length === 0) {
+					skipFlag = true
+				}
+				break;
+			default:
+		}
+	}
+	return
+}
+
 function set_region(tline = '') {
 	skipFlag = false
 	if (tline.includes('</')) {
@@ -79,12 +100,19 @@ function set_region(tline = '') {
 					skipFlag = true
 				}
 				break;
+			case 'parameter':
+				if (Object.keys(classObj).length === 0) {
+					skipFlag = true
+				}
+				break;
+
 			default:
 		}
 	}
 
 	return
 }
+
 
 function doSub(tline = '') {
 	if (tline.includes('%module%'))	tline = tline.replace('%module%', moduleName)
@@ -97,9 +125,18 @@ function doSub(tline = '') {
 function doSubClass(tline = '') {
 	if (tline.includes('%resourcedescription%'))	tline = tline.replace('%resourcedescription%', classObj[className]['descr'])
 	if (tline.includes('%resourcename%'))	tline = tline.replace('%resourcename%', className)
+	return tline
+}
+
+
+function doSubMember(tline = '', member={}, membername='') {
+	if (tline.includes('%membername%'))	tline = tline.replace('%membername%', membername)
+	if (tline.includes('%memberdescription%'))	tline = tline.replace('%memberdescription%', member['descr'])
+	if (tline.includes('%apisignature%'))	tline = tline.replace('%apisignature%', member['signature'])
 
 	return tline
 }
+
 
 var dFunction = {
 
@@ -174,7 +211,7 @@ function addMembers(tline='', type='', name='') {
 			o = classObj[className]['methods']
 			break;
 		case 'function':
-			o = o = classObj[className]['functions']
+			o = classObj[className]['functions']
 			break;
 
 		default:
@@ -205,6 +242,30 @@ function addMembers(tline='', type='', name='') {
 			mem_mdout.push(mline)
 	})
 }
+
+function addParams(tline='', member={}) {
+
+	Object.keys(member['parameters']).forEach((e) => {
+			var mline = dclone(tline).substr(1)
+			mline = mline.replace('%name%', e)
+			mline = mline.replace('%dtype%', `${member['parameters'][e]['dataType'])}`)
+			//Get first sentence
+			var descr = member['parameters'][e]['descr']
+			if (descr) {
+				descr = descr.split('.')[0].replace(/\n/g, ' ')
+			}
+			mline = mline.replace('%description%', descr)
+			// if (member['parameters'][e]['descr']) {
+			// 		mline = mline.replace('%optional%', 'Optional.')
+			// }
+			// else {
+			// 	mline = mline.replace('%optional%', '')
+			// }
+
+			mem_mdout.push(mline)
+	})
+}
+
 
 function genClassView(){
 	mem_mdout = []
@@ -246,9 +307,43 @@ function genClassView(){
 				}
 			}
 		})
+
+		if (classObj[className]['methods'].keys.length > 0) {
+				classObj[className]['methods'].keys.forEach((e) => {
+						genMemberview(e)
+				})
+		}
+
 		console.log(`*** Writing Class file for ${className}`)
 		FileOps.writeFile(mem_mdout, `./markdown/${className}.md`)
 }
+
+function	genMemberview(memName='') {
+	var member = classObj[className]['methods'][memName]
+
+	methodfuncT.forEach((tline) => {
+		tline = tline.trim()
+		var key = tline[0] || '*'
+		var key2 = tline.substring(0,2)
+		if (NEW_REGION.includes(key)) {
+			set_region_member(tline, member)
+			return
+		}
+
+		if (skipFlag) {
+				return
+		}
+
+		var hasVar = tline.includes('%') ? true  : false
+		if (WRITE_BACK.includes(key)) {
+			 if (hasVar) tline = doSubMember(tline, member)
+			 mem_mdout.push(tline)
+		}
+		else if (TAKE_REPEAT_ACTION.includes(key)) {
+					addParams(tline, member)
+			}
+		})
+	}
 
 function genModuleView(){
 	console.log(`Processing module file creation for ${moduleName}`);
@@ -298,6 +393,7 @@ SetUp.cleanupOutput('./markdown')
 try {
 	moduleT = FileOps.loadFile('./config/module.md')
 	classInterfaceT = FileOps.loadFile('./config/class.md')
+	methodfuncT = FileOps.loadFile('./config/method_function.md')
 } catch (e) {
 	console.log(`Error Loading config files.`)
 	throw e

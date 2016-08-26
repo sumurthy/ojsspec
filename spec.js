@@ -315,6 +315,7 @@ function processLines(element = '', index = 0, lines = []) {
 					else {
 						name = secondWord.split('(')[0].trim()
 					}
+					name = name || "ErrorErrorError"
 					var m = Utils.processMethod(line, generalDesc, commentObject, className, name, true)
 
 					classObj[className]['methods'][name] = m

@@ -1,21 +1,22 @@
-## Function Details
+## %membername%
 
-<api>
-### %apisignature%
+%memberdescription%
 
-%apidescription%
+##### Signature
+%apisignature%
 
-<parameters>
 #### Parameters
 %noparam%
-| Method	   | Type    | Description |
-|:-------------|:---------------|:------------|
->| %name%     | %dtype% | %description% |
 
+<parameter>
+| Parameter	   | Type    | Description |
+|:-------------|:---------------|:------------|
+>| %name%     | %dtype% | %optional% %description% |
 </parameters>
+
 #### Returns
 %returntype%
 
-</api>
 
-</methods>
+
+</parameter>

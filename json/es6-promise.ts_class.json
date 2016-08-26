@@ -20,7 +20,7 @@
           }
         ]
       },
-      "": {
+      "ErrorErrorError": {
         "accessModifier": "catch<U>(onRejected?:",
         "signature": "(error: any) => U | Thenable<U>): Promise<U>",
         "descr": "Sugar for promise.then(undefined, onRejected) \n",
