@@ -1,0 +1,297 @@
+{
+  "BaseClientSideWebPart": {
+    "implementsName": null,
+    "genericType": "TProperties",
+    "descr": "This abstract class implements the the base functionality for a client side web part. Every client side web part \nneeds to inherit from this class. Along with the base functionality, this class provides some APIs that can be \nused by the web part. These APIs fall in two catagories. \n \nThe first category of APIs provide data and functionality. Example, the web part context (i.e. this.context). This \nAPI should be used to access contextual data relevant to this web part instance. \n \nThe second category of APIs provide a base implementation for the web part lifecycle and can be overridden for an \nupdated implementation. The render() API is the only API that is mandatory to be implemented/overridden by a web \npart. All other life cycle APIs have a base implementation and can be overridden based on the needs of the web part. \nPlease refer to the documentation of the individual APIs to make the right decision.",
+    "properties": {
+      "accessibleTitle": {
+        "dataType": "string",
+        "accessModifier": "protected",
+        "isOptional": false,
+        "type": " string",
+        "isCollection": false,
+        "descr": "This property points to the accessible title of web part made available to screen readers. The base implementation \nreturns that default title in the manifest. Web parts that want to provide more descriptive title containing \ncontextual information need to override this API. \n"
+      },
+      "context": {
+        "dataType": "IWebPartContext",
+        "accessModifier": "protected",
+        "isOptional": false,
+        "type": " IWebPartContext",
+        "isCollection": false,
+        "descr": "This property is a pointer to the web part context."
+      },
+      "disableReactivePropertyChanges": {
+        "dataType": "boolean",
+        "accessModifier": "protected",
+        "isOptional": false,
+        "type": " boolean",
+        "isCollection": false,
+        "descr": "This property is used to change the web part's PropertyPane interaction from Reactive to NonReactive. The default \nbehaviour is Reactive. Where, \nReactive implies that changes made in the PropertyPane are transmitted to the web part instantly and the user can \nsee instant updates. This helps the page creator get instant feedback and decide if they should keep the new \nconfiguration changes or not. \nNonReactive implies that the configuraiton changes are transmitted to the web part only after 'Apply' PropertyPane \nbutton is clicked. \n"
+      },
+      "displayMode": {
+        "dataType": "DisplayMode",
+        "accessModifier": "protected",
+        "isOptional": false,
+        "type": " DisplayMode",
+        "isCollection": false,
+        "descr": "This property is the current display mode of the web part. \n"
+      },
+      "domElement": {
+        "dataType": "HTMLElement",
+        "accessModifier": "protected",
+        "isOptional": false,
+        "type": " HTMLElement",
+        "isCollection": false,
+        "descr": "This property is a pointer to the root DOM element of the web part. This is a DIV element and contains the whole \nDOM subtree of the web part. \n"
+      },
+      "previewImageUrl": {
+        "dataType": "string",
+        "accessModifier": "protected",
+        "isOptional": false,
+        "type": " string",
+        "isCollection": false,
+        "descr": "This property points to the preview image for the web part. The base implementation returns undefined. Web parts \nthat want to provide a valid preview image url need to override this API. The preview image url can be used to \ncreate a preview of the web part or of the page on which the web part is present. \n"
+      },
+      "properties": {
+        "dataType": "TProperties",
+        "accessModifier": "protected",
+        "isOptional": false,
+        "type": " TProperties",
+        "isCollection": false,
+        "descr": "This property is the pointer to the custom property bag of the web part. \n"
+      },
+      "propertyPaneSettings": {
+        "dataType": "IPropertyPaneSettings",
+        "accessModifier": "protected",
+        "isOptional": false,
+        "type": " IPropertyPaneSettings",
+        "isCollection": false,
+        "descr": "This property is the pointer to the web part configuration settings. If the web part wants to use the PropertyPane \nfor configuration, this API needs to be overridden and the web part needs to return the set of properties it wants \nto display in the PropertyPane. \n"
+      },
+      "renderedFromDefaultProperties": {
+        "dataType": "boolean",
+        "accessModifier": "protected",
+        "isOptional": false,
+        "type": " boolean",
+        "isCollection": false,
+        "descr": "This property indicates whether the web part was rendered from the default properties, as opposed to using \nserialized state from the last time that the web part was saved. \n"
+      },
+      "renderedOnce": {
+        "dataType": "boolean",
+        "accessModifier": "protected",
+        "isOptional": false,
+        "type": " boolean",
+        "isCollection": false,
+        "descr": "This property indicates whether the web part has been rendered once or not. After the first time rendering, \nthe value of this property is always true. Till a full re-render of the web part happens. \n"
+      }
+    },
+    "methods": {
+      "constructor": {
+        "accessModifier": "public",
+        "signature": "constructor(ctx: IWebPartContext)",
+        "descr": "e.g. \nconstructor(conext: IWebPartContext) { \nsuper(context); \n. \n. class specific constructor code .. \n}",
+        "genericType": null,
+        "returnType": "BaseClientSideWebPart",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "ctx",
+            "dataType": "IWebPartContext",
+            "descr": ""
+          }
+        ]
+      },
+      "clearError": {
+        "accessModifier": "protected",
+        "signature": "clearError(): void",
+        "descr": "This API should be used to clear the error message from the web part display area.",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": null,
+        "params": []
+      },
+      "configureStart": {
+        "accessModifier": "protected",
+        "signature": "configureStart(refreshOnly?: boolean): void",
+        "descr": "if it is not already open.",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "refreshOnly?",
+            "dataType": "boolean",
+            "descr": ""
+          }
+        ]
+      },
+      "deserialize": {
+        "accessModifier": "protected",
+        "signature": "deserialize(data: IWebPartData): TProperties",
+        "descr": "This API is called once during the lifetime of the web part during the intial render and just before the onInit \nAPI call. The purpose of this API is to help a web part developer deserialize the web part data and manage the \nversioning of their data as the web part code evolves. The web part data may have been persisted with an older \nor newer version of the web part code. This API gives the web part developer an opportunity to re-structure their \ndata to the appropriate data schema. The persisted data contains the version number information. That information \ncan be used to make decisions on how to re-structure the data. \n",
+        "genericType": null,
+        "returnType": "TProperties",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "data",
+            "dataType": "IWebPartData",
+            "descr": ""
+          }
+        ]
+      },
+      "dispose": {
+        "accessModifier": "protected",
+        "signature": "dispose(): void",
+        "descr": "This API is called at the end of the web part lifecycle. It should be overridden to dispose any \nresources that the web part is holding onto.",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": null,
+        "params": []
+      },
+      "onBeforeSerialize": {
+        "accessModifier": "protected",
+        "signature": "onBeforeSerialize(): IHtmlProperties",
+        "descr": "the documentation of IHtmlProperties interface for more details.",
+        "genericType": null,
+        "returnType": "IHtmlProperties",
+        "returnDescr": null,
+        "params": []
+      },
+      "onDisplayModeChanged": {
+        "accessModifier": "protected",
+        "signature": "onDisplayModeChanged(oldDisplayMode: DisplayMode): void",
+        "descr": "This API is called when the display mode of a web part is changed. The default implementation of this API calls \nthe web part render method to re-render the web part with the new display mode. If a web part developer does not \nwant a full re-render to happen on display mode change, they can override this API and perform specific updates \nto the web part DOM to switch its display mode. \n",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "oldDisplayMode",
+            "dataType": "DisplayMode",
+            "descr": ""
+          }
+        ]
+      },
+      "onInit": {
+        "accessModifier": "protected",
+        "signature": "onInit < T >(): Promise<T>",
+        "descr": "This API should be overridden to perform long running operations e.g. data fetching from a remote service before \nthe initial rendering of the web part. The loading indicator is displayed during the lifetime of this method. \nThis API is called only once during the lifecycle of a web part.",
+        "genericType": "T",
+        "returnType": "Promise<T>",
+        "returnDescr": null,
+        "params": []
+      },
+      "onPropertyChange": {
+        "accessModifier": "protected",
+        "signature": "onPropertyChange(propertyPath: string, newValue: any): void",
+        "descr": "This API is invoked on property changes in the PropertyPane when the PropertyPane is being used in Reactive mode. \nThe base implementation of this API updates the web part property bag and re-render the web part. This API also \ninvokes the web part host's setDirty API. \n",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "propertyPath",
+            "dataType": "string",
+            "descr": ""
+          },
+          {
+            "name": "newValue",
+            "dataType": "any",
+            "descr": ""
+          }
+        ]
+      },
+      "onPropertyConfigurationComplete": {
+        "accessModifier": "protected",
+        "signature": "onPropertyConfigurationComplete(): void",
+        "descr": "This API is called when the current web part configuration process is completed. ConfigurationComplete event \nis fired when user switches between web parts while the PropertyPane is open, and this event handler is called \nfor the previously selected web part. \n",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": null,
+        "params": []
+      },
+      "onPropertyPaneRendered": {
+        "accessModifier": "protected",
+        "signature": "onPropertyPaneRendered(): void",
+        "descr": "This API is involed when the PropertyPane is rendered.",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": null,
+        "params": []
+      },
+      "onPropertyPaneSave": {
+        "accessModifier": "protected",
+        "signature": "onPropertyPaneSave(): void",
+        "descr": "this API is invoked when the the changes are applied on the PropertyPane when the PropertyPane is used in \nNon-Reactive mode. This API is not invoked when the PropertyPane is used in Reactive mode.",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": null,
+        "params": []
+      },
+      "render": {
+        "accessModifier": "public",
+        "signature": "render(): void",
+        "descr": "This API is called to render the web part. There is no base implementation of this API and the web part is \nrequired to override this API.",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": null,
+        "params": []
+      },
+      "renderError": {
+        "accessModifier": "protected",
+        "signature": "renderError(error: Error): void",
+        "descr": "This API should be used to render an error message in the web part display area. Also logs the error message \nusing the trace logger. \n",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "error",
+            "dataType": "Error",
+            "descr": ""
+          }
+        ]
+      }
+    }
+  },
+  "MockWebPartContext": {
+    "implementsName": null,
+    "genericType": null,
+    "descr": "",
+    "properties": {
+      "instanceId": {
+        "dataType": "string = 'wpInstanceId'",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " string = 'wpInstanceId'",
+        "isCollection": false,
+        "descr": ""
+      },
+      "webPartTag": {
+        "dataType": "string = 'WebPart.daf0b71c-6de8-4ef7-b511-faae7c388708.0ae4973a-70e3-451e-9f1f-3f25e5455a60'",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " string = 'WebPart.daf0b71c-6de8-4ef7-b511-faae7c388708.0ae4973a-70e3-451e-9f1f-3f25e5455a60'",
+        "isCollection": false,
+        "descr": ""
+      }
+    },
+    "methods": {
+      "domElement:": {
+        "accessModifier": "public",
+        "signature": "domElement: HTMLElement = document.createElement('div')",
+        "descr": "",
+        "genericType": null,
+        "returnType": "HTMLElement = document.createElement('div')",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "'div'",
+            "descr": ""
+          }
+        ]
+      }
+    }
+  }
+}

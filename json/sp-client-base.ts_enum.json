@@ -1,0 +1,139 @@
+{
+  "DisplayMode": {
+    "descr": "",
+    "values": [
+      [
+        "// (undocumented)",
+        ""
+      ],
+      [
+        "Edit",
+        "2",
+        ""
+      ],
+      [
+        "// (undocumented)",
+        ""
+      ],
+      [
+        "Read",
+        "1",
+        ""
+      ]
+    ]
+  },
+  "EnvironmentType": {
+    "descr": "",
+    "values": [
+      [
+        "ClassicSharePoint",
+        ""
+      ],
+      [
+        "Local",
+        ""
+      ],
+      [
+        "SharePoint",
+        ""
+      ],
+      [
+        "Test",
+        ""
+      ]
+    ]
+  },
+  "static": {
+    "descr": "Enumerate permissions on the Web site, list, folder, document, or list item.",
+    "values": [
+      [
+        "public static fullMask: SPPermission",
+        "Has all permissions on the Web site. Not available through the user interface."
+      ],
+      [
+        "public hasAllPermissions(...requestedPerms: SPPermission[]): boolean",
+        "Function for determining if a given permission mask has all of the requested permissions."
+      ],
+      [
+        "public hasAnyPermissions(...requestedPerms: SPPermission[]): boolean",
+        "Function for determining if a given permission mask has any of the requested permissions."
+      ],
+      [
+        "public hasPermission(requestedPerm: SPPermission): boolean",
+        "Function for checking if a given permission mask has the requested permission."
+      ],
+      [
+        "public static layoutsPage: SPPermission",
+        "View the layouts page?"
+      ],
+      [
+        "public static manageAlerts: SPPermission",
+        "Manage alerts for all users of the Web site."
+      ],
+      [
+        "public static manageLists: SPPermission",
+        "Create and delete lists, add or remove columns in a list, and add or remove public views of a list."
+      ],
+      [
+        "public static managePermissions: SPPermission",
+        "Create and change permission levels on the Web site and assign permissions to users and groups."
+      ],
+      [
+        "public static managePersonalViews: SPPermission",
+        "Create, change, and delete personal views of lists."
+      ],
+      [
+        "public static manageSubwebs: SPPermission",
+        "Create subsites such as team sites, Meeting Workspace sites, and Document Workspace sites."
+      ],
+      [
+        "public static manageWeb: SPPermission",
+        "Grant the ability to perform all administration tasks for the Web site as well as manage content. \nActivate, deactivate,or edit properties of Web site scoped Features through the object model or \nthrough the user interface (UI). When grantedon the root Web site of a site collection, activate, \ndeactivate, or edit properties of site collection scoped Features through the object model. To \nbrowse to the Site Collection Features page and activate or deactivate site collection scoped \nFeatures through the UI, you must be a site collection administrator."
+      ],
+      [
+        "public static open: SPPermission",
+        "Allow users to open a Web site, list, or folder to access items inside that container."
+      ],
+      [
+        "public static openItems: SPPermission",
+        "View the source of documents with server-side file handlers."
+      ],
+      [
+        "public static updatePersonalWebParts: SPPermission",
+        "Update web parts to display personalized information."
+      ],
+      [
+        "public static useClientIntegration: SPPermission",
+        "Use features that launch client applications otherwise, users must work on documents locally and upload changes."
+      ],
+      [
+        "public static useRemoteAPIs: SPPermission",
+        "Use SOAP, WebDAV, or Microsoft Office SharePoint Designer 2007 interfaces to access the Web site."
+      ],
+      [
+        "public value: IODataBasePermission",
+        "Returns the value of this SPPermission object"
+      ],
+      [
+        "public static viewFormPages: SPPermission",
+        "View forms, views, and application pages, and enumerate lists."
+      ],
+      [
+        "public static viewListItems: SPPermission",
+        "View items in lists, documents in document libraries, and view Web discussion comments."
+      ],
+      [
+        "public static viewPages: SPPermission",
+        "View pages in a Web site."
+      ],
+      [
+        "public static viewUsageData: SPPermission",
+        "View reports on Web site usage."
+      ],
+      [
+        "public static viewVersions: SPPermission",
+        "View past versions of a list item or document."
+      ]
+    ]
+  }
+}

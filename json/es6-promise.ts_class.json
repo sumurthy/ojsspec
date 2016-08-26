@@ -25,7 +25,7 @@
         "signature": "(error: any) => U | Thenable<U>): Promise<U>",
         "descr": "Sugar for promise.then(undefined, onRejected) \n",
         "genericType": "U",
-        "returnType": " Promise<U>",
+        "returnType": "Promise<U>",
         "returnDescr": null,
         "params": [
           {

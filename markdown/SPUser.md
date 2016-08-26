@@ -1,24 +1,15 @@
 # SPUser resource type
 
-This class is primarily used with the PageContext class. It provides contextual 
-information for the current user visiting the page.
+This class is primarily used with the PageContext class. It provides contextual information 
+for the SharePoint user that is accessing the page. 
+
 
 
 ### Properties
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|id      | public |  number | The ID that identifies the SPUser on the server |
-
-
-
-## Methods
-
-| Method	   | Access Modifier | Returns	| Description|
-|:-------------|:----|:-------|:-----------|
-|constructor      | public | [SPUser](SPUser.md) | This class is primarily used with the PageContext class |
-|getOdataObject      | public |  IOdataUser | Returns an ODATA object containing additional information for this user, if available |
-|load      | public |  void | Assigns all properties of the object, then assigns the "state" property  to PageContextItemState |
-|updateOdataObject      | public |  void | Updates the ODATA object that will be returned when getOdataObject() is called |
+|displayName      | public | string | The display name for the current user |
+|loginName      | public | string | The login name for specified user |
 
 

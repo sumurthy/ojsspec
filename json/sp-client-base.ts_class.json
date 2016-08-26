@@ -1,0 +1,966 @@
+{
+  "BasicHttpClient": {
+    "implementsName": null,
+    "genericType": null,
+    "descr": "BasicHttpClient implements a basic set of features for performing REST operations. \nThe subclass HttpClient extends this basic functionality with SharePoint-specific \nenhancements.",
+    "properties": {
+      "serviceScope": {
+        "dataType": "ServiceScope",
+        "accessModifier": "protected",
+        "isOptional": false,
+        "type": " ServiceScope",
+        "isCollection": false,
+        "descr": "Calls fetch(), but sets the method to 'POST'."
+      }
+    },
+    "methods": {
+      "constructor": {
+        "accessModifier": "public",
+        "signature": "constructor(serviceScope: ServiceScope)",
+        "descr": "BasicHttpClient implements a basic set of features for performing REST operations. \nThe subclass HttpClient extends this basic functionality with SharePoint-specific \nenhancements.",
+        "genericType": null,
+        "returnType": "BasicHttpClient",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "serviceScope",
+            "dataType": "ServiceScope",
+            "descr": ""
+          }
+        ]
+      },
+      "fetch": {
+        "accessModifier": "public",
+        "signature": "fetch(url: string, options: IBasicHttpClientOptions): Promise<Response>",
+        "descr": "Performs a REST service call. Although the HttpClient subclass adds \nadditional enhancements, the parameters and semantics for BasicHttpClient.fetch() \nare essentially the same as the WHATWG API standard that is documented here: \nhttps://fetch.spec.whatwg.org/",
+        "genericType": null,
+        "returnType": "Promise<Response>",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "url",
+            "dataType": "string",
+            "descr": ""
+          },
+          {
+            "name": "options",
+            "dataType": "IBasicHttpClientOptions",
+            "descr": ""
+          }
+        ]
+      },
+      "fetchCore": {
+        "accessModifier": "protected",
+        "signature": "fetchCore(request: Request): Promise<Response>",
+        "descr": "Performs a REST service call. Although the HttpClient subclass adds \nadditional enhancements, the parameters and semantics for BasicHttpClient.fetch() \nare essentially the same as the WHATWG API standard that is documented here: \nhttps://fetch.spec.whatwg.org/",
+        "genericType": null,
+        "returnType": "Promise<Response>",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "request",
+            "dataType": "Request",
+            "descr": ""
+          }
+        ]
+      },
+      "get": {
+        "accessModifier": "public",
+        "signature": "get(url: string, options?: IBasicHttpClientOptions): Promise<Response>",
+        "descr": "Calls fetch(), but sets the method to 'GET'.",
+        "genericType": null,
+        "returnType": "Promise<Response>",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "url",
+            "dataType": "string",
+            "descr": ""
+          },
+          {
+            "name": "options?",
+            "dataType": "IBasicHttpClientOptions",
+            "descr": ""
+          }
+        ]
+      },
+      "post": {
+        "accessModifier": "public",
+        "signature": "post(url: string, options: IBasicHttpClientOptions): Promise<Response>",
+        "descr": "Calls fetch(), but sets the method to 'POST'.",
+        "genericType": null,
+        "returnType": "Promise<Response>",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "url",
+            "dataType": "string",
+            "descr": ""
+          },
+          {
+            "name": "options",
+            "dataType": "IBasicHttpClientOptions",
+            "descr": ""
+          }
+        ]
+      }
+    }
+  },
+  "Compare": {
+    "implementsName": null,
+    "genericType": null,
+    "descr": "This class contains various comparison utilities. \n",
+    "properties": {},
+    "methods": {
+      "static": {
+        "accessModifier": "public",
+        "signature": "static shallowCompare(objA: Object, objB: Object): boolean",
+        "descr": "Performs shallow comparison between two objects to determine if they are equal. This method compares \nonly object types. \n",
+        "genericType": null,
+        "returnType": "boolean",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "objA",
+            "dataType": "Object",
+            "descr": ""
+          },
+          {
+            "name": "objB",
+            "dataType": "Object",
+            "descr": ""
+          }
+        ]
+      }
+    }
+  },
+  "CultureInfo": {
+    "implementsName": null,
+    "genericType": null,
+    "descr": "This class is primarily used with the PageContext class. It provides culture info \nfor the current user of the application.",
+    "properties": {
+      "currentCultureName": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " string",
+        "isCollection": false,
+        "descr": "This string determines the language default format for dates, times, numbers, currency values, \nthe sorting order of text, casing conventions, and string comparisons. This property may have \nan empty string, but will never be undefined. \nExample: If the currentCultureName is \"en-au\" then the application could use this information \nto display the date as 1/8 instead of 8/1."
+      },
+      "currentUICultureName": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " string",
+        "isCollection": false,
+        "descr": "This string determines the default user interface language. This used for localization and \ntranslation of text. This property may have an empty string, but will never be undefined. \nExample: If the currentUICultureName is \"es-mx\", then the application could use this \ninformation to translate the word \"hello\" to \"hola\"."
+      }
+    },
+    "methods": {}
+  },
+  "Environment": {
+    "implementsName": null,
+    "genericType": null,
+    "descr": "This class contains contextual information about the enviroment that is hosting the framework and \nits components.",
+    "properties": {
+      "type": {
+        "dataType": "EnvironmentType",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " EnvironmentType",
+        "isCollection": false,
+        "descr": "An enum that describes which type of enviroment the framework is running in."
+      }
+    },
+    "methods": {}
+  },
+  "Guid": {
+    "implementsName": null,
+    "genericType": null,
+    "descr": "This class represents a globally unique identifier, as described by \nIETF RFC 4122. The input string is normalized and validated by the class \nconstructor, which provides important guarantees that simplify other code \nthat works with the GUID. This class also provides basic functionality \nfor generating a pseudo-random GUID (\"version 4\" UUID from the RFC); \nhowever, be aware that the uniqueness depends on the browser's \nMath.random() function and may be not be suitable for some applications. \n",
+    "properties": {},
+    "methods": {
+      "equals": {
+        "accessModifier": "public",
+        "signature": "equals(guid: Guid): boolean",
+        "descr": "represent the same value",
+        "genericType": null,
+        "returnType": "boolean",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "guid",
+            "dataType": "Guid",
+            "descr": ""
+          }
+        ]
+      },
+      "static": {
+        "accessModifier": "public",
+        "signature": "static tryParse(guid: string): Guid",
+        "descr": "Trys to construct a new Guid instance using guid string. The guid argument \nis normalized and validated. If the argument is not a valid \"version 4\" UUID from \nRFC 4122, tryParse will return undefined. \n",
+        "genericType": null,
+        "returnType": "Guid",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "guid",
+            "dataType": "string",
+            "descr": ""
+          }
+        ]
+      },
+      "toString": {
+        "accessModifier": "public",
+        "signature": "toString(): string",
+        "descr": "Example: 'd5369f3b-bd7a-412a-9c0f-7f0650bb5489'",
+        "genericType": null,
+        "returnType": "string",
+        "returnDescr": null,
+        "params": []
+      }
+    }
+  },
+  "HttpClient": {
+    "implementsName": null,
+    "genericType": null,
+    "descr": "HttpClient is used to perform REST calls against SharePoint. It adds default \nheaders, manages the digest needed for writes, and collects telemetry that \nhelps the service to monitor the performance of an application. \n \nFor communicating with non-SharePoint services, use the BasicHttpClient \nclass instead.",
+    "properties": {},
+    "methods": {
+      "constructor": {
+        "accessModifier": "public",
+        "signature": "constructor(serviceScope: ServiceScope)",
+        "descr": "HttpClient is used to perform REST calls against SharePoint. It adds default \nheaders, manages the digest needed for writes, and collects telemetry that \nhelps the service to monitor the performance of an application. \n \nFor communicating with non-SharePoint services, use the BasicHttpClient \nclass instead.",
+        "genericType": null,
+        "returnType": "HttpClient",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "serviceScope",
+            "dataType": "ServiceScope",
+            "descr": ""
+          }
+        ]
+      },
+      "beginBatch": {
+        "accessModifier": "public",
+        "signature": "beginBatch(batchOptions?: IODataBatchOptions): ODataBatch",
+        "descr": "Begins an ODATA batch, which allows multiple REST queries to be bundled into \na single web request.",
+        "genericType": null,
+        "returnType": "ODataBatch",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "batchOptions?",
+            "dataType": "IODataBatchOptions",
+            "descr": ""
+          }
+        ]
+      },
+      "fetch": {
+        "accessModifier": "public",
+        "signature": "fetch(url: string, options: IHttpClientOptions): Promise<Response>",
+        "descr": "Generally, the parameters and semantics for HttpClient.fetch() are essentially \nthe same as the WHATWG API standard that is documented here: \nhttps://fetch.spec.whatwg.org/ \n \nThe HttpClient subclass adds some additional behaviors that are convenient when \nworking with SharePoint ODATA API's (which can be avoided by using \nBasicHttpClient instead): \n- Default \"Accept\" and \"Content-Type\" headers are added if not explicitly specified. \n- For write operations, an \"X-RequestDigest\" header is automatically added \n- The request digest token is automatically fetched and stored in a cache, with \nsupport for preloading \n \nFor a write operation, HttpClient will automatically add the \"X-RequestDigest\" \nheader, which may need to be obtained by issuing a seperate request such as \n\"https://example.com/sites/sample/_api/contextinfo\". Typically the appropriate \nSPWeb URL can be guessed by looking for a reserved URL segment such as \"_api\" \nin the original URL passed to fetch(); if not, use IHttpClientOptions.webUrl \nto specify it explicitly. \n",
+        "genericType": null,
+        "returnType": "Promise<Response>",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "url",
+            "dataType": "string",
+            "descr": ""
+          },
+          {
+            "name": "options",
+            "dataType": "IHttpClientOptions",
+            "descr": ""
+          }
+        ]
+      },
+      "get": {
+        "accessModifier": "public",
+        "signature": "get(url: string, options?: IHttpClientOptions): Promise<Response>",
+        "descr": "Calls fetch(), but sets the method to 'GET'.",
+        "genericType": null,
+        "returnType": "Promise<Response>",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "url",
+            "dataType": "string",
+            "descr": ""
+          },
+          {
+            "name": "options?",
+            "dataType": "IHttpClientOptions",
+            "descr": ""
+          }
+        ]
+      },
+      "static": {
+        "accessModifier": "public",
+        "signature": "static getWebUrlFromRequestUrl(requestUrl: string): string",
+        "descr": "This uses a heuristic to guess the SPWeb URL associated with the provided \nREST URL. This is necessary for operations such as the X-RequestDigest \nand ODATA batching, which require POSTing to a separate REST endpoint \nin order to complete a request. \nFor excample, if the requestUrl is \"/sites/site/web/_api/service\", \nthe returned URL would be \"/sites/site/web\". Or if the requestUrl \nis \"http://example.com/_layouts/service\", the returned URL would be \n\"http://example.com\".",
+        "genericType": null,
+        "returnType": "string",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "requestUrl",
+            "dataType": "string",
+            "descr": ""
+          }
+        ]
+      },
+      "post": {
+        "accessModifier": "public",
+        "signature": "post(url: string, options: IHttpClientOptions): Promise<Response>",
+        "descr": "Calls fetch(), but sets the method to 'POST'.",
+        "genericType": null,
+        "returnType": "Promise<Response>",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "url",
+            "dataType": "string",
+            "descr": ""
+          },
+          {
+            "name": "options",
+            "dataType": "IHttpClientOptions",
+            "descr": ""
+          }
+        ]
+      }
+    }
+  },
+  "Log": {
+    "implementsName": null,
+    "genericType": null,
+    "descr": "The Log class provides static methods for logging messages at different levels (verbose, \ninfo, warning, error) and with context information. Context information helps identify \nwhich component generated the messages and makes the messages useful and filterable. \n",
+    "properties": {},
+    "methods": {
+      "static": {
+        "accessModifier": "public",
+        "signature": "static warn(source: string, message: string, scope?: ServiceScope): void",
+        "descr": "more context information (e.g., web part information) to the logged message.",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "source",
+            "dataType": "string",
+            "descr": ""
+          },
+          {
+            "name": "message",
+            "dataType": "string",
+            "descr": ""
+          },
+          {
+            "name": "scope?",
+            "dataType": "ServiceScope",
+            "descr": ""
+          }
+        ]
+      }
+    }
+  },
+  "ODataBatch": {
+    "implementsName": null,
+    "genericType": null,
+    "descr": "The ODataBatch class accumulates a number of REST service calls and \ntransmits them as a single ODATA batch. This protocol is documented here: \nhttp://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html \n \nThe usage is to call ODataBatch.fetch() to queue each individual request, \nand then call ODataBatch.execute() to execute the batch operation. \nThe execute() method returns a promise that resolves when the real REST \ncall has completed. Each call to fetch() also returns a promise that will \nresolve with a Response object for that particular request. \n",
+    "properties": {},
+    "methods": {
+      "constructor": {
+        "accessModifier": "public",
+        "signature": "public constructor(serviceScope: ServiceScope, batchOptions?: IODataBatchOptions)",
+        "descr": "The ODataBatch class accumulates a number of REST service calls and \ntransmits them as a single ODATA batch. This protocol is documented here: \nhttp://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html \n \nThe usage is to call ODataBatch.fetch() to queue each individual request, \nand then call ODataBatch.execute() to execute the batch operation. \nThe execute() method returns a promise that resolves when the real REST \ncall has completed. Each call to fetch() also returns a promise that will \nresolve with a Response object for that particular request. \n",
+        "genericType": null,
+        "returnType": "ODataBatch",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "serviceScope",
+            "dataType": "ServiceScope",
+            "descr": ""
+          },
+          {
+            "name": "batchOptions?",
+            "dataType": "IODataBatchOptions",
+            "descr": ""
+          }
+        ]
+      },
+      "execute": {
+        "accessModifier": "public",
+        "signature": "execute(): Promise<ODataBatch>",
+        "descr": "Executes the batched queries that were queued using ODataBatch.fetch().",
+        "genericType": null,
+        "returnType": "Promise<ODataBatch>",
+        "returnDescr": null,
+        "params": []
+      },
+      "fetch": {
+        "accessModifier": "public",
+        "signature": "fetch(url: string, options?: IODataBatchRequestOptions): Promise<Response>",
+        "descr": "Queues a new request, and returns a promise that can be used to access \nthe server response (after execute() has completed). The parameters for \nthis function are basically the same as the WHATWG API standard documented here: \nhttps://fetch.spec.whatwg.org/ \n \nHowever, be aware that certain REST headers are ignored or not allowed inside \na batch. See the ODATA documentation for details. \n \nWhen execute() is called, it will POST to a URL such as \n\"http://example.com/sites/sample/_api/$batch\". Typically ODataBatch can successfully \nguess the appropriate SPWeb URL by looking for a reserved URL segment such as \"_api\" \nin the first URL passed to fetch(). If not, use IODataBatchOptions.webUrl to specify it \nexplicitly. \n",
+        "genericType": null,
+        "returnType": "Promise<Response>",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "url",
+            "dataType": "string",
+            "descr": ""
+          },
+          {
+            "name": "options?",
+            "dataType": "IODataBatchRequestOptions",
+            "descr": ""
+          }
+        ]
+      },
+      "get": {
+        "accessModifier": "public",
+        "signature": "get(url: string, options?: IODataBatchRequestOptions): Promise<Response>",
+        "descr": "Calls fetch(), but sets the method to 'GET'.",
+        "genericType": null,
+        "returnType": "Promise<Response>",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "url",
+            "dataType": "string",
+            "descr": ""
+          },
+          {
+            "name": "options?",
+            "dataType": "IODataBatchRequestOptions",
+            "descr": ""
+          }
+        ]
+      },
+      "post": {
+        "accessModifier": "public",
+        "signature": "post(url: string, options: IODataBatchRequestOptions): Promise<Response>",
+        "descr": "Calls fetch(), but sets the method to 'POST'.",
+        "genericType": null,
+        "returnType": "Promise<Response>",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "url",
+            "dataType": "string",
+            "descr": ""
+          },
+          {
+            "name": "options",
+            "dataType": "IODataBatchRequestOptions",
+            "descr": ""
+          }
+        ]
+      }
+    }
+  },
+  "PageContext": {
+    "implementsName": null,
+    "genericType": null,
+    "descr": "The page context provides standard definitions for common SharePoint objects \nthat need to be shared between the client-side application, web parts, and other \ncomponents. Typically the data is fetched via REST queries when navigating to a \nnew page, but it can also be preloaded by the web server, or filled from a custom \napplication cache.",
+    "properties": {
+      "cultureInfo": {
+        "dataType": "CultureInfo",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " CultureInfo",
+        "isCollection": false,
+        "descr": "This class is primarily used with the PageContext class. It provides culture info \nfor the current user of the application."
+      },
+      "isInitialized": {
+        "dataType": "boolean",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " boolean",
+        "isCollection": false,
+        "descr": "Returns whether the PageContext has been initialized."
+      },
+      "site": {
+        "dataType": "SPSite",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " SPSite",
+        "isCollection": false,
+        "descr": "Contextual information for the SharePoint site collection (\"site\") that is hosting the page. \nThe site object will be defined if the PageContext was initialized."
+      },
+      "user": {
+        "dataType": "SPUser",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " SPUser",
+        "isCollection": false,
+        "descr": "This class is primarily used with the PageContext class. It provides contextual information \nfor the SharePoint user that is accessing the page."
+      },
+      "web": {
+        "dataType": "SPWeb",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " SPWeb",
+        "isCollection": false,
+        "descr": "Contextual information for the SharePoint site (\"web\") that is hosting the page. The web object \nwill be defined if the PageContext was initialized."
+      }
+    },
+    "methods": {
+      "constructor": {
+        "accessModifier": "public",
+        "signature": "constructor(serviceScope: ServiceScope)",
+        "descr": "The page context provides standard definitions for common SharePoint objects \nthat need to be shared between the client-side application, web parts, and other \ncomponents. Typically the data is fetched via REST queries when navigating to a \nnew page, but it can also be preloaded by the web server, or filled from a custom \napplication cache.",
+        "genericType": null,
+        "returnType": "PageContext",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "serviceScope",
+            "dataType": "ServiceScope",
+            "descr": ""
+          }
+        ]
+      }
+    }
+  },
+  "ServiceKey": {
+    "implementsName": null,
+    "genericType": "T",
+    "descr": "The ServiceKey is a lookup key that is used when calling ServiceScope.consume() \nto fetch a dependency. The key also defines a default implementation of the \ndependency, which will be autocreated by the root scope if the dependency is not found. \nProviding a default implementation ensures that new dependencies can be safely \nintroduced without inadvertently breaking components that are loaded by an older host \n(that does not provide the new dependency).",
+    "properties": {
+      "static": {
+        "dataType": "string,",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " string,",
+        "isCollection": false,
+        "descr": "your application."
+      },
+      "defaultCreator": {
+        "dataType": "ServiceCreator<T>",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " ServiceCreator<T>",
+        "isCollection": false,
+        "descr": "your application."
+      },
+      "id": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " string",
+        "isCollection": false,
+        "descr": "your application."
+      },
+      "name": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " string",
+        "isCollection": false,
+        "descr": "your application."
+      }
+    },
+    "methods": {
+      "constructor": {
+        "accessModifier": "public",
+        "signature": "constructor(id: string, name: string, defaultCreator: ServiceCreator<T>)",
+        "descr": "PRIVATE - Do not call this from your own code.",
+        "genericType": null,
+        "returnType": "ServiceKey",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "id",
+            "dataType": "string",
+            "descr": ""
+          },
+          {
+            "name": "name",
+            "dataType": "string",
+            "descr": ""
+          },
+          {
+            "name": "defaultCreator",
+            "dataType": "ServiceCreator<T>",
+            "descr": ""
+          }
+        ]
+      },
+      "static": {
+        "accessModifier": "public",
+        "signature": "static createCustom < T >(name: string, defaultCreator: ServiceCreator<T>): ServiceKey<T>",
+        "descr": "your application.",
+        "genericType": "T",
+        "returnType": "ServiceKey<T>",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "name",
+            "dataType": "string",
+            "descr": ""
+          },
+          {
+            "name": "defaultCreator",
+            "dataType": "ServiceCreator<T>",
+            "descr": ""
+          }
+        ]
+      }
+    }
+  },
+  "ServiceScope": {
+    "implementsName": null,
+    "genericType": null,
+    "descr": "ServiceScope provides a formalized way for components to register and consume dependencies \n(\"services\"), and to enable different implementations to be registered in different scopes. \nThis improves modularity by decoupling components from their dependencies in an extensible way. \n \nFor example, suppose that various components need access to an IPageManager instance. We could \nsimply make the PageManager a singleton (i.e. global variable), but this will not work e.g. if \nwe need to create a pop-up dialog that requires a second PageManager instance. A better solution \nwould be to add the PageManager as a constructor parameter for each component that requires it, \nhowever then we immediately face the problem that any code that calls these constructors \nalso needs a PageManager parameter. In an application with many such dependencies, business \nlogic that ties together many subsystems would eventually pick up a constructor parameter \nfor every possible dependency, which is unwieldy. A natural solution would be to move all the \ndependencies into a class with name like \"ApplicationContext\", and then pass this around as our \nconstructor parameter. This enables the PageManager to be passed to classes that need it \nwithout cluttering the intermediary classes that don't. However, it still has a design problem \nthat \"ApplicationContext\" has hard-coded dependencies on many unrelated things. A more flexible \napproach is to make it a dictionary that can look up items for consumers/providers who know the \nright lookup key (i.e. ServiceKey). This is the popular \"service locator\" design pattern, \nfamiliar from the SPContext API in classic SharePoint. \n \nServiceScope takes this idea a step further in two important ways: First, it provides a scoping \nmechanism so that e.g. if we had two different pages, they could each consume a unique PageManager \ninstance while still sharing other common dependencies. Secondly, it allows for a ServiceKey \nto provide a default implementation of the dependency. This is important for API stability in \nour modular client-side environment: For example, suppose that version 2.0 of our application \nintroduced a new IDiagnosticTracing interface that a version 2.0 component will expect to consume. \nIf the version 2.0 component gets loaded by an older 1.0 application, it would fail. We could \nfix this by requiring each consumer to check for any missing dependencies and handle that case, \nbut it would require a lot of checks. A better solution is to ensure that a default implementation \nalways exists, perhaps just a trivial behavior, so that components don't have to worry about it. \n \nUsage: ServiceScope instances are created by calling either ServiceScope.startNewRoot() or \nServiceScope.startNewChild(). They are initially in an \"unfinished\" state, during which provide() \ncan be called to register service keys, but consume() is forbidden. After ServiceScope.finish() \nis called, consume() is allowed and provide() is now forbidden. These semantics ensure that \nServiceScope.consume() always returns the same result for the same key, and does not depend on \norder of initialization. It also allows us to support circular dependencies without worrying \nabout infinite loops, even when working with external components that were implemented by \nthird parties. To avoid mistakes, it's best to always call consume() inside a callback from \nserviceScope.whenFinished().",
+    "properties": {
+      "createAndProvide": {
+        "dataType": "ServiceKey<T>,",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " ServiceKey<T>,",
+        "isCollection": false,
+        "descr": "This is a shorthand function that its equivalent to constructing a new instance of the \nsimpleServiceClass, then registering it by calling ServiceScope.provide()."
+      }
+    },
+    "methods": {
+      "constructor": {
+        "accessModifier": "public",
+        "signature": "constructor(parent: ServiceScope)",
+        "descr": "PRIVATE CONSTRUCTOR - DO NOT CALL THIS FROM YOUR OWN CODE.",
+        "genericType": null,
+        "returnType": "ServiceScope",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "parent",
+            "dataType": "ServiceScope",
+            "descr": ""
+          }
+        ]
+      },
+      "consume": {
+        "accessModifier": "public",
+        "signature": "consume < T >(serviceKey: ServiceKey<T>): T",
+        "descr": "Components should call this function to \"consume\" a dependency, i.e. look up the serviceKey \nand return the registered service instance. If the instance cannot be found, then a default \ninstance will be autocreated and registered with the root ServiceScope.",
+        "genericType": "T",
+        "returnType": "T",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "serviceKey",
+            "dataType": "ServiceKey<T>",
+            "descr": ""
+          }
+        ]
+      },
+      "createDefaultAndProvide": {
+        "accessModifier": "public",
+        "signature": "createDefaultAndProvide < T >(serviceKey: ServiceKey<T>): T",
+        "descr": "This is a shorthand function that constructs the default implementation of the specified \nserviceKey, and then registers it by calling ServiceScope.provide().",
+        "genericType": "T",
+        "returnType": "T",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "serviceKey",
+            "dataType": "ServiceKey<T>",
+            "descr": ""
+          }
+        ]
+      },
+      "finish": {
+        "accessModifier": "public",
+        "signature": "finish(): void",
+        "descr": "When a ServiceScope is first started, it is in an \"unfinished\" state where provide() is \nallowed but consume() is not allowed. After calling finish(), then consume() is allowed \nbut provide() is not allowed. This formalism completely eliminates a number of tricky bugs \nsuch as: Scope2 is a child of Scope1, and Scope1 provides instance A1 of interface A; \nif someone consumes A1 from Scope2 (via inheritance) before Scope2.provide() is called \nwith A2, then a subsequent call to Scope2.consume() might return a different result than \nthe previous call, which would be very confusing for developers.",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": null,
+        "params": []
+      },
+      "getParent": {
+        "accessModifier": "public",
+        "signature": "getParent(): ServiceScope",
+        "descr": "Returns the parent of the current ServiceScope, or undefined if this is a root scope.",
+        "genericType": null,
+        "returnType": "ServiceScope",
+        "returnDescr": null,
+        "params": []
+      },
+      "provide": {
+        "accessModifier": "public",
+        "signature": "provide < T >(serviceKey: ServiceKey<T>, service: T): T",
+        "descr": "ServiceScope.provide() is used to register an implemententation of the given serviceKey \nfor the current scope. It may only be used when the ServiceScope is in an \"unfinished\" \nstate, i.e. before finish() has been called.",
+        "genericType": "T",
+        "returnType": "T",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "serviceKey",
+            "dataType": "ServiceKey<T>",
+            "descr": ""
+          },
+          {
+            "name": "service",
+            "dataType": "T",
+            "descr": ""
+          }
+        ]
+      },
+      "startNewChild": {
+        "accessModifier": "public",
+        "signature": "startNewChild(): ServiceScope",
+        "descr": "Constructs a new ServiceScope that is a child of the current scope. For any keys \nthat are not explicitly provided by the child scope, the parent hierarchy will be \nconsulted.",
+        "genericType": null,
+        "returnType": "ServiceScope",
+        "returnDescr": null,
+        "params": []
+      },
+      "static": {
+        "accessModifier": "public",
+        "signature": "static startNewRoot(): ServiceScope",
+        "descr": "Create a new root-level ServiceScope. Only root-level scopes have the ability to autocreate \ndefault implementations of ServiceKeys.",
+        "genericType": null,
+        "returnType": "ServiceScope",
+        "returnDescr": null,
+        "params": []
+      },
+      "whenFinished": {
+        "accessModifier": "public",
+        "signature": "whenFinished(callback: () => void): void",
+        "descr": "It is an error to call ServiceScope.consume() before finish() has been called. \nThe most reliable way to protect your component against this error is to perform the \nconsume() calls inside a whenFinished() callback. If the service scope is already \nfinished, then the callback will be executed immediately; otherwise, it will be executed \nlater when the scope is finished.",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "callback",
+            "dataType": "(",
+            "descr": ""
+          }
+        ]
+      }
+    }
+  },
+  "SPPermission": {
+    "implementsName": null,
+    "genericType": null,
+    "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx",
+    "properties": {
+      "static": {
+        "dataType": "SPPermission",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " SPPermission",
+        "isCollection": false,
+        "descr": "Has no permissions on the Web site. Not available through the user interface."
+      }
+    },
+    "methods": {
+      "constructor": {
+        "accessModifier": "public",
+        "signature": "constructor(value: IODataBasePermission)",
+        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx",
+        "genericType": null,
+        "returnType": "SPPermission",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "value",
+            "dataType": "IODataBasePermission",
+            "descr": ""
+          }
+        ]
+      }
+    }
+  },
+  "SPSite": {
+    "implementsName": null,
+    "genericType": null,
+    "descr": "This class is primarily used with the PageContext class. It provides contextual \ninformation for the SharePoint site collection (\"site\") that hosts the page. \n",
+    "properties": {
+      "id": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " string",
+        "isCollection": false,
+        "descr": "The GUID that identifies the SPSite on the server."
+      }
+    },
+    "methods": {}
+  },
+  "SPUser": {
+    "implementsName": null,
+    "genericType": null,
+    "descr": "This class is primarily used with the PageContext class. It provides contextual information \nfor the SharePoint user that is accessing the page. \n",
+    "properties": {
+      "displayName": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " string",
+        "isCollection": false,
+        "descr": "The display name for the current user. \nExample: \"John Doe\""
+      },
+      "loginName": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " string",
+        "isCollection": false,
+        "descr": "The login name for specified user. \nExample: \"example@microsoft.com\""
+      }
+    },
+    "methods": {}
+  },
+  "SPWeb": {
+    "implementsName": null,
+    "genericType": null,
+    "descr": "This class is primarily used with the PageContext class. It provides contextual \ninformation for the SharePoint site (\"web\") that hosts the page.",
+    "properties": {
+      "absoluteUrl": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " string",
+        "isCollection": false,
+        "descr": "Returns the absolute URL for this SPWeb. \nExample: \"https://example.com/sites/PubSite/SubWeb\""
+      },
+      "id": {
+        "dataType": "Guid",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " Guid",
+        "isCollection": false,
+        "descr": "The GUID that identifies the SPWeb on the server or undefined if the Guid string \nvalue is invalid."
+      },
+      "serverRelativeUrl": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " string",
+        "isCollection": false,
+        "descr": "Returns the server-relative URL for this SPWeb. \nExample: \"/sites/PubSite/SubWeb\""
+      },
+      "title": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " string",
+        "isCollection": false,
+        "descr": "Returns the title of the SharePoint site."
+      }
+    },
+    "methods": {}
+  },
+  "UrlQueryParameterCollection": {
+    "implementsName": null,
+    "genericType": null,
+    "descr": "Class for storing and retrieving query parameters. \nThe URL can be server-relative and it will parse empty/null strings. \nThe query parameters must start with ? to indicate the first query parameter and \nuse & for all subsequent parameters. The class also supports fragments. \nEdge cases behavior: \nEmpty value (www.example.com/?test=) stores key and empty value \nNo equals in queryParam (www.example.com/?test) stores key and undefined value \nEmpty queryParam (www.example.com/?&debug=on) stores undefined key and value \nQuery param with only equals (www.example.com/?=&debug=on stores empty string key and value",
+    "properties": {},
+    "methods": {
+      "constructor": {
+        "accessModifier": "public",
+        "signature": "constructor(url: string)",
+        "descr": "Class for storing and retrieving query parameters. \nThe URL can be server-relative and it will parse empty/null strings. \nThe query parameters must start with ? to indicate the first query parameter and \nuse & for all subsequent parameters. The class also supports fragments. \nEdge cases behavior: \nEmpty value (www.example.com/?test=) stores key and empty value \nNo equals in queryParam (www.example.com/?test) stores key and undefined value \nEmpty queryParam (www.example.com/?&debug=on) stores undefined key and value \nQuery param with only equals (www.example.com/?=&debug=on stores empty string key and value",
+        "genericType": null,
+        "returnType": "UrlQueryParameterCollection",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "url",
+            "dataType": "string",
+            "descr": ""
+          }
+        ]
+      },
+      "getValue": {
+        "accessModifier": "public",
+        "signature": "getValue(param: string): string",
+        "descr": "Returns the value of the first matching query parameter or undefined if the key doesn't exist. \nExamples: this._queryParameterList = [ \n{key: TEST, value: done}, \n{key: DEBUG, value: false}, \n{key: TEST, value: notdone}] \ngetValue('TEST') ---> 'done' \ngetValue('debug') ---> 'false' \ngetValue('lost') ---> undefined",
+        "genericType": null,
+        "returnType": "string",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "param",
+            "dataType": "string",
+            "descr": ""
+          }
+        ]
+      },
+      "getValues": {
+        "accessModifier": "public",
+        "signature": "getValues(param: string): string[]",
+        "descr": "Returns the values of all of the matching query parameters or undefined if the key doesn't exist. \nExamples: this._queryParameterList = [ \n{key: TEST, value: done}, \n{key: DEBUG, value: false}, \n{key: TEST, value: notdone}] \ngetValues('TEST') ---> ['done', 'notdone'] \ngetValues('debug') ---> ['false'] \ngetValues('lost') ---> undefined",
+        "genericType": null,
+        "returnType": "string[]",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "param",
+            "dataType": "string",
+            "descr": ""
+          }
+        ]
+      }
+    }
+  },
+  "UrlUtilities": {
+    "implementsName": null,
+    "genericType": null,
+    "descr": "Common helper functions for working with URLs. These utilities are intended to be simple, \nsmall, and extremely common. Do not add advanced parsing logic to this file.",
+    "properties": {},
+    "methods": {
+      "static": {
+        "accessModifier": "public",
+        "signature": "static removeEndSlash(url: string): string",
+        "descr": "Removes any slash characters from the end of the URL. \nThis function assumes that the input is already a valid absolute or server-relative URL. \nExamples: \nremoveEndSlash('http://example.com/') ---> 'http://example.com' \nremoveEndSlash('/example') ---> '/example' \nremoveEndSlash('/') ---> ''",
+        "genericType": null,
+        "returnType": "string",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "url",
+            "dataType": "string",
+            "descr": ""
+          }
+        ]
+      }
+    }
+  },
+  "Validate": {
+    "implementsName": null,
+    "genericType": null,
+    "descr": "This class implements provides a standard way to validate properties and function parameters. \nUnlike an assertion, the Validate checks are always performed and will always throw an error, \neven in a production release. As such, be careful not to overuse these checks in a way \nthat might impact performance.",
+    "properties": {},
+    "methods": {
+      "static": {
+        "accessModifier": "public",
+        "signature": "static isTrue(value: boolean, variableName: string): void",
+        "descr": "Throws an exception if the specified value is not true.",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "value",
+            "dataType": "boolean",
+            "descr": ""
+          },
+          {
+            "name": "variableName",
+            "dataType": "string",
+            "descr": ""
+          }
+        ]
+      }
+    }
+  }
+}

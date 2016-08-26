@@ -8,6 +8,7 @@ const SKIP = ['///', '']
 const C_START = '/**'
 const COMMENT = '*'
 const C_END = '*/'
+const COMMENT_ALL = ['*', '//', '/**']
 const BLOCK_BEGIN = '{'
 const BLOCK_END = '}'
 const IGNORES = ['@todo:']
@@ -100,20 +101,27 @@ function comment_reset() {
  */
 function processLines(element = '', index = 0, lines = []) {
 
+
+
 	if (ignore_lines.includes(index)) {
 		return
 	}
-
   let line = element.replace(/\s+/g,' ').trim().replace(';','')
+
+	if (line.includes(BLOCK_BEGIN) && line.includes(BLOCK_END)) {
+		return
+	}
 
   let firstWord = line.split(' ',1)[0]
   let secondWord = line.split(' ',2)[1]
 	let lastWord = line.split(':').pop()
-	if (line.includes(BLOCK_BEGIN)) {
-		iBlock++;
-	}
-	if (line.includes(BLOCK_END)) {
-		iBlock--;
+	if (!COMMENT_ALL.includes(firstWord)) {
+		if (line.includes(BLOCK_BEGIN)) {
+			iBlock++;
+		}
+		if (line.includes(BLOCK_END)) {
+			iBlock--;
+		}
 	}
 
   if (SKIP.includes(firstWord)) {
@@ -298,7 +306,6 @@ function processLines(element = '', index = 0, lines = []) {
 					var name = line.split(':')[0]
 					p[name] = {}
 					p[name]['descr'] = generalDesc
-					console.log(`${line}, ${index}`);
 					p[name]['isOptional'] = (secondWord.includes('?')) ? true : false
 					p[name]['type'] = lastWord.replace('[]', '')
 					p[name]['isCollection'] = (secondWord.includes('[]')) ? true : false
@@ -326,7 +333,6 @@ function processLines(element = '', index = 0, lines = []) {
 					iBlock--
 				}
 				else {
-
 					var name  = secondWord.replace(':', '')
 					var p = Utils.processProperty(line, generalDesc)
 					classObj[className]['properties'][name] = p
@@ -358,15 +364,10 @@ function processFile(fileName) {
 	console.log(`** Processing ${fileName}`)
 
   let lines = FileOps.loadFile(`./input/${fileName}`)
-	console.log(`*** Read input file, ${lines.length} lines`)
-  lines.forEach(processLines);
-	console.log(`*** Writing ENUM file ${enumObj}`)
+	lines.forEach(processLines);
   FileOps.writeObject(enumObj, `./json/${fileName}_enum.json`)
-	console.log(`*** Writing FUNCTION file ${enumObj}`)
   FileOps.writeObject(functionObj, `./json/${fileName}_function.json`)
-	console.log(`*** Writing INTERFACE file ${enumObj}`)
   FileOps.writeObject(iObj, `./json/${fileName}_interface.json`)
-	console.log(`*** Writing CLASS file ${enumObj}`)
   FileOps.writeObject(classObj, `./json/${fileName}_class.json`)
 
   console.log(`interface = ${nInterface}, class = ${nClass}, function = ${nFunction}, enum = ${nEnum}`);

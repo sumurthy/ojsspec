@@ -1,0 +1,113 @@
+{
+  "RequestInit": {
+    "extendsName": null,
+    "descr": "",
+    "properties": {
+      "method?:": {
+        "method?": {
+          "descr": "",
+          "isOptional": false,
+          "type": " string",
+          "isCollection": false
+        }
+      },
+      "body?:": {
+        "body?": {
+          "descr": "",
+          "isOptional": false,
+          "type": " BodyInit",
+          "isCollection": false
+        }
+      },
+      "mode?:": {
+        "mode?": {
+          "descr": "",
+          "isOptional": false,
+          "type": " string|RequestMode",
+          "isCollection": false
+        }
+      },
+      "credentials?:": {
+        "credentials?": {
+          "descr": "",
+          "isOptional": false,
+          "type": " string|RequestCredentials",
+          "isCollection": false
+        }
+      },
+      "cache?:": {
+        "cache?": {
+          "descr": "",
+          "isOptional": false,
+          "type": " string|RequestCache",
+          "isCollection": false
+        }
+      }
+    },
+    "functions": {},
+    "objects": [],
+    "methods": []
+  },
+  "ResponseInit": {
+    "extendsName": null,
+    "descr": "",
+    "properties": {
+      "status:": {
+        "status": {
+          "descr": "",
+          "isOptional": false,
+          "type": " number",
+          "isCollection": false
+        }
+      },
+      "statusText?:": {
+        "statusText?": {
+          "descr": "",
+          "isOptional": false,
+          "type": " string",
+          "isCollection": false
+        }
+      },
+      "headers?:": {
+        "headers?": {
+          "descr": "",
+          "isOptional": false,
+          "type": " HeaderInit",
+          "isCollection": false
+        }
+      }
+    },
+    "functions": {},
+    "objects": [],
+    "methods": []
+  },
+  "Window": {
+    "extendsName": null,
+    "descr": "",
+    "properties": {},
+    "functions": {},
+    "objects": [],
+    "methods": [
+      {
+        "fetch": {
+          "descr": "",
+          "genericType": null,
+          "returnType": " Promise<Response>",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "url",
+              "dataType": "string|Request",
+              "descr": ""
+            },
+            {
+              "name": "init?",
+              "dataType": "RequestInit",
+              "descr": ""
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

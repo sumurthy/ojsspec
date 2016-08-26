@@ -94,7 +94,6 @@ var self = module.exports = {
 			if (line.includes(BLOCK_END)) {
 				return o
 			}
-
 		}
     return o
   },
@@ -121,7 +120,7 @@ var self = module.exports = {
         m['returnType'] = parentName
     }
     else {
-        m['returnType'] = lastWord
+        m['returnType'] = lastWord.trim()
     }
     m['returnDescr'] = (commentObject['returnDescr'] === undefined) ?
       null : commentObject['returnDescr']
@@ -134,7 +133,7 @@ var self = module.exports = {
     var secondWord = line.split(' ',2)[1]
     var lastWord = line.split(':').pop()
 
-    p['dataType'] = lastWord
+    p['dataType'] = lastWord.trim()
     p['accessModifier'] = firstWord
     p['isOptional'] = (secondWord.includes('?')) ? true : false
     p['type'] = lastWord.replace('[]', '')
