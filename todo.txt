@@ -18,3 +18,11 @@
     IButtonProps | ILinkProps | any;
     (Do this outside as a first step of file processing)
 6. properties/methods/functions: [{},{},{}] or {{}, {}, {}} ?
+7. extends beyond 1 line
+*/
+interface IClientSideWebPartManifestInstance<TProperties> extends
+ IClientSideComponentManifest,
+ IClientSideWebPartManifestSharedProperties,
+ IClientSideWebPartManifestEntry<TProperties> {
+ /**
+8. Property has {}

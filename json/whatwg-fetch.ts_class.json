@@ -1,0 +1,326 @@
+{
+  "Request": {
+    "implementsName": null,
+    "genericType": null,
+    "descr": "",
+    "properties": {
+      "string": {
+        "dataType": "string",
+        "accessModifier": "referrer:",
+        "isOptional": false,
+        "type": " string",
+        "isCollection": false,
+        "descr": ""
+      },
+      "Headers": {
+        "dataType": "Headers",
+        "accessModifier": "headers:",
+        "isOptional": false,
+        "type": " Headers",
+        "isCollection": false,
+        "descr": ""
+      },
+      "string|RequestContext": {
+        "dataType": "string|RequestContext",
+        "accessModifier": "context:",
+        "isOptional": false,
+        "type": " string|RequestContext",
+        "isCollection": false,
+        "descr": ""
+      },
+      "string|RequestMode": {
+        "dataType": "string|RequestMode",
+        "accessModifier": "mode:",
+        "isOptional": false,
+        "type": " string|RequestMode",
+        "isCollection": false,
+        "descr": ""
+      },
+      "string|RequestCredentials": {
+        "dataType": "string|RequestCredentials",
+        "accessModifier": "credentials:",
+        "isOptional": false,
+        "type": " string|RequestCredentials",
+        "isCollection": false,
+        "descr": ""
+      },
+      "string|RequestCache": {
+        "dataType": "string|RequestCache",
+        "accessModifier": "cache:",
+        "isOptional": false,
+        "type": " string|RequestCache",
+        "isCollection": false,
+        "descr": ""
+      }
+    },
+    "methods": {
+      "constructor": {
+        "accessModifier": "public",
+        "signature": "constructor(input: string|Request, init?:RequestInit)",
+        "descr": "",
+        "genericType": null,
+        "returnType": "Request",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "input",
+            "dataType": "string|Request",
+            "descr": ""
+          },
+          {
+            "name": "init?",
+            "dataType": "RequestInit",
+            "descr": ""
+          }
+        ]
+      }
+    }
+  },
+  "Headers": {
+    "implementsName": null,
+    "genericType": null,
+    "descr": "",
+    "properties": {},
+    "methods": {
+      "string,": {
+        "accessModifier": "set(name:",
+        "signature": "string, value: string): void",
+        "descr": "",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "name",
+            "dataType": "string",
+            "descr": ""
+          },
+          {
+            "name": "value",
+            "dataType": "string",
+            "descr": ""
+          }
+        ]
+      },
+      "string):void": {
+        "accessModifier": "delete(name:",
+        "signature": "string):void",
+        "descr": "",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "name",
+            "dataType": "string",
+            "descr": ""
+          }
+        ]
+      },
+      "string):": {
+        "accessModifier": "has(name:",
+        "signature": "string): boolean",
+        "descr": "",
+        "genericType": null,
+        "returnType": "boolean",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "name",
+            "dataType": "string",
+            "descr": ""
+          }
+        ]
+      },
+      "": {
+        "accessModifier": "forEach(callback:",
+        "signature": "(value: string, name: string) => void): void",
+        "descr": "",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "callback",
+            "dataType": "(value",
+            "descr": ""
+          },
+          {
+            "name": "name",
+            "dataType": "string",
+            "descr": ""
+          }
+        ]
+      }
+    }
+  },
+  "Body": {
+    "implementsName": null,
+    "genericType": null,
+    "descr": "",
+    "properties": {
+      "boolean": {
+        "dataType": "boolean",
+        "accessModifier": "bodyUsed:",
+        "isOptional": false,
+        "type": " boolean",
+        "isCollection": false,
+        "descr": ""
+      }
+    },
+    "methods": {
+      "Promise<ArrayBuffer>": {
+        "accessModifier": "arrayBuffer():",
+        "signature": "Promise<ArrayBuffer>",
+        "descr": "",
+        "genericType": null,
+        "returnType": "Promise<ArrayBuffer>",
+        "returnDescr": null,
+        "params": []
+      },
+      "Promise<Blob>": {
+        "accessModifier": "blob():",
+        "signature": "Promise<Blob>",
+        "descr": "",
+        "genericType": null,
+        "returnType": "Promise<Blob>",
+        "returnDescr": null,
+        "params": []
+      },
+      "Promise<FormData>": {
+        "accessModifier": "formData():",
+        "signature": "Promise<FormData>",
+        "descr": "",
+        "genericType": null,
+        "returnType": "Promise<FormData>",
+        "returnDescr": null,
+        "params": []
+      },
+      "Promise<any>": {
+        "accessModifier": "json():",
+        "signature": "Promise<any>",
+        "descr": "",
+        "genericType": null,
+        "returnType": "Promise<any>",
+        "returnDescr": null,
+        "params": []
+      },
+      "Promise<T>": {
+        "accessModifier": "json<T>():",
+        "signature": "Promise<T>",
+        "descr": "",
+        "genericType": "T",
+        "returnType": "Promise<T>",
+        "returnDescr": null,
+        "params": []
+      },
+      "Promise<string>": {
+        "accessModifier": "text():",
+        "signature": "Promise<string>",
+        "descr": "",
+        "genericType": null,
+        "returnType": "Promise<string>",
+        "returnDescr": null,
+        "params": []
+      }
+    }
+  },
+  "Response": {
+    "implementsName": null,
+    "genericType": null,
+    "descr": "",
+    "properties": {
+      "string|ResponseType": {
+        "dataType": "string|ResponseType",
+        "accessModifier": "type:",
+        "isOptional": false,
+        "type": " string|ResponseType",
+        "isCollection": false,
+        "descr": ""
+      },
+      "string": {
+        "dataType": "string",
+        "accessModifier": "statusText:",
+        "isOptional": false,
+        "type": " string",
+        "isCollection": false,
+        "descr": ""
+      },
+      "number": {
+        "dataType": "number",
+        "accessModifier": "status:",
+        "isOptional": false,
+        "type": " number",
+        "isCollection": false,
+        "descr": ""
+      },
+      "boolean": {
+        "dataType": "boolean",
+        "accessModifier": "ok:",
+        "isOptional": false,
+        "type": " boolean",
+        "isCollection": false,
+        "descr": ""
+      },
+      "Headers": {
+        "dataType": "Headers",
+        "accessModifier": "headers:",
+        "isOptional": false,
+        "type": " Headers",
+        "isCollection": false,
+        "descr": ""
+      }
+    },
+    "methods": {
+      "constructor": {
+        "accessModifier": "public",
+        "signature": "constructor(body?: BodyInit, init?: ResponseInit)",
+        "descr": "",
+        "genericType": null,
+        "returnType": "Response",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "body?",
+            "dataType": "BodyInit",
+            "descr": ""
+          },
+          {
+            "name": "init?",
+            "dataType": "ResponseInit",
+            "descr": ""
+          }
+        ]
+      },
+      "Response": {
+        "accessModifier": "clone():",
+        "signature": "Response",
+        "descr": "",
+        "genericType": null,
+        "returnType": "Response",
+        "returnDescr": null,
+        "params": []
+      },
+      "string,": {
+        "accessModifier": "redirect(url:",
+        "signature": "string, status: number): Response",
+        "descr": "",
+        "genericType": null,
+        "returnType": "Response",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "url",
+            "dataType": "string",
+            "descr": ""
+          },
+          {
+            "name": "status",
+            "dataType": "number",
+            "descr": ""
+          }
+        ]
+      }
+    }
+  }
+}

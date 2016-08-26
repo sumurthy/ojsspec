@@ -1,0 +1,158 @@
+{
+  "IPropertyPaneFieldType": {
+    "descr": "",
+    "values": [
+      [
+        "Button",
+        "11",
+        ""
+      ],
+      [
+        "CheckBox",
+        "2",
+        ""
+      ],
+      [
+        "ChoiceGroup",
+        "10",
+        ""
+      ],
+      [
+        "Custom",
+        "1",
+        ""
+      ],
+      [
+        "Dropdown",
+        "6",
+        ""
+      ],
+      [
+        "Heading",
+        "9",
+        ""
+      ],
+      [
+        "HorizontalRule",
+        "12",
+        ""
+      ],
+      [
+        "// (undocumented)",
+        ""
+      ],
+      [
+        "Label",
+        "7",
+        ""
+      ],
+      [
+        "// (undocumented)",
+        ""
+      ],
+      [
+        "Link",
+        "13",
+        ""
+      ],
+      [
+        "Slider",
+        "8",
+        ""
+      ],
+      [
+        "TextField",
+        "3",
+        ""
+      ],
+      [
+        "Toggle",
+        "5",
+        ""
+      ]
+    ]
+  },
+  "PropertyPaneButtonType": {
+    "descr": "Helper method to create a Button on the PropertyPane.",
+    "values": [
+      [
+        "Command",
+        ""
+      ],
+      [
+        "Compound",
+        ""
+      ],
+      [
+        "// (undocumented)",
+        ""
+      ],
+      [
+        "Hero",
+        ""
+      ],
+      [
+        "Icon",
+        ""
+      ],
+      [
+        "Normal",
+        ""
+      ],
+      [
+        "Primary",
+        ""
+      ]
+    ]
+  },
+  "WebPartConfigurationEvent": {
+    "descr": "Helper method to create a Toggle on the PropertyPane.",
+    "values": [
+      [
+        "// (undocumented)",
+        ""
+      ],
+      [
+        "ApplyClicked",
+        "4",
+        ""
+      ],
+      [
+        "// (undocumented)",
+        ""
+      ],
+      [
+        "CloseComplete",
+        "3",
+        ""
+      ],
+      [
+        "// (undocumented)",
+        ""
+      ],
+      [
+        "ConfigurationComplete",
+        "1",
+        ""
+      ],
+      [
+        "// (undocumented)",
+        ""
+      ],
+      [
+        "LostFocus",
+        "5",
+        ""
+      ],
+      [
+        "// (undocumented)",
+        ""
+      ],
+      [
+        "OpenComplete",
+        "2",
+        ""
+      ]
+    ]
+  }
+}

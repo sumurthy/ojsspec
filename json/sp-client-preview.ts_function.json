@@ -1,0 +1,105 @@
+{
+  "combineURLPaths": {
+    "descr": "Combines any number of URL paths.",
+    "signature": "combineURLPaths(...url: string[]): string",
+    "returnType": "string",
+    "returnDescr": null,
+    "params": [
+      {
+        "name": "...url",
+        "dataType": "string[]",
+        "descr": ""
+      }
+    ]
+  },
+  "getPathNameFromAbsoluteUrl": {
+    "descr": "Get's the path name from an absolute url. \n",
+    "signature": "getPathNameFromAbsoluteUrl(url: string): string",
+    "returnType": "string",
+    "returnDescr": null,
+    "params": [
+      {
+        "name": "url",
+        "dataType": "string",
+        "descr": ""
+      }
+    ]
+  },
+  "PropertyPaneButton": {
+    "descr": "Helper method to create a Button on the PropertyPane.",
+    "signature": "PropertyPaneButton(targetProperty: string,",
+    "returnType": "string,",
+    "returnDescr": null,
+    "params": []
+  },
+  "PropertyPaneCheckbox": {
+    "descr": "Helper method to create a Checkbox on the PropertyPane.",
+    "signature": "PropertyPaneCheckbox(targetProperty: string,",
+    "returnType": "string,",
+    "returnDescr": null,
+    "params": []
+  },
+  "PropertyPaneChoiceGroup": {
+    "descr": "Helper method to create a Choice Group on the PropertyPane.",
+    "signature": "PropertyPaneChoiceGroup(targetProperty: string,",
+    "returnType": "string,",
+    "returnDescr": null,
+    "params": []
+  },
+  "PropertyPaneCustomField": {
+    "descr": "Helper method to create a Choice Group on the PropertyPane.",
+    "signature": "PropertyPaneCustomField(targetProperty: string,",
+    "returnType": "string,",
+    "returnDescr": null,
+    "params": []
+  },
+  "PropertyPaneDropdown": {
+    "descr": "Helper method to create a Dropdown on the PropertyPane.",
+    "signature": "PropertyPaneDropdown(targetProperty: string,",
+    "returnType": "string,",
+    "returnDescr": null,
+    "params": []
+  },
+  "PropertyPaneHorizontalRule": {
+    "descr": "Helper method to create a Horizontal Rule on the PropertyPane.",
+    "signature": "PropertyPaneHorizontalRule(): IPropertyPaneField<void>",
+    "returnType": "IPropertyPaneField<void>",
+    "returnDescr": null,
+    "params": []
+  },
+  "PropertyPaneLabel": {
+    "descr": "Helper method to create a Label on the PropertyPane.",
+    "signature": "PropertyPaneLabel(targetProperty: string,",
+    "returnType": "string,",
+    "returnDescr": null,
+    "params": []
+  },
+  "PropertyPaneLink": {
+    "descr": "Helper method to create a Link on the PropertyPane.",
+    "signature": "PropertyPaneLink(targetProperty: string,",
+    "returnType": "string,",
+    "returnDescr": null,
+    "params": []
+  },
+  "PropertyPaneSlider": {
+    "descr": "Helper method to create a Slider on the PropertyPane.",
+    "signature": "PropertyPaneSlider(targetProperty: string,",
+    "returnType": "string,",
+    "returnDescr": null,
+    "params": []
+  },
+  "PropertyPaneTextField": {
+    "descr": "Helper method to create a TextField on the PropertyPane.",
+    "signature": "PropertyPaneTextField(targetProperty: string,",
+    "returnType": "string,",
+    "returnDescr": null,
+    "params": []
+  },
+  "PropertyPaneToggle": {
+    "descr": "Helper method to create a Toggle on the PropertyPane.",
+    "signature": "PropertyPaneToggle(targetProperty: string,",
+    "returnType": "string,",
+    "returnDescr": null,
+    "params": []
+  }
+}

@@ -44,14 +44,18 @@ function file_reset() {
 	skipFlag = false
 }
 function getLinkForType(type='') {
-	console.log(type + ' ----------')
 	if ((Object.keys(iObj).includes(type)) || (Object.keys(classObj).includes(type))) {
+		console.log('match input: ' + type)
+
 		return `[${type}](${type}.md)`
 	}
 	else {
+		console.log('no match input: ' + type)
+
 		return type
 	}
 }
+
 
 function set_region_member(tline = '', member={}) {
 	skipFlag = false
@@ -72,7 +76,8 @@ function set_region_member(tline = '', member={}) {
 	return
 }
 
-function set_region(tline = '') {
+function set_region(tline = '', obj={}) {
+
 	skipFlag = false
 	if (tline.includes('</')) {
 		region = 'none'
@@ -82,6 +87,17 @@ function set_region(tline = '') {
 		switch (region) {
 			case 'class':
 				if (Object.keys(classObj).length === 0) {
+					skipFlag = true
+				}
+				break;
+			case 'property':
+				if (Object.keys(obj[className]['properties']).length === 0) {
+					skipFlag = true
+				}
+				break;
+			case 'method':
+				console.log(JSON.stringify(obj[className]['methods']))
+				if (Object.keys(obj[className]['methods']).length === 0) {
 					skipFlag = true
 				}
 				break;
@@ -218,13 +234,17 @@ function addMembers(tline='', type='', name='') {
 	}
 
 	Object.keys(o).forEach((e) => {
+
 			var mline = dclone(tline).substr(1)
 			mline = mline.replace('%name%', e)
 			mline = mline.replace('%access%', `${o[e]['accessModifier']}`)
 			if (type === 'method') {
+				console.log('calling link for method: ' + o[e]['returnType'] + ' ' + e);
 				mline = mline.replace('%type%', `${getLinkForType(o[e]['returnType'])}`)
 			}
 			else {
+				console.log('calling link for property: ' + o[e]['dataType'] + ' ' + e);
+
 				mline = mline.replace('%type%', `${getLinkForType(o[e]['dataType'])}`)
 			}
 
@@ -277,7 +297,7 @@ function genClassView(){
 			var key2 = tline.substring(0,2)
 
 			if (NEW_REGION.includes(key)) {
-				set_region(tline)
+				set_region(tline, classObj)
 				return
 			}
 
@@ -384,7 +404,7 @@ function genModuleView(){
 			}
 		})
 		console.log(`*** Writing Module file for ${moduleName}`)
-		FileOps.writeFile(mdout, `./markdown/${moduleName}_module.md`)
+		FileOps.writeFile(mdout, `./markdown/${moduleName}-module.md`)
 }
 
 console.log('** Starting Program...')
@@ -393,7 +413,7 @@ SetUp.cleanupOutput('./markdown')
 try {
 	moduleT = FileOps.loadFile('./config/module.md')
 	classInterfaceT = FileOps.loadFile('./config/class.md')
-	methodfuncT = FileOps.loadFile('./config/method_function.md')
+	methodfuncT = FileOps.loadFile('./config/method-function.md')
 } catch (e) {
 	console.log(`Error Loading config files.`)
 	throw e
@@ -403,7 +423,6 @@ try {
 
 let inputFiles = FileOps.walkFiles('./input', '.ts')
 inputFiles.forEach((e) => {
-	console.log(`\n*> Processing master: ${e}`);
 	let files = FileOps.walkFiles('./json', e)
 	loadModule(files)
 
