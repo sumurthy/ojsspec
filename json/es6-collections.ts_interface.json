@@ -1,0 +1,701 @@
+{
+  "IteratorResult<T>": {
+    "extendsName": null,
+    "descr": "",
+    "properties": {
+      "done:": {
+        "done": {
+          "descr": "",
+          "isOptional": false,
+          "type": " boolean",
+          "isCollection": false
+        }
+      },
+      "value?:": {
+        "value?": {
+          "descr": "",
+          "isOptional": false,
+          "type": " T",
+          "isCollection": false
+        }
+      }
+    },
+    "functions": {},
+    "objects": [],
+    "methods": []
+  },
+  "Iterator<T>": {
+    "extendsName": null,
+    "descr": "",
+    "properties": {},
+    "functions": {},
+    "objects": [],
+    "methods": [
+      {
+        "next": {
+          "descr": "",
+          "genericType": null,
+          "returnType": " IteratorResult<T>",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "value?",
+              "dataType": "any",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "return?": {
+          "descr": "",
+          "genericType": null,
+          "returnType": " IteratorResult<T>",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "value?",
+              "dataType": "any",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "throw?": {
+          "descr": "",
+          "genericType": null,
+          "returnType": " IteratorResult<T>",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "e?",
+              "dataType": "any",
+              "descr": ""
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "ForEachable<T>": {
+    "extendsName": null,
+    "descr": "",
+    "properties": {},
+    "functions": {
+      "forEach(callbackfn:": {
+        "forEach(callbackfn:": {
+          "descr": "",
+          "isOptional": false,
+          "returnType": "void): void",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "callbackfn",
+              "dataType": "(value",
+              "descr": ""
+            }
+          ]
+        }
+      }
+    },
+    "objects": [],
+    "methods": []
+  },
+  "Map<K,": {
+    "extendsName": null,
+    "descr": "",
+    "properties": {
+      "size:": {
+        "size": {
+          "descr": "",
+          "isOptional": false,
+          "type": " number",
+          "isCollection": false
+        }
+      }
+    },
+    "functions": {
+      "forEach(callbackfn:": {
+        "forEach(callbackfn:": {
+          "descr": "",
+          "isOptional": false,
+          "returnType": "void, thisArg?: any): void",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "callbackfn",
+              "dataType": "(value",
+              "descr": ""
+            },
+            {
+              "name": "index",
+              "dataType": "K",
+              "descr": ""
+            },
+            {
+              "name": "map",
+              "dataType": "Map<K",
+              "descr": ""
+            },
+            {
+              "name": "V>",
+              "descr": ""
+            }
+          ]
+        }
+      }
+    },
+    "objects": [],
+    "methods": [
+      {
+        "clear": {
+          "descr": "",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": []
+        }
+      },
+      {
+        "delete": {
+          "descr": "",
+          "genericType": null,
+          "returnType": " boolean",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "key",
+              "dataType": "K",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "get": {
+          "descr": "",
+          "genericType": null,
+          "returnType": " V",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "key",
+              "dataType": "K",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "has": {
+          "descr": "",
+          "genericType": null,
+          "returnType": " boolean",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "key",
+              "dataType": "K",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "set": {
+          "descr": "",
+          "genericType": null,
+          "returnType": " Map<K, V>",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "key",
+              "dataType": "K",
+              "descr": ""
+            },
+            {
+              "name": "value?",
+              "dataType": "V",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "entries": {
+          "descr": "",
+          "genericType": null,
+          "returnType": " Iterator<[K, V]>",
+          "returnDescr": null,
+          "params": []
+        }
+      },
+      {
+        "keys": {
+          "descr": "",
+          "genericType": null,
+          "returnType": " Iterator<K>",
+          "returnDescr": null,
+          "params": []
+        }
+      },
+      {
+        "values": {
+          "descr": "",
+          "genericType": null,
+          "returnType": " Iterator<V>",
+          "returnDescr": null,
+          "params": []
+        }
+      }
+    ]
+  },
+  "MapConstructor": {
+    "extendsName": null,
+    "descr": "",
+    "properties": {
+      "prototype:": {
+        "prototype": {
+          "descr": "",
+          "isOptional": false,
+          "type": " Map<any, any>",
+          "isCollection": false
+        }
+      }
+    },
+    "functions": {},
+    "objects": [],
+    "methods": [
+      {
+        "new": {
+          "descr": "",
+          "genericType": "K, V",
+          "returnType": " Map<K, V>",
+          "returnDescr": null,
+          "params": []
+        }
+      },
+      {
+        "new": {
+          "descr": "",
+          "genericType": "K, V",
+          "returnType": " Map<K, V>",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "iterable",
+              "dataType": "ForEachable<[K",
+              "descr": ""
+            },
+            {
+              "name": "V]>",
+              "descr": ""
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "Set<T>": {
+    "extendsName": null,
+    "descr": "",
+    "properties": {
+      "size:": {
+        "size": {
+          "descr": "",
+          "isOptional": false,
+          "type": " number",
+          "isCollection": false
+        }
+      }
+    },
+    "functions": {
+      "forEach(callbackfn:": {
+        "forEach(callbackfn:": {
+          "descr": "",
+          "isOptional": false,
+          "returnType": "void, thisArg?: any): void",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "callbackfn",
+              "dataType": "(value",
+              "descr": ""
+            },
+            {
+              "name": "index",
+              "dataType": "T",
+              "descr": ""
+            },
+            {
+              "name": "set",
+              "dataType": "Set<T>",
+              "descr": ""
+            }
+          ]
+        }
+      }
+    },
+    "objects": [],
+    "methods": [
+      {
+        "add": {
+          "descr": "",
+          "genericType": null,
+          "returnType": " Set<T>",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "value",
+              "dataType": "T",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "clear": {
+          "descr": "",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": []
+        }
+      },
+      {
+        "delete": {
+          "descr": "",
+          "genericType": null,
+          "returnType": " boolean",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "value",
+              "dataType": "T",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "has": {
+          "descr": "",
+          "genericType": null,
+          "returnType": " boolean",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "value",
+              "dataType": "T",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "entries": {
+          "descr": "",
+          "genericType": null,
+          "returnType": " Iterator<[T, T]>",
+          "returnDescr": null,
+          "params": []
+        }
+      },
+      {
+        "keys": {
+          "descr": "",
+          "genericType": null,
+          "returnType": " Iterator<T>",
+          "returnDescr": null,
+          "params": []
+        }
+      },
+      {
+        "values": {
+          "descr": "",
+          "genericType": null,
+          "returnType": " Iterator<T>",
+          "returnDescr": null,
+          "params": []
+        }
+      }
+    ]
+  },
+  "SetConstructor": {
+    "extendsName": null,
+    "descr": "",
+    "properties": {
+      "prototype:": {
+        "prototype": {
+          "descr": "",
+          "isOptional": false,
+          "type": " Set<any>",
+          "isCollection": false
+        }
+      }
+    },
+    "functions": {},
+    "objects": [],
+    "methods": [
+      {
+        "new": {
+          "descr": "",
+          "genericType": "T",
+          "returnType": " Set<T>",
+          "returnDescr": null,
+          "params": []
+        }
+      },
+      {
+        "new": {
+          "descr": "",
+          "genericType": "T",
+          "returnType": " Set<T>",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "iterable",
+              "dataType": "ForEachable<T>",
+              "descr": ""
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "WeakMap<K,": {
+    "extendsName": null,
+    "descr": "",
+    "properties": {},
+    "functions": {},
+    "objects": [],
+    "methods": [
+      {
+        "delete": {
+          "descr": "",
+          "genericType": null,
+          "returnType": " boolean",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "key",
+              "dataType": "K",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "clear": {
+          "descr": "",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": []
+        }
+      },
+      {
+        "get": {
+          "descr": "",
+          "genericType": null,
+          "returnType": " V",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "key",
+              "dataType": "K",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "has": {
+          "descr": "",
+          "genericType": null,
+          "returnType": " boolean",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "key",
+              "dataType": "K",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "set": {
+          "descr": "",
+          "genericType": null,
+          "returnType": " WeakMap<K, V>",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "key",
+              "dataType": "K",
+              "descr": ""
+            },
+            {
+              "name": "value?",
+              "dataType": "V",
+              "descr": ""
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "WeakMapConstructor": {
+    "extendsName": null,
+    "descr": "",
+    "properties": {
+      "prototype:": {
+        "prototype": {
+          "descr": "",
+          "isOptional": false,
+          "type": " WeakMap<any, any>",
+          "isCollection": false
+        }
+      }
+    },
+    "functions": {},
+    "objects": [],
+    "methods": [
+      {
+        "new": {
+          "descr": "",
+          "genericType": "K, V",
+          "returnType": " WeakMap<K, V>",
+          "returnDescr": null,
+          "params": []
+        }
+      },
+      {
+        "new": {
+          "descr": "",
+          "genericType": "K, V",
+          "returnType": " WeakMap<K, V>",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "iterable",
+              "dataType": "ForEachable<[K",
+              "descr": ""
+            },
+            {
+              "name": "V]>",
+              "descr": ""
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "WeakSet<T>": {
+    "extendsName": null,
+    "descr": "",
+    "properties": {},
+    "functions": {},
+    "objects": [],
+    "methods": [
+      {
+        "delete": {
+          "descr": "",
+          "genericType": null,
+          "returnType": " boolean",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "value",
+              "dataType": "T",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "clear": {
+          "descr": "",
+          "genericType": null,
+          "returnType": " void",
+          "returnDescr": null,
+          "params": []
+        }
+      },
+      {
+        "add": {
+          "descr": "",
+          "genericType": null,
+          "returnType": " WeakSet<T>",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "value",
+              "dataType": "T",
+              "descr": ""
+            }
+          ]
+        }
+      },
+      {
+        "has": {
+          "descr": "",
+          "genericType": null,
+          "returnType": " boolean",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "value",
+              "dataType": "T",
+              "descr": ""
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "WeakSetConstructor": {
+    "extendsName": null,
+    "descr": "",
+    "properties": {
+      "prototype:": {
+        "prototype": {
+          "descr": "",
+          "isOptional": false,
+          "type": " WeakSet<any>",
+          "isCollection": false
+        }
+      }
+    },
+    "functions": {},
+    "objects": [],
+    "methods": [
+      {
+        "new": {
+          "descr": "",
+          "genericType": "T",
+          "returnType": " WeakSet<T>",
+          "returnDescr": null,
+          "params": []
+        }
+      },
+      {
+        "new": {
+          "descr": "",
+          "genericType": "T",
+          "returnType": " WeakSet<T>",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "iterable",
+              "dataType": "ForEachable<T>",
+              "descr": ""
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -298,6 +298,7 @@ function processLines(element = '', index = 0, lines = []) {
 					var name = line.split(':')[0]
 					p[name] = {}
 					p[name]['descr'] = generalDesc
+					console.log(`${line}, ${index}`);
 					p[name]['isOptional'] = (secondWord.includes('?')) ? true : false
 					p[name]['type'] = lastWord.replace('[]', '')
 					p[name]['isCollection'] = (secondWord.includes('[]')) ? true : false
@@ -308,14 +309,15 @@ function processLines(element = '', index = 0, lines = []) {
 			case 'CLASS':
 				if (line.includes(')') && line.includes('(')) { // has brackets
 
-					var m = Utils.processMethod(line, generalDesc, commentObject, className)
-					var name
 					if (line.includes('constructor')) {
-							classObj[className]['methods']['constructor'] = m
+							name = 'constructor'
 					}
 					else {
-						classObj[className]['methods'][secondWord.split('(')[0].trim()] = m
+						name = secondWord.split('(')[0].trim()
 					}
+					var m = Utils.processMethod(line, generalDesc, commentObject, className, name, true)
+
+					classObj[className]['methods'][name] = m
 				}
 				else if (line.includes(BLOCK_BEGIN)) {
 					// Handle object
@@ -324,9 +326,10 @@ function processLines(element = '', index = 0, lines = []) {
 					iBlock--
 				}
 				else {
-					console.log(line);
+
+					var name  = secondWord.replace(':', '')
 					var p = Utils.processProperty(line, generalDesc)
-					classObj[className]['properties'][secondWord] = p
+					classObj[className]['properties'][name] = p
 				}
 				break;
 			case 'ENUM':

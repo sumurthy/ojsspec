@@ -1,0 +1,40 @@
+{
+  "Promise": {
+    "implementsName": "Thenable<R>",
+    "genericType": "R",
+    "descr": "",
+    "properties": {},
+    "methods": {
+      "constructor": {
+        "accessModifier": "public",
+        "signature": "constructor(callback: (resolve : (value?: R | Thenable<R>) => void, reject: (error?: any) => void) => void)",
+        "descr": "If you call resolve in the body of the callback passed to the constructor, \nyour promise is fulfilled with result object passed to resolve. \nIf you call reject your promise is rejected with the object passed to resolve. \nFor consistency and debugging (eg stack traces), obj should be an instanceof Error. \nAny errors thrown in the constructor callback will be implicitly passed to reject().",
+        "genericType": null,
+        "returnType": "Promise",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "callback",
+            "dataType": "(resolve",
+            "descr": ""
+          }
+        ]
+      },
+      "": {
+        "accessModifier": "catch<U>(onRejected?:",
+        "signature": "(error: any) => U | Thenable<U>): Promise<U>",
+        "descr": "Sugar for promise.then(undefined, onRejected) \n",
+        "genericType": "U",
+        "returnType": " Promise<U>",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "onRejected?",
+            "dataType": "(error",
+            "descr": ""
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "Thenable<R>": {
+    "extendsName": null,
+    "descr": "",
+    "properties": {},
+    "functions": {
+      "then<U>(onFulfilled?:": {
+        "then<U>(onFulfilled?:": {
+          "descr": "",
+          "isOptional": false,
+          "returnType": "void): Thenable<U>",
+          "returnDescr": null,
+          "params": [
+            {
+              "name": "onFulfilled?",
+              "dataType": "(value",
+              "descr": ""
+            }
+          ]
+        }
+      }
+    },
+    "objects": [],
+    "methods": []
+  }
+}

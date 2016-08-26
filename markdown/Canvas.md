@@ -1,48 +1,22 @@
-# BaseClientSideWebPart resource type
-
-%resourcedescription%
-
-
-### Properties
-
-| Property	   | Access Modifier | Type	| Description|
-|:-------------|:----|:-------|:-----------|
-|disableReactivePropertyChanges:      | protected | undefined | Indicates whether the Web Part's configuration is reactive or not |
-|displayMode:      | protected | undefined | Display mode of the Web Part |
-|domElement:      | protected | undefined | [domElement description] |
-|host:      | protected | undefined | [host description] |
-|instanceId:      | protected | undefined | [instanceId description] |
-|manifest:      | protected | undefined | Web Part's manifest |
-|properties:      | protected | undefined | Property bag of the Web Part |
-|propertyPaneSettings:      | protected | undefined | Configuration settings of the Web Part for the PropertyPane |
-|renderedFromDefaultProperties:      | protected | undefined | Indicates whether the Web Part was rendered from the default properties,  as opposed to using serialized values from the last time that the web part was saved |
-|renderedOnce:      | protected | undefined | Indicates whether the Web Part has been rendered once or not |
-
-
-
-## Methods
-
-| Method	   | Access Modifier | Returns	| Description|
-|:-------------|:----|:-------|:-----------|
-
-
-
 # Canvas resource type
 
-%resourcedescription%
+SharePoint Client-side Applications can use the SharePoint Canvas to enable rich content authoring 
+as part of their experience. The SharePoint canvas provides Rich Text Editing capabilities, SharePoint 
+Client-side WebPart aggregation and hosting, and a beautiful railed design experience. 
+
 
 
 ### Properties
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|ServiceScope,      | constructor(serviceScope: | undefined | Construct a new instance of the Canvas |
-|HTMLElement,      | container: | undefined | Construct a new instance of the Canvas |
-|DisplayMode,      | mode: | undefined | Construct a new instance of the Canvas |
-|string,      | serializedCanvas?: | undefined | Construct a new instance of the Canvas |
-|number)      | scrollThreshold?: | undefined | Construct a new instance of the Canvas |
-|count:      | public | undefined |  |
-|previewUrl:      | public | undefined | Get the preview image url generated from webpart manager if it is available |
+|ServiceScope,      | constructor(serviceScope: |  ServiceScope, | Construct a new instance of the Canvas |
+|HTMLElement,      | container: |  HTMLElement, | Construct a new instance of the Canvas |
+|DisplayMode,      | mode: |  DisplayMode, | Construct a new instance of the Canvas |
+|string,      | serializedCanvas?: |  string, | Construct a new instance of the Canvas |
+|number)      | scrollThreshold?: |  number) | Construct a new instance of the Canvas |
+|count      | public |  number |  |
+|previewUrl      | public |  string | Get the preview image url generated from webpart manager if it is available |
 
 
 
@@ -50,5 +24,10 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
+|      | handleCanvasChanged?: |  () => void, | Construct a new instance of the Canvas |
+|dispose      | public |  void | Unmount the Canvas from the container it was constructed with |
+|openToolbox      | public |  boolean | Display the Canvas' Toolbox at a given row |
+|render      | public |  void | Render the Canvas into its container DOM element |
+|serialize      | public |  string | Serialize the current contents of the Canvas |
 
 

@@ -1,69 +1,18 @@
-# BaseClientSideWebPart resource type
-
-%resourcedescription%
-
-
-### Properties
-
-| Property	   | Access Modifier | Type	| Description|
-|:-------------|:----|:-------|:-----------|
-|disableReactivePropertyChanges:      | protected | undefined | Indicates whether the Web Part's configuration is reactive or not |
-|displayMode:      | protected | undefined | Display mode of the Web Part |
-|domElement:      | protected | undefined | [domElement description] |
-|host:      | protected | undefined | [host description] |
-|instanceId:      | protected | undefined | [instanceId description] |
-|manifest:      | protected | undefined | Web Part's manifest |
-|properties:      | protected | undefined | Property bag of the Web Part |
-|propertyPaneSettings:      | protected | undefined | Configuration settings of the Web Part for the PropertyPane |
-|renderedFromDefaultProperties:      | protected | undefined | Indicates whether the Web Part was rendered from the default properties,  as opposed to using serialized values from the last time that the web part was saved |
-|renderedOnce:      | protected | undefined | Indicates whether the Web Part has been rendered once or not |
-
-
-
-## Methods
-
-| Method	   | Access Modifier | Returns	| Description|
-|:-------------|:----|:-------|:-----------|
-
-
-
-# Canvas resource type
-
-%resourcedescription%
-
-
-### Properties
-
-| Property	   | Access Modifier | Type	| Description|
-|:-------------|:----|:-------|:-----------|
-|ServiceScope,      | constructor(serviceScope: | undefined | Construct a new instance of the Canvas |
-|HTMLElement,      | container: | undefined | Construct a new instance of the Canvas |
-|DisplayMode,      | mode: | undefined | Construct a new instance of the Canvas |
-|string,      | serializedCanvas?: | undefined | Construct a new instance of the Canvas |
-|number)      | scrollThreshold?: | undefined | Construct a new instance of the Canvas |
-|count:      | public | undefined |  |
-|previewUrl:      | public | undefined | Get the preview image url generated from webpart manager if it is available |
-
-
-
-## Methods
-
-| Method	   | Access Modifier | Returns	| Description|
-|:-------------|:----|:-------|:-----------|
-
-
-
 # ClientSideApplication resource type
 
-%resourcedescription%
+This is the system base class for client-side applications. It manages the overall 
+life cycle of your application, and is the first entry point for your code to start 
+executing when the page loads. The two main events are onLoad() which occurs first, 
+and onRender() which occurs after the shell has initialized the environment and 
+completed rendering the page chrome.
 
 
 ### Properties
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|domElement:      | protected | undefined | Returns the DOM element where the application is expected to render its content |
-|shell:      | protected | undefined | Returns a reference to the shell, which is a global singleton object that contains  the main service classes |
+|domElement      | protected |  HTMLDivElement | Returns the DOM element where the application is expected to render its content |
+|shell      | protected |  IShell | Returns a reference to the shell, which is a global singleton object that contains  the main service classes |
 
 
 
@@ -71,5 +20,11 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
+|constructor      | public | [ClientSideApplication](ClientSideApplication.md) | This is the system base class for client-side applications |
+|load      | public |  void | RESERVED FOR INTERNAL USAGE |
+|onLoad      | protected |  void | This life cycle event occurs immediately after the shell has loaded the application,  before the DOM is constructed |
+|onRender      | protected |  void | This lifecycle event occurs after the shell has constructed the DOM for the page chrome |
+|render      | public |  void | RESERVED FOR INTERNAL USAGE |
+|suiteNavConfiguration      | public |  ISuiteNavManagerConfiguration | Returns a reference to the shell, which is a global singleton object that contains  the main service classes |
 
 

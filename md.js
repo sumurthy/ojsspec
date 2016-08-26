@@ -43,6 +43,7 @@ function file_reset() {
 	skipFlag = false
 }
 function getLinkForType(type='') {
+	console.log(type + ' ----------')
 	if ((Object.keys(iObj).includes(type)) || (Object.keys(classObj).includes(type))) {
 		return `[${type}](${type}.md)`
 	}
@@ -94,7 +95,7 @@ function doSub(tline = '') {
 
 
 function doSubClass(tline = '') {
-	if (tline.includes('%description%'))	tline = tline.replace('%module%', classObj[className]['descr'])
+	if (tline.includes('%resourcedescription%'))	tline = tline.replace('%resourcedescription%', classObj[className]['descr'])
 	if (tline.includes('%resourcename%'))	tline = tline.replace('%resourcename%', className)
 
 	return tline
@@ -103,21 +104,21 @@ function doSubClass(tline = '') {
 var dFunction = {
 
 	classGenIndividual: function(e='') {
-		console.log('');
+
 		className = e
 		genClassView()
 	},
 
 	interfaceGenIndividual: function (e='') {
-		console.log('interface GenIndividual');
+
 	},
 
 	functionGenIndividual: function (e='') {
-		console.log('FuncGenIndividual');
+
 	},
 
 	enumerationGenIndividual: function (e='') {
-		console.log('EnumGenIndividual');
+
 	}
 }
 
@@ -183,7 +184,13 @@ function addMembers(tline='', type='', name='') {
 			var mline = dclone(tline).substr(1)
 			mline = mline.replace('%name%', e)
 			mline = mline.replace('%access%', `${o[e]['accessModifier']}`)
-			mline = mline.replace('%type%', `${o[e]['dataType']}`)
+			if (type === 'method') {
+				mline = mline.replace('%type%', `${getLinkForType(o[e]['returnType'])}`)
+			}
+			else {
+				mline = mline.replace('%type%', `${getLinkForType(o[e]['dataType'])}`)
+			}
+
 			//Get first sentence
 			var descr = o[e]['descr']
 			if (descr) {
@@ -200,7 +207,7 @@ function addMembers(tline='', type='', name='') {
 }
 
 function genClassView(){
-	console.log(`Processing Class file creation`);
+	mem_mdout = []
 	var o = classObj[className]
 
 		classInterfaceT.forEach((tline) => {
@@ -231,7 +238,8 @@ function genClassView(){
 						addMembers(tline, region, className)
 						break
 					case 'method':
-
+						addMembers(tline, region, className)
+						break
 						break;
 					default:
 

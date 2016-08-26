@@ -1,9 +1,9 @@
-<object>
+<classheader>
 # %resourcename% resource type
 
 %resourcedescription%
 
-</object>
+</classheader>
 
 <property>
 ### Properties

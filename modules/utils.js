@@ -98,16 +98,15 @@ var self = module.exports = {
 		}
     return o
   },
-  processMethod: (line='', descr='', commentObject={}, parentName = '', classMethod = false) => {
+  processMethod: (line='', descr='', commentObject={}, parentName = '', name = ' ', classMethod = false) => {
     var m = {}
     var firstWord = line.split(' ',1)[0]
     var secondWord = line.split(' ',2)[1]
     var lastWord = line.split(':').pop()
 
-    var name = self.getName(firstWord)
-
     if (classMethod) {
       m['accessModifier'] = firstWord
+      if (name === 'constructor') m['accessModifier'] = 'public'
     }
 		if (line.includes('constructor')) {
 			m['signature'] = line
@@ -135,11 +134,12 @@ var self = module.exports = {
     var secondWord = line.split(' ',2)[1]
     var lastWord = line.split(':').pop()
 
+    p['dataType'] = lastWord
     p['accessModifier'] = firstWord
-    p['descr'] = descr
     p['isOptional'] = (secondWord.includes('?')) ? true : false
     p['type'] = lastWord.replace('[]', '')
     p['isCollection'] = (secondWord.includes('[]')) ? true : false
+    p['descr'] = descr
     return p
   }
 }
