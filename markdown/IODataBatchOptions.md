@@ -9,7 +9,7 @@ that affect the entire batch.
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`webUrl`      |` string` | ODataBatch will need to perform its POST to an endpoint such as  "http://example |
+|`webUrl`      | string | ODataBatch will need to perform its POST to an endpoint such as  "http://example |
 
 
 

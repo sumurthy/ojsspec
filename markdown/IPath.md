@@ -10,9 +10,9 @@ loaded in exactly the same way as any other internal path.
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`debug`      |` string` | Definition: A path to this module's debug javascript resource either as a fully-qualified URL or as a path under  the paths provided in the "internalModuleBaseUrls" field |
-|`default:`      |` string` | Definition: A path to this module's javascript resource either as a fully-qualified URL or as a path under the  paths provided in the "internalModuleBaseUrls" field |
-|`}`      |` }` | Definition: A path to this module's javascript resource either as a fully-qualified URL or as a path under the  paths provided in the "internalModuleBaseUrls" field |
+|`debug`      | string | Definition: A path to this module's debug javascript resource either as a fully-qualified URL or as a path under  the paths provided in the "internalModuleBaseUrls" field |
+|`default:`      | string | Definition: A path to this module's javascript resource either as a fully-qualified URL or as a path under the  paths provided in the "internalModuleBaseUrls" field |
+|`}`      | } | Definition: A path to this module's javascript resource either as a fully-qualified URL or as a path under the  paths provided in the "internalModuleBaseUrls" field |
 
 
 

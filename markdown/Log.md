@@ -13,10 +13,10 @@ which component generated the messages and makes the messages useful and filtera
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[error](#error)     | public, _static_ | `void` | The source provides context information for the logged error |
-|[info](#info)     | public, _static_ | `void` | more context information (e |
-|[verbose](#verbose)     | public, _static_ | `void` | more context information (e |
-|[warn](#warn)     | public, _static_ | `void` | more context information (e |
+|[error](#error)     | public, _static_ | void | The source provides context information for the logged error |
+|[info](#info)     | public, _static_ | void | more context information (e |
+|[verbose](#verbose)     | public, _static_ | void | more context information (e |
+|[warn](#warn)     | public, _static_ | void | more context information (e |
 
 
 

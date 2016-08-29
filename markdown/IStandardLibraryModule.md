@@ -14,11 +14,11 @@ Example: "master_2015-04-20/my-application.bundle_1928f8a0.js"
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`aliases:`      |` IBundleReference[]` | References to modules that are swappable for this module (for example, modules that contain a superset of  this module) |
-|`bundleReference:`      |` [IBundleReference](IBundleReference.md)` | Reference (id and entryName pair) to the bundle |
-|`dependentIds:`      |` string[]` | The IDs of modules this module depends on |
-|`preloadId:`      |` string` | The ID of the bundle to preload |
-|`}`      |` }` | The ID of the bundle to preload |
+|`aliases:`      | IBundleReference[] | References to modules that are swappable for this module (for example, modules that contain a superset of  this module) |
+|`bundleReference:`      | [IBundleReference](IBundleReference.md) | Reference (id and entryName pair) to the bundle |
+|`dependentIds:`      | string[] | The IDs of modules this module depends on |
+|`preloadId:`      | string | The ID of the bundle to preload |
+|`}`      | } | The ID of the bundle to preload |
 
 
 

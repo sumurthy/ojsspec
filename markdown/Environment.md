@@ -8,7 +8,7 @@ its components.
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|`type`     | public | `EnvironmentType` | An enum that describes which type of enviroment the framework is running in |
+|`type`     | public | EnvironmentType | An enum that describes which type of enviroment the framework is running in |
 
 
 

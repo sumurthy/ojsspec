@@ -8,7 +8,7 @@
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`size:`      |` number` |  |
+|`size:`      | number |  |
 
 
 
@@ -17,13 +17,13 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[add](#add)      | `[Set<T>](Set.md) `|  |
-|[clear](#clear)      | `void `|  |
-|[delete](#delete)      | `boolean `|  |
-|[has](#has)      | `boolean `|  |
-|[entries](#entries)      | `Iterator<[T, T]> `|  |
-|[keys](#keys)      | `[Iterator<T>](Iterator.md) `|  |
-|[values](#values)      | `[Iterator<T>](Iterator.md) `|  |
+|[add](#add)      | [Set<T>](Set.md) |  |
+|[clear](#clear)      | void |  |
+|[delete](#delete)      | boolean |  |
+|[has](#has)      | boolean |  |
+|[entries](#entries)      | Iterator<[T, T]> |  |
+|[keys](#keys)      | [Iterator<T>](Iterator.md) |  |
+|[values](#values)      | [Iterator<T>](Iterator.md) |  |
 
 
 
@@ -31,7 +31,7 @@
 
 | Function	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|forEach      | undefined | `` |  |
+|forEach      | undefined | |  |
 
 
 ## add

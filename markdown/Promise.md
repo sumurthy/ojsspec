@@ -10,8 +10,8 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor)     | public | `[Promise](Promise.md)` | If you call resolve in the body of the callback passed to the constructor,  your promise is fulfilled with result object passed to resolve |
-|[ErrorErrorError](#errorerrorerror)     | catch<U>(onRejected?: | `Promise<U>` | Sugar for promise |
+|[constructor](#constructor)     | public | [Promise](Promise.md) | If you call resolve in the body of the callback passed to the constructor,  your promise is fulfilled with result object passed to resolve |
+|[ErrorErrorError](#errorerrorerror)     | catch<U>(onRejected?: | Promise<U> | Sugar for promise |
 
 
 

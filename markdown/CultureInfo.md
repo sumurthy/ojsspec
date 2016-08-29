@@ -8,8 +8,8 @@ for the current user of the application.
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|`currentCultureName`     | public | `string` | This string determines the language default format for dates, times, numbers, currency values,  the sorting order of text, casing conventions, and string comparisons |
-|`currentUICultureName`     | public | `string` | This string determines the default user interface language |
+|`currentCultureName`     | public | string | This string determines the language default format for dates, times, numbers, currency values,  the sorting order of text, casing conventions, and string comparisons |
+|`currentUICultureName`     | public | string | This string determines the default user interface language |
 
 
 

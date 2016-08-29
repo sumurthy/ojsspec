@@ -12,7 +12,7 @@
 
 | Function	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|then<U>      | undefined | `` |  |
+|then<U>      | undefined | |  |
 
 
 ## then<U>

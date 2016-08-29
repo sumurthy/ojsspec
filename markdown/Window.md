@@ -8,8 +8,8 @@
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`}`      |` }` |  |
-|`declare`      |` typeof window.fetch` |  |
+|`}`      | } |  |
+|`declare`      | typeof window.fetch |  |
 
 
 
@@ -18,7 +18,7 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[fetch](#fetch)      | `Promise<Response> `|  |
+|[fetch](#fetch)      | Promise<Response> |  |
 
 
 

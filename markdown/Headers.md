@@ -7,7 +7,7 @@
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|`OBJECTERROR`     | } | `}` |  |
+|`OBJECTERROR`     | } | } |  |
 
 
 
@@ -16,10 +16,10 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[string,](#string,)     | set(name: | `void` |  |
-|[string):void](#string):void)     | delete(name: | `void` |  |
-|[string):](#string):)     | has(name: | `boolean` |  |
-|[ErrorErrorError](#errorerrorerror)     | forEach(callback: | `void` |  |
+|[string,](#string,)     | set(name: | void |  |
+|[string):void](#string):void)     | delete(name: | void |  |
+|[string):](#string):)     | has(name: | boolean |  |
+|[ErrorErrorError](#errorerrorerror)     | forEach(callback: | void |  |
 
 
 

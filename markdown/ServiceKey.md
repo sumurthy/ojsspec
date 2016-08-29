@@ -12,10 +12,10 @@ introduced without inadvertently breaking components that are loaded by an older
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|`create`     | public | `string,` | your application |
-|`defaultCreator`     | public | `ServiceCreator<T>` | your application |
-|`id`     | public | `string` | your application |
-|`name`     | public | `string` | your application |
+|`create`     | public | string, | your application |
+|`defaultCreator`     | public | ServiceCreator<T> | your application |
+|`id`     | public | string | your application |
+|`name`     | public | string | your application |
 
 
 
@@ -24,9 +24,9 @@ introduced without inadvertently breaking components that are loaded by an older
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor)     | public | `[ServiceKey](ServiceKey.md)` | PRIVATE - Do not call this from your own code |
-|[{](#{)     | serviceClass: | `ServiceKey<T>;` | your application |
-|[createCustom](#createcustom)     | public, _static_ | `ServiceKey<T>` | your application |
+|[constructor](#constructor)     | public | [ServiceKey](ServiceKey.md) | PRIVATE - Do not call this from your own code |
+|[{](#{)     | serviceClass: | ServiceKey<T>; | your application |
+|[createCustom](#createcustom)     | public, _static_ | ServiceKey<T> | your application |
 
 
 

@@ -7,8 +7,8 @@
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|`boolean`     | bodyUsed: | `boolean` |  |
-|`OBJECTERROR`     | } | `}` |  |
+|`boolean`     | bodyUsed: | boolean |  |
+|`OBJECTERROR`     | } | } |  |
 
 
 
@@ -17,12 +17,12 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[Promise<ArrayBuffer>](#promise<arraybuffer>)     | arrayBuffer(): | `Promise<ArrayBuffer>` |  |
-|[Promise<Blob>](#promise<blob>)     | blob(): | `Promise<Blob>` |  |
-|[Promise<FormData>](#promise<formdata>)     | formData(): | `Promise<FormData>` |  |
-|[Promise<any>](#promise<any>)     | json(): | `Promise<any>` |  |
-|[Promise<T>](#promise<t>)     | json<T>(): | `Promise<T>` |  |
-|[Promise<string>](#promise<string>)     | text(): | `Promise<string>` |  |
+|[Promise<ArrayBuffer>](#promise<arraybuffer>)     | arrayBuffer(): | Promise<ArrayBuffer> |  |
+|[Promise<Blob>](#promise<blob>)     | blob(): | Promise<Blob> |  |
+|[Promise<FormData>](#promise<formdata>)     | formData(): | Promise<FormData> |  |
+|[Promise<any>](#promise<any>)     | json(): | Promise<any> |  |
+|[Promise<T>](#promise<t>)     | json<T>(): | Promise<T> |  |
+|[Promise<string>](#promise<string>)     | text(): | Promise<string> |  |
 
 
 

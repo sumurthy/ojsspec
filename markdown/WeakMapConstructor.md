@@ -8,7 +8,7 @@
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`prototype:`      |` WeakMap<any, any>` |  |
+|`prototype:`      | WeakMap<any, any> |  |
 
 
 
@@ -17,7 +17,7 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[new](#new)      | `WeakMap<K, V> `|  |
+|[new](#new)      | WeakMap<K, V> |  |
 
 
 

@@ -11,11 +11,11 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[delete](#delete)      | `boolean `|  |
-|[clear](#clear)      | `void `|  |
-|[get](#get)      | `V `|  |
-|[has](#has)      | `boolean `|  |
-|[set](#set)      | `WeakMap<K, V> `|  |
+|[delete](#delete)      | boolean |  |
+|[clear](#clear)      | void |  |
+|[get](#get)      | V |  |
+|[has](#has)      | boolean |  |
+|[set](#set)      | WeakMap<K, V> |  |
 
 
 

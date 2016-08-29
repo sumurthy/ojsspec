@@ -8,7 +8,7 @@
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`prototype:`      |` WeakSet<any>` |  |
+|`prototype:`      | WeakSet<any> |  |
 
 
 
@@ -17,7 +17,7 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[new](#new)      | `[WeakSet<T>](WeakSet.md) `|  |
+|[new](#new)      | [WeakSet<T>](WeakSet.md) |  |
 
 
 

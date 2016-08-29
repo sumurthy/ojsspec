@@ -15,12 +15,12 @@ class instead.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor)     | public | `[HttpClient](HttpClient.md)` |  |
-|[beginBatch](#beginbatch)     | public | `[ODataBatch](ODataBatch.md)` | Begins an ODATA batch, which allows multiple REST queries to be bundled into  a single web request |
-|[fetch](#fetch)     | public | `Promise<Response>` | Generally, the parameters and semantics for HttpClient |
-|[get](#get)     | public | `Promise<Response>` | Calls fetch(), but sets the method to 'GET' |
-|[getWebUrlFromRequestUrl](#getweburlfromrequesturl)     | public, _static_ | `string` | This uses a heuristic to guess the SPWeb URL associated with the provided  REST URL |
-|[post](#post)     | public | `Promise<Response>` | Calls fetch(), but sets the method to 'POST' |
+|[constructor](#constructor)     | public | [HttpClient](HttpClient.md) |  |
+|[beginBatch](#beginbatch)     | public | [ODataBatch](ODataBatch.md) | Begins an ODATA batch, which allows multiple REST queries to be bundled into  a single web request |
+|[fetch](#fetch)     | public | Promise<Response> | Generally, the parameters and semantics for HttpClient |
+|[get](#get)     | public | Promise<Response> | Calls fetch(), but sets the method to 'GET' |
+|[getWebUrlFromRequestUrl](#getweburlfromrequesturl)     | public, _static_ | string | This uses a heuristic to guess the SPWeb URL associated with the provided  REST URL |
+|[post](#post)     | public | Promise<Response> | Calls fetch(), but sets the method to 'POST' |
 
 
 

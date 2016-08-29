@@ -8,7 +8,7 @@
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`prototype:`      |` Map<any, any>` |  |
+|`prototype:`      | Map<any, any> |  |
 
 
 
@@ -17,7 +17,7 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[new](#new)      | `Map<K, V> `|  |
+|[new](#new)      | Map<K, V> |  |
 
 
 
