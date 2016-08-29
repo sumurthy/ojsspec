@@ -55,7 +55,7 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `'div'`    | `undefined` |  |
+| `'div'`    | `` |  |
 
 
 ## manifest:

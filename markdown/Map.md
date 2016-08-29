@@ -164,5 +164,5 @@ None
 | `callbackfn`    | `(value` |  |
 | `index`    | `K` |  |
 | `map`    | `Map<K` |  |
-| `V>`    | `undefined` |  |
+| `V>`    | `` |  |
 

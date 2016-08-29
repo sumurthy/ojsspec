@@ -40,6 +40,6 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `input`    | `string|Request` |  |
-| `init`    | `RequestInit` | _Optional._ |
+| `input`    | `string,[Request](Request.md)` |  |
+| `init`    | `[RequestInit](RequestInit.md)` | _Optional._ |
 

@@ -38,7 +38,7 @@ class instead.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceScope`    | `ServiceScope` |  |
+| `serviceScope`    | `[ServiceScope](ServiceScope.md)` |  |
 
 
 ## beginBatch
@@ -55,7 +55,7 @@ a single web request.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `batchOptions`    | `IODataBatchOptions` | _Optional._ |
+| `batchOptions`    | `[IODataBatchOptions](IODataBatchOptions.md)` | _Optional._ |
 
 
 ## fetch
@@ -90,7 +90,7 @@ to specify it explicitly.
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `url`    | `string` |  |
-| `options`    | `IHttpClientOptions` |  |
+| `options`    | `[IHttpClientOptions](IHttpClientOptions.md)` |  |
 
 
 ## get
@@ -107,7 +107,7 @@ Calls fetch(), but sets the method to 'GET'.
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `url`    | `string` |  |
-| `options`    | `IHttpClientOptions` | _Optional._ |
+| `options`    | `[IHttpClientOptions](IHttpClientOptions.md)` | _Optional._ |
 
 
 ## getWebUrlFromRequestUrl
@@ -147,5 +147,5 @@ Calls fetch(), but sets the method to 'POST'.
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `url`    | `string` |  |
-| `options`    | `IHttpClientOptions` |  |
+| `options`    | `[IHttpClientOptions](IHttpClientOptions.md)` |  |
 

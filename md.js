@@ -343,7 +343,7 @@ function addParams(tline = '', member = {}, targetArray = []) {
     member['params'].forEach((e) => {
         var mline = dclone(tline).substr(1)
         mline = mline.replace('%name%', e['name'])
-        mline = mline.replace('%dtype%', `${e['dataType']}`)
+        mline = mline.replace('%dtype%', `${getLinkForType(e['dataType'])}`)
         if (e['isOptional']) {
             mline = mline.replace('%optional% ', '_Optional._')
         }

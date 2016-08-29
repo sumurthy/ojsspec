@@ -41,8 +41,8 @@ resolve with a Response object for that particular request.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceScope`    | `ServiceScope` |  |
-| `batchOptions`    | `IODataBatchOptions` | _Optional._ |
+| `serviceScope`    | `[ServiceScope](ServiceScope.md)` |  |
+| `batchOptions`    | `[IODataBatchOptions](IODataBatchOptions.md)` | _Optional._ |
 
 
 ## execute

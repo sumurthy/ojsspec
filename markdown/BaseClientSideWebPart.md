@@ -72,7 +72,7 @@ super(context);
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `ctx`    | `IWebPartContext` |  |
+| `ctx`    | `[IWebPartContext](IWebPartContext.md)` |  |
 
 
 ## clearError
@@ -116,7 +116,7 @@ if it is not already open.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `data`    | `IWebPartData` |  |
+| `data`    | `[IWebPartData](IWebPartData.md)` |  |
 
 
 ## dispose

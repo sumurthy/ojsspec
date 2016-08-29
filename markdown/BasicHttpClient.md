@@ -40,7 +40,7 @@ enhancements.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceScope`    | `ServiceScope` |  |
+| `serviceScope`    | `[ServiceScope](ServiceScope.md)` |  |
 
 
 ## fetch
@@ -60,7 +60,7 @@ https://fetch.spec.whatwg.org/
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `url`    | `string` |  |
-| `options`    | `IBasicHttpClientOptions` |  |
+| `options`    | `[IBasicHttpClientOptions](IBasicHttpClientOptions.md)` |  |
 
 
 ## fetchCore
@@ -79,7 +79,7 @@ https://fetch.spec.whatwg.org/
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `request`    | `Request` |  |
+| `request`    | `[Request](Request.md)` |  |
 
 
 ## get
@@ -96,7 +96,7 @@ Calls fetch(), but sets the method to 'GET'.
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `url`    | `string` |  |
-| `options`    | `IBasicHttpClientOptions` | _Optional._ |
+| `options`    | `[IBasicHttpClientOptions](IBasicHttpClientOptions.md)` | _Optional._ |
 
 
 ## post
@@ -113,5 +113,5 @@ Calls fetch(), but sets the method to 'POST'.
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `url`    | `string` |  |
-| `options`    | `IBasicHttpClientOptions` |  |
+| `options`    | `[IBasicHttpClientOptions](IBasicHttpClientOptions.md)` |  |
 

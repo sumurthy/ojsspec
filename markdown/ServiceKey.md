@@ -62,7 +62,7 @@ your application.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceScope`    | `ServiceScope` |  |
+| `serviceScope`    | `[ServiceScope](ServiceScope.md)` |  |
 
 
 ## createCustom

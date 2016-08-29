@@ -81,5 +81,5 @@ Render the provided error message in the webpart container div.
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `domElement`    | `HTMLElement` |  |
-| `error`    | `Error | string` |  |
+| `error`    | `Error , string` |  |
 

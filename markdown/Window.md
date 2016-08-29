@@ -35,6 +35,6 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | `string|Request` |  |
-| `init`    | `RequestInit` | _Optional._ |
+| `url`    | `string,[Request](Request.md)` |  |
+| `init`    | `[RequestInit](RequestInit.md)` | _Optional._ |
 

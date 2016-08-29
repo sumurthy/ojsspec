@@ -37,7 +37,7 @@ If the source's length is more than 20, only the first 20 characters are kept.
 |:-------------|:---------------|:------------|
 | `source`    | `string` |  |
 | `error`    | `Error` |  |
-| `scope`    | `ServiceScope` | _Optional._ |
+| `scope`    | `[ServiceScope](ServiceScope.md)` | _Optional._ |
 
 
 ## info
@@ -55,7 +55,7 @@ more context information (e.g., web part information) to the logged message.
 |:-------------|:---------------|:------------|
 | `source`    | `string` |  |
 | `message`    | `string` |  |
-| `scope`    | `ServiceScope` | _Optional._ |
+| `scope`    | `[ServiceScope](ServiceScope.md)` | _Optional._ |
 
 
 ## verbose
@@ -73,7 +73,7 @@ more context information (e.g., web part information) to the logged message.
 |:-------------|:---------------|:------------|
 | `source`    | `string` |  |
 | `message`    | `string` |  |
-| `scope`    | `ServiceScope` | _Optional._ |
+| `scope`    | `[ServiceScope](ServiceScope.md)` | _Optional._ |
 
 
 ## warn
@@ -91,5 +91,5 @@ more context information (e.g., web part information) to the logged message.
 |:-------------|:---------------|:------------|
 | `source`    | `string` |  |
 | `message`    | `string` |  |
-| `scope`    | `ServiceScope` | _Optional._ |
+| `scope`    | `[ServiceScope](ServiceScope.md)` | _Optional._ |
 

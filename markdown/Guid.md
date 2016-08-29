@@ -39,7 +39,7 @@ represent the same value
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `guid`    | `Guid` |  |
+| `guid`    | `[Guid](Guid.md)` |  |
 
 
 ## isValid

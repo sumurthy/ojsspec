@@ -82,7 +82,7 @@ PRIVATE CONSTRUCTOR - DO NOT CALL THIS FROM YOUR OWN CODE.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `parent`    | `ServiceScope` |  |
+| `parent`    | `[ServiceScope](ServiceScope.md)` |  |
 
 
 ## consume
@@ -117,7 +117,7 @@ simpleServiceClass, then registering it by calling ServiceScope.provide().
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceScope`    | `ServiceScope` |  |
+| `serviceScope`    | `[ServiceScope](ServiceScope.md)` |  |
 
 
 ## createDefaultAndProvide

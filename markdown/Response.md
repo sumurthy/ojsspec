@@ -42,7 +42,7 @@
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `body`    | `BodyInit` | _Optional._ |
-| `init`    | `ResponseInit` | _Optional._ |
+| `init`    | `[ResponseInit](ResponseInit.md)` | _Optional._ |
 
 
 ## Response
