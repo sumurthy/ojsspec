@@ -12,7 +12,7 @@
 
 | Function	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|`forEach `     | undefined | `` |  |
+|forEach      | undefined | `` |  |
 
 
 

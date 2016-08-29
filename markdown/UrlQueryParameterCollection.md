@@ -18,9 +18,9 @@ Query param with only equals (www.example.com/?=&debug=on stores empty string ke
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|`[constructor](#constructor) `     | public | `[UrlQueryParameterCollection](UrlQueryParameterCollection.md)` |  |
-|`[getValue](#getvalue) `     | public | `string` | Returns the value of the first matching query parameter or undefined if the key doesn't exist |
-|`[getValues](#getvalues) `     | public | `string[]` | Returns the values of all of the matching query parameters or undefined if the key doesn't exist |
+|[constructor](#constructor)     | public | `[UrlQueryParameterCollection](UrlQueryParameterCollection.md)` |  |
+|[getValue](#getvalue)     | public | `string` | Returns the value of the first matching query parameter or undefined if the key doesn't exist |
+|[getValues](#getvalues)     | public | `string[]` | Returns the values of all of the matching query parameters or undefined if the key doesn't exist |
 
 
 

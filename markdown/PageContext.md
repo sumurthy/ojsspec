@@ -24,7 +24,7 @@ application cache.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|`[constructor](#constructor) `     | public | `[PageContext](PageContext.md)` |  |
+|[constructor](#constructor)     | public | `[PageContext](PageContext.md)` |  |
 
 
 

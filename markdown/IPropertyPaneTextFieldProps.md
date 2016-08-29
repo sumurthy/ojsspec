@@ -27,7 +27,7 @@
 
 | Function	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|`onGetErrorMessage `     | undefined | `` | The method is used to get the validation error message and determine whether the input value is valid or not |
+|onGetErrorMessage      | undefined | `` | The method is used to get the validation error message and determine whether the input value is valid or not |
 
 
 

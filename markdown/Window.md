@@ -11,7 +11,7 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|`[fetch](#fetch)`      | ` Promise<Response> `|  |
+|[fetch](#fetch)      | ` Promise<Response> `|  |
 
 
 

@@ -21,7 +21,7 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|`[constructor](#constructor) `     | public | `[Request](Request.md)` |  |
+|[constructor](#constructor)     | public | `[Request](Request.md)` |  |
 
 
 

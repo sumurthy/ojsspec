@@ -13,7 +13,7 @@ which component generated the messages and makes the messages useful and filtera
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|`[static](#static) `     | public | `void` | more context information (e |
+|[static](#static)     | public | `void` | more context information (e |
 
 
 

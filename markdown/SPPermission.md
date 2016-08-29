@@ -20,10 +20,10 @@ https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|`[constructor](#constructor) `     | public | `[SPPermission](SPPermission.md)` |  |
-|`[hasAllPermissions](#hasallpermissions) `     | public | `boolean` | Function for determining if a given permission mask has all of the requested permissions |
-|`[hasAnyPermissions](#hasanypermissions) `     | public | `boolean` | Function for determining if a given permission mask has any of the requested permissions |
-|`[hasPermission](#haspermission) `     | public | `boolean` | Function for checking if a given permission mask has the requested permission |
+|[constructor](#constructor)     | public | `[SPPermission](SPPermission.md)` |  |
+|[hasAllPermissions](#hasallpermissions)     | public | `boolean` | Function for determining if a given permission mask has all of the requested permissions |
+|[hasAnyPermissions](#hasanypermissions)     | public | `boolean` | Function for determining if a given permission mask has any of the requested permissions |
+|[hasPermission](#haspermission)     | public | `boolean` | Function for checking if a given permission mask has the requested permission |
 
 
 

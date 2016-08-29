@@ -19,11 +19,11 @@ resolve with a Response object for that particular request.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|`[constructor](#constructor) `     | public | `[ODataBatch](ODataBatch.md)` |  |
-|`[execute](#execute) `     | public | `Promise<ODataBatch>` | Executes the batched queries that were queued using ODataBatch |
-|`[fetch](#fetch) `     | public | `Promise<Response>` | Queues a new request, and returns a promise that can be used to access  the server response (after execute() has completed) |
-|`[get](#get) `     | public | `Promise<Response>` | Calls fetch(), but sets the method to 'GET' |
-|`[post](#post) `     | public | `Promise<Response>` | Calls fetch(), but sets the method to 'POST' |
+|[constructor](#constructor)     | public | `[ODataBatch](ODataBatch.md)` |  |
+|[execute](#execute)     | public | `Promise<ODataBatch>` | Executes the batched queries that were queued using ODataBatch |
+|[fetch](#fetch)     | public | `Promise<Response>` | Queues a new request, and returns a promise that can be used to access  the server response (after execute() has completed) |
+|[get](#get)     | public | `Promise<Response>` | Calls fetch(), but sets the method to 'GET' |
+|[post](#post)     | public | `Promise<Response>` | Calls fetch(), but sets the method to 'POST' |
 
 
 

@@ -24,8 +24,8 @@ introduced without inadvertently breaking components that are loaded by an older
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|`[constructor](#constructor) `     | public | `[ServiceKey](ServiceKey.md)` | PRIVATE - Do not call this from your own code |
-|`[static](#static) `     | public | `ServiceKey<T>` | your application |
+|[constructor](#constructor)     | public | `[ServiceKey](ServiceKey.md)` | PRIVATE - Do not call this from your own code |
+|[static](#static)     | public | `ServiceKey<T>` | your application |
 
 
 

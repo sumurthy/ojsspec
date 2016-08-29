@@ -35,20 +35,20 @@ Please refer to the documentation of the individual APIs to make the right decis
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|`[constructor](#constructor) `     | public | `[BaseClientSideWebPart](BaseClientSideWebPart.md)` | e |
-|`[clearError](#clearerror) `     | protected | `void` | This API should be used to clear the error message from the web part display area |
-|`[configureStart](#configurestart) `     | protected | `void` | if it is not already open |
-|`[deserialize](#deserialize) `     | protected | `TProperties` | This API is called once during the lifetime of the web part during the intial render and just before the onInit  API call |
-|`[dispose](#dispose) `     | protected | `void` | This API is called at the end of the web part lifecycle |
-|`[onBeforeSerialize](#onbeforeserialize) `     | protected | `[IHtmlProperties](IHtmlProperties.md)` | the documentation of IHtmlProperties interface for more details |
-|`[onDisplayModeChanged](#ondisplaymodechanged) `     | protected | `void` | This API is called when the display mode of a web part is changed |
-|`[onInit](#oninit) `     | protected | `Promise<T>` | This API should be overridden to perform long running operations e |
-|`[onPropertyChange](#onpropertychange) `     | protected | `void` | This API is invoked on property changes in the PropertyPane when the PropertyPane is being used in Reactive mode |
-|`[onPropertyConfigurationComplete](#onpropertyconfigurationcomplete) `     | protected | `void` | This API is called when the current web part configuration process is completed |
-|`[onPropertyPaneRendered](#onpropertypanerendered) `     | protected | `void` | This API is involed when the PropertyPane is rendered |
-|`[onPropertyPaneSave](#onpropertypanesave) `     | protected | `void` | this API is invoked when the the changes are applied on the PropertyPane when the PropertyPane is used in  Non-Reactive mode |
-|`[render](#render) `     | public | `void` | This API is called to render the web part |
-|`[renderError](#rendererror) `     | protected | `void` | This API should be used to render an error message in the web part display area |
+|[constructor](#constructor)     | public | `[BaseClientSideWebPart](BaseClientSideWebPart.md)` | e |
+|[clearError](#clearerror)     | protected | `void` | This API should be used to clear the error message from the web part display area |
+|[configureStart](#configurestart)     | protected | `void` | if it is not already open |
+|[deserialize](#deserialize)     | protected | `TProperties` | This API is called once during the lifetime of the web part during the intial render and just before the onInit  API call |
+|[dispose](#dispose)     | protected | `void` | This API is called at the end of the web part lifecycle |
+|[onBeforeSerialize](#onbeforeserialize)     | protected | `[IHtmlProperties](IHtmlProperties.md)` | the documentation of IHtmlProperties interface for more details |
+|[onDisplayModeChanged](#ondisplaymodechanged)     | protected | `void` | This API is called when the display mode of a web part is changed |
+|[onInit](#oninit)     | protected | `Promise<T>` | This API should be overridden to perform long running operations e |
+|[onPropertyChange](#onpropertychange)     | protected | `void` | This API is invoked on property changes in the PropertyPane when the PropertyPane is being used in Reactive mode |
+|[onPropertyConfigurationComplete](#onpropertyconfigurationcomplete)     | protected | `void` | This API is called when the current web part configuration process is completed |
+|[onPropertyPaneRendered](#onpropertypanerendered)     | protected | `void` | This API is involed when the PropertyPane is rendered |
+|[onPropertyPaneSave](#onpropertypanesave)     | protected | `void` | this API is invoked when the the changes are applied on the PropertyPane when the PropertyPane is used in  Non-Reactive mode |
+|[render](#render)     | public | `void` | This API is called to render the web part |
+|[renderError](#rendererror)     | protected | `void` | This API should be used to render an error message in the web part display area |
 
 
 

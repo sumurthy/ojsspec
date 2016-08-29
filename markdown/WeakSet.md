@@ -11,10 +11,10 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|`[delete](#delete)`      | ` boolean `|  |
-|`[clear](#clear)`      | ` void `|  |
-|`[add](#add)`      | `[ WeakSet<T>](WeakSet.md) `|  |
-|`[has](#has)`      | ` boolean `|  |
+|[delete](#delete)      | ` boolean `|  |
+|[clear](#clear)      | ` void `|  |
+|[add](#add)      | `[ WeakSet<T>](WeakSet.md) `|  |
+|[has](#has)      | ` boolean `|  |
 
 
 

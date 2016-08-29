@@ -17,7 +17,7 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|`[new](#new)`      | `[ WeakSet<T>](WeakSet.md) `|  |
+|[new](#new)      | `[ WeakSet<T>](WeakSet.md) `|  |
 
 
 

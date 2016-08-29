@@ -8,7 +8,7 @@
 
 | Class	   |  Description |
 |:-------------|:---------------|
->| `[%name%](%link%.md)`     | %description% |
+>| [%name%](%link%.md)     | %description% |
 
 </class>
 
@@ -18,7 +18,7 @@
 
 | Class	   |  Description |
 |:-------------|:---------------|
->| `[%name%](%link%.md)`     | %description%  |
+>| [%name%](%link%.md)   | %description%  |
 
 </interface>
 
@@ -28,7 +28,7 @@
 
 | Function	   | Returns | Description |
 |:-------------|:------|:---------------|
->| `[%name%](%link%.md)` |`%returns% `   | %description%  |
+>| [%name%](%link%.md) |`%returns% `   | %description%  |
 
 </functions>
 
@@ -37,6 +37,6 @@
 
 | Enumeration	   | Description|
 |:-----------|:------------|
->|`[%name%](%link%.md)`     | %description% |
+>|[%name%](%link%.md)    | %description% |
 
 </enumeration>

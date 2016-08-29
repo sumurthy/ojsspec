@@ -5,7 +5,7 @@
 
 | Class	   |  Description |
 |:-------------|:---------------|
-| `[Promise](Promise.md)`     |  |
+| [Promise](Promise.md)     |  |
 
 
 
@@ -13,7 +13,7 @@
 
 | Class	   |  Description |
 |:-------------|:---------------|
-| `[Thenable<R>](Thenable<R>.md)`     |   |
+| [Thenable<R>](Thenable<R>.md)   |   |
 
 
 
@@ -21,9 +21,9 @@
 
 | Function	   | Returns | Description |
 |:-------------|:------|:---------------|
-| `[resolve<R>](resolve<R>.md)` |`Promise<R> `   | Make a new promise from the thenable  |
-| `[reject](reject.md)` |`Promise<any> `   | Make a promise that rejects to obj  |
-| `[all<R>](all<R>.md)` |`Promise<R[]> `   | Make a promise that fulfills when every item in the array fulfills, and rejects if (and when) any item rejects  |
-| `[race<R>](race<R>.md)` |`Promise<R> `   | Make a Promise that fulfills when any item fulfills, and rejects if any item rejects  |
+| [resolve<R>](resolve<R>.md) |`Promise<R> `   | Make a new promise from the thenable  |
+| [reject](reject.md) |`Promise<any> `   | Make a promise that rejects to obj  |
+| [all<R>](all<R>.md) |`Promise<R[]> `   | Make a promise that fulfills when every item in the array fulfills, and rejects if (and when) any item rejects  |
+| [race<R>](race<R>.md) |`Promise<R> `   | Make a Promise that fulfills when any item fulfills, and rejects if any item rejects  |
 
 

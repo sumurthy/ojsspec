@@ -28,7 +28,7 @@ Web part context interface.
 
 | Function	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|`configureStart: `     | undefined | `` | Function to open the PropertyPane to help configure this web part |
+|configureStart:      | undefined | `` | Function to open the PropertyPane to help configure this web part |
 
 
 

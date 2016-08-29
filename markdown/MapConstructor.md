@@ -17,7 +17,7 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|`[new](#new)`      | ` Map<K, V> `|  |
+|[new](#new)      | ` Map<K, V> `|  |
 
 
 

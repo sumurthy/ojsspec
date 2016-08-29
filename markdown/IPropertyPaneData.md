@@ -19,12 +19,12 @@ Web part - PropertyPane data contract.
 
 | Function	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|`onClose: `     | undefined | `` | Event callback for 'Close' click |
-|`onConfigurationComplete: `     | undefined | `` | Event callback fired when the configuration is completed for the web part |
-|`onLostFocus: `     | undefined | `` | Event callback fired when the focus is handed back to the web part |
-|`onPropertyChange: `     | undefined | `` | Notification event fired when the property has already been validated and modified |
-|`onRendered: `     | undefined | `` | Event callback fired after the PropertyPane is rendered |
-|`onSave: `     | undefined | `` | Event callback for 'Apply' click |
+|onClose:      | undefined | `` | Event callback for 'Close' click |
+|onConfigurationComplete:      | undefined | `` | Event callback fired when the configuration is completed for the web part |
+|onLostFocus:      | undefined | `` | Event callback fired when the focus is handed back to the web part |
+|onPropertyChange:      | undefined | `` | Notification event fired when the property has already been validated and modified |
+|onRendered:      | undefined | `` | Event callback fired after the PropertyPane is rendered |
+|onSave:      | undefined | `` | Event callback for 'Apply' click |
 
 
 

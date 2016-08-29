@@ -24,7 +24,7 @@
 
 | Function	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|`onClick: `     | undefined | `` | for an individual element |
+|onClick:      | undefined | `` | for an individual element |
 
 
 

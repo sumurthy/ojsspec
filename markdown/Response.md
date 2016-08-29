@@ -20,9 +20,9 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|`[constructor](#constructor) `     | public | `[Response](Response.md)` |  |
-|`[Response](#response) `     | clone(): | `[Response](Response.md)` |  |
-|`[string,](#string,) `     | redirect(url: | `[Response](Response.md)` |  |
+|[constructor](#constructor)     | public | `[Response](Response.md)` |  |
+|[Response](#response)     | clone(): | `[Response](Response.md)` |  |
+|[string,](#string,)     | redirect(url: | `[Response](Response.md)` |  |
 
 
 

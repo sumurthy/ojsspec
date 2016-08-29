@@ -17,7 +17,7 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|`[domElement:](#domelement:) `     | public | `HTMLElement = document.createElement('div')` |  |
+|[domElement:](#domelement:)     | public | `HTMLElement = document.createElement('div')` |  |
 
 
 

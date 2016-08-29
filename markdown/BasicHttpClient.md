@@ -18,11 +18,11 @@ enhancements.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|`[constructor](#constructor) `     | public | `[BasicHttpClient](BasicHttpClient.md)` |  |
-|`[fetch](#fetch) `     | public | `Promise<Response>` | Performs a REST service call |
-|`[fetchCore](#fetchcore) `     | protected | `Promise<Response>` | Performs a REST service call |
-|`[get](#get) `     | public | `Promise<Response>` | Calls fetch(), but sets the method to 'GET' |
-|`[post](#post) `     | public | `Promise<Response>` | Calls fetch(), but sets the method to 'POST' |
+|[constructor](#constructor)     | public | `[BasicHttpClient](BasicHttpClient.md)` |  |
+|[fetch](#fetch)     | public | `Promise<Response>` | Performs a REST service call |
+|[fetchCore](#fetchcore)     | protected | `Promise<Response>` | Performs a REST service call |
+|[get](#get)     | public | `Promise<Response>` | Calls fetch(), but sets the method to 'GET' |
+|[post](#post)     | public | `Promise<Response>` | Calls fetch(), but sets the method to 'POST' |
 
 
 

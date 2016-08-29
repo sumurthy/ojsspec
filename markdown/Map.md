@@ -17,14 +17,14 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|`[clear](#clear)`      | ` void `|  |
-|`[delete](#delete)`      | ` boolean `|  |
-|`[get](#get)`      | ` V `|  |
-|`[has](#has)`      | ` boolean `|  |
-|`[set](#set)`      | ` Map<K, V> `|  |
-|`[entries](#entries)`      | ` Iterator<[K, V]> `|  |
-|`[keys](#keys)`      | ` Iterator<K> `|  |
-|`[values](#values)`      | ` Iterator<V> `|  |
+|[clear](#clear)      | ` void `|  |
+|[delete](#delete)      | ` boolean `|  |
+|[get](#get)      | ` V `|  |
+|[has](#has)      | ` boolean `|  |
+|[set](#set)      | ` Map<K, V> `|  |
+|[entries](#entries)      | ` Iterator<[K, V]> `|  |
+|[keys](#keys)      | ` Iterator<K> `|  |
+|[values](#values)      | ` Iterator<V> `|  |
 
 
 
@@ -32,7 +32,7 @@
 
 | Function	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|`forEach `     | undefined | `` |  |
+|forEach      | undefined | `` |  |
 
 
 

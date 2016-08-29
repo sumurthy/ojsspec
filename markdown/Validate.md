@@ -13,7 +13,7 @@ that might impact performance.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|`[static](#static) `     | public | `void` | Throws an exception if the specified value is not true |
+|[static](#static)     | public | `void` | Throws an exception if the specified value is not true |
 
 
 
