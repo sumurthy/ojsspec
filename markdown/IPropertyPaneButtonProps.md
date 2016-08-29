@@ -44,5 +44,5 @@ todo: VSO# 233578:PropertyPane Button OnClick event api.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | `any` |  |
+| `value`    | any |  |
 

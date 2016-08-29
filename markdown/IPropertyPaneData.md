@@ -76,8 +76,8 @@ Notification event fired when the property has already been validated and modifi
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `propertyName`    | `string` |  |
-| `newValue`    | `any` |  |
+| `propertyName`    | string |  |
+| `newValue`    | any |  |
 
 
 ## onRendered:

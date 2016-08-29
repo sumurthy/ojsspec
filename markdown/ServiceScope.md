@@ -82,7 +82,7 @@ PRIVATE CONSTRUCTOR - DO NOT CALL THIS FROM YOUR OWN CODE.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `parent`    | `[ServiceScope](ServiceScope.md)` |  |
+| `parent`    | [ServiceScope](ServiceScope.md) |  |
 
 
 ## consume
@@ -100,7 +100,7 @@ instance will be autocreated and registered with the root ServiceScope.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceKey`    | `ServiceKey<T>` |  |
+| `serviceKey`    | ServiceKey<T> |  |
 
 
 ## {
@@ -117,7 +117,7 @@ simpleServiceClass, then registering it by calling ServiceScope.provide().
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceScope`    | `[ServiceScope](ServiceScope.md)` |  |
+| `serviceScope`    | [ServiceScope](ServiceScope.md) |  |
 
 
 ## createDefaultAndProvide
@@ -134,7 +134,7 @@ serviceKey, and then registers it by calling ServiceScope.provide().
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceKey`    | `ServiceKey<T>` |  |
+| `serviceKey`    | ServiceKey<T> |  |
 
 
 ## finish
@@ -182,8 +182,8 @@ state, i.e. before finish() has been called.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceKey`    | `ServiceKey<T>` |  |
-| `service`    | `T` |  |
+| `serviceKey`    | ServiceKey<T> |  |
+| `service`    | T |  |
 
 
 ## startNewChild
@@ -230,5 +230,5 @@ later when the scope is finished.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `callback`    | `(` |  |
+| `callback`    | ( |  |
 

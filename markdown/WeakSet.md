@@ -31,7 +31,7 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | `T` |  |
+| `value`    | T |  |
 
 
 ## clear
@@ -59,7 +59,7 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | `T` |  |
+| `value`    | T |  |
 
 
 ## has
@@ -75,5 +75,5 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | `T` |  |
+| `value`    | T |  |
 

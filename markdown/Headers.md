@@ -37,8 +37,8 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `name`    | `string` |  |
-| `value`    | `string` |  |
+| `name`    | string |  |
+| `value`    | string |  |
 
 
 ## string):void
@@ -54,7 +54,7 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `name`    | `string` |  |
+| `name`    | string |  |
 
 
 ## string):
@@ -70,7 +70,7 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `name`    | `string` |  |
+| `name`    | string |  |
 
 
 ## ErrorErrorError
@@ -86,6 +86,6 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `callback`    | `(value` |  |
-| `name`    | `string` |  |
+| `callback`    | (value |  |
+| `name`    | string |  |
 

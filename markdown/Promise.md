@@ -33,7 +33,7 @@ Any errors thrown in the constructor callback will be implicitly passed to rejec
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `callback`    | `(resolve` |  |
+| `callback`    | (resolve |  |
 
 
 ## ErrorErrorError
@@ -50,5 +50,5 @@ Sugar for promise.then(undefined, onRejected)
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `onRejected`    | `(error` | _Optional._ |
+| `onRejected`    | (error | _Optional._ |
 

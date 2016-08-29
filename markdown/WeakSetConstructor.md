@@ -34,5 +34,5 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `iterable`    | `[ForEachable<T>](ForEachable.md)` |  |
+| `iterable`    | [ForEachable<T>](ForEachable.md) |  |
 

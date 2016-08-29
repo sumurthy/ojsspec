@@ -38,7 +38,7 @@ convertToODataStringLiteral("'example list'") ---> "'''example list'''"
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | `string` |  |
+| `value`    | string |  |
 
 
 ## removeEndSlash
@@ -59,5 +59,5 @@ removeEndSlash('/') ---> ''
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | `string` |  |
+| `url`    | string |  |
 

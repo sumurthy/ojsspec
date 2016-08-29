@@ -31,7 +31,7 @@ Clear the webpart error message.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `domElement`    | `HTMLElement` |  |
+| `domElement`    | HTMLElement |  |
 
 
 ## clearLoadingIndicator
@@ -47,7 +47,7 @@ Clear the loading indicator.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `domElement`    | `Element` |  |
+| `domElement`    | Element |  |
 
 
 ## displayLoadingIndicator
@@ -63,8 +63,8 @@ Display a loading spinner.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `domElement`    | `Element` |  |
-| `loadingMessage`    | `string` |  |
+| `domElement`    | Element |  |
+| `loadingMessage`    | string |  |
 
 
 ## renderError
@@ -80,6 +80,6 @@ Render the provided error message in the webpart container div.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `domElement`    | `HTMLElement` |  |
-| `error`    | `Error , string` |  |
+| `domElement`    | HTMLElement |  |
+| `error`    | Error , string |  |
 

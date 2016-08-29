@@ -44,9 +44,9 @@ PRIVATE - Do not call this from your own code.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `id`    | `string` |  |
-| `name`    | `string` |  |
-| `defaultCreator`    | `ServiceCreator<T>` |  |
+| `id`    | string |  |
+| `name`    | string |  |
+| `defaultCreator`    | ServiceCreator<T> |  |
 
 
 ## {
@@ -62,7 +62,7 @@ your application.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceScope`    | `[ServiceScope](ServiceScope.md)` |  |
+| `serviceScope`    | [ServiceScope](ServiceScope.md) |  |
 
 
 ## createCustom
@@ -78,6 +78,6 @@ your application.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `name`    | `string` |  |
-| `defaultCreator`    | `ServiceCreator<T>` |  |
+| `name`    | string |  |
+| `defaultCreator`    | ServiceCreator<T> |  |
 

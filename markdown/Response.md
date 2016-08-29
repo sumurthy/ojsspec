@@ -41,8 +41,8 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `body`    | `BodyInit` | _Optional._ |
-| `init`    | `[ResponseInit](ResponseInit.md)` | _Optional._ |
+| `body`    | BodyInit | _Optional._ |
+| `init`    | [ResponseInit](ResponseInit.md) | _Optional._ |
 
 
 ## Response
@@ -70,6 +70,6 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | `string` |  |
-| `status`    | `number` |  |
+| `url`    | string |  |
+| `status`    | number |  |
 

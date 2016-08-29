@@ -53,5 +53,5 @@ When it returns Promise<string>:
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | `string` |  |
+| `value`    | string |  |
 

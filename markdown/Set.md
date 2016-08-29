@@ -47,7 +47,7 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | `T` |  |
+| `value`    | T |  |
 
 
 ## clear
@@ -75,7 +75,7 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | `T` |  |
+| `value`    | T |  |
 
 
 ## has
@@ -91,7 +91,7 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | `T` |  |
+| `value`    | T |  |
 
 
 ## entries
@@ -143,7 +143,7 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `callbackfn`    | `(value` |  |
-| `index`    | `T` |  |
-| `set`    | `[Set<T>](Set.md)` |  |
+| `callbackfn`    | (value |  |
+| `index`    | T |  |
+| `set`    | [Set<T>](Set.md) |  |
 

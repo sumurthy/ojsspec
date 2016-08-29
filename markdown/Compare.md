@@ -32,6 +32,6 @@ only object types.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `objA`    | `Object` |  |
-| `objB`    | `Object` |  |
+| `objA`    | Object |  |
+| `objB`    | Object |  |
 

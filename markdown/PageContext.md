@@ -42,5 +42,5 @@ application cache.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceScope`    | `[ServiceScope](ServiceScope.md)` |  |
+| `serviceScope`    | [ServiceScope](ServiceScope.md) |  |
 

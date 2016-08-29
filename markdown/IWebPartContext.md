@@ -44,6 +44,6 @@ Function to open the PropertyPane to help configure this web part.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `id`    | `string` |  |
-| `propertyPaneState`    | `PropertyPaneState` | _Optional._ |
+| `id`    | string |  |
+| `propertyPaneState`    | PropertyPaneState | _Optional._ |
 

@@ -60,7 +60,7 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key`    | `K` |  |
+| `key`    | K |  |
 
 
 ## get
@@ -76,7 +76,7 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key`    | `K` |  |
+| `key`    | K |  |
 
 
 ## has
@@ -92,7 +92,7 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key`    | `K` |  |
+| `key`    | K |  |
 
 
 ## set
@@ -108,8 +108,8 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key`    | `K` |  |
-| `value`    | `V` | _Optional._ |
+| `key`    | K |  |
+| `value`    | V | _Optional._ |
 
 
 ## entries
@@ -161,8 +161,8 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `callbackfn`    | `(value` |  |
-| `index`    | `K` |  |
-| `map`    | `Map<K` |  |
-| `V>`    | `` |  |
+| `callbackfn`    | (value |  |
+| `index`    | K |  |
+| `map`    | Map<K |  |
+| `V>`    |  |  |
 

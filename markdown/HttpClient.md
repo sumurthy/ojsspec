@@ -38,7 +38,7 @@ class instead.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceScope`    | `[ServiceScope](ServiceScope.md)` |  |
+| `serviceScope`    | [ServiceScope](ServiceScope.md) |  |
 
 
 ## beginBatch
@@ -55,7 +55,7 @@ a single web request.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `batchOptions`    | `[IODataBatchOptions](IODataBatchOptions.md)` | _Optional._ |
+| `batchOptions`    | [IODataBatchOptions](IODataBatchOptions.md) | _Optional._ |
 
 
 ## fetch
@@ -89,8 +89,8 @@ to specify it explicitly.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | `string` |  |
-| `options`    | `[IHttpClientOptions](IHttpClientOptions.md)` |  |
+| `url`    | string |  |
+| `options`    | [IHttpClientOptions](IHttpClientOptions.md) |  |
 
 
 ## get
@@ -106,8 +106,8 @@ Calls fetch(), but sets the method to 'GET'.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | `string` |  |
-| `options`    | `[IHttpClientOptions](IHttpClientOptions.md)` | _Optional._ |
+| `url`    | string |  |
+| `options`    | [IHttpClientOptions](IHttpClientOptions.md) | _Optional._ |
 
 
 ## getWebUrlFromRequestUrl
@@ -130,7 +130,7 @@ is "http://example.com/_layouts/service", the returned URL would be
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `requestUrl`    | `string` |  |
+| `requestUrl`    | string |  |
 
 
 ## post
@@ -146,6 +146,6 @@ Calls fetch(), but sets the method to 'POST'.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | `string` |  |
-| `options`    | `[IHttpClientOptions](IHttpClientOptions.md)` |  |
+| `url`    | string |  |
+| `options`    | [IHttpClientOptions](IHttpClientOptions.md) |  |
 
