@@ -488,6 +488,7 @@ function genFunctionView() {
         genMemberview(e, functionObj[e], func_mdout, false)
         console.log(`*** Writing Function file for ${e}`)
         FileOps.writeFile(func_mdout, `./markdown/${Utils.trimGenerics(e)}.md`)
+        func_mdout = []
     })
 }
 
