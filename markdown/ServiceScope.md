@@ -1,4 +1,4 @@
-# ServiceScope resource type
+# ServiceScope class
 
 ServiceScope provides a formalized way for components to register and consume dependencies 
 ("services"), and to enable different implementations to be registered in different scopes. 
@@ -50,18 +50,185 @@ serviceScope.whenFinished().
 
 
 
+
 ## Methods
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|constructor      | public | [ServiceScope](ServiceScope.md) | PRIVATE CONSTRUCTOR - DO NOT CALL THIS FROM YOUR OWN CODE |
-|consume      | public | T | Components should call this function to "consume" a dependency, i |
-|createDefaultAndProvide      | public | T | This is a shorthand function that constructs the default implementation of the specified  serviceKey, and then registers it by calling ServiceScope |
-|finish      | public | void | When a ServiceScope is first started, it is in an "unfinished" state where provide() is  allowed but consume() is not allowed |
-|getParent      | public | [ServiceScope](ServiceScope.md) | Returns the parent of the current ServiceScope, or undefined if this is a root scope |
-|provide      | public | T | ServiceScope |
-|startNewChild      | public | [ServiceScope](ServiceScope.md) | Constructs a new ServiceScope that is a child of the current scope |
-|static      | public | [ServiceScope](ServiceScope.md) | Create a new root-level ServiceScope |
-|whenFinished      | public | void | It is an error to call ServiceScope |
+|[constructor](#constructor)      | public | [ServiceScope](ServiceScope.md) | PRIVATE CONSTRUCTOR - DO NOT CALL THIS FROM YOUR OWN CODE |
+|[consume](#consume)      | public | T | Components should call this function to "consume" a dependency, i |
+|[createDefaultAndProvide](#createdefaultandprovide)      | public | T | This is a shorthand function that constructs the default implementation of the specified  serviceKey, and then registers it by calling ServiceScope |
+|[finish](#finish)      | public | void | When a ServiceScope is first started, it is in an "unfinished" state where provide() is  allowed but consume() is not allowed |
+|[getParent](#getparent)      | public | [ServiceScope](ServiceScope.md) | Returns the parent of the current ServiceScope, or undefined if this is a root scope |
+|[provide](#provide)      | public | T | ServiceScope |
+|[startNewChild](#startnewchild)      | public | [ServiceScope](ServiceScope.md) | Constructs a new ServiceScope that is a child of the current scope |
+|[static](#static)      | public | [ServiceScope](ServiceScope.md) | Create a new root-level ServiceScope |
+|[whenFinished](#whenfinished)      | public | void | It is an error to call ServiceScope |
 
+
+
+
+## constructor
+
+PRIVATE CONSTRUCTOR - DO NOT CALL THIS FROM YOUR OWN CODE.
+
+##### Signature
+constructor(parent: ServiceScope)
+
+#### Returns
+ServiceScope
+
+#### Parameters
+
+
+| Parameter	   | Type    | Description |
+|:-------------|:---------------|:------------|
+| parent     | undefined | %optional% undefined |
+
+
+## consume
+
+Components should call this function to "consume" a dependency, i.e. look up the serviceKey 
+and return the registered service instance. If the instance cannot be found, then a default 
+instance will be autocreated and registered with the root ServiceScope.
+
+##### Signature
+consume < T >(serviceKey: ServiceKey<T>): T
+
+#### Returns
+T
+
+#### Parameters
+
+
+| Parameter	   | Type    | Description |
+|:-------------|:---------------|:------------|
+| serviceKey     | undefined | %optional% undefined |
+
+
+## createDefaultAndProvide
+
+This is a shorthand function that constructs the default implementation of the specified 
+serviceKey, and then registers it by calling ServiceScope.provide().
+
+##### Signature
+createDefaultAndProvide < T >(serviceKey: ServiceKey<T>): T
+
+#### Returns
+T
+
+#### Parameters
+
+
+| Parameter	   | Type    | Description |
+|:-------------|:---------------|:------------|
+| serviceKey     | undefined | %optional% undefined |
+
+
+## finish
+
+When a ServiceScope is first started, it is in an "unfinished" state where provide() is 
+allowed but consume() is not allowed. After calling finish(), then consume() is allowed 
+but provide() is not allowed. This formalism completely eliminates a number of tricky bugs 
+such as: Scope2 is a child of Scope1, and Scope1 provides instance A1 of interface A; 
+if someone consumes A1 from Scope2 (via inheritance) before Scope2.provide() is called 
+with A2, then a subsequent call to Scope2.consume() might return a different result than 
+the previous call, which would be very confusing for developers.
+
+##### Signature
+finish(): void
+
+#### Returns
+void
+
+#### Parameters
+None
+
+
+## getParent
+
+Returns the parent of the current ServiceScope, or undefined if this is a root scope.
+
+##### Signature
+getParent(): ServiceScope
+
+#### Returns
+ServiceScope
+
+#### Parameters
+None
+
+
+## provide
+
+ServiceScope.provide() is used to register an implemententation of the given serviceKey 
+for the current scope. It may only be used when the ServiceScope is in an "unfinished" 
+state, i.e. before finish() has been called.
+
+##### Signature
+provide < T >(serviceKey: ServiceKey<T>, service: T): T
+
+#### Returns
+T
+
+#### Parameters
+
+
+| Parameter	   | Type    | Description |
+|:-------------|:---------------|:------------|
+| serviceKey     | undefined | %optional% undefined |
+| service     | undefined | %optional% undefined |
+
+
+## startNewChild
+
+Constructs a new ServiceScope that is a child of the current scope. For any keys 
+that are not explicitly provided by the child scope, the parent hierarchy will be 
+consulted.
+
+##### Signature
+startNewChild(): ServiceScope
+
+#### Returns
+ServiceScope
+
+#### Parameters
+None
+
+
+## static
+
+Create a new root-level ServiceScope. Only root-level scopes have the ability to autocreate 
+default implementations of ServiceKeys.
+
+##### Signature
+static startNewRoot(): ServiceScope
+
+#### Returns
+ServiceScope
+
+#### Parameters
+None
+
+
+## whenFinished
+
+It is an error to call ServiceScope.consume() before finish() has been called. 
+The most reliable way to protect your component against this error is to perform the 
+consume() calls inside a whenFinished() callback. If the service scope is already 
+finished, then the callback will be executed immediately; otherwise, it will be executed 
+later when the scope is finished.
+
+##### Signature
+whenFinished(callback: () => void): void
+
+#### Returns
+void
+
+#### Parameters
+
+
+| Parameter	   | Type    | Description |
+|:-------------|:---------------|:------------|
+| callback     | undefined | %optional% undefined |
 

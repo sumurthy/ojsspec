@@ -4,564 +4,508 @@
     "descr": "",
     "properties": {
       "entryName": {
-        "entryName ?": {
-          "descr": "If present, this is the name of a field on the module returned from the associated bundle that maps to \nthis library. Otherwise, the module returned from the bundle maps to this library.",
-          "isOptional": true,
-          "type": " string",
-          "isCollection": false
-        }
+        "descr": "If present, this is the name of a field on the module returned from the associated bundle that maps to \nthis library. Otherwise, the module returned from the bundle maps to this library.",
+        "dataType": "string",
+        "isOptional": true,
+        "type": " string",
+        "isCollection": false
       },
       "id:": {
-        "id": {
-          "descr": "The ID of the module.",
-          "isOptional": false,
-          "type": " string",
-          "isCollection": false
-        }
+        "descr": "The ID of the module.",
+        "dataType": "string",
+        "isOptional": false,
+        "type": " string",
+        "isCollection": false
       }
     },
     "functions": {},
-    "objects": [],
-    "methods": []
+    "objects": {},
+    "methods": {}
   },
   "IClientSideComponentLoaderConfig": {
     "extendsName": null,
     "descr": "framework. It contains all data for loading an entrypoint script and its dependency scripts. \n",
     "properties": {
       "entryModuleId:": {
-        "entryModuleId": {
-          "descr": "Definition: This is the ID of one of the entries in the \"scriptResources\" dictionary. The loader will download and \nevaluate the script resource referenced in this field, resolve all dependencies against the keys in the \n\"scriptResources\", and return the exported object to the loader's calling function. The entry referenced in the \n\"scriptResources\" dictionary must be of the \"internal\" or the \"localized\" type. \nRequired: yes \nLocalized: no \nSupported values: An entry in the \"scriptResources\" dictionary that defines the base exported module of the \ncomponent. \nExample: \"myApplication.bundle\"",
-          "isOptional": false,
-          "type": " string",
-          "isCollection": false
-        }
+        "descr": "Definition: This is the ID of one of the entries in the \"scriptResources\" dictionary. The loader will download and \nevaluate the script resource referenced in this field, resolve all dependencies against the keys in the \n\"scriptResources\", and return the exported object to the loader's calling function. The entry referenced in the \n\"scriptResources\" dictionary must be of the \"internal\" or the \"localized\" type. \nRequired: yes \nLocalized: no \nSupported values: An entry in the \"scriptResources\" dictionary that defines the base exported module of the \ncomponent. \nExample: \"myApplication.bundle\"",
+        "dataType": "string",
+        "isOptional": false,
+        "type": " string",
+        "isCollection": false
       },
       "exportedModuleName": {
-        "exportedModuleName ?": {
-          "descr": "Definition: The module referenced by the \"entryModuleId\" field may export an object with several fields. This value \noptionally references the name of a field on the object exported by the module referenced by the \"entryModuleId\" \nfield. When this field has a value, the value of the referenced field on the object exported by the module \nreferenced by the \"entryModuleId\" field is returned when this manifest is loaded instead of the base exported \nobject. For example, if entryModuleId refers to a module with with a top-level export of \n\"{ foo: 'bar', baz: 123 }\" and: \n- if this field is unset, the value returned by the modue loader is \"{ foo: 'bar', baz: 123 }\" \n- if this field is set to \"foo\", the value returned by the modue loader is \"bar\" \n- if this field is set to \"bar\", the value returned by the modue loader is undefined (as \"bar\" is not a key in \nthe top-level export). \n \nUsage: To reference a field in the top-level export. \nRequired: no \nExample: mySpWebpart",
-          "isOptional": true,
-          "type": " string",
-          "isCollection": false
-        }
+        "descr": "Definition: The module referenced by the \"entryModuleId\" field may export an object with several fields. This value \noptionally references the name of a field on the object exported by the module referenced by the \"entryModuleId\" \nfield. When this field has a value, the value of the referenced field on the object exported by the module \nreferenced by the \"entryModuleId\" field is returned when this manifest is loaded instead of the base exported \nobject. For example, if entryModuleId refers to a module with with a top-level export of \n\"{ foo: 'bar', baz: 123 }\" and: \n- if this field is unset, the value returned by the modue loader is \"{ foo: 'bar', baz: 123 }\" \n- if this field is set to \"foo\", the value returned by the modue loader is \"bar\" \n- if this field is set to \"bar\", the value returned by the modue loader is undefined (as \"bar\" is not a key in \nthe top-level export). \n \nUsage: To reference a field in the top-level export. \nRequired: no \nExample: mySpWebpart",
+        "dataType": "string",
+        "isOptional": true,
+        "type": " string",
+        "isCollection": false
       },
       "internalModuleBaseUrls:": {
-        "internalModuleBaseUrls": {
-          "descr": "Definition: This is an array of fully-qualified paths to be prepended to each of the script resource paths with the \n\"internal\" or \"localized\" type. If one fails to load, the loader will attempt to load from the next until there \nare no base paths remaning. All \"internal\" and \"localized\" script resources that do not have fully-qualified URLs \nas their \"path\" field values must be hosted under each of the paths listed in this property. For example, if an \ninternal module's \"path\" field value is \"master_2015-04-20/my-application.bundle_1928f8a0.js\" and this field's \nvalue is [ \"https://contoso.akamaihd.net/files/\", \"https://contoso.msecnd.net/files/\" ], the loader will first \nattempt to load this script resource from the URL \n\"https://contoso.akamaihd.net/files/master_2015-04-20/my-application.bundle_1928f8a0.js\". If loading from \nthat URL fails, the loader will then attempt to load this script resource from \n\"https://contoso.msecnd.net/files/master_2015-04-20/my-application.bundle_1928f8a0.js\". If that URL fails to load, \nthe component will fail to load and an error will be returned. It is important to note that the support for \nmultiple base URLs is purely for failover support. This means that all files must be present on all hosts \nlisted in this field. \nUsage: Base URLs for script resources with the \"internal\" or \"localized\" type. \nRequired: yes \nLocalized: no \nSupported values: Any URL that contains all internal scripts referenced in the \"scriptResources\" dictionary. \nExample: [ \"https://contoso.akamaihd.net/files/\", \"https://contoso.msecnd.net/files/\" ]",
-          "isOptional": false,
-          "type": " string",
-          "isCollection": true
-        }
+        "descr": "Definition: This is an array of fully-qualified paths to be prepended to each of the script resource paths with the \n\"internal\" or \"localized\" type. If one fails to load, the loader will attempt to load from the next until there \nare no base paths remaning. All \"internal\" and \"localized\" script resources that do not have fully-qualified URLs \nas their \"path\" field values must be hosted under each of the paths listed in this property. For example, if an \ninternal module's \"path\" field value is \"master_2015-04-20/my-application.bundle_1928f8a0.js\" and this field's \nvalue is [ \"https://contoso.akamaihd.net/files/\", \"https://contoso.msecnd.net/files/\" ], the loader will first \nattempt to load this script resource from the URL \n\"https://contoso.akamaihd.net/files/master_2015-04-20/my-application.bundle_1928f8a0.js\". If loading from \nthat URL fails, the loader will then attempt to load this script resource from \n\"https://contoso.msecnd.net/files/master_2015-04-20/my-application.bundle_1928f8a0.js\". If that URL fails to load, \nthe component will fail to load and an error will be returned. It is important to note that the support for \nmultiple base URLs is purely for failover support. This means that all files must be present on all hosts \nlisted in this field. \nUsage: Base URLs for script resources with the \"internal\" or \"localized\" type. \nRequired: yes \nLocalized: no \nSupported values: Any URL that contains all internal scripts referenced in the \"scriptResources\" dictionary. \nExample: [ \"https://contoso.akamaihd.net/files/\", \"https://contoso.msecnd.net/files/\" ]",
+        "dataType": "string[]",
+        "isOptional": false,
+        "type": " string",
+        "isCollection": true
       }
     },
     "functions": {},
-    "objects": [],
-    "methods": []
+    "objects": {},
+    "methods": {}
   },
   "IClientSideLibraryManifest": {
     "extendsName": "IClientSideComponentManifest",
     "descr": "A library is defined by this manifest. Libraries currently do not have any additional properties. \n",
     "properties": {
       "componentType:": {
-        "componentType": {
-          "descr": "Definition: Type of client side component. Components with the \"Application\" type are defined by the \n\"IClientSideApplicationManifest\" interface. Components with the \"WebPart\" type are defined by the \n\"IClientSideWebPartManifest\" interface. Components with the \"Library\" type are defined by the \n\"IClientSideLibraryManifest\" interface. \nUsage: To help bundling, loading, enumeration, and initialization of components based on their contents. \nRequired: yes \nLocalized: no \nSupported values: \"Application\", \"WebPart\", \"Library\" \nExample: \"Application\"",
-          "isOptional": false,
-          "type": " 'Application' | 'WebPart' | 'Library'",
-          "isCollection": false
-        }
+        "descr": "Definition: Type of client side component. Components with the \"Application\" type are defined by the \n\"IClientSideApplicationManifest\" interface. Components with the \"WebPart\" type are defined by the \n\"IClientSideWebPartManifest\" interface. Components with the \"Library\" type are defined by the \n\"IClientSideLibraryManifest\" interface. \nUsage: To help bundling, loading, enumeration, and initialization of components based on their contents. \nRequired: yes \nLocalized: no \nSupported values: \"Application\", \"WebPart\", \"Library\" \nExample: \"Application\"",
+        "dataType": "'Application' | 'WebPart' | 'Library'",
+        "isOptional": false,
+        "type": " 'Application' | 'WebPart' | 'Library'",
+        "isCollection": false
       },
       "id:": {
-        "id": {
-          "descr": "Definition: A universally unique component id. Each client side component is required to have this id. Once an \nid has been used for a component, it cannot be changed. A change in this value is treated same as the creation of \na new component. Two components are never expected to have the same id. \nUsage: Uniquely identify a client side component. \nRequired: yes \nLocalized: no \nSupported values: any GUID \nExample: \"dbef608d-3ad5-4f8f-b139-d916f2f0a294\"",
-          "isOptional": false,
-          "type": " string",
-          "isCollection": false
-        }
+        "descr": "Definition: A universally unique component id. Each client side component is required to have this id. Once an \nid has been used for a component, it cannot be changed. A change in this value is treated same as the creation of \na new component. Two components are never expected to have the same id. \nUsage: Uniquely identify a client side component. \nRequired: yes \nLocalized: no \nSupported values: any GUID \nExample: \"dbef608d-3ad5-4f8f-b139-d916f2f0a294\"",
+        "dataType": "string",
+        "isOptional": false,
+        "type": " string",
+        "isCollection": false
       },
       "loaderConfig:": {
-        "loaderConfig": {
-          "descr": "Definition: This portion of the configuration describes how the component is to be loaded and initialized by a \nclient. It contains an enumeration of scripts that the component requires along with a single entrypoint script. \nUsage: Loading a component. \nRequired: yes \n",
-          "isOptional": false,
-          "type": " IClientSideComponentLoaderConfig",
-          "isCollection": false
-        }
+        "descr": "Definition: This portion of the configuration describes how the component is to be loaded and initialized by a \nclient. It contains an enumeration of scripts that the component requires along with a single entrypoint script. \nUsage: Loading a component. \nRequired: yes \n",
+        "dataType": "IClientSideComponentLoaderConfig",
+        "isOptional": false,
+        "type": " IClientSideComponentLoaderConfig",
+        "isCollection": false
       },
       "manifestVersion:": {
-        "manifestVersion": {
-          "descr": "Definition: Version of the component manifest schema. The value of this field is controlled by Microsoft. The \npurpose of this field is to help manage upgrades of the component manifest schema. A component developer needs to \nonly confirm that they are using the correct value per the manifest schema. Please read the \"manifest upgrade \nrules\" for more details on when the schema could change. Note, manifest schema version upgrade will be considered \na big API change event and will be advertised broadly. \nUsage: To help support multiple manifest schema versions. \nRequired: yes \nLocalized: no \nSupported values: +ve integer. \nExample: 1",
-          "isOptional": false,
-          "type": " number",
-          "isCollection": false
-        }
+        "descr": "Definition: Version of the component manifest schema. The value of this field is controlled by Microsoft. The \npurpose of this field is to help manage upgrades of the component manifest schema. A component developer needs to \nonly confirm that they are using the correct value per the manifest schema. Please read the \"manifest upgrade \nrules\" for more details on when the schema could change. Note, manifest schema version upgrade will be considered \na big API change event and will be advertised broadly. \nUsage: To help support multiple manifest schema versions. \nRequired: yes \nLocalized: no \nSupported values: +ve integer. \nExample: 1",
+        "dataType": "number",
+        "isOptional": false,
+        "type": " number",
+        "isCollection": false
       },
       "version:": {
-        "version": {
-          "descr": "Definition: Client side component version. The value of this field is expected to be controlled by the developer \nof the client side component. The purpose of this field is to help client side component developers upgrade their \nclient side components in a managed way. This helps the consumers of the client side component make decisions \nabout when and how to upgrade the client side component. As the developer evolves the code for their client side \ncomponent, they can decide to bump the MAJOR, MINOR or PATCH version of the component. All incompatible API \nchanges should result in a MAJOR version bump. Backwards compatible functionality changes should result in a \nMINOR version bump, and backwards compatible bug fixes should result in a PATCH version bump. Please see \nhttp://semver.org for more details on how to manage the version of your components. \nUsage: Versioning and evolving a client side component safely in a controlled way. \nRequired: yes \nLocalized: no \nSupported values: string representing a semantic version (http://semver.org) i.e. MAJOR.MINOR.PATCH \nExample: \"1.0.0\"",
-          "isOptional": false,
-          "type": " string",
-          "isCollection": false
-        }
+        "descr": "Definition: Client side component version. The value of this field is expected to be controlled by the developer \nof the client side component. The purpose of this field is to help client side component developers upgrade their \nclient side components in a managed way. This helps the consumers of the client side component make decisions \nabout when and how to upgrade the client side component. As the developer evolves the code for their client side \ncomponent, they can decide to bump the MAJOR, MINOR or PATCH version of the component. All incompatible API \nchanges should result in a MAJOR version bump. Backwards compatible functionality changes should result in a \nMINOR version bump, and backwards compatible bug fixes should result in a PATCH version bump. Please see \nhttp://semver.org for more details on how to manage the version of your components. \nUsage: Versioning and evolving a client side component safely in a controlled way. \nRequired: yes \nLocalized: no \nSupported values: string representing a semantic version (http://semver.org) i.e. MAJOR.MINOR.PATCH \nExample: \"1.0.0\"",
+        "dataType": "string",
+        "isOptional": false,
+        "type": " string",
+        "isCollection": false
       }
     },
     "functions": {},
-    "objects": [],
-    "methods": []
+    "objects": {},
+    "methods": {}
   },
   "IClientSideWebPartManifestEntry<TProperties>": {
     "extendsName": null,
     "descr": "This interface specifies the set of properties that can be pre-configured by a Web Part developer. Each \npre-configured instance of the Web Part will need a copy of these properties. Organization admins and \ncontent authors can modify these properties on a need basis. \n",
     "properties": {
       "description:": {
-        "description": {
-          "descr": "Definition: Description of the web part represented as a dictionary of locale keys to description values. This \nvalue will be displayed to the user in the toolbox. This description should be used in the Toolbox tooltip and \nother display areas. The Web Part developer may give an initial description to the webpart. The organization admin \nand page author will have the ability to change this description as per need. \nUsage: display the description of the webpart in the toolbox tooltip, webpart gallery and the page. \nRequired: yes \nType: Object \nLocalized: yes \nSupported values: a dictionary of locale keys to strings. Should always have a 'default' key. \nExample: \"A tool for displaying neat information.\" \n{ \n\"default\": \"A tool for displaying neat information.\", \n\"en-us\": \"A tool for displaying neat information.\", \n\"fr-fr\": \"Un outil d’affichage des informations soignées.\", \n\"zh\": \"用於顯示整潔資訊的工具。\" \n}",
-          "isOptional": false,
-          "type": " ILocalizedString",
-          "isCollection": false
-        }
+        "descr": "Definition: Description of the web part represented as a dictionary of locale keys to description values. This \nvalue will be displayed to the user in the toolbox. This description should be used in the Toolbox tooltip and \nother display areas. The Web Part developer may give an initial description to the webpart. The organization admin \nand page author will have the ability to change this description as per need. \nUsage: display the description of the webpart in the toolbox tooltip, webpart gallery and the page. \nRequired: yes \nType: Object \nLocalized: yes \nSupported values: a dictionary of locale keys to strings. Should always have a 'default' key. \nExample: \"A tool for displaying neat information.\" \n{ \n\"default\": \"A tool for displaying neat information.\", \n\"en-us\": \"A tool for displaying neat information.\", \n\"fr-fr\": \"Un outil d’affichage des informations soignées.\", \n\"zh\": \"用於顯示整潔資訊的工具。\" \n}",
+        "dataType": "ILocalizedString",
+        "isOptional": false,
+        "type": " ILocalizedString",
+        "isCollection": false
       },
       "group": {
-        "group ?": {
-          "descr": "Definition: This field is used to help decide the Toolbox group for the Web Part in the authoring \nexperience. In the server rendered page, the Web Part gallery is equivalent of the Toolbox. If no value is \nprovided, the Web Part will be displayed in the \"Custom\" group. \nUsage: display of the Web Part icon in a specific group in the authoring toolbox. \nRequired: no \nLocalized: yes \nSupported values: string \nExample: { \"default\": \"Media Web Parts\" } \n",
-          "isOptional": true,
-          "type": " ILocalizedString",
-          "isCollection": false
-        }
+        "descr": "Definition: This field is used to help decide the Toolbox group for the Web Part in the authoring \nexperience. In the server rendered page, the Web Part gallery is equivalent of the Toolbox. If no value is \nprovided, the Web Part will be displayed in the \"Custom\" group. \nUsage: display of the Web Part icon in a specific group in the authoring toolbox. \nRequired: no \nLocalized: yes \nSupported values: string \nExample: { \"default\": \"Media Web Parts\" } \n",
+        "dataType": "ILocalizedString",
+        "isOptional": true,
+        "type": " ILocalizedString",
+        "isCollection": false
       },
       "groupId:": {
-        "groupId": {
-          "descr": "Definition: This field is used to help decide the Toolbox group for the Web Part in the authoring \nexperience. In the server rendered page, the Web Part gallery is equivalent of the Toolbox. If no value is \nprovided, the Web Part will be displayed in the \"Custom\" group. \nUsage: display of the Web Part icon in a specific group in the authoring toolbox. \nRequired: no \nLocalized: yes \nSupported values: string \nExample: { \"default\": \"Media Web Parts\" } \n",
-          "isOptional": false,
-          "type": " string",
-          "isCollection": false
-        }
+        "descr": "Definition: This field is used to help decide the Toolbox group for the Web Part in the authoring \nexperience. In the server rendered page, the Web Part gallery is equivalent of the Toolbox. If no value is \nprovided, the Web Part will be displayed in the \"Custom\" group. \nUsage: display of the Web Part icon in a specific group in the authoring toolbox. \nRequired: no \nLocalized: yes \nSupported values: string \nExample: { \"default\": \"Media Web Parts\" } \n",
+        "dataType": "string",
+        "isOptional": false,
+        "type": " string",
+        "isCollection": false
       },
       "iconImageUrl": {
-        "iconImageUrl ?": {
-          "descr": "Definition: The icon for the WebPart, to be displayed in the toolbox, represented an image URL. The image at the \nURL must be exactly 38x38 px (SPPPLAT VSO#218660 to fix the size of the icon image). \nIf the '{@link officeFabricIconFontName}' field does not have a value, this field must have a value. \nRequired: no \nType: string \nLocalized: no \nSupported values: Any absolute URL. \nExample: \"https://contoso.akamaihd.net/files/myWebpartIcon.png\"",
-          "isOptional": true,
-          "type": " string",
-          "isCollection": false
-        }
+        "descr": "Definition: The icon for the WebPart, to be displayed in the toolbox, represented an image URL. The image at the \nURL must be exactly 38x38 px (SPPPLAT VSO#218660 to fix the size of the icon image). \nIf the '{@link officeFabricIconFontName}' field does not have a value, this field must have a value. \nRequired: no \nType: string \nLocalized: no \nSupported values: Any absolute URL. \nExample: \"https://contoso.akamaihd.net/files/myWebpartIcon.png\"",
+        "dataType": "string",
+        "isOptional": true,
+        "type": " string",
+        "isCollection": false
       },
       "officeFabricIconFontName": {
-        "officeFabricIconFontName ?": {
-          "descr": "Definition: The icon for the Web Part, to be displayed in the toolbox, represented as a character name in the \nOffice 365 icon font file. The icon font is specified here: http://o365icons.cloudapp.net/. If this field has \na value, the '{@link iconImageUrl}' field will be ignored. \nRequired: no \nType: string \nLocalized: no \nSupported values: Any character name in the Office 365 Icon Font. \nExample: \"graph\"",
-          "isOptional": true,
-          "type": " string",
-          "isCollection": false
-        }
+        "descr": "Definition: The icon for the Web Part, to be displayed in the toolbox, represented as a character name in the \nOffice 365 icon font file. The icon font is specified here: http://o365icons.cloudapp.net/. If this field has \na value, the '{@link iconImageUrl}' field will be ignored. \nRequired: no \nType: string \nLocalized: no \nSupported values: Any character name in the Office 365 Icon Font. \nExample: \"graph\"",
+        "dataType": "string",
+        "isOptional": true,
+        "type": " string",
+        "isCollection": false
       },
       "properties:": {
-        "properties": {
-          "descr": "Definition: every Web Part is expected to have some custom properties. e.g. an image Web Part may have the image \nurl and caption text as custom properties, a list Web Part may have the list id and list title as custom \nproperties, and so on. The Web Part framework is transparent to these properties. It just acts as a conduit to \npass these properties in and out to the Web Parts. The Web Part developer fully controls the schema of these \nproperties. The Web Part developer should follow versioning rules (@todo: pointer to Web Part versioning document) \nto evolve these properties. \n \nUsage: rendering of the Web Part. \nRequired: yes \nLocalized: no \nSupported values: any \nExample: {\"imageSource\": \"https://contoso.akamaihd.net/files/contosoLogo.jpg\", \"captionText\": \"Contoso logo\"}\"",
-          "isOptional": false,
-          "type": " TProperties",
-          "isCollection": false
-        }
+        "descr": "Definition: every Web Part is expected to have some custom properties. e.g. an image Web Part may have the image \nurl and caption text as custom properties, a list Web Part may have the list id and list title as custom \nproperties, and so on. The Web Part framework is transparent to these properties. It just acts as a conduit to \npass these properties in and out to the Web Parts. The Web Part developer fully controls the schema of these \nproperties. The Web Part developer should follow versioning rules (@todo: pointer to Web Part versioning document) \nto evolve these properties. \n \nUsage: rendering of the Web Part. \nRequired: yes \nLocalized: no \nSupported values: any \nExample: {\"imageSource\": \"https://contoso.akamaihd.net/files/contosoLogo.jpg\", \"captionText\": \"Contoso logo\"}\"",
+        "dataType": "TProperties",
+        "isOptional": false,
+        "type": " TProperties",
+        "isCollection": false
       },
       "title:": {
-        "title": {
-          "descr": "Definition: Title of the web part represented as a single a dictionary of locale keys to title values. This \nvalue will be displayed to the user in the toolbox. This title should be used in the Toolbox and other display \nareas. The Web Part developer may give an initial title to the webpart. The organization admin and page author \nwill have the ability to change this title as per need. \nUsage: display the name of the webpart in the toolbox, webpart gallery and the page. \nRequired: yes \nType: Object \nLocalized: yes \nSupported values: a dictionary of locale keys to strings. Should always have a 'default' key. \nExample: \"My Webpart\" \n{ \n\"default\": \"My WebPart\" \n\"en-us\": \"My WebPart\", \n\"fr-fr\": \"Ma WebPart\", \n\"zh\": \"我的 web 部件\" \n}",
-          "isOptional": false,
-          "type": " ILocalizedString",
-          "isCollection": false
-        }
+        "descr": "Definition: Title of the web part represented as a single a dictionary of locale keys to title values. This \nvalue will be displayed to the user in the toolbox. This title should be used in the Toolbox and other display \nareas. The Web Part developer may give an initial title to the webpart. The organization admin and page author \nwill have the ability to change this title as per need. \nUsage: display the name of the webpart in the toolbox, webpart gallery and the page. \nRequired: yes \nType: Object \nLocalized: yes \nSupported values: a dictionary of locale keys to strings. Should always have a 'default' key. \nExample: \"My Webpart\" \n{ \n\"default\": \"My WebPart\" \n\"en-us\": \"My WebPart\", \n\"fr-fr\": \"Ma WebPart\", \n\"zh\": \"我的 web 部件\" \n}",
+        "dataType": "ILocalizedString",
+        "isOptional": false,
+        "type": " ILocalizedString",
+        "isCollection": false
       }
     },
     "functions": {},
-    "objects": [],
-    "methods": []
+    "objects": {},
+    "methods": {}
   },
   "IClientSideWebPartManifestInstance<TProperties>": {
     "extendsName": "IClientSideWebPartManifestEntry<TProperties>",
     "descr": "Manifest that is relevant to a Web Part instance. \n",
     "properties": {
       "componentType:": {
-        "componentType": {
-          "descr": "Definition: Type of client side component. Components with the \"Application\" type are defined by the \n\"IClientSideApplicationManifest\" interface. Components with the \"WebPart\" type are defined by the \n\"IClientSideWebPartManifest\" interface. Components with the \"Library\" type are defined by the \n\"IClientSideLibraryManifest\" interface. \nUsage: To help bundling, loading, enumeration, and initialization of components based on their contents. \nRequired: yes \nLocalized: no \nSupported values: \"Application\", \"WebPart\", \"Library\" \nExample: \"Application\"",
-          "isOptional": false,
-          "type": " 'Application' | 'WebPart' | 'Library'",
-          "isCollection": false
-        }
+        "descr": "Definition: Type of client side component. Components with the \"Application\" type are defined by the \n\"IClientSideApplicationManifest\" interface. Components with the \"WebPart\" type are defined by the \n\"IClientSideWebPartManifest\" interface. Components with the \"Library\" type are defined by the \n\"IClientSideLibraryManifest\" interface. \nUsage: To help bundling, loading, enumeration, and initialization of components based on their contents. \nRequired: yes \nLocalized: no \nSupported values: \"Application\", \"WebPart\", \"Library\" \nExample: \"Application\"",
+        "dataType": "'Application' | 'WebPart' | 'Library'",
+        "isOptional": false,
+        "type": " 'Application' | 'WebPart' | 'Library'",
+        "isCollection": false
       },
       "description:": {
-        "description": {
-          "descr": "Definition: Description of the web part represented as a dictionary of locale keys to description values. This \nvalue will be displayed to the user in the toolbox. This description should be used in the Toolbox tooltip and \nother display areas. The Web Part developer may give an initial description to the webpart. The organization admin \nand page author will have the ability to change this description as per need. \nUsage: display the description of the webpart in the toolbox tooltip, webpart gallery and the page. \nRequired: yes \nType: Object \nLocalized: yes \nSupported values: a dictionary of locale keys to strings. Should always have a 'default' key. \nExample: \"A tool for displaying neat information.\" \n{ \n\"default\": \"A tool for displaying neat information.\", \n\"en-us\": \"A tool for displaying neat information.\", \n\"fr-fr\": \"Un outil d’affichage des informations soignées.\", \n\"zh\": \"用於顯示整潔資訊的工具。\" \n}",
-          "isOptional": false,
-          "type": " ILocalizedString",
-          "isCollection": false
-        }
+        "descr": "Definition: Description of the web part represented as a dictionary of locale keys to description values. This \nvalue will be displayed to the user in the toolbox. This description should be used in the Toolbox tooltip and \nother display areas. The Web Part developer may give an initial description to the webpart. The organization admin \nand page author will have the ability to change this description as per need. \nUsage: display the description of the webpart in the toolbox tooltip, webpart gallery and the page. \nRequired: yes \nType: Object \nLocalized: yes \nSupported values: a dictionary of locale keys to strings. Should always have a 'default' key. \nExample: \"A tool for displaying neat information.\" \n{ \n\"default\": \"A tool for displaying neat information.\", \n\"en-us\": \"A tool for displaying neat information.\", \n\"fr-fr\": \"Un outil d’affichage des informations soignées.\", \n\"zh\": \"用於顯示整潔資訊的工具。\" \n}",
+        "dataType": "ILocalizedString",
+        "isOptional": false,
+        "type": " ILocalizedString",
+        "isCollection": false
       },
       "group": {
-        "group ?": {
-          "descr": "Definition: This field is used to help decide the Toolbox group for the Web Part in the authoring \nexperience. In the server rendered page, the Web Part gallery is equivalent of the Toolbox. If no value is \nprovided, the Web Part will be displayed in the \"Custom\" group. \nUsage: display of the Web Part icon in a specific group in the authoring toolbox. \nRequired: no \nLocalized: yes \nSupported values: string \nExample: { \"default\": \"Media Web Parts\" } \n",
-          "isOptional": true,
-          "type": " ILocalizedString",
-          "isCollection": false
-        }
+        "descr": "Definition: This field is used to help decide the Toolbox group for the Web Part in the authoring \nexperience. In the server rendered page, the Web Part gallery is equivalent of the Toolbox. If no value is \nprovided, the Web Part will be displayed in the \"Custom\" group. \nUsage: display of the Web Part icon in a specific group in the authoring toolbox. \nRequired: no \nLocalized: yes \nSupported values: string \nExample: { \"default\": \"Media Web Parts\" } \n",
+        "dataType": "ILocalizedString",
+        "isOptional": true,
+        "type": " ILocalizedString",
+        "isCollection": false
       },
       "groupId:": {
-        "groupId": {
-          "descr": "Definition: This field is used to help decide the Toolbox group for the Web Part in the authoring \nexperience. In the server rendered page, the Web Part gallery is equivalent of the Toolbox. If no value is \nprovided, the Web Part will be displayed in the \"Custom\" group. \nUsage: display of the Web Part icon in a specific group in the authoring toolbox. \nRequired: no \nLocalized: yes \nSupported values: string \nExample: { \"default\": \"Media Web Parts\" } \n",
-          "isOptional": false,
-          "type": " string",
-          "isCollection": false
-        }
+        "descr": "Definition: This field is used to help decide the Toolbox group for the Web Part in the authoring \nexperience. In the server rendered page, the Web Part gallery is equivalent of the Toolbox. If no value is \nprovided, the Web Part will be displayed in the \"Custom\" group. \nUsage: display of the Web Part icon in a specific group in the authoring toolbox. \nRequired: no \nLocalized: yes \nSupported values: string \nExample: { \"default\": \"Media Web Parts\" } \n",
+        "dataType": "string",
+        "isOptional": false,
+        "type": " string",
+        "isCollection": false
       },
       "iconImageUrl": {
-        "iconImageUrl ?": {
-          "descr": "Definition: The icon for the WebPart, to be displayed in the toolbox, represented an image URL. The image at the \nURL must be exactly 38x38 px (SPPPLAT VSO#218660 to fix the size of the icon image). \nIf the '{@link officeFabricIconFontName}' field does not have a value, this field must have a value. \nRequired: no \nType: string \nLocalized: no \nSupported values: Any absolute URL. \nExample: \"https://contoso.akamaihd.net/files/myWebpartIcon.png\"",
-          "isOptional": true,
-          "type": " string",
-          "isCollection": false
-        }
+        "descr": "Definition: The icon for the WebPart, to be displayed in the toolbox, represented an image URL. The image at the \nURL must be exactly 38x38 px (SPPPLAT VSO#218660 to fix the size of the icon image). \nIf the '{@link officeFabricIconFontName}' field does not have a value, this field must have a value. \nRequired: no \nType: string \nLocalized: no \nSupported values: Any absolute URL. \nExample: \"https://contoso.akamaihd.net/files/myWebpartIcon.png\"",
+        "dataType": "string",
+        "isOptional": true,
+        "type": " string",
+        "isCollection": false
       },
       "id:": {
-        "id": {
-          "descr": "Definition: A universally unique component id. Each client side component is required to have this id. Once an \nid has been used for a component, it cannot be changed. A change in this value is treated same as the creation of \na new component. Two components are never expected to have the same id. \nUsage: Uniquely identify a client side component. \nRequired: yes \nLocalized: no \nSupported values: any GUID \nExample: \"dbef608d-3ad5-4f8f-b139-d916f2f0a294\"",
-          "isOptional": false,
-          "type": " string",
-          "isCollection": false
-        }
+        "descr": "Definition: A universally unique component id. Each client side component is required to have this id. Once an \nid has been used for a component, it cannot be changed. A change in this value is treated same as the creation of \na new component. Two components are never expected to have the same id. \nUsage: Uniquely identify a client side component. \nRequired: yes \nLocalized: no \nSupported values: any GUID \nExample: \"dbef608d-3ad5-4f8f-b139-d916f2f0a294\"",
+        "dataType": "string",
+        "isOptional": false,
+        "type": " string",
+        "isCollection": false
       },
       "imageLinkPropertyNames": {
-        "imageLinkPropertyNames ?": {
-          "descr": "Definition: List of names of Web Part properties that are image sources and need to be link fixed up \nand potentially preloaded for performance reasons. \nRequired: no. If not provided, all values are sanitized \nType: string array \nSupported values: any property names \nValues: the strings in the array are expected to be JSONPath for the object properties. \n(http://goessner.net/articles/JsonPath/) \nExample: [\"image[0].source\"]",
-          "isOptional": true,
-          "type": " string",
-          "isCollection": false
-        }
+        "descr": "Definition: List of names of Web Part properties that are image sources and need to be link fixed up \nand potentially preloaded for performance reasons. \nRequired: no. If not provided, all values are sanitized \nType: string array \nSupported values: any property names \nValues: the strings in the array are expected to be JSONPath for the object properties. \n(http://goessner.net/articles/JsonPath/) \nExample: [\"image[0].source\"]",
+        "dataType": "string[]",
+        "isOptional": true,
+        "type": " string",
+        "isCollection": false
       },
       "linkPropertyNames": {
-        "linkPropertyNames ?": {
-          "descr": "Definition: List of names of Web Part properties that are links and need to be link fixed up. \nLink fixup is a SharePoint feature to help make sure SharePoint internal links in the content \nare correct. Pages and content can be moved around within SharePoint site hierarchy. \nRequired: no. If not provided, all values are sanitized \nType: string array \nValues: the strings in the array are expected to be JSONPath for the object properties. \n(http://goessner.net/articles/JsonPath/) \nSupported values: any property names \nExample: [\"destination.url\"]",
-          "isOptional": true,
-          "type": " string",
-          "isCollection": false
-        }
+        "descr": "Definition: List of names of Web Part properties that are links and need to be link fixed up. \nLink fixup is a SharePoint feature to help make sure SharePoint internal links in the content \nare correct. Pages and content can be moved around within SharePoint site hierarchy. \nRequired: no. If not provided, all values are sanitized \nType: string array \nValues: the strings in the array are expected to be JSONPath for the object properties. \n(http://goessner.net/articles/JsonPath/) \nSupported values: any property names \nExample: [\"destination.url\"]",
+        "dataType": "string[]",
+        "isOptional": true,
+        "type": " string",
+        "isCollection": false
       },
       "loaderConfig:": {
-        "loaderConfig": {
-          "descr": "Definition: This portion of the configuration describes how the component is to be loaded and initialized by a \nclient. It contains an enumeration of scripts that the component requires along with a single entrypoint script. \nUsage: Loading a component. \nRequired: yes \n",
-          "isOptional": false,
-          "type": " IClientSideComponentLoaderConfig",
-          "isCollection": false
-        }
+        "descr": "Definition: This portion of the configuration describes how the component is to be loaded and initialized by a \nclient. It contains an enumeration of scripts that the component requires along with a single entrypoint script. \nUsage: Loading a component. \nRequired: yes \n",
+        "dataType": "IClientSideComponentLoaderConfig",
+        "isOptional": false,
+        "type": " IClientSideComponentLoaderConfig",
+        "isCollection": false
       },
       "manifestVersion:": {
-        "manifestVersion": {
-          "descr": "Definition: Version of the component manifest schema. The value of this field is controlled by Microsoft. The \npurpose of this field is to help manage upgrades of the component manifest schema. A component developer needs to \nonly confirm that they are using the correct value per the manifest schema. Please read the \"manifest upgrade \nrules\" for more details on when the schema could change. Note, manifest schema version upgrade will be considered \na big API change event and will be advertised broadly. \nUsage: To help support multiple manifest schema versions. \nRequired: yes \nLocalized: no \nSupported values: +ve integer. \nExample: 1",
-          "isOptional": false,
-          "type": " number",
-          "isCollection": false
-        }
+        "descr": "Definition: Version of the component manifest schema. The value of this field is controlled by Microsoft. The \npurpose of this field is to help manage upgrades of the component manifest schema. A component developer needs to \nonly confirm that they are using the correct value per the manifest schema. Please read the \"manifest upgrade \nrules\" for more details on when the schema could change. Note, manifest schema version upgrade will be considered \na big API change event and will be advertised broadly. \nUsage: To help support multiple manifest schema versions. \nRequired: yes \nLocalized: no \nSupported values: +ve integer. \nExample: 1",
+        "dataType": "number",
+        "isOptional": false,
+        "type": " number",
+        "isCollection": false
       },
       "officeFabricIconFontName": {
-        "officeFabricIconFontName ?": {
-          "descr": "Definition: The icon for the Web Part, to be displayed in the toolbox, represented as a character name in the \nOffice 365 icon font file. The icon font is specified here: http://o365icons.cloudapp.net/. If this field has \na value, the '{@link iconImageUrl}' field will be ignored. \nRequired: no \nType: string \nLocalized: no \nSupported values: Any character name in the Office 365 Icon Font. \nExample: \"graph\"",
-          "isOptional": true,
-          "type": " string",
-          "isCollection": false
-        }
+        "descr": "Definition: The icon for the Web Part, to be displayed in the toolbox, represented as a character name in the \nOffice 365 icon font file. The icon font is specified here: http://o365icons.cloudapp.net/. If this field has \na value, the '{@link iconImageUrl}' field will be ignored. \nRequired: no \nType: string \nLocalized: no \nSupported values: Any character name in the Office 365 Icon Font. \nExample: \"graph\"",
+        "dataType": "string",
+        "isOptional": true,
+        "type": " string",
+        "isCollection": false
       },
       "properties:": {
-        "properties": {
-          "descr": "Definition: every Web Part is expected to have some custom properties. e.g. an image Web Part may have the image \nurl and caption text as custom properties, a list Web Part may have the list id and list title as custom \nproperties, and so on. The Web Part framework is transparent to these properties. It just acts as a conduit to \npass these properties in and out to the Web Parts. The Web Part developer fully controls the schema of these \nproperties. The Web Part developer should follow versioning rules (@todo: pointer to Web Part versioning document) \nto evolve these properties. \n \nUsage: rendering of the Web Part. \nRequired: yes \nLocalized: no \nSupported values: any \nExample: {\"imageSource\": \"https://contoso.akamaihd.net/files/contosoLogo.jpg\", \"captionText\": \"Contoso logo\"}\"",
-          "isOptional": false,
-          "type": " TProperties",
-          "isCollection": false
-        }
+        "descr": "Definition: every Web Part is expected to have some custom properties. e.g. an image Web Part may have the image \nurl and caption text as custom properties, a list Web Part may have the list id and list title as custom \nproperties, and so on. The Web Part framework is transparent to these properties. It just acts as a conduit to \npass these properties in and out to the Web Parts. The Web Part developer fully controls the schema of these \nproperties. The Web Part developer should follow versioning rules (@todo: pointer to Web Part versioning document) \nto evolve these properties. \n \nUsage: rendering of the Web Part. \nRequired: yes \nLocalized: no \nSupported values: any \nExample: {\"imageSource\": \"https://contoso.akamaihd.net/files/contosoLogo.jpg\", \"captionText\": \"Contoso logo\"}\"",
+        "dataType": "TProperties",
+        "isOptional": false,
+        "type": " TProperties",
+        "isCollection": false
       },
       "searchablePropertyNames": {
-        "searchablePropertyNames ?": {
-          "descr": "Definition: List of names of Web Part properties that need to be indexed for search. \nUsage: extract the specified value properties on the server and provide them to the search indexer. \nRequired: no. If not provided, no values are indexed. \nType: string array \nValues: the strings in the array are expected to be JSONPath for the object properties. \n(http://goessner.net/articles/JsonPath/) \nSupported values: any property names \nExample: [\"text\"]",
-          "isOptional": true,
-          "type": " string",
-          "isCollection": false
-        }
+        "descr": "Definition: List of names of Web Part properties that need to be indexed for search. \nUsage: extract the specified value properties on the server and provide them to the search indexer. \nRequired: no. If not provided, no values are indexed. \nType: string array \nValues: the strings in the array are expected to be JSONPath for the object properties. \n(http://goessner.net/articles/JsonPath/) \nSupported values: any property names \nExample: [\"text\"]",
+        "dataType": "string[]",
+        "isOptional": true,
+        "type": " string",
+        "isCollection": false
       },
       "title:": {
-        "title": {
-          "descr": "Definition: Title of the web part represented as a single a dictionary of locale keys to title values. This \nvalue will be displayed to the user in the toolbox. This title should be used in the Toolbox and other display \nareas. The Web Part developer may give an initial title to the webpart. The organization admin and page author \nwill have the ability to change this title as per need. \nUsage: display the name of the webpart in the toolbox, webpart gallery and the page. \nRequired: yes \nType: Object \nLocalized: yes \nSupported values: a dictionary of locale keys to strings. Should always have a 'default' key. \nExample: \"My Webpart\" \n{ \n\"default\": \"My WebPart\" \n\"en-us\": \"My WebPart\", \n\"fr-fr\": \"Ma WebPart\", \n\"zh\": \"我的 web 部件\" \n}",
-          "isOptional": false,
-          "type": " ILocalizedString",
-          "isCollection": false
-        }
+        "descr": "Definition: Title of the web part represented as a single a dictionary of locale keys to title values. This \nvalue will be displayed to the user in the toolbox. This title should be used in the Toolbox and other display \nareas. The Web Part developer may give an initial title to the webpart. The organization admin and page author \nwill have the ability to change this title as per need. \nUsage: display the name of the webpart in the toolbox, webpart gallery and the page. \nRequired: yes \nType: Object \nLocalized: yes \nSupported values: a dictionary of locale keys to strings. Should always have a 'default' key. \nExample: \"My Webpart\" \n{ \n\"default\": \"My WebPart\" \n\"en-us\": \"My WebPart\", \n\"fr-fr\": \"Ma WebPart\", \n\"zh\": \"我的 web 部件\" \n}",
+        "dataType": "ILocalizedString",
+        "isOptional": false,
+        "type": " ILocalizedString",
+        "isCollection": false
       },
       "version:": {
-        "version": {
-          "descr": "Definition: Client side component version. The value of this field is expected to be controlled by the developer \nof the client side component. The purpose of this field is to help client side component developers upgrade their \nclient side components in a managed way. This helps the consumers of the client side component make decisions \nabout when and how to upgrade the client side component. As the developer evolves the code for their client side \ncomponent, they can decide to bump the MAJOR, MINOR or PATCH version of the component. All incompatible API \nchanges should result in a MAJOR version bump. Backwards compatible functionality changes should result in a \nMINOR version bump, and backwards compatible bug fixes should result in a PATCH version bump. Please see \nhttp://semver.org for more details on how to manage the version of your components. \nUsage: Versioning and evolving a client side component safely in a controlled way. \nRequired: yes \nLocalized: no \nSupported values: string representing a semantic version (http://semver.org) i.e. MAJOR.MINOR.PATCH \nExample: \"1.0.0\"",
-          "isOptional": false,
-          "type": " string",
-          "isCollection": false
-        }
+        "descr": "Definition: Client side component version. The value of this field is expected to be controlled by the developer \nof the client side component. The purpose of this field is to help client side component developers upgrade their \nclient side components in a managed way. This helps the consumers of the client side component make decisions \nabout when and how to upgrade the client side component. As the developer evolves the code for their client side \ncomponent, they can decide to bump the MAJOR, MINOR or PATCH version of the component. All incompatible API \nchanges should result in a MAJOR version bump. Backwards compatible functionality changes should result in a \nMINOR version bump, and backwards compatible bug fixes should result in a PATCH version bump. Please see \nhttp://semver.org for more details on how to manage the version of your components. \nUsage: Versioning and evolving a client side component safely in a controlled way. \nRequired: yes \nLocalized: no \nSupported values: string representing a semantic version (http://semver.org) i.e. MAJOR.MINOR.PATCH \nExample: \"1.0.0\"",
+        "dataType": "string",
+        "isOptional": false,
+        "type": " string",
+        "isCollection": false
       }
     },
     "functions": {},
-    "objects": [],
-    "methods": []
+    "objects": {},
+    "methods": {}
   },
   "IClientSideWebPartManifestSharedProperties": {
     "extendsName": null,
     "descr": "This interface specifies the set of common properties that are shared between all instances of the Web Part. \n",
     "properties": {
       "imageLinkPropertyNames": {
-        "imageLinkPropertyNames ?": {
-          "descr": "Definition: List of names of Web Part properties that are image sources and need to be link fixed up \nand potentially preloaded for performance reasons. \nRequired: no. If not provided, all values are sanitized \nType: string array \nSupported values: any property names \nValues: the strings in the array are expected to be JSONPath for the object properties. \n(http://goessner.net/articles/JsonPath/) \nExample: [\"image[0].source\"]",
-          "isOptional": true,
-          "type": " string",
-          "isCollection": false
-        }
+        "descr": "Definition: List of names of Web Part properties that are image sources and need to be link fixed up \nand potentially preloaded for performance reasons. \nRequired: no. If not provided, all values are sanitized \nType: string array \nSupported values: any property names \nValues: the strings in the array are expected to be JSONPath for the object properties. \n(http://goessner.net/articles/JsonPath/) \nExample: [\"image[0].source\"]",
+        "dataType": "string[]",
+        "isOptional": true,
+        "type": " string",
+        "isCollection": false
       },
       "linkPropertyNames": {
-        "linkPropertyNames ?": {
-          "descr": "Definition: List of names of Web Part properties that are links and need to be link fixed up. \nLink fixup is a SharePoint feature to help make sure SharePoint internal links in the content \nare correct. Pages and content can be moved around within SharePoint site hierarchy. \nRequired: no. If not provided, all values are sanitized \nType: string array \nValues: the strings in the array are expected to be JSONPath for the object properties. \n(http://goessner.net/articles/JsonPath/) \nSupported values: any property names \nExample: [\"destination.url\"]",
-          "isOptional": true,
-          "type": " string",
-          "isCollection": false
-        }
+        "descr": "Definition: List of names of Web Part properties that are links and need to be link fixed up. \nLink fixup is a SharePoint feature to help make sure SharePoint internal links in the content \nare correct. Pages and content can be moved around within SharePoint site hierarchy. \nRequired: no. If not provided, all values are sanitized \nType: string array \nValues: the strings in the array are expected to be JSONPath for the object properties. \n(http://goessner.net/articles/JsonPath/) \nSupported values: any property names \nExample: [\"destination.url\"]",
+        "dataType": "string[]",
+        "isOptional": true,
+        "type": " string",
+        "isCollection": false
       },
       "searchablePropertyNames": {
-        "searchablePropertyNames ?": {
-          "descr": "Definition: List of names of Web Part properties that need to be indexed for search. \nUsage: extract the specified value properties on the server and provide them to the search indexer. \nRequired: no. If not provided, no values are indexed. \nType: string array \nValues: the strings in the array are expected to be JSONPath for the object properties. \n(http://goessner.net/articles/JsonPath/) \nSupported values: any property names \nExample: [\"text\"]",
-          "isOptional": true,
-          "type": " string",
-          "isCollection": false
-        }
+        "descr": "Definition: List of names of Web Part properties that need to be indexed for search. \nUsage: extract the specified value properties on the server and provide them to the search indexer. \nRequired: no. If not provided, no values are indexed. \nType: string array \nValues: the strings in the array are expected to be JSONPath for the object properties. \n(http://goessner.net/articles/JsonPath/) \nSupported values: any property names \nExample: [\"text\"]",
+        "dataType": "string[]",
+        "isOptional": true,
+        "type": " string",
+        "isCollection": false
       }
     },
     "functions": {},
-    "objects": [],
-    "methods": []
+    "objects": {},
+    "methods": {}
   },
   "IFrameworkModuleConfig": {
     "extendsName": "IModuleConfig",
     "descr": "This is the interface for a script module with the \"framework\" type. Modules of this type will be provided by the \nframework runtime. The key in the \"scriptResources\" dictionary must be the name of a standard framework library. \n",
     "properties": {
       "failoverPath": {
-        "failoverPath ?": {
-          "descr": "Definition: A path to the framework-supplied module in case the framework fails to load the requested version. This \nmust be either a fully-qualified URL, or a path under the paths specified in the \"internalModuleBaseUrls\" field. \nIf this field is not specified and the version is not available in the framework runtime, the closest matching \nversion of the module will be provided instead. \nRequired: no \nLocalized: no \nSupported values: The path to the module either as a fully-qualified URL or as a path under the \npaths providedin the \"internalModuleBaseUrls\" field. \nExample: \"https://code.jquery.com/jquery-2.2.4.min.js\"",
-          "isOptional": true,
-          "type": " string | IPath",
-          "isCollection": false
-        }
+        "descr": "Definition: A path to the framework-supplied module in case the framework fails to load the requested version. This \nmust be either a fully-qualified URL, or a path under the paths specified in the \"internalModuleBaseUrls\" field. \nIf this field is not specified and the version is not available in the framework runtime, the closest matching \nversion of the module will be provided instead. \nRequired: no \nLocalized: no \nSupported values: The path to the module either as a fully-qualified URL or as a path under the \npaths providedin the \"internalModuleBaseUrls\" field. \nExample: \"https://code.jquery.com/jquery-2.2.4.min.js\"",
+        "dataType": "string | IPath",
+        "isOptional": true,
+        "type": " string | IPath",
+        "isCollection": false
       },
       "shouldNotPreload": {
-        "shouldNotPreload ?": {
-          "descr": "Definition: If set to \"true\", this module should not be preloaded when loading the component. The most common case \nfor setting this property to \"true\" is when a module is defined in a manifest, but is not required for the \nmodule referenced in \"entryModuleId\" to load. Modules may be defined that are loaded asynchronously, and these \nmodules do not need to be preloaded. This field implicitly defaults to \"false\". \nUsage: Instructs the module loader to not preload this module. \nRequired: no \nExample: true",
-          "isOptional": true,
-          "type": " boolean",
-          "isCollection": false
-        }
+        "descr": "Definition: If set to \"true\", this module should not be preloaded when loading the component. The most common case \nfor setting this property to \"true\" is when a module is defined in a manifest, but is not required for the \nmodule referenced in \"entryModuleId\" to load. Modules may be defined that are loaded asynchronously, and these \nmodules do not need to be preloaded. This field implicitly defaults to \"false\". \nUsage: Instructs the module loader to not preload this module. \nRequired: no \nExample: true",
+        "dataType": "boolean",
+        "isOptional": true,
+        "type": " boolean",
+        "isCollection": false
       },
       "type:": {
-        "type": {
-          "descr": "Definition: The type of the script block. \"framework\" modules are expected to be provided by the framework runtime, \n\"internal\" and \"localized\" modules must be available on the paths provided in the \"internalModuleBaseUrls\" field. \nModules with the \"internal\" type use the \"IInternalModuleConfig\" interface. Modules with the \"framework\" type use \nthe \"IFrameworkModuleConfig\" interface. Modules with the \"localized\" type use the \"ILocalizedInternalModuleConfig\" \ninterface. \nRequired: yes \nLocalized: no \nSupported values: \"internal\", \"framework\", \"localized\" \nExample: \"localized\"",
-          "isOptional": false,
-          "type": " 'internal' | 'framework' | 'localized'",
-          "isCollection": false
-        }
+        "descr": "Definition: The type of the script block. \"framework\" modules are expected to be provided by the framework runtime, \n\"internal\" and \"localized\" modules must be available on the paths provided in the \"internalModuleBaseUrls\" field. \nModules with the \"internal\" type use the \"IInternalModuleConfig\" interface. Modules with the \"framework\" type use \nthe \"IFrameworkModuleConfig\" interface. Modules with the \"localized\" type use the \"ILocalizedInternalModuleConfig\" \ninterface. \nRequired: yes \nLocalized: no \nSupported values: \"internal\", \"framework\", \"localized\" \nExample: \"localized\"",
+        "dataType": "'internal' | 'framework' | 'localized'",
+        "isOptional": false,
+        "type": " 'internal' | 'framework' | 'localized'",
+        "isCollection": false
       },
       "version:": {
-        "version": {
-          "descr": "Definition: The version of the framework-supplied module to be loaded. For framework runtime modules such as \n\"@microsoft/sp-client-base,\" it is recommended the version of the framework module the component was developed \nagainst be specified. \nRequired: yes \nLocalized: no \nSupported values: string representing a semantic version (http://semver.org), or \"latest\". \nExample: \"2.2.4\"",
-          "isOptional": false,
-          "type": " string",
-          "isCollection": false
-        }
+        "descr": "Definition: The version of the framework-supplied module to be loaded. For framework runtime modules such as \n\"@microsoft/sp-client-base,\" it is recommended the version of the framework module the component was developed \nagainst be specified. \nRequired: yes \nLocalized: no \nSupported values: string representing a semantic version (http://semver.org), or \"latest\". \nExample: \"2.2.4\"",
+        "dataType": "string",
+        "isOptional": false,
+        "type": " string",
+        "isCollection": false
       }
     },
     "functions": {},
-    "objects": [],
-    "methods": []
+    "objects": {},
+    "methods": {}
   },
   "IInternalModuleConfig": {
     "extendsName": "IModuleConfig",
     "descr": "This is the interface for a script module with the \"internal\" type. Modules of this type must be provided by the \ncomponent developer. \n",
     "properties": {
       "globalDependencies": {
-        "globalDependencies ?": {
-          "descr": "Definition: For non-AMD/module-pattern scripts that have dependencies (for example, jQuery plugins), the module \nloader will ensure that those dependencies are already loaded. Entries in the array specified in this field must \nrefer to other non-AMD modules in this component. This field is not required to have a value for \nnon-AMD modules. If any values are specified that do not refer to other modules in the same component manifest \nthat this module is specified, the module loader will throw an exception and the component will fail to load. \nRequired: no \nSupported values: Names of other non-AMD-pattern modules in this loader configuration, as specified by the key \nIClientSideComponentLoaderConfig.scriptResources[] \nExample: [\"jquery\"]",
-          "isOptional": true,
-          "type": " string",
-          "isCollection": false
-        }
+        "descr": "Definition: For non-AMD/module-pattern scripts that have dependencies (for example, jQuery plugins), the module \nloader will ensure that those dependencies are already loaded. Entries in the array specified in this field must \nrefer to other non-AMD modules in this component. This field is not required to have a value for \nnon-AMD modules. If any values are specified that do not refer to other modules in the same component manifest \nthat this module is specified, the module loader will throw an exception and the component will fail to load. \nRequired: no \nSupported values: Names of other non-AMD-pattern modules in this loader configuration, as specified by the key \nIClientSideComponentLoaderConfig.scriptResources[] \nExample: [\"jquery\"]",
+        "dataType": "string[]",
+        "isOptional": true,
+        "type": " string",
+        "isCollection": false
       },
       "globalName": {
-        "globalName ?": {
-          "descr": "Definition: In order to load scripts that don't follow the AMD/module-pattern where \"define\" or \"require\" is \ncalled and dependencies are explicitly listed and exports are explicitly returned, the module loader needs to \nknow which global variable must be examined. If this propery is specified, this module is considered non-AMD and \nthe module loader will not expect \"define\" or \"require\" to be called. Instead, it will wait for the script to \nfinish loading and examine the global variable specified in this field. \nRequired: no \nLocalized: no \nSupported values: Variable names that are expected to be populated after this module is loaded. For example, \nif this module is describing jQuery, this value should probably be \"$\". If an empty string is specified, \nthe module loader will throw an exception and the component will fail to load. \nExample: \"$\"",
-          "isOptional": true,
-          "type": " string",
-          "isCollection": false
-        }
+        "descr": "Definition: In order to load scripts that don't follow the AMD/module-pattern where \"define\" or \"require\" is \ncalled and dependencies are explicitly listed and exports are explicitly returned, the module loader needs to \nknow which global variable must be examined. If this propery is specified, this module is considered non-AMD and \nthe module loader will not expect \"define\" or \"require\" to be called. Instead, it will wait for the script to \nfinish loading and examine the global variable specified in this field. \nRequired: no \nLocalized: no \nSupported values: Variable names that are expected to be populated after this module is loaded. For example, \nif this module is describing jQuery, this value should probably be \"$\". If an empty string is specified, \nthe module loader will throw an exception and the component will fail to load. \nExample: \"$\"",
+        "dataType": "string",
+        "isOptional": true,
+        "type": " string",
+        "isCollection": false
       },
       "path:": {
-        "path": {
-          "descr": "Definition: A path to this module's javascript resource either as a fully-qualified URL or as a path under the \npaths provided in the \"internalModuleBaseUrls\" field. For example, if this field's value is \n\"master_2015-04-20/my-application.bundle_1928f8a0.js\" and the \"internalModuleBaseUrls\" field's value is \n[ \"https://contoso.akamaihd.net/files/\", \"https://contoso.msecnd.net/files/\" ], the loader will first attempt to \nload this script resource from the URL \n\"https://contoso.akamaihd.net/files/master_2015-04-20/my-application.bundle_1928f8a0.js\". If loading from that URL \nfails, the loader will then attempt to load this script resource from \n\"https://contoso.msecnd.net/files/master_2015-04-20/my-application.bundle_1928f8a0.js\". If that URL fails to load, \nthe component will fail to load and an error will be returned. \nRequired: yes \nLocalized: no \nSupported values: The path to the module either as a fully-qualified URL or as a path under the \npaths providedin the \"internalModuleBaseUrls\" field. \nExample: \"master_2015-04-20/my-application.bundle_1928f8a0.js\"",
-          "isOptional": false,
-          "type": " string | IPath",
-          "isCollection": false
-        }
+        "descr": "Definition: A path to this module's javascript resource either as a fully-qualified URL or as a path under the \npaths provided in the \"internalModuleBaseUrls\" field. For example, if this field's value is \n\"master_2015-04-20/my-application.bundle_1928f8a0.js\" and the \"internalModuleBaseUrls\" field's value is \n[ \"https://contoso.akamaihd.net/files/\", \"https://contoso.msecnd.net/files/\" ], the loader will first attempt to \nload this script resource from the URL \n\"https://contoso.akamaihd.net/files/master_2015-04-20/my-application.bundle_1928f8a0.js\". If loading from that URL \nfails, the loader will then attempt to load this script resource from \n\"https://contoso.msecnd.net/files/master_2015-04-20/my-application.bundle_1928f8a0.js\". If that URL fails to load, \nthe component will fail to load and an error will be returned. \nRequired: yes \nLocalized: no \nSupported values: The path to the module either as a fully-qualified URL or as a path under the \npaths providedin the \"internalModuleBaseUrls\" field. \nExample: \"master_2015-04-20/my-application.bundle_1928f8a0.js\"",
+        "dataType": "string | IPath",
+        "isOptional": false,
+        "type": " string | IPath",
+        "isCollection": false
       },
       "shouldNotPreload": {
-        "shouldNotPreload ?": {
-          "descr": "Definition: If set to \"true\", this module should not be preloaded when loading the component. The most common case \nfor setting this property to \"true\" is when a module is defined in a manifest, but is not required for the \nmodule referenced in \"entryModuleId\" to load. Modules may be defined that are loaded asynchronously, and these \nmodules do not need to be preloaded. This field implicitly defaults to \"false\". \nUsage: Instructs the module loader to not preload this module. \nRequired: no \nExample: true",
-          "isOptional": true,
-          "type": " boolean",
-          "isCollection": false
-        }
+        "descr": "Definition: If set to \"true\", this module should not be preloaded when loading the component. The most common case \nfor setting this property to \"true\" is when a module is defined in a manifest, but is not required for the \nmodule referenced in \"entryModuleId\" to load. Modules may be defined that are loaded asynchronously, and these \nmodules do not need to be preloaded. This field implicitly defaults to \"false\". \nUsage: Instructs the module loader to not preload this module. \nRequired: no \nExample: true",
+        "dataType": "boolean",
+        "isOptional": true,
+        "type": " boolean",
+        "isCollection": false
       },
       "type:": {
-        "type": {
-          "descr": "Definition: The type of the script block. \"framework\" modules are expected to be provided by the framework runtime, \n\"internal\" and \"localized\" modules must be available on the paths provided in the \"internalModuleBaseUrls\" field. \nModules with the \"internal\" type use the \"IInternalModuleConfig\" interface. Modules with the \"framework\" type use \nthe \"IFrameworkModuleConfig\" interface. Modules with the \"localized\" type use the \"ILocalizedInternalModuleConfig\" \ninterface. \nRequired: yes \nLocalized: no \nSupported values: \"internal\", \"framework\", \"localized\" \nExample: \"localized\"",
-          "isOptional": false,
-          "type": " 'internal' | 'framework' | 'localized'",
-          "isCollection": false
-        }
+        "descr": "Definition: The type of the script block. \"framework\" modules are expected to be provided by the framework runtime, \n\"internal\" and \"localized\" modules must be available on the paths provided in the \"internalModuleBaseUrls\" field. \nModules with the \"internal\" type use the \"IInternalModuleConfig\" interface. Modules with the \"framework\" type use \nthe \"IFrameworkModuleConfig\" interface. Modules with the \"localized\" type use the \"ILocalizedInternalModuleConfig\" \ninterface. \nRequired: yes \nLocalized: no \nSupported values: \"internal\", \"framework\", \"localized\" \nExample: \"localized\"",
+        "dataType": "'internal' | 'framework' | 'localized'",
+        "isOptional": false,
+        "type": " 'internal' | 'framework' | 'localized'",
+        "isCollection": false
       }
     },
     "functions": {},
-    "objects": [],
-    "methods": []
+    "objects": {},
+    "methods": {}
   },
   "ILocalizedInternalModuleConfig": {
     "extendsName": "IModuleConfig",
     "descr": "This is the interface for a script module with the \"localized\" type. Modules of this type must be provided by the \ncomponent developer. These script resources are similar to those of the \"internal\" type, but they may be present \nat a number of different paths, to be selected by the user's locale. Paths in this module type are loaded exactly \nthe same way as \"internal\" modules are. \n",
     "properties": {
       "defaultPath:": {
-        "defaultPath": {
-          "descr": "Definition: A path to this module's default locale javascript resource either as a fully-qualified URL or as a \npath under the paths provided in the \"internalModuleBaseUrls\" field. If the user's locale does not resolve to one \nof the paths specified in the \"paths\" field, the path in this field is used. Paths in this module type are \ntreated exactly the same way paths in modules of the \"internal\" type are treated. \nRequired: yes \nLocalized: no \nSupported values: The path to the default locale version of the module either as a fully-qualified URL or as a path \nunder the paths providedin the \"internalModuleBaseUrls\" field. \nExample: \"master_2015-04-20/my-application_strings_default_af378e0d.js\"",
-          "isOptional": false,
-          "type": " string | IPath",
-          "isCollection": false
-        }
+        "descr": "Definition: A path to this module's default locale javascript resource either as a fully-qualified URL or as a \npath under the paths provided in the \"internalModuleBaseUrls\" field. If the user's locale does not resolve to one \nof the paths specified in the \"paths\" field, the path in this field is used. Paths in this module type are \ntreated exactly the same way paths in modules of the \"internal\" type are treated. \nRequired: yes \nLocalized: no \nSupported values: The path to the default locale version of the module either as a fully-qualified URL or as a path \nunder the paths providedin the \"internalModuleBaseUrls\" field. \nExample: \"master_2015-04-20/my-application_strings_default_af378e0d.js\"",
+        "dataType": "string | IPath",
+        "isOptional": false,
+        "type": " string | IPath",
+        "isCollection": false
       },
       "shouldNotPreload": {
-        "shouldNotPreload ?": {
-          "descr": "Definition: If set to \"true\", this module should not be preloaded when loading the component. The most common case \nfor setting this property to \"true\" is when a module is defined in a manifest, but is not required for the \nmodule referenced in \"entryModuleId\" to load. Modules may be defined that are loaded asynchronously, and these \nmodules do not need to be preloaded. This field implicitly defaults to \"false\". \nUsage: Instructs the module loader to not preload this module. \nRequired: no \nExample: true",
-          "isOptional": true,
-          "type": " boolean",
-          "isCollection": false
-        }
+        "descr": "Definition: If set to \"true\", this module should not be preloaded when loading the component. The most common case \nfor setting this property to \"true\" is when a module is defined in a manifest, but is not required for the \nmodule referenced in \"entryModuleId\" to load. Modules may be defined that are loaded asynchronously, and these \nmodules do not need to be preloaded. This field implicitly defaults to \"false\". \nUsage: Instructs the module loader to not preload this module. \nRequired: no \nExample: true",
+        "dataType": "boolean",
+        "isOptional": true,
+        "type": " boolean",
+        "isCollection": false
       },
       "type:": {
-        "type": {
-          "descr": "Definition: The type of the script block. \"framework\" modules are expected to be provided by the framework runtime, \n\"internal\" and \"localized\" modules must be available on the paths provided in the \"internalModuleBaseUrls\" field. \nModules with the \"internal\" type use the \"IInternalModuleConfig\" interface. Modules with the \"framework\" type use \nthe \"IFrameworkModuleConfig\" interface. Modules with the \"localized\" type use the \"ILocalizedInternalModuleConfig\" \ninterface. \nRequired: yes \nLocalized: no \nSupported values: \"internal\", \"framework\", \"localized\" \nExample: \"localized\"",
-          "isOptional": false,
-          "type": " 'internal' | 'framework' | 'localized'",
-          "isCollection": false
-        }
+        "descr": "Definition: The type of the script block. \"framework\" modules are expected to be provided by the framework runtime, \n\"internal\" and \"localized\" modules must be available on the paths provided in the \"internalModuleBaseUrls\" field. \nModules with the \"internal\" type use the \"IInternalModuleConfig\" interface. Modules with the \"framework\" type use \nthe \"IFrameworkModuleConfig\" interface. Modules with the \"localized\" type use the \"ILocalizedInternalModuleConfig\" \ninterface. \nRequired: yes \nLocalized: no \nSupported values: \"internal\", \"framework\", \"localized\" \nExample: \"localized\"",
+        "dataType": "'internal' | 'framework' | 'localized'",
+        "isOptional": false,
+        "type": " 'internal' | 'framework' | 'localized'",
+        "isCollection": false
       }
     },
     "functions": {},
-    "objects": [],
-    "methods": []
+    "objects": {},
+    "methods": {}
   },
   "ILocalizedString": {
     "extendsName": null,
     "descr": "Definition: A set of localized strings. \nSupported values: a dictionary of locale keys to strings. Should always have a 'default' key. \nExample: \"My Application\" \n{ \n\"default\": \"My Application\" \n\"en-us\": \"My Application\", \n\"fr-fr\": \"Ma demande\", \n\"zh\": \"我的應用程式\" \n}",
     "properties": {
       "default:": {
-        "default": {
-          "descr": "Definition: A set of localized strings. \nSupported values: a dictionary of locale keys to strings. Should always have a 'default' key. \nExample: \"My Application\" \n{ \n\"default\": \"My Application\" \n\"en-us\": \"My Application\", \n\"fr-fr\": \"Ma demande\", \n\"zh\": \"我的應用程式\" \n}",
-          "isOptional": false,
-          "type": " string",
-          "isCollection": false
-        }
+        "descr": "",
+        "dataType": "string",
+        "isOptional": false,
+        "type": " string",
+        "isCollection": false
       }
     },
     "functions": {},
-    "objects": [],
-    "methods": []
+    "objects": {},
+    "methods": {}
   },
   "IModuleConfig": {
     "extendsName": null,
     "descr": "This is the base interface for a script module's definition. \n",
     "properties": {
       "shouldNotPreload": {
-        "shouldNotPreload ?": {
-          "descr": "Definition: If set to \"true\", this module should not be preloaded when loading the component. The most common case \nfor setting this property to \"true\" is when a module is defined in a manifest, but is not required for the \nmodule referenced in \"entryModuleId\" to load. Modules may be defined that are loaded asynchronously, and these \nmodules do not need to be preloaded. This field implicitly defaults to \"false\". \nUsage: Instructs the module loader to not preload this module. \nRequired: no \nExample: true",
-          "isOptional": true,
-          "type": " boolean",
-          "isCollection": false
-        }
+        "descr": "Definition: If set to \"true\", this module should not be preloaded when loading the component. The most common case \nfor setting this property to \"true\" is when a module is defined in a manifest, but is not required for the \nmodule referenced in \"entryModuleId\" to load. Modules may be defined that are loaded asynchronously, and these \nmodules do not need to be preloaded. This field implicitly defaults to \"false\". \nUsage: Instructs the module loader to not preload this module. \nRequired: no \nExample: true",
+        "dataType": "boolean",
+        "isOptional": true,
+        "type": " boolean",
+        "isCollection": false
       },
       "type:": {
-        "type": {
-          "descr": "Definition: The type of the script block. \"framework\" modules are expected to be provided by the framework runtime, \n\"internal\" and \"localized\" modules must be available on the paths provided in the \"internalModuleBaseUrls\" field. \nModules with the \"internal\" type use the \"IInternalModuleConfig\" interface. Modules with the \"framework\" type use \nthe \"IFrameworkModuleConfig\" interface. Modules with the \"localized\" type use the \"ILocalizedInternalModuleConfig\" \ninterface. \nRequired: yes \nLocalized: no \nSupported values: \"internal\", \"framework\", \"localized\" \nExample: \"localized\"",
-          "isOptional": false,
-          "type": " 'internal' | 'framework' | 'localized'",
-          "isCollection": false
-        }
+        "descr": "Definition: The type of the script block. \"framework\" modules are expected to be provided by the framework runtime, \n\"internal\" and \"localized\" modules must be available on the paths provided in the \"internalModuleBaseUrls\" field. \nModules with the \"internal\" type use the \"IInternalModuleConfig\" interface. Modules with the \"framework\" type use \nthe \"IFrameworkModuleConfig\" interface. Modules with the \"localized\" type use the \"ILocalizedInternalModuleConfig\" \ninterface. \nRequired: yes \nLocalized: no \nSupported values: \"internal\", \"framework\", \"localized\" \nExample: \"localized\"",
+        "dataType": "'internal' | 'framework' | 'localized'",
+        "isOptional": false,
+        "type": " 'internal' | 'framework' | 'localized'",
+        "isCollection": false
       }
     },
     "functions": {},
-    "objects": [],
-    "methods": []
+    "objects": {},
+    "methods": {}
   },
   "IPath": {
     "extendsName": null,
     "descr": "This is the base interface for a set of debug and non-debug/minimized paths. The paths in this object are \nloaded in exactly the same way as any other internal path. \n",
     "properties": {
       "debug": {
-        "debug ?": {
-          "descr": "Definition: A path to this module's debug javascript resource either as a fully-qualified URL or as a path under \nthe paths provided in the \"internalModuleBaseUrls\" field. The script referenced by this field is only loaded if \nit is present and debug scripts are explicitly requested. \nRequired: no \nSupported values: The path to the debug script either as a fully-qualified URL or as a path under the \npaths providedin the \"internalModuleBaseUrls\" field. \nExample: \"master_2015-04-20/my-application.bundle_18182c39.debug.js\"",
-          "isOptional": true,
-          "type": " string",
-          "isCollection": false
-        }
+        "descr": "Definition: A path to this module's debug javascript resource either as a fully-qualified URL or as a path under \nthe paths provided in the \"internalModuleBaseUrls\" field. The script referenced by this field is only loaded if \nit is present and debug scripts are explicitly requested. \nRequired: no \nSupported values: The path to the debug script either as a fully-qualified URL or as a path under the \npaths providedin the \"internalModuleBaseUrls\" field. \nExample: \"master_2015-04-20/my-application.bundle_18182c39.debug.js\"",
+        "dataType": "string",
+        "isOptional": true,
+        "type": " string",
+        "isCollection": false
       },
       "default:": {
-        "default": {
-          "descr": "Definition: A path to this module's javascript resource either as a fully-qualified URL or as a path under the \npaths provided in the \"internalModuleBaseUrls\" field. The script referenced by this field is loaded by default \nunless a debug version of the script is provided and explicitly requested. \nRequired: yes \nSupported values: The path to the default/non-debug script either as a fully-qualified URL or as a path under the \npaths providedin the \"internalModuleBaseUrls\" field. \nExample: \"master_2015-04-20/my-application.bundle_1928f8a0.js\"",
-          "isOptional": false,
-          "type": " string",
-          "isCollection": false
-        }
+        "descr": "Definition: A path to this module's javascript resource either as a fully-qualified URL or as a path under the \npaths provided in the \"internalModuleBaseUrls\" field. The script referenced by this field is loaded by default \nunless a debug version of the script is provided and explicitly requested. \nRequired: yes \nSupported values: The path to the default/non-debug script either as a fully-qualified URL or as a path under the \npaths providedin the \"internalModuleBaseUrls\" field. \nExample: \"master_2015-04-20/my-application.bundle_1928f8a0.js\"",
+        "dataType": "string",
+        "isOptional": false,
+        "type": " string",
+        "isCollection": false
       }
     },
     "functions": {},
-    "objects": [],
-    "methods": []
+    "objects": {},
+    "methods": {}
   },
   "IStandardLibraryModule": {
     "extendsName": null,
     "descr": "",
     "properties": {
       "aliases:": {
-        "aliases": {
-          "descr": "References to modules that are swappable for this module (for example, modules that contain a superset of \nthis module).",
-          "isOptional": false,
-          "type": " IBundleReference",
-          "isCollection": true
-        }
+        "descr": "References to modules that are swappable for this module (for example, modules that contain a superset of \nthis module).",
+        "dataType": "IBundleReference[]",
+        "isOptional": false,
+        "type": " IBundleReference",
+        "isCollection": true
       },
       "bundleReference:": {
-        "bundleReference": {
-          "descr": "Reference (id and entryName pair) to the bundle",
-          "isOptional": false,
-          "type": " IBundleReference",
-          "isCollection": false
-        }
+        "descr": "Reference (id and entryName pair) to the bundle",
+        "dataType": "IBundleReference",
+        "isOptional": false,
+        "type": " IBundleReference",
+        "isCollection": false
       },
       "dependentIds:": {
-        "dependentIds": {
-          "descr": "The IDs of modules this module depends on.",
-          "isOptional": false,
-          "type": " string",
-          "isCollection": true
-        }
+        "descr": "The IDs of modules this module depends on.",
+        "dataType": "string[]",
+        "isOptional": false,
+        "type": " string",
+        "isCollection": true
       },
       "preloadId:": {
-        "preloadId": {
-          "descr": "The ID of the bundle to preload.",
-          "isOptional": false,
-          "type": " string",
-          "isCollection": false
-        }
+        "descr": "The ID of the bundle to preload.",
+        "dataType": "string",
+        "isOptional": false,
+        "type": " string",
+        "isCollection": false
       }
     },
     "functions": {},
-    "objects": [],
-    "methods": []
+    "objects": {},
+    "methods": {}
   }
 }

@@ -69,6 +69,6 @@
 | Enumeration	   | Description|
 |:-----------|:------------|
 |[IPropertyPaneFieldType](IPropertyPaneFieldType.md)     |  |
-|[PropertyPaneButtonType](PropertyPaneButtonType.md)     | Helper method to create a Button on the PropertyPane |
-|[WebPartConfigurationEvent](WebPartConfigurationEvent.md)     | Helper method to create a Toggle on the PropertyPane |
+|[PropertyPaneButtonType](PropertyPaneButtonType.md)     |  |
+|[WebPartConfigurationEvent](WebPartConfigurationEvent.md)     |  |
 

@@ -5,6 +5,9 @@
 ##### Signature
 %apisignature%
 
+#### Returns
+%returntype%
+
 #### Parameters
 %noparam%
 
@@ -12,11 +15,5 @@
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 >| %name%     | %dtype% | %optional% %description% |
-</parameters>
-
-#### Returns
-%returntype%
-
-
 
 </parameter>

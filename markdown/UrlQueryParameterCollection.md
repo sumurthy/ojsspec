@@ -1,4 +1,4 @@
-# UrlQueryParameterCollection resource type
+# UrlQueryParameterCollection class
 
 Class for storing and retrieving query parameters. 
 The URL can be server-relative and it will parse empty/null strings. 
@@ -13,12 +13,82 @@ Query param with only equals (www.example.com/?=&debug=on stores empty string ke
 
 
 
+
 ## Methods
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|constructor      | public | [UrlQueryParameterCollection](UrlQueryParameterCollection.md) | Class for storing and retrieving query parameters |
-|getValue      | public | string | Returns the value of the first matching query parameter or undefined if the key doesn't exist |
-|getValues      | public | string[] | Returns the values of all of the matching query parameters or undefined if the key doesn't exist |
+|[constructor](#constructor)      | public | [UrlQueryParameterCollection](UrlQueryParameterCollection.md) |  |
+|[getValue](#getvalue)      | public | string | Returns the value of the first matching query parameter or undefined if the key doesn't exist |
+|[getValues](#getvalues)      | public | string[] | Returns the values of all of the matching query parameters or undefined if the key doesn't exist |
 
+
+
+
+## constructor
+
+
+
+##### Signature
+constructor(url: string)
+
+#### Returns
+UrlQueryParameterCollection
+
+#### Parameters
+
+
+| Parameter	   | Type    | Description |
+|:-------------|:---------------|:------------|
+| url     | undefined | %optional% undefined |
+
+
+## getValue
+
+Returns the value of the first matching query parameter or undefined if the key doesn't exist. 
+Examples: this._queryParameterList = [ 
+{key: TEST, value: done}, 
+{key: DEBUG, value: false}, 
+{key: TEST, value: notdone}] 
+getValue('TEST') ---> 'done' 
+getValue('debug') ---> 'false' 
+getValue('lost') ---> undefined
+
+##### Signature
+getValue(param: string): string
+
+#### Returns
+string
+
+#### Parameters
+
+
+| Parameter	   | Type    | Description |
+|:-------------|:---------------|:------------|
+| param     | undefined | %optional% undefined |
+
+
+## getValues
+
+Returns the values of all of the matching query parameters or undefined if the key doesn't exist. 
+Examples: this._queryParameterList = [ 
+{key: TEST, value: done}, 
+{key: DEBUG, value: false}, 
+{key: TEST, value: notdone}] 
+getValues('TEST') ---> ['done', 'notdone'] 
+getValues('debug') ---> ['false'] 
+getValues('lost') ---> undefined
+
+##### Signature
+getValues(param: string): string[]
+
+#### Returns
+string[]
+
+#### Parameters
+
+
+| Parameter	   | Type    | Description |
+|:-------------|:---------------|:------------|
+| param     | undefined | %optional% undefined |
 

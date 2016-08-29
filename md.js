@@ -2,6 +2,7 @@ import FileOps from './modules/fileops'
 import SetUp from './modules/setuproutine'
 import Utils from './modules/utils'
 
+let allTypes = []
 let functionObj = {}
 let iObj = {}
 let classObj = {}
@@ -9,6 +10,7 @@ let enumObj = {}
 let region = ''
 let mdout = []
 let mem_mdout = []
+let func_mdout = []
 let skipFlag = false
 let moduleName = ''
 let className = ''
@@ -44,20 +46,29 @@ function file_reset() {
 	skipFlag = false
 }
 function getLinkForType(type='') {
-	if ((Object.keys(iObj).includes(type)) || (Object.keys(classObj).includes(type))) {
-		console.log('match input: ' + type)
 
-		return `[${type}](${type}.md)`
-	}
-	else {
-		console.log('no match input: ' + type)
+	var out = ''
 
-		return type
+	type.split('|').forEach((e) => {
+		if (allTypes.includes(e.trim())) {
+			out = out + `[${e}](${e}.md)` + ','
+		}
+		else {
+			out = out + e + ','
+		}
+	})
+
+	if (out.endsWith(',')) {
+		out = out.substring(0, out.length - 1)
 	}
+
+	return out
+
+
 }
 
 
-function set_region_member(tline = '', member={}) {
+function set_region_member(tline = '', member={}, isClass = true) {
 	skipFlag = false
 	if (tline.includes('</')) {
 		region = 'none'
@@ -65,8 +76,21 @@ function set_region_member(tline = '', member={}) {
 	else {
 		region = Utils.genericInside(tline).replace('/','')
 		switch (region) {
+			case 'function':
+			case 'method':
+				if (!isClass) {
+					skipFlag = true
+				}
+			break;
+			case 'imethod':
+			case 'ifunction':
+			case 'function':
+				if (isClass) {
+					skipFlag = true
+				}
+				break;
 			case 'parameter':
-				if (Object.keys(member['parameters']).length === 0) {
+				if (member['params'].length === 0) {
 					skipFlag = true
 				}
 				break;
@@ -76,7 +100,7 @@ function set_region_member(tline = '', member={}) {
 	return
 }
 
-function set_region(tline = '', obj={}) {
+function set_region(tline = '', obj={}, localName = '', isClass = true) {
 
 	skipFlag = false
 	if (tline.includes('</')) {
@@ -91,13 +115,34 @@ function set_region(tline = '', obj={}) {
 				}
 				break;
 			case 'property':
-				if (Object.keys(obj[className]['properties']).length === 0) {
+				if (!isClass) {
+					skipFlag = true
+				}
+				if (Object.keys(obj[localName]['properties']).length === 0) {
+					skipFlag = true
+				}
+				break;
+			case 'iproperty':
+				if (isClass) {
+					skipFlag = true
+				}
+				if (Object.keys(obj[localName]['properties']).length === 0) {
+					skipFlag = true
+				}
+				break;
+			case 'imethod':
+				if (isClass) {
+					skipFlag = true
+				}
+				if (Object.keys(obj[localName]['methods']).length === 0) {
 					skipFlag = true
 				}
 				break;
 			case 'method':
-				console.log(JSON.stringify(obj[className]['methods']))
-				if (Object.keys(obj[className]['methods']).length === 0) {
+				if (!isClass) {
+					skipFlag = true
+				}
+				if (Object.keys(obj[localName]['methods']).length === 0) {
 					skipFlag = true
 				}
 				break;
@@ -106,8 +151,13 @@ function set_region(tline = '', obj={}) {
 					skipFlag = true
 				}
 				break;
-			case 'function':
+			case 'functions':
 				if (Object.keys(functionObj).length === 0) {
+					skipFlag = true
+				}
+				break;
+			case 'ifunction':
+				if (Object.keys(obj[localName]['functions']).length === 0) {
 					skipFlag = true
 				}
 				break;
@@ -138,17 +188,37 @@ function doSub(tline = '') {
 }
 
 
-function doSubClass(tline = '') {
-	if (tline.includes('%resourcedescription%'))	tline = tline.replace('%resourcedescription%', classObj[className]['descr'])
-	if (tline.includes('%resourcename%'))	tline = tline.replace('%resourcename%', className)
+function doSubClassInterface(tline = '', localO = {}, localName = '', isClass = true) {
+
+	if (tline.includes('%resourcedescription%'))	tline = tline.replace('%resourcedescription%', localO[localName]['descr'])
+	if (tline.includes('%resourcename%'))	tline = tline.replace('%resourcename%', localName)
+	if (tline.includes('%resourcetype%'))	{
+		if (isClass) {
+			tline = tline.replace('%resourcetype%', 'class')
+		}
+		else {
+			tline = tline.replace('%resourcetype%', 'interface')
+		}
+	}
 	return tline
 }
-
 
 function doSubMember(tline = '', member={}, membername='') {
 	if (tline.includes('%membername%'))	tline = tline.replace('%membername%', membername)
 	if (tline.includes('%memberdescription%'))	tline = tline.replace('%memberdescription%', member['descr'])
 	if (tline.includes('%apisignature%'))	tline = tline.replace('%apisignature%', member['signature'])
+
+	if (tline.includes('%noparam%'))	{
+		if (member['params'].length === 0) {
+			tline = tline.replace('%noparam%', 'None')
+		}
+		else {
+			tline = tline.replace('%noparam%', '')
+
+		}
+	}
+
+	if (tline.includes('%returntype%'))	tline = tline.replace('%returntype%', member['returnType'])
 
 	return tline
 }
@@ -157,16 +227,17 @@ function doSubMember(tline = '', member={}, membername='') {
 var dFunction = {
 
 	classGenIndividual: function(e='') {
-
 		className = e
-		genClassView()
+		genClassInterfaceView(true, e)
 	},
 
 	interfaceGenIndividual: function (e='') {
+		className = e
+		genClassInterfaceView(false, e)
 
 	},
 
-	functionGenIndividual: function (e='') {
+	functionsGenIndividual: function (e='') {
 
 	},
 
@@ -184,13 +255,14 @@ function addRegions(tline='', type='') {
 		case 'interface':
 			o = iObj
 			break;
-		case 'function':
+		case 'functions':
 			o = functionObj
 			break;
 		case 'enumeration':
 			o = enumObj
 			break;
 		default:
+
 	}
 
 	Object.keys(o).forEach((e) => {
@@ -204,7 +276,7 @@ function addRegions(tline='', type='') {
 			}
 			mline = mline.replace('%description%', descr)
 			// For return function add Markdown HyperLink
-			if (type === 'function') {
+			if (type === 'functions') {
 					var returnLink = getLinkForType(o[e]['returnType'])
 					mline = mline.replace('%returns%', returnLink)
 			}
@@ -216,35 +288,33 @@ function addRegions(tline='', type='') {
 	})
 }
 
-
-function addMembers(tline='', type='', name='') {
+function addMembers(tline='', type='', name='', localO={}) {
 	var o = {}
 	switch (type) {
 		case 'property':
-			o = classObj[className]['properties']
+		case 'iproperty':
+			o = localO[name]['properties']
 			break;
 		case 'method':
-			o = classObj[className]['methods']
+		case 'imethod':
+			o = localO[name]['methods']
 			break;
-		case 'function':
-			o = classObj[className]['functions']
+		case 'ifunction':
+			o = localO[name]['functions']
 			break;
-
 		default:
 	}
 
 	Object.keys(o).forEach((e) => {
 
 			var mline = dclone(tline).substr(1)
-			mline = mline.replace('%name%', e)
 			mline = mline.replace('%access%', `${o[e]['accessModifier']}`)
-			if (type === 'method') {
-				console.log('calling link for method: ' + o[e]['returnType'] + ' ' + e);
+			if ((type === 'method') || type === 'imethod') {
 				mline = mline.replace('%type%', `${getLinkForType(o[e]['returnType'])}`)
+				mline = mline.replace('%name%', `[${e}](#${e.toLowerCase()})`)
 			}
 			else {
-				console.log('calling link for property: ' + o[e]['dataType'] + ' ' + e);
-
+				mline = mline.replace('%name%', e)
 				mline = mline.replace('%type%', `${getLinkForType(o[e]['dataType'])}`)
 			}
 
@@ -263,14 +333,14 @@ function addMembers(tline='', type='', name='') {
 	})
 }
 
-function addParams(tline='', member={}) {
+function addParams(tline='', member={}, targetArray=[]) {
 
-	Object.keys(member['parameters']).forEach((e) => {
+	member['params'].forEach((e) => {
 			var mline = dclone(tline).substr(1)
-			mline = mline.replace('%name%', e)
-			mline = mline.replace('%dtype%', `${member['parameters'][e]['dataType'])}`)
+			mline = mline.replace('%name%', e['name'])
+			mline = mline.replace('%dtype%', `${[e]['dataType']}`)
 			//Get first sentence
-			var descr = member['parameters'][e]['descr']
+			var descr = [e]['descr']
 			if (descr) {
 				descr = descr.split('.')[0].replace(/\n/g, ' ')
 			}
@@ -282,22 +352,25 @@ function addParams(tline='', member={}) {
 			// 	mline = mline.replace('%optional%', '')
 			// }
 
-			mem_mdout.push(mline)
+			targetArray.push(mline)
 	})
 }
 
 
-function genClassView(){
-	mem_mdout = []
-	var o = classObj[className]
+function genClassInterfaceView(isClass = true, localName = ''){
+	var localO = isClass ? classObj : iObj
 
-		classInterfaceT.forEach((tline) => {
+	mem_mdout = []
+	var o = localO[localName]
+	//var o = classObj[className]
+
+	classInterfaceT.forEach((tline) => {
 			tline = tline.trim()
 			var key = tline[0] || '*'
 			var key2 = tline.substring(0,2)
 
 			if (NEW_REGION.includes(key)) {
-				set_region(tline, classObj)
+				set_region(tline, localO, localName, isClass)
 				return
 			}
 
@@ -308,38 +381,43 @@ function genClassView(){
 			var hasVar = tline.includes('%') ? true  : false
 
 			if (WRITE_BACK.includes(key)) {
-
-				 if (hasVar) tline = doSubClass(tline)
-				 mem_mdout.push(tline)
+				if (hasVar) tline = doSubClassInterface(tline, localO, localName, isClass)
+				mem_mdout.push(tline)
 			}
 
 			else if (TAKE_REPEAT_ACTION.includes(key)) {
 				switch (region) {
 					case 'property':
-						addMembers(tline, region, className)
-						break
 					case 'method':
-						addMembers(tline, region, className)
-						break
+					case 'function':
+					case 'ifunction':
+					case 'imethod':
+					case 'iproperty':
+						addMembers(tline, region, localName, localO)
 						break;
 					default:
-
 				}
 			}
+	})
+
+	if (Object.keys(localO[localName]['methods']).length > 0) {
+		Object.keys(localO[localName]['methods']).forEach((e) => {
+			genMemberview(e, localO[localName]['methods'][e], 	mem_mdout)
 		})
+	}
 
-		if (classObj[className]['methods'].keys.length > 0) {
-				classObj[className]['methods'].keys.forEach((e) => {
-						genMemberview(e)
-				})
-		}
+	if (!isClass && (Object.keys(localO[localName]['functions']).length > 0)) {
+		Object.keys(localO[localName]['functions']).forEach((e) => {
+			genMemberview(e, localO[localName]['functions'][e], mem_mdout)
+		})
+	}
 
-		console.log(`*** Writing Class file for ${className}`)
-		FileOps.writeFile(mem_mdout, `./markdown/${className}.md`)
+	console.log(`*** Writing Class/Interface file for ${localName}`)
+	FileOps.writeFile(mem_mdout, `./markdown/${localName}.md`)
+
 }
 
-function	genMemberview(memName='') {
-	var member = classObj[className]['methods'][memName]
+function	genMemberview(memName='', member ={}, targetArray = []) {
 
 	methodfuncT.forEach((tline) => {
 		tline = tline.trim()
@@ -356,11 +434,11 @@ function	genMemberview(memName='') {
 
 		var hasVar = tline.includes('%') ? true  : false
 		if (WRITE_BACK.includes(key)) {
-			 if (hasVar) tline = doSubMember(tline, member)
-			 mem_mdout.push(tline)
+			 if (hasVar) { tline = doSubMember(tline, member, memName) }
+			 targetArray.push(tline)
 		}
 		else if (TAKE_REPEAT_ACTION.includes(key)) {
-					addParams(tline, member)
+					addParams(tline, member, targetArray)
 			}
 		})
 	}
@@ -393,18 +471,26 @@ function genModuleView(){
 			else if (TAKE_REPEAT_ACTION.includes(key)) {
 				switch (region) {
 					case 'class':
-					case 'function':
+					case 'functions':
 					case 'interface':
 					case 'enumeration':
 						addRegions(tline, region)
 						break;
 					default:
-
 				}
 			}
 		})
 		console.log(`*** Writing Module file for ${moduleName}`)
 		FileOps.writeFile(mdout, `./markdown/${moduleName}-module.md`)
+		genFunctionView()
+		//genEnumView()
+}
+function genFunctionView() {
+	Object.keys(functionObj).forEach((e) => {
+		genMemberview(e, functionObj[e], func_mdout)
+		console.log(`*** Writing Function file for ${e}`)
+		FileOps.writeFile(func_mdout, `./markdown/${e}.md`)
+	})
 }
 
 console.log('** Starting Program...')
@@ -413,7 +499,10 @@ SetUp.cleanupOutput('./markdown')
 try {
 	moduleT = FileOps.loadFile('./config/module.md')
 	classInterfaceT = FileOps.loadFile('./config/class.md')
-	methodfuncT = FileOps.loadFile('./config/method-function.md')
+	methodfuncT = FileOps.loadFile('./config/method_function.md')
+
+	var t= JSON.parse(FileOps.loadJson('./json/allTypes.json'))
+	allTypes = t['types']
 } catch (e) {
 	console.log(`Error Loading config files.`)
 	throw e
@@ -428,6 +517,7 @@ inputFiles.forEach((e) => {
 
 	moduleName = e.split('.')[0]
 	genModuleView()
+
 	file_reset()
 
 })

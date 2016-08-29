@@ -1,4 +1,4 @@
-# MockWebPartContext resource type
+# MockWebPartContext class
 
 
 
@@ -12,10 +12,30 @@
 
 
 
+
 ## Methods
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|domElement:      | public | HTMLElement = document.createElement('div') |  |
+|[domElement:](#domelement:)      | public | HTMLElement = document.createElement('div') |  |
 
+
+
+
+## domElement:
+
+
+
+##### Signature
+domElement: HTMLElement = document.createElement('div')
+
+#### Returns
+HTMLElement = document.createElement('div')
+
+#### Parameters
+
+
+| Parameter	   | Type    | Description |
+|:-------------|:---------------|:------------|
+| 'div'     | undefined | %optional% undefined |
 

@@ -1,4 +1,4 @@
-# Environment resource type
+# Environment class
 
 This class contains contextual information about the enviroment that is hosting the framework and 
 its components.
@@ -9,5 +9,8 @@ its components.
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
 |type      | public | EnvironmentType | An enum that describes which type of enviroment the framework is running in |
+
+
+
 
 

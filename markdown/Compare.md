@@ -1,6 +1,7 @@
-# Compare resource type
+# Compare class
 
 This class contains various comparison utilities. 
+
 
 
 
@@ -10,6 +11,28 @@ This class contains various comparison utilities.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|static      | public | boolean | Performs shallow comparison between two objects to determine if they are equal |
+|[static](#static)      | public | boolean | Performs shallow comparison between two objects to determine if they are equal |
 
+
+
+
+## static
+
+Performs shallow comparison between two objects to determine if they are equal. This method compares 
+only object types. 
+
+
+##### Signature
+static shallowCompare(objA: Object, objB: Object): boolean
+
+#### Returns
+boolean
+
+#### Parameters
+
+
+| Parameter	   | Type    | Description |
+|:-------------|:---------------|:------------|
+| objA     | undefined | %optional% undefined |
+| objB     | undefined | %optional% undefined |
 

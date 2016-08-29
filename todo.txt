@@ -26,3 +26,4 @@ interface IClientSideWebPartManifestInstance<TProperties> extends
  IClientSideWebPartManifestEntry<TProperties> {
  /**
 8. Property has {}
+10. Type - has to check across multiple files 

@@ -74,7 +74,8 @@
           }
         ]
       }
-    }
+    },
+    "functions": {}
   },
   "Headers": {
     "implementsName": null,
@@ -132,7 +133,7 @@
           }
         ]
       },
-      "": {
+      "ErrorErrorError": {
         "accessModifier": "forEach(callback:",
         "signature": "(value: string, name: string) => void): void",
         "descr": "",
@@ -152,7 +153,8 @@
           }
         ]
       }
-    }
+    },
+    "functions": {}
   },
   "Body": {
     "implementsName": null,
@@ -223,7 +225,8 @@
         "returnDescr": null,
         "params": []
       }
-    }
+    },
+    "functions": {}
   },
   "Response": {
     "implementsName": null,
@@ -321,6 +324,7 @@
           }
         ]
       }
-    }
+    },
+    "functions": {}
   }
 }

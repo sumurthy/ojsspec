@@ -1,4 +1,4 @@
-# PageContext resource type
+# PageContext class
 
 The page context provides standard definitions for common SharePoint objects 
 that need to be shared between the client-side application, web parts, and other 
@@ -19,10 +19,30 @@ application cache.
 
 
 
+
 ## Methods
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|constructor      | public | [PageContext](PageContext.md) | The page context provides standard definitions for common SharePoint objects  that need to be shared between the client-side application, web parts, and other  components |
+|[constructor](#constructor)      | public | [PageContext](PageContext.md) |  |
 
+
+
+
+## constructor
+
+
+
+##### Signature
+constructor(serviceScope: ServiceScope)
+
+#### Returns
+PageContext
+
+#### Parameters
+
+
+| Parameter	   | Type    | Description |
+|:-------------|:---------------|:------------|
+| serviceScope     | undefined | %optional% undefined |
 

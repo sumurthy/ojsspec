@@ -17,7 +17,7 @@
       "constructor": {
         "accessModifier": "public",
         "signature": "constructor(serviceScope: ServiceScope)",
-        "descr": "BasicHttpClient implements a basic set of features for performing REST operations. \nThe subclass HttpClient extends this basic functionality with SharePoint-specific \nenhancements.",
+        "descr": "",
         "genericType": null,
         "returnType": "BasicHttpClient",
         "returnDescr": null,
@@ -104,7 +104,8 @@
           }
         ]
       }
-    }
+    },
+    "functions": {}
   },
   "Compare": {
     "implementsName": null,
@@ -132,7 +133,8 @@
           }
         ]
       }
-    }
+    },
+    "functions": {}
   },
   "CultureInfo": {
     "implementsName": null,
@@ -156,7 +158,8 @@
         "descr": "This string determines the default user interface language. This used for localization and \ntranslation of text. This property may have an empty string, but will never be undefined. \nExample: If the currentUICultureName is \"es-mx\", then the application could use this \ninformation to translate the word \"hello\" to \"hola\"."
       }
     },
-    "methods": {}
+    "methods": {},
+    "functions": {}
   },
   "Environment": {
     "implementsName": null,
@@ -172,7 +175,8 @@
         "descr": "An enum that describes which type of enviroment the framework is running in."
       }
     },
-    "methods": {}
+    "methods": {},
+    "functions": {}
   },
   "Guid": {
     "implementsName": null,
@@ -219,7 +223,8 @@
         "returnDescr": null,
         "params": []
       }
-    }
+    },
+    "functions": {}
   },
   "HttpClient": {
     "implementsName": null,
@@ -230,7 +235,7 @@
       "constructor": {
         "accessModifier": "public",
         "signature": "constructor(serviceScope: ServiceScope)",
-        "descr": "HttpClient is used to perform REST calls against SharePoint. It adds default \nheaders, manages the digest needed for writes, and collects telemetry that \nhelps the service to monitor the performance of an application. \n \nFor communicating with non-SharePoint services, use the BasicHttpClient \nclass instead.",
+        "descr": "",
         "genericType": null,
         "returnType": "HttpClient",
         "returnDescr": null,
@@ -332,7 +337,8 @@
           }
         ]
       }
-    }
+    },
+    "functions": {}
   },
   "Log": {
     "implementsName": null,
@@ -365,7 +371,8 @@
           }
         ]
       }
-    }
+    },
+    "functions": {}
   },
   "ODataBatch": {
     "implementsName": null,
@@ -376,7 +383,7 @@
       "constructor": {
         "accessModifier": "public",
         "signature": "public constructor(serviceScope: ServiceScope, batchOptions?: IODataBatchOptions)",
-        "descr": "The ODataBatch class accumulates a number of REST service calls and \ntransmits them as a single ODATA batch. This protocol is documented here: \nhttp://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html \n \nThe usage is to call ODataBatch.fetch() to queue each individual request, \nand then call ODataBatch.execute() to execute the batch operation. \nThe execute() method returns a promise that resolves when the real REST \ncall has completed. Each call to fetch() also returns a promise that will \nresolve with a Response object for that particular request. \n",
+        "descr": "",
         "genericType": null,
         "returnType": "ODataBatch",
         "returnDescr": null,
@@ -462,7 +469,8 @@
           }
         ]
       }
-    }
+    },
+    "functions": {}
   },
   "PageContext": {
     "implementsName": null,
@@ -514,7 +522,7 @@
       "constructor": {
         "accessModifier": "public",
         "signature": "constructor(serviceScope: ServiceScope)",
-        "descr": "The page context provides standard definitions for common SharePoint objects \nthat need to be shared between the client-side application, web parts, and other \ncomponents. Typically the data is fetched via REST queries when navigating to a \nnew page, but it can also be preloaded by the web server, or filled from a custom \napplication cache.",
+        "descr": "",
         "genericType": null,
         "returnType": "PageContext",
         "returnDescr": null,
@@ -526,7 +534,8 @@
           }
         ]
       }
-    }
+    },
+    "functions": {}
   },
   "ServiceKey": {
     "implementsName": null,
@@ -612,7 +621,8 @@
           }
         ]
       }
-    }
+    },
+    "functions": {}
   },
   "ServiceScope": {
     "implementsName": null,
@@ -745,7 +755,8 @@
           }
         ]
       }
-    }
+    },
+    "functions": {}
   },
   "SPPermission": {
     "implementsName": null,
@@ -765,7 +776,7 @@
       "constructor": {
         "accessModifier": "public",
         "signature": "constructor(value: IODataBasePermission)",
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx",
+        "descr": "",
         "genericType": null,
         "returnType": "SPPermission",
         "returnDescr": null,
@@ -777,7 +788,8 @@
           }
         ]
       }
-    }
+    },
+    "functions": {}
   },
   "SPSite": {
     "implementsName": null,
@@ -793,7 +805,8 @@
         "descr": "The GUID that identifies the SPSite on the server."
       }
     },
-    "methods": {}
+    "methods": {},
+    "functions": {}
   },
   "SPUser": {
     "implementsName": null,
@@ -817,7 +830,8 @@
         "descr": "The login name for specified user. \nExample: \"example@microsoft.com\""
       }
     },
-    "methods": {}
+    "methods": {},
+    "functions": {}
   },
   "SPWeb": {
     "implementsName": null,
@@ -857,7 +871,8 @@
         "descr": "Returns the title of the SharePoint site."
       }
     },
-    "methods": {}
+    "methods": {},
+    "functions": {}
   },
   "UrlQueryParameterCollection": {
     "implementsName": null,
@@ -868,7 +883,7 @@
       "constructor": {
         "accessModifier": "public",
         "signature": "constructor(url: string)",
-        "descr": "Class for storing and retrieving query parameters. \nThe URL can be server-relative and it will parse empty/null strings. \nThe query parameters must start with ? to indicate the first query parameter and \nuse & for all subsequent parameters. The class also supports fragments. \nEdge cases behavior: \nEmpty value (www.example.com/?test=) stores key and empty value \nNo equals in queryParam (www.example.com/?test) stores key and undefined value \nEmpty queryParam (www.example.com/?&debug=on) stores undefined key and value \nQuery param with only equals (www.example.com/?=&debug=on stores empty string key and value",
+        "descr": "",
         "genericType": null,
         "returnType": "UrlQueryParameterCollection",
         "returnDescr": null,
@@ -910,7 +925,8 @@
           }
         ]
       }
-    }
+    },
+    "functions": {}
   },
   "UrlUtilities": {
     "implementsName": null,
@@ -933,7 +949,8 @@
           }
         ]
       }
-    }
+    },
+    "functions": {}
   },
   "Validate": {
     "implementsName": null,
@@ -961,6 +978,7 @@
           }
         ]
       }
-    }
+    },
+    "functions": {}
   }
 }

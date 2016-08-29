@@ -1,4 +1,4 @@
-# SPPermission resource type
+# SPPermission class
 
 This class can be used to determine if the current user has a requested set of permissions. 
 Specifies the built-in permissions available in SharePoint Foundation 
@@ -14,10 +14,30 @@ https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.
 
 
 
+
 ## Methods
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|constructor      | public | [SPPermission](SPPermission.md) | This class can be used to determine if the current user has a requested set of permissions |
+|[constructor](#constructor)      | public | [SPPermission](SPPermission.md) |  |
 
+
+
+
+## constructor
+
+
+
+##### Signature
+constructor(value: IODataBasePermission)
+
+#### Returns
+SPPermission
+
+#### Parameters
+
+
+| Parameter	   | Type    | Description |
+|:-------------|:---------------|:------------|
+| value     | undefined | %optional% undefined |
 

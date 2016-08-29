@@ -1,5 +1,5 @@
 <classheader>
-# %resourcename% resource type
+# %resourcename% %resourcetype%
 
 %resourcedescription%
 
@@ -14,6 +14,15 @@
 
 </property>
 
+<iproperty>
+### Properties
+
+| Property	   | Type	| Description|
+|:-------------|:-------|:-----------|
+>|%name%      | %type% | %description% |
+
+</iproperty>
+
 <method>
 
 ## Methods
@@ -22,5 +31,25 @@
 |:-------------|:----|:-------|:-----------|
 >|%name%      | %access% | %type% | %description% |
 
-
 </method>
+
+<imethod>
+
+## Methods
+
+| Method	   |  Returns	| Description|
+|:-------------|:-------|:-----------|
+>|%name%      | %type% | %description% |
+
+</imethod>
+
+<ifunction>
+
+## Functions
+
+| Function	   | Access Modifier | Returns	| Description|
+|:-------------|:----|:-------|:-----------|
+>|%name%      | %access% | %type% | %description% |
+
+
+</ifunction>

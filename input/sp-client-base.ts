@@ -243,7 +243,7 @@ declare class HttpClient extends BasicHttpClient {
  */
 interface IBasicHttpClientOptions extends RequestInit {
   body ?: BodyInit;
-  cache ?: string|RequestCache;
+  cache ?: ILocalizedString|ILocalizedString;
   credentials ?: string|RequestCredentials;
   headers ?: HeaderInit;
   method ?: string;
@@ -423,9 +423,8 @@ interface IDigestCache {
  */
 interface IHttpClientOptions extends IBasicHttpClientOptions {
   body ?: BodyInit;
-  cache ?: string|RequestCache;
+  cache ?: ILocalizedString|ILocalizedString;
   credentials ?: string|RequestCredentials;
-
   method ?: string;
   mode ?: string|RequestMode;
   /**

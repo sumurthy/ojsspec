@@ -73,7 +73,7 @@
     ]
   },
   "PropertyPaneButtonType": {
-    "descr": "Helper method to create a Button on the PropertyPane.",
+    "descr": "",
     "values": [
       [
         "Command",
@@ -106,7 +106,7 @@
     ]
   },
   "WebPartConfigurationEvent": {
-    "descr": "Helper method to create a Toggle on the PropertyPane.",
+    "descr": "",
     "values": [
       [
         "// (undocumented)",

@@ -22,7 +22,7 @@
 
 </interface>
 
-<function>
+<functions>
 
 ## Functions
 
@@ -30,7 +30,7 @@
 |:-------------|:------|:---------------|
 >| [%name%](%link%.md) |%returns%    | %description%  |
 
-</function>
+</functions>
 
 <enumeration>
 ### Enumerations

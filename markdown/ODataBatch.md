@@ -1,4 +1,4 @@
-# ODataBatch resource type
+# ODataBatch class
 
 The ODataBatch class accumulates a number of REST service calls and 
 transmits them as a single ODATA batch. This protocol is documented here: 
@@ -14,14 +14,119 @@ resolve with a Response object for that particular request.
 
 
 
+
 ## Methods
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|constructor      | public | [ODataBatch](ODataBatch.md) | The ODataBatch class accumulates a number of REST service calls and  transmits them as a single ODATA batch |
-|execute      | public | Promise<ODataBatch> | Executes the batched queries that were queued using ODataBatch |
-|fetch      | public | Promise<Response> | Queues a new request, and returns a promise that can be used to access  the server response (after execute() has completed) |
-|get      | public | Promise<Response> | Calls fetch(), but sets the method to 'GET' |
-|post      | public | Promise<Response> | Calls fetch(), but sets the method to 'POST' |
+|[constructor](#constructor)      | public | [ODataBatch](ODataBatch.md) |  |
+|[execute](#execute)      | public | Promise<ODataBatch> | Executes the batched queries that were queued using ODataBatch |
+|[fetch](#fetch)      | public | Promise<Response> | Queues a new request, and returns a promise that can be used to access  the server response (after execute() has completed) |
+|[get](#get)      | public | Promise<Response> | Calls fetch(), but sets the method to 'GET' |
+|[post](#post)      | public | Promise<Response> | Calls fetch(), but sets the method to 'POST' |
 
+
+
+
+## constructor
+
+
+
+##### Signature
+public constructor(serviceScope: ServiceScope, batchOptions?: IODataBatchOptions)
+
+#### Returns
+ODataBatch
+
+#### Parameters
+
+
+| Parameter	   | Type    | Description |
+|:-------------|:---------------|:------------|
+| serviceScope     | undefined | %optional% undefined |
+| batchOptions?     | undefined | %optional% undefined |
+
+
+## execute
+
+Executes the batched queries that were queued using ODataBatch.fetch().
+
+##### Signature
+execute(): Promise<ODataBatch>
+
+#### Returns
+Promise<ODataBatch>
+
+#### Parameters
+None
+
+
+## fetch
+
+Queues a new request, and returns a promise that can be used to access 
+the server response (after execute() has completed). The parameters for 
+this function are basically the same as the WHATWG API standard documented here: 
+https://fetch.spec.whatwg.org/ 
+ 
+However, be aware that certain REST headers are ignored or not allowed inside 
+a batch. See the ODATA documentation for details. 
+ 
+When execute() is called, it will POST to a URL such as 
+"http://example.com/sites/sample/_api/$batch". Typically ODataBatch can successfully 
+guess the appropriate SPWeb URL by looking for a reserved URL segment such as "_api" 
+in the first URL passed to fetch(). If not, use IODataBatchOptions.webUrl to specify it 
+explicitly. 
+
+
+##### Signature
+fetch(url: string, options?: IODataBatchRequestOptions): Promise<Response>
+
+#### Returns
+Promise<Response>
+
+#### Parameters
+
+
+| Parameter	   | Type    | Description |
+|:-------------|:---------------|:------------|
+| url     | undefined | %optional% undefined |
+| options?     | undefined | %optional% undefined |
+
+
+## get
+
+Calls fetch(), but sets the method to 'GET'.
+
+##### Signature
+get(url: string, options?: IODataBatchRequestOptions): Promise<Response>
+
+#### Returns
+Promise<Response>
+
+#### Parameters
+
+
+| Parameter	   | Type    | Description |
+|:-------------|:---------------|:------------|
+| url     | undefined | %optional% undefined |
+| options?     | undefined | %optional% undefined |
+
+
+## post
+
+Calls fetch(), but sets the method to 'POST'.
+
+##### Signature
+post(url: string, options: IODataBatchRequestOptions): Promise<Response>
+
+#### Returns
+Promise<Response>
+
+#### Parameters
+
+
+| Parameter	   | Type    | Description |
+|:-------------|:---------------|:------------|
+| url     | undefined | %optional% undefined |
+| options     | undefined | %optional% undefined |
 

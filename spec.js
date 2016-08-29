@@ -32,6 +32,10 @@ let nEnum = 0
 let nInterface = 0
 
 // GLOBAL - TYPES OF OBJECT
+//
+let allTypes = {
+	types : []
+}
 let enumObj = {}
 let enumKey = ''
 let classObj = {}
@@ -87,6 +91,7 @@ function block_begin_reset() {
 }
 
 function comment_reset() {
+	block_begin_reset()
 	let commentObject = {
 		'param' : []
 	}
@@ -140,7 +145,7 @@ function processLines(element = '', index = 0, lines = []) {
   }
 	else if (firstWord === C_START) {
 		cmode = true
-		generalDesc = ''
+		block_begin_reset()
 		comment_reset()
 		return
 	}
@@ -196,6 +201,7 @@ function processLines(element = '', index = 0, lines = []) {
 		nInterface++
 		mode = 'INTERFACE'
 		interfaceName = secondWord
+		allTypes.types.push(interfaceName)
 		var extendsName = null
 		if (line.includes('extends')) {
 			extendsName = line.split('extends ')[1].split(BLOCK_BEGIN)[0].trim()
@@ -206,8 +212,8 @@ function processLines(element = '', index = 0, lines = []) {
 		iObj[interfaceName]['descr'] = generalDesc
 		iObj[interfaceName]['properties'] = {}
 		iObj[interfaceName]['functions'] = {}
-		iObj[interfaceName]['objects'] = []
-		iObj[interfaceName]['methods'] = []
+		iObj[interfaceName]['objects'] = {}
+		iObj[interfaceName]['methods'] = {}
 		comment_reset()
 		return
 	}
@@ -215,6 +221,7 @@ function processLines(element = '', index = 0, lines = []) {
 		nClass++
 		mode = 'CLASS'
 		className = Utils.trimGenerics(line.split(' ')[2])
+		allTypes.types.push(className)
 		var implementsName = null
 		if (line.includes('implements')) {
 			implementsName = line.split('implements ')[1].split(BLOCK_BEGIN)[0].trim()
@@ -227,6 +234,7 @@ function processLines(element = '', index = 0, lines = []) {
 		classObj[className]['descr'] = generalDesc
 		classObj[className]['properties'] = {}
 		classObj[className]['methods'] = {}
+		classObj[className]['functions'] = {}
 		comment_reset()
 		return
 	}
@@ -272,28 +280,26 @@ function processLines(element = '', index = 0, lines = []) {
 				if (line.includes(') =>')) {
 					//var f = Utils.processFunction(line, generalDesc, commentObject)
 					var f = {}
-					f[firstWord] = {}
-
-					f[firstWord]['descr'] = generalDesc
-					f[firstWord]['isOptional'] = (secondWord.includes('?')) ? true : false
-					f[firstWord]['returnType'] = line.split('=> ').pop()
-					f[firstWord]['returnDescr'] = (commentObject['returnDescr'] === undefined) ?
+					f['descr'] = generalDesc
+					f['isOptional'] = (secondWord.includes('?')) ? true : false
+					f['returnType'] = line.split('=> ').pop()
+					f['returnDescr'] = (commentObject['returnDescr'] === undefined) ?
 						null : commentObject['returnDescr']
-					f[firstWord]['params'] = Utils.buildParamList(line, commentObject['param'])
-					iObj[interfaceName]['functions'][firstWord] = f
+					f['params'] = Utils.buildParamList(line, commentObject['param'])
+					var name = Utils.getName(firstWord)
+					iObj[interfaceName]['functions'][name] = f
 				}
 				else if (line.includes(')') && line.includes('(')) { // has brackets
 					var m = {}
 					var name = Utils.getName(firstWord)
-					m[name] = {}
 
-					m[name]['descr'] = generalDesc
-					m[name]['genericType'] = Utils.genericInside(line.split('(')[0])
-					m[name]['returnType'] = lastWord
-					m[name]['returnDescr'] = (commentObject['returnDescr'] === undefined) ?
+					m['descr'] = generalDesc
+					m['genericType'] = Utils.genericInside(line.split('(')[0])
+					m['returnType'] = lastWord
+					m['returnDescr'] = (commentObject['returnDescr'] === undefined) ?
 						null : commentObject['returnDescr']
-					m[name]['params'] = Utils.buildParamList(line, commentObject['param'])
-					iObj[interfaceName]['methods'].push(m)
+					m['params'] = Utils.buildParamList(line, commentObject['param'])
+					iObj[interfaceName]['methods'][name] = m
 				}
 				else if (line.includes(BLOCK_BEGIN)) {
 					// Handle object
@@ -303,12 +309,12 @@ function processLines(element = '', index = 0, lines = []) {
 				}
 				else {
 					var p = {}
-					var name = line.split(':')[0]
-					p[name] = {}
-					p[name]['descr'] = generalDesc
-					p[name]['isOptional'] = (secondWord.includes('?')) ? true : false
-					p[name]['type'] = lastWord.replace('[]', '')
-					p[name]['isCollection'] = (secondWord.includes('[]')) ? true : false
+					//var name = line.split(':')[0]
+					p['descr'] = generalDesc
+					p['dataType'] = lastWord.trim()
+					p['isOptional'] = (secondWord.includes('?')) ? true : false
+					p['type'] = lastWord.replace('[]', '')
+					p['isCollection'] = (secondWord.includes('[]')) ? true : false
 					iObj[interfaceName]['properties'][firstWord] = p
 				}
 
@@ -370,7 +376,8 @@ function processFile(fileName) {
   FileOps.writeObject(functionObj, `./json/${fileName}_function.json`)
   FileOps.writeObject(iObj, `./json/${fileName}_interface.json`)
   FileOps.writeObject(classObj, `./json/${fileName}_class.json`)
+	FileOps.writeObject(allTypes, `./json/allTypes.json`)
 
-  console.log(`interface = ${nInterface}, class = ${nClass}, function = ${nFunction}, enum = ${nEnum}`);
+  console.log(`*** interface = ${nInterface}, class = ${nClass}, function = ${nFunction}, enum = ${nEnum}`);
 	file_reset()
 }

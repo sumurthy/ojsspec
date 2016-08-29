@@ -1,4 +1,4 @@
-# SPWeb resource type
+# SPWeb class
 
 This class is primarily used with the PageContext class. It provides contextual 
 information for the SharePoint site ("web") that hosts the page.
@@ -12,5 +12,8 @@ information for the SharePoint site ("web") that hosts the page.
 |id      | public | [Guid](Guid.md) | The GUID that identifies the SPWeb on the server or undefined if the Guid string  value is invalid |
 |serverRelativeUrl      | public | string | Returns the server-relative URL for this SPWeb |
 |title      | public | string | Returns the title of the SharePoint site |
+
+
+
 
 
