@@ -28,6 +28,7 @@
 ##### Signature
 
 #### Returns
+Map<K, V>
 
 #### Parameters
 

@@ -34,6 +34,7 @@ enhancements.
 ##### Signature
 
 #### Returns
+BasicHttpClient
 
 #### Parameters
 
@@ -53,6 +54,7 @@ https://fetch.spec.whatwg.org/
 ##### Signature
 
 #### Returns
+Promise<Response>
 
 #### Parameters
 
@@ -73,6 +75,7 @@ https://fetch.spec.whatwg.org/
 ##### Signature
 
 #### Returns
+Promise<Response>
 
 #### Parameters
 
@@ -89,6 +92,7 @@ Calls fetch(), but sets the method to 'GET'.
 ##### Signature
 
 #### Returns
+Promise<Response>
 
 #### Parameters
 
@@ -106,6 +110,7 @@ Calls fetch(), but sets the method to 'POST'.
 ##### Signature
 
 #### Returns
+Promise<Response>
 
 #### Parameters
 

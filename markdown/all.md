@@ -7,6 +7,7 @@ The fulfillment value is an array (in order) of fulfillment values. The rejectio
 ##### Signature
 
 #### Returns
+Promise<R[]>
 
 #### Parameters
 

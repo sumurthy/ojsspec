@@ -32,6 +32,7 @@
 ##### Signature
 
 #### Returns
+PropertyPaneState) => void = {} as any
 
 #### Parameters
 
@@ -49,6 +50,7 @@
 ##### Signature
 
 #### Returns
+HTMLElement = document.createElement('div')
 
 #### Parameters
 
@@ -65,6 +67,7 @@
 ##### Signature
 
 #### Returns
+IClientSideWebPartManifestInstance<{}> = new MockWebPartManifestInstance()
 
 #### Parameters
 None

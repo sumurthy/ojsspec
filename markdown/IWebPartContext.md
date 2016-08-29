@@ -38,6 +38,7 @@ Function to open the PropertyPane to help configure this web part.
 ##### Signature
 
 #### Returns
+void
 
 #### Parameters
 

@@ -52,6 +52,7 @@ serviceScope: ServiceScope;
 ##### Signature
 
 #### Returns
+void
 
 #### Parameters
 

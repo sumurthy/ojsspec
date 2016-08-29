@@ -26,6 +26,7 @@ only object types.
 ##### Signature
 
 #### Returns
+boolean
 
 #### Parameters
 

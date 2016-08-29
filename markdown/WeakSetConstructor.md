@@ -28,6 +28,7 @@
 ##### Signature
 
 #### Returns
+WeakSet<T>
 
 #### Parameters
 

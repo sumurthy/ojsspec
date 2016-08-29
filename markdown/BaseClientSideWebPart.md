@@ -66,6 +66,7 @@ super(context);
 ##### Signature
 
 #### Returns
+BaseClientSideWebPart
 
 #### Parameters
 
@@ -82,6 +83,7 @@ This API should be used to clear the error message from the web part display are
 ##### Signature
 
 #### Returns
+void
 
 #### Parameters
 None
@@ -94,6 +96,7 @@ if it is not already open.
 ##### Signature
 
 #### Returns
+void
 
 #### Parameters
 
@@ -110,6 +113,7 @@ if it is not already open.
 ##### Signature
 
 #### Returns
+TProperties
 
 #### Parameters
 
@@ -127,6 +131,7 @@ resources that the web part is holding onto.
 ##### Signature
 
 #### Returns
+void
 
 #### Parameters
 None
@@ -139,6 +144,7 @@ the documentation of IHtmlProperties interface for more details.
 ##### Signature
 
 #### Returns
+IHtmlProperties
 
 #### Parameters
 None
@@ -151,6 +157,7 @@ None
 ##### Signature
 
 #### Returns
+void
 
 #### Parameters
 
@@ -169,6 +176,7 @@ This API is called only once during the lifecycle of a web part.
 ##### Signature
 
 #### Returns
+Promise<T>
 
 #### Parameters
 None
@@ -184,6 +192,7 @@ invokes the web part host's setDirty API.
 ##### Signature
 
 #### Returns
+void
 
 #### Parameters
 
@@ -204,6 +213,7 @@ for the previously selected web part.
 ##### Signature
 
 #### Returns
+void
 
 #### Parameters
 None
@@ -216,6 +226,7 @@ This API is involed when the PropertyPane is rendered.
 ##### Signature
 
 #### Returns
+void
 
 #### Parameters
 None
@@ -229,6 +240,7 @@ Non-Reactive mode. This API is not invoked when the PropertyPane is used in Reac
 ##### Signature
 
 #### Returns
+void
 
 #### Parameters
 None
@@ -242,6 +254,7 @@ required to override this API.
 ##### Signature
 
 #### Returns
+void
 
 #### Parameters
 None
@@ -256,6 +269,7 @@ using the trace logger.
 ##### Signature
 
 #### Returns
+void
 
 #### Parameters
 

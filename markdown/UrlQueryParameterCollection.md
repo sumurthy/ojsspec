@@ -32,6 +32,7 @@ Query param with only equals (www.example.com/?=&debug=on stores empty string ke
 ##### Signature
 
 #### Returns
+UrlQueryParameterCollection
 
 #### Parameters
 
@@ -55,6 +56,7 @@ getValue('lost') ---> undefined
 ##### Signature
 
 #### Returns
+string
 
 #### Parameters
 
@@ -78,6 +80,7 @@ getValues('lost') ---> undefined
 ##### Signature
 
 #### Returns
+string[]
 
 #### Parameters
 

@@ -26,6 +26,7 @@
 ##### Signature
 
 #### Returns
+boolean
 
 #### Parameters
 
@@ -42,6 +43,7 @@
 ##### Signature
 
 #### Returns
+void
 
 #### Parameters
 None
@@ -54,6 +56,7 @@ None
 ##### Signature
 
 #### Returns
+V
 
 #### Parameters
 
@@ -70,6 +73,7 @@ None
 ##### Signature
 
 #### Returns
+boolean
 
 #### Parameters
 
@@ -86,6 +90,7 @@ None
 ##### Signature
 
 #### Returns
+WeakMap<K, V>
 
 #### Parameters
 

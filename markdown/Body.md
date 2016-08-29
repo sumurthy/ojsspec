@@ -34,6 +34,7 @@
 ##### Signature
 
 #### Returns
+Promise<ArrayBuffer>
 
 #### Parameters
 None
@@ -46,6 +47,7 @@ None
 ##### Signature
 
 #### Returns
+Promise<Blob>
 
 #### Parameters
 None
@@ -58,6 +60,7 @@ None
 ##### Signature
 
 #### Returns
+Promise<FormData>
 
 #### Parameters
 None
@@ -70,6 +73,7 @@ None
 ##### Signature
 
 #### Returns
+Promise<any>
 
 #### Parameters
 None
@@ -82,6 +86,7 @@ None
 ##### Signature
 
 #### Returns
+Promise<T>
 
 #### Parameters
 None
@@ -94,6 +99,7 @@ None
 ##### Signature
 
 #### Returns
+Promise<string>
 
 #### Parameters
 None

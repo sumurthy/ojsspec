@@ -6,6 +6,7 @@ A thenable is promise-like in as far as it has a "then" method.
 ##### Signature
 
 #### Returns
+Promise<R>
 
 #### Parameters
 

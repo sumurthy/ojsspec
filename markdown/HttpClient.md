@@ -32,6 +32,7 @@ class instead.
 ##### Signature
 
 #### Returns
+HttpClient
 
 #### Parameters
 
@@ -49,6 +50,7 @@ a single web request.
 ##### Signature
 
 #### Returns
+ODataBatch
 
 #### Parameters
 
@@ -83,6 +85,7 @@ to specify it explicitly.
 ##### Signature
 
 #### Returns
+Promise<Response>
 
 #### Parameters
 
@@ -100,6 +103,7 @@ Calls fetch(), but sets the method to 'GET'.
 ##### Signature
 
 #### Returns
+Promise<Response>
 
 #### Parameters
 
@@ -124,6 +128,7 @@ is "http://example.com/_layouts/service", the returned URL would be
 ##### Signature
 
 #### Returns
+string
 
 #### Parameters
 
@@ -140,6 +145,7 @@ Calls fetch(), but sets the method to 'POST'.
 ##### Signature
 
 #### Returns
+Promise<Response>
 
 #### Parameters
 

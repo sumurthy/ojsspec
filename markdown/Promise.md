@@ -27,6 +27,7 @@ Any errors thrown in the constructor callback will be implicitly passed to rejec
 ##### Signature
 
 #### Returns
+Promise
 
 #### Parameters
 
@@ -44,6 +45,7 @@ Sugar for promise.then(undefined, onRejected)
 ##### Signature
 
 #### Returns
+Promise<U>
 
 #### Parameters
 

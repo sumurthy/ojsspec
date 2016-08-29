@@ -76,6 +76,7 @@ PRIVATE CONSTRUCTOR - DO NOT CALL THIS FROM YOUR OWN CODE.
 ##### Signature
 
 #### Returns
+ServiceScope
 
 #### Parameters
 
@@ -94,6 +95,7 @@ instance will be autocreated and registered with the root ServiceScope.
 ##### Signature
 
 #### Returns
+T
 
 #### Parameters
 
@@ -111,6 +113,7 @@ simpleServiceClass, then registering it by calling ServiceScope.provide().
 ##### Signature
 
 #### Returns
+T;
 
 #### Parameters
 
@@ -128,6 +131,7 @@ serviceKey, and then registers it by calling ServiceScope.provide().
 ##### Signature
 
 #### Returns
+T
 
 #### Parameters
 
@@ -150,6 +154,7 @@ the previous call, which would be very confusing for developers.
 ##### Signature
 
 #### Returns
+void
 
 #### Parameters
 None
@@ -162,6 +167,7 @@ Returns the parent of the current ServiceScope, or undefined if this is a root s
 ##### Signature
 
 #### Returns
+ServiceScope
 
 #### Parameters
 None
@@ -176,6 +182,7 @@ state, i.e. before finish() has been called.
 ##### Signature
 
 #### Returns
+T
 
 #### Parameters
 
@@ -195,6 +202,7 @@ consulted.
 ##### Signature
 
 #### Returns
+ServiceScope
 
 #### Parameters
 None
@@ -208,6 +216,7 @@ default implementations of ServiceKeys.
 ##### Signature
 
 #### Returns
+ServiceScope
 
 #### Parameters
 None
@@ -224,6 +233,7 @@ later when the scope is finished.
 ##### Signature
 
 #### Returns
+void
 
 #### Parameters
 

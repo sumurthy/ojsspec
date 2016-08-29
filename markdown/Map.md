@@ -42,6 +42,7 @@
 ##### Signature
 
 #### Returns
+void
 
 #### Parameters
 None
@@ -54,6 +55,7 @@ None
 ##### Signature
 
 #### Returns
+boolean
 
 #### Parameters
 
@@ -70,6 +72,7 @@ None
 ##### Signature
 
 #### Returns
+V
 
 #### Parameters
 
@@ -86,6 +89,7 @@ None
 ##### Signature
 
 #### Returns
+boolean
 
 #### Parameters
 
@@ -102,6 +106,7 @@ None
 ##### Signature
 
 #### Returns
+Map<K, V>
 
 #### Parameters
 
@@ -119,6 +124,7 @@ None
 ##### Signature
 
 #### Returns
+Iterator<[K, V]>
 
 #### Parameters
 None
@@ -131,6 +137,7 @@ None
 ##### Signature
 
 #### Returns
+Iterator<K>
 
 #### Parameters
 None
@@ -143,6 +150,7 @@ None
 ##### Signature
 
 #### Returns
+Iterator<V>
 
 #### Parameters
 None
@@ -155,6 +163,7 @@ None
 ##### Signature
 
 #### Returns
+void, thisArg?: any): void
 
 #### Parameters
 

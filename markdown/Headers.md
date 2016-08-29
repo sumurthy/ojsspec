@@ -31,6 +31,7 @@
 ##### Signature
 
 #### Returns
+void
 
 #### Parameters
 
@@ -48,6 +49,7 @@
 ##### Signature
 
 #### Returns
+void
 
 #### Parameters
 
@@ -64,6 +66,7 @@
 ##### Signature
 
 #### Returns
+boolean
 
 #### Parameters
 
@@ -80,6 +83,7 @@
 ##### Signature
 
 #### Returns
+void
 
 #### Parameters
 

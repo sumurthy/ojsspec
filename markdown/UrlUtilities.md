@@ -32,6 +32,7 @@ convertToODataStringLiteral("'example list'") ---> "'''example list'''"
 ##### Signature
 
 #### Returns
+string
 
 #### Parameters
 
@@ -53,6 +54,7 @@ removeEndSlash('/') ---> ''
 ##### Signature
 
 #### Returns
+string
 
 #### Parameters
 

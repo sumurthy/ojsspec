@@ -47,6 +47,7 @@ When it returns Promise<string>:
 ##### Signature
 
 #### Returns
+string | Promise<string>
 
 #### Parameters
 

@@ -25,6 +25,7 @@ Clear the webpart error message.
 ##### Signature
 
 #### Returns
+void
 
 #### Parameters
 
@@ -41,6 +42,7 @@ Clear the loading indicator.
 ##### Signature
 
 #### Returns
+void
 
 #### Parameters
 
@@ -57,6 +59,7 @@ Display a loading spinner.
 ##### Signature
 
 #### Returns
+void
 
 #### Parameters
 
@@ -74,6 +77,7 @@ Render the provided error message in the webpart container div.
 ##### Signature
 
 #### Returns
+void
 
 #### Parameters
 

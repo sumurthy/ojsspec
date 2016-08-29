@@ -5,6 +5,7 @@ Helper method to create a Link on the PropertyPane.
 ##### Signature
 
 #### Returns
+string,
 
 #### Parameters
 None

@@ -38,6 +38,7 @@ todo: VSO# 233578:PropertyPane Button OnClick event api.
 ##### Signature
 
 #### Returns
+any
 
 #### Parameters
 

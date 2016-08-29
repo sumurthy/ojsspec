@@ -23,6 +23,7 @@ Event callback for onDispose.
 ##### Signature
 
 #### Returns
+void
 
 #### Parameters
 
@@ -39,6 +40,7 @@ onRender will be called once the custom field mounted to the host element.
 ##### Signature
 
 #### Returns
+void
 
 #### Parameters
 

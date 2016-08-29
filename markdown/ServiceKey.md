@@ -38,6 +38,7 @@ PRIVATE - Do not call this from your own code.
 ##### Signature
 
 #### Returns
+ServiceKey
 
 #### Parameters
 
@@ -56,6 +57,7 @@ your application.
 ##### Signature
 
 #### Returns
+ServiceKey<T>;
 
 #### Parameters
 
@@ -72,6 +74,7 @@ your application.
 ##### Signature
 
 #### Returns
+ServiceKey<T>
 
 #### Parameters
 

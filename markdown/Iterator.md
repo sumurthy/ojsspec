@@ -24,6 +24,7 @@
 ##### Signature
 
 #### Returns
+IteratorResult<T>
 
 #### Parameters
 
@@ -40,6 +41,7 @@
 ##### Signature
 
 #### Returns
+IteratorResult<T>
 
 #### Parameters
 
@@ -56,6 +58,7 @@
 ##### Signature
 
 #### Returns
+IteratorResult<T>
 
 #### Parameters
 

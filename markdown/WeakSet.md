@@ -25,6 +25,7 @@
 ##### Signature
 
 #### Returns
+boolean
 
 #### Parameters
 
@@ -41,6 +42,7 @@
 ##### Signature
 
 #### Returns
+void
 
 #### Parameters
 None
@@ -53,6 +55,7 @@ None
 ##### Signature
 
 #### Returns
+WeakSet<T>
 
 #### Parameters
 
@@ -69,6 +72,7 @@ None
 ##### Signature
 
 #### Returns
+boolean
 
 #### Parameters
 

@@ -34,6 +34,7 @@ Event callback for 'Close' click.
 ##### Signature
 
 #### Returns
+void
 
 #### Parameters
 None
@@ -46,6 +47,7 @@ Event callback fired when the configuration is completed for the web part.
 ##### Signature
 
 #### Returns
+void
 
 #### Parameters
 None
@@ -58,6 +60,7 @@ Event callback fired when the focus is handed back to the web part
 ##### Signature
 
 #### Returns
+void
 
 #### Parameters
 None
@@ -70,6 +73,7 @@ Notification event fired when the property has already been validated and modifi
 ##### Signature
 
 #### Returns
+void
 
 #### Parameters
 
@@ -87,6 +91,7 @@ Event callback fired after the PropertyPane is rendered.
 ##### Signature
 
 #### Returns
+void
 
 #### Parameters
 None
@@ -99,6 +104,7 @@ Event callback for 'Apply' click.
 ##### Signature
 
 #### Returns
+void
 
 #### Parameters
 None

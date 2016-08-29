@@ -29,6 +29,7 @@
 ##### Signature
 
 #### Returns
+Promise<Response>
 
 #### Parameters
 

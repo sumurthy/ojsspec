@@ -29,6 +29,7 @@ If the source's length is more than 20, only the first 20 characters are kept.
 ##### Signature
 
 #### Returns
+void
 
 #### Parameters
 
@@ -47,6 +48,7 @@ more context information (e.g., web part information) to the logged message.
 ##### Signature
 
 #### Returns
+void
 
 #### Parameters
 
@@ -65,6 +67,7 @@ more context information (e.g., web part information) to the logged message.
 ##### Signature
 
 #### Returns
+void
 
 #### Parameters
 
@@ -83,6 +86,7 @@ more context information (e.g., web part information) to the logged message.
 ##### Signature
 
 #### Returns
+void
 
 #### Parameters
 

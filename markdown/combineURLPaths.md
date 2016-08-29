@@ -5,6 +5,7 @@ Combines any number of URL paths.
 ##### Signature
 
 #### Returns
+string
 
 #### Parameters
 

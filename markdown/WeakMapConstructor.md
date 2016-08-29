@@ -28,6 +28,7 @@
 ##### Signature
 
 #### Returns
+WeakMap<K, V>
 
 #### Parameters
 

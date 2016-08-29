@@ -6,7 +6,7 @@
 `%apisignature%`
 
 #### Returns
-`%returntype%`
+%returntype%
 
 #### Parameters
 %noparam%

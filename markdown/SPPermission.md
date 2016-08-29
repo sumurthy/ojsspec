@@ -70,6 +70,7 @@ https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.
 ##### Signature
 
 #### Returns
+SPPermission
 
 #### Parameters
 
@@ -86,6 +87,7 @@ Function for determining if a given permission mask has all of the requested per
 ##### Signature
 
 #### Returns
+boolean
 
 #### Parameters
 
@@ -102,6 +104,7 @@ Function for determining if a given permission mask has any of the requested per
 ##### Signature
 
 #### Returns
+boolean
 
 #### Parameters
 
@@ -118,6 +121,7 @@ Function for checking if a given permission mask has the requested permission.
 ##### Signature
 
 #### Returns
+boolean
 
 #### Parameters
 

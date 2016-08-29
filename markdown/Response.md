@@ -35,6 +35,7 @@
 ##### Signature
 
 #### Returns
+Response
 
 #### Parameters
 
@@ -52,6 +53,7 @@
 ##### Signature
 
 #### Returns
+Response
 
 #### Parameters
 None
@@ -64,6 +66,7 @@ None
 ##### Signature
 
 #### Returns
+Response
 
 #### Parameters
 

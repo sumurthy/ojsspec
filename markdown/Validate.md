@@ -27,6 +27,7 @@ Throws an exception if the specified string is null, undefined, or an empty stri
 ##### Signature
 
 #### Returns
+void
 
 #### Parameters
 
@@ -44,6 +45,7 @@ Throws an exception if the specified value is null or undefined.
 ##### Signature
 
 #### Returns
+void
 
 #### Parameters
 
@@ -61,6 +63,7 @@ Throws an exception if the specified value is not true.
 ##### Signature
 
 #### Returns
+void
 
 #### Parameters
 

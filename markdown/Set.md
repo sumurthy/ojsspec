@@ -41,6 +41,7 @@
 ##### Signature
 
 #### Returns
+Set<T>
 
 #### Parameters
 
@@ -57,6 +58,7 @@
 ##### Signature
 
 #### Returns
+void
 
 #### Parameters
 None
@@ -69,6 +71,7 @@ None
 ##### Signature
 
 #### Returns
+boolean
 
 #### Parameters
 
@@ -85,6 +88,7 @@ None
 ##### Signature
 
 #### Returns
+boolean
 
 #### Parameters
 
@@ -101,6 +105,7 @@ None
 ##### Signature
 
 #### Returns
+Iterator<[T, T]>
 
 #### Parameters
 None
@@ -113,6 +118,7 @@ None
 ##### Signature
 
 #### Returns
+Iterator<T>
 
 #### Parameters
 None
@@ -125,6 +131,7 @@ None
 ##### Signature
 
 #### Returns
+Iterator<T>
 
 #### Parameters
 None
@@ -137,6 +144,7 @@ None
 ##### Signature
 
 #### Returns
+void, thisArg?: any): void
 
 #### Parameters
 
