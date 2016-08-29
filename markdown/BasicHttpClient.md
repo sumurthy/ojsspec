@@ -40,7 +40,7 @@ enhancements.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceScope `    | `undefined` | _%optional%_ undefined |
+| `serviceScope`    | `undefined` | undefined |
 
 
 ## fetch
@@ -59,8 +59,8 @@ https://fetch.spec.whatwg.org/
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url `    | `undefined` | _%optional%_ undefined |
-| `options `    | `undefined` | _%optional%_ undefined |
+| `url`    | `undefined` | undefined |
+| `options`    | `undefined` | undefined |
 
 
 ## fetchCore
@@ -79,7 +79,7 @@ https://fetch.spec.whatwg.org/
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `request `    | `undefined` | _%optional%_ undefined |
+| `request`    | `undefined` | undefined |
 
 
 ## get
@@ -95,8 +95,8 @@ Calls fetch(), but sets the method to 'GET'.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url `    | `undefined` | _%optional%_ undefined |
-| `options? `    | `undefined` | _%optional%_ undefined |
+| `url`    | `undefined` | undefined |
+| `options`    | `undefined` | undefined |
 
 
 ## post
@@ -112,6 +112,6 @@ Calls fetch(), but sets the method to 'POST'.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url `    | `undefined` | _%optional%_ undefined |
-| `options `    | `undefined` | _%optional%_ undefined |
+| `url`    | `undefined` | undefined |
+| `options`    | `undefined` | undefined |
 

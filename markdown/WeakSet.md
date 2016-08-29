@@ -11,10 +11,10 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[delete](#delete)      | ` boolean `|  |
-|[clear](#clear)      | ` void `|  |
-|[add](#add)      | `[ WeakSet<T>](WeakSet.md) `|  |
-|[has](#has)      | ` boolean `|  |
+|[delete](#delete)      | `boolean `|  |
+|[clear](#clear)      | `void `|  |
+|[add](#add)      | `[WeakSet<T>](WeakSet.md) `|  |
+|[has](#has)      | `boolean `|  |
 
 
 
@@ -31,7 +31,7 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value `    | `undefined` | _%optional%_ undefined |
+| `value`    | `undefined` | undefined |
 
 
 ## clear
@@ -59,7 +59,7 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value `    | `undefined` | _%optional%_ undefined |
+| `value`    | `undefined` | undefined |
 
 
 ## has
@@ -75,5 +75,5 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value `    | `undefined` | _%optional%_ undefined |
+| `value`    | `undefined` | undefined |
 

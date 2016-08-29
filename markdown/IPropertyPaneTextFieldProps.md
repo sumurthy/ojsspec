@@ -30,7 +30,6 @@
 |onGetErrorMessage      | undefined | `` | The method is used to get the validation error message and determine whether the input value is valid or not |
 
 
-
 ## onGetErrorMessage
 
 The method is used to get the validation error message and determine whether the input value is valid or not. 
@@ -54,5 +53,5 @@ When it returns Promise<string>:
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value `    | `undefined` | _%optional%_ undefined |
+| `value`    | `undefined` | undefined |
 

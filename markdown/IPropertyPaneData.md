@@ -27,7 +27,6 @@ Web part - PropertyPane data contract.
 |onSave:      | undefined | `` | Event callback for 'Apply' click |
 
 
-
 ## onClose:
 
 Event callback for 'Close' click.
@@ -77,8 +76,8 @@ Notification event fired when the property has already been validated and modifi
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `propertyName `    | `undefined` | _%optional%_ undefined |
-| `newValue `    | `undefined` | _%optional%_ undefined |
+| `propertyName`    | `undefined` | undefined |
+| `newValue`    | `undefined` | undefined |
 
 
 ## onRendered:

@@ -13,6 +13,7 @@
 |`string|RequestMode`     | mode: | `string,RequestMode` |  |
 |`string|RequestCredentials`     | credentials: | `string,RequestCredentials` |  |
 |`string|RequestCache`     | cache: | `string,RequestCache` |  |
+|`OBJECTERROR`     | } | `}` |  |
 
 
 
@@ -39,6 +40,6 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `input `    | `undefined` | _%optional%_ undefined |
-| `init? `    | `undefined` | _%optional%_ undefined |
+| `input`    | `undefined` | undefined |
+| `init`    | `undefined` | undefined |
 

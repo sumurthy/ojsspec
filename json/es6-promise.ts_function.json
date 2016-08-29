@@ -6,9 +6,10 @@
     "returnDescr": null,
     "params": [
       {
-        "name": "value?",
+        "name": "value",
         "dataType": "R | Thenable<R>",
-        "descr": ""
+        "descr": "",
+        "isOptional": true
       }
     ]
   },
@@ -21,7 +22,8 @@
       {
         "name": "error",
         "dataType": "any",
-        "descr": ""
+        "descr": "",
+        "isOptional": false
       }
     ]
   },
@@ -34,7 +36,8 @@
       {
         "name": "promises",
         "dataType": "(R | Thenable<R>",
-        "descr": ""
+        "descr": "",
+        "isOptional": false
       }
     ]
   },
@@ -47,7 +50,8 @@
       {
         "name": "promises",
         "dataType": "(R | Thenable<R>",
-        "descr": ""
+        "descr": "",
+        "isOptional": false
       }
     ]
   }

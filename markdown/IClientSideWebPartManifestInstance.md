@@ -11,8 +11,8 @@ Manifest that is relevant to a Web Part instance.
 |:-------------|:-------|:-----------|
 |`componentType:`      |` 'Application' , 'WebPart' , 'Library'` | Definition: Type of client side component |
 |`description:`      |` [ILocalizedString](ILocalizedString.md)` | Definition: Description of the web part represented as a dictionary of locale keys to description values |
-|`group`      |` [ILocalizedString](ILocalizedString.md)` | Definition: This field is used to help decide the Toolbox group for the Web Part in the authoring  experience |
-|`groupId:`      |` string` | Definition: This field is used to help decide the Toolbox group for the Web Part in the authoring  experience |
+|`group`      |` [ILocalizedString](ILocalizedString.md)` |   Definition: This field is used to help decide the Toolbox group for the Web Part in the authoring  experience |
+|`groupId:`      |` string` |   Definition: This field is used to help decide the Toolbox group for the Web Part in the authoring  experience |
 |`iconImageUrl`      |` string` | Definition: The icon for the WebPart, to be displayed in the toolbox, represented an image URL |
 |`id:`      |` string` | Definition: A universally unique component id |
 |`imageLinkPropertyNames`      |` string[]` | Definition: List of names of Web Part properties that are image sources and need to be link fixed up  and potentially preloaded for performance reasons |
@@ -24,6 +24,7 @@ Manifest that is relevant to a Web Part instance.
 |`searchablePropertyNames`      |` string[]` | Definition: List of names of Web Part properties that need to be indexed for search |
 |`title:`      |` [ILocalizedString](ILocalizedString.md)` | Definition: Title of the web part represented as a single a dictionary of locale keys to title values |
 |`version:`      |` string` | Definition: Client side component version |
+|`}`      |` }` | Definition: Client side component version |
 
 
 

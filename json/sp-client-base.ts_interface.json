@@ -1,48 +1,42 @@
 {
   "IBasicHttpClientOptions": {
     "extendsName": "RequestInit",
-    "descr": "This interface defines the options for the BasicHttpClient operations such as \nget(), post(), fetch(), etc. It is based on the whatwg API standard \nparameters that are documented here: \nhttps://fetch.spec.whatwg.org/",
+    "descr": "headers ?: HeaderInit|{ [index: string]: string }",
     "properties": {
       "body": {
         "descr": "",
         "dataType": "BodyInit",
-        "isOptional": true,
-        "type": " BodyInit",
+        "isOptional": false,
         "isCollection": false
       },
       "cache": {
         "descr": "",
         "dataType": "ILocalizedString|ILocalizedString",
-        "isOptional": true,
-        "type": " ILocalizedString|ILocalizedString",
+        "isOptional": false,
         "isCollection": false
       },
       "credentials": {
         "descr": "",
         "dataType": "string|RequestCredentials",
-        "isOptional": true,
-        "type": " string|RequestCredentials",
+        "isOptional": false,
         "isCollection": false
       },
       "headers": {
         "descr": "",
         "dataType": "HeaderInit",
-        "isOptional": true,
-        "type": " HeaderInit",
+        "isOptional": false,
         "isCollection": false
       },
       "method": {
         "descr": "",
         "dataType": "string",
-        "isOptional": true,
-        "type": " string",
+        "isOptional": false,
         "isCollection": false
       },
       "mode": {
         "descr": "",
         "dataType": "string|RequestMode",
-        "isOptional": true,
-        "type": " string|RequestMode",
+        "isOptional": false,
         "isCollection": false
       }
     },
@@ -58,70 +52,60 @@
         "descr": "Represents the boot strap module link of client side application or webpart.",
         "dataType": "string",
         "isOptional": false,
-        "type": " string",
         "isCollection": false
       },
       "cssLinks:": {
         "descr": "Represents the fabric css components links.",
         "dataType": "string[]",
         "isOptional": false,
-        "type": " string",
         "isCollection": true
       },
       "displayName:": {
         "descr": "Represents display name of webpart.",
         "dataType": "string",
         "isOptional": false,
-        "type": " string",
         "isCollection": false
       },
       "id:": {
         "descr": "Represents the application id.",
         "dataType": "string",
         "isOptional": false,
-        "type": " string",
         "isCollection": false
       },
       "manifestVersion:": {
         "descr": "Represents the manifest version.",
         "dataType": "number",
         "isOptional": false,
-        "type": " number",
         "isCollection": false
       },
       "moduleName:": {
         "descr": "Represents name of the module which loads application or webpart.",
         "dataType": "string",
         "isOptional": false,
-        "type": " string",
         "isCollection": false
       },
       "platformModule:": {
         "descr": "Represents the platform js module link of client side application.",
         "dataType": "string",
         "isOptional": false,
-        "type": " string",
         "isCollection": false
       },
       "preloadClientSideComponents:": {
         "descr": "Represents client side components to be preloaded when loading \"this\" component.",
         "dataType": "string[]",
         "isOptional": false,
-        "type": " string",
         "isCollection": true
       },
       "systemJsModule:": {
         "descr": "Represents the system js module link of client side application.",
         "dataType": "string",
         "isOptional": false,
-        "type": " string",
         "isCollection": false
       },
       "version:": {
         "descr": "Represents the version of scripts.",
         "dataType": "string",
         "isOptional": false,
-        "type": " string",
         "isCollection": false
       }
     },
@@ -137,42 +121,36 @@
         "descr": "Represents the boot strap module link of client side application or webpart.",
         "dataType": "string",
         "isOptional": false,
-        "type": " string",
         "isCollection": false
       },
       "displayName:": {
         "descr": "Represents display name of webpart.",
         "dataType": "string",
         "isOptional": false,
-        "type": " string",
         "isCollection": false
       },
       "id:": {
         "descr": "Represents the application id.",
         "dataType": "string",
         "isOptional": false,
-        "type": " string",
         "isCollection": false
       },
       "manifestVersion:": {
         "descr": "Represents the manifest version.",
         "dataType": "number",
         "isOptional": false,
-        "type": " number",
         "isCollection": false
       },
       "moduleName:": {
         "descr": "Represents name of the module which loads application or webpart.",
         "dataType": "string",
         "isOptional": false,
-        "type": " string",
         "isCollection": false
       },
       "version:": {
         "descr": "Represents the version of scripts.",
         "dataType": "string",
         "isOptional": false,
-        "type": " string",
         "isCollection": false
       }
     },
@@ -190,56 +168,65 @@
       "addDigestToCache": {
         "descr": "the digest value will no longer be valid. \nNOTE: The expirationTime is a DOMHighResTimeStamp value whose units are \nfractional milliseconds; for example, to specify an expiration \n\"5 seconds from right now\", use performance.now()+5000.",
         "genericType": null,
-        "returnType": " void",
-        "returnDescr": null,
+        "returnType": "void",
+        "isOptional": false,
+        "returnDesc": null,
         "params": [
           {
             "name": "webUrl",
             "dataType": "string",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           },
           {
             "name": "digestValue",
             "dataType": "string",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           },
           {
             "name": "expirationTimestamp",
             "dataType": "number",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       },
       "clearAllDigests": {
         "descr": "Clears all values from the cache.",
         "genericType": null,
-        "returnType": " void",
-        "returnDescr": null,
+        "returnType": "void",
+        "isOptional": false,
+        "returnDesc": null,
         "params": []
       },
       "clearDigest": {
         "descr": "This may be a server-relative or absolute URL.",
         "genericType": null,
-        "returnType": " boolean",
-        "returnDescr": null,
+        "returnType": "boolean",
+        "isOptional": false,
+        "returnDesc": null,
         "params": [
           {
             "name": "webUrl",
             "dataType": "string",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       },
       "fetchDigest": {
         "descr": "This may be a server-relative or absolute URL.",
         "genericType": null,
-        "returnType": " Promise<string>",
-        "returnDescr": null,
+        "returnType": "Promise<string>",
+        "isOptional": false,
+        "returnDesc": null,
         "params": [
           {
             "name": "webUrl",
             "dataType": "string",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       }
@@ -247,48 +234,42 @@
   },
   "IHttpClientOptions": {
     "extendsName": "IBasicHttpClientOptions",
-    "descr": "This interface defines the options for the HttpClient operations such as \nget(), post(), fetch(), etc. It is based on the WHATWG API standard \nparameters that are documented here: \nhttps://fetch.spec.whatwg.org/",
+    "descr": "headers ?: HeaderInit|{ [index: string]: string }",
     "properties": {
       "body": {
         "descr": "",
         "dataType": "BodyInit",
-        "isOptional": true,
-        "type": " BodyInit",
+        "isOptional": false,
         "isCollection": false
       },
       "cache": {
         "descr": "",
         "dataType": "ILocalizedString|ILocalizedString",
-        "isOptional": true,
-        "type": " ILocalizedString|ILocalizedString",
+        "isOptional": false,
         "isCollection": false
       },
       "credentials": {
         "descr": "",
         "dataType": "string|RequestCredentials",
-        "isOptional": true,
-        "type": " string|RequestCredentials",
+        "isOptional": false,
         "isCollection": false
       },
       "method": {
         "descr": "",
         "dataType": "string",
-        "isOptional": true,
-        "type": " string",
+        "isOptional": false,
         "isCollection": false
       },
       "mode": {
         "descr": "",
         "dataType": "string|RequestMode",
-        "isOptional": true,
-        "type": " string|RequestMode",
+        "isOptional": false,
         "isCollection": false
       },
       "webUrl": {
         "descr": "For a write operation, HttpClient will automatically add the \n\"X-RequestDigest\" header, which may need to be fetched using a seperate \nrequest such as \"https://example.com/sites/sample/_api/contextinfo\". \nTypically the SPWeb URL (\"https://example.com/sites/sample\" in this \nexample) can be guessed by looking for a reserved URL segment such \nas \"_api\" in the original REST query, however certain REST endpoints \ndo not contain a reserved URL segment; in this case, the webUrl can \nbe explicitly specified using this option.",
         "dataType": "string",
-        "isOptional": true,
-        "type": " string",
+        "isOptional": false,
         "isCollection": false
       }
     },
@@ -304,14 +285,12 @@
         "descr": "",
         "dataType": "number",
         "isOptional": false,
-        "type": " number",
         "isCollection": false
       },
       "Low:": {
         "descr": "",
         "dataType": "number",
         "isOptional": false,
-        "type": " number",
         "isCollection": false
       }
     },
@@ -326,8 +305,7 @@
       "webUrl": {
         "descr": "ODataBatch will need to perform its POST to an endpoint such as \n\"http://example.com/sites/sample/_api/$batch\". Typically the SPWeb URL \n(\"https://example.com/sites/sample\" in this example) can be guessed by \nlooking for a reserved URL segment such as \"_api\" in the first URL \npassed to fetch(), but if not, the webUrl can be explicitly specified \nusing this option.",
         "dataType": "string",
-        "isOptional": true,
-        "type": " string",
+        "isOptional": false,
         "isCollection": false
       }
     },
@@ -340,10 +318,9 @@
     "descr": "Represents an OData SP.ChangeToken object. For more information about this object",
     "properties": {
       "StringValue:": {
-        "descr": "",
+        "descr": "Example: { StringValue: \"13;9fb9199b-65f2-4a4a-b597-11d1a44422c1;635892156279130000;10721\" }",
         "dataType": "string",
         "isOptional": false,
-        "type": " string",
         "isCollection": false
       }
     },
@@ -359,42 +336,36 @@
         "descr": "Example: 1800",
         "dataType": "number",
         "isOptional": false,
-        "type": " number",
         "isCollection": false
       },
       "FormDigestValue:": {
         "descr": "Example: \"0x61B31CBF4C76C...B0,20 Jan 2016 02:24:43 -0000\"",
         "dataType": "string",
         "isOptional": false,
-        "type": " string",
         "isCollection": false
       },
       "LibraryVersion:": {
         "descr": "Example: \"16.0.4919.3000\"",
         "dataType": "string",
         "isOptional": false,
-        "type": " string",
         "isCollection": false
       },
       "SiteFullUrl:": {
         "descr": "Example: \"http:\\u002f\\u002fexample.com\\u002fsites\\u002fPubSite\"",
         "dataType": "string",
         "isOptional": false,
-        "type": " string",
         "isCollection": false
       },
       "SupportedSchemaVersions:": {
         "descr": "Example: [ \"14.0.0.0\", \"15.0.0.0\" ]",
         "dataType": "string[]",
         "isOptional": false,
-        "type": " string",
         "isCollection": true
       },
       "WebFullUrl:": {
         "descr": "Example: \"http:\\u002f\\u002fexample.com\\u002fsites\\u002fPubSite\"",
         "dataType": "string",
         "isOptional": false,
-        "type": " string",
         "isCollection": false
       }
     },
@@ -409,50 +380,43 @@
       "Children": {
         "descr": "Gets or sets an array of Navigation Nodes that are children to the current node.",
         "dataType": "IODataNavigationNode[]",
-        "isOptional": true,
-        "type": " IODataNavigationNode",
+        "isOptional": false,
         "isCollection": false
       },
       "Id": {
         "descr": "Gets a value that specifies the identifier for the navigation node.",
         "dataType": "number",
-        "isOptional": true,
-        "type": " number",
+        "isOptional": false,
         "isCollection": false
       },
       "IsDocLib": {
         "descr": "",
         "dataType": "boolean",
-        "isOptional": true,
-        "type": " boolean",
+        "isOptional": false,
         "isCollection": false
       },
       "IsExternal": {
         "descr": "Gets or sets a value that specifies whether the navigation node URL potentially \ncorresponds to pages outside of the site collection.",
         "dataType": "boolean",
-        "isOptional": true,
-        "type": " boolean",
+        "isOptional": false,
         "isCollection": false
       },
       "IsVisible": {
         "descr": "Gets or sets a value that specifies if the node navigation link should be visible.",
         "dataType": "boolean",
-        "isOptional": true,
-        "type": " boolean",
+        "isOptional": false,
         "isCollection": false
       },
       "Title": {
         "descr": "Gets or sets a value that specifies the anchor text for the node navigation link.",
         "dataType": "string",
-        "isOptional": true,
-        "type": " string",
+        "isOptional": false,
         "isCollection": false
       },
       "Url": {
         "descr": "Gets or sets a value that specifies the URL to be stored with the navigation node. \nIt must be a URL of relative form if IsExternal is false. It must be a URL of \nrelative or absolute form.",
         "dataType": "string",
-        "isOptional": true,
-        "type": " string",
+        "isOptional": false,
         "isCollection": false
       }
     },
@@ -468,14 +432,12 @@
         "descr": "Gets an SPNavigationNode object that contains \nthe nodes in the Quick Launch area of the site.",
         "dataType": "IODataNavigationNode[]",
         "isOptional": false,
-        "type": " IODataNavigationNode",
         "isCollection": true
       },
       "topNav:": {
         "descr": "Gets an SPNavigationNode object that contains the nodes in the top link bar \nfor the website.",
         "dataType": "IODataNavigationNode[]",
         "isOptional": false,
-        "type": " IODataNavigationNode",
         "isCollection": true
       }
     },
@@ -490,127 +452,109 @@
       "Created": {
         "descr": "Gets a value that specifies when the site was created. \nExample: \"/Date(2016,0,20,12,58,7,0)/\"",
         "dataType": "string",
-        "isOptional": true,
-        "type": " string",
+        "isOptional": false,
         "isCollection": false
       },
       "CurrentChangeToken": {
         "descr": "Represents the unique sequential location of a change within the change log.",
         "dataType": "IODataChangeToken",
-        "isOptional": true,
-        "type": " IODataChangeToken",
+        "isOptional": false,
         "isCollection": false
       },
       "CustomMasterUrl": {
         "descr": "Gets or sets the URL for a custom master page file to apply to the website. \nExample: \"/sites/PubSite/_catalogs/masterpage/seattle.master\"",
         "dataType": "string",
-        "isOptional": true,
-        "type": " string",
+        "isOptional": false,
         "isCollection": false
       },
       "Description": {
         "descr": "Gets or sets the description for the site.",
         "dataType": "string",
-        "isOptional": true,
-        "type": " string",
+        "isOptional": false,
         "isCollection": false
       },
       "Id": {
         "descr": "Gets a value that specifies the site identifier for the site. \nExample: \"/Guid(92ea328e-9f50-49a6-9da5-2f2dd5577041)/\"",
         "dataType": "string",
-        "isOptional": true,
-        "type": " string",
+        "isOptional": false,
         "isCollection": false
       },
       "IsMultilingual": {
         "descr": "Value that represents if the web was",
         "dataType": "boolean",
-        "isOptional": true,
-        "type": " boolean",
+        "isOptional": false,
         "isCollection": false
       },
       "Language": {
         "descr": "Gets a value that specifies the LCID for the language that is used on the site. \nExample: 1033",
         "dataType": "number",
-        "isOptional": true,
-        "type": " number",
+        "isOptional": false,
         "isCollection": false
       },
       "LastItemModifiedDate": {
         "descr": "Gets a value that specifies when an item was last modified in the site. \nExample: \"/Date(1453618828000)/\"",
         "dataType": "string",
-        "isOptional": true,
-        "type": " string",
+        "isOptional": false,
         "isCollection": false
       },
       "MasterUrl": {
         "descr": "Gets or sets the URL of the master page that is used for the website. \nExample: \"/sites/PubSite/_catalogs/masterpage/seattle.master\"",
         "dataType": "string",
-        "isOptional": true,
-        "type": " string",
+        "isOptional": false,
         "isCollection": false
       },
       "NoCrawl": {
         "descr": "Determines if a particular web will be crawled by search or not.",
         "dataType": "boolean",
-        "isOptional": true,
-        "type": " boolean",
+        "isOptional": false,
         "isCollection": false
       },
       "QuickLaunchEnabled": {
         "descr": "Gets or sets a value that specifies whether the Quick Launch area is enabled on the site.",
         "dataType": "boolean",
-        "isOptional": true,
-        "type": " boolean",
+        "isOptional": false,
         "isCollection": false
       },
       "RecycleBinEnabled": {
         "descr": "Gets or sets a value that determines whether the recycle bin is enabled for the website.",
         "dataType": "boolean",
-        "isOptional": true,
-        "type": " boolean",
+        "isOptional": false,
         "isCollection": false
       },
       "ServerRelativeUrl": {
         "descr": "Gets or sets the server-relative URL for the Web site. \nExample: \"/sites/PubSite\"",
         "dataType": "string",
-        "isOptional": true,
-        "type": " string",
+        "isOptional": false,
         "isCollection": false
       },
       "SiteLogoUrl": {
         "descr": "Gets the url for the logo of this particular site.",
         "dataType": "string",
-        "isOptional": true,
-        "type": " string",
+        "isOptional": false,
         "isCollection": false
       },
       "Title": {
         "descr": "The title of the web.",
         "dataType": "string",
-        "isOptional": true,
-        "type": " string",
+        "isOptional": false,
         "isCollection": false
       },
       "UIVersion": {
         "descr": "Gets or sets the user interface (UI) version of the Web site. \nExample: 15",
         "dataType": "number",
-        "isOptional": true,
-        "type": " number",
+        "isOptional": false,
         "isCollection": false
       },
       "Url": {
         "descr": "Gets the absolute URL for the website. \nExample: \"http://example.com/sites/PubSite\"",
         "dataType": "string",
-        "isOptional": true,
-        "type": " string",
+        "isOptional": false,
         "isCollection": false
       },
       "WebTemplate": {
         "descr": "Gets the name of the site definition or site template that was used to create the site. \nExample: \"BLANKINTERNET\"",
         "dataType": "string",
-        "isOptional": true,
-        "type": " string",
+        "isOptional": false,
         "isCollection": false
       }
     },
@@ -626,7 +570,6 @@
         "descr": "Returns a ServiceScope instance that can be used to obtain dependencies \nfor the current context.",
         "dataType": "ServiceScope",
         "isOptional": false,
-        "type": " ServiceScope",
         "isCollection": false
       }
     },

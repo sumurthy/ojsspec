@@ -8,6 +8,7 @@
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
 |`boolean`     | bodyUsed: | `boolean` |  |
+|`OBJECTERROR`     | } | `}` |  |
 
 
 

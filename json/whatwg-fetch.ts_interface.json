@@ -3,39 +3,40 @@
     "extendsName": null,
     "descr": "",
     "properties": {
-      "method?:": {
+      "method:": {
         "descr": "",
         "dataType": "string",
-        "isOptional": false,
-        "type": " string",
+        "isOptional": true,
         "isCollection": false
       },
-      "body?:": {
+      "body:": {
         "descr": "",
         "dataType": "BodyInit",
-        "isOptional": false,
-        "type": " BodyInit",
+        "isOptional": true,
         "isCollection": false
       },
-      "mode?:": {
+      "mode:": {
         "descr": "",
         "dataType": "string|RequestMode",
-        "isOptional": false,
-        "type": " string|RequestMode",
+        "isOptional": true,
         "isCollection": false
       },
-      "credentials?:": {
+      "credentials:": {
         "descr": "",
         "dataType": "string|RequestCredentials",
-        "isOptional": false,
-        "type": " string|RequestCredentials",
+        "isOptional": true,
         "isCollection": false
       },
-      "cache?:": {
+      "cache:": {
         "descr": "",
         "dataType": "string|RequestCache",
+        "isOptional": true,
+        "isCollection": false
+      },
+      "}": {
+        "descr": "",
+        "dataType": "}",
         "isOptional": false,
-        "type": " string|RequestCache",
         "isCollection": false
       }
     },
@@ -51,21 +52,30 @@
         "descr": "",
         "dataType": "number",
         "isOptional": false,
-        "type": " number",
         "isCollection": false
       },
-      "statusText?:": {
+      "statusText:": {
         "descr": "",
         "dataType": "string",
-        "isOptional": false,
-        "type": " string",
+        "isOptional": true,
         "isCollection": false
       },
-      "headers?:": {
+      "headers:": {
         "descr": "",
         "dataType": "HeaderInit",
+        "isOptional": true,
+        "isCollection": false
+      },
+      "}": {
+        "descr": "",
+        "dataType": "}",
         "isOptional": false,
-        "type": " HeaderInit",
+        "isCollection": false
+      },
+      "declare": {
+        "descr": "",
+        "dataType": "declare type RequestInfo = Request|string",
+        "isOptional": false,
         "isCollection": false
       }
     },
@@ -76,25 +86,41 @@
   "Window": {
     "extendsName": null,
     "descr": "",
-    "properties": {},
+    "properties": {
+      "}": {
+        "descr": "",
+        "dataType": "}",
+        "isOptional": false,
+        "isCollection": false
+      },
+      "declare": {
+        "descr": "",
+        "dataType": "typeof window.fetch",
+        "isOptional": false,
+        "isCollection": false
+      }
+    },
     "functions": {},
     "objects": {},
     "methods": {
       "fetch": {
         "descr": "",
         "genericType": null,
-        "returnType": " Promise<Response>",
-        "returnDescr": null,
+        "returnType": "Promise<Response>",
+        "isOptional": false,
+        "returnDesc": null,
         "params": [
           {
             "name": "url",
             "dataType": "string|Request",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           },
           {
-            "name": "init?",
+            "name": "init",
             "dataType": "RequestInit",
-            "descr": ""
+            "descr": "",
+            "isOptional": true
           }
         ]
       }

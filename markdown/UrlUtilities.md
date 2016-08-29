@@ -11,12 +11,37 @@ small, and extremely common. Do not add advanced parsing logic to this file.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[static](#static)     | public | `string` | Removes any slash characters from the end of the URL |
+|[convertToODataStringLiteral](#converttoodatastringliteral)     | public, _static_ | `string` | Converts a variable to an OData string literal and escapes apostrophes |
+|[removeEndSlash](#removeendslash)     | public, _static_ | `string` | Removes any slash characters from the end of the URL |
 
 
 
 
-## static
+## convertToODataStringLiteral
+
+Converts a variable to an OData string literal and escapes apostrophes. 
+OData specification: 
+https://tools.oasis-open.org/version-control/ 
+browse/wsvn/odata/trunk/spec/ABNF/odata-abnf-construction-rules.txt 
+SQUOTE-in-string = SQUOTE SQUOTE ; two consecutive single quotes represent one within a string literal 
+Examples: 
+convertToODataStringLiteral("example's list") ---> "'example''s list'" 
+convertToODataStringLiteral("example list") ---> "'example list'" 
+convertToODataStringLiteral("'example list'") ---> "'''example list'''"
+
+##### Signature
+
+#### Returns
+
+#### Parameters
+
+
+| Parameter	   | Type    | Description |
+|:-------------|:---------------|:------------|
+| `value`    | `undefined` | undefined |
+
+
+## removeEndSlash
 
 Removes any slash characters from the end of the URL. 
 This function assumes that the input is already a valid absolute or server-relative URL. 
@@ -34,5 +59,5 @@ removeEndSlash('/') ---> ''
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url `    | `undefined` | _%optional%_ undefined |
+| `url`    | `undefined` | undefined |
 

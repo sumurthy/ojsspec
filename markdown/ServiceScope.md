@@ -57,12 +57,13 @@ serviceScope.whenFinished().
 |:-------------|:----|:-------|:-----------|
 |[constructor](#constructor)     | public | `[ServiceScope](ServiceScope.md)` | PRIVATE CONSTRUCTOR - DO NOT CALL THIS FROM YOUR OWN CODE |
 |[consume](#consume)     | public | `T` | Components should call this function to "consume" a dependency, i |
+|[{](#{)     | simpleServiceClass: | `T;` | This is a shorthand function that its equivalent to constructing a new instance of the  simpleServiceClass, then registering it by calling ServiceScope |
 |[createDefaultAndProvide](#createdefaultandprovide)     | public | `T` | This is a shorthand function that constructs the default implementation of the specified  serviceKey, and then registers it by calling ServiceScope |
 |[finish](#finish)     | public | `void` | When a ServiceScope is first started, it is in an "unfinished" state where provide() is  allowed but consume() is not allowed |
 |[getParent](#getparent)     | public | `[ServiceScope](ServiceScope.md)` | Returns the parent of the current ServiceScope, or undefined if this is a root scope |
 |[provide](#provide)     | public | `T` | ServiceScope |
 |[startNewChild](#startnewchild)     | public | `[ServiceScope](ServiceScope.md)` | Constructs a new ServiceScope that is a child of the current scope |
-|[static](#static)     | public | `[ServiceScope](ServiceScope.md)` | Create a new root-level ServiceScope |
+|[startNewRoot](#startnewroot)     | public, _static_ | `[ServiceScope](ServiceScope.md)` | Create a new root-level ServiceScope |
 |[whenFinished](#whenfinished)     | public | `void` | It is an error to call ServiceScope |
 
 
@@ -81,7 +82,7 @@ PRIVATE CONSTRUCTOR - DO NOT CALL THIS FROM YOUR OWN CODE.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `parent `    | `undefined` | _%optional%_ undefined |
+| `parent`    | `undefined` | undefined |
 
 
 ## consume
@@ -99,7 +100,24 @@ instance will be autocreated and registered with the root ServiceScope.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceKey `    | `undefined` | _%optional%_ undefined |
+| `serviceKey`    | `undefined` | undefined |
+
+
+## {
+
+This is a shorthand function that its equivalent to constructing a new instance of the 
+simpleServiceClass, then registering it by calling ServiceScope.provide().
+
+##### Signature
+
+#### Returns
+
+#### Parameters
+
+
+| Parameter	   | Type    | Description |
+|:-------------|:---------------|:------------|
+| `serviceScope`    | `undefined` | undefined |
 
 
 ## createDefaultAndProvide
@@ -116,7 +134,7 @@ serviceKey, and then registers it by calling ServiceScope.provide().
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceKey `    | `undefined` | _%optional%_ undefined |
+| `serviceKey`    | `undefined` | undefined |
 
 
 ## finish
@@ -164,8 +182,8 @@ state, i.e. before finish() has been called.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceKey `    | `undefined` | _%optional%_ undefined |
-| `service `    | `undefined` | _%optional%_ undefined |
+| `serviceKey`    | `undefined` | undefined |
+| `service`    | `undefined` | undefined |
 
 
 ## startNewChild
@@ -182,7 +200,7 @@ consulted.
 None
 
 
-## static
+## startNewRoot
 
 Create a new root-level ServiceScope. Only root-level scopes have the ability to autocreate 
 default implementations of ServiceKeys.
@@ -212,5 +230,5 @@ later when the scope is finished.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `callback `    | `undefined` | _%optional%_ undefined |
+| `callback`    | `undefined` | undefined |
 

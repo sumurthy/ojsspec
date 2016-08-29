@@ -7,14 +7,12 @@
         "descr": "",
         "dataType": "boolean",
         "isOptional": false,
-        "type": " boolean",
         "isCollection": false
       },
-      "value?:": {
+      "value:": {
         "descr": "",
         "dataType": "T",
-        "isOptional": false,
-        "type": " T",
+        "isOptional": true,
         "isCollection": false
       }
     },
@@ -32,39 +30,45 @@
       "next": {
         "descr": "",
         "genericType": null,
-        "returnType": " IteratorResult<T>",
-        "returnDescr": null,
+        "returnType": "IteratorResult<T>",
+        "isOptional": false,
+        "returnDesc": null,
         "params": [
           {
-            "name": "value?",
+            "name": "value",
             "dataType": "any",
-            "descr": ""
+            "descr": "",
+            "isOptional": true
           }
         ]
       },
-      "return?": {
+      "return": {
         "descr": "",
         "genericType": null,
-        "returnType": " IteratorResult<T>",
-        "returnDescr": null,
+        "returnType": "IteratorResult<T>",
+        "isOptional": true,
+        "returnDesc": null,
         "params": [
           {
-            "name": "value?",
+            "name": "value",
             "dataType": "any",
-            "descr": ""
+            "descr": "",
+            "isOptional": true
           }
         ]
       },
-      "throw?": {
+      "throw": {
         "descr": "",
         "genericType": null,
-        "returnType": " IteratorResult<T>",
-        "returnDescr": null,
+        "returnType": "IteratorResult<T>",
+        "isOptional": true,
+        "returnDesc": null,
         "params": [
           {
-            "name": "e?",
+            "name": "e",
             "dataType": "any",
-            "descr": ""
+            "descr": "",
+            "isOptional": true
           }
         ]
       }
@@ -84,7 +88,8 @@
           {
             "name": "callbackfn",
             "dataType": "(value",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       }
@@ -100,7 +105,6 @@
         "descr": "",
         "dataType": "number",
         "isOptional": false,
-        "type": " number",
         "isCollection": false
       }
     },
@@ -114,21 +118,25 @@
           {
             "name": "callbackfn",
             "dataType": "(value",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           },
           {
             "name": "index",
             "dataType": "K",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           },
           {
             "name": "map",
             "dataType": "Map<K",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           },
           {
             "name": "V>",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       }
@@ -138,86 +146,99 @@
       "clear": {
         "descr": "",
         "genericType": null,
-        "returnType": " void",
-        "returnDescr": null,
+        "returnType": "void",
+        "isOptional": false,
+        "returnDesc": null,
         "params": []
       },
       "delete": {
         "descr": "",
         "genericType": null,
-        "returnType": " boolean",
-        "returnDescr": null,
+        "returnType": "boolean",
+        "isOptional": false,
+        "returnDesc": null,
         "params": [
           {
             "name": "key",
             "dataType": "K",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       },
       "get": {
         "descr": "",
         "genericType": null,
-        "returnType": " V",
-        "returnDescr": null,
+        "returnType": "V",
+        "isOptional": false,
+        "returnDesc": null,
         "params": [
           {
             "name": "key",
             "dataType": "K",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       },
       "has": {
         "descr": "",
         "genericType": null,
-        "returnType": " boolean",
-        "returnDescr": null,
+        "returnType": "boolean",
+        "isOptional": false,
+        "returnDesc": null,
         "params": [
           {
             "name": "key",
             "dataType": "K",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       },
       "set": {
         "descr": "",
         "genericType": null,
-        "returnType": " Map<K, V>",
-        "returnDescr": null,
+        "returnType": "Map<K, V>",
+        "isOptional": false,
+        "returnDesc": null,
         "params": [
           {
             "name": "key",
             "dataType": "K",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           },
           {
-            "name": "value?",
+            "name": "value",
             "dataType": "V",
-            "descr": ""
+            "descr": "",
+            "isOptional": true
           }
         ]
       },
       "entries": {
         "descr": "",
         "genericType": null,
-        "returnType": " Iterator<[K, V]>",
-        "returnDescr": null,
+        "returnType": "Iterator<[K, V]>",
+        "isOptional": false,
+        "returnDesc": null,
         "params": []
       },
       "keys": {
         "descr": "",
         "genericType": null,
-        "returnType": " Iterator<K>",
-        "returnDescr": null,
+        "returnType": "Iterator<K>",
+        "isOptional": false,
+        "returnDesc": null,
         "params": []
       },
       "values": {
         "descr": "",
         "genericType": null,
-        "returnType": " Iterator<V>",
-        "returnDescr": null,
+        "returnType": "Iterator<V>",
+        "isOptional": false,
+        "returnDesc": null,
         "params": []
       }
     }
@@ -230,7 +251,6 @@
         "descr": "",
         "dataType": "Map<any, any>",
         "isOptional": false,
-        "type": " Map<any, any>",
         "isCollection": false
       }
     },
@@ -240,17 +260,20 @@
       "new": {
         "descr": "",
         "genericType": "K, V",
-        "returnType": " Map<K, V>",
-        "returnDescr": null,
+        "returnType": "Map<K, V>",
+        "isOptional": false,
+        "returnDesc": null,
         "params": [
           {
             "name": "iterable",
             "dataType": "ForEachable<[K",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           },
           {
             "name": "V]>",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       }
@@ -264,7 +287,6 @@
         "descr": "",
         "dataType": "number",
         "isOptional": false,
-        "type": " number",
         "isCollection": false
       }
     },
@@ -278,17 +300,20 @@
           {
             "name": "callbackfn",
             "dataType": "(value",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           },
           {
             "name": "index",
             "dataType": "T",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           },
           {
             "name": "set",
             "dataType": "Set<T>",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       }
@@ -298,68 +323,78 @@
       "add": {
         "descr": "",
         "genericType": null,
-        "returnType": " Set<T>",
-        "returnDescr": null,
+        "returnType": "Set<T>",
+        "isOptional": false,
+        "returnDesc": null,
         "params": [
           {
             "name": "value",
             "dataType": "T",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       },
       "clear": {
         "descr": "",
         "genericType": null,
-        "returnType": " void",
-        "returnDescr": null,
+        "returnType": "void",
+        "isOptional": false,
+        "returnDesc": null,
         "params": []
       },
       "delete": {
         "descr": "",
         "genericType": null,
-        "returnType": " boolean",
-        "returnDescr": null,
+        "returnType": "boolean",
+        "isOptional": false,
+        "returnDesc": null,
         "params": [
           {
             "name": "value",
             "dataType": "T",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       },
       "has": {
         "descr": "",
         "genericType": null,
-        "returnType": " boolean",
-        "returnDescr": null,
+        "returnType": "boolean",
+        "isOptional": false,
+        "returnDesc": null,
         "params": [
           {
             "name": "value",
             "dataType": "T",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       },
       "entries": {
         "descr": "",
         "genericType": null,
-        "returnType": " Iterator<[T, T]>",
-        "returnDescr": null,
+        "returnType": "Iterator<[T, T]>",
+        "isOptional": false,
+        "returnDesc": null,
         "params": []
       },
       "keys": {
         "descr": "",
         "genericType": null,
-        "returnType": " Iterator<T>",
-        "returnDescr": null,
+        "returnType": "Iterator<T>",
+        "isOptional": false,
+        "returnDesc": null,
         "params": []
       },
       "values": {
         "descr": "",
         "genericType": null,
-        "returnType": " Iterator<T>",
-        "returnDescr": null,
+        "returnType": "Iterator<T>",
+        "isOptional": false,
+        "returnDesc": null,
         "params": []
       }
     }
@@ -372,7 +407,6 @@
         "descr": "",
         "dataType": "Set<any>",
         "isOptional": false,
-        "type": " Set<any>",
         "isCollection": false
       }
     },
@@ -382,13 +416,15 @@
       "new": {
         "descr": "",
         "genericType": "T",
-        "returnType": " Set<T>",
-        "returnDescr": null,
+        "returnType": "Set<T>",
+        "isOptional": false,
+        "returnDesc": null,
         "params": [
           {
             "name": "iterable",
             "dataType": "ForEachable<T>",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       }
@@ -404,64 +440,74 @@
       "delete": {
         "descr": "",
         "genericType": null,
-        "returnType": " boolean",
-        "returnDescr": null,
+        "returnType": "boolean",
+        "isOptional": false,
+        "returnDesc": null,
         "params": [
           {
             "name": "key",
             "dataType": "K",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       },
       "clear": {
         "descr": "",
         "genericType": null,
-        "returnType": " void",
-        "returnDescr": null,
+        "returnType": "void",
+        "isOptional": false,
+        "returnDesc": null,
         "params": []
       },
       "get": {
         "descr": "",
         "genericType": null,
-        "returnType": " V",
-        "returnDescr": null,
+        "returnType": "V",
+        "isOptional": false,
+        "returnDesc": null,
         "params": [
           {
             "name": "key",
             "dataType": "K",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       },
       "has": {
         "descr": "",
         "genericType": null,
-        "returnType": " boolean",
-        "returnDescr": null,
+        "returnType": "boolean",
+        "isOptional": false,
+        "returnDesc": null,
         "params": [
           {
             "name": "key",
             "dataType": "K",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       },
       "set": {
         "descr": "",
         "genericType": null,
-        "returnType": " WeakMap<K, V>",
-        "returnDescr": null,
+        "returnType": "WeakMap<K, V>",
+        "isOptional": false,
+        "returnDesc": null,
         "params": [
           {
             "name": "key",
             "dataType": "K",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           },
           {
-            "name": "value?",
+            "name": "value",
             "dataType": "V",
-            "descr": ""
+            "descr": "",
+            "isOptional": true
           }
         ]
       }
@@ -475,7 +521,6 @@
         "descr": "",
         "dataType": "WeakMap<any, any>",
         "isOptional": false,
-        "type": " WeakMap<any, any>",
         "isCollection": false
       }
     },
@@ -485,17 +530,20 @@
       "new": {
         "descr": "",
         "genericType": "K, V",
-        "returnType": " WeakMap<K, V>",
-        "returnDescr": null,
+        "returnType": "WeakMap<K, V>",
+        "isOptional": false,
+        "returnDesc": null,
         "params": [
           {
             "name": "iterable",
             "dataType": "ForEachable<[K",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           },
           {
             "name": "V]>",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       }
@@ -511,46 +559,53 @@
       "delete": {
         "descr": "",
         "genericType": null,
-        "returnType": " boolean",
-        "returnDescr": null,
+        "returnType": "boolean",
+        "isOptional": false,
+        "returnDesc": null,
         "params": [
           {
             "name": "value",
             "dataType": "T",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       },
       "clear": {
         "descr": "",
         "genericType": null,
-        "returnType": " void",
-        "returnDescr": null,
+        "returnType": "void",
+        "isOptional": false,
+        "returnDesc": null,
         "params": []
       },
       "add": {
         "descr": "",
         "genericType": null,
-        "returnType": " WeakSet<T>",
-        "returnDescr": null,
+        "returnType": "WeakSet<T>",
+        "isOptional": false,
+        "returnDesc": null,
         "params": [
           {
             "name": "value",
             "dataType": "T",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       },
       "has": {
         "descr": "",
         "genericType": null,
-        "returnType": " boolean",
-        "returnDescr": null,
+        "returnType": "boolean",
+        "isOptional": false,
+        "returnDesc": null,
         "params": [
           {
             "name": "value",
             "dataType": "T",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       }
@@ -564,7 +619,6 @@
         "descr": "",
         "dataType": "WeakSet<any>",
         "isOptional": false,
-        "type": " WeakSet<any>",
         "isCollection": false
       }
     },
@@ -574,13 +628,15 @@
       "new": {
         "descr": "",
         "genericType": "T",
-        "returnType": " WeakSet<T>",
-        "returnDescr": null,
+        "returnType": "WeakSet<T>",
+        "isOptional": false,
+        "returnDesc": null,
         "params": [
           {
             "name": "iterable",
             "dataType": "ForEachable<T>",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       }

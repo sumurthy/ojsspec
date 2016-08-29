@@ -11,9 +11,9 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[next](#next)      | `[ IteratorResult<T>](IteratorResult.md) `|  |
-|[return?](#return?)      | `[ IteratorResult<T>](IteratorResult.md) `|  |
-|[throw?](#throw?)      | `[ IteratorResult<T>](IteratorResult.md) `|  |
+|[next](#next)      | `[IteratorResult<T>](IteratorResult.md) `|  |
+|[return](#return)      | `[IteratorResult<T>](IteratorResult.md) `|  |
+|[throw](#throw)      | `[IteratorResult<T>](IteratorResult.md) `|  |
 
 
 
@@ -30,26 +30,10 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value? `    | `undefined` | _%optional%_ undefined |
+| `value`    | `undefined` | undefined |
 
 
-## return?
-
-
-
-##### Signature
-
-#### Returns
-
-#### Parameters
-
-
-| Parameter	   | Type    | Description |
-|:-------------|:---------------|:------------|
-| `value? `    | `undefined` | _%optional%_ undefined |
-
-
-## throw?
+## return
 
 
 
@@ -62,5 +46,21 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `e? `    | `undefined` | _%optional%_ undefined |
+| `value`    | `undefined` | undefined |
+
+
+## throw
+
+
+
+##### Signature
+
+#### Returns
+
+#### Parameters
+
+
+| Parameter	   | Type    | Description |
+|:-------------|:---------------|:------------|
+| `e`    | `undefined` | undefined |
 

@@ -13,12 +13,48 @@ that might impact performance.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[static](#static)     | public | `void` | Throws an exception if the specified value is not true |
+|[isNonemptyString](#isnonemptystring)     | public, _static_ | `void` | Throws an exception if the specified string is null, undefined, or an empty string |
+|[isNotNullOrUndefined](#isnotnullorundefined)     | public, _static_ | `void` | Throws an exception if the specified value is null or undefined |
+|[isTrue](#istrue)     | public, _static_ | `void` | Throws an exception if the specified value is not true |
 
 
 
 
-## static
+## isNonemptyString
+
+Throws an exception if the specified string is null, undefined, or an empty string.
+
+##### Signature
+
+#### Returns
+
+#### Parameters
+
+
+| Parameter	   | Type    | Description |
+|:-------------|:---------------|:------------|
+| `value`    | `undefined` | undefined |
+| `variableName`    | `undefined` | undefined |
+
+
+## isNotNullOrUndefined
+
+Throws an exception if the specified value is null or undefined.
+
+##### Signature
+
+#### Returns
+
+#### Parameters
+
+
+| Parameter	   | Type    | Description |
+|:-------------|:---------------|:------------|
+| `value`    | `undefined` | undefined |
+| `variableName`    | `undefined` | undefined |
+
+
+## isTrue
 
 Throws an exception if the specified value is not true.
 
@@ -31,6 +67,6 @@ Throws an exception if the specified value is not true.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value `    | `undefined` | _%optional%_ undefined |
-| `variableName `    | `undefined` | _%optional%_ undefined |
+| `value`    | `undefined` | undefined |
+| `variableName`    | `undefined` | undefined |
 

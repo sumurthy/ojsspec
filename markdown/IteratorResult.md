@@ -9,7 +9,7 @@
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
 |`done:`      |` boolean` |  |
-|`value?:`      |` T` |  |
+|`value:`      |` T` |  |
 
 
 

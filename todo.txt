@@ -26,4 +26,13 @@ interface IClientSideWebPartManifestInstance<TProperties> extends
  IClientSideWebPartManifestEntry<TProperties> {
  /**
 8. Property has {}
-10. Type - has to check across multiple files 
+10. Type - has to check across multiple files
+11. handle this:
+declare enum RequestContext {
+	"audio", "beacon", "cspreport", "download", "embed", "eventsource", "favicon", "fetch",
+	"font", "form", "frame", "hyperlink", "iframe", "image", "imageset", "import",
+	"internal", "location", "manifest", "object", "ping", "plugin", "prefetch", "script",
+	"serviceworker", "sharedworker", "subresource", "style", "track", "video", "worker",
+	"xmlhttprequest", "xslt"
+}
+12.

@@ -1,5 +1,6 @@
 const BETWEEN_BRACKETS = /\(([^)]+)\)/;
 const GENERIC_INSIDE  = /<(.*?)>/
+const OBJECT_INSIDE  = /{(.*?)}/
 const BLOCK_BEGIN = '{'
 const BLOCK_END = '}'
 var self = module.exports = {
@@ -9,8 +10,8 @@ var self = module.exports = {
   *
   */
   buildParamList: (line = '', paramComment = []) => {
-		var out = []
-		var p = BETWEEN_BRACKETS.exec(line)
+	var out = []
+	var p = BETWEEN_BRACKETS.exec(line)
     if (p === null) {
       return out
     }
@@ -20,9 +21,15 @@ var self = module.exports = {
     parray.forEach((e) => {
          var ta = e.split(':').map((_) => _.trim())
          var fp = {}
-         fp['name'] = ta[0]
+         fp['name'] = ta[0].replace('?', '')
          fp['dataType'] = ta[1]
          fp['descr'] = ''
+         if (ta[0].includes('?')) {
+             fp['isOptional'] = true
+        }
+        else {
+             fp['isOptional'] = false
+        }
          // For each element, determine if there is a @param description. If so, add description element to function object
          if (paramComment.length > 0) {
            paramComment.forEach((d) => {
@@ -80,7 +87,7 @@ var self = module.exports = {
 	},
 
 	getName: (name='') => {
-		return name.split('(')[0]
+		return name.split('(')[0].replace('?', '')
 	},
 
   readObjectAhead: (lines = [], current = 0) => {
@@ -97,7 +104,7 @@ var self = module.exports = {
 		}
     return o
   },
-  processMethod: (line='', descr='', commentObject={}, parentName = '', name = ' ', classMethod = false) => {
+  processMethod: (line='', descr='', commentObject={}, parentName = '', name = ' ', classMethod = false, isStatic = false) => {
     var m = {}
     var firstWord = line.split(' ',1)[0]
     var secondWord = line.split(' ',2)[1]
@@ -114,6 +121,16 @@ var self = module.exports = {
 			m['signature'] = line.substr(line.indexOf(" ") + 1);
 
 		}
+    m['isStatic'] = isStatic
+
+    if ( (firstWord.split('(')[0].includes('?')) || (secondWord === '?')) {
+        m['isOptional'] = true
+    }
+    else {
+        m['isOptional'] = false
+    }
+
+
     m['descr'] = descr
     m['genericType'] = self.genericInside(line.split('(')[0])
     if (name === 'constructor') {
@@ -131,11 +148,20 @@ var self = module.exports = {
     var p = {}
     var firstWord = line.split(' ',1)[0]
     var secondWord = line.split(' ',2)[1]
+    secondWord = secondWord || 'OBJECTERROR'
     var lastWord = line.split(':').pop()
 
     p['dataType'] = lastWord.trim()
     p['accessModifier'] = firstWord
-    p['isOptional'] = (secondWord.includes('?')) ? true : false
+
+    if ( (firstWord.split('(')[0].includes('?')) || (secondWord === '?')) {
+        p['isOptional'] = true
+    }
+    else {
+        p['isOptional'] = false
+    }
+
+
     p['type'] = lastWord.replace('[]', '')
     p['isCollection'] = (secondWord.includes('[]')) ? true : false
     p['descr'] = descr

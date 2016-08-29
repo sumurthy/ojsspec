@@ -1,4 +1,4 @@
-/// <reference path="../typings/tsd.d.ts" />
+
 
 /**
  * This abstract class implements the the base functionality for a client side web part. Every client side web part
@@ -268,15 +268,15 @@ interface IClientSideWebPartStatusRenderer {
  *
  * {
  *   searchableProperties: { 'prop1': 'value_of_prop1' },
- *   linkProperties: { 'prop2': 'http://www.contoso.com/page1.aspx' },
- *   imageLinkPropertes: { 'prop3': 'http://www.contoso.com/imag.png' }
+ *   linkProperties: { 'prop2': 'http:
+ *   imageLinkPropertes: { 'prop3': 'http:
  * }
  *
  * This input would get translated to the following HTML string.
  *
  * "<div data-sp-prop-name='prop1'>value1</div>
- * <link data-sp-prop-name='prop2' href='http://www.contoso.com/page1.aspx'>
- * <img data-sp-prop-name='prop2' href='http://www.contoso.com/image.png'>"
+ * <link data-sp-prop-name='prop2' href='http:
+ * <img data-sp-prop-name='prop2' href='http:
  *
  */
 interface IHtmlProperties {
@@ -294,7 +294,7 @@ interface IHtmlProperties {
 /**
  * Represents an OData SP.List object.  For more information about this object
  * see the MSDN documentation here:
- * https://msdn.microsoft.com/en-us/library/office/jj860569.aspx
+ * https:
  */
 interface IOdataList {
   BaseTemplate: number;
@@ -342,7 +342,7 @@ interface IOdataList {
 /**
  * Represents an OData SP.ListItem object.  For more information about this object
  * see the MSDN documentation here:
- * https://msdn.microsoft.com/en-us/library/office/jj860569.aspx
+ * https:
  */
 interface IOdataListItem {
   /**
@@ -362,7 +362,7 @@ interface IOdataListItem {
 /**
  * Represents an OData SP.User object.  For more information about this object
  * see the MSDN documentation here:
- * https://msdn.microsoft.com/en-us/library/office/jj860569.aspx
+ * https:
  */
 interface IOdataUser {
   /**
@@ -386,7 +386,7 @@ interface IOdataUser {
 /**
  * Represents an OData SP.UserId object.  For more information about this object
  * see the MSDN documentation here:
- * https://msdn.microsoft.com/en-us/library/office/jj860569.aspx
+ * https:
  */
 interface IOdataUserId {
   /**
@@ -662,9 +662,9 @@ enum IPropertyPaneFieldType {
   Dropdown = 6,
   Heading = 9,
   HorizontalRule = 12,
-  // (undocumented)
+
   Label = 7,
-  // (undocumented)
+
   Link = 13,
   Slider = 8,
   TextField = 3,
@@ -1006,7 +1006,7 @@ interface IWebPartData {
    * mandatory: no.
    * type: string
    * supported values: a string containing pseudo HTML.
-   * example: "<div>searchable_property_value</div><link href='http://contoso.com/path_of_link.aspx' />"
+   * example: "<div>searchable_property_value</div><link href='http:
    * experimental: no
    */
   htmlProperties ?: string;
@@ -1053,7 +1053,7 @@ interface IWebPartData {
    * Definition: webpart version.
    * Usage: versioning and evolving a webpart safely.
    * Required: yes
-   * Type: string representing a semantic version (http://semver.org)
+   * Type: string representing a semantic version (http:
    * Supported values: MAJOR.MINOR.PATCH
    * Example: "1.0.0"
    */
@@ -1127,7 +1127,7 @@ export function PropertyPaneButton(targetProperty: string,
 enum PropertyPaneButtonType {
   Command,
   Compound,
-  // (undocumented)
+
   Hero,
   Icon,
   Normal,
@@ -1227,14 +1227,14 @@ export function PropertyPaneToggle(targetProperty: string,
 
 
 enum WebPartConfigurationEvent {
-  // (undocumented)
+
   ApplyClicked = 4,
-  // (undocumented)
+
   CloseComplete = 3,
-  // (undocumented)
+
   ConfigurationComplete = 1,
-  // (undocumented)
+
   LostFocus = 5,
-  // (undocumented)
+
   OpenComplete = 2
 }

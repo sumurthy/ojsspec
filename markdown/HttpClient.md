@@ -19,7 +19,7 @@ class instead.
 |[beginBatch](#beginbatch)     | public | `[ODataBatch](ODataBatch.md)` | Begins an ODATA batch, which allows multiple REST queries to be bundled into  a single web request |
 |[fetch](#fetch)     | public | `Promise<Response>` | Generally, the parameters and semantics for HttpClient |
 |[get](#get)     | public | `Promise<Response>` | Calls fetch(), but sets the method to 'GET' |
-|[static](#static)     | public | `string` | This uses a heuristic to guess the SPWeb URL associated with the provided  REST URL |
+|[getWebUrlFromRequestUrl](#getweburlfromrequesturl)     | public, _static_ | `string` | This uses a heuristic to guess the SPWeb URL associated with the provided  REST URL |
 |[post](#post)     | public | `Promise<Response>` | Calls fetch(), but sets the method to 'POST' |
 
 
@@ -38,7 +38,7 @@ class instead.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceScope `    | `undefined` | _%optional%_ undefined |
+| `serviceScope`    | `undefined` | undefined |
 
 
 ## beginBatch
@@ -55,7 +55,7 @@ a single web request.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `batchOptions? `    | `undefined` | _%optional%_ undefined |
+| `batchOptions`    | `undefined` | undefined |
 
 
 ## fetch
@@ -89,8 +89,8 @@ to specify it explicitly.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url `    | `undefined` | _%optional%_ undefined |
-| `options `    | `undefined` | _%optional%_ undefined |
+| `url`    | `undefined` | undefined |
+| `options`    | `undefined` | undefined |
 
 
 ## get
@@ -106,11 +106,11 @@ Calls fetch(), but sets the method to 'GET'.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url `    | `undefined` | _%optional%_ undefined |
-| `options? `    | `undefined` | _%optional%_ undefined |
+| `url`    | `undefined` | undefined |
+| `options`    | `undefined` | undefined |
 
 
-## static
+## getWebUrlFromRequestUrl
 
 This uses a heuristic to guess the SPWeb URL associated with the provided 
 REST URL. This is necessary for operations such as the X-RequestDigest 
@@ -130,7 +130,7 @@ is "http://example.com/_layouts/service", the returned URL would be
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `requestUrl `    | `undefined` | _%optional%_ undefined |
+| `requestUrl`    | `undefined` | undefined |
 
 
 ## post
@@ -146,6 +146,6 @@ Calls fetch(), but sets the method to 'POST'.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url `    | `undefined` | _%optional%_ undefined |
-| `options `    | `undefined` | _%optional%_ undefined |
+| `url`    | `undefined` | undefined |
+| `options`    | `undefined` | undefined |
 

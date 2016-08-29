@@ -1,4 +1,4 @@
-/// <reference path="../typings/tsd.d.ts" />
+
 
 interface IBundleReference {
   /**
@@ -58,11 +58,11 @@ interface IClientSideComponentLoaderConfig {
    *  are no base paths remaning. All "internal" and "localized" script resources that do not have fully-qualified URLs
    *  as their "path" field values must be hosted under each of the paths listed in this property. For example, if an
    *  internal module's "path" field value is "master_2015-04-20/my-application.bundle_1928f8a0.js" and this field's
-   *  value is [ "https://contoso.akamaihd.net/files/", "https://contoso.msecnd.net/files/" ], the loader will first
+   *  value is [ "https:
    *  attempt to load this script resource from the URL
-   *  "https://contoso.akamaihd.net/files/master_2015-04-20/my-application.bundle_1928f8a0.js". If loading from
+   *  "https:
    *  that URL fails, the loader will then attempt to load this script resource from
-   *  "https://contoso.msecnd.net/files/master_2015-04-20/my-application.bundle_1928f8a0.js". If that URL fails to load,
+   *  "https:
    *  the component will fail to load and an error will be returned. It is important to note that the support for
    *  multiple base URLs is purely for failover support. This means that all files must be present on all hosts
    *  listed in this field.
@@ -70,7 +70,7 @@ interface IClientSideComponentLoaderConfig {
    * Required: yes
    * Localized: no
    * Supported values: Any URL that contains all internal scripts referenced in the "scriptResources" dictionary.
-   * Example: [ "https://contoso.akamaihd.net/files/", "https://contoso.msecnd.net/files/" ]
+   * Example: [ "https:
    */
   internalModuleBaseUrls: string[];
   /**
@@ -97,7 +97,7 @@ interface IClientSideComponentLoaderConfig {
    *    "jQuery": {
    *      "type": "framework",
    *      "version": "2.2.4",
-   *      "path": "https://code.jquery.com/jquery-2.2.4.min.js"
+   *      "path": "https:
    *    },
    *    "myApplication_strings": {
    *      "type": "localized",
@@ -173,11 +173,11 @@ interface IClientSideLibraryManifest extends IClientSideComponentManifest {
    *  component, they can decide to bump the MAJOR, MINOR or PATCH version of the component. All incompatible API
    *  changes should result in a MAJOR version bump. Backwards compatible functionality changes should result in a
    *  MINOR version bump, and backwards compatible bug fixes should result in a PATCH version bump. Please see
-   *  http://semver.org for more details on how to manage the version of your components.
+   *  http:
    * Usage: Versioning and evolving a client side component safely in a controlled way.
    * Required: yes
    * Localized: no
-   * Supported values: string representing a semantic version (http://semver.org) i.e. MAJOR.MINOR.PATCH
+   * Supported values: string representing a semantic version (http:
    * Example: "1.0.0"
    */
   version: string;
@@ -234,12 +234,12 @@ interface IClientSideWebPartManifestEntry<TProperties> {
    * Type: string
    * Localized: no
    * Supported values: Any absolute URL.
-   * Example: "https://contoso.akamaihd.net/files/myWebpartIcon.png"
+   * Example: "https:
    */
   iconImageUrl ?: string;
   /**
    * Definition: The icon for the Web Part, to be displayed in the toolbox, represented as a character name in the
-   *  Office 365 icon font file. The icon font is specified here: http://o365icons.cloudapp.net/. If this field has
+   *  Office 365 icon font file. The icon font is specified here: http:
    *  a value, the '{@link iconImageUrl}' field will be ignored.
    * Required: no
    * Type: string
@@ -260,7 +260,7 @@ interface IClientSideWebPartManifestEntry<TProperties> {
    * Required: yes
    * Localized: no
    * Supported values: any
-   * Example: {"imageSource": "https://contoso.akamaihd.net/files/contosoLogo.jpg", "captionText": "Contoso logo"}"
+   * Example: {"imageSource": "https:
    */
   properties: TProperties;
   /**
@@ -345,7 +345,7 @@ interface IClientSideWebPartManifestInstance<TProperties> extends IClientSideWeb
    * Type: string
    * Localized: no
    * Supported values: Any absolute URL.
-   * Example: "https://contoso.akamaihd.net/files/myWebpartIcon.png"
+   * Example: "https:
    */
   iconImageUrl ?: string;
   /**
@@ -366,7 +366,7 @@ interface IClientSideWebPartManifestInstance<TProperties> extends IClientSideWeb
    * Type: string array
    * Supported values: any property names
    * Values: the strings in the array are expected to be JSONPath for the object properties.
-   *         (http://goessner.net/articles/JsonPath/)
+   *         (http:
    * Example: ["image[0].source"]
    */
   imageLinkPropertyNames ?: string[];
@@ -377,7 +377,7 @@ interface IClientSideWebPartManifestInstance<TProperties> extends IClientSideWeb
    * Required: no. If not provided, all values are sanitized
    * Type: string array
    * Values: the strings in the array are expected to be JSONPath for the object properties.
-   *         (http://goessner.net/articles/JsonPath/)
+   *         (http:
    * Supported values: any property names
    * Example: ["destination.url"]
    */
@@ -406,7 +406,7 @@ interface IClientSideWebPartManifestInstance<TProperties> extends IClientSideWeb
   manifestVersion: number;
   /**
    * Definition: The icon for the Web Part, to be displayed in the toolbox, represented as a character name in the
-   *  Office 365 icon font file. The icon font is specified here: http://o365icons.cloudapp.net/. If this field has
+   *  Office 365 icon font file. The icon font is specified here: http:
    *  a value, the '{@link iconImageUrl}' field will be ignored.
    * Required: no
    * Type: string
@@ -427,7 +427,7 @@ interface IClientSideWebPartManifestInstance<TProperties> extends IClientSideWeb
    * Required: yes
    * Localized: no
    * Supported values: any
-   * Example: {"imageSource": "https://contoso.akamaihd.net/files/contosoLogo.jpg", "captionText": "Contoso logo"}"
+   * Example: {"imageSource": "https:
    */
   properties: TProperties;
   /**
@@ -436,7 +436,7 @@ interface IClientSideWebPartManifestInstance<TProperties> extends IClientSideWeb
    * Required: no. If not provided, no values are indexed.
    * Type: string array
    * Values: the strings in the array are expected to be JSONPath for the object properties.
-   *         (http://goessner.net/articles/JsonPath/)
+   *         (http:
    * Supported values: any property names
    * Example: ["text"]
    */
@@ -468,11 +468,11 @@ interface IClientSideWebPartManifestInstance<TProperties> extends IClientSideWeb
    *  component, they can decide to bump the MAJOR, MINOR or PATCH version of the component. All incompatible API
    *  changes should result in a MAJOR version bump. Backwards compatible functionality changes should result in a
    *  MINOR version bump, and backwards compatible bug fixes should result in a PATCH version bump. Please see
-   *  http://semver.org for more details on how to manage the version of your components.
+   *  http:
    * Usage: Versioning and evolving a client side component safely in a controlled way.
    * Required: yes
    * Localized: no
-   * Supported values: string representing a semantic version (http://semver.org) i.e. MAJOR.MINOR.PATCH
+   * Supported values: string representing a semantic version (http:
    * Example: "1.0.0"
    */
   version: string;
@@ -493,7 +493,7 @@ interface IClientSideWebPartManifestSharedProperties {
    * Type: string array
    * Supported values: any property names
    * Values: the strings in the array are expected to be JSONPath for the object properties.
-   *         (http://goessner.net/articles/JsonPath/)
+   *         (http:
    * Example: ["image[0].source"]
    */
   imageLinkPropertyNames ?: string[];
@@ -504,7 +504,7 @@ interface IClientSideWebPartManifestSharedProperties {
    * Required: no. If not provided, all values are sanitized
    * Type: string array
    * Values: the strings in the array are expected to be JSONPath for the object properties.
-   *         (http://goessner.net/articles/JsonPath/)
+   *         (http:
    * Supported values: any property names
    * Example: ["destination.url"]
    */
@@ -515,7 +515,7 @@ interface IClientSideWebPartManifestSharedProperties {
    * Required: no. If not provided, no values are indexed.
    * Type: string array
    * Values: the strings in the array are expected to be JSONPath for the object properties.
-   *         (http://goessner.net/articles/JsonPath/)
+   *         (http:
    * Supported values: any property names
    * Example: ["text"]
    */
@@ -538,7 +538,7 @@ interface IFrameworkModuleConfig extends IModuleConfig {
    * Localized: no
    * Supported values: The path to the module either as a fully-qualified URL or as a path under the
    *  paths providedin the "internalModuleBaseUrls" field.
-   * Example: "https://code.jquery.com/jquery-2.2.4.min.js"
+   * Example: "https:
    */
   failoverPath ?: string | IPath;
   /**
@@ -569,7 +569,7 @@ interface IFrameworkModuleConfig extends IModuleConfig {
    *  against be specified.
    * Required: yes
    * Localized: no
-   * Supported values: string representing a semantic version (http://semver.org), or "latest".
+   * Supported values: string representing a semantic version (http:
    * Example: "2.2.4"
    */
   version: string;
@@ -612,11 +612,11 @@ interface IInternalModuleConfig extends IModuleConfig {
    * Definition: A path to this module's javascript resource either as a fully-qualified URL or as a path under the
    *  paths provided in the "internalModuleBaseUrls" field. For example, if this field's value is
    *  "master_2015-04-20/my-application.bundle_1928f8a0.js" and the "internalModuleBaseUrls" field's value is
-   *  [ "https://contoso.akamaihd.net/files/", "https://contoso.msecnd.net/files/" ], the loader will first attempt to
+   *  [ "https:
    *  load this script resource from the URL
-   *  "https://contoso.akamaihd.net/files/master_2015-04-20/my-application.bundle_1928f8a0.js". If loading from that URL
+   *  "https:
    *  fails, the loader will then attempt to load this script resource from
-   *  "https://contoso.msecnd.net/files/master_2015-04-20/my-application.bundle_1928f8a0.js". If that URL fails to load,
+   *  "https:
    *  the component will fail to load and an error will be returned.
    * Required: yes
    * Localized: no

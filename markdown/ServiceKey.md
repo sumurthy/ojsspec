@@ -12,7 +12,7 @@ introduced without inadvertently breaking components that are loaded by an older
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|`static`     | public | `string,` | your application |
+|`create`     | public | `string,` | your application |
 |`defaultCreator`     | public | `ServiceCreator<T>` | your application |
 |`id`     | public | `string` | your application |
 |`name`     | public | `string` | your application |
@@ -25,7 +25,8 @@ introduced without inadvertently breaking components that are loaded by an older
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
 |[constructor](#constructor)     | public | `[ServiceKey](ServiceKey.md)` | PRIVATE - Do not call this from your own code |
-|[static](#static)     | public | `ServiceKey<T>` | your application |
+|[{](#{)     | serviceClass: | `ServiceKey<T>;` | your application |
+|[createCustom](#createcustom)     | public, _static_ | `ServiceKey<T>` | your application |
 
 
 
@@ -43,12 +44,12 @@ PRIVATE - Do not call this from your own code.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `id `    | `undefined` | _%optional%_ undefined |
-| `name `    | `undefined` | _%optional%_ undefined |
-| `defaultCreator `    | `undefined` | _%optional%_ undefined |
+| `id`    | `undefined` | undefined |
+| `name`    | `undefined` | undefined |
+| `defaultCreator`    | `undefined` | undefined |
 
 
-## static
+## {
 
 your application.
 
@@ -61,6 +62,22 @@ your application.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `name `    | `undefined` | _%optional%_ undefined |
-| `defaultCreator `    | `undefined` | _%optional%_ undefined |
+| `serviceScope`    | `undefined` | undefined |
+
+
+## createCustom
+
+your application.
+
+##### Signature
+
+#### Returns
+
+#### Parameters
+
+
+| Parameter	   | Type    | Description |
+|:-------------|:---------------|:------------|
+| `name`    | `undefined` | undefined |
+| `defaultCreator`    | `undefined` | undefined |
 

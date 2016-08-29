@@ -11,10 +11,10 @@ error messages for a webpart.
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[clearError](#clearerror)      | ` void `| Clear the webpart error message |
-|[clearLoadingIndicator](#clearloadingindicator)      | ` void `| Clear the loading indicator |
-|[displayLoadingIndicator](#displayloadingindicator)      | ` void `| Display a loading spinner |
-|[renderError](#rendererror)      | ` void `| Render the provided error message in the webpart container div |
+|[clearError](#clearerror)      | `void `| Clear the webpart error message |
+|[clearLoadingIndicator](#clearloadingindicator)      | `void `| Clear the loading indicator |
+|[displayLoadingIndicator](#displayloadingindicator)      | `void `| Display a loading spinner |
+|[renderError](#rendererror)      | `void `| Render the provided error message in the webpart container div |
 
 
 
@@ -31,7 +31,7 @@ Clear the webpart error message.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `domElement `    | `undefined` | _%optional%_ undefined |
+| `domElement`    | `undefined` | undefined |
 
 
 ## clearLoadingIndicator
@@ -47,7 +47,7 @@ Clear the loading indicator.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `domElement `    | `undefined` | _%optional%_ undefined |
+| `domElement`    | `undefined` | undefined |
 
 
 ## displayLoadingIndicator
@@ -63,8 +63,8 @@ Display a loading spinner.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `domElement `    | `undefined` | _%optional%_ undefined |
-| `loadingMessage `    | `undefined` | _%optional%_ undefined |
+| `domElement`    | `undefined` | undefined |
+| `loadingMessage`    | `undefined` | undefined |
 
 
 ## renderError
@@ -80,6 +80,6 @@ Render the provided error message in the webpart container div.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `domElement `    | `undefined` | _%optional%_ undefined |
-| `error `    | `undefined` | _%optional%_ undefined |
+| `domElement`    | `undefined` | undefined |
+| `error`    | `undefined` | undefined |
 

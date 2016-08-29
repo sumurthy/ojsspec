@@ -3,6 +3,12 @@
 
 
 
+### Properties
+
+| Property	   | Access Modifier | Type	| Description|
+|:-------------|:----|:-------|:-----------|
+|`OBJECTERROR`     | } | `}` |  |
+
 
 
 
@@ -31,8 +37,8 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `name `    | `undefined` | _%optional%_ undefined |
-| `value `    | `undefined` | _%optional%_ undefined |
+| `name`    | `undefined` | undefined |
+| `value`    | `undefined` | undefined |
 
 
 ## string):void
@@ -48,7 +54,7 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `name `    | `undefined` | _%optional%_ undefined |
+| `name`    | `undefined` | undefined |
 
 
 ## string):
@@ -64,7 +70,7 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `name `    | `undefined` | _%optional%_ undefined |
+| `name`    | `undefined` | undefined |
 
 
 ## ErrorErrorError
@@ -80,6 +86,6 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `callback `    | `undefined` | _%optional%_ undefined |
-| `name `    | `undefined` | _%optional%_ undefined |
+| `callback`    | `undefined` | undefined |
+| `name`    | `undefined` | undefined |
 

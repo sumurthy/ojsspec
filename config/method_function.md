@@ -14,6 +14,6 @@
 <parameter>
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
->| `%name% `    | `%dtype%` | _%optional%_ %description% |
+>| `%name%`    | `%dtype%` | %optional% %description% |
 
 </parameter>

@@ -11,11 +11,11 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[delete](#delete)      | ` boolean `|  |
-|[clear](#clear)      | ` void `|  |
-|[get](#get)      | ` V `|  |
-|[has](#has)      | ` boolean `|  |
-|[set](#set)      | ` WeakMap<K, V> `|  |
+|[delete](#delete)      | `boolean `|  |
+|[clear](#clear)      | `void `|  |
+|[get](#get)      | `V `|  |
+|[has](#has)      | `boolean `|  |
+|[set](#set)      | `WeakMap<K, V> `|  |
 
 
 
@@ -32,7 +32,7 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key `    | `undefined` | _%optional%_ undefined |
+| `key`    | `undefined` | undefined |
 
 
 ## clear
@@ -60,7 +60,7 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key `    | `undefined` | _%optional%_ undefined |
+| `key`    | `undefined` | undefined |
 
 
 ## has
@@ -76,7 +76,7 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key `    | `undefined` | _%optional%_ undefined |
+| `key`    | `undefined` | undefined |
 
 
 ## set
@@ -92,6 +92,6 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key `    | `undefined` | _%optional%_ undefined |
-| `value? `    | `undefined` | _%optional%_ undefined |
+| `key`    | `undefined` | undefined |
+| `value`    | `undefined` | undefined |
 

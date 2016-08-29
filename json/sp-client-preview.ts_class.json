@@ -18,7 +18,7 @@
         "isOptional": false,
         "type": " IWebPartContext",
         "isCollection": false,
-        "descr": "This property is a pointer to the web part context."
+        "descr": ""
       },
       "disableReactivePropertyChanges": {
         "dataType": "boolean",
@@ -66,7 +66,7 @@
         "isOptional": false,
         "type": " IPropertyPaneSettings",
         "isCollection": false,
-        "descr": "This property is the pointer to the web part configuration settings. If the web part wants to use the PropertyPane \nfor configuration, this API needs to be overridden and the web part needs to return the set of properties it wants \nto display in the PropertyPane. \n"
+        "descr": ""
       },
       "renderedFromDefaultProperties": {
         "dataType": "boolean",
@@ -89,7 +89,9 @@
       "constructor": {
         "accessModifier": "public",
         "signature": "constructor(ctx: IWebPartContext)",
-        "descr": "e.g. \nconstructor(conext: IWebPartContext) { \nsuper(context); \n. \n. class specific constructor code .. \n}",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": " \ne.g. \nconstructor(conext: IWebPartContext) { \nsuper(context); \n. \n. class specific constructor code .. \n}",
         "genericType": null,
         "returnType": "BaseClientSideWebPart",
         "returnDescr": null,
@@ -97,13 +99,16 @@
           {
             "name": "ctx",
             "dataType": "IWebPartContext",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       },
       "clearError": {
         "accessModifier": "protected",
         "signature": "clearError(): void",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "This API should be used to clear the error message from the web part display area.",
         "genericType": null,
         "returnType": "void",
@@ -113,22 +118,27 @@
       "configureStart": {
         "accessModifier": "protected",
         "signature": "configureStart(refreshOnly?: boolean): void",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "if it is not already open.",
         "genericType": null,
         "returnType": "void",
         "returnDescr": null,
         "params": [
           {
-            "name": "refreshOnly?",
+            "name": "refreshOnly",
             "dataType": "boolean",
-            "descr": ""
+            "descr": "",
+            "isOptional": true
           }
         ]
       },
       "deserialize": {
         "accessModifier": "protected",
         "signature": "deserialize(data: IWebPartData): TProperties",
-        "descr": "This API is called once during the lifetime of the web part during the intial render and just before the onInit \nAPI call. The purpose of this API is to help a web part developer deserialize the web part data and manage the \nversioning of their data as the web part code evolves. The web part data may have been persisted with an older \nor newer version of the web part code. This API gives the web part developer an opportunity to re-structure their \ndata to the appropriate data schema. The persisted data contains the version number information. That information \ncan be used to make decisions on how to re-structure the data. \n",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
         "genericType": null,
         "returnType": "TProperties",
         "returnDescr": null,
@@ -136,13 +146,16 @@
           {
             "name": "data",
             "dataType": "IWebPartData",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       },
       "dispose": {
         "accessModifier": "protected",
         "signature": "dispose(): void",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "This API is called at the end of the web part lifecycle. It should be overridden to dispose any \nresources that the web part is holding onto.",
         "genericType": null,
         "returnType": "void",
@@ -152,6 +165,8 @@
       "onBeforeSerialize": {
         "accessModifier": "protected",
         "signature": "onBeforeSerialize(): IHtmlProperties",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "the documentation of IHtmlProperties interface for more details.",
         "genericType": null,
         "returnType": "IHtmlProperties",
@@ -161,7 +176,9 @@
       "onDisplayModeChanged": {
         "accessModifier": "protected",
         "signature": "onDisplayModeChanged(oldDisplayMode: DisplayMode): void",
-        "descr": "This API is called when the display mode of a web part is changed. The default implementation of this API calls \nthe web part render method to re-render the web part with the new display mode. If a web part developer does not \nwant a full re-render to happen on display mode change, they can override this API and perform specific updates \nto the web part DOM to switch its display mode. \n",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
         "genericType": null,
         "returnType": "void",
         "returnDescr": null,
@@ -169,13 +186,16 @@
           {
             "name": "oldDisplayMode",
             "dataType": "DisplayMode",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       },
       "onInit": {
         "accessModifier": "protected",
         "signature": "onInit < T >(): Promise<T>",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "This API should be overridden to perform long running operations e.g. data fetching from a remote service before \nthe initial rendering of the web part. The loading indicator is displayed during the lifetime of this method. \nThis API is called only once during the lifecycle of a web part.",
         "genericType": "T",
         "returnType": "Promise<T>",
@@ -185,6 +205,8 @@
       "onPropertyChange": {
         "accessModifier": "protected",
         "signature": "onPropertyChange(propertyPath: string, newValue: any): void",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "This API is invoked on property changes in the PropertyPane when the PropertyPane is being used in Reactive mode. \nThe base implementation of this API updates the web part property bag and re-render the web part. This API also \ninvokes the web part host's setDirty API. \n",
         "genericType": null,
         "returnType": "void",
@@ -193,18 +215,22 @@
           {
             "name": "propertyPath",
             "dataType": "string",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           },
           {
             "name": "newValue",
             "dataType": "any",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       },
       "onPropertyConfigurationComplete": {
         "accessModifier": "protected",
         "signature": "onPropertyConfigurationComplete(): void",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "This API is called when the current web part configuration process is completed. ConfigurationComplete event \nis fired when user switches between web parts while the PropertyPane is open, and this event handler is called \nfor the previously selected web part. \n",
         "genericType": null,
         "returnType": "void",
@@ -214,6 +240,8 @@
       "onPropertyPaneRendered": {
         "accessModifier": "protected",
         "signature": "onPropertyPaneRendered(): void",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "This API is involed when the PropertyPane is rendered.",
         "genericType": null,
         "returnType": "void",
@@ -223,6 +251,8 @@
       "onPropertyPaneSave": {
         "accessModifier": "protected",
         "signature": "onPropertyPaneSave(): void",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "this API is invoked when the the changes are applied on the PropertyPane when the PropertyPane is used in \nNon-Reactive mode. This API is not invoked when the PropertyPane is used in Reactive mode.",
         "genericType": null,
         "returnType": "void",
@@ -232,6 +262,8 @@
       "render": {
         "accessModifier": "public",
         "signature": "render(): void",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "This API is called to render the web part. There is no base implementation of this API and the web part is \nrequired to override this API.",
         "genericType": null,
         "returnType": "void",
@@ -241,6 +273,8 @@
       "renderError": {
         "accessModifier": "protected",
         "signature": "renderError(error: Error): void",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "This API should be used to render an error message in the web part display area. Also logs the error message \nusing the trace logger. \n",
         "genericType": null,
         "returnType": "void",
@@ -249,7 +283,8 @@
           {
             "name": "error",
             "dataType": "Error",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       }
@@ -276,12 +311,46 @@
         "type": " string = 'WebPart.daf0b71c-6de8-4ef7-b511-faae7c388708.0ae4973a-70e3-451e-9f1f-3f25e5455a60'",
         "isCollection": false,
         "descr": ""
+      },
+      "OBJECTERROR": {
+        "dataType": "}",
+        "accessModifier": "}",
+        "isOptional": false,
+        "type": "}",
+        "isCollection": false,
+        "descr": ""
       }
     },
     "methods": {
+      "configureStart:": {
+        "accessModifier": "public",
+        "signature": "configureStart: (id: string, propertyPaneState?: PropertyPaneState) => void = {} as any",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "PropertyPaneState) => void = {} as any",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "id",
+            "dataType": "string",
+            "descr": "",
+            "isOptional": false
+          },
+          {
+            "name": "propertyPaneState",
+            "dataType": "PropertyPaneState",
+            "descr": "",
+            "isOptional": true
+          }
+        ]
+      },
       "domElement:": {
         "accessModifier": "public",
         "signature": "domElement: HTMLElement = document.createElement('div')",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "",
         "genericType": null,
         "returnType": "HTMLElement = document.createElement('div')",
@@ -289,9 +358,21 @@
         "params": [
           {
             "name": "'div'",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
+      },
+      "manifest:": {
+        "accessModifier": "public",
+        "signature": "manifest: IClientSideWebPartManifestInstance<{}> = new MockWebPartManifestInstance()",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": "{}",
+        "returnType": "IClientSideWebPartManifestInstance<{}> = new MockWebPartManifestInstance()",
+        "returnDescr": null,
+        "params": []
       }
     },
     "functions": {}

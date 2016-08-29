@@ -31,7 +31,6 @@ Web part context interface.
 |configureStart:      | undefined | `` | Function to open the PropertyPane to help configure this web part |
 
 
-
 ## configureStart:
 
 Function to open the PropertyPane to help configure this web part.
@@ -45,6 +44,6 @@ Function to open the PropertyPane to help configure this web part.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `id `    | `undefined` | _%optional%_ undefined |
-| `propertyPaneState? `    | `undefined` | _%optional%_ undefined |
+| `id`    | `undefined` | undefined |
+| `propertyPaneState`    | `undefined` | undefined |
 

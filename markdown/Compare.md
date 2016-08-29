@@ -1,5 +1,6 @@
 # Compare class
 
+ 
 This class contains various comparison utilities. 
 
 
@@ -11,12 +12,12 @@ This class contains various comparison utilities.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[static](#static)     | public | `boolean` | Performs shallow comparison between two objects to determine if they are equal |
+|[shallowCompare](#shallowcompare)     | public, _static_ | `boolean` | Performs shallow comparison between two objects to determine if they are equal |
 
 
 
 
-## static
+## shallowCompare
 
 Performs shallow comparison between two objects to determine if they are equal. This method compares 
 only object types. 
@@ -31,6 +32,6 @@ only object types.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `objA `    | `undefined` | _%optional%_ undefined |
-| `objB `    | `undefined` | _%optional%_ undefined |
+| `objA`    | `undefined` | undefined |
+| `objB`    | `undefined` | undefined |
 

@@ -12,6 +12,7 @@
 |`number`     | status: | `number` |  |
 |`boolean`     | ok: | `boolean` |  |
 |`Headers`     | headers: | `[Headers](Headers.md)` |  |
+|`OBJECTERROR`     | } | `}` |  |
 
 
 
@@ -40,8 +41,8 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `body? `    | `undefined` | _%optional%_ undefined |
-| `init? `    | `undefined` | _%optional%_ undefined |
+| `body`    | `undefined` | undefined |
+| `init`    | `undefined` | undefined |
 
 
 ## Response
@@ -69,6 +70,6 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url `    | `undefined` | _%optional%_ undefined |
-| `status `    | `undefined` | _%optional%_ undefined |
+| `url`    | `undefined` | undefined |
+| `status`    | `undefined` | undefined |
 

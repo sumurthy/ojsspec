@@ -6,12 +6,12 @@
 | Class	   |  Description |
 |:-------------|:---------------|
 | [BasicHttpClient](BasicHttpClient.md)     | BasicHttpClient implements a basic set of features for performing REST operations |
-| [Compare](Compare.md)     | This class contains various comparison utilities |
+| [Compare](Compare.md)     |   This class contains various comparison utilities |
 | [CultureInfo](CultureInfo.md)     | This class is primarily used with the PageContext class |
 | [Environment](Environment.md)     | This class contains contextual information about the enviroment that is hosting the framework and  its components |
 | [Guid](Guid.md)     | This class represents a globally unique identifier, as described by  IETF RFC 4122 |
 | [HttpClient](HttpClient.md)     | HttpClient is used to perform REST calls against SharePoint |
-| [Log](Log.md)     | The Log class provides static methods for logging messages at different levels (verbose,  info, warning, error) and with context information |
+| [Log](Log.md)     | The Log class provides methods for logging messages at different levels (verbose,  info, warning, error) and with context information |
 | [ODataBatch](ODataBatch.md)     | The ODataBatch class accumulates a number of REST service calls and  transmits them as a single ODATA batch |
 | [PageContext](PageContext.md)     | The page context provides standard definitions for common SharePoint objects  that need to be shared between the client-side application, web parts, and other  components |
 | [ServiceKey](ServiceKey.md)     | The ServiceKey is a lookup key that is used when calling ServiceScope |
@@ -30,11 +30,11 @@
 
 | Class	   |  Description |
 |:-------------|:---------------|
-| [IBasicHttpClientOptions](IBasicHttpClientOptions.md)   | This interface defines the options for the BasicHttpClient operations such as  get(), post(), fetch(), etc  |
+| [IBasicHttpClientOptions](IBasicHttpClientOptions.md)   | headers ?: HeaderInit|{ [index: string]: string }  |
 | [IClientSideApplicationManifest](IClientSideApplicationManifest.md)   | This is is the manifest for a client-side application  |
 | [IClientSideComponentManifest](IClientSideComponentManifest.md)   | This is the base interface that is extended by the interfaces  that represent the manifest for each kind of client-side component  |
 | [IDigestCache](IDigestCache.md)   | IDigestCache is an internal service used by HttpClient to maintain a cache of request digests  for each SPWeb URL  |
-| [IHttpClientOptions](IHttpClientOptions.md)   | This interface defines the options for the HttpClient operations such as  get(), post(), fetch(), etc  |
+| [IHttpClientOptions](IHttpClientOptions.md)   | headers ?: HeaderInit|{ [index: string]: string }  |
 | [IODataBasePermission](IODataBasePermission.md)   | Data used for creating a SPPermission object  |
 | [IODataBatchOptions](IODataBatchOptions.md)   | This interface is passed to the ODataBatch constructor  |
 | [IODataChangeToken](IODataChangeToken.md)   | Represents an OData SP  |

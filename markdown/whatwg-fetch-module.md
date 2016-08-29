@@ -26,5 +26,9 @@
 
 | Enumeration	   | Description|
 |:-----------|:------------|
-|[enum](enum.md)    |  |
+|[RequestContext](RequestContext.md)    |  |
+|[RequestMode](RequestMode.md)    |  |
+|[RequestCredentials](RequestCredentials.md)    |  |
+|[RequestCache](RequestCache.md)    |  |
+|[ResponseType](ResponseType.md)    |  |
 

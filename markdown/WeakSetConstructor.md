@@ -17,7 +17,7 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[new](#new)      | `[ WeakSet<T>](WeakSet.md) `|  |
+|[new](#new)      | `[WeakSet<T>](WeakSet.md) `|  |
 
 
 
@@ -34,5 +34,5 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `iterable `    | `undefined` | _%optional%_ undefined |
+| `iterable`    | `undefined` | undefined |
 

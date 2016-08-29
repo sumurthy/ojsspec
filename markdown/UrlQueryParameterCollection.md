@@ -38,7 +38,7 @@ Query param with only equals (www.example.com/?=&debug=on stores empty string ke
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url `    | `undefined` | _%optional%_ undefined |
+| `url`    | `undefined` | undefined |
 
 
 ## getValue
@@ -61,7 +61,7 @@ getValue('lost') ---> undefined
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `param `    | `undefined` | _%optional%_ undefined |
+| `param`    | `undefined` | undefined |
 
 
 ## getValues
@@ -84,5 +84,5 @@ getValues('lost') ---> undefined
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `param `    | `undefined` | _%optional%_ undefined |
+| `param`    | `undefined` | undefined |
 

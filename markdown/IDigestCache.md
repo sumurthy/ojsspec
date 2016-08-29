@@ -16,10 +16,10 @@ of time. For more information, see the MSDN article
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[addDigestToCache](#adddigesttocache)      | ` void `| the digest value will no longer be valid |
-|[clearAllDigests](#clearalldigests)      | ` void `| Clears all values from the cache |
-|[clearDigest](#cleardigest)      | ` boolean `| This may be a server-relative or absolute URL |
-|[fetchDigest](#fetchdigest)      | ` Promise<string> `| This may be a server-relative or absolute URL |
+|[addDigestToCache](#adddigesttocache)      | `void `| the digest value will no longer be valid |
+|[clearAllDigests](#clearalldigests)      | `void `| Clears all values from the cache |
+|[clearDigest](#cleardigest)      | `boolean `| This may be a server-relative or absolute URL |
+|[fetchDigest](#fetchdigest)      | `Promise<string> `| This may be a server-relative or absolute URL |
 
 
 
@@ -39,9 +39,9 @@ fractional milliseconds; for example, to specify an expiration
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `webUrl `    | `undefined` | _%optional%_ undefined |
-| `digestValue `    | `undefined` | _%optional%_ undefined |
-| `expirationTimestamp `    | `undefined` | _%optional%_ undefined |
+| `webUrl`    | `undefined` | undefined |
+| `digestValue`    | `undefined` | undefined |
+| `expirationTimestamp`    | `undefined` | undefined |
 
 
 ## clearAllDigests
@@ -69,7 +69,7 @@ This may be a server-relative or absolute URL.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `webUrl `    | `undefined` | _%optional%_ undefined |
+| `webUrl`    | `undefined` | undefined |
 
 
 ## fetchDigest
@@ -85,5 +85,5 @@ This may be a server-relative or absolute URL.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `webUrl `    | `undefined` | _%optional%_ undefined |
+| `webUrl`    | `undefined` | undefined |
 

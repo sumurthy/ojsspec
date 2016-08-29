@@ -309,7 +309,12 @@ function addMembers(tline = '', type = '', name = '', localO = {}) {
     Object.keys(o).forEach((e) => {
 
         var mline = dclone(tline).substr(1)
-        mline = mline.replace('%access%', `${o[e]['accessModifier']}`)
+        if (o[e]['isStatic']) {
+            mline = mline.replace('%access%', `${o[e]['accessModifier']}, _static_`)
+        }
+        else {
+            mline = mline.replace('%access%', `${o[e]['accessModifier']}`)
+        }
         if ((type === 'method') || type === 'imethod') {
             mline = mline.replace('%type%', `${getLinkForType(o[e]['returnType'])}`)
             mline = mline.replace('%name%', `[${e}](#${e.toLowerCase()})`)
@@ -339,6 +344,12 @@ function addParams(tline = '', member = {}, targetArray = []) {
         var mline = dclone(tline).substr(1)
         mline = mline.replace('%name%', e['name'])
         mline = mline.replace('%dtype%', `${[e]['dataType']}`)
+        if ([e]['dataType']) {
+            mline = mline.replace('%optional% ', '_Optional._')
+        }
+        else {
+            mline = mline.replace('%optional% ', '')
+        }
             //Get first sentence
         var descr = [e]['descr']
         if (descr) {

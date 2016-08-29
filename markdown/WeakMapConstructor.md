@@ -17,7 +17,7 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[new](#new)      | ` WeakMap<K, V> `|  |
+|[new](#new)      | `WeakMap<K, V> `|  |
 
 
 
@@ -34,6 +34,6 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `iterable `    | `undefined` | _%optional%_ undefined |
-| `V]> `    | `undefined` | _%optional%_ undefined |
+| `iterable`    | `undefined` | undefined |
+| `V]>`    | `undefined` | undefined |
 

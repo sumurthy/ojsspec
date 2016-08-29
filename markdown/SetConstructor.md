@@ -17,7 +17,7 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[new](#new)      | `[ Set<T>](Set.md) `|  |
+|[new](#new)      | `[Set<T>](Set.md) `|  |
 
 
 
@@ -34,5 +34,5 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `iterable `    | `undefined` | _%optional%_ undefined |
+| `iterable`    | `undefined` | undefined |
 

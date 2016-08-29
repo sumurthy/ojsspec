@@ -11,9 +11,10 @@
         "returnDescr": null,
         "params": [
           {
-            "name": "onFulfilled?",
+            "name": "onFulfilled",
             "dataType": "(value",
-            "descr": ""
+            "descr": "",
+            "isOptional": true
           }
         ]
       }

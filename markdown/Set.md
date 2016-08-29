@@ -17,13 +17,13 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[add](#add)      | `[ Set<T>](Set.md) `|  |
-|[clear](#clear)      | ` void `|  |
-|[delete](#delete)      | ` boolean `|  |
-|[has](#has)      | ` boolean `|  |
-|[entries](#entries)      | ` Iterator<[T, T]> `|  |
-|[keys](#keys)      | `[ Iterator<T>](Iterator.md) `|  |
-|[values](#values)      | `[ Iterator<T>](Iterator.md) `|  |
+|[add](#add)      | `[Set<T>](Set.md) `|  |
+|[clear](#clear)      | `void `|  |
+|[delete](#delete)      | `boolean `|  |
+|[has](#has)      | `boolean `|  |
+|[entries](#entries)      | `Iterator<[T, T]> `|  |
+|[keys](#keys)      | `[Iterator<T>](Iterator.md) `|  |
+|[values](#values)      | `[Iterator<T>](Iterator.md) `|  |
 
 
 
@@ -32,7 +32,6 @@
 | Function	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
 |forEach      | undefined | `` |  |
-
 
 
 ## add
@@ -48,7 +47,7 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value `    | `undefined` | _%optional%_ undefined |
+| `value`    | `undefined` | undefined |
 
 
 ## clear
@@ -76,7 +75,7 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value `    | `undefined` | _%optional%_ undefined |
+| `value`    | `undefined` | undefined |
 
 
 ## has
@@ -92,7 +91,7 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value `    | `undefined` | _%optional%_ undefined |
+| `value`    | `undefined` | undefined |
 
 
 ## entries
@@ -144,7 +143,7 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `callbackfn `    | `undefined` | _%optional%_ undefined |
-| `index `    | `undefined` | _%optional%_ undefined |
-| `set `    | `undefined` | _%optional%_ undefined |
+| `callbackfn`    | `undefined` | undefined |
+| `index`    | `undefined` | undefined |
+| `set`    | `undefined` | undefined |
 

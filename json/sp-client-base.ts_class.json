@@ -17,6 +17,8 @@
       "constructor": {
         "accessModifier": "public",
         "signature": "constructor(serviceScope: ServiceScope)",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "",
         "genericType": null,
         "returnType": "BasicHttpClient",
@@ -25,13 +27,16 @@
           {
             "name": "serviceScope",
             "dataType": "ServiceScope",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       },
       "fetch": {
         "accessModifier": "public",
         "signature": "fetch(url: string, options: IBasicHttpClientOptions): Promise<Response>",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "Performs a REST service call. Although the HttpClient subclass adds \nadditional enhancements, the parameters and semantics for BasicHttpClient.fetch() \nare essentially the same as the WHATWG API standard that is documented here: \nhttps://fetch.spec.whatwg.org/",
         "genericType": null,
         "returnType": "Promise<Response>",
@@ -40,18 +45,22 @@
           {
             "name": "url",
             "dataType": "string",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           },
           {
             "name": "options",
             "dataType": "IBasicHttpClientOptions",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       },
       "fetchCore": {
         "accessModifier": "protected",
         "signature": "fetchCore(request: Request): Promise<Response>",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "Performs a REST service call. Although the HttpClient subclass adds \nadditional enhancements, the parameters and semantics for BasicHttpClient.fetch() \nare essentially the same as the WHATWG API standard that is documented here: \nhttps://fetch.spec.whatwg.org/",
         "genericType": null,
         "returnType": "Promise<Response>",
@@ -60,13 +69,16 @@
           {
             "name": "request",
             "dataType": "Request",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       },
       "get": {
         "accessModifier": "public",
         "signature": "get(url: string, options?: IBasicHttpClientOptions): Promise<Response>",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "Calls fetch(), but sets the method to 'GET'.",
         "genericType": null,
         "returnType": "Promise<Response>",
@@ -75,18 +87,22 @@
           {
             "name": "url",
             "dataType": "string",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           },
           {
-            "name": "options?",
+            "name": "options",
             "dataType": "IBasicHttpClientOptions",
-            "descr": ""
+            "descr": "",
+            "isOptional": true
           }
         ]
       },
       "post": {
         "accessModifier": "public",
         "signature": "post(url: string, options: IBasicHttpClientOptions): Promise<Response>",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "Calls fetch(), but sets the method to 'POST'.",
         "genericType": null,
         "returnType": "Promise<Response>",
@@ -95,12 +111,14 @@
           {
             "name": "url",
             "dataType": "string",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           },
           {
             "name": "options",
             "dataType": "IBasicHttpClientOptions",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       }
@@ -110,12 +128,14 @@
   "Compare": {
     "implementsName": null,
     "genericType": null,
-    "descr": "This class contains various comparison utilities. \n",
+    "descr": " \nThis class contains various comparison utilities. \n",
     "properties": {},
     "methods": {
-      "static": {
+      "shallowCompare": {
         "accessModifier": "public",
-        "signature": "static shallowCompare(objA: Object, objB: Object): boolean",
+        "signature": "shallowCompare(objA: Object, objB: Object): boolean",
+        "isStatic": true,
+        "isOptional": false,
         "descr": "Performs shallow comparison between two objects to determine if they are equal. This method compares \nonly object types. \n",
         "genericType": null,
         "returnType": "boolean",
@@ -124,12 +144,14 @@
           {
             "name": "objA",
             "dataType": "Object",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           },
           {
             "name": "objB",
             "dataType": "Object",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       }
@@ -187,6 +209,8 @@
       "equals": {
         "accessModifier": "public",
         "signature": "equals(guid: Guid): boolean",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "represent the same value",
         "genericType": null,
         "returnType": "boolean",
@@ -195,13 +219,63 @@
           {
             "name": "guid",
             "dataType": "Guid",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       },
-      "static": {
+      "isValid": {
         "accessModifier": "public",
-        "signature": "static tryParse(guid: string): Guid",
+        "signature": "isValid(guid: string): boolean",
+        "isStatic": true,
+        "isOptional": false,
+        "descr": "Indicates whether a guid is valid (according to RFC4122). \n",
+        "genericType": null,
+        "returnType": "boolean",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "guid",
+            "dataType": "string",
+            "descr": "",
+            "isOptional": false
+          }
+        ]
+      },
+      "newGuid": {
+        "accessModifier": "public",
+        "signature": "newGuid(randomProvider?: IRandomProvider): Guid",
+        "isStatic": true,
+        "isOptional": false,
+        "descr": "Returns a new Guid instance with a pseudo-randomly generated Guid. \n",
+        "genericType": null,
+        "returnType": "Guid",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "randomProvider",
+            "dataType": "IRandomProvider",
+            "descr": "",
+            "isOptional": true
+          }
+        ]
+      },
+      "toString": {
+        "accessModifier": "public",
+        "signature": "toString(): string",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "Example: 'd5369f3b-bd7a-412a-9c0f-7f0650bb5489'",
+        "genericType": null,
+        "returnType": "string",
+        "returnDescr": null,
+        "params": []
+      },
+      "tryParse": {
+        "accessModifier": "public",
+        "signature": "tryParse(guid: string): Guid",
+        "isStatic": true,
+        "isOptional": false,
         "descr": "Trys to construct a new Guid instance using guid string. The guid argument \nis normalized and validated. If the argument is not a valid \"version 4\" UUID from \nRFC 4122, tryParse will return undefined. \n",
         "genericType": null,
         "returnType": "Guid",
@@ -210,18 +284,10 @@
           {
             "name": "guid",
             "dataType": "string",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
-      },
-      "toString": {
-        "accessModifier": "public",
-        "signature": "toString(): string",
-        "descr": "Example: 'd5369f3b-bd7a-412a-9c0f-7f0650bb5489'",
-        "genericType": null,
-        "returnType": "string",
-        "returnDescr": null,
-        "params": []
       }
     },
     "functions": {}
@@ -235,6 +301,8 @@
       "constructor": {
         "accessModifier": "public",
         "signature": "constructor(serviceScope: ServiceScope)",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "",
         "genericType": null,
         "returnType": "HttpClient",
@@ -243,28 +311,34 @@
           {
             "name": "serviceScope",
             "dataType": "ServiceScope",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       },
       "beginBatch": {
         "accessModifier": "public",
         "signature": "beginBatch(batchOptions?: IODataBatchOptions): ODataBatch",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "Begins an ODATA batch, which allows multiple REST queries to be bundled into \na single web request.",
         "genericType": null,
         "returnType": "ODataBatch",
         "returnDescr": null,
         "params": [
           {
-            "name": "batchOptions?",
+            "name": "batchOptions",
             "dataType": "IODataBatchOptions",
-            "descr": ""
+            "descr": "",
+            "isOptional": true
           }
         ]
       },
       "fetch": {
         "accessModifier": "public",
         "signature": "fetch(url: string, options: IHttpClientOptions): Promise<Response>",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "Generally, the parameters and semantics for HttpClient.fetch() are essentially \nthe same as the WHATWG API standard that is documented here: \nhttps://fetch.spec.whatwg.org/ \n \nThe HttpClient subclass adds some additional behaviors that are convenient when \nworking with SharePoint ODATA API's (which can be avoided by using \nBasicHttpClient instead): \n- Default \"Accept\" and \"Content-Type\" headers are added if not explicitly specified. \n- For write operations, an \"X-RequestDigest\" header is automatically added \n- The request digest token is automatically fetched and stored in a cache, with \nsupport for preloading \n \nFor a write operation, HttpClient will automatically add the \"X-RequestDigest\" \nheader, which may need to be obtained by issuing a seperate request such as \n\"https://example.com/sites/sample/_api/contextinfo\". Typically the appropriate \nSPWeb URL can be guessed by looking for a reserved URL segment such as \"_api\" \nin the original URL passed to fetch(); if not, use IHttpClientOptions.webUrl \nto specify it explicitly. \n",
         "genericType": null,
         "returnType": "Promise<Response>",
@@ -273,18 +347,22 @@
           {
             "name": "url",
             "dataType": "string",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           },
           {
             "name": "options",
             "dataType": "IHttpClientOptions",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       },
       "get": {
         "accessModifier": "public",
         "signature": "get(url: string, options?: IHttpClientOptions): Promise<Response>",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "Calls fetch(), but sets the method to 'GET'.",
         "genericType": null,
         "returnType": "Promise<Response>",
@@ -293,18 +371,22 @@
           {
             "name": "url",
             "dataType": "string",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           },
           {
-            "name": "options?",
+            "name": "options",
             "dataType": "IHttpClientOptions",
-            "descr": ""
+            "descr": "",
+            "isOptional": true
           }
         ]
       },
-      "static": {
+      "getWebUrlFromRequestUrl": {
         "accessModifier": "public",
-        "signature": "static getWebUrlFromRequestUrl(requestUrl: string): string",
+        "signature": "getWebUrlFromRequestUrl(requestUrl: string): string",
+        "isStatic": true,
+        "isOptional": false,
         "descr": "This uses a heuristic to guess the SPWeb URL associated with the provided \nREST URL. This is necessary for operations such as the X-RequestDigest \nand ODATA batching, which require POSTing to a separate REST endpoint \nin order to complete a request. \nFor excample, if the requestUrl is \"/sites/site/web/_api/service\", \nthe returned URL would be \"/sites/site/web\". Or if the requestUrl \nis \"http://example.com/_layouts/service\", the returned URL would be \n\"http://example.com\".",
         "genericType": null,
         "returnType": "string",
@@ -313,13 +395,16 @@
           {
             "name": "requestUrl",
             "dataType": "string",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       },
       "post": {
         "accessModifier": "public",
         "signature": "post(url: string, options: IHttpClientOptions): Promise<Response>",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "Calls fetch(), but sets the method to 'POST'.",
         "genericType": null,
         "returnType": "Promise<Response>",
@@ -328,12 +413,14 @@
           {
             "name": "url",
             "dataType": "string",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           },
           {
             "name": "options",
             "dataType": "IHttpClientOptions",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       }
@@ -343,12 +430,44 @@
   "Log": {
     "implementsName": null,
     "genericType": null,
-    "descr": "The Log class provides static methods for logging messages at different levels (verbose, \ninfo, warning, error) and with context information. Context information helps identify \nwhich component generated the messages and makes the messages useful and filterable. \n",
+    "descr": "The Log class provides methods for logging messages at different levels (verbose, \ninfo, warning, error) and with context information. Context information helps identify \nwhich component generated the messages and makes the messages useful and filterable. \n",
     "properties": {},
     "methods": {
-      "static": {
+      "error": {
         "accessModifier": "public",
-        "signature": "static warn(source: string, message: string, scope?: ServiceScope): void",
+        "signature": "error(source: string, error: Error, scope?: ServiceScope): void",
+        "isStatic": true,
+        "isOptional": false,
+        "descr": "The source provides context information for the logged error. \nIf the source's length is more than 20, only the first 20 characters are kept.",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "source",
+            "dataType": "string",
+            "descr": "",
+            "isOptional": false
+          },
+          {
+            "name": "error",
+            "dataType": "Error",
+            "descr": "",
+            "isOptional": false
+          },
+          {
+            "name": "scope",
+            "dataType": "ServiceScope",
+            "descr": "",
+            "isOptional": true
+          }
+        ]
+      },
+      "info": {
+        "accessModifier": "public",
+        "signature": "info(source: string, message: string, scope?: ServiceScope): void",
+        "isStatic": true,
+        "isOptional": false,
         "descr": "more context information (e.g., web part information) to the logged message.",
         "genericType": null,
         "returnType": "void",
@@ -357,17 +476,80 @@
           {
             "name": "source",
             "dataType": "string",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           },
           {
             "name": "message",
             "dataType": "string",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           },
           {
-            "name": "scope?",
+            "name": "scope",
             "dataType": "ServiceScope",
-            "descr": ""
+            "descr": "",
+            "isOptional": true
+          }
+        ]
+      },
+      "verbose": {
+        "accessModifier": "public",
+        "signature": "verbose(source: string, message: string, scope?: ServiceScope): void",
+        "isStatic": true,
+        "isOptional": false,
+        "descr": "more context information (e.g., web part information) to the logged message.",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "source",
+            "dataType": "string",
+            "descr": "",
+            "isOptional": false
+          },
+          {
+            "name": "message",
+            "dataType": "string",
+            "descr": "",
+            "isOptional": false
+          },
+          {
+            "name": "scope",
+            "dataType": "ServiceScope",
+            "descr": "",
+            "isOptional": true
+          }
+        ]
+      },
+      "warn": {
+        "accessModifier": "public",
+        "signature": "warn(source: string, message: string, scope?: ServiceScope): void",
+        "isStatic": true,
+        "isOptional": false,
+        "descr": "more context information (e.g., web part information) to the logged message.",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "source",
+            "dataType": "string",
+            "descr": "",
+            "isOptional": false
+          },
+          {
+            "name": "message",
+            "dataType": "string",
+            "descr": "",
+            "isOptional": false
+          },
+          {
+            "name": "scope",
+            "dataType": "ServiceScope",
+            "descr": "",
+            "isOptional": true
           }
         ]
       }
@@ -383,6 +565,8 @@
       "constructor": {
         "accessModifier": "public",
         "signature": "public constructor(serviceScope: ServiceScope, batchOptions?: IODataBatchOptions)",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "",
         "genericType": null,
         "returnType": "ODataBatch",
@@ -391,18 +575,22 @@
           {
             "name": "serviceScope",
             "dataType": "ServiceScope",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           },
           {
-            "name": "batchOptions?",
+            "name": "batchOptions",
             "dataType": "IODataBatchOptions",
-            "descr": ""
+            "descr": "",
+            "isOptional": true
           }
         ]
       },
       "execute": {
         "accessModifier": "public",
         "signature": "execute(): Promise<ODataBatch>",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "Executes the batched queries that were queued using ODataBatch.fetch().",
         "genericType": null,
         "returnType": "Promise<ODataBatch>",
@@ -412,6 +600,8 @@
       "fetch": {
         "accessModifier": "public",
         "signature": "fetch(url: string, options?: IODataBatchRequestOptions): Promise<Response>",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "Queues a new request, and returns a promise that can be used to access \nthe server response (after execute() has completed). The parameters for \nthis function are basically the same as the WHATWG API standard documented here: \nhttps://fetch.spec.whatwg.org/ \n \nHowever, be aware that certain REST headers are ignored or not allowed inside \na batch. See the ODATA documentation for details. \n \nWhen execute() is called, it will POST to a URL such as \n\"http://example.com/sites/sample/_api/$batch\". Typically ODataBatch can successfully \nguess the appropriate SPWeb URL by looking for a reserved URL segment such as \"_api\" \nin the first URL passed to fetch(). If not, use IODataBatchOptions.webUrl to specify it \nexplicitly. \n",
         "genericType": null,
         "returnType": "Promise<Response>",
@@ -420,18 +610,22 @@
           {
             "name": "url",
             "dataType": "string",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           },
           {
-            "name": "options?",
+            "name": "options",
             "dataType": "IODataBatchRequestOptions",
-            "descr": ""
+            "descr": "",
+            "isOptional": true
           }
         ]
       },
       "get": {
         "accessModifier": "public",
         "signature": "get(url: string, options?: IODataBatchRequestOptions): Promise<Response>",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "Calls fetch(), but sets the method to 'GET'.",
         "genericType": null,
         "returnType": "Promise<Response>",
@@ -440,18 +634,22 @@
           {
             "name": "url",
             "dataType": "string",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           },
           {
-            "name": "options?",
+            "name": "options",
             "dataType": "IODataBatchRequestOptions",
-            "descr": ""
+            "descr": "",
+            "isOptional": true
           }
         ]
       },
       "post": {
         "accessModifier": "public",
         "signature": "post(url: string, options: IODataBatchRequestOptions): Promise<Response>",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "Calls fetch(), but sets the method to 'POST'.",
         "genericType": null,
         "returnType": "Promise<Response>",
@@ -460,12 +658,14 @@
           {
             "name": "url",
             "dataType": "string",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           },
           {
             "name": "options",
             "dataType": "IODataBatchRequestOptions",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       }
@@ -522,6 +722,8 @@
       "constructor": {
         "accessModifier": "public",
         "signature": "constructor(serviceScope: ServiceScope)",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "",
         "genericType": null,
         "returnType": "PageContext",
@@ -530,7 +732,8 @@
           {
             "name": "serviceScope",
             "dataType": "ServiceScope",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       }
@@ -542,7 +745,7 @@
     "genericType": "T",
     "descr": "The ServiceKey is a lookup key that is used when calling ServiceScope.consume() \nto fetch a dependency. The key also defines a default implementation of the \ndependency, which will be autocreated by the root scope if the dependency is not found. \nProviding a default implementation ensures that new dependencies can be safely \nintroduced without inadvertently breaking components that are loaded by an older host \n(that does not provide the new dependency).",
     "properties": {
-      "static": {
+      "create": {
         "dataType": "string,",
         "accessModifier": "public",
         "isOptional": false,
@@ -579,6 +782,8 @@
       "constructor": {
         "accessModifier": "public",
         "signature": "constructor(id: string, name: string, defaultCreator: ServiceCreator<T>)",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "PRIVATE - Do not call this from your own code.",
         "genericType": null,
         "returnType": "ServiceKey",
@@ -587,23 +792,46 @@
           {
             "name": "id",
             "dataType": "string",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           },
           {
             "name": "name",
             "dataType": "string",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           },
           {
             "name": "defaultCreator",
             "dataType": "ServiceCreator<T>",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       },
-      "static": {
+      "{": {
+        "accessModifier": "serviceClass:",
+        "signature": "{ new (serviceScope: ServiceScope) }): ServiceKey<T>;",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "your application.",
+        "genericType": null,
+        "returnType": "ServiceKey<T>;",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "serviceScope",
+            "dataType": "ServiceScope",
+            "descr": "",
+            "isOptional": false
+          }
+        ]
+      },
+      "createCustom": {
         "accessModifier": "public",
-        "signature": "static createCustom < T >(name: string, defaultCreator: ServiceCreator<T>): ServiceKey<T>",
+        "signature": "createCustom < T >(name: string, defaultCreator: ServiceCreator<T>): ServiceKey<T>",
+        "isStatic": true,
+        "isOptional": false,
         "descr": "your application.",
         "genericType": "T",
         "returnType": "ServiceKey<T>",
@@ -612,12 +840,14 @@
           {
             "name": "name",
             "dataType": "string",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           },
           {
             "name": "defaultCreator",
             "dataType": "ServiceCreator<T>",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       }
@@ -642,6 +872,8 @@
       "constructor": {
         "accessModifier": "public",
         "signature": "constructor(parent: ServiceScope)",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "PRIVATE CONSTRUCTOR - DO NOT CALL THIS FROM YOUR OWN CODE.",
         "genericType": null,
         "returnType": "ServiceScope",
@@ -650,13 +882,16 @@
           {
             "name": "parent",
             "dataType": "ServiceScope",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       },
       "consume": {
         "accessModifier": "public",
         "signature": "consume < T >(serviceKey: ServiceKey<T>): T",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "Components should call this function to \"consume\" a dependency, i.e. look up the serviceKey \nand return the registered service instance. If the instance cannot be found, then a default \ninstance will be autocreated and registered with the root ServiceScope.",
         "genericType": "T",
         "returnType": "T",
@@ -665,13 +900,34 @@
           {
             "name": "serviceKey",
             "dataType": "ServiceKey<T>",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
+          }
+        ]
+      },
+      "{": {
+        "accessModifier": "simpleServiceClass:",
+        "signature": "{ new (serviceScope: ServiceScope) }): T;",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "This is a shorthand function that its equivalent to constructing a new instance of the \nsimpleServiceClass, then registering it by calling ServiceScope.provide().",
+        "genericType": null,
+        "returnType": "T;",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "serviceScope",
+            "dataType": "ServiceScope",
+            "descr": "",
+            "isOptional": false
           }
         ]
       },
       "createDefaultAndProvide": {
         "accessModifier": "public",
         "signature": "createDefaultAndProvide < T >(serviceKey: ServiceKey<T>): T",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "This is a shorthand function that constructs the default implementation of the specified \nserviceKey, and then registers it by calling ServiceScope.provide().",
         "genericType": "T",
         "returnType": "T",
@@ -680,13 +936,16 @@
           {
             "name": "serviceKey",
             "dataType": "ServiceKey<T>",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       },
       "finish": {
         "accessModifier": "public",
         "signature": "finish(): void",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "When a ServiceScope is first started, it is in an \"unfinished\" state where provide() is \nallowed but consume() is not allowed. After calling finish(), then consume() is allowed \nbut provide() is not allowed. This formalism completely eliminates a number of tricky bugs \nsuch as: Scope2 is a child of Scope1, and Scope1 provides instance A1 of interface A; \nif someone consumes A1 from Scope2 (via inheritance) before Scope2.provide() is called \nwith A2, then a subsequent call to Scope2.consume() might return a different result than \nthe previous call, which would be very confusing for developers.",
         "genericType": null,
         "returnType": "void",
@@ -696,6 +955,8 @@
       "getParent": {
         "accessModifier": "public",
         "signature": "getParent(): ServiceScope",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "Returns the parent of the current ServiceScope, or undefined if this is a root scope.",
         "genericType": null,
         "returnType": "ServiceScope",
@@ -705,6 +966,8 @@
       "provide": {
         "accessModifier": "public",
         "signature": "provide < T >(serviceKey: ServiceKey<T>, service: T): T",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "ServiceScope.provide() is used to register an implemententation of the given serviceKey \nfor the current scope. It may only be used when the ServiceScope is in an \"unfinished\" \nstate, i.e. before finish() has been called.",
         "genericType": "T",
         "returnType": "T",
@@ -713,27 +976,33 @@
           {
             "name": "serviceKey",
             "dataType": "ServiceKey<T>",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           },
           {
             "name": "service",
             "dataType": "T",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       },
       "startNewChild": {
         "accessModifier": "public",
         "signature": "startNewChild(): ServiceScope",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "Constructs a new ServiceScope that is a child of the current scope. For any keys \nthat are not explicitly provided by the child scope, the parent hierarchy will be \nconsulted.",
         "genericType": null,
         "returnType": "ServiceScope",
         "returnDescr": null,
         "params": []
       },
-      "static": {
+      "startNewRoot": {
         "accessModifier": "public",
-        "signature": "static startNewRoot(): ServiceScope",
+        "signature": "startNewRoot(): ServiceScope",
+        "isStatic": true,
+        "isOptional": false,
         "descr": "Create a new root-level ServiceScope. Only root-level scopes have the ability to autocreate \ndefault implementations of ServiceKeys.",
         "genericType": null,
         "returnType": "ServiceScope",
@@ -743,6 +1012,8 @@
       "whenFinished": {
         "accessModifier": "public",
         "signature": "whenFinished(callback: () => void): void",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "It is an error to call ServiceScope.consume() before finish() has been called. \nThe most reliable way to protect your component against this error is to perform the \nconsume() calls inside a whenFinished() callback. If the service scope is already \nfinished, then the callback will be executed immediately; otherwise, it will be executed \nlater when the scope is finished.",
         "genericType": null,
         "returnType": "void",
@@ -751,7 +1022,8 @@
           {
             "name": "callback",
             "dataType": "(",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       }
@@ -763,13 +1035,253 @@
     "genericType": null,
     "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx",
     "properties": {
-      "static": {
+      "addAndCustomizePages": {
         "dataType": "SPPermission",
         "accessModifier": "public",
         "isOptional": false,
         "type": " SPPermission",
         "isCollection": false,
-        "descr": "View past versions of a list item or document."
+        "descr": "Add, change, or delete HTML pages or web part Pages, and edit the Web site using a SharePoint \nFoundation–compatible editor."
+      },
+      "addDelPrivateWebParts": {
+        "dataType": "SPPermission",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " SPPermission",
+        "isCollection": false,
+        "descr": "Add or remove personal web parts on a web part Page."
+      },
+      "addListItems": {
+        "dataType": "SPPermission",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " SPPermission",
+        "isCollection": false,
+        "descr": "Add items to lists, add documents to document libraries, and add Web discussion comments."
+      },
+      "applyStyleSheets": {
+        "dataType": "SPPermission",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " SPPermission",
+        "isCollection": false,
+        "descr": "Apply a style sheet (.css file) to the Web site."
+      },
+      "applyThemeAndBorder": {
+        "dataType": "SPPermission",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " SPPermission",
+        "isCollection": false,
+        "descr": "Apply a theme or borders to the entire Web site."
+      },
+      "approveItems": {
+        "dataType": "SPPermission",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " SPPermission",
+        "isCollection": false,
+        "descr": "Approve a minor version of a list item or document."
+      },
+      "browseDirectories": {
+        "dataType": "SPPermission",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " SPPermission",
+        "isCollection": false,
+        "descr": "Enumerate files and folders in a Web site using Microsoft Office SharePoint Designer 2007 and WebDAV interfaces."
+      },
+      "browserUserInfo": {
+        "dataType": "SPPermission",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " SPPermission",
+        "isCollection": false,
+        "descr": "View information about users of the Web site."
+      },
+      "cancelCheckout": {
+        "dataType": "SPPermission",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " SPPermission",
+        "isCollection": false,
+        "descr": "Discard or check in a document which is checked out to another user."
+      },
+      "createAlerts": {
+        "dataType": "SPPermission",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " SPPermission",
+        "isCollection": false,
+        "descr": "Create e-mail alerts."
+      },
+      "createGroups": {
+        "dataType": "SPPermission",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " SPPermission",
+        "isCollection": false,
+        "descr": "Create a group of users that can be used anywhere within the site collection."
+      },
+      "createSSCSite": {
+        "dataType": "SPPermission",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " SPPermission",
+        "isCollection": false,
+        "descr": "Create a Web site using Self-Service Site Creation."
+      },
+      "deleteListItems": {
+        "dataType": "SPPermission",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " SPPermission",
+        "isCollection": false,
+        "descr": "Delete items from a list, documents from a document library, and Web discussion comments in documents."
+      },
+      "deleteVersions": {
+        "dataType": "SPPermission",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " SPPermission",
+        "isCollection": false,
+        "descr": "Delete past versions of a list item or document."
+      },
+      "editListItems": {
+        "dataType": "SPPermission",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " SPPermission",
+        "isCollection": false,
+        "descr": "Edit items in lists, edit documents in document libraries, edit Web discussion comments in documents, \nand customize web part Pages in document libraries."
+      },
+      "editMyUserInfo": {
+        "dataType": "SPPermission",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " SPPermission",
+        "isCollection": false,
+        "descr": "Allows a user to change his or her user information, such as adding a picture."
+      },
+      "emptyMask": {
+        "dataType": "SPPermission",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " SPPermission",
+        "isCollection": false,
+        "descr": "Has no permissions on the Web site. Not available through the user interface."
+      },
+      "enumeratePermissions": {
+        "dataType": "SPPermission",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " SPPermission",
+        "isCollection": false,
+        "descr": "Enumerate permissions on the Web site, list, folder, document, or list item."
+      },
+      "fullMask": {
+        "dataType": "SPPermission",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " SPPermission",
+        "isCollection": false,
+        "descr": "Has all permissions on the Web site. Not available through the user interface."
+      },
+      "layoutsPage": {
+        "dataType": "SPPermission",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " SPPermission",
+        "isCollection": false,
+        "descr": "View the layouts page?"
+      },
+      "manageAlerts": {
+        "dataType": "SPPermission",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " SPPermission",
+        "isCollection": false,
+        "descr": "Manage alerts for all users of the Web site."
+      },
+      "manageLists": {
+        "dataType": "SPPermission",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " SPPermission",
+        "isCollection": false,
+        "descr": "Create and delete lists, add or remove columns in a list, and add or remove public views of a list."
+      },
+      "managePermissions": {
+        "dataType": "SPPermission",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " SPPermission",
+        "isCollection": false,
+        "descr": "Create and change permission levels on the Web site and assign permissions to users and groups."
+      },
+      "managePersonalViews": {
+        "dataType": "SPPermission",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " SPPermission",
+        "isCollection": false,
+        "descr": "Create, change, and delete personal views of lists."
+      },
+      "manageSubwebs": {
+        "dataType": "SPPermission",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " SPPermission",
+        "isCollection": false,
+        "descr": "Create subsites such as team sites, Meeting Workspace sites, and Document Workspace sites."
+      },
+      "manageWeb": {
+        "dataType": "SPPermission",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " SPPermission",
+        "isCollection": false,
+        "descr": "Grant the ability to perform all administration tasks for the Web site as well as manage content. \nActivate, deactivate,or edit properties of Web site scoped Features through the object model or \nthrough the user interface (UI). When grantedon the root Web site of a site collection, activate, \ndeactivate, or edit properties of site collection scoped Features through the object model. To \nbrowse to the Site Collection Features page and activate or deactivate site collection scoped \nFeatures through the UI, you must be a site collection administrator."
+      },
+      "open": {
+        "dataType": "SPPermission",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " SPPermission",
+        "isCollection": false,
+        "descr": "Allow users to open a Web site, list, or folder to access items inside that container."
+      },
+      "openItems": {
+        "dataType": "SPPermission",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " SPPermission",
+        "isCollection": false,
+        "descr": "View the source of documents with server-side file handlers."
+      },
+      "updatePersonalWebParts": {
+        "dataType": "SPPermission",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " SPPermission",
+        "isCollection": false,
+        "descr": "Update web parts to display personalized information."
+      },
+      "useClientIntegration": {
+        "dataType": "SPPermission",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " SPPermission",
+        "isCollection": false,
+        "descr": "Use features that launch client applications otherwise, users must work on documents locally and upload changes."
+      },
+      "useRemoteAPIs": {
+        "dataType": "SPPermission",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " SPPermission",
+        "isCollection": false,
+        "descr": "Use SOAP, WebDAV, or Microsoft Office SharePoint Designer 2007 interfaces to access the Web site."
       },
       "value": {
         "dataType": "IODataBasePermission",
@@ -778,12 +1290,54 @@
         "type": " IODataBasePermission",
         "isCollection": false,
         "descr": "Returns the value of this SPPermission object"
+      },
+      "viewFormPages": {
+        "dataType": "SPPermission",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " SPPermission",
+        "isCollection": false,
+        "descr": "View forms, views, and application pages, and enumerate lists."
+      },
+      "viewListItems": {
+        "dataType": "SPPermission",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " SPPermission",
+        "isCollection": false,
+        "descr": "View items in lists, documents in document libraries, and view Web discussion comments."
+      },
+      "viewPages": {
+        "dataType": "SPPermission",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " SPPermission",
+        "isCollection": false,
+        "descr": "View pages in a Web site."
+      },
+      "viewUsageData": {
+        "dataType": "SPPermission",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " SPPermission",
+        "isCollection": false,
+        "descr": "View reports on Web site usage."
+      },
+      "viewVersions": {
+        "dataType": "SPPermission",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " SPPermission",
+        "isCollection": false,
+        "descr": "View past versions of a list item or document."
       }
     },
     "methods": {
       "constructor": {
         "accessModifier": "public",
         "signature": "constructor(value: IODataBasePermission)",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "",
         "genericType": null,
         "returnType": "SPPermission",
@@ -792,13 +1346,16 @@
           {
             "name": "value",
             "dataType": "IODataBasePermission",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       },
       "hasAllPermissions": {
         "accessModifier": "public",
         "signature": "hasAllPermissions(...requestedPerms: SPPermission[]): boolean",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "Function for determining if a given permission mask has all of the requested permissions.",
         "genericType": null,
         "returnType": "boolean",
@@ -807,13 +1364,16 @@
           {
             "name": "...requestedPerms",
             "dataType": "SPPermission[]",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       },
       "hasAnyPermissions": {
         "accessModifier": "public",
         "signature": "hasAnyPermissions(...requestedPerms: SPPermission[]): boolean",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "Function for determining if a given permission mask has any of the requested permissions.",
         "genericType": null,
         "returnType": "boolean",
@@ -822,13 +1382,16 @@
           {
             "name": "...requestedPerms",
             "dataType": "SPPermission[]",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       },
       "hasPermission": {
         "accessModifier": "public",
         "signature": "hasPermission(requestedPerm: SPPermission): boolean",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "Function for checking if a given permission mask has the requested permission.",
         "genericType": null,
         "returnType": "boolean",
@@ -837,7 +1400,8 @@
           {
             "name": "requestedPerm",
             "dataType": "SPPermission",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       }
@@ -936,6 +1500,8 @@
       "constructor": {
         "accessModifier": "public",
         "signature": "constructor(url: string)",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "",
         "genericType": null,
         "returnType": "UrlQueryParameterCollection",
@@ -944,13 +1510,16 @@
           {
             "name": "url",
             "dataType": "string",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       },
       "getValue": {
         "accessModifier": "public",
         "signature": "getValue(param: string): string",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "Returns the value of the first matching query parameter or undefined if the key doesn't exist. \nExamples: this._queryParameterList = [ \n{key: TEST, value: done}, \n{key: DEBUG, value: false}, \n{key: TEST, value: notdone}] \ngetValue('TEST') ---> 'done' \ngetValue('debug') ---> 'false' \ngetValue('lost') ---> undefined",
         "genericType": null,
         "returnType": "string",
@@ -959,13 +1528,16 @@
           {
             "name": "param",
             "dataType": "string",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       },
       "getValues": {
         "accessModifier": "public",
         "signature": "getValues(param: string): string[]",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "Returns the values of all of the matching query parameters or undefined if the key doesn't exist. \nExamples: this._queryParameterList = [ \n{key: TEST, value: done}, \n{key: DEBUG, value: false}, \n{key: TEST, value: notdone}] \ngetValues('TEST') ---> ['done', 'notdone'] \ngetValues('debug') ---> ['false'] \ngetValues('lost') ---> undefined",
         "genericType": null,
         "returnType": "string[]",
@@ -974,7 +1546,8 @@
           {
             "name": "param",
             "dataType": "string",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       }
@@ -987,9 +1560,29 @@
     "descr": "Common helper functions for working with URLs. These utilities are intended to be simple, \nsmall, and extremely common. Do not add advanced parsing logic to this file.",
     "properties": {},
     "methods": {
-      "static": {
+      "convertToODataStringLiteral": {
         "accessModifier": "public",
-        "signature": "static removeEndSlash(url: string): string",
+        "signature": "convertToODataStringLiteral(value: string): string",
+        "isStatic": true,
+        "isOptional": false,
+        "descr": "Converts a variable to an OData string literal and escapes apostrophes. \nOData specification: \nhttps://tools.oasis-open.org/version-control/ \nbrowse/wsvn/odata/trunk/spec/ABNF/odata-abnf-construction-rules.txt \nSQUOTE-in-string = SQUOTE SQUOTE ; two consecutive single quotes represent one within a string literal \nExamples: \nconvertToODataStringLiteral(\"example's list\") ---> \"'example''s list'\" \nconvertToODataStringLiteral(\"example list\") ---> \"'example list'\" \nconvertToODataStringLiteral(\"'example list'\") ---> \"'''example list'''\"",
+        "genericType": null,
+        "returnType": "string",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "value",
+            "dataType": "string",
+            "descr": "",
+            "isOptional": false
+          }
+        ]
+      },
+      "removeEndSlash": {
+        "accessModifier": "public",
+        "signature": "removeEndSlash(url: string): string",
+        "isStatic": true,
+        "isOptional": false,
         "descr": "Removes any slash characters from the end of the URL. \nThis function assumes that the input is already a valid absolute or server-relative URL. \nExamples: \nremoveEndSlash('http://example.com/') ---> 'http://example.com' \nremoveEndSlash('/example') ---> '/example' \nremoveEndSlash('/') ---> ''",
         "genericType": null,
         "returnType": "string",
@@ -998,7 +1591,8 @@
           {
             "name": "url",
             "dataType": "string",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       }
@@ -1011,9 +1605,59 @@
     "descr": "This class implements provides a standard way to validate properties and function parameters. \nUnlike an assertion, the Validate checks are always performed and will always throw an error, \neven in a production release. As such, be careful not to overuse these checks in a way \nthat might impact performance.",
     "properties": {},
     "methods": {
-      "static": {
+      "isNonemptyString": {
         "accessModifier": "public",
-        "signature": "static isTrue(value: boolean, variableName: string): void",
+        "signature": "isNonemptyString(value: string, variableName: string): void",
+        "isStatic": true,
+        "isOptional": false,
+        "descr": "Throws an exception if the specified string is null, undefined, or an empty string.",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "value",
+            "dataType": "string",
+            "descr": "",
+            "isOptional": false
+          },
+          {
+            "name": "variableName",
+            "dataType": "string",
+            "descr": "",
+            "isOptional": false
+          }
+        ]
+      },
+      "isNotNullOrUndefined": {
+        "accessModifier": "public",
+        "signature": "isNotNullOrUndefined(value: any, variableName: string): void",
+        "isStatic": true,
+        "isOptional": false,
+        "descr": "Throws an exception if the specified value is null or undefined.",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "value",
+            "dataType": "any",
+            "descr": "",
+            "isOptional": false
+          },
+          {
+            "name": "variableName",
+            "dataType": "string",
+            "descr": "",
+            "isOptional": false
+          }
+        ]
+      },
+      "isTrue": {
+        "accessModifier": "public",
+        "signature": "isTrue(value: boolean, variableName: string): void",
+        "isStatic": true,
+        "isOptional": false,
         "descr": "Throws an exception if the specified value is not true.",
         "genericType": null,
         "returnType": "void",
@@ -1022,12 +1666,14 @@
           {
             "name": "value",
             "dataType": "boolean",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           },
           {
             "name": "variableName",
             "dataType": "string",
-            "descr": ""
+            "descr": "",
+            "isOptional": false
           }
         ]
       }

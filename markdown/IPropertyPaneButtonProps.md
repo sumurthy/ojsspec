@@ -27,7 +27,6 @@
 |onClick:      | undefined | `` | for an individual element |
 
 
-
 ## onClick:
 
 for an individual element. This is because, button click does not result in any property change, and hence 
@@ -45,5 +44,5 @@ todo: VSO# 233578:PropertyPane Button OnClick event api.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value `    | `undefined` | _%optional%_ undefined |
+| `value`    | `undefined` | undefined |
 

@@ -14,6 +14,7 @@ A library is defined by this manifest. Libraries currently do not have any addit
 |`loaderConfig:`      |` [IClientSideComponentLoaderConfig](IClientSideComponentLoaderConfig.md)` | Definition: This portion of the configuration describes how the component is to be loaded and initialized by a  client |
 |`manifestVersion:`      |` number` | Definition: Version of the component manifest schema |
 |`version:`      |` string` | Definition: Client side component version |
+|`}`      |` }` | Definition: Client side component version |
 
 
 

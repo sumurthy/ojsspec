@@ -3,7 +3,7 @@ Environment type enumeration
 
 | Member	   | Description|
 |:-------------|:-------|
-|ClassicSharePoint:       |  |
-|Local:       |  |
-|SharePoint:       |  |
-|Test:       |  |
+|`ClassicSharePoint`:       |  |
+|`Local`:       |  |
+|`SharePoint`:       |  |
+|`Test`:       |  |

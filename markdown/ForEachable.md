@@ -15,7 +15,6 @@
 |forEach      | undefined | `` |  |
 
 
-
 ## forEach
 
 
@@ -29,5 +28,5 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `callbackfn `    | `undefined` | _%optional%_ undefined |
+| `callbackfn`    | `undefined` | undefined |
 

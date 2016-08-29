@@ -11,5 +11,5 @@ Make a Promise that fulfills when any item fulfills, and rejects if any item rej
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `promises `    | `undefined` | _%optional%_ undefined |
+| `promises`    | `undefined` | undefined |
 

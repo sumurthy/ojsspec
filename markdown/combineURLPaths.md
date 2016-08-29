@@ -11,5 +11,5 @@ Combines any number of URL paths.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `...url `    | `undefined` | _%optional%_ undefined |
+| `...url`    | `undefined` | undefined |
 

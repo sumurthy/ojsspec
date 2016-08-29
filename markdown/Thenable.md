@@ -15,7 +15,6 @@
 |then<U>      | undefined | `` |  |
 
 
-
 ## then<U>
 
 
@@ -29,5 +28,5 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `onFulfilled? `    | `undefined` | _%optional%_ undefined |
+| `onFulfilled`    | `undefined` | undefined |
 

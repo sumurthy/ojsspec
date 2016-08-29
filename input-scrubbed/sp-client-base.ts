@@ -1,4 +1,4 @@
-/// <reference path="../typings/tsd.d.ts" />
+
 
 /**
  * BasicHttpClient implements a basic set of features for performing REST operations.
@@ -12,7 +12,7 @@ declare class BasicHttpClient {
    * Performs a REST service call.  Although the HttpClient subclass adds
    * additional enhancements, the parameters and semantics for BasicHttpClient.fetch()
    * are essentially the same as the WHATWG API standard that is documented here:
-   * https://fetch.spec.whatwg.org/
+   * https:
    * @param url - the URL to fetch
    * @param options - additional options that affect the request
    * @returns a promise that will return the result
@@ -79,11 +79,13 @@ declare class CultureInfo {
   public currentUICultureName: string;
 }
 
-// @public
+/**
+ * Display mode enumeration
+ */
 enum DisplayMode {
-  // (undocumented)
+
   Edit = 2,
-  // (undocumented)
+
   Read = 1
 }
 
@@ -101,7 +103,9 @@ declare class Environment {
   public type: EnvironmentType;
 }
 
-// @public
+/**
+ * Environment type enumeration
+ */
 enum EnvironmentType {
   ClassicSharePoint,
   Local,
@@ -118,7 +122,7 @@ enum EnvironmentType {
  * however, be aware that the uniqueness depends on the browser's
  * Math.random() function and may be not be suitable for some applications.
  *
- * @see {@link https://www.ietf.org/rfc/rfc4122.txt}
+ * @see {@link https:
  */
 declare class Guid {
 
@@ -179,7 +183,7 @@ declare class HttpClient extends BasicHttpClient {
   /**
    * Generally, the parameters and semantics for HttpClient.fetch() are essentially
    * the same as the WHATWG API standard that is documented here:
-   * https://fetch.spec.whatwg.org/
+   * https:
    *
    * The HttpClient subclass adds some additional behaviors that are convenient when
    * working with SharePoint ODATA API's (which can be avoided by using
@@ -191,7 +195,7 @@ declare class HttpClient extends BasicHttpClient {
    *
    * For a write operation, HttpClient will automatically add the "X-RequestDigest"
    * header, which may need to be obtained by issuing a seperate request such as
-   * "https://example.com/sites/sample/_api/contextinfo".  Typically the appropriate
+   * "https:
    * SPWeb URL can be guessed by looking for a reserved URL segment such as "_api"
    * in the original URL passed to fetch(); if not, use IHttpClientOptions.webUrl
    * to specify it explicitly.
@@ -217,8 +221,8 @@ declare class HttpClient extends BasicHttpClient {
    * in order to complete a request.
    * For excample, if the requestUrl is "/sites/site/web/_api/service",
    * the returned URL would be "/sites/site/web".  Or if the requestUrl
-   * is "http://example.com/_layouts/service", the returned URL would be
-   * "http://example.com".
+   * is "http:
+   * "http:
    * @param requestUrl  The URL for a SharePoint REST service
    * @returns the inferred SPWeb URL
    */
@@ -237,13 +241,13 @@ declare class HttpClient extends BasicHttpClient {
  * This interface defines the options for the BasicHttpClient operations such as
  * get(), post(), fetch(), etc.  It is based on the whatwg API standard
  * parameters that are documented here:
- * https://fetch.spec.whatwg.org/
+ * https:
  * @public
  * headers ?: HeaderInit|{ [index: string]: string };
  */
 interface IBasicHttpClientOptions extends RequestInit {
   body ?: BodyInit;
-  cache ?: string|RequestCache;
+  cache ?: ILocalizedString|ILocalizedString;
   credentials ?: string|RequestCredentials;
   headers ?: HeaderInit;
   method ?: string;
@@ -367,7 +371,7 @@ interface IClientSideComponentManifest {
  * by calling the "/_api/contextinfo" REST endpoint, and expires after a server configurable amount
  * of time.  For more information, see the MSDN article
  * "Complete basic operations using SharePoint 2013 REST endpoints".
- * @see {@link https://msdn.microsoft.com/en-us/library/office/jj164022.aspx }
+ * @see {@link https:
  * @public
  */
 interface IDigestCache {
@@ -417,22 +421,21 @@ interface IDigestCache {
  * This interface defines the options for the HttpClient operations such as
  * get(), post(), fetch(), etc.  It is based on the WHATWG API standard
  * parameters that are documented here:
- * https://fetch.spec.whatwg.org/
+ * https:
  * @public
  * headers ?: HeaderInit|{ [index: string]: string };
  */
 interface IHttpClientOptions extends IBasicHttpClientOptions {
   body ?: BodyInit;
-  cache ?: string|RequestCache;
+  cache ?: ILocalizedString|ILocalizedString;
   credentials ?: string|RequestCredentials;
-
   method ?: string;
   mode ?: string|RequestMode;
   /**
    * For a write operation, HttpClient will automatically add the
    * "X-RequestDigest" header, which may need to be fetched using a seperate
-   * request such as "https://example.com/sites/sample/_api/contextinfo".
-   * Typically the SPWeb URL ("https://example.com/sites/sample" in this
+   * request such as "https:
+   * Typically the SPWeb URL ("https:
    * example) can be guessed by looking for a reserved URL segment such
    * as "_api" in the original REST query, however certain REST endpoints
    * do not contain a reserved URL segment; in this case, the webUrl can
@@ -458,8 +461,8 @@ interface IODataBasePermission {
 interface IODataBatchOptions {
   /**
    * ODataBatch will need to perform its POST to an endpoint such as
-   * "http://example.com/sites/sample/_api/$batch". Typically the SPWeb URL
-   * ("https://example.com/sites/sample" in this example) can be guessed by
+   * "http:
+   * ("https:
    * looking for a reserved URL segment such as "_api" in the first URL
    * passed to fetch(), but if not, the webUrl can be explicitly specified
    * using this option.
@@ -469,7 +472,7 @@ interface IODataBatchOptions {
 
 /**
  * Represents an OData SP.ChangeToken object.  For more information about this object
- * @see {@link https://msdn.microsoft.com/en-us/library/office/jj860569.aspx}
+ * @see {@link https:
  * @public
  */
 interface IODataChangeToken {
@@ -481,7 +484,7 @@ interface IODataChangeToken {
 
 /**
  * Represents an OData SP.ContextWebInformation object.  For more information about this object
- * @see {@link https://msdn.microsoft.com/en-us/library/office/jj860569.aspx}
+ * @see {@link https:
  * @public
  */
 interface IODataContextWebInformation {
@@ -513,7 +516,7 @@ interface IODataContextWebInformation {
 
 /**
  * Represents an OData SP.NavigationNode object.
- * https://msdn.microsoft.com/en-us/library/office/jj246311.aspx
+ * https:
  * @public
  */
 interface IODataNavigationNode {
@@ -552,7 +555,7 @@ interface IODataNavigationNode {
 
 /**
  * Represents an OData Microsoft.SharePoint.Navigation.SPNavigation object.
- * https://msdn.microsoft.com/en-us/library/office/ee557907.aspx
+ * https:
  * @public
  */
 interface IODataNavigationNodeCollection {
@@ -571,7 +574,7 @@ interface IODataNavigationNodeCollection {
 /**
  * Represents an OData SP.Web object.  For more information about this object
  * see the MSDN documentation here:
- * https://msdn.microsoft.com/en-us/library/office/jj860569.aspx
+ * https:
  * @public
  */
 interface IODataWeb {
@@ -649,7 +652,7 @@ interface IODataWeb {
   UIVersion ?: number;
   /**
    * Gets the absolute URL for the website.
-   * Example: "http://example.com/sites/PubSite"
+   * Example: "http:
    */
   Url ?: string;
   /**
@@ -733,7 +736,7 @@ declare class Log {
 /**
  * The ODataBatch class accumulates a number of REST service calls and
  * transmits them as a single ODATA batch.  This protocol is documented here:
- * http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html
+ * http:
  *
  * The usage is to call ODataBatch.fetch() to queue each individual request,
  * and then call ODataBatch.execute() to execute the batch operation.
@@ -753,13 +756,13 @@ declare class ODataBatch {
    * Queues a new request, and returns a promise that can be used to access
    * the server response (after execute() has completed).  The parameters for
    * this function are basically the same as the WHATWG API standard documented here:
-   * https://fetch.spec.whatwg.org/
+   * https:
    *
    * However, be aware that certain REST headers are ignored or not allowed inside
    * a batch.  See the ODATA documentation for details.
    *
    * When execute() is called, it will POST to a URL such as
-   * "http://example.com/sites/sample/_api/$batch".  Typically ODataBatch can successfully
+   * "http:
    * guess the appropriate SPWeb URL by looking for a reserved URL segment such as "_api"
    * in the first URL passed to fetch().  If not, use IODataBatchOptions.webUrl to specify it
    * explicitly.
@@ -987,7 +990,7 @@ declare class ServiceScope {
  * This class can be used to determine if the current user has a requested set of permissions.
  * Specifies the built-in permissions available in SharePoint Foundation
  * Derived from OneDriveWeb/ODBNext/odsp-shared
- * https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx
+ * https:
  * @public
  */
 declare class SPPermission {
@@ -1207,7 +1210,7 @@ declare class SPWeb {
 
   /**
    * Returns the absolute URL for this SPWeb.
-   * Example: "https://example.com/sites/PubSite/SubWeb"
+   * Example: "https:
    */
   public absoluteUrl: string;
   /**
@@ -1275,7 +1278,7 @@ declare class UrlUtilities {
   /**
    * Converts a variable to an OData string literal and escapes apostrophes.
    * OData specification:
-   * https://tools.oasis-open.org/version-control/
+   * https:
    *   browse/wsvn/odata/trunk/spec/ABNF/odata-abnf-construction-rules.txt
    * SQUOTE-in-string = SQUOTE SQUOTE ; two consecutive single quotes represent one within a string literal
    * Examples:
@@ -1288,7 +1291,7 @@ declare class UrlUtilities {
    * Removes any slash characters from the end of the URL.
    * This function assumes that the input is already a valid absolute or server-relative URL.
    * Examples:
-   *   removeEndSlash('http://example.com/') ---> 'http://example.com'
+   *   removeEndSlash('http:
    *   removeEndSlash('/example')            ---> '/example'
    *   removeEndSlash('/')                   ---> ''
    * @param url the URL to be normalized

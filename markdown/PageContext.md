@@ -42,5 +42,5 @@ application cache.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceScope `    | `undefined` | _%optional%_ undefined |
+| `serviceScope`    | `undefined` | undefined |
 

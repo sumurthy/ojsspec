@@ -51,5 +51,4 @@
 |:-------------|:----|:-------|:-----------|
 >|%name%      | %access% | `%type%` | %description% |
 
-
 </ifunction>

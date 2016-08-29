@@ -4,7 +4,7 @@ import SetUp from './modules/setuproutine'
 import Objects from './modules/objects'
 import Utils from './modules/utils'
 
-const SKIP = ['///', '']
+const SKIP = ['///', '//', '']
 const C_START = '/**'
 const COMMENT = '*'
 const C_END = '*/'
@@ -18,6 +18,7 @@ const ENUM = 'enum '
 const FUNCTION = 'function '
 const NEWLINE = '\n  '
 const ATSYMBOL = '@'
+const OBJECT_INSIDE  = /{(.*?)}/
 
 let ignore_lines = []
 let cBuffer = {}
@@ -44,7 +45,6 @@ let interfaceName = ''
 let className = ''
 let functionObj = {}
 let methodObj = {}
-let paramObj = {}
 let propObj = {}
 let generalDesc = ''
 let commentObject = {
@@ -64,7 +64,6 @@ function file_reset() {
     iObj = {}
     interfaceName = ''
     methodObj = {}
-    paramObj = {}
     propObj = {}
     generalDesc = ''
     commentObject = {
@@ -75,7 +74,6 @@ function file_reset() {
 
 function block_end_reset() {
     methodObj = {}
-    paramObj = {}
     propObj = {}
     generalDesc = ''
     commentObject = {
@@ -106,19 +104,26 @@ function comment_reset() {
  */
 function processLines(element = '', index = 0, lines = []) {
 
-
-
     if (ignore_lines.includes(index)) {
         return
     }
-    let line = element.replace(/\s+/g, ' ').trim().replace(';', '')
-
-    if (line.includes(BLOCK_BEGIN) && line.includes(BLOCK_END)) {
-        return
+    let line = element.split('//')[0]
+    line = element.replace(/\s+/g, ' ').trim().replace(';', '')
+    let isStatic = false
+    if (line.includes(' static ')) {
+        isStatic = true
+        line = line.replace(' static ', ' ')
     }
+
+
+    // if (line.includes(BLOCK_BEGIN) && line.includes(BLOCK_END)) {
+    //     return
+    // }
 
     let firstWord = line.split(' ', 1)[0]
     let secondWord = line.split(' ', 2)[1]
+    secondWord = secondWord || 'OBJECTERROR'
+    let thirdWord = line.split(' ', 3)[2]
     let lastWord = line.split(':').pop()
     if (!COMMENT_ALL.includes(firstWord)) {
         if (line.includes(BLOCK_BEGIN)) {
@@ -232,12 +237,31 @@ function processLines(element = '', index = 0, lines = []) {
         return
     } else if (line.includes(ENUM)) {
         nEnum++
-        mode = 'ENUM'
-        enumObj[secondWord] = {}
-        enumObj[secondWord]['descr'] = generalDesc
-        enumObj[secondWord]['values'] = []
-        enumKey = secondWord
-        block_begin_reset()
+        enumKey = (firstWord == 'declare') ? thirdWord : secondWord
+        console.log(`ename is: ${enumKey}`);
+        if (line.includes(BLOCK_BEGIN) && line.includes(BLOCK_END)) {
+            enumObj[enumKey] = {}
+            enumObj[enumKey]['descr'] = generalDesc
+            enumObj[enumKey]['values'] = []
+            var enumEntry = []
+            var optionsString = OBJECT_INSIDE.exec(line)[1]
+            if (optionsString) {
+                optionsString.split(',').forEach((e) => {
+                    enumEntry[0] = e.replace(/"/g, '').trim()
+                    enumEntry[1] = ""
+                    enumEntry[2] = ""
+                    enumObj[enumKey]['values'].push(enumEntry)
+                })
+            }
+            block_end_reset()
+        }
+        else {
+            mode = 'ENUM'
+            enumObj[enumKey] = {}
+            enumObj[enumKey]['descr'] = generalDesc
+            enumObj[enumKey]['values'] = []
+            block_begin_reset()
+        }
         return
     } else if (line.includes(FUNCTION)) {
         var name = line.split('(')[0].split(' ').pop()
@@ -283,8 +307,15 @@ function processLines(element = '', index = 0, lines = []) {
 
                     m['descr'] = generalDesc
                     m['genericType'] = Utils.genericInside(line.split('(')[0])
-                    m['returnType'] = lastWord
-                    m['returnDescr'] = (commentObject['returnDescr'] === undefined) ?
+                    m['returnType'] = lastWord.trim()
+
+                    if ( (firstWord.split('(')[0].includes('?')) || (secondWord === '?')) {
+                        m['isOptional'] = true
+                    }
+                    else {
+                        m['isOptional'] = false
+                    }
+                    m['returnDesc'] = (commentObject['returnDescr'] === undefined) ?
                         null : commentObject['returnDescr']
                     m['params'] = Utils.buildParamList(line, commentObject['param'])
                     iObj[interfaceName]['methods'][name] = m
@@ -295,13 +326,19 @@ function processLines(element = '', index = 0, lines = []) {
                     iBlock--
                 } else {
                     var p = {}
-                        //var name = line.split(':')[0]
+                    var name = Utils.getName(firstWord)
                     p['descr'] = generalDesc
                     p['dataType'] = lastWord.trim()
-                    p['isOptional'] = (secondWord.includes('?')) ? true : false
-                    p['type'] = lastWord.replace('[]', '')
+
+                    if ( (firstWord.split('(')[0].includes('?')) || (secondWord === '?')) {
+                        p['isOptional'] = true
+                    }
+                    else {
+                        p['isOptional'] = false
+                    }
+
                     p['isCollection'] = (secondWord.includes('[]')) ? true : false
-                    iObj[interfaceName]['properties'][firstWord] = p
+                    iObj[interfaceName]['properties'][name] = p
                 }
 
                 break;
@@ -314,7 +351,7 @@ function processLines(element = '', index = 0, lines = []) {
                         name = secondWord.split('(')[0].trim()
                     }
                     name = name || "ErrorErrorError"
-                    var m = Utils.processMethod(line, generalDesc, commentObject, className, name, true)
+                    var m = Utils.processMethod(line, generalDesc, commentObject, className, name, true, isStatic)
 
                     classObj[className]['methods'][name] = m
                 } else if (line.includes(BLOCK_BEGIN)) {
@@ -323,7 +360,12 @@ function processLines(element = '', index = 0, lines = []) {
                     ignore_lines = o['skip']
                     iBlock--
                 } else {
-                    var name = secondWord.replace(':', '') || 'ERRORERROR'
+                    if (secondWord) {
+                        var name = secondWord.replace(':', '')
+                    }
+                    else {
+                        var name = 'OBJECTERROR'
+                    }
                     var p = Utils.processProperty(line, generalDesc)
                     classObj[className]['properties'][name] = p
                 }

@@ -18,13 +18,13 @@ Please refer to the documentation of the individual APIs to make the right decis
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
 |`accessibleTitle`     | protected | `string` | This property points to the accessible title of web part made available to screen readers |
-|`context`     | protected | `[IWebPartContext](IWebPartContext.md)` | This property is a pointer to the web part context |
+|`context`     | protected | `[IWebPartContext](IWebPartContext.md)` |  |
 |`disableReactivePropertyChanges`     | protected | `boolean` | This property is used to change the web part's PropertyPane interaction from Reactive to NonReactive |
 |`displayMode`     | protected | `DisplayMode` | This property is the current display mode of the web part |
 |`domElement`     | protected | `HTMLElement` | This property is a pointer to the root DOM element of the web part |
 |`previewImageUrl`     | protected | `string` | This property points to the preview image for the web part |
 |`properties`     | protected | `TProperties` | This property is the pointer to the custom property bag of the web part |
-|`propertyPaneSettings`     | protected | `[IPropertyPaneSettings](IPropertyPaneSettings.md)` | This property is the pointer to the web part configuration settings |
+|`propertyPaneSettings`     | protected | `[IPropertyPaneSettings](IPropertyPaneSettings.md)` |  |
 |`renderedFromDefaultProperties`     | protected | `boolean` | This property indicates whether the web part was rendered from the default properties, as opposed to using  serialized state from the last time that the web part was saved |
 |`renderedOnce`     | protected | `boolean` | This property indicates whether the web part has been rendered once or not |
 
@@ -35,13 +35,13 @@ Please refer to the documentation of the individual APIs to make the right decis
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor)     | public | `[BaseClientSideWebPart](BaseClientSideWebPart.md)` | e |
+|[constructor](#constructor)     | public | `[BaseClientSideWebPart](BaseClientSideWebPart.md)` |   e |
 |[clearError](#clearerror)     | protected | `void` | This API should be used to clear the error message from the web part display area |
 |[configureStart](#configurestart)     | protected | `void` | if it is not already open |
-|[deserialize](#deserialize)     | protected | `TProperties` | This API is called once during the lifetime of the web part during the intial render and just before the onInit  API call |
+|[deserialize](#deserialize)     | protected | `TProperties` |  |
 |[dispose](#dispose)     | protected | `void` | This API is called at the end of the web part lifecycle |
 |[onBeforeSerialize](#onbeforeserialize)     | protected | `[IHtmlProperties](IHtmlProperties.md)` | the documentation of IHtmlProperties interface for more details |
-|[onDisplayModeChanged](#ondisplaymodechanged)     | protected | `void` | This API is called when the display mode of a web part is changed |
+|[onDisplayModeChanged](#ondisplaymodechanged)     | protected | `void` |  |
 |[onInit](#oninit)     | protected | `Promise<T>` | This API should be overridden to perform long running operations e |
 |[onPropertyChange](#onpropertychange)     | protected | `void` | This API is invoked on property changes in the PropertyPane when the PropertyPane is being used in Reactive mode |
 |[onPropertyConfigurationComplete](#onpropertyconfigurationcomplete)     | protected | `void` | This API is called when the current web part configuration process is completed |
@@ -55,6 +55,7 @@ Please refer to the documentation of the individual APIs to make the right decis
 
 ## constructor
 
+ 
 e.g. 
 constructor(conext: IWebPartContext) { 
 super(context); 
@@ -71,7 +72,7 @@ super(context);
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `ctx `    | `undefined` | _%optional%_ undefined |
+| `ctx`    | `undefined` | undefined |
 
 
 ## clearError
@@ -99,17 +100,11 @@ if it is not already open.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `refreshOnly? `    | `undefined` | _%optional%_ undefined |
+| `refreshOnly`    | `undefined` | undefined |
 
 
 ## deserialize
 
-This API is called once during the lifetime of the web part during the intial render and just before the onInit 
-API call. The purpose of this API is to help a web part developer deserialize the web part data and manage the 
-versioning of their data as the web part code evolves. The web part data may have been persisted with an older 
-or newer version of the web part code. This API gives the web part developer an opportunity to re-structure their 
-data to the appropriate data schema. The persisted data contains the version number information. That information 
-can be used to make decisions on how to re-structure the data. 
 
 
 ##### Signature
@@ -121,7 +116,7 @@ can be used to make decisions on how to re-structure the data.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `data `    | `undefined` | _%optional%_ undefined |
+| `data`    | `undefined` | undefined |
 
 
 ## dispose
@@ -151,10 +146,6 @@ None
 
 ## onDisplayModeChanged
 
-This API is called when the display mode of a web part is changed. The default implementation of this API calls 
-the web part render method to re-render the web part with the new display mode. If a web part developer does not 
-want a full re-render to happen on display mode change, they can override this API and perform specific updates 
-to the web part DOM to switch its display mode. 
 
 
 ##### Signature
@@ -166,7 +157,7 @@ to the web part DOM to switch its display mode.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `oldDisplayMode `    | `undefined` | _%optional%_ undefined |
+| `oldDisplayMode`    | `undefined` | undefined |
 
 
 ## onInit
@@ -199,8 +190,8 @@ invokes the web part host's setDirty API.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `propertyPath `    | `undefined` | _%optional%_ undefined |
-| `newValue `    | `undefined` | _%optional%_ undefined |
+| `propertyPath`    | `undefined` | undefined |
+| `newValue`    | `undefined` | undefined |
 
 
 ## onPropertyConfigurationComplete
@@ -271,5 +262,5 @@ using the trace logger.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `error `    | `undefined` | _%optional%_ undefined |
+| `error`    | `undefined` | undefined |
 

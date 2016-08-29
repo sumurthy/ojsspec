@@ -4,6 +4,13 @@
 
 
 
+### Properties
+
+| Property	   | Type	| Description|
+|:-------------|:-------|:-----------|
+|`}`      |` }` |  |
+|`declare`      |` typeof window.fetch` |  |
+
 
 
 
@@ -11,7 +18,7 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[fetch](#fetch)      | ` Promise<Response> `|  |
+|[fetch](#fetch)      | `Promise<Response> `|  |
 
 
 
@@ -28,6 +35,6 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url `    | `undefined` | _%optional%_ undefined |
-| `init? `    | `undefined` | _%optional%_ undefined |
+| `url`    | `undefined` | undefined |
+| `init`    | `undefined` | undefined |
 

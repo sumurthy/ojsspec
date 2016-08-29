@@ -12,5 +12,5 @@ Get's the path name from an absolute url.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url `    | `undefined` | _%optional%_ undefined |
+| `url`    | `undefined` | undefined |
 

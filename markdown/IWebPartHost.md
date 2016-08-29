@@ -42,7 +42,6 @@ and each host may want to scope its event aggregation service.
 |setDirty      | undefined | `` | ServiceScope provides a formalized way for components to register and consume dependencies  ("services"), and to enable different implementations to be registered in different scopes |
 
 
-
 ## setDirty
 
 ServiceScope provides a formalized way for components to register and consume dependencies 
@@ -59,6 +58,6 @@ serviceScope: ServiceScope;
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `instanceId `    | `undefined` | _%optional%_ undefined |
-| `data? `    | `undefined` | _%optional%_ undefined |
+| `instanceId`    | `undefined` | undefined |
+| `data`    | `undefined` | undefined |
 

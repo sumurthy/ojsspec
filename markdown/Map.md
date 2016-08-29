@@ -17,14 +17,14 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[clear](#clear)      | ` void `|  |
-|[delete](#delete)      | ` boolean `|  |
-|[get](#get)      | ` V `|  |
-|[has](#has)      | ` boolean `|  |
-|[set](#set)      | ` Map<K, V> `|  |
-|[entries](#entries)      | ` Iterator<[K, V]> `|  |
-|[keys](#keys)      | ` Iterator<K> `|  |
-|[values](#values)      | ` Iterator<V> `|  |
+|[clear](#clear)      | `void `|  |
+|[delete](#delete)      | `boolean `|  |
+|[get](#get)      | `V `|  |
+|[has](#has)      | `boolean `|  |
+|[set](#set)      | `Map<K, V> `|  |
+|[entries](#entries)      | `Iterator<[K, V]> `|  |
+|[keys](#keys)      | `Iterator<K> `|  |
+|[values](#values)      | `Iterator<V> `|  |
 
 
 
@@ -33,7 +33,6 @@
 | Function	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
 |forEach      | undefined | `` |  |
-
 
 
 ## clear
@@ -61,7 +60,7 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key `    | `undefined` | _%optional%_ undefined |
+| `key`    | `undefined` | undefined |
 
 
 ## get
@@ -77,7 +76,7 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key `    | `undefined` | _%optional%_ undefined |
+| `key`    | `undefined` | undefined |
 
 
 ## has
@@ -93,7 +92,7 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key `    | `undefined` | _%optional%_ undefined |
+| `key`    | `undefined` | undefined |
 
 
 ## set
@@ -109,8 +108,8 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key `    | `undefined` | _%optional%_ undefined |
-| `value? `    | `undefined` | _%optional%_ undefined |
+| `key`    | `undefined` | undefined |
+| `value`    | `undefined` | undefined |
 
 
 ## entries
@@ -162,8 +161,8 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `callbackfn `    | `undefined` | _%optional%_ undefined |
-| `index `    | `undefined` | _%optional%_ undefined |
-| `map `    | `undefined` | _%optional%_ undefined |
-| `V> `    | `undefined` | _%optional%_ undefined |
+| `callbackfn`    | `undefined` | undefined |
+| `index`    | `undefined` | undefined |
+| `map`    | `undefined` | undefined |
+| `V>`    | `undefined` | undefined |
 

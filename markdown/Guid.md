@@ -18,8 +18,10 @@ Math.random() function and may be not be suitable for some applications.
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
 |[equals](#equals)     | public | `boolean` | represent the same value |
-|[static](#static)     | public | `[Guid](Guid.md)` | Trys to construct a new Guid instance using guid string |
+|[isValid](#isvalid)     | public, _static_ | `boolean` | Indicates whether a guid is valid (according to RFC4122) |
+|[newGuid](#newguid)     | public, _static_ | `[Guid](Guid.md)` | Returns a new Guid instance with a pseudo-randomly generated Guid |
 |[toString](#tostring)     | public | `string` | Example: 'd5369f3b-bd7a-412a-9c0f-7f0650bb5489' |
+|[tryParse](#tryparse)     | public, _static_ | `[Guid](Guid.md)` | Trys to construct a new Guid instance using guid string |
 
 
 
@@ -37,10 +39,56 @@ represent the same value
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `guid `    | `undefined` | _%optional%_ undefined |
+| `guid`    | `undefined` | undefined |
 
 
-## static
+## isValid
+
+Indicates whether a guid is valid (according to RFC4122). 
+
+
+##### Signature
+
+#### Returns
+
+#### Parameters
+
+
+| Parameter	   | Type    | Description |
+|:-------------|:---------------|:------------|
+| `guid`    | `undefined` | undefined |
+
+
+## newGuid
+
+Returns a new Guid instance with a pseudo-randomly generated Guid. 
+
+
+##### Signature
+
+#### Returns
+
+#### Parameters
+
+
+| Parameter	   | Type    | Description |
+|:-------------|:---------------|:------------|
+| `randomProvider`    | `undefined` | undefined |
+
+
+## toString
+
+Example: 'd5369f3b-bd7a-412a-9c0f-7f0650bb5489'
+
+##### Signature
+
+#### Returns
+
+#### Parameters
+None
+
+
+## tryParse
 
 Trys to construct a new Guid instance using guid string. The guid argument 
 is normalized and validated. If the argument is not a valid "version 4" UUID from 
@@ -56,17 +104,5 @@ RFC 4122, tryParse will return undefined.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `guid `    | `undefined` | _%optional%_ undefined |
-
-
-## toString
-
-Example: 'd5369f3b-bd7a-412a-9c0f-7f0650bb5489'
-
-##### Signature
-
-#### Returns
-
-#### Parameters
-None
+| `guid`    | `undefined` | undefined |
 
