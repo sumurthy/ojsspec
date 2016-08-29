@@ -32,7 +32,7 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key`    | `undefined` | undefined |
+| `key`    | `K` |  |
 
 
 ## clear
@@ -60,7 +60,7 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key`    | `undefined` | undefined |
+| `key`    | `K` |  |
 
 
 ## has
@@ -76,7 +76,7 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key`    | `undefined` | undefined |
+| `key`    | `K` |  |
 
 
 ## set
@@ -92,6 +92,6 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key`    | `undefined` | undefined |
-| `value`    | `undefined` | undefined |
+| `key`    | `K` |  |
+| `value`    | `V` | _Optional._ |
 

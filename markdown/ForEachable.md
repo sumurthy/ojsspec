@@ -28,5 +28,5 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `callbackfn`    | `undefined` | undefined |
+| `callbackfn`    | `(value` |  |
 

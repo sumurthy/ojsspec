@@ -33,8 +33,8 @@ Throws an exception if the specified string is null, undefined, or an empty stri
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | `undefined` | undefined |
-| `variableName`    | `undefined` | undefined |
+| `value`    | `string` |  |
+| `variableName`    | `string` |  |
 
 
 ## isNotNullOrUndefined
@@ -50,8 +50,8 @@ Throws an exception if the specified value is null or undefined.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | `undefined` | undefined |
-| `variableName`    | `undefined` | undefined |
+| `value`    | `any` |  |
+| `variableName`    | `string` |  |
 
 
 ## isTrue
@@ -67,6 +67,6 @@ Throws an exception if the specified value is not true.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | `undefined` | undefined |
-| `variableName`    | `undefined` | undefined |
+| `value`    | `boolean` |  |
+| `variableName`    | `string` |  |
 

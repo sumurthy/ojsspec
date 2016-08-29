@@ -76,7 +76,7 @@ https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | `undefined` | undefined |
+| `value`    | `IODataBasePermission` |  |
 
 
 ## hasAllPermissions
@@ -92,7 +92,7 @@ Function for determining if a given permission mask has all of the requested per
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `...requestedPerms`    | `undefined` | undefined |
+| `...requestedPerms`    | `SPPermission[]` |  |
 
 
 ## hasAnyPermissions
@@ -108,7 +108,7 @@ Function for determining if a given permission mask has any of the requested per
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `...requestedPerms`    | `undefined` | undefined |
+| `...requestedPerms`    | `SPPermission[]` |  |
 
 
 ## hasPermission
@@ -124,5 +124,5 @@ Function for checking if a given permission mask has the requested permission.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `requestedPerm`    | `undefined` | undefined |
+| `requestedPerm`    | `SPPermission` |  |
 

@@ -39,9 +39,9 @@ fractional milliseconds; for example, to specify an expiration
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `webUrl`    | `undefined` | undefined |
-| `digestValue`    | `undefined` | undefined |
-| `expirationTimestamp`    | `undefined` | undefined |
+| `webUrl`    | `string` |  |
+| `digestValue`    | `string` |  |
+| `expirationTimestamp`    | `number` |  |
 
 
 ## clearAllDigests
@@ -69,7 +69,7 @@ This may be a server-relative or absolute URL.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `webUrl`    | `undefined` | undefined |
+| `webUrl`    | `string` |  |
 
 
 ## fetchDigest
@@ -85,5 +85,5 @@ This may be a server-relative or absolute URL.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `webUrl`    | `undefined` | undefined |
+| `webUrl`    | `string` |  |
 

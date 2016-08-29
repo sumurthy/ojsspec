@@ -41,8 +41,8 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `body`    | `undefined` | undefined |
-| `init`    | `undefined` | undefined |
+| `body`    | `BodyInit` | _Optional._ |
+| `init`    | `ResponseInit` | _Optional._ |
 
 
 ## Response
@@ -70,6 +70,6 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | `undefined` | undefined |
-| `status`    | `undefined` | undefined |
+| `url`    | `string` |  |
+| `status`    | `number` |  |
 

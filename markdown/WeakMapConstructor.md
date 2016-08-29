@@ -34,6 +34,6 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `iterable`    | `undefined` | undefined |
-| `V]>`    | `undefined` | undefined |
+| `iterable`    | `ForEachable<[K` |  |
+| `V]>`    | `undefined` |  |
 

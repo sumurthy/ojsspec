@@ -32,6 +32,6 @@ only object types.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `objA`    | `undefined` | undefined |
-| `objB`    | `undefined` | undefined |
+| `objA`    | `Object` |  |
+| `objB`    | `Object` |  |
 

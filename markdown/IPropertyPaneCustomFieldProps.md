@@ -29,7 +29,7 @@ Event callback for onDispose.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `elem`    | `undefined` | undefined |
+| `elem`    | `HTMLElement` |  |
 
 
 ## onRender:
@@ -45,5 +45,5 @@ onRender will be called once the custom field mounted to the host element.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `elem`    | `undefined` | undefined |
+| `elem`    | `HTMLElement` |  |
 

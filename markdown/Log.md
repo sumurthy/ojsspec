@@ -35,9 +35,9 @@ If the source's length is more than 20, only the first 20 characters are kept.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `source`    | `undefined` | undefined |
-| `error`    | `undefined` | undefined |
-| `scope`    | `undefined` | undefined |
+| `source`    | `string` |  |
+| `error`    | `Error` |  |
+| `scope`    | `ServiceScope` | _Optional._ |
 
 
 ## info
@@ -53,9 +53,9 @@ more context information (e.g., web part information) to the logged message.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `source`    | `undefined` | undefined |
-| `message`    | `undefined` | undefined |
-| `scope`    | `undefined` | undefined |
+| `source`    | `string` |  |
+| `message`    | `string` |  |
+| `scope`    | `ServiceScope` | _Optional._ |
 
 
 ## verbose
@@ -71,9 +71,9 @@ more context information (e.g., web part information) to the logged message.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `source`    | `undefined` | undefined |
-| `message`    | `undefined` | undefined |
-| `scope`    | `undefined` | undefined |
+| `source`    | `string` |  |
+| `message`    | `string` |  |
+| `scope`    | `ServiceScope` | _Optional._ |
 
 
 ## warn
@@ -89,7 +89,7 @@ more context information (e.g., web part information) to the logged message.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `source`    | `undefined` | undefined |
-| `message`    | `undefined` | undefined |
-| `scope`    | `undefined` | undefined |
+| `source`    | `string` |  |
+| `message`    | `string` |  |
+| `scope`    | `ServiceScope` | _Optional._ |
 

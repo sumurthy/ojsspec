@@ -35,6 +35,6 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | `undefined` | undefined |
-| `init`    | `undefined` | undefined |
+| `url`    | `string|Request` |  |
+| `init`    | `RequestInit` | _Optional._ |
 

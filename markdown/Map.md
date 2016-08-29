@@ -60,7 +60,7 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key`    | `undefined` | undefined |
+| `key`    | `K` |  |
 
 
 ## get
@@ -76,7 +76,7 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key`    | `undefined` | undefined |
+| `key`    | `K` |  |
 
 
 ## has
@@ -92,7 +92,7 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key`    | `undefined` | undefined |
+| `key`    | `K` |  |
 
 
 ## set
@@ -108,8 +108,8 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key`    | `undefined` | undefined |
-| `value`    | `undefined` | undefined |
+| `key`    | `K` |  |
+| `value`    | `V` | _Optional._ |
 
 
 ## entries
@@ -161,8 +161,8 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `callbackfn`    | `undefined` | undefined |
-| `index`    | `undefined` | undefined |
-| `map`    | `undefined` | undefined |
-| `V>`    | `undefined` | undefined |
+| `callbackfn`    | `(value` |  |
+| `index`    | `K` |  |
+| `map`    | `Map<K` |  |
+| `V>`    | `undefined` |  |
 

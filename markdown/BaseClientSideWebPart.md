@@ -72,7 +72,7 @@ super(context);
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `ctx`    | `undefined` | undefined |
+| `ctx`    | `IWebPartContext` |  |
 
 
 ## clearError
@@ -100,7 +100,7 @@ if it is not already open.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `refreshOnly`    | `undefined` | undefined |
+| `refreshOnly`    | `boolean` | _Optional._ |
 
 
 ## deserialize
@@ -116,7 +116,7 @@ if it is not already open.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `data`    | `undefined` | undefined |
+| `data`    | `IWebPartData` |  |
 
 
 ## dispose
@@ -157,7 +157,7 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `oldDisplayMode`    | `undefined` | undefined |
+| `oldDisplayMode`    | `DisplayMode` |  |
 
 
 ## onInit
@@ -190,8 +190,8 @@ invokes the web part host's setDirty API.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `propertyPath`    | `undefined` | undefined |
-| `newValue`    | `undefined` | undefined |
+| `propertyPath`    | `string` |  |
+| `newValue`    | `any` |  |
 
 
 ## onPropertyConfigurationComplete
@@ -262,5 +262,5 @@ using the trace logger.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `error`    | `undefined` | undefined |
+| `error`    | `Error` |  |
 

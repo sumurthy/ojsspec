@@ -39,7 +39,7 @@ represent the same value
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `guid`    | `undefined` | undefined |
+| `guid`    | `Guid` |  |
 
 
 ## isValid
@@ -56,7 +56,7 @@ Indicates whether a guid is valid (according to RFC4122).
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `guid`    | `undefined` | undefined |
+| `guid`    | `string` |  |
 
 
 ## newGuid
@@ -73,7 +73,7 @@ Returns a new Guid instance with a pseudo-randomly generated Guid.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `randomProvider`    | `undefined` | undefined |
+| `randomProvider`    | `IRandomProvider` | _Optional._ |
 
 
 ## toString
@@ -104,5 +104,5 @@ RFC 4122, tryParse will return undefined.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `guid`    | `undefined` | undefined |
+| `guid`    | `string` |  |
 

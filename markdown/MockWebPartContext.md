@@ -38,8 +38,8 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `id`    | `undefined` | undefined |
-| `propertyPaneState`    | `undefined` | undefined |
+| `id`    | `string` |  |
+| `propertyPaneState`    | `PropertyPaneState` | _Optional._ |
 
 
 ## domElement:
@@ -55,7 +55,7 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `'div'`    | `undefined` | undefined |
+| `'div'`    | `undefined` |  |
 
 
 ## manifest:

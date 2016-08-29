@@ -47,7 +47,7 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | `undefined` | undefined |
+| `value`    | `T` |  |
 
 
 ## clear
@@ -75,7 +75,7 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | `undefined` | undefined |
+| `value`    | `T` |  |
 
 
 ## has
@@ -91,7 +91,7 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | `undefined` | undefined |
+| `value`    | `T` |  |
 
 
 ## entries
@@ -143,7 +143,7 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `callbackfn`    | `undefined` | undefined |
-| `index`    | `undefined` | undefined |
-| `set`    | `undefined` | undefined |
+| `callbackfn`    | `(value` |  |
+| `index`    | `T` |  |
+| `set`    | `Set<T>` |  |
 

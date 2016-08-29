@@ -40,6 +40,6 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `input`    | `undefined` | undefined |
-| `init`    | `undefined` | undefined |
+| `input`    | `string|Request` |  |
+| `init`    | `RequestInit` | _Optional._ |
 

@@ -30,7 +30,7 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | `undefined` | undefined |
+| `value`    | `any` | _Optional._ |
 
 
 ## return
@@ -46,7 +46,7 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | `undefined` | undefined |
+| `value`    | `any` | _Optional._ |
 
 
 ## throw
@@ -62,5 +62,5 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `e`    | `undefined` | undefined |
+| `e`    | `any` | _Optional._ |
 

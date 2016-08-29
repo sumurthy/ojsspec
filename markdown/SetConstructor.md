@@ -34,5 +34,5 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `iterable`    | `undefined` | undefined |
+| `iterable`    | `ForEachable<T>` |  |
 

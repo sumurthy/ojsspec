@@ -58,6 +58,6 @@ serviceScope: ServiceScope;
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `instanceId`    | `undefined` | undefined |
-| `data`    | `undefined` | undefined |
+| `instanceId`    | `string` |  |
+| `data`    | `any` | _Optional._ |
 

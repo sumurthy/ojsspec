@@ -28,5 +28,5 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `onFulfilled`    | `undefined` | undefined |
+| `onFulfilled`    | `(value` | _Optional._ |
 
