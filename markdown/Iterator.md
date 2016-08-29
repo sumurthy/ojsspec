@@ -11,9 +11,9 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[next](#next)      | [ IteratorResult<T>]( IteratorResult<T>.md) |  |
-|[return?](#return?)      | [ IteratorResult<T>]( IteratorResult<T>.md) |  |
-|[throw?](#throw?)      | [ IteratorResult<T>]( IteratorResult<T>.md) |  |
+|[next](#next)      | [ IteratorResult<T>](IteratorResult.md) |  |
+|[return?](#return?)      | [ IteratorResult<T>](IteratorResult.md) |  |
+|[throw?](#throw?)      | [ IteratorResult<T>](IteratorResult.md) |  |
 
 
 

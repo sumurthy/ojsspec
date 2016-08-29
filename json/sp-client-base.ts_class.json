@@ -769,7 +769,15 @@
         "isOptional": false,
         "type": " SPPermission",
         "isCollection": false,
-        "descr": "Has no permissions on the Web site. Not available through the user interface."
+        "descr": "View past versions of a list item or document."
+      },
+      "value": {
+        "dataType": "IODataBasePermission",
+        "accessModifier": "public",
+        "isOptional": false,
+        "type": " IODataBasePermission",
+        "isCollection": false,
+        "descr": "Returns the value of this SPPermission object"
       }
     },
     "methods": {
@@ -784,6 +792,51 @@
           {
             "name": "value",
             "dataType": "IODataBasePermission",
+            "descr": ""
+          }
+        ]
+      },
+      "hasAllPermissions": {
+        "accessModifier": "public",
+        "signature": "hasAllPermissions(...requestedPerms: SPPermission[]): boolean",
+        "descr": "Function for determining if a given permission mask has all of the requested permissions.",
+        "genericType": null,
+        "returnType": "boolean",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "...requestedPerms",
+            "dataType": "SPPermission[]",
+            "descr": ""
+          }
+        ]
+      },
+      "hasAnyPermissions": {
+        "accessModifier": "public",
+        "signature": "hasAnyPermissions(...requestedPerms: SPPermission[]): boolean",
+        "descr": "Function for determining if a given permission mask has any of the requested permissions.",
+        "genericType": null,
+        "returnType": "boolean",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "...requestedPerms",
+            "dataType": "SPPermission[]",
+            "descr": ""
+          }
+        ]
+      },
+      "hasPermission": {
+        "accessModifier": "public",
+        "signature": "hasPermission(requestedPerm: SPPermission): boolean",
+        "descr": "Function for checking if a given permission mask has the requested permission.",
+        "genericType": null,
+        "returnType": "boolean",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "requestedPerm",
+            "dataType": "SPPermission",
             "descr": ""
           }
         ]

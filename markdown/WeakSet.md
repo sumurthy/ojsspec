@@ -13,7 +13,7 @@
 |:-------------|:-------|:-----------|
 |[delete](#delete)      |  boolean |  |
 |[clear](#clear)      |  void |  |
-|[add](#add)      | [ WeakSet<T>]( WeakSet<T>.md) |  |
+|[add](#add)      | [ WeakSet<T>](WeakSet.md) |  |
 |[has](#has)      |  boolean |  |
 
 

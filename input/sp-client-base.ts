@@ -79,11 +79,13 @@ declare class CultureInfo {
   public currentUICultureName: string;
 }
 
-// @public
+/**
+ * Display mode enumeration
+ */
 enum DisplayMode {
-  // (undocumented)
+
   Edit = 2,
-  // (undocumented)
+
   Read = 1
 }
 
@@ -101,7 +103,9 @@ declare class Environment {
   public type: EnvironmentType;
 }
 
-// @public
+/**
+ * Environment type enumeration
+ */
 enum EnvironmentType {
   ClassicSharePoint,
   Local,

@@ -17,13 +17,13 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[add](#add)      | [ Set<T>]( Set<T>.md) |  |
+|[add](#add)      | [ Set<T>](Set.md) |  |
 |[clear](#clear)      |  void |  |
 |[delete](#delete)      |  boolean |  |
 |[has](#has)      |  boolean |  |
 |[entries](#entries)      |  Iterator<[T, T]> |  |
-|[keys](#keys)      | [ Iterator<T>]( Iterator<T>.md) |  |
-|[values](#values)      | [ Iterator<T>]( Iterator<T>.md) |  |
+|[keys](#keys)      | [ Iterator<T>](Iterator.md) |  |
+|[values](#values)      | [ Iterator<T>](Iterator.md) |  |
 
 
 

@@ -1,9 +1,6 @@
-<enum>
-# %enumname% enumeration
-%enumdescr%
+## %enumname% enumeration
+%description%
 
-| Option	   | Description|
+| Member	   | Description|
 |:-------------|:-------|
->|%value%      | %descr% |
-
-</enum>
+>|%member%: %value%      | %description% |

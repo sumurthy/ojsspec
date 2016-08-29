@@ -17,7 +17,7 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[new](#new)      | [ Set<T>]( Set<T>.md) |  |
+|[new](#new)      | [ Set<T>](Set.md) |  |
 
 
 

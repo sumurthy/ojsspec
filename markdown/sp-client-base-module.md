@@ -50,7 +50,6 @@
 
 | Enumeration	   | Description|
 |:-----------|:------------|
-|[DisplayMode](DisplayMode.md)     |  |
-|[EnvironmentType](EnvironmentType.md)     |  |
-|[static](static.md)     | Enumerate permissions on the Web site, list, folder, document, or list item |
+|[DisplayMode](DisplayMode.md)     | Display mode enumeration |
+|[EnvironmentType](EnvironmentType.md)     | Environment type enumeration |
 

@@ -3,23 +3,28 @@
     "descr": "",
     "values": [
       [
-        "\"audio\" \"beacon\", \"cspreport\", \"download\", \"embed\", \"eventsource\", \"favicon\", \"fetch\",",
+        "\"audio\"",
+        "",
         ""
       ],
       [
-        "\"font\" \"form\", \"frame\", \"hyperlink\", \"iframe\", \"image\", \"imageset\", \"import\",",
+        "\"font\"",
+        "",
         ""
       ],
       [
-        "\"internal\" \"location\", \"manifest\", \"object\", \"ping\", \"plugin\", \"prefetch\", \"script\",",
+        "\"internal\"",
+        "",
         ""
       ],
       [
-        "\"serviceworker\" \"sharedworker\", \"subresource\", \"style\", \"track\", \"video\", \"worker\",",
+        "\"serviceworker\"",
+        "",
         ""
       ],
       [
-        "\"xmlhttprequest\" \"xslt\"",
+        "\"xmlhttprequest\"",
+        "",
         ""
       ]
     ]
