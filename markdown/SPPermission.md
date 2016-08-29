@@ -10,8 +10,8 @@ https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|static      | public | [SPPermission](SPPermission.md) | View past versions of a list item or document |
-|value      | public | [IODataBasePermission](IODataBasePermission.md) | Returns the value of this SPPermission object |
+|`static`     | public | `[SPPermission](SPPermission.md)` | View past versions of a list item or document |
+|`value`     | public | `[IODataBasePermission](IODataBasePermission.md)` | Returns the value of this SPPermission object |
 
 
 
@@ -20,10 +20,10 @@ https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor)      | public | [SPPermission](SPPermission.md) |  |
-|[hasAllPermissions](#hasallpermissions)      | public | boolean | Function for determining if a given permission mask has all of the requested permissions |
-|[hasAnyPermissions](#hasanypermissions)      | public | boolean | Function for determining if a given permission mask has any of the requested permissions |
-|[hasPermission](#haspermission)      | public | boolean | Function for checking if a given permission mask has the requested permission |
+|`[constructor](#constructor) `     | public | `[SPPermission](SPPermission.md)` |  |
+|`[hasAllPermissions](#hasallpermissions) `     | public | `boolean` | Function for determining if a given permission mask has all of the requested permissions |
+|`[hasAnyPermissions](#hasanypermissions) `     | public | `boolean` | Function for determining if a given permission mask has any of the requested permissions |
+|`[hasPermission](#haspermission) `     | public | `boolean` | Function for checking if a given permission mask has the requested permission |
 
 
 
@@ -33,17 +33,15 @@ https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.
 
 
 ##### Signature
-constructor(value: IODataBasePermission)
 
 #### Returns
-SPPermission
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| value     | undefined | %optional% undefined |
+| `value `    | `undefined` | _%optional%_ undefined |
 
 
 ## hasAllPermissions
@@ -51,17 +49,15 @@ SPPermission
 Function for determining if a given permission mask has all of the requested permissions.
 
 ##### Signature
-hasAllPermissions(...requestedPerms: SPPermission[]): boolean
 
 #### Returns
-boolean
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| ...requestedPerms     | undefined | %optional% undefined |
+| `...requestedPerms `    | `undefined` | _%optional%_ undefined |
 
 
 ## hasAnyPermissions
@@ -69,17 +65,15 @@ boolean
 Function for determining if a given permission mask has any of the requested permissions.
 
 ##### Signature
-hasAnyPermissions(...requestedPerms: SPPermission[]): boolean
 
 #### Returns
-boolean
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| ...requestedPerms     | undefined | %optional% undefined |
+| `...requestedPerms `    | `undefined` | _%optional%_ undefined |
 
 
 ## hasPermission
@@ -87,15 +81,13 @@ boolean
 Function for checking if a given permission mask has the requested permission.
 
 ##### Signature
-hasPermission(requestedPerm: SPPermission): boolean
 
 #### Returns
-boolean
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| requestedPerm     | undefined | %optional% undefined |
+| `requestedPerm `    | `undefined` | _%optional%_ undefined |
 

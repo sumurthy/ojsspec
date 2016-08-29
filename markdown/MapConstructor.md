@@ -8,7 +8,7 @@
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|prototype:      | Map<any, any> |  |
+|`prototype:`      |` Map<any, any>` |  |
 
 
 
@@ -17,7 +17,7 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[new](#new)      |  Map<K, V> |  |
+|`[new](#new)`      | ` Map<K, V> `|  |
 
 
 
@@ -26,16 +26,14 @@
 
 
 ##### Signature
-undefined
 
 #### Returns
- Map<K, V>
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| iterable     | undefined | %optional% undefined |
-| V]>     | undefined | %optional% undefined |
+| `iterable `    | `undefined` | _%optional%_ undefined |
+| `V]> `    | `undefined` | _%optional%_ undefined |
 

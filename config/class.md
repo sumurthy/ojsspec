@@ -10,7 +10,7 @@
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
->|%name%      | %access% | %type% | %description% |
+>|`%name%`     | %access% | `%type%` | %description% |
 
 </property>
 
@@ -19,7 +19,7 @@
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
->|%name%      | %type% | %description% |
+>|`%name%`      |` %type%` | %description% |
 
 </iproperty>
 
@@ -29,7 +29,7 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
->|%name%      | %access% | %type% | %description% |
+>|`%name% `     | %access% | `%type%` | %description% |
 
 </method>
 
@@ -39,7 +39,7 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
->|%name%      | %type% | %description% |
+>|`%name%`      | `%type% `| %description% |
 
 </imethod>
 
@@ -49,7 +49,7 @@
 
 | Function	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
->|%name%      | %access% | %type% | %description% |
+>|`%name% `     | %access% | `%type%` | %description% |
 
 
 </ifunction>

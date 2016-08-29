@@ -11,10 +11,10 @@ error messages for a webpart.
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[clearError](#clearerror)      |  void | Clear the webpart error message |
-|[clearLoadingIndicator](#clearloadingindicator)      |  void | Clear the loading indicator |
-|[displayLoadingIndicator](#displayloadingindicator)      |  void | Display a loading spinner |
-|[renderError](#rendererror)      |  void | Render the provided error message in the webpart container div |
+|`[clearError](#clearerror)`      | ` void `| Clear the webpart error message |
+|`[clearLoadingIndicator](#clearloadingindicator)`      | ` void `| Clear the loading indicator |
+|`[displayLoadingIndicator](#displayloadingindicator)`      | ` void `| Display a loading spinner |
+|`[renderError](#rendererror)`      | ` void `| Render the provided error message in the webpart container div |
 
 
 
@@ -23,17 +23,15 @@ error messages for a webpart.
 Clear the webpart error message.
 
 ##### Signature
-undefined
 
 #### Returns
- void
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| domElement     | undefined | %optional% undefined |
+| `domElement `    | `undefined` | _%optional%_ undefined |
 
 
 ## clearLoadingIndicator
@@ -41,17 +39,15 @@ undefined
 Clear the loading indicator.
 
 ##### Signature
-undefined
 
 #### Returns
- void
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| domElement     | undefined | %optional% undefined |
+| `domElement `    | `undefined` | _%optional%_ undefined |
 
 
 ## displayLoadingIndicator
@@ -59,18 +55,16 @@ undefined
 Display a loading spinner.
 
 ##### Signature
-undefined
 
 #### Returns
- void
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| domElement     | undefined | %optional% undefined |
-| loadingMessage     | undefined | %optional% undefined |
+| `domElement `    | `undefined` | _%optional%_ undefined |
+| `loadingMessage `    | `undefined` | _%optional%_ undefined |
 
 
 ## renderError
@@ -78,16 +72,14 @@ undefined
 Render the provided error message in the webpart container div.
 
 ##### Signature
-undefined
 
 #### Returns
- void
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| domElement     | undefined | %optional% undefined |
-| error     | undefined | %optional% undefined |
+| `domElement `    | `undefined` | _%optional%_ undefined |
+| `error `    | `undefined` | _%optional%_ undefined |
 

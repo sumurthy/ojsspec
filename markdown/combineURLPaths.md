@@ -3,15 +3,13 @@
 Combines any number of URL paths.
 
 ##### Signature
-combineURLPaths(...url: string[]): string
 
 #### Returns
-string
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| ...url     | undefined | %optional% undefined |
+| `...url `    | `undefined` | _%optional%_ undefined |
 

@@ -8,7 +8,7 @@ Represents an OData SP.ChangeToken object. For more information about this objec
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|StringValue:      | string |  |
+|`StringValue:`      |` string` |  |
 
 
 

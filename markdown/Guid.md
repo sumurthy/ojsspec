@@ -17,9 +17,9 @@ Math.random() function and may be not be suitable for some applications.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[equals](#equals)      | public | boolean | represent the same value |
-|[static](#static)      | public | [Guid](Guid.md) | Trys to construct a new Guid instance using guid string |
-|[toString](#tostring)      | public | string | Example: 'd5369f3b-bd7a-412a-9c0f-7f0650bb5489' |
+|`[equals](#equals) `     | public | `boolean` | represent the same value |
+|`[static](#static) `     | public | `[Guid](Guid.md)` | Trys to construct a new Guid instance using guid string |
+|`[toString](#tostring) `     | public | `string` | Example: 'd5369f3b-bd7a-412a-9c0f-7f0650bb5489' |
 
 
 
@@ -29,17 +29,15 @@ Math.random() function and may be not be suitable for some applications.
 represent the same value
 
 ##### Signature
-equals(guid: Guid): boolean
 
 #### Returns
-boolean
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| guid     | undefined | %optional% undefined |
+| `guid `    | `undefined` | _%optional%_ undefined |
 
 
 ## static
@@ -50,17 +48,15 @@ RFC 4122, tryParse will return undefined.
 
 
 ##### Signature
-static tryParse(guid: string): Guid
 
 #### Returns
-Guid
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| guid     | undefined | %optional% undefined |
+| `guid `    | `undefined` | _%optional%_ undefined |
 
 
 ## toString
@@ -68,10 +64,8 @@ Guid
 Example: 'd5369f3b-bd7a-412a-9c0f-7f0650bb5489'
 
 ##### Signature
-toString(): string
 
 #### Returns
-string
 
 #### Parameters
 None

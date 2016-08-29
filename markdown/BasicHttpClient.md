@@ -9,7 +9,7 @@ enhancements.
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|serviceScope      | protected | [ServiceScope](ServiceScope.md) | Calls fetch(), but sets the method to 'POST' |
+|`serviceScope`     | protected | `[ServiceScope](ServiceScope.md)` | Calls fetch(), but sets the method to 'POST' |
 
 
 
@@ -18,11 +18,11 @@ enhancements.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor)      | public | [BasicHttpClient](BasicHttpClient.md) |  |
-|[fetch](#fetch)      | public | Promise<Response> | Performs a REST service call |
-|[fetchCore](#fetchcore)      | protected | Promise<Response> | Performs a REST service call |
-|[get](#get)      | public | Promise<Response> | Calls fetch(), but sets the method to 'GET' |
-|[post](#post)      | public | Promise<Response> | Calls fetch(), but sets the method to 'POST' |
+|`[constructor](#constructor) `     | public | `[BasicHttpClient](BasicHttpClient.md)` |  |
+|`[fetch](#fetch) `     | public | `Promise<Response>` | Performs a REST service call |
+|`[fetchCore](#fetchcore) `     | protected | `Promise<Response>` | Performs a REST service call |
+|`[get](#get) `     | public | `Promise<Response>` | Calls fetch(), but sets the method to 'GET' |
+|`[post](#post) `     | public | `Promise<Response>` | Calls fetch(), but sets the method to 'POST' |
 
 
 
@@ -32,17 +32,15 @@ enhancements.
 
 
 ##### Signature
-constructor(serviceScope: ServiceScope)
 
 #### Returns
-BasicHttpClient
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| serviceScope     | undefined | %optional% undefined |
+| `serviceScope `    | `undefined` | _%optional%_ undefined |
 
 
 ## fetch
@@ -53,18 +51,16 @@ are essentially the same as the WHATWG API standard that is documented here:
 https://fetch.spec.whatwg.org/
 
 ##### Signature
-fetch(url: string, options: IBasicHttpClientOptions): Promise<Response>
 
 #### Returns
-Promise<Response>
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| url     | undefined | %optional% undefined |
-| options     | undefined | %optional% undefined |
+| `url `    | `undefined` | _%optional%_ undefined |
+| `options `    | `undefined` | _%optional%_ undefined |
 
 
 ## fetchCore
@@ -75,17 +71,15 @@ are essentially the same as the WHATWG API standard that is documented here:
 https://fetch.spec.whatwg.org/
 
 ##### Signature
-fetchCore(request: Request): Promise<Response>
 
 #### Returns
-Promise<Response>
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| request     | undefined | %optional% undefined |
+| `request `    | `undefined` | _%optional%_ undefined |
 
 
 ## get
@@ -93,18 +87,16 @@ Promise<Response>
 Calls fetch(), but sets the method to 'GET'.
 
 ##### Signature
-get(url: string, options?: IBasicHttpClientOptions): Promise<Response>
 
 #### Returns
-Promise<Response>
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| url     | undefined | %optional% undefined |
-| options?     | undefined | %optional% undefined |
+| `url `    | `undefined` | _%optional%_ undefined |
+| `options? `    | `undefined` | _%optional%_ undefined |
 
 
 ## post
@@ -112,16 +104,14 @@ Promise<Response>
 Calls fetch(), but sets the method to 'POST'.
 
 ##### Signature
-post(url: string, options: IBasicHttpClientOptions): Promise<Response>
 
 #### Returns
-Promise<Response>
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| url     | undefined | %optional% undefined |
-| options     | undefined | %optional% undefined |
+| `url `    | `undefined` | _%optional%_ undefined |
+| `options `    | `undefined` | _%optional%_ undefined |
 

@@ -12,7 +12,7 @@
 
 | Function	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|forEach      | undefined |  |  |
+|`forEach `     | undefined | `` |  |
 
 
 
@@ -21,15 +21,13 @@
 
 
 ##### Signature
-undefined
 
 #### Returns
-void): void
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| callbackfn     | undefined | %optional% undefined |
+| `callbackfn `    | `undefined` | _%optional%_ undefined |
 

@@ -8,8 +8,8 @@ Web part - PropertyPane data contract.
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|properties:      | any | Property bag from the web part |
-|settings:      | [IPropertyPaneSettings](IPropertyPaneSettings.md) | Web part configuration settings |
+|`properties:`      |` any` | Property bag from the web part |
+|`settings:`      |` [IPropertyPaneSettings](IPropertyPaneSettings.md)` | Web part configuration settings |
 
 
 
@@ -19,12 +19,12 @@ Web part - PropertyPane data contract.
 
 | Function	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|onClose:      | undefined |  | Event callback for 'Close' click |
-|onConfigurationComplete:      | undefined |  | Event callback fired when the configuration is completed for the web part |
-|onLostFocus:      | undefined |  | Event callback fired when the focus is handed back to the web part |
-|onPropertyChange:      | undefined |  | Notification event fired when the property has already been validated and modified |
-|onRendered:      | undefined |  | Event callback fired after the PropertyPane is rendered |
-|onSave:      | undefined |  | Event callback for 'Apply' click |
+|`onClose: `     | undefined | `` | Event callback for 'Close' click |
+|`onConfigurationComplete: `     | undefined | `` | Event callback fired when the configuration is completed for the web part |
+|`onLostFocus: `     | undefined | `` | Event callback fired when the focus is handed back to the web part |
+|`onPropertyChange: `     | undefined | `` | Notification event fired when the property has already been validated and modified |
+|`onRendered: `     | undefined | `` | Event callback fired after the PropertyPane is rendered |
+|`onSave: `     | undefined | `` | Event callback for 'Apply' click |
 
 
 
@@ -33,10 +33,8 @@ Web part - PropertyPane data contract.
 Event callback for 'Close' click.
 
 ##### Signature
-undefined
 
 #### Returns
-void
 
 #### Parameters
 None
@@ -47,10 +45,8 @@ None
 Event callback fired when the configuration is completed for the web part.
 
 ##### Signature
-undefined
 
 #### Returns
-void
 
 #### Parameters
 None
@@ -61,10 +57,8 @@ None
 Event callback fired when the focus is handed back to the web part
 
 ##### Signature
-undefined
 
 #### Returns
-void
 
 #### Parameters
 None
@@ -75,18 +69,16 @@ None
 Notification event fired when the property has already been validated and modified.
 
 ##### Signature
-undefined
 
 #### Returns
-void
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| propertyName     | undefined | %optional% undefined |
-| newValue     | undefined | %optional% undefined |
+| `propertyName `    | `undefined` | _%optional%_ undefined |
+| `newValue `    | `undefined` | _%optional%_ undefined |
 
 
 ## onRendered:
@@ -94,10 +86,8 @@ void
 Event callback fired after the PropertyPane is rendered.
 
 ##### Signature
-undefined
 
 #### Returns
-void
 
 #### Parameters
 None
@@ -108,10 +98,8 @@ None
 Event callback for 'Apply' click.
 
 ##### Signature
-undefined
 
 #### Returns
-void
 
 #### Parameters
 None

@@ -15,12 +15,12 @@ class instead.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor)      | public | [HttpClient](HttpClient.md) |  |
-|[beginBatch](#beginbatch)      | public | [ODataBatch](ODataBatch.md) | Begins an ODATA batch, which allows multiple REST queries to be bundled into  a single web request |
-|[fetch](#fetch)      | public | Promise<Response> | Generally, the parameters and semantics for HttpClient |
-|[get](#get)      | public | Promise<Response> | Calls fetch(), but sets the method to 'GET' |
-|[static](#static)      | public | string | This uses a heuristic to guess the SPWeb URL associated with the provided  REST URL |
-|[post](#post)      | public | Promise<Response> | Calls fetch(), but sets the method to 'POST' |
+|`[constructor](#constructor) `     | public | `[HttpClient](HttpClient.md)` |  |
+|`[beginBatch](#beginbatch) `     | public | `[ODataBatch](ODataBatch.md)` | Begins an ODATA batch, which allows multiple REST queries to be bundled into  a single web request |
+|`[fetch](#fetch) `     | public | `Promise<Response>` | Generally, the parameters and semantics for HttpClient |
+|`[get](#get) `     | public | `Promise<Response>` | Calls fetch(), but sets the method to 'GET' |
+|`[static](#static) `     | public | `string` | This uses a heuristic to guess the SPWeb URL associated with the provided  REST URL |
+|`[post](#post) `     | public | `Promise<Response>` | Calls fetch(), but sets the method to 'POST' |
 
 
 
@@ -30,17 +30,15 @@ class instead.
 
 
 ##### Signature
-constructor(serviceScope: ServiceScope)
 
 #### Returns
-HttpClient
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| serviceScope     | undefined | %optional% undefined |
+| `serviceScope `    | `undefined` | _%optional%_ undefined |
 
 
 ## beginBatch
@@ -49,17 +47,15 @@ Begins an ODATA batch, which allows multiple REST queries to be bundled into
 a single web request.
 
 ##### Signature
-beginBatch(batchOptions?: IODataBatchOptions): ODataBatch
 
 #### Returns
-ODataBatch
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| batchOptions?     | undefined | %optional% undefined |
+| `batchOptions? `    | `undefined` | _%optional%_ undefined |
 
 
 ## fetch
@@ -85,18 +81,16 @@ to specify it explicitly.
 
 
 ##### Signature
-fetch(url: string, options: IHttpClientOptions): Promise<Response>
 
 #### Returns
-Promise<Response>
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| url     | undefined | %optional% undefined |
-| options     | undefined | %optional% undefined |
+| `url `    | `undefined` | _%optional%_ undefined |
+| `options `    | `undefined` | _%optional%_ undefined |
 
 
 ## get
@@ -104,18 +98,16 @@ Promise<Response>
 Calls fetch(), but sets the method to 'GET'.
 
 ##### Signature
-get(url: string, options?: IHttpClientOptions): Promise<Response>
 
 #### Returns
-Promise<Response>
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| url     | undefined | %optional% undefined |
-| options?     | undefined | %optional% undefined |
+| `url `    | `undefined` | _%optional%_ undefined |
+| `options? `    | `undefined` | _%optional%_ undefined |
 
 
 ## static
@@ -130,17 +122,15 @@ is "http://example.com/_layouts/service", the returned URL would be
 "http://example.com".
 
 ##### Signature
-static getWebUrlFromRequestUrl(requestUrl: string): string
 
 #### Returns
-string
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| requestUrl     | undefined | %optional% undefined |
+| `requestUrl `    | `undefined` | _%optional%_ undefined |
 
 
 ## post
@@ -148,16 +138,14 @@ string
 Calls fetch(), but sets the method to 'POST'.
 
 ##### Signature
-post(url: string, options: IHttpClientOptions): Promise<Response>
 
 #### Returns
-Promise<Response>
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| url     | undefined | %optional% undefined |
-| options     | undefined | %optional% undefined |
+| `url `    | `undefined` | _%optional%_ undefined |
+| `options `    | `undefined` | _%optional%_ undefined |
 

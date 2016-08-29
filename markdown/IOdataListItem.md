@@ -10,9 +10,9 @@ https://msdn.microsoft.com/en-us/library/office/jj860569.aspx
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|ID:      | number |  |
-|Title:      | string |  |
-|UniqueId:      | string | Example: "/Guid(d5369f3b-bd7a-412a-9c0f-7f0650bb5489)/" |
+|`ID:`      |` number` |  |
+|`Title:`      |` string` |  |
+|`UniqueId:`      |` string` | Example: "/Guid(d5369f3b-bd7a-412a-9c0f-7f0650bb5489)/" |
 
 
 

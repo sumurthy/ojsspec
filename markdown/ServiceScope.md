@@ -46,7 +46,7 @@ serviceScope.whenFinished().
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|createAndProvide      | public | ServiceKey<T>, | This is a shorthand function that its equivalent to constructing a new instance of the  simpleServiceClass, then registering it by calling ServiceScope |
+|`createAndProvide`     | public | `ServiceKey<T>,` | This is a shorthand function that its equivalent to constructing a new instance of the  simpleServiceClass, then registering it by calling ServiceScope |
 
 
 
@@ -55,15 +55,15 @@ serviceScope.whenFinished().
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor)      | public | [ServiceScope](ServiceScope.md) | PRIVATE CONSTRUCTOR - DO NOT CALL THIS FROM YOUR OWN CODE |
-|[consume](#consume)      | public | T | Components should call this function to "consume" a dependency, i |
-|[createDefaultAndProvide](#createdefaultandprovide)      | public | T | This is a shorthand function that constructs the default implementation of the specified  serviceKey, and then registers it by calling ServiceScope |
-|[finish](#finish)      | public | void | When a ServiceScope is first started, it is in an "unfinished" state where provide() is  allowed but consume() is not allowed |
-|[getParent](#getparent)      | public | [ServiceScope](ServiceScope.md) | Returns the parent of the current ServiceScope, or undefined if this is a root scope |
-|[provide](#provide)      | public | T | ServiceScope |
-|[startNewChild](#startnewchild)      | public | [ServiceScope](ServiceScope.md) | Constructs a new ServiceScope that is a child of the current scope |
-|[static](#static)      | public | [ServiceScope](ServiceScope.md) | Create a new root-level ServiceScope |
-|[whenFinished](#whenfinished)      | public | void | It is an error to call ServiceScope |
+|`[constructor](#constructor) `     | public | `[ServiceScope](ServiceScope.md)` | PRIVATE CONSTRUCTOR - DO NOT CALL THIS FROM YOUR OWN CODE |
+|`[consume](#consume) `     | public | `T` | Components should call this function to "consume" a dependency, i |
+|`[createDefaultAndProvide](#createdefaultandprovide) `     | public | `T` | This is a shorthand function that constructs the default implementation of the specified  serviceKey, and then registers it by calling ServiceScope |
+|`[finish](#finish) `     | public | `void` | When a ServiceScope is first started, it is in an "unfinished" state where provide() is  allowed but consume() is not allowed |
+|`[getParent](#getparent) `     | public | `[ServiceScope](ServiceScope.md)` | Returns the parent of the current ServiceScope, or undefined if this is a root scope |
+|`[provide](#provide) `     | public | `T` | ServiceScope |
+|`[startNewChild](#startnewchild) `     | public | `[ServiceScope](ServiceScope.md)` | Constructs a new ServiceScope that is a child of the current scope |
+|`[static](#static) `     | public | `[ServiceScope](ServiceScope.md)` | Create a new root-level ServiceScope |
+|`[whenFinished](#whenfinished) `     | public | `void` | It is an error to call ServiceScope |
 
 
 
@@ -73,17 +73,15 @@ serviceScope.whenFinished().
 PRIVATE CONSTRUCTOR - DO NOT CALL THIS FROM YOUR OWN CODE.
 
 ##### Signature
-constructor(parent: ServiceScope)
 
 #### Returns
-ServiceScope
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| parent     | undefined | %optional% undefined |
+| `parent `    | `undefined` | _%optional%_ undefined |
 
 
 ## consume
@@ -93,17 +91,15 @@ and return the registered service instance. If the instance cannot be found, the
 instance will be autocreated and registered with the root ServiceScope.
 
 ##### Signature
-consume < T >(serviceKey: ServiceKey<T>): T
 
 #### Returns
-T
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| serviceKey     | undefined | %optional% undefined |
+| `serviceKey `    | `undefined` | _%optional%_ undefined |
 
 
 ## createDefaultAndProvide
@@ -112,17 +108,15 @@ This is a shorthand function that constructs the default implementation of the s
 serviceKey, and then registers it by calling ServiceScope.provide().
 
 ##### Signature
-createDefaultAndProvide < T >(serviceKey: ServiceKey<T>): T
 
 #### Returns
-T
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| serviceKey     | undefined | %optional% undefined |
+| `serviceKey `    | `undefined` | _%optional%_ undefined |
 
 
 ## finish
@@ -136,10 +130,8 @@ with A2, then a subsequent call to Scope2.consume() might return a different res
 the previous call, which would be very confusing for developers.
 
 ##### Signature
-finish(): void
 
 #### Returns
-void
 
 #### Parameters
 None
@@ -150,10 +142,8 @@ None
 Returns the parent of the current ServiceScope, or undefined if this is a root scope.
 
 ##### Signature
-getParent(): ServiceScope
 
 #### Returns
-ServiceScope
 
 #### Parameters
 None
@@ -166,18 +156,16 @@ for the current scope. It may only be used when the ServiceScope is in an "unfin
 state, i.e. before finish() has been called.
 
 ##### Signature
-provide < T >(serviceKey: ServiceKey<T>, service: T): T
 
 #### Returns
-T
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| serviceKey     | undefined | %optional% undefined |
-| service     | undefined | %optional% undefined |
+| `serviceKey `    | `undefined` | _%optional%_ undefined |
+| `service `    | `undefined` | _%optional%_ undefined |
 
 
 ## startNewChild
@@ -187,10 +175,8 @@ that are not explicitly provided by the child scope, the parent hierarchy will b
 consulted.
 
 ##### Signature
-startNewChild(): ServiceScope
 
 #### Returns
-ServiceScope
 
 #### Parameters
 None
@@ -202,10 +188,8 @@ Create a new root-level ServiceScope. Only root-level scopes have the ability to
 default implementations of ServiceKeys.
 
 ##### Signature
-static startNewRoot(): ServiceScope
 
 #### Returns
-ServiceScope
 
 #### Parameters
 None
@@ -220,15 +204,13 @@ finished, then the callback will be executed immediately; otherwise, it will be 
 later when the scope is finished.
 
 ##### Signature
-whenFinished(callback: () => void): void
 
 #### Returns
-void
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| callback     | undefined | %optional% undefined |
+| `callback `    | `undefined` | _%optional%_ undefined |
 

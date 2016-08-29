@@ -13,7 +13,7 @@ that might impact performance.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[static](#static)      | public | void | Throws an exception if the specified value is not true |
+|`[static](#static) `     | public | `void` | Throws an exception if the specified value is not true |
 
 
 
@@ -23,16 +23,14 @@ that might impact performance.
 Throws an exception if the specified value is not true.
 
 ##### Signature
-static isTrue(value: boolean, variableName: string): void
 
 #### Returns
-void
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| value     | undefined | %optional% undefined |
-| variableName     | undefined | %optional% undefined |
+| `value `    | `undefined` | _%optional%_ undefined |
+| `variableName `    | `undefined` | _%optional%_ undefined |
 

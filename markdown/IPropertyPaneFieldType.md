@@ -1,4 +1,4 @@
-# IPropertyPaneFieldType enumeration
+## IPropertyPaneFieldType enumeration
 
 
 | Member	   | Description|

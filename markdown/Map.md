@@ -8,7 +8,7 @@
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|size:      | number |  |
+|`size:`      |` number` |  |
 
 
 
@@ -17,14 +17,14 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[clear](#clear)      |  void |  |
-|[delete](#delete)      |  boolean |  |
-|[get](#get)      |  V |  |
-|[has](#has)      |  boolean |  |
-|[set](#set)      |  Map<K, V> |  |
-|[entries](#entries)      |  Iterator<[K, V]> |  |
-|[keys](#keys)      |  Iterator<K> |  |
-|[values](#values)      |  Iterator<V> |  |
+|`[clear](#clear)`      | ` void `|  |
+|`[delete](#delete)`      | ` boolean `|  |
+|`[get](#get)`      | ` V `|  |
+|`[has](#has)`      | ` boolean `|  |
+|`[set](#set)`      | ` Map<K, V> `|  |
+|`[entries](#entries)`      | ` Iterator<[K, V]> `|  |
+|`[keys](#keys)`      | ` Iterator<K> `|  |
+|`[values](#values)`      | ` Iterator<V> `|  |
 
 
 
@@ -32,7 +32,7 @@
 
 | Function	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|forEach      | undefined |  |  |
+|`forEach `     | undefined | `` |  |
 
 
 
@@ -41,10 +41,8 @@
 
 
 ##### Signature
-undefined
 
 #### Returns
- void
 
 #### Parameters
 None
@@ -55,17 +53,15 @@ None
 
 
 ##### Signature
-undefined
 
 #### Returns
- boolean
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| key     | undefined | %optional% undefined |
+| `key `    | `undefined` | _%optional%_ undefined |
 
 
 ## get
@@ -73,17 +69,15 @@ undefined
 
 
 ##### Signature
-undefined
 
 #### Returns
- V
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| key     | undefined | %optional% undefined |
+| `key `    | `undefined` | _%optional%_ undefined |
 
 
 ## has
@@ -91,17 +85,15 @@ undefined
 
 
 ##### Signature
-undefined
 
 #### Returns
- boolean
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| key     | undefined | %optional% undefined |
+| `key `    | `undefined` | _%optional%_ undefined |
 
 
 ## set
@@ -109,18 +101,16 @@ undefined
 
 
 ##### Signature
-undefined
 
 #### Returns
- Map<K, V>
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| key     | undefined | %optional% undefined |
-| value?     | undefined | %optional% undefined |
+| `key `    | `undefined` | _%optional%_ undefined |
+| `value? `    | `undefined` | _%optional%_ undefined |
 
 
 ## entries
@@ -128,10 +118,8 @@ undefined
 
 
 ##### Signature
-undefined
 
 #### Returns
- Iterator<[K, V]>
 
 #### Parameters
 None
@@ -142,10 +130,8 @@ None
 
 
 ##### Signature
-undefined
 
 #### Returns
- Iterator<K>
 
 #### Parameters
 None
@@ -156,10 +142,8 @@ None
 
 
 ##### Signature
-undefined
 
 #### Returns
- Iterator<V>
 
 #### Parameters
 None
@@ -170,18 +154,16 @@ None
 
 
 ##### Signature
-undefined
 
 #### Returns
-void, thisArg?: any): void
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| callbackfn     | undefined | %optional% undefined |
-| index     | undefined | %optional% undefined |
-| map     | undefined | %optional% undefined |
-| V>     | undefined | %optional% undefined |
+| `callbackfn `    | `undefined` | _%optional%_ undefined |
+| `index `    | `undefined` | _%optional%_ undefined |
+| `map `    | `undefined` | _%optional%_ undefined |
+| `V> `    | `undefined` | _%optional%_ undefined |
 

@@ -8,7 +8,7 @@
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|prototype:      | WeakMap<any, any> |  |
+|`prototype:`      |` WeakMap<any, any>` |  |
 
 
 
@@ -17,7 +17,7 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[new](#new)      |  WeakMap<K, V> |  |
+|`[new](#new)`      | ` WeakMap<K, V> `|  |
 
 
 
@@ -26,16 +26,14 @@
 
 
 ##### Signature
-undefined
 
 #### Returns
- WeakMap<K, V>
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| iterable     | undefined | %optional% undefined |
-| V]>     | undefined | %optional% undefined |
+| `iterable `    | `undefined` | _%optional%_ undefined |
+| `V]> `    | `undefined` | _%optional%_ undefined |
 

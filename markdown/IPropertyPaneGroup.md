@@ -8,8 +8,8 @@ PropertyPane group. Group is part of the PropertyPanePage.
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|groupFields:      | IPropertyPaneField<any>[] | List of PropertyPane fields |
-|groupName      | string | Display name for the group |
+|`groupFields:`      |` IPropertyPaneField<any>[]` | List of PropertyPane fields |
+|`groupName`      |` string` | Display name for the group |
 
 
 

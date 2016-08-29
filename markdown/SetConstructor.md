@@ -8,7 +8,7 @@
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|prototype:      | Set<any> |  |
+|`prototype:`      |` Set<any>` |  |
 
 
 
@@ -17,7 +17,7 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[new](#new)      | [ Set<T>](Set.md) |  |
+|`[new](#new)`      | `[ Set<T>](Set.md) `|  |
 
 
 
@@ -26,15 +26,13 @@
 
 
 ##### Signature
-undefined
 
 #### Returns
- Set<T>
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| iterable     | undefined | %optional% undefined |
+| `iterable `    | `undefined` | _%optional%_ undefined |
 

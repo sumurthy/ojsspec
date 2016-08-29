@@ -17,16 +17,16 @@ Please refer to the documentation of the individual APIs to make the right decis
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|accessibleTitle      | protected | string | This property points to the accessible title of web part made available to screen readers |
-|context      | protected | [IWebPartContext](IWebPartContext.md) | This property is a pointer to the web part context |
-|disableReactivePropertyChanges      | protected | boolean | This property is used to change the web part's PropertyPane interaction from Reactive to NonReactive |
-|displayMode      | protected | DisplayMode | This property is the current display mode of the web part |
-|domElement      | protected | HTMLElement | This property is a pointer to the root DOM element of the web part |
-|previewImageUrl      | protected | string | This property points to the preview image for the web part |
-|properties      | protected | TProperties | This property is the pointer to the custom property bag of the web part |
-|propertyPaneSettings      | protected | [IPropertyPaneSettings](IPropertyPaneSettings.md) | This property is the pointer to the web part configuration settings |
-|renderedFromDefaultProperties      | protected | boolean | This property indicates whether the web part was rendered from the default properties, as opposed to using  serialized state from the last time that the web part was saved |
-|renderedOnce      | protected | boolean | This property indicates whether the web part has been rendered once or not |
+|`accessibleTitle`     | protected | `string` | This property points to the accessible title of web part made available to screen readers |
+|`context`     | protected | `[IWebPartContext](IWebPartContext.md)` | This property is a pointer to the web part context |
+|`disableReactivePropertyChanges`     | protected | `boolean` | This property is used to change the web part's PropertyPane interaction from Reactive to NonReactive |
+|`displayMode`     | protected | `DisplayMode` | This property is the current display mode of the web part |
+|`domElement`     | protected | `HTMLElement` | This property is a pointer to the root DOM element of the web part |
+|`previewImageUrl`     | protected | `string` | This property points to the preview image for the web part |
+|`properties`     | protected | `TProperties` | This property is the pointer to the custom property bag of the web part |
+|`propertyPaneSettings`     | protected | `[IPropertyPaneSettings](IPropertyPaneSettings.md)` | This property is the pointer to the web part configuration settings |
+|`renderedFromDefaultProperties`     | protected | `boolean` | This property indicates whether the web part was rendered from the default properties, as opposed to using  serialized state from the last time that the web part was saved |
+|`renderedOnce`     | protected | `boolean` | This property indicates whether the web part has been rendered once or not |
 
 
 
@@ -35,20 +35,20 @@ Please refer to the documentation of the individual APIs to make the right decis
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor)      | public | [BaseClientSideWebPart](BaseClientSideWebPart.md) | e |
-|[clearError](#clearerror)      | protected | void | This API should be used to clear the error message from the web part display area |
-|[configureStart](#configurestart)      | protected | void | if it is not already open |
-|[deserialize](#deserialize)      | protected | TProperties | This API is called once during the lifetime of the web part during the intial render and just before the onInit  API call |
-|[dispose](#dispose)      | protected | void | This API is called at the end of the web part lifecycle |
-|[onBeforeSerialize](#onbeforeserialize)      | protected | [IHtmlProperties](IHtmlProperties.md) | the documentation of IHtmlProperties interface for more details |
-|[onDisplayModeChanged](#ondisplaymodechanged)      | protected | void | This API is called when the display mode of a web part is changed |
-|[onInit](#oninit)      | protected | Promise<T> | This API should be overridden to perform long running operations e |
-|[onPropertyChange](#onpropertychange)      | protected | void | This API is invoked on property changes in the PropertyPane when the PropertyPane is being used in Reactive mode |
-|[onPropertyConfigurationComplete](#onpropertyconfigurationcomplete)      | protected | void | This API is called when the current web part configuration process is completed |
-|[onPropertyPaneRendered](#onpropertypanerendered)      | protected | void | This API is involed when the PropertyPane is rendered |
-|[onPropertyPaneSave](#onpropertypanesave)      | protected | void | this API is invoked when the the changes are applied on the PropertyPane when the PropertyPane is used in  Non-Reactive mode |
-|[render](#render)      | public | void | This API is called to render the web part |
-|[renderError](#rendererror)      | protected | void | This API should be used to render an error message in the web part display area |
+|`[constructor](#constructor) `     | public | `[BaseClientSideWebPart](BaseClientSideWebPart.md)` | e |
+|`[clearError](#clearerror) `     | protected | `void` | This API should be used to clear the error message from the web part display area |
+|`[configureStart](#configurestart) `     | protected | `void` | if it is not already open |
+|`[deserialize](#deserialize) `     | protected | `TProperties` | This API is called once during the lifetime of the web part during the intial render and just before the onInit  API call |
+|`[dispose](#dispose) `     | protected | `void` | This API is called at the end of the web part lifecycle |
+|`[onBeforeSerialize](#onbeforeserialize) `     | protected | `[IHtmlProperties](IHtmlProperties.md)` | the documentation of IHtmlProperties interface for more details |
+|`[onDisplayModeChanged](#ondisplaymodechanged) `     | protected | `void` | This API is called when the display mode of a web part is changed |
+|`[onInit](#oninit) `     | protected | `Promise<T>` | This API should be overridden to perform long running operations e |
+|`[onPropertyChange](#onpropertychange) `     | protected | `void` | This API is invoked on property changes in the PropertyPane when the PropertyPane is being used in Reactive mode |
+|`[onPropertyConfigurationComplete](#onpropertyconfigurationcomplete) `     | protected | `void` | This API is called when the current web part configuration process is completed |
+|`[onPropertyPaneRendered](#onpropertypanerendered) `     | protected | `void` | This API is involed when the PropertyPane is rendered |
+|`[onPropertyPaneSave](#onpropertypanesave) `     | protected | `void` | this API is invoked when the the changes are applied on the PropertyPane when the PropertyPane is used in  Non-Reactive mode |
+|`[render](#render) `     | public | `void` | This API is called to render the web part |
+|`[renderError](#rendererror) `     | protected | `void` | This API should be used to render an error message in the web part display area |
 
 
 
@@ -63,17 +63,15 @@ super(context);
 }
 
 ##### Signature
-constructor(ctx: IWebPartContext)
 
 #### Returns
-BaseClientSideWebPart
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| ctx     | undefined | %optional% undefined |
+| `ctx `    | `undefined` | _%optional%_ undefined |
 
 
 ## clearError
@@ -81,10 +79,8 @@ BaseClientSideWebPart
 This API should be used to clear the error message from the web part display area.
 
 ##### Signature
-clearError(): void
 
 #### Returns
-void
 
 #### Parameters
 None
@@ -95,17 +91,15 @@ None
 if it is not already open.
 
 ##### Signature
-configureStart(refreshOnly?: boolean): void
 
 #### Returns
-void
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| refreshOnly?     | undefined | %optional% undefined |
+| `refreshOnly? `    | `undefined` | _%optional%_ undefined |
 
 
 ## deserialize
@@ -119,17 +113,15 @@ can be used to make decisions on how to re-structure the data.
 
 
 ##### Signature
-deserialize(data: IWebPartData): TProperties
 
 #### Returns
-TProperties
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| data     | undefined | %optional% undefined |
+| `data `    | `undefined` | _%optional%_ undefined |
 
 
 ## dispose
@@ -138,10 +130,8 @@ This API is called at the end of the web part lifecycle. It should be overridden
 resources that the web part is holding onto.
 
 ##### Signature
-dispose(): void
 
 #### Returns
-void
 
 #### Parameters
 None
@@ -152,10 +142,8 @@ None
 the documentation of IHtmlProperties interface for more details.
 
 ##### Signature
-onBeforeSerialize(): IHtmlProperties
 
 #### Returns
-IHtmlProperties
 
 #### Parameters
 None
@@ -170,17 +158,15 @@ to the web part DOM to switch its display mode.
 
 
 ##### Signature
-onDisplayModeChanged(oldDisplayMode: DisplayMode): void
 
 #### Returns
-void
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| oldDisplayMode     | undefined | %optional% undefined |
+| `oldDisplayMode `    | `undefined` | _%optional%_ undefined |
 
 
 ## onInit
@@ -190,10 +176,8 @@ the initial rendering of the web part. The loading indicator is displayed during
 This API is called only once during the lifecycle of a web part.
 
 ##### Signature
-onInit < T >(): Promise<T>
 
 #### Returns
-Promise<T>
 
 #### Parameters
 None
@@ -207,18 +191,16 @@ invokes the web part host's setDirty API.
 
 
 ##### Signature
-onPropertyChange(propertyPath: string, newValue: any): void
 
 #### Returns
-void
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| propertyPath     | undefined | %optional% undefined |
-| newValue     | undefined | %optional% undefined |
+| `propertyPath `    | `undefined` | _%optional%_ undefined |
+| `newValue `    | `undefined` | _%optional%_ undefined |
 
 
 ## onPropertyConfigurationComplete
@@ -229,10 +211,8 @@ for the previously selected web part.
 
 
 ##### Signature
-onPropertyConfigurationComplete(): void
 
 #### Returns
-void
 
 #### Parameters
 None
@@ -243,10 +223,8 @@ None
 This API is involed when the PropertyPane is rendered.
 
 ##### Signature
-onPropertyPaneRendered(): void
 
 #### Returns
-void
 
 #### Parameters
 None
@@ -258,10 +236,8 @@ this API is invoked when the the changes are applied on the PropertyPane when th
 Non-Reactive mode. This API is not invoked when the PropertyPane is used in Reactive mode.
 
 ##### Signature
-onPropertyPaneSave(): void
 
 #### Returns
-void
 
 #### Parameters
 None
@@ -273,10 +249,8 @@ This API is called to render the web part. There is no base implementation of th
 required to override this API.
 
 ##### Signature
-render(): void
 
 #### Returns
-void
 
 #### Parameters
 None
@@ -289,15 +263,13 @@ using the trace logger.
 
 
 ##### Signature
-renderError(error: Error): void
 
 #### Returns
-void
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| error     | undefined | %optional% undefined |
+| `error `    | `undefined` | _%optional%_ undefined |
 

@@ -4,17 +4,15 @@ Make a new promise from the thenable.
 A thenable is promise-like in as far as it has a "then" method.
 
 ##### Signature
-resolve<R>(value?: R | Thenable<R>): Promise<R>
 
 #### Returns
-Promise<R>
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| value?     | undefined | %optional% undefined |
+| `value? `    | `undefined` | _%optional%_ undefined |
 
 
 ## reject
@@ -22,17 +20,15 @@ Promise<R>
 Make a promise that rejects to obj. For consistency and debugging (eg stack traces), obj should be an instanceof Error
 
 ##### Signature
-reject(error: any): Promise<any>
 
 #### Returns
-Promise<any>
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| error     | undefined | %optional% undefined |
+| `error `    | `undefined` | _%optional%_ undefined |
 
 
 ## all<R>
@@ -42,15 +38,13 @@ the array passed to all can be a mixture of promise-like objects and other objec
 The fulfillment value is an array (in order) of fulfillment values. The rejection value is the first rejection value.
 
 ##### Signature
-all<R>(promises: (R | Thenable<R>)[]): Promise<R[]>
 
 #### Returns
-Promise<R[]>
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| promises     | undefined | %optional% undefined |
+| `promises `    | `undefined` | _%optional%_ undefined |
 

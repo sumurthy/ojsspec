@@ -8,17 +8,17 @@ Web part context interface.
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|basicHttpClient:      | [BasicHttpClient](BasicHttpClient.md) | BasicHttpClient instance scoped to this web part |
-|domElement:      | HTMLElement | Reference to the DOM element that hosts this client side component |
-|environment:      | [Environment](Environment.md) | Environment that webparts are hosted in |
-|host:      | [IWebPartHost](IWebPartHost.md) | Web part host |
-|httpClient:      | [HttpClient](HttpClient.md) | HttpClient instance scoped to this web part |
-|instanceId:      | string | Web part instance id |
-|manifest:      | TManifest | Client side component manifest |
-|pageContext:      | [PageContext](PageContext.md) | SharePoint page context |
-|serviceScope:      | [ServiceScope](ServiceScope.md) | Service scope instance that is scoped to this particular web part |
-|statusRenderer:      | [IClientSideWebPartStatusRenderer](IClientSideWebPartStatusRenderer.md) | Web part status renderer |
-|webPartTag:      | string | Web part tag to be used for logging and telemetry |
+|`basicHttpClient:`      |` [BasicHttpClient](BasicHttpClient.md)` | BasicHttpClient instance scoped to this web part |
+|`domElement:`      |` HTMLElement` | Reference to the DOM element that hosts this client side component |
+|`environment:`      |` [Environment](Environment.md)` | Environment that webparts are hosted in |
+|`host:`      |` [IWebPartHost](IWebPartHost.md)` | Web part host |
+|`httpClient:`      |` [HttpClient](HttpClient.md)` | HttpClient instance scoped to this web part |
+|`instanceId:`      |` string` | Web part instance id |
+|`manifest:`      |` TManifest` | Client side component manifest |
+|`pageContext:`      |` [PageContext](PageContext.md)` | SharePoint page context |
+|`serviceScope:`      |` [ServiceScope](ServiceScope.md)` | Service scope instance that is scoped to this particular web part |
+|`statusRenderer:`      |` [IClientSideWebPartStatusRenderer](IClientSideWebPartStatusRenderer.md)` | Web part status renderer |
+|`webPartTag:`      |` string` | Web part tag to be used for logging and telemetry |
 
 
 
@@ -28,7 +28,7 @@ Web part context interface.
 
 | Function	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|configureStart:      | undefined |  | Function to open the PropertyPane to help configure this web part |
+|`configureStart: `     | undefined | `` | Function to open the PropertyPane to help configure this web part |
 
 
 
@@ -37,16 +37,14 @@ Web part context interface.
 Function to open the PropertyPane to help configure this web part.
 
 ##### Signature
-undefined
 
 #### Returns
-void
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| id     | undefined | %optional% undefined |
-| propertyPaneState?     | undefined | %optional% undefined |
+| `id `    | `undefined` | _%optional%_ undefined |
+| `propertyPaneState? `    | `undefined` | _%optional%_ undefined |
 

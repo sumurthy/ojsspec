@@ -8,7 +8,7 @@
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|prototype:      | WeakSet<any> |  |
+|`prototype:`      |` WeakSet<any>` |  |
 
 
 
@@ -17,7 +17,7 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[new](#new)      | [ WeakSet<T>](WeakSet.md) |  |
+|`[new](#new)`      | `[ WeakSet<T>](WeakSet.md) `|  |
 
 
 
@@ -26,15 +26,13 @@
 
 
 ##### Signature
-undefined
 
 #### Returns
- WeakSet<T>
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| iterable     | undefined | %optional% undefined |
+| `iterable `    | `undefined` | _%optional%_ undefined |
 

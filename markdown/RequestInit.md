@@ -8,11 +8,11 @@
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|method?:      | string |  |
-|body?:      | BodyInit |  |
-|mode?:      | string,RequestMode |  |
-|credentials?:      | string,RequestCredentials |  |
-|cache?:      | string,RequestCache |  |
+|`method?:`      |` string` |  |
+|`body?:`      |` BodyInit` |  |
+|`mode?:`      |` string,RequestMode` |  |
+|`credentials?:`      |` string,RequestCredentials` |  |
+|`cache?:`      |` string,RequestCache` |  |
 
 
 

@@ -7,12 +7,12 @@
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|string      | referrer: | string |  |
-|Headers      | headers: | [Headers](Headers.md) |  |
-|string|RequestContext      | context: | string,RequestContext |  |
-|string|RequestMode      | mode: | string,RequestMode |  |
-|string|RequestCredentials      | credentials: | string,RequestCredentials |  |
-|string|RequestCache      | cache: | string,RequestCache |  |
+|`string`     | referrer: | `string` |  |
+|`Headers`     | headers: | `[Headers](Headers.md)` |  |
+|`string|RequestContext`     | context: | `string,RequestContext` |  |
+|`string|RequestMode`     | mode: | `string,RequestMode` |  |
+|`string|RequestCredentials`     | credentials: | `string,RequestCredentials` |  |
+|`string|RequestCache`     | cache: | `string,RequestCache` |  |
 
 
 
@@ -21,7 +21,7 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor)      | public | [Request](Request.md) |  |
+|`[constructor](#constructor) `     | public | `[Request](Request.md)` |  |
 
 
 
@@ -31,16 +31,14 @@
 
 
 ##### Signature
-constructor(input: string|Request, init?:RequestInit)
 
 #### Returns
-Request
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| input     | undefined | %optional% undefined |
-| init?     | undefined | %optional% undefined |
+| `input `    | `undefined` | _%optional%_ undefined |
+| `init? `    | `undefined` | _%optional%_ undefined |
 

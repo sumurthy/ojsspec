@@ -11,7 +11,7 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[fetch](#fetch)      |  Promise<Response> |  |
+|`[fetch](#fetch)`      | ` Promise<Response> `|  |
 
 
 
@@ -20,16 +20,14 @@
 
 
 ##### Signature
-undefined
 
 #### Returns
- Promise<Response>
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| url     | undefined | %optional% undefined |
-| init?     | undefined | %optional% undefined |
+| `url `    | `undefined` | _%optional%_ undefined |
+| `init? `    | `undefined` | _%optional%_ undefined |
 

@@ -11,7 +11,7 @@ small, and extremely common. Do not add advanced parsing logic to this file.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[static](#static)      | public | string | Removes any slash characters from the end of the URL |
+|`[static](#static) `     | public | `string` | Removes any slash characters from the end of the URL |
 
 
 
@@ -26,15 +26,13 @@ removeEndSlash('/example') ---> '/example'
 removeEndSlash('/') ---> ''
 
 ##### Signature
-static removeEndSlash(url: string): string
 
 #### Returns
-string
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| url     | undefined | %optional% undefined |
+| `url `    | `undefined` | _%optional%_ undefined |
 

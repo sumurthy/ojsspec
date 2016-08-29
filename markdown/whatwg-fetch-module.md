@@ -5,10 +5,10 @@
 
 | Class	   |  Description |
 |:-------------|:---------------|
-| [Request](Request.md)     |  |
-| [Headers](Headers.md)     |  |
-| [Body](Body.md)     |  |
-| [Response](Response.md)     |  |
+| `[Request](Request.md)`     |  |
+| `[Headers](Headers.md)`     |  |
+| `[Body](Body.md)`     |  |
+| `[Response](Response.md)`     |  |
 
 
 
@@ -16,9 +16,9 @@
 
 | Class	   |  Description |
 |:-------------|:---------------|
-| [RequestInit](RequestInit.md)     |   |
-| [ResponseInit](ResponseInit.md)     |   |
-| [Window](Window.md)     |   |
+| `[RequestInit](RequestInit.md)`     |   |
+| `[ResponseInit](ResponseInit.md)`     |   |
+| `[Window](Window.md)`     |   |
 
 
 
@@ -26,5 +26,5 @@
 
 | Enumeration	   | Description|
 |:-----------|:------------|
-|[enum](enum.md)     |  |
+|`[enum](enum.md)`     |  |
 

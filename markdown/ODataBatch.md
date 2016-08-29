@@ -19,11 +19,11 @@ resolve with a Response object for that particular request.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor)      | public | [ODataBatch](ODataBatch.md) |  |
-|[execute](#execute)      | public | Promise<ODataBatch> | Executes the batched queries that were queued using ODataBatch |
-|[fetch](#fetch)      | public | Promise<Response> | Queues a new request, and returns a promise that can be used to access  the server response (after execute() has completed) |
-|[get](#get)      | public | Promise<Response> | Calls fetch(), but sets the method to 'GET' |
-|[post](#post)      | public | Promise<Response> | Calls fetch(), but sets the method to 'POST' |
+|`[constructor](#constructor) `     | public | `[ODataBatch](ODataBatch.md)` |  |
+|`[execute](#execute) `     | public | `Promise<ODataBatch>` | Executes the batched queries that were queued using ODataBatch |
+|`[fetch](#fetch) `     | public | `Promise<Response>` | Queues a new request, and returns a promise that can be used to access  the server response (after execute() has completed) |
+|`[get](#get) `     | public | `Promise<Response>` | Calls fetch(), but sets the method to 'GET' |
+|`[post](#post) `     | public | `Promise<Response>` | Calls fetch(), but sets the method to 'POST' |
 
 
 
@@ -33,18 +33,16 @@ resolve with a Response object for that particular request.
 
 
 ##### Signature
-public constructor(serviceScope: ServiceScope, batchOptions?: IODataBatchOptions)
 
 #### Returns
-ODataBatch
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| serviceScope     | undefined | %optional% undefined |
-| batchOptions?     | undefined | %optional% undefined |
+| `serviceScope `    | `undefined` | _%optional%_ undefined |
+| `batchOptions? `    | `undefined` | _%optional%_ undefined |
 
 
 ## execute
@@ -52,10 +50,8 @@ ODataBatch
 Executes the batched queries that were queued using ODataBatch.fetch().
 
 ##### Signature
-execute(): Promise<ODataBatch>
 
 #### Returns
-Promise<ODataBatch>
 
 #### Parameters
 None
@@ -79,18 +75,16 @@ explicitly.
 
 
 ##### Signature
-fetch(url: string, options?: IODataBatchRequestOptions): Promise<Response>
 
 #### Returns
-Promise<Response>
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| url     | undefined | %optional% undefined |
-| options?     | undefined | %optional% undefined |
+| `url `    | `undefined` | _%optional%_ undefined |
+| `options? `    | `undefined` | _%optional%_ undefined |
 
 
 ## get
@@ -98,18 +92,16 @@ Promise<Response>
 Calls fetch(), but sets the method to 'GET'.
 
 ##### Signature
-get(url: string, options?: IODataBatchRequestOptions): Promise<Response>
 
 #### Returns
-Promise<Response>
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| url     | undefined | %optional% undefined |
-| options?     | undefined | %optional% undefined |
+| `url `    | `undefined` | _%optional%_ undefined |
+| `options? `    | `undefined` | _%optional%_ undefined |
 
 
 ## post
@@ -117,16 +109,14 @@ Promise<Response>
 Calls fetch(), but sets the method to 'POST'.
 
 ##### Signature
-post(url: string, options: IODataBatchRequestOptions): Promise<Response>
 
 #### Returns
-Promise<Response>
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| url     | undefined | %optional% undefined |
-| options     | undefined | %optional% undefined |
+| `url `    | `undefined` | _%optional%_ undefined |
+| `options `    | `undefined` | _%optional%_ undefined |
 

@@ -11,11 +11,11 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[delete](#delete)      |  boolean |  |
-|[clear](#clear)      |  void |  |
-|[get](#get)      |  V |  |
-|[has](#has)      |  boolean |  |
-|[set](#set)      |  WeakMap<K, V> |  |
+|`[delete](#delete)`      | ` boolean `|  |
+|`[clear](#clear)`      | ` void `|  |
+|`[get](#get)`      | ` V `|  |
+|`[has](#has)`      | ` boolean `|  |
+|`[set](#set)`      | ` WeakMap<K, V> `|  |
 
 
 
@@ -24,17 +24,15 @@
 
 
 ##### Signature
-undefined
 
 #### Returns
- boolean
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| key     | undefined | %optional% undefined |
+| `key `    | `undefined` | _%optional%_ undefined |
 
 
 ## clear
@@ -42,10 +40,8 @@ undefined
 
 
 ##### Signature
-undefined
 
 #### Returns
- void
 
 #### Parameters
 None
@@ -56,17 +52,15 @@ None
 
 
 ##### Signature
-undefined
 
 #### Returns
- V
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| key     | undefined | %optional% undefined |
+| `key `    | `undefined` | _%optional%_ undefined |
 
 
 ## has
@@ -74,17 +68,15 @@ undefined
 
 
 ##### Signature
-undefined
 
 #### Returns
- boolean
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| key     | undefined | %optional% undefined |
+| `key `    | `undefined` | _%optional%_ undefined |
 
 
 ## set
@@ -92,16 +84,14 @@ undefined
 
 
 ##### Signature
-undefined
 
 #### Returns
- WeakMap<K, V>
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| key     | undefined | %optional% undefined |
-| value?     | undefined | %optional% undefined |
+| `key `    | `undefined` | _%optional%_ undefined |
+| `value? `    | `undefined` | _%optional%_ undefined |
 

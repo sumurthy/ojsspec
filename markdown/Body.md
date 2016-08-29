@@ -7,7 +7,7 @@
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|boolean      | bodyUsed: | boolean |  |
+|`boolean`     | bodyUsed: | `boolean` |  |
 
 
 
@@ -16,12 +16,12 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[Promise<ArrayBuffer>](#promise<arraybuffer>)      | arrayBuffer(): | Promise<ArrayBuffer> |  |
-|[Promise<Blob>](#promise<blob>)      | blob(): | Promise<Blob> |  |
-|[Promise<FormData>](#promise<formdata>)      | formData(): | Promise<FormData> |  |
-|[Promise<any>](#promise<any>)      | json(): | Promise<any> |  |
-|[Promise<T>](#promise<t>)      | json<T>(): | Promise<T> |  |
-|[Promise<string>](#promise<string>)      | text(): | Promise<string> |  |
+|`[Promise<ArrayBuffer>](#promise<arraybuffer>) `     | arrayBuffer(): | `Promise<ArrayBuffer>` |  |
+|`[Promise<Blob>](#promise<blob>) `     | blob(): | `Promise<Blob>` |  |
+|`[Promise<FormData>](#promise<formdata>) `     | formData(): | `Promise<FormData>` |  |
+|`[Promise<any>](#promise<any>) `     | json(): | `Promise<any>` |  |
+|`[Promise<T>](#promise<t>) `     | json<T>(): | `Promise<T>` |  |
+|`[Promise<string>](#promise<string>) `     | text(): | `Promise<string>` |  |
 
 
 
@@ -31,10 +31,8 @@
 
 
 ##### Signature
-Promise<ArrayBuffer>
 
 #### Returns
-Promise<ArrayBuffer>
 
 #### Parameters
 None
@@ -45,10 +43,8 @@ None
 
 
 ##### Signature
-Promise<Blob>
 
 #### Returns
-Promise<Blob>
 
 #### Parameters
 None
@@ -59,10 +55,8 @@ None
 
 
 ##### Signature
-Promise<FormData>
 
 #### Returns
-Promise<FormData>
 
 #### Parameters
 None
@@ -73,10 +67,8 @@ None
 
 
 ##### Signature
-Promise<any>
 
 #### Returns
-Promise<any>
 
 #### Parameters
 None
@@ -87,10 +79,8 @@ None
 
 
 ##### Signature
-Promise<T>
 
 #### Returns
-Promise<T>
 
 #### Parameters
 None
@@ -101,10 +91,8 @@ None
 
 
 ##### Signature
-Promise<string>
 
 #### Returns
-Promise<string>
 
 #### Parameters
 None

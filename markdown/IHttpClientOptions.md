@@ -11,12 +11,12 @@ https://fetch.spec.whatwg.org/
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|body      | BodyInit |  |
-|cache      | [ILocalizedString](ILocalizedString.md),[ILocalizedString](ILocalizedString.md) |  |
-|credentials      | string,RequestCredentials |  |
-|method      | string |  |
-|mode      | string,RequestMode |  |
-|webUrl      | string | For a write operation, HttpClient will automatically add the  "X-RequestDigest" header, which may need to be fetched using a seperate  request such as "https://example |
+|`body`      |` BodyInit` |  |
+|`cache`      |` [ILocalizedString](ILocalizedString.md),[ILocalizedString](ILocalizedString.md)` |  |
+|`credentials`      |` string,RequestCredentials` |  |
+|`method`      |` string` |  |
+|`mode`      |` string,RequestMode` |  |
+|`webUrl`      |` string` | For a write operation, HttpClient will automatically add the  "X-RequestDigest" header, which may need to be fetched using a seperate  request such as "https://example |
 
 
 

@@ -11,10 +11,10 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[delete](#delete)      |  boolean |  |
-|[clear](#clear)      |  void |  |
-|[add](#add)      | [ WeakSet<T>](WeakSet.md) |  |
-|[has](#has)      |  boolean |  |
+|`[delete](#delete)`      | ` boolean `|  |
+|`[clear](#clear)`      | ` void `|  |
+|`[add](#add)`      | `[ WeakSet<T>](WeakSet.md) `|  |
+|`[has](#has)`      | ` boolean `|  |
 
 
 
@@ -23,17 +23,15 @@
 
 
 ##### Signature
-undefined
 
 #### Returns
- boolean
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| value     | undefined | %optional% undefined |
+| `value `    | `undefined` | _%optional%_ undefined |
 
 
 ## clear
@@ -41,10 +39,8 @@ undefined
 
 
 ##### Signature
-undefined
 
 #### Returns
- void
 
 #### Parameters
 None
@@ -55,17 +51,15 @@ None
 
 
 ##### Signature
-undefined
 
 #### Returns
- WeakSet<T>
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| value     | undefined | %optional% undefined |
+| `value `    | `undefined` | _%optional%_ undefined |
 
 
 ## has
@@ -73,15 +67,13 @@ undefined
 
 
 ##### Signature
-undefined
 
 #### Returns
- boolean
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| value     | undefined | %optional% undefined |
+| `value `    | `undefined` | _%optional%_ undefined |
 

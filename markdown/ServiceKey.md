@@ -12,10 +12,10 @@ introduced without inadvertently breaking components that are loaded by an older
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|static      | public | string, | your application |
-|defaultCreator      | public | ServiceCreator<T> | your application |
-|id      | public | string | your application |
-|name      | public | string | your application |
+|`static`     | public | `string,` | your application |
+|`defaultCreator`     | public | `ServiceCreator<T>` | your application |
+|`id`     | public | `string` | your application |
+|`name`     | public | `string` | your application |
 
 
 
@@ -24,8 +24,8 @@ introduced without inadvertently breaking components that are loaded by an older
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor)      | public | [ServiceKey](ServiceKey.md) | PRIVATE - Do not call this from your own code |
-|[static](#static)      | public | ServiceKey<T> | your application |
+|`[constructor](#constructor) `     | public | `[ServiceKey](ServiceKey.md)` | PRIVATE - Do not call this from your own code |
+|`[static](#static) `     | public | `ServiceKey<T>` | your application |
 
 
 
@@ -35,19 +35,17 @@ introduced without inadvertently breaking components that are loaded by an older
 PRIVATE - Do not call this from your own code.
 
 ##### Signature
-constructor(id: string, name: string, defaultCreator: ServiceCreator<T>)
 
 #### Returns
-ServiceKey
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| id     | undefined | %optional% undefined |
-| name     | undefined | %optional% undefined |
-| defaultCreator     | undefined | %optional% undefined |
+| `id `    | `undefined` | _%optional%_ undefined |
+| `name `    | `undefined` | _%optional%_ undefined |
+| `defaultCreator `    | `undefined` | _%optional%_ undefined |
 
 
 ## static
@@ -55,16 +53,14 @@ ServiceKey
 your application.
 
 ##### Signature
-static createCustom < T >(name: string, defaultCreator: ServiceCreator<T>): ServiceKey<T>
 
 #### Returns
-ServiceKey<T>
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| name     | undefined | %optional% undefined |
-| defaultCreator     | undefined | %optional% undefined |
+| `name `    | `undefined` | _%optional%_ undefined |
+| `defaultCreator `    | `undefined` | _%optional%_ undefined |
 

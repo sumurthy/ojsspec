@@ -3,10 +3,10 @@
 %memberdescription%
 
 ##### Signature
-%apisignature%
+`%apisignature%`
 
 #### Returns
-%returntype%
+`%returntype%`
 
 #### Parameters
 %noparam%
@@ -14,6 +14,6 @@
 <parameter>
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
->| %name%     | %dtype% | %optional% %description% |
+>| `%name% `    | `%dtype%` | _%optional%_ %description% |
 
 </parameter>

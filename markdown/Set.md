@@ -8,7 +8,7 @@
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|size:      | number |  |
+|`size:`      |` number` |  |
 
 
 
@@ -17,13 +17,13 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[add](#add)      | [ Set<T>](Set.md) |  |
-|[clear](#clear)      |  void |  |
-|[delete](#delete)      |  boolean |  |
-|[has](#has)      |  boolean |  |
-|[entries](#entries)      |  Iterator<[T, T]> |  |
-|[keys](#keys)      | [ Iterator<T>](Iterator.md) |  |
-|[values](#values)      | [ Iterator<T>](Iterator.md) |  |
+|`[add](#add)`      | `[ Set<T>](Set.md) `|  |
+|`[clear](#clear)`      | ` void `|  |
+|`[delete](#delete)`      | ` boolean `|  |
+|`[has](#has)`      | ` boolean `|  |
+|`[entries](#entries)`      | ` Iterator<[T, T]> `|  |
+|`[keys](#keys)`      | `[ Iterator<T>](Iterator.md) `|  |
+|`[values](#values)`      | `[ Iterator<T>](Iterator.md) `|  |
 
 
 
@@ -31,7 +31,7 @@
 
 | Function	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|forEach      | undefined |  |  |
+|`forEach `     | undefined | `` |  |
 
 
 
@@ -40,17 +40,15 @@
 
 
 ##### Signature
-undefined
 
 #### Returns
- Set<T>
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| value     | undefined | %optional% undefined |
+| `value `    | `undefined` | _%optional%_ undefined |
 
 
 ## clear
@@ -58,10 +56,8 @@ undefined
 
 
 ##### Signature
-undefined
 
 #### Returns
- void
 
 #### Parameters
 None
@@ -72,17 +68,15 @@ None
 
 
 ##### Signature
-undefined
 
 #### Returns
- boolean
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| value     | undefined | %optional% undefined |
+| `value `    | `undefined` | _%optional%_ undefined |
 
 
 ## has
@@ -90,17 +84,15 @@ undefined
 
 
 ##### Signature
-undefined
 
 #### Returns
- boolean
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| value     | undefined | %optional% undefined |
+| `value `    | `undefined` | _%optional%_ undefined |
 
 
 ## entries
@@ -108,10 +100,8 @@ undefined
 
 
 ##### Signature
-undefined
 
 #### Returns
- Iterator<[T, T]>
 
 #### Parameters
 None
@@ -122,10 +112,8 @@ None
 
 
 ##### Signature
-undefined
 
 #### Returns
- Iterator<T>
 
 #### Parameters
 None
@@ -136,10 +124,8 @@ None
 
 
 ##### Signature
-undefined
 
 #### Returns
- Iterator<T>
 
 #### Parameters
 None
@@ -150,17 +136,15 @@ None
 
 
 ##### Signature
-undefined
 
 #### Returns
-void, thisArg?: any): void
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| callbackfn     | undefined | %optional% undefined |
-| index     | undefined | %optional% undefined |
-| set     | undefined | %optional% undefined |
+| `callbackfn `    | `undefined` | _%optional%_ undefined |
+| `index `    | `undefined` | _%optional%_ undefined |
+| `set `    | `undefined` | _%optional%_ undefined |
 

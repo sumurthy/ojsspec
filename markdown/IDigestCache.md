@@ -16,10 +16,10 @@ of time. For more information, see the MSDN article
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[addDigestToCache](#adddigesttocache)      |  void | the digest value will no longer be valid |
-|[clearAllDigests](#clearalldigests)      |  void | Clears all values from the cache |
-|[clearDigest](#cleardigest)      |  boolean | This may be a server-relative or absolute URL |
-|[fetchDigest](#fetchdigest)      |  Promise<string> | This may be a server-relative or absolute URL |
+|`[addDigestToCache](#adddigesttocache)`      | ` void `| the digest value will no longer be valid |
+|`[clearAllDigests](#clearalldigests)`      | ` void `| Clears all values from the cache |
+|`[clearDigest](#cleardigest)`      | ` boolean `| This may be a server-relative or absolute URL |
+|`[fetchDigest](#fetchdigest)`      | ` Promise<string> `| This may be a server-relative or absolute URL |
 
 
 
@@ -31,19 +31,17 @@ fractional milliseconds; for example, to specify an expiration
 "5 seconds from right now", use performance.now()+5000.
 
 ##### Signature
-undefined
 
 #### Returns
- void
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| webUrl     | undefined | %optional% undefined |
-| digestValue     | undefined | %optional% undefined |
-| expirationTimestamp     | undefined | %optional% undefined |
+| `webUrl `    | `undefined` | _%optional%_ undefined |
+| `digestValue `    | `undefined` | _%optional%_ undefined |
+| `expirationTimestamp `    | `undefined` | _%optional%_ undefined |
 
 
 ## clearAllDigests
@@ -51,10 +49,8 @@ undefined
 Clears all values from the cache.
 
 ##### Signature
-undefined
 
 #### Returns
- void
 
 #### Parameters
 None
@@ -65,17 +61,15 @@ None
 This may be a server-relative or absolute URL.
 
 ##### Signature
-undefined
 
 #### Returns
- boolean
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| webUrl     | undefined | %optional% undefined |
+| `webUrl `    | `undefined` | _%optional%_ undefined |
 
 
 ## fetchDigest
@@ -83,15 +77,13 @@ undefined
 This may be a server-relative or absolute URL.
 
 ##### Signature
-undefined
 
 #### Returns
- Promise<string>
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| webUrl     | undefined | %optional% undefined |
+| `webUrl `    | `undefined` | _%optional%_ undefined |
 

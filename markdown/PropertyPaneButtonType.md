@@ -1,4 +1,4 @@
-# PropertyPaneButtonType enumeration
+## PropertyPaneButtonType enumeration
 
 
 | Member	   | Description|
