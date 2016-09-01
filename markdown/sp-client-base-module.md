@@ -9,7 +9,7 @@
 | [Compare](Compare.md)     |   This class contains various comparison utilities |
 | [CultureInfo](CultureInfo.md)     | This class is primarily used with the PageContext class |
 | [Environment](Environment.md)     | This class contains contextual information about the enviroment that is hosting the framework and  its components |
-| [Guid](Guid.md)     | This class represents a globally unique identifier, as described by  IETF RFC 4122 |
+| [Guid](Guid.md)     | This class represents a globally unique identifier,as described by  IETF RFC 4122 |
 | [HttpClient](HttpClient.md)     | HttpClient is used to perform REST calls against SharePoint |
 | [Log](Log.md)     | The Log class provides methods for logging messages at different levels (verbose,  info, warning, error) and with context information |
 | [ODataBatch](ODataBatch.md)     | The ODataBatch class accumulates a number of REST service calls and  transmits them as a single ODATA batch |
@@ -30,11 +30,11 @@
 
 | Class	   |  Description |
 |:-------------|:---------------|
-| [IBasicHttpClientOptions](IBasicHttpClientOptions.md)   | headers ?: HeaderInit|{ [index: string]: string }  |
+| [IBasicHttpClientOptions](IBasicHttpClientOptions.md)   | This interface defines the options for the BasicHttpClient operations such as  get(), post(), fetch(), etc  |
 | [IClientSideApplicationManifest](IClientSideApplicationManifest.md)   | This is is the manifest for a client-side application  |
 | [IClientSideComponentManifest](IClientSideComponentManifest.md)   | This is the base interface that is extended by the interfaces  that represent the manifest for each kind of client-side component  |
 | [IDigestCache](IDigestCache.md)   | IDigestCache is an internal service used by HttpClient to maintain a cache of request digests  for each SPWeb URL  |
-| [IHttpClientOptions](IHttpClientOptions.md)   | headers ?: HeaderInit|{ [index: string]: string }  |
+| [IHttpClientOptions](IHttpClientOptions.md)   | This interface defines the options for the HttpClient operations such as  get(), post(), fetch(), etc  |
 | [IODataBasePermission](IODataBasePermission.md)   | Data used for creating a SPPermission object  |
 | [IODataBatchOptions](IODataBatchOptions.md)   | This interface is passed to the ODataBatch constructor  |
 | [IODataChangeToken](IODataChangeToken.md)   | Represents an OData SP  |
@@ -52,4 +52,7 @@
 |:-----------|:------------|
 |[DisplayMode](DisplayMode.md)    | Display mode enumeration |
 |[EnvironmentType](EnvironmentType.md)    | Environment type enumeration |
+
+
+
 

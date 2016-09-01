@@ -4,11 +4,14 @@
 
 
 
+
+
+
 ### Properties
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`size:`      | number |  |
+|`size`      | number |  |
 
 
 
@@ -17,13 +20,13 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[add](#add)      | [Set<T>](Set.md) |  |
-|[clear](#clear)      | void |  |
-|[delete](#delete)      | boolean |  |
-|[has](#has)      | boolean |  |
-|[entries](#entries)      | Iterator<[T, T]> |  |
-|[keys](#keys)      | [Iterator<T>](Iterator.md) |  |
-|[values](#values)      | [Iterator<T>](Iterator.md) |  |
+|[add](#add~44556)      | [Set<T>](Set.md) |  |
+|[clear](#clear~35878)      | void |  |
+|[delete](#delete~60713)      | boolean |  |
+|[has](#has~18904)      | boolean |  |
+|[entries](#entries~48054)      | [Iterator<[T](Iterator.md),T]> |  |
+|[keys](#keys~85637)      | [Iterator<T>](Iterator.md) |  |
+|[values](#values~87530)      | [Iterator<T>](Iterator.md) |  |
 
 
 
@@ -105,7 +108,7 @@ boolean
 ##### Signature
 
 #### Returns
-Iterator<[T, T]>
+Iterator<[T,T]>
 
 #### Parameters
 None
@@ -144,7 +147,7 @@ None
 ##### Signature
 
 #### Returns
-void, thisArg?: any): void
+void,thisArg?: any): void
 
 #### Parameters
 

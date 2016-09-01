@@ -1,7 +1,10 @@
 # SPWeb class
 
+
+
 This class is primarily used with the PageContext class. It provides contextual 
 information for the SharePoint site ("web") that hosts the page.
+
 
 
 ### Properties

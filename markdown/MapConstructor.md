@@ -4,11 +4,14 @@
 
 
 
+
+
+
 ### Properties
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`prototype:`      | Map<any, any> |  |
+|`prototype`      | [Map<any](Map.md),any> |  |
 
 
 
@@ -17,24 +20,38 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[new](#new)      | Map<K, V> |  |
+|[constructor<K,V>](#constructor<k,v>~42994)      | [Map<K](Map.md),V> |  |
+|[constructor<K,V>](#constructor<k,v>~74739)      | [Map<K](Map.md),V> |  |
 
 
 
-## new
+## constructor<K,V>
 
 
 
 ##### Signature
 
 #### Returns
-Map<K, V>
+Map<K,V>
+
+#### Parameters
+None
+
+
+## constructor<K,V>
+
+
+
+##### Signature
+
+#### Returns
+Map<K,V>
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `iterable`    | ForEachable<[K |  |
+| `iterable`    | [ForEachable<[K](ForEachable.md) |  |
 | `V]>`    |  |  |
 

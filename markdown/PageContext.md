@@ -1,10 +1,13 @@
 # PageContext class
 
+
+
 The page context provides standard definitions for common SharePoint objects 
 that need to be shared between the client-side application, web parts, and other 
 components. Typically the data is fetched via REST queries when navigating to a 
 new page, but it can also be preloaded by the web server, or filled from a custom 
 application cache.
+
 
 
 ### Properties
@@ -24,7 +27,7 @@ application cache.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor)     | public | [PageContext](PageContext.md) |  |
+|[constructor](#constructor~33759)     | public | [ServiceScope](ServiceScope.md) |  |
 
 
 
@@ -36,7 +39,7 @@ application cache.
 ##### Signature
 
 #### Returns
-PageContext
+ServiceScope
 
 #### Parameters
 

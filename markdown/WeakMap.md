@@ -1,4 +1,7 @@
-# WeakMap<K, interface
+# WeakMap<K,V> interface
+
+
+
 
 
 
@@ -11,11 +14,11 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[delete](#delete)      | boolean |  |
-|[clear](#clear)      | void |  |
-|[get](#get)      | V |  |
-|[has](#has)      | boolean |  |
-|[set](#set)      | WeakMap<K, V> |  |
+|[delete](#delete~24951)      | boolean |  |
+|[clear](#clear~80849)      | void |  |
+|[get](#get~92751)      | V |  |
+|[has](#has~97634)      | boolean |  |
+|[set](#set~81665)      | [WeakMap<K](WeakMap.md),V> |  |
 
 
 
@@ -90,7 +93,7 @@ boolean
 ##### Signature
 
 #### Returns
-WeakMap<K, V>
+WeakMap<K,V>
 
 #### Parameters
 

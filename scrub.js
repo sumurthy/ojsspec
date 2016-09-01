@@ -7,6 +7,8 @@ const STATEMENT_END = [';', '{', '}']
 const SKIP = ['*', '//', '/**', '///', '', '*/', '/*']
 const BLOCK_END = '}'
 const ENUM = 'enum '
+const EXTENDS = ' extends'
+const FUNCTION = 'function '
 
 
 let outputJs = []
@@ -41,16 +43,20 @@ function processLines(element = '', index = 0, lines = []) {
     }
 
     if (!SKIP.includes(firstWord) && !skipFlag) {
-        if (line) {
+        if (line && (line.includes(EXTENDS) || line.includes(FUNCTION))) {
             if (!STATEMENT_END.includes(line.slice(-1))) {
-                console.log(`${line}`);
+                var o = Utils.unWrapStatement(lines, index)
+                ignore_lines = o['skip']
+                outLine = o['line']
+                console.log(`Incomplete statement line: ${line}`);
+                console.log('Unwrapping to this line: ' + outLine);
+                console.log(' ');
             }
         }
     }
     outputJs.push(outLine)
     return
 }
-
 
 /**
  * STARTING: Load input files and process each file and each line within.

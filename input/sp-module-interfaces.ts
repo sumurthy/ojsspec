@@ -289,7 +289,10 @@ interface IClientSideWebPartManifestEntry<TProperties> {
  *
  * @public
  */
-interface IClientSideWebPartManifestInstance<TProperties> extends IClientSideWebPartManifestEntry<TProperties> {
+interface IClientSideWebPartManifestInstance<TProperties> extends
+ IClientSideComponentManifest,
+ IClientSideWebPartManifestSharedProperties,
+ IClientSideWebPartManifestEntry<TProperties> {
   /**
    * Definition: Type of client side component. Components with the "Application" type are defined by the
    *  "IClientSideApplicationManifest" interface. Components with the "WebPart" type are defined by the

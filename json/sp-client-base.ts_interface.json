@@ -1,7 +1,7 @@
 {
   "IBasicHttpClientOptions": {
-    "extendsName": "RequestInit",
-    "descr": "headers ?: HeaderInit|{ [index: string]: string }",
+    "implementsExtendsName": "RequestInit",
+    "descr": "This interface defines the options for the BasicHttpClient operations such as \nget(), post(), fetch(), etc. It is based on the whatwg API standard \nparameters that are documented here: \nhttps:",
     "properties": {
       "body": {
         "descr": "",
@@ -45,64 +45,64 @@
     "methods": {}
   },
   "IClientSideApplicationManifest": {
-    "extendsName": "IClientSideComponentManifest",
+    "implementsExtendsName": "IClientSideComponentManifest",
     "descr": "This is is the manifest for a client-side application.",
     "properties": {
-      "bootstrapModule:": {
+      "bootstrapModule": {
         "descr": "Represents the boot strap module link of client side application or webpart.",
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
       },
-      "cssLinks:": {
+      "cssLinks": {
         "descr": "Represents the fabric css components links.",
         "dataType": "string[]",
         "isOptional": false,
         "isCollection": true
       },
-      "displayName:": {
+      "displayName": {
         "descr": "Represents display name of webpart.",
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
       },
-      "id:": {
+      "id": {
         "descr": "Represents the application id.",
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
       },
-      "manifestVersion:": {
+      "manifestVersion": {
         "descr": "Represents the manifest version.",
         "dataType": "number",
         "isOptional": false,
         "isCollection": false
       },
-      "moduleName:": {
+      "moduleName": {
         "descr": "Represents name of the module which loads application or webpart.",
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
       },
-      "platformModule:": {
+      "platformModule": {
         "descr": "Represents the platform js module link of client side application.",
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
       },
-      "preloadClientSideComponents:": {
+      "preloadClientSideComponents": {
         "descr": "Represents client side components to be preloaded when loading \"this\" component.",
         "dataType": "string[]",
         "isOptional": false,
         "isCollection": true
       },
-      "systemJsModule:": {
+      "systemJsModule": {
         "descr": "Represents the system js module link of client side application.",
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
       },
-      "version:": {
+      "version": {
         "descr": "Represents the version of scripts.",
         "dataType": "string",
         "isOptional": false,
@@ -114,40 +114,40 @@
     "methods": {}
   },
   "IClientSideComponentManifest": {
-    "extendsName": null,
+    "implementsExtendsName": null,
     "descr": "This is the base interface that is extended by the interfaces \nthat represent the manifest for each kind of client-side component.",
     "properties": {
-      "bootstrapModule:": {
+      "bootstrapModule": {
         "descr": "Represents the boot strap module link of client side application or webpart.",
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
       },
-      "displayName:": {
+      "displayName": {
         "descr": "Represents display name of webpart.",
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
       },
-      "id:": {
+      "id": {
         "descr": "Represents the application id.",
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
       },
-      "manifestVersion:": {
+      "manifestVersion": {
         "descr": "Represents the manifest version.",
         "dataType": "number",
         "isOptional": false,
         "isCollection": false
       },
-      "moduleName:": {
+      "moduleName": {
         "descr": "Represents name of the module which loads application or webpart.",
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
       },
-      "version:": {
+      "version": {
         "descr": "Represents the version of scripts.",
         "dataType": "string",
         "isOptional": false,
@@ -159,16 +159,18 @@
     "methods": {}
   },
   "IDigestCache": {
-    "extendsName": null,
+    "implementsExtendsName": null,
     "descr": "IDigestCache is an internal service used by HttpClient to maintain a cache of request digests \nfor each SPWeb URL. A request digest is a security token that the SharePoint server requires for \nfor any REST write operation, specified via the \"X-RequestDigest\" HTTP header. It is obtained \nby calling the \"/_api/contextinfo\" REST endpoint, and expires after a server configurable amount \nof time. For more information, see the MSDN article \n\"Complete basic operations using SharePoint 2013 REST endpoints\".",
     "properties": {},
     "functions": {},
     "objects": {},
     "methods": {
-      "addDigestToCache": {
+      "addDigestToCache~66673": {
         "descr": "the digest value will no longer be valid. \nNOTE: The expirationTime is a DOMHighResTimeStamp value whose units are \nfractional milliseconds; for example, to specify an expiration \n\"5 seconds from right now\", use performance.now()+5000.",
         "genericType": null,
         "returnType": "void",
+        "accessModifier": "",
+        "signature": "",
         "isOptional": false,
         "returnDesc": null,
         "params": [
@@ -192,18 +194,22 @@
           }
         ]
       },
-      "clearAllDigests": {
+      "clearAllDigests~39933": {
         "descr": "Clears all values from the cache.",
         "genericType": null,
         "returnType": "void",
+        "accessModifier": "",
+        "signature": "",
         "isOptional": false,
         "returnDesc": null,
         "params": []
       },
-      "clearDigest": {
+      "clearDigest~14074": {
         "descr": "This may be a server-relative or absolute URL.",
         "genericType": null,
         "returnType": "boolean",
+        "accessModifier": "",
+        "signature": "",
         "isOptional": false,
         "returnDesc": null,
         "params": [
@@ -215,10 +221,12 @@
           }
         ]
       },
-      "fetchDigest": {
+      "fetchDigest~63232": {
         "descr": "This may be a server-relative or absolute URL.",
         "genericType": null,
         "returnType": "Promise<string>",
+        "accessModifier": "",
+        "signature": "",
         "isOptional": false,
         "returnDesc": null,
         "params": [
@@ -233,8 +241,8 @@
     }
   },
   "IHttpClientOptions": {
-    "extendsName": "IBasicHttpClientOptions",
-    "descr": "headers ?: HeaderInit|{ [index: string]: string }",
+    "implementsExtendsName": "IBasicHttpClientOptions",
+    "descr": "This interface defines the options for the HttpClient operations such as \nget(), post(), fetch(), etc. It is based on the WHATWG API standard \nparameters that are documented here: \nhttps:",
     "properties": {
       "body": {
         "descr": "",
@@ -267,7 +275,7 @@
         "isCollection": false
       },
       "webUrl": {
-        "descr": "For a write operation, HttpClient will automatically add the \n\"X-RequestDigest\" header, which may need to be fetched using a seperate \nrequest such as \"https://example.com/sites/sample/_api/contextinfo\". \nTypically the SPWeb URL (\"https://example.com/sites/sample\" in this \nexample) can be guessed by looking for a reserved URL segment such \nas \"_api\" in the original REST query, however certain REST endpoints \ndo not contain a reserved URL segment; in this case, the webUrl can \nbe explicitly specified using this option.",
+        "descr": "For a write operation,HttpClient will automatically add the \n\"X-RequestDigest\" header, which may need to be fetched using a seperate \nrequest such as \"https: \nTypically the SPWeb URL (\"https: \nexample) can be guessed by looking for a reserved URL segment such \nas \"_api\" in the original REST query, however certain REST endpoints \ndo not contain a reserved URL segment; in this case, the webUrl can \nbe explicitly specified using this option.",
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
@@ -278,16 +286,16 @@
     "methods": {}
   },
   "IODataBasePermission": {
-    "extendsName": null,
+    "implementsExtendsName": null,
     "descr": "Data used for creating a SPPermission object.",
     "properties": {
-      "High:": {
+      "High": {
         "descr": "",
         "dataType": "number",
         "isOptional": false,
         "isCollection": false
       },
-      "Low:": {
+      "Low": {
         "descr": "",
         "dataType": "number",
         "isOptional": false,
@@ -299,11 +307,11 @@
     "methods": {}
   },
   "IODataBatchOptions": {
-    "extendsName": null,
+    "implementsExtendsName": null,
     "descr": "This interface is passed to the ODataBatch constructor. It specifies options \nthat affect the entire batch.",
     "properties": {
       "webUrl": {
-        "descr": "ODataBatch will need to perform its POST to an endpoint such as \n\"http://example.com/sites/sample/_api/$batch\". Typically the SPWeb URL \n(\"https://example.com/sites/sample\" in this example) can be guessed by \nlooking for a reserved URL segment such as \"_api\" in the first URL \npassed to fetch(), but if not, the webUrl can be explicitly specified \nusing this option.",
+        "descr": "ODataBatch will need to perform its POST to an endpoint such as \n\"http: \n(\"https: \nlooking for a reserved URL segment such as \"_api\" in the first URL \npassed to fetch(), but if not, the webUrl can be explicitly specified \nusing this option.",
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
@@ -314,11 +322,11 @@
     "methods": {}
   },
   "IODataChangeToken": {
-    "extendsName": null,
+    "implementsExtendsName": null,
     "descr": "Represents an OData SP.ChangeToken object. For more information about this object",
     "properties": {
-      "StringValue:": {
-        "descr": "Example: { StringValue: \"13;9fb9199b-65f2-4a4a-b597-11d1a44422c1;635892156279130000;10721\" }",
+      "StringValue": {
+        "descr": "",
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
@@ -329,40 +337,40 @@
     "methods": {}
   },
   "IODataContextWebInformation": {
-    "extendsName": null,
+    "implementsExtendsName": null,
     "descr": "Represents an OData SP.ContextWebInformation object. For more information about this object",
     "properties": {
-      "FormDigestTimeoutSeconds:": {
+      "FormDigestTimeoutSeconds": {
         "descr": "Example: 1800",
         "dataType": "number",
         "isOptional": false,
         "isCollection": false
       },
-      "FormDigestValue:": {
+      "FormDigestValue": {
         "descr": "Example: \"0x61B31CBF4C76C...B0,20 Jan 2016 02:24:43 -0000\"",
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
       },
-      "LibraryVersion:": {
+      "LibraryVersion": {
         "descr": "Example: \"16.0.4919.3000\"",
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
       },
-      "SiteFullUrl:": {
+      "SiteFullUrl": {
         "descr": "Example: \"http:\\u002f\\u002fexample.com\\u002fsites\\u002fPubSite\"",
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
       },
-      "SupportedSchemaVersions:": {
-        "descr": "Example: [ \"14.0.0.0\", \"15.0.0.0\" ]",
+      "SupportedSchemaVersions": {
+        "descr": "Example: [ \"14.0.0.0\",\"15.0.0.0\" ]",
         "dataType": "string[]",
         "isOptional": false,
         "isCollection": true
       },
-      "WebFullUrl:": {
+      "WebFullUrl": {
         "descr": "Example: \"http:\\u002f\\u002fexample.com\\u002fsites\\u002fPubSite\"",
         "dataType": "string",
         "isOptional": false,
@@ -374,8 +382,8 @@
     "methods": {}
   },
   "IODataNavigationNode": {
-    "extendsName": null,
-    "descr": "Represents an OData SP.NavigationNode object. \nhttps://msdn.microsoft.com/en-us/library/office/jj246311.aspx",
+    "implementsExtendsName": null,
+    "descr": "Represents an OData SP.NavigationNode object. \nhttps:",
     "properties": {
       "Children": {
         "descr": "Gets or sets an array of Navigation Nodes that are children to the current node.",
@@ -425,16 +433,16 @@
     "methods": {}
   },
   "IODataNavigationNodeCollection": {
-    "extendsName": null,
-    "descr": "Represents an OData Microsoft.SharePoint.Navigation.SPNavigation object. \nhttps://msdn.microsoft.com/en-us/library/office/ee557907.aspx",
+    "implementsExtendsName": null,
+    "descr": "Represents an OData Microsoft.SharePoint.Navigation.SPNavigation object. \nhttps:",
     "properties": {
-      "quickLaunch:": {
+      "quickLaunch": {
         "descr": "Gets an SPNavigationNode object that contains \nthe nodes in the Quick Launch area of the site.",
         "dataType": "IODataNavigationNode[]",
         "isOptional": false,
         "isCollection": true
       },
-      "topNav:": {
+      "topNav": {
         "descr": "Gets an SPNavigationNode object that contains the nodes in the top link bar \nfor the website.",
         "dataType": "IODataNavigationNode[]",
         "isOptional": false,
@@ -446,8 +454,8 @@
     "methods": {}
   },
   "IODataWeb": {
-    "extendsName": null,
-    "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx",
+    "implementsExtendsName": null,
+    "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps:",
     "properties": {
       "Created": {
         "descr": "Gets a value that specifies when the site was created. \nExample: \"/Date(2016,0,20,12,58,7,0)/\"",
@@ -546,7 +554,7 @@
         "isCollection": false
       },
       "Url": {
-        "descr": "Gets the absolute URL for the website. \nExample: \"http://example.com/sites/PubSite\"",
+        "descr": "Gets the absolute URL for the website. \nExample: \"http:",
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
@@ -563,10 +571,10 @@
     "methods": {}
   },
   "IServiceScopeProvider": {
-    "extendsName": null,
+    "implementsExtendsName": null,
     "descr": "This is a convenient interface that can be used to indicate that an object \nhas an associated ServiceScope.",
     "properties": {
-      "serviceScope:": {
+      "serviceScope": {
         "descr": "Returns a ServiceScope instance that can be used to obtain dependencies \nfor the current context.",
         "dataType": "ServiceScope",
         "isOptional": false,

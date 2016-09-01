@@ -1,6 +1,9 @@
 # IPropertyPaneSettings interface
 
+
+
 Web part configuration settings
+
 
 
 
@@ -9,7 +12,7 @@ Web part configuration settings
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
 |`currentPage`      | number | Page to be displayed on the PropertyPane |
-|`pages:`      | IPropertyPanePage[] | Total number of pages on the PropertyPane |
+|`pages`      | IPropertyPanePage[] | Total number of pages on the PropertyPane |
 
 
 

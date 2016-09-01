@@ -3,6 +3,9 @@
 
 
 
+
+
+
 ### Properties
 
 | Property	   | Access Modifier | Type	| Description|
@@ -12,7 +15,6 @@
 |`number`     | status: | number |  |
 |`boolean`     | ok: | boolean |  |
 |`Headers`     | headers: | [Headers](Headers.md) |  |
-|`OBJECTERROR`     | } | } |  |
 
 
 
@@ -21,9 +23,10 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor)     | public | [Response](Response.md) |  |
-|[Response](#response)     | clone(): | [Response](Response.md) |  |
-|[string,](#string,)     | redirect(url: | [Response](Response.md) |  |
+|[constructor](#constructor~41343)     | public | [ResponseInit](ResponseInit.md) |  |
+|[error](#error~56041)     | public | [Response](Response.md) |  |
+|[redirect](#redirect~56718)     | public | [Response](Response.md) |  |
+|[clone](#clone~86778)     | public | [Response](Response.md) |  |
 
 
 
@@ -35,7 +38,7 @@
 ##### Signature
 
 #### Returns
-Response
+ResponseInit
 
 #### Parameters
 
@@ -46,7 +49,7 @@ Response
 | `init`    | [ResponseInit](ResponseInit.md) | _Optional._ |
 
 
-## Response
+## error
 
 
 
@@ -59,7 +62,7 @@ Response
 None
 
 
-## string,
+## redirect
 
 
 
@@ -75,4 +78,17 @@ Response
 |:-------------|:---------------|:------------|
 | `url`    | string |  |
 | `status`    | number |  |
+
+
+## clone
+
+
+
+##### Signature
+
+#### Returns
+Response
+
+#### Parameters
+None
 

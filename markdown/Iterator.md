@@ -7,13 +7,16 @@
 
 
 
+
+
+
 ## Methods
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[next](#next)      | [IteratorResult<T>](IteratorResult.md) |  |
-|[return](#return)      | [IteratorResult<T>](IteratorResult.md) |  |
-|[throw](#throw)      | [IteratorResult<T>](IteratorResult.md) |  |
+|[next](#next~48721)      | [IteratorResult<T>](IteratorResult.md) |  |
+|[return](#return~63273)      | [IteratorResult<T>](IteratorResult.md) |  |
+|[throw](#throw~63281)      | [IteratorResult<T>](IteratorResult.md) |  |
 
 
 

@@ -1,8 +1,10 @@
 # ODataBatch class
 
+
+
 The ODataBatch class accumulates a number of REST service calls and 
 transmits them as a single ODATA batch. This protocol is documented here: 
-http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html 
+http: 
  
 The usage is to call ODataBatch.fetch() to queue each individual request, 
 and then call ODataBatch.execute() to execute the batch operation. 
@@ -15,15 +17,16 @@ resolve with a Response object for that particular request.
 
 
 
+
 ## Methods
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor)     | public | [ODataBatch](ODataBatch.md) |  |
-|[execute](#execute)     | public | Promise<ODataBatch> | Executes the batched queries that were queued using ODataBatch |
-|[fetch](#fetch)     | public | Promise<Response> | Queues a new request, and returns a promise that can be used to access  the server response (after execute() has completed) |
-|[get](#get)     | public | Promise<Response> | Calls fetch(), but sets the method to 'GET' |
-|[post](#post)     | public | Promise<Response> | Calls fetch(), but sets the method to 'POST' |
+|[constructor](#constructor~33852)     | public | [IODataBatchOptions](IODataBatchOptions.md) |  |
+|[execute](#execute~28301)     | public | [Promise<ODataBatch>](Promise.md) | Executes the batched queries that were queued using ODataBatch |
+|[fetch](#fetch~98350)     | public | [Promise<Response>](Promise.md) | Queues a new request,and returns a promise that can be used to access  the server response (after execute() has completed) |
+|[get](#get~25769)     | public | [Promise<Response>](Promise.md) | Calls fetch(),but sets the method to 'GET' |
+|[post](#post~72045)     | public | [Promise<Response>](Promise.md) | Calls fetch(),but sets the method to 'POST' |
 
 
 
@@ -35,7 +38,7 @@ resolve with a Response object for that particular request.
 ##### Signature
 
 #### Returns
-ODataBatch
+IODataBatchOptions
 
 #### Parameters
 
@@ -61,16 +64,16 @@ None
 
 ## fetch
 
-Queues a new request, and returns a promise that can be used to access 
+Queues a new request,and returns a promise that can be used to access 
 the server response (after execute() has completed). The parameters for 
 this function are basically the same as the WHATWG API standard documented here: 
-https://fetch.spec.whatwg.org/ 
+https: 
  
 However, be aware that certain REST headers are ignored or not allowed inside 
 a batch. See the ODATA documentation for details. 
  
 When execute() is called, it will POST to a URL such as 
-"http://example.com/sites/sample/_api/$batch". Typically ODataBatch can successfully 
+"http: 
 guess the appropriate SPWeb URL by looking for a reserved URL segment such as "_api" 
 in the first URL passed to fetch(). If not, use IODataBatchOptions.webUrl to specify it 
 explicitly. 
@@ -92,7 +95,7 @@ Promise<Response>
 
 ## get
 
-Calls fetch(), but sets the method to 'GET'.
+Calls fetch(),but sets the method to 'GET'.
 
 ##### Signature
 
@@ -110,7 +113,7 @@ Promise<Response>
 
 ## post
 
-Calls fetch(), but sets the method to 'POST'.
+Calls fetch(),but sets the method to 'POST'.
 
 ##### Signature
 

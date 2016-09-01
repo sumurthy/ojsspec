@@ -1,11 +1,14 @@
 # ServiceKey class
 
+
+
 The ServiceKey is a lookup key that is used when calling ServiceScope.consume() 
 to fetch a dependency. The key also defines a default implementation of the 
 dependency, which will be autocreated by the root scope if the dependency is not found. 
 Providing a default implementation ensures that new dependencies can be safely 
 introduced without inadvertently breaking components that are loaded by an older host 
 (that does not provide the new dependency).
+
 
 
 ### Properties
@@ -24,9 +27,8 @@ introduced without inadvertently breaking components that are loaded by an older
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor)     | public | [ServiceKey](ServiceKey.md) | PRIVATE - Do not call this from your own code |
-|[{](#{)     | serviceClass: | ServiceKey<T>; | your application |
-|[createCustom](#createcustom)     | public, _static_ | ServiceKey<T> | your application |
+|[constructor](#constructor~93886)     | public | ServiceCreator<T> | PRIVATE - Do not call this from your own code |
+|[createCustom<T>](#createcustom<t>~94115)     | public, _static_ | [ServiceKey<T>](ServiceKey.md) | your application |
 
 
 
@@ -38,7 +40,7 @@ PRIVATE - Do not call this from your own code.
 ##### Signature
 
 #### Returns
-ServiceKey
+ServiceCreator<T>
 
 #### Parameters
 
@@ -50,24 +52,7 @@ ServiceKey
 | `defaultCreator`    | ServiceCreator<T> |  |
 
 
-## {
-
-your application.
-
-##### Signature
-
-#### Returns
-ServiceKey<T>;
-
-#### Parameters
-
-
-| Parameter	   | Type    | Description |
-|:-------------|:---------------|:------------|
-| `serviceScope`    | [ServiceScope](ServiceScope.md) |  |
-
-
-## createCustom
+## createCustom<T>
 
 your application.
 

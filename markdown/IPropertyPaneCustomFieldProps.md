@@ -8,12 +8,15 @@
 
 
 
+
+
+
 ## Functions
 
 | Function	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
 |onDispose      | undefined | | Event callback for onDispose |
-|onRender:      | undefined | | onRender will be called once the custom field mounted to the host element |
+|onRender      | undefined | | onRender will be called once the custom field mounted to the host element |
 
 
 ## onDispose
@@ -33,7 +36,7 @@ void
 | `elem`    | HTMLElement |  |
 
 
-## onRender:
+## onRender
 
 onRender will be called once the custom field mounted to the host element.
 

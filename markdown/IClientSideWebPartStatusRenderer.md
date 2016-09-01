@@ -1,6 +1,9 @@
 # IClientSideWebPartStatusRenderer interface
 
+
+
 error messages for a webpart.
+
 
 
 
@@ -11,10 +14,10 @@ error messages for a webpart.
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[clearError](#clearerror)      | void | Clear the webpart error message |
-|[clearLoadingIndicator](#clearloadingindicator)      | void | Clear the loading indicator |
-|[displayLoadingIndicator](#displayloadingindicator)      | void | Display a loading spinner |
-|[renderError](#rendererror)      | void | Render the provided error message in the webpart container div |
+|[clearError](#clearerror~11918)      | void | Clear the webpart error message |
+|[clearLoadingIndicator](#clearloadingindicator~98189)      | void | Clear the loading indicator |
+|[displayLoadingIndicator](#displayloadingindicator~12628)      | void | Display a loading spinner |
+|[renderError](#rendererror~11840)      | void | Render the provided error message in the webpart container div |
 
 
 

@@ -1,5 +1,7 @@
 # UrlQueryParameterCollection class
 
+
+
 Class for storing and retrieving query parameters. 
 The URL can be server-relative and it will parse empty/null strings. 
 The query parameters must start with ? to indicate the first query parameter and 
@@ -14,13 +16,14 @@ Query param with only equals (www.example.com/?=&debug=on stores empty string ke
 
 
 
+
 ## Methods
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor)     | public | [UrlQueryParameterCollection](UrlQueryParameterCollection.md) |  |
-|[getValue](#getvalue)     | public | string | Returns the value of the first matching query parameter or undefined if the key doesn't exist |
-|[getValues](#getvalues)     | public | string[] | Returns the values of all of the matching query parameters or undefined if the key doesn't exist |
+|[constructor](#constructor~55835)     | public | string |  |
+|[getValue](#getvalue~69182)     | public | string | Returns the value of the first matching query parameter or undefined if the key doesn't exist |
+|[getValues](#getvalues~86840)     | public | string[] | Returns the values of all of the matching query parameters or undefined if the key doesn't exist |
 
 
 
@@ -32,7 +35,7 @@ Query param with only equals (www.example.com/?=&debug=on stores empty string ke
 ##### Signature
 
 #### Returns
-UrlQueryParameterCollection
+string
 
 #### Parameters
 

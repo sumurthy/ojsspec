@@ -1,15 +1,15 @@
 {
   "IteratorResult<T>": {
-    "extendsName": null,
+    "implementsExtendsName": null,
     "descr": "",
     "properties": {
-      "done:": {
+      "done": {
         "descr": "",
         "dataType": "boolean",
         "isOptional": false,
         "isCollection": false
       },
-      "value:": {
+      "value": {
         "descr": "",
         "dataType": "T",
         "isOptional": true,
@@ -21,16 +21,18 @@
     "methods": {}
   },
   "Iterator<T>": {
-    "extendsName": null,
+    "implementsExtendsName": null,
     "descr": "",
     "properties": {},
     "functions": {},
     "objects": {},
     "methods": {
-      "next": {
+      "next~48721": {
         "descr": "",
         "genericType": null,
         "returnType": "IteratorResult<T>",
+        "accessModifier": "",
+        "signature": "",
         "isOptional": false,
         "returnDesc": null,
         "params": [
@@ -42,10 +44,12 @@
           }
         ]
       },
-      "return": {
+      "return~63273": {
         "descr": "",
         "genericType": null,
         "returnType": "IteratorResult<T>",
+        "accessModifier": "",
+        "signature": "",
         "isOptional": true,
         "returnDesc": null,
         "params": [
@@ -57,10 +61,12 @@
           }
         ]
       },
-      "throw": {
+      "throw~63281": {
         "descr": "",
         "genericType": null,
         "returnType": "IteratorResult<T>",
+        "accessModifier": "",
+        "signature": "",
         "isOptional": true,
         "returnDesc": null,
         "params": [
@@ -75,11 +81,11 @@
     }
   },
   "ForEachable<T>": {
-    "extendsName": null,
+    "implementsExtendsName": null,
     "descr": "",
     "properties": {},
     "functions": {
-      "forEach": {
+      "forEach~14146": {
         "descr": "",
         "isOptional": false,
         "returnType": "void): void",
@@ -97,11 +103,11 @@
     "objects": {},
     "methods": {}
   },
-  "Map<K,": {
-    "extendsName": null,
+  "Map<K,V>": {
+    "implementsExtendsName": null,
     "descr": "",
     "properties": {
-      "size:": {
+      "size": {
         "descr": "",
         "dataType": "number",
         "isOptional": false,
@@ -109,10 +115,10 @@
       }
     },
     "functions": {
-      "forEach": {
+      "forEach~65880": {
         "descr": "",
         "isOptional": false,
-        "returnType": "void, thisArg?: any): void",
+        "returnType": "void,thisArg?: any): void",
         "returnDescr": null,
         "params": [
           {
@@ -143,18 +149,22 @@
     },
     "objects": {},
     "methods": {
-      "clear": {
+      "clear~71758": {
         "descr": "",
         "genericType": null,
         "returnType": "void",
+        "accessModifier": "",
+        "signature": "",
         "isOptional": false,
         "returnDesc": null,
         "params": []
       },
-      "delete": {
+      "delete~46940": {
         "descr": "",
         "genericType": null,
         "returnType": "boolean",
+        "accessModifier": "",
+        "signature": "",
         "isOptional": false,
         "returnDesc": null,
         "params": [
@@ -166,10 +176,12 @@
           }
         ]
       },
-      "get": {
+      "get~64647": {
         "descr": "",
         "genericType": null,
         "returnType": "V",
+        "accessModifier": "",
+        "signature": "",
         "isOptional": false,
         "returnDesc": null,
         "params": [
@@ -181,10 +193,12 @@
           }
         ]
       },
-      "has": {
+      "has~19008": {
         "descr": "",
         "genericType": null,
         "returnType": "boolean",
+        "accessModifier": "",
+        "signature": "",
         "isOptional": false,
         "returnDesc": null,
         "params": [
@@ -196,10 +210,12 @@
           }
         ]
       },
-      "set": {
+      "set~86072": {
         "descr": "",
         "genericType": null,
-        "returnType": "Map<K, V>",
+        "returnType": "Map<K,V>",
+        "accessModifier": "",
+        "signature": "",
         "isOptional": false,
         "returnDesc": null,
         "params": [
@@ -217,26 +233,32 @@
           }
         ]
       },
-      "entries": {
+      "entries~17780": {
         "descr": "",
         "genericType": null,
-        "returnType": "Iterator<[K, V]>",
+        "returnType": "Iterator<[K,V]>",
+        "accessModifier": "",
+        "signature": "",
         "isOptional": false,
         "returnDesc": null,
         "params": []
       },
-      "keys": {
+      "keys~94863": {
         "descr": "",
         "genericType": null,
         "returnType": "Iterator<K>",
+        "accessModifier": "",
+        "signature": "",
         "isOptional": false,
         "returnDesc": null,
         "params": []
       },
-      "values": {
+      "values~95382": {
         "descr": "",
         "genericType": null,
         "returnType": "Iterator<V>",
+        "accessModifier": "",
+        "signature": "",
         "isOptional": false,
         "returnDesc": null,
         "params": []
@@ -244,12 +266,12 @@
     }
   },
   "MapConstructor": {
-    "extendsName": null,
+    "implementsExtendsName": null,
     "descr": "",
     "properties": {
-      "prototype:": {
+      "prototype": {
         "descr": "",
-        "dataType": "Map<any, any>",
+        "dataType": "Map<any,any>",
         "isOptional": false,
         "isCollection": false
       }
@@ -257,10 +279,22 @@
     "functions": {},
     "objects": {},
     "methods": {
-      "new": {
+      "constructor<K,V>~42994": {
         "descr": "",
-        "genericType": "K, V",
-        "returnType": "Map<K, V>",
+        "genericType": "K,V",
+        "returnType": "Map<K,V>",
+        "accessModifier": "",
+        "signature": "",
+        "isOptional": false,
+        "returnDesc": null,
+        "params": []
+      },
+      "constructor<K,V>~74739": {
+        "descr": "",
+        "genericType": "K,V",
+        "returnType": "Map<K,V>",
+        "accessModifier": "",
+        "signature": "",
         "isOptional": false,
         "returnDesc": null,
         "params": [
@@ -280,10 +314,10 @@
     }
   },
   "Set<T>": {
-    "extendsName": null,
+    "implementsExtendsName": null,
     "descr": "",
     "properties": {
-      "size:": {
+      "size": {
         "descr": "",
         "dataType": "number",
         "isOptional": false,
@@ -291,10 +325,10 @@
       }
     },
     "functions": {
-      "forEach": {
+      "forEach~78032": {
         "descr": "",
         "isOptional": false,
-        "returnType": "void, thisArg?: any): void",
+        "returnType": "void,thisArg?: any): void",
         "returnDescr": null,
         "params": [
           {
@@ -320,10 +354,12 @@
     },
     "objects": {},
     "methods": {
-      "add": {
+      "add~44556": {
         "descr": "",
         "genericType": null,
         "returnType": "Set<T>",
+        "accessModifier": "",
+        "signature": "",
         "isOptional": false,
         "returnDesc": null,
         "params": [
@@ -335,18 +371,22 @@
           }
         ]
       },
-      "clear": {
+      "clear~35878": {
         "descr": "",
         "genericType": null,
         "returnType": "void",
+        "accessModifier": "",
+        "signature": "",
         "isOptional": false,
         "returnDesc": null,
         "params": []
       },
-      "delete": {
+      "delete~60713": {
         "descr": "",
         "genericType": null,
         "returnType": "boolean",
+        "accessModifier": "",
+        "signature": "",
         "isOptional": false,
         "returnDesc": null,
         "params": [
@@ -358,10 +398,12 @@
           }
         ]
       },
-      "has": {
+      "has~18904": {
         "descr": "",
         "genericType": null,
         "returnType": "boolean",
+        "accessModifier": "",
+        "signature": "",
         "isOptional": false,
         "returnDesc": null,
         "params": [
@@ -373,26 +415,32 @@
           }
         ]
       },
-      "entries": {
+      "entries~48054": {
         "descr": "",
         "genericType": null,
-        "returnType": "Iterator<[T, T]>",
+        "returnType": "Iterator<[T,T]>",
+        "accessModifier": "",
+        "signature": "",
         "isOptional": false,
         "returnDesc": null,
         "params": []
       },
-      "keys": {
+      "keys~85637": {
         "descr": "",
         "genericType": null,
         "returnType": "Iterator<T>",
+        "accessModifier": "",
+        "signature": "",
         "isOptional": false,
         "returnDesc": null,
         "params": []
       },
-      "values": {
+      "values~87530": {
         "descr": "",
         "genericType": null,
         "returnType": "Iterator<T>",
+        "accessModifier": "",
+        "signature": "",
         "isOptional": false,
         "returnDesc": null,
         "params": []
@@ -400,10 +448,10 @@
     }
   },
   "SetConstructor": {
-    "extendsName": null,
+    "implementsExtendsName": null,
     "descr": "",
     "properties": {
-      "prototype:": {
+      "prototype": {
         "descr": "",
         "dataType": "Set<any>",
         "isOptional": false,
@@ -413,10 +461,22 @@
     "functions": {},
     "objects": {},
     "methods": {
-      "new": {
+      "constructor<T>~60750": {
         "descr": "",
         "genericType": "T",
         "returnType": "Set<T>",
+        "accessModifier": "",
+        "signature": "",
+        "isOptional": false,
+        "returnDesc": null,
+        "params": []
+      },
+      "constructor<T>~68248": {
+        "descr": "",
+        "genericType": "T",
+        "returnType": "Set<T>",
+        "accessModifier": "",
+        "signature": "",
         "isOptional": false,
         "returnDesc": null,
         "params": [
@@ -430,17 +490,19 @@
       }
     }
   },
-  "WeakMap<K,": {
-    "extendsName": null,
+  "WeakMap<K,V>": {
+    "implementsExtendsName": null,
     "descr": "",
     "properties": {},
     "functions": {},
     "objects": {},
     "methods": {
-      "delete": {
+      "delete~24951": {
         "descr": "",
         "genericType": null,
         "returnType": "boolean",
+        "accessModifier": "",
+        "signature": "",
         "isOptional": false,
         "returnDesc": null,
         "params": [
@@ -452,18 +514,22 @@
           }
         ]
       },
-      "clear": {
+      "clear~80849": {
         "descr": "",
         "genericType": null,
         "returnType": "void",
+        "accessModifier": "",
+        "signature": "",
         "isOptional": false,
         "returnDesc": null,
         "params": []
       },
-      "get": {
+      "get~92751": {
         "descr": "",
         "genericType": null,
         "returnType": "V",
+        "accessModifier": "",
+        "signature": "",
         "isOptional": false,
         "returnDesc": null,
         "params": [
@@ -475,10 +541,12 @@
           }
         ]
       },
-      "has": {
+      "has~97634": {
         "descr": "",
         "genericType": null,
         "returnType": "boolean",
+        "accessModifier": "",
+        "signature": "",
         "isOptional": false,
         "returnDesc": null,
         "params": [
@@ -490,10 +558,12 @@
           }
         ]
       },
-      "set": {
+      "set~81665": {
         "descr": "",
         "genericType": null,
-        "returnType": "WeakMap<K, V>",
+        "returnType": "WeakMap<K,V>",
+        "accessModifier": "",
+        "signature": "",
         "isOptional": false,
         "returnDesc": null,
         "params": [
@@ -514,12 +584,12 @@
     }
   },
   "WeakMapConstructor": {
-    "extendsName": null,
+    "implementsExtendsName": null,
     "descr": "",
     "properties": {
-      "prototype:": {
+      "prototype": {
         "descr": "",
-        "dataType": "WeakMap<any, any>",
+        "dataType": "WeakMap<any,any>",
         "isOptional": false,
         "isCollection": false
       }
@@ -527,10 +597,22 @@
     "functions": {},
     "objects": {},
     "methods": {
-      "new": {
+      "constructor<K,V>~42166": {
         "descr": "",
-        "genericType": "K, V",
-        "returnType": "WeakMap<K, V>",
+        "genericType": "K,V",
+        "returnType": "WeakMap<K,V>",
+        "accessModifier": "",
+        "signature": "",
+        "isOptional": false,
+        "returnDesc": null,
+        "params": []
+      },
+      "constructor<K,V>~18087": {
+        "descr": "",
+        "genericType": "K,V",
+        "returnType": "WeakMap<K,V>",
+        "accessModifier": "",
+        "signature": "",
         "isOptional": false,
         "returnDesc": null,
         "params": [
@@ -550,16 +632,18 @@
     }
   },
   "WeakSet<T>": {
-    "extendsName": null,
+    "implementsExtendsName": null,
     "descr": "",
     "properties": {},
     "functions": {},
     "objects": {},
     "methods": {
-      "delete": {
+      "delete~23844": {
         "descr": "",
         "genericType": null,
         "returnType": "boolean",
+        "accessModifier": "",
+        "signature": "",
         "isOptional": false,
         "returnDesc": null,
         "params": [
@@ -571,18 +655,22 @@
           }
         ]
       },
-      "clear": {
+      "clear~97087": {
         "descr": "",
         "genericType": null,
         "returnType": "void",
+        "accessModifier": "",
+        "signature": "",
         "isOptional": false,
         "returnDesc": null,
         "params": []
       },
-      "add": {
+      "add~77073": {
         "descr": "",
         "genericType": null,
         "returnType": "WeakSet<T>",
+        "accessModifier": "",
+        "signature": "",
         "isOptional": false,
         "returnDesc": null,
         "params": [
@@ -594,10 +682,12 @@
           }
         ]
       },
-      "has": {
+      "has~97051": {
         "descr": "",
         "genericType": null,
         "returnType": "boolean",
+        "accessModifier": "",
+        "signature": "",
         "isOptional": false,
         "returnDesc": null,
         "params": [
@@ -612,10 +702,10 @@
     }
   },
   "WeakSetConstructor": {
-    "extendsName": null,
+    "implementsExtendsName": null,
     "descr": "",
     "properties": {
-      "prototype:": {
+      "prototype": {
         "descr": "",
         "dataType": "WeakSet<any>",
         "isOptional": false,
@@ -625,10 +715,22 @@
     "functions": {},
     "objects": {},
     "methods": {
-      "new": {
+      "constructor<T>~98085": {
         "descr": "",
         "genericType": "T",
         "returnType": "WeakSet<T>",
+        "accessModifier": "",
+        "signature": "",
+        "isOptional": false,
+        "returnDesc": null,
+        "params": []
+      },
+      "constructor<T>~23825": {
+        "descr": "",
+        "genericType": "T",
+        "returnType": "WeakSet<T>",
+        "accessModifier": "",
+        "signature": "",
         "isOptional": false,
         "returnDesc": null,
         "params": [

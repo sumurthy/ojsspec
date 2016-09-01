@@ -7,14 +7,17 @@
 
 
 
+
+
+
 ## Methods
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[delete](#delete)      | boolean |  |
-|[clear](#clear)      | void |  |
-|[add](#add)      | [WeakSet<T>](WeakSet.md) |  |
-|[has](#has)      | boolean |  |
+|[delete](#delete~23844)      | boolean |  |
+|[clear](#clear~97087)      | void |  |
+|[add](#add~77073)      | [WeakSet<T>](WeakSet.md) |  |
+|[has](#has~97051)      | boolean |  |
 
 
 

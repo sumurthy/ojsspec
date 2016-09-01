@@ -4,11 +4,14 @@
 
 
 
+
+
+
 ### Properties
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`prototype:`      | Set<any> |  |
+|`prototype`      | [Set<any>](Set.md) |  |
 
 
 
@@ -17,11 +20,25 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[new](#new)      | [Set<T>](Set.md) |  |
+|[constructor<T>](#constructor<t>~60750)      | [Set<T>](Set.md) |  |
+|[constructor<T>](#constructor<t>~68248)      | [Set<T>](Set.md) |  |
 
 
 
-## new
+## constructor<T>
+
+
+
+##### Signature
+
+#### Returns
+Set<T>
+
+#### Parameters
+None
+
+
+## constructor<T>
 
 
 

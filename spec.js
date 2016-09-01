@@ -13,6 +13,8 @@ const BLOCK_BEGIN = '{'
 const BLOCK_END = '}'
 const IGNORES = ['@todo:']
 const CLASSDEF = 'declare class'
+const TYPEDEF = 'declare type'
+const VARIABLEDEF = 'declare var'
 const INTERFACEDEF = 'interface'
 const ENUM = 'enum '
 const FUNCTION = 'function '
@@ -30,6 +32,8 @@ let iBlock = 0
 let nClass = 0
 let nFunction = 0
 let nEnum = 0
+let nVariable = 0
+let nType = 0
 let nInterface = 0
 
 // GLOBAL - TYPES OF OBJECT
@@ -46,6 +50,8 @@ let className = ''
 let functionObj = {}
 let methodObj = {}
 let propObj = {}
+let typeObj = {}
+let variableObj = {}
 let generalDesc = ''
 let commentObject = {
     'param': []
@@ -56,12 +62,17 @@ function file_reset() {
     nFunction = 0
     nEnum = 0
     nInterface = 0
+    nVariable = 0
+    nType = 0
     mode = ''
     enumObj = {}
     enumKey = ''
     classObj = {}
     functionObj = {}
     iObj = {}
+    propObj = {}
+    typeObj = {}
+    variableObj = {}
     interfaceName = ''
     methodObj = {}
     propObj = {}
@@ -95,6 +106,16 @@ function comment_reset() {
     }
 }
 
+function expandAllTypes() {
+
+    allTypes['types'].forEach((e) => {
+        if (e.includes('<')) {
+            allTypes['types'].push(Utils.trimGenerics(e))
+        }
+    })
+    allTypes['types'] = allTypes['types'].sort().filter((elem, i, arr) => arr.indexOf(elem) === i)
+    return
+}
 /**
  * Process the lines in sequence and control workflow.
  *
@@ -107,22 +128,32 @@ function processLines(element = '', index = 0, lines = []) {
     if (ignore_lines.includes(index)) {
         return
     }
+    // Trim line, remove ';' and extra spaces after comma, and 1+ white space to 1 whitespace
     let line = element.split('//')[0]
-    line = element.replace(/\s+/g, ' ').trim().replace(';', '')
+    line = line.replace(/\s+/g, ' ').trim()
+    line = line.replace(/,\s/g, ',').trim()
+    line = line.replace(';','')
     let isStatic = false
+
+    // Should it be ' static ' or 'static '
     if (line.includes(' static ')) {
         isStatic = true
         line = line.replace(' static ', ' ')
     }
 
 
-    // if (line.includes(BLOCK_BEGIN) && line.includes(BLOCK_END)) {
-    //     return
-    // }
+    if (line.includes(BLOCK_BEGIN) && line.includes(BLOCK_END)) {
+        return
+    }
 
     let firstWord = line.split(' ', 1)[0]
     let secondWord = line.split(' ', 2)[1]
     secondWord = secondWord || 'OBJECTERROR'
+
+    if ((firstWord === 'new') || (firstWord.startsWith('new'))) {
+        firstWord = Utils.getMethodName(line)
+    }
+
     let thirdWord = line.split(' ', 3)[2]
     let lastWord = line.split(':').pop()
     if (!COMMENT_ALL.includes(firstWord)) {
@@ -203,11 +234,12 @@ function processLines(element = '', index = 0, lines = []) {
         allTypes.types.push(interfaceName)
         var extendsName = null
         if (line.includes('extends')) {
-            extendsName = line.split('extends ')[1].split(BLOCK_BEGIN)[0].trim()
+            extendsName = line.split('extends ')[1]
+            extendsName = extendsName.split(BLOCK_BEGIN)[0].trim()
         }
         // Build a interface object
         iObj[interfaceName] = {} // JSON.parse(JSON.stringify(Objects.method))
-        iObj[interfaceName]['extendsName'] = extendsName
+        iObj[interfaceName]['implementsExtendsName'] = extendsName
         iObj[interfaceName]['descr'] = generalDesc
         iObj[interfaceName]['properties'] = {}
         iObj[interfaceName]['functions'] = {}
@@ -227,7 +259,7 @@ function processLines(element = '', index = 0, lines = []) {
 
         // Build a interface object
         classObj[className] = {} // JSON.parse(JSON.stringify(Objects.method))
-        classObj[className]['implementsName'] = implementsName
+        classObj[className]['implementsExtendsName'] = implementsName
         classObj[className]['genericType'] = Utils.genericInside(line.split(' ')[2])
         classObj[className]['descr'] = generalDesc
         classObj[className]['properties'] = {}
@@ -235,10 +267,29 @@ function processLines(element = '', index = 0, lines = []) {
         classObj[className]['functions'] = {}
         comment_reset()
         return
-    } else if (line.includes(ENUM)) {
+    }
+    else if (line.includes(TYPEDEF)) {
+        nType++
+        var name = Utils.cleanupName(thirdWord)
+        typeObj[name] = {}
+        typeObj[name]['alias'] = line.split('=')[1].trim()
+        typeObj[name]['descr'] = generalDesc
+        comment_reset()
+
+    }
+    else if (line.includes(VARIABLEDEF)) {
+        nVariable++
+        var name = Utils.cleanupName(thirdWord)
+        variableObj[name] = {}
+        variableObj[name]['dataType'] = line.split(':')[1].trim()
+        variableObj[name]['dataType'] = variableObj[name]['dataType'].replace('typeof ', '')
+        variableObj[name]['descr'] = generalDesc
+        comment_reset()
+
+    }
+    else if (line.includes(ENUM)) {
         nEnum++
         enumKey = (firstWord == 'declare') ? thirdWord : secondWord
-        console.log(`ename is: ${enumKey}`);
         if (line.includes(BLOCK_BEGIN) && line.includes(BLOCK_END)) {
             enumObj[enumKey] = {}
             enumObj[enumKey]['descr'] = generalDesc
@@ -264,7 +315,8 @@ function processLines(element = '', index = 0, lines = []) {
         }
         return
     } else if (line.includes(FUNCTION)) {
-        var name = line.split('(')[0].split(' ').pop()
+        //var name = line.split('(')[0].split(' ').pop()
+        var name = Utils.getMethodName(line)
             // Build a function object
         functionObj[name] = {} // JSON.parse(JSON.stringify(Objects.method))
         functionObj[name]['descr'] = generalDesc
@@ -299,16 +351,17 @@ function processLines(element = '', index = 0, lines = []) {
                     f['returnDescr'] = (commentObject['returnDescr'] === undefined) ?
                         null : commentObject['returnDescr']
                     f['params'] = Utils.buildParamList(line, commentObject['param'])
-                    var name = Utils.getName(firstWord)
+                    var name = Utils.getMethodName(line)
                     iObj[interfaceName]['functions'][name] = f
                 } else if (line.includes(')') && line.includes('(')) { // has brackets
                     var m = {}
-                    var name = Utils.getName(firstWord)
+                    var name = Utils.getMethodName(line)
 
                     m['descr'] = generalDesc
                     m['genericType'] = Utils.genericInside(line.split('(')[0])
                     m['returnType'] = lastWord.trim()
-
+                    m['accessModifier'] = ''
+                    m['signature'] = ''
                     if ( (firstWord.split('(')[0].includes('?')) || (secondWord === '?')) {
                         m['isOptional'] = true
                     }
@@ -326,7 +379,7 @@ function processLines(element = '', index = 0, lines = []) {
                     iBlock--
                 } else {
                     var p = {}
-                    var name = Utils.getName(firstWord)
+                    var name = Utils.getPropName(firstWord)
                     p['descr'] = generalDesc
                     p['dataType'] = lastWord.trim()
 
@@ -345,12 +398,8 @@ function processLines(element = '', index = 0, lines = []) {
             case 'CLASS':
                 if (line.includes(')') && line.includes('(')) { // has brackets
 
-                    if (line.includes('constructor')) {
-                        name = 'constructor'
-                    } else {
-                        name = secondWord.split('(')[0].trim()
-                    }
-                    name = name || "ErrorErrorError"
+                    name = Utils.getMethodName(line)
+                    name = name || "ErrorErrorError~99999"
                     var m = Utils.processMethod(line, generalDesc, commentObject, className, name, true, isStatic)
 
                     classObj[className]['methods'][name] = m
@@ -364,7 +413,7 @@ function processLines(element = '', index = 0, lines = []) {
                         var name = secondWord.replace(':', '')
                     }
                     else {
-                        var name = 'OBJECTERROR'
+                        var name = 'PROPERTYNAMEERROR~99999'
                     }
                     var p = Utils.processProperty(line, generalDesc)
                     classObj[className]['properties'][name] = p
@@ -378,11 +427,16 @@ function processLines(element = '', index = 0, lines = []) {
                     enumObj[enumKey]['values'].push(v)
                 }
                 else {
-                    var v = []
-                    v[0] = firstWord.replace(',', '')
-                    v[1] = ''
-                    v[2] = generalDesc
-                    enumObj[enumKey]['values'].push(v)
+                    var ea = line.split(',')
+                    ea.forEach((en) => {
+                        var v = []
+                        v[0] = en.replace(/"/g, '').replace(/,/,'').trim()
+                        v[1] = ''
+                        v[2] = generalDesc
+                        if (v[0]) {
+                            enumObj[enumKey]['values'].push(v)
+                        }
+                    })
                 }
                 break;
             case 'FUNCTION':
@@ -398,20 +452,24 @@ function processLines(element = '', index = 0, lines = []) {
 console.log('** Starting Program...')
 SetUp.cleanupOutput('./json')
 
-let files = FileOps.walkFiles('./input')
+let files = FileOps.walkFiles('./input-scrubbed')
 files.forEach(processFile)
 
 function processFile(fileName) {
     console.log(`** Processing ${fileName}`)
 
-    let lines = FileOps.loadFile(`./input/${fileName}`)
+    let lines = FileOps.loadFile(`./input-scrubbed/${fileName}`)
     lines.forEach(processLines);
     FileOps.writeObject(enumObj, `./json/${fileName}_enum.json`)
     FileOps.writeObject(functionObj, `./json/${fileName}_function.json`)
     FileOps.writeObject(iObj, `./json/${fileName}_interface.json`)
     FileOps.writeObject(classObj, `./json/${fileName}_class.json`)
+    FileOps.writeObject(typeObj, `./json/${fileName}_type.json`)
+    FileOps.writeObject(variableObj, `./json/${fileName}_variable.json`)
+    expandAllTypes()
     FileOps.writeObject(allTypes, `./json/allTypes.json`)
 
-    console.log(`*** interface = ${nInterface}, class = ${nClass}, function = ${nFunction}, enum = ${nEnum}`);
+    console.log(`*** interface = ${nInterface}, class = ${nClass},
+        function = ${nFunction}, enum = ${nEnum}, variable = ${nVariable}, type = ${nType}`);
     file_reset()
 }

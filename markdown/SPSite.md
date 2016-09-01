@@ -1,7 +1,10 @@
 # SPSite class
 
+
+
 This class is primarily used with the PageContext class. It provides contextual 
 information for the SharePoint site collection ("site") that hosts the page. 
+
 
 
 

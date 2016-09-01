@@ -1,6 +1,9 @@
 # IODataBasePermission interface
 
+
+
 Data used for creating a SPPermission object.
+
 
 
 
@@ -8,8 +11,8 @@ Data used for creating a SPPermission object.
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`High:`      | number |  |
-|`Low:`      | number |  |
+|`High`      | number |  |
+|`Low`      | number |  |
 
 
 

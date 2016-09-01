@@ -4,11 +4,14 @@
 
 
 
+
+
+
 ### Properties
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`prototype:`      | WeakSet<any> |  |
+|`prototype`      | [WeakSet<any>](WeakSet.md) |  |
 
 
 
@@ -17,11 +20,25 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[new](#new)      | [WeakSet<T>](WeakSet.md) |  |
+|[constructor<T>](#constructor<t>~98085)      | [WeakSet<T>](WeakSet.md) |  |
+|[constructor<T>](#constructor<t>~23825)      | [WeakSet<T>](WeakSet.md) |  |
 
 
 
-## new
+## constructor<T>
+
+
+
+##### Signature
+
+#### Returns
+WeakSet<T>
+
+#### Parameters
+None
+
+
+## constructor<T>
 
 
 

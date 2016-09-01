@@ -1,7 +1,10 @@
 # Compare class
 
+
+
  
 This class contains various comparison utilities. 
+
 
 
 
@@ -12,7 +15,7 @@ This class contains various comparison utilities.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[shallowCompare](#shallowcompare)     | public, _static_ | boolean | Performs shallow comparison between two objects to determine if they are equal |
+|[shallowCompare](#shallowcompare~39803)     | public, _static_ | boolean | Performs shallow comparison between two objects to determine if they are equal |
 
 
 

@@ -1,4 +1,4 @@
-## getPathNameFromAbsoluteUrl
+## exportgetPathNameFromAbsoluteUrl
 
 Get's the path name from an absolute url. 
 

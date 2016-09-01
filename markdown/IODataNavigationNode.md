@@ -1,7 +1,10 @@
 # IODataNavigationNode interface
 
+
+
 Represents an OData SP.NavigationNode object. 
-https://msdn.microsoft.com/en-us/library/office/jj246311.aspx
+https:
+
 
 
 

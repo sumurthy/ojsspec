@@ -1,6 +1,6 @@
 ## race<R>
 
-Make a Promise that fulfills when any item fulfills, and rejects if any item rejects.
+Make a Promise that fulfills when any item fulfills,and rejects if any item rejects.
 
 ##### Signature
 

@@ -1,6 +1,8 @@
 # Guid class
 
-This class represents a globally unique identifier, as described by 
+
+
+This class represents a globally unique identifier,as described by 
 IETF RFC 4122. The input string is normalized and validated by the class 
 constructor, which provides important guarantees that simplify other code 
 that works with the GUID. This class also provides basic functionality 
@@ -13,15 +15,16 @@ Math.random() function and may be not be suitable for some applications.
 
 
 
+
 ## Methods
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[equals](#equals)     | public | boolean | represent the same value |
-|[isValid](#isvalid)     | public, _static_ | boolean | Indicates whether a guid is valid (according to RFC4122) |
-|[newGuid](#newguid)     | public, _static_ | [Guid](Guid.md) | Returns a new Guid instance with a pseudo-randomly generated Guid |
-|[toString](#tostring)     | public | string | Example: 'd5369f3b-bd7a-412a-9c0f-7f0650bb5489' |
-|[tryParse](#tryparse)     | public, _static_ | [Guid](Guid.md) | Trys to construct a new Guid instance using guid string |
+|[equals](#equals~91036)     | public | boolean | represent the same value |
+|[isValid](#isvalid~79246)     | public, _static_ | boolean | Indicates whether a guid is valid (according to RFC4122) |
+|[constructorGuid](#constructorguid~69818)     | public, _static_ | [Guid](Guid.md) | Returns a new Guid instance with a pseudo-randomly generated Guid |
+|[toString](#tostring~60006)     | public | string | Example: 'd5369f3b-bd7a-412a-9c0f-7f0650bb5489' |
+|[tryParse](#tryparse~41276)     | public, _static_ | [Guid](Guid.md) | Trys to construct a new Guid instance using guid string |
 
 
 
@@ -61,7 +64,7 @@ boolean
 | `guid`    | string |  |
 
 
-## newGuid
+## constructorGuid
 
 Returns a new Guid instance with a pseudo-randomly generated Guid. 
 

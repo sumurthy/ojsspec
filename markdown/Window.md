@@ -4,12 +4,8 @@
 
 
 
-### Properties
 
-| Property	   | Type	| Description|
-|:-------------|:-------|:-----------|
-|`}`      | } |  |
-|`declare`      | typeof window.fetch |  |
+
 
 
 
@@ -18,7 +14,7 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[fetch](#fetch)      | Promise<Response> |  |
+|[fetch](#fetch~93996)      | [Promise<Response>](Promise.md) |  |
 
 
 

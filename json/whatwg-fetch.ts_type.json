@@ -1,0 +1,14 @@
+{
+  "HeaderInit": {
+    "alias": "Headers|Array<string>",
+    "descr": ""
+  },
+  "BodyInit": {
+    "alias": "Blob|FormData|string",
+    "descr": ""
+  },
+  "RequestInfo": {
+    "alias": "Request|string",
+    "descr": ""
+  }
+}

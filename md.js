@@ -7,6 +7,8 @@ let functionObj = {}
 let iObj = {}
 let classObj = {}
 let enumObj = {}
+let variableObj = {}
+let typeObj = {}
 let region = ''
 let mdout = []
 let mem_mdout = []
@@ -53,16 +55,23 @@ function file_reset() {
 function getLinkForType(type = '') {
 
     var out = ''
+    var splitChar = ','
+    if (type.includes('|')) {
+        splitChar = '|'
+    }
 
-    type.split('|').forEach((e) => {
+    type.split(splitChar).forEach((e) => {
         if (allTypes.includes(e.trim())) {
-
             out = out + `[${e}](${Utils.trimGenerics(e)}.md)` + ','
-        } else {
+        }
+        else if (allTypes.includes(Utils.trimGenerics(e))) {
+            out = out + `[${e}](${Utils.trimGenerics(e)}.md)` + ','
+        }
+        else {
             out = out + e + ','
         }
     })
-
+    out = out.trim()
     if (out.endsWith(',')) {
         out = out.substring(0, out.length - 1)
     }
@@ -164,6 +173,16 @@ function set_region(tline = '', obj = {}, localName = '', isClass = true) {
                     skipFlag = true
                 }
                 break;
+            case 'typedef':
+                if (Object.keys(typeObj).length === 0) {
+                    skipFlag = true
+                }
+                break;
+            case 'variable':
+                if (Object.keys(variableObj).length === 0) {
+                    skipFlag = true
+                }
+                break;
             case 'enumeration':
                 if (Object.keys(enumObj).length === 0) {
                     skipFlag = true
@@ -202,11 +221,21 @@ function doSubClassInterface(tline = '', localO = {}, localName = '', isClass = 
             tline = tline.replace('%resourcetype%', 'interface')
         }
     }
+    if (tline.includes('%extendsimplements%')) {
+        if (localO[localName]['implementsExtendsName']) {
+            var ielink = getLinkForType(localO[localName]['implementsExtendsName'])
+            tline = tline.replace('%extendsimplements%',
+                        `_Implements/extends: ${ielink}_`)
+        }
+        else {
+            tline = tline.replace('%extendsimplements%', '')
+        }
+    }
     return tline
 }
 
 function doSubMember(tline = '', member = {}, membername = '') {
-    if (tline.includes('%membername%')) tline = tline.replace('%membername%', membername)
+    if (tline.includes('%membername%')) tline = tline.replace('%membername%', membername.split('~')[0])
     if (tline.includes('%memberdescription%')) tline = tline.replace('%memberdescription%', member['descr'])
     if (tline.includes('%apisignature%')) tline = tline.replace('%apisignature%', member['signature'])
 
@@ -244,6 +273,14 @@ var dFunction = {
 
     enumerationGenIndividual: function(e = '') {
 
+    },
+
+    typedefGenIndividual: function(e = '') {
+
+    },
+
+    variableGenIndividual: function(e = '') {
+
     }
 }
 
@@ -262,13 +299,21 @@ function addRegions(tline = '', type = '') {
         case 'enumeration':
             o = enumObj
             break;
+        case 'typedef':
+            o = typeObj
+            break;
+        case 'variable':
+            o = variableObj
+            break;
         default:
 
     }
 
     Object.keys(o).forEach((e) => {
         var mline = dclone(tline).substr(1)
-        mline = mline.replace('%name%', e)
+        mline = mline.replace('%name%', e.split('~')[0])
+        mline = mline.replace('%type%', o[e]['dataType'])
+
         mline = mline.replace('%link%', `${e}`)
             //Get first sentence
         var descr = o[e]['descr']
@@ -317,9 +362,9 @@ function addMembers(tline = '', type = '', name = '', localO = {}) {
         }
         if ((type === 'method') || type === 'imethod') {
             mline = mline.replace('%type%', `${getLinkForType(o[e]['returnType'])}`)
-            mline = mline.replace('%name%', `[${e}](#${e.toLowerCase()})`)
+            mline = mline.replace('%name%', `[${e.split('~')[0]}](#${e.toLowerCase()})`)
         } else {
-            mline = mline.replace('%name%', e)
+            mline = mline.replace('%name%', e.split('~')[0])
             mline = mline.replace('%type%', `${getLinkForType(o[e]['dataType'])}`)
         }
 
@@ -482,6 +527,8 @@ function genModuleView() {
                 case 'functions':
                 case 'interface':
                 case 'enumeration':
+                case 'variable':
+                case 'typedef':
                     addRegions(tline, region)
                     break;
                 default:
@@ -589,7 +636,14 @@ function loadModule(files = []) {
         } else if (e.includes('_function.json')) {
             functionObj = JSON.parse(FileOps.loadJson(`./json/${e}`))
             console.log(`*** Read Function JSON file, ${Object.keys(functionObj)}`)
-        } else {
+        } else if (e.includes('_variable.json')) {
+            variableObj = JSON.parse(FileOps.loadJson(`./json/${e}`))
+            console.log(`*** Read Variable JSON file, ${Object.keys(variableObj)}`)
+        } else if (e.includes('_type.json')) {
+            typeObj = JSON.parse(FileOps.loadJson(`./json/${e}`))
+            console.log(`*** Read Typedef JSON file, ${Object.keys(typeObj)}`)
+        }
+        else {
             throw "Unrecognized file in inut JSON folder. Should be *_{class|enum|function|interface).json"
         }
 

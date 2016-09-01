@@ -3,11 +3,8 @@
 
 
 
-### Properties
 
-| Property	   | Access Modifier | Type	| Description|
-|:-------------|:----|:-------|:-----------|
-|`OBJECTERROR`     | } | } |  |
+
 
 
 
@@ -16,15 +13,18 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[string,](#string,)     | set(name: | void |  |
-|[string):void](#string):void)     | delete(name: | void |  |
-|[string):](#string):)     | has(name: | boolean |  |
-|[ErrorErrorError](#errorerrorerror)     | forEach(callback: | void |  |
+|[append](#append~77220)     | public | void |  |
+|[delete](#delete~76807)     | public | void |  |
+|[get](#get~23352)     | public | string |  |
+|[getAll](#getall~24498)     | public | Array<string> |  |
+|[has](#has~34415)     | public | boolean |  |
+|[set](#set~48615)     | public | void |  |
+|[forEach](#foreach~90709)     | public | void |  |
 
 
 
 
-## string,
+## append
 
 
 
@@ -42,7 +42,7 @@ void
 | `value`    | string |  |
 
 
-## string):void
+## delete
 
 
 
@@ -59,7 +59,41 @@ void
 | `name`    | string |  |
 
 
-## string):
+## get
+
+
+
+##### Signature
+
+#### Returns
+string
+
+#### Parameters
+
+
+| Parameter	   | Type    | Description |
+|:-------------|:---------------|:------------|
+| `name`    | string |  |
+
+
+## getAll
+
+
+
+##### Signature
+
+#### Returns
+Array<string>
+
+#### Parameters
+
+
+| Parameter	   | Type    | Description |
+|:-------------|:---------------|:------------|
+| `name`    | string |  |
+
+
+## has
 
 
 
@@ -76,7 +110,25 @@ boolean
 | `name`    | string |  |
 
 
-## ErrorErrorError
+## set
+
+
+
+##### Signature
+
+#### Returns
+void
+
+#### Parameters
+
+
+| Parameter	   | Type    | Description |
+|:-------------|:---------------|:------------|
+| `name`    | string |  |
+| `value`    | string |  |
+
+
+## forEach
 
 
 

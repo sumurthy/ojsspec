@@ -1,4 +1,4 @@
-## combineURLPaths
+## exportcombineURLPaths
 
 Combines any number of URL paths.
 

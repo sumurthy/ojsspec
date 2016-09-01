@@ -1,7 +1,10 @@
 # UrlUtilities class
 
+
+
 Common helper functions for working with URLs. These utilities are intended to be simple, 
 small, and extremely common. Do not add advanced parsing logic to this file.
+
 
 
 
@@ -11,8 +14,8 @@ small, and extremely common. Do not add advanced parsing logic to this file.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[convertToODataStringLiteral](#converttoodatastringliteral)     | public, _static_ | string | Converts a variable to an OData string literal and escapes apostrophes |
-|[removeEndSlash](#removeendslash)     | public, _static_ | string | Removes any slash characters from the end of the URL |
+|[convertToODataStringLiteral](#converttoodatastringliteral~18495)     | public, _static_ | string | Converts a variable to an OData string literal and escapes apostrophes |
+|[removeEndSlash](#removeendslash~70016)     | public, _static_ | string | Removes any slash characters from the end of the URL |
 
 
 
@@ -21,7 +24,7 @@ small, and extremely common. Do not add advanced parsing logic to this file.
 
 Converts a variable to an OData string literal and escapes apostrophes. 
 OData specification: 
-https://tools.oasis-open.org/version-control/ 
+https: 
 browse/wsvn/odata/trunk/spec/ABNF/odata-abnf-construction-rules.txt 
 SQUOTE-in-string = SQUOTE SQUOTE ; two consecutive single quotes represent one within a string literal 
 Examples: 
@@ -47,7 +50,7 @@ string
 Removes any slash characters from the end of the URL. 
 This function assumes that the input is already a valid absolute or server-relative URL. 
 Examples: 
-removeEndSlash('http://example.com/') ---> 'http://example.com' 
+removeEndSlash('http: 
 removeEndSlash('/example') ---> '/example' 
 removeEndSlash('/') ---> ''
 

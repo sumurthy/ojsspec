@@ -1,15 +1,18 @@
 # BasicHttpClient class
 
+
+
 BasicHttpClient implements a basic set of features for performing REST operations. 
 The subclass HttpClient extends this basic functionality with SharePoint-specific 
 enhancements.
+
 
 
 ### Properties
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|`serviceScope`     | protected | [ServiceScope](ServiceScope.md) | Calls fetch(), but sets the method to 'POST' |
+|`serviceScope`     | protected | [ServiceScope](ServiceScope.md) | Calls fetch(),but sets the method to 'POST' |
 
 
 
@@ -18,11 +21,11 @@ enhancements.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor)     | public | [BasicHttpClient](BasicHttpClient.md) |  |
-|[fetch](#fetch)     | public | Promise<Response> | Performs a REST service call |
-|[fetchCore](#fetchcore)     | protected | Promise<Response> | Performs a REST service call |
-|[get](#get)     | public | Promise<Response> | Calls fetch(), but sets the method to 'GET' |
-|[post](#post)     | public | Promise<Response> | Calls fetch(), but sets the method to 'POST' |
+|[constructor](#constructor~42927)     | public | [ServiceScope](ServiceScope.md) |  |
+|[fetch](#fetch~83242)     | public | [Promise<Response>](Promise.md) | Performs a REST service call |
+|[fetchCore](#fetchcore~16302)     | protected | [Promise<Response>](Promise.md) | Performs a REST service call |
+|[get](#get~65965)     | public | [Promise<Response>](Promise.md) | Calls fetch(),but sets the method to 'GET' |
+|[post](#post~69124)     | public | [Promise<Response>](Promise.md) | Calls fetch(),but sets the method to 'POST' |
 
 
 
@@ -34,7 +37,7 @@ enhancements.
 ##### Signature
 
 #### Returns
-BasicHttpClient
+ServiceScope
 
 #### Parameters
 
@@ -49,7 +52,7 @@ BasicHttpClient
 Performs a REST service call. Although the HttpClient subclass adds 
 additional enhancements, the parameters and semantics for BasicHttpClient.fetch() 
 are essentially the same as the WHATWG API standard that is documented here: 
-https://fetch.spec.whatwg.org/
+https:
 
 ##### Signature
 
@@ -70,7 +73,7 @@ Promise<Response>
 Performs a REST service call. Although the HttpClient subclass adds 
 additional enhancements, the parameters and semantics for BasicHttpClient.fetch() 
 are essentially the same as the WHATWG API standard that is documented here: 
-https://fetch.spec.whatwg.org/
+https:
 
 ##### Signature
 
@@ -87,7 +90,7 @@ Promise<Response>
 
 ## get
 
-Calls fetch(), but sets the method to 'GET'.
+Calls fetch(),but sets the method to 'GET'.
 
 ##### Signature
 
@@ -105,7 +108,7 @@ Promise<Response>
 
 ## post
 
-Calls fetch(), but sets the method to 'POST'.
+Calls fetch(),but sets the method to 'POST'.
 
 ##### Signature
 

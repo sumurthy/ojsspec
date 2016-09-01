@@ -1,4 +1,7 @@
-# Map<K, interface
+# Map<K,V> interface
+
+
+
 
 
 
@@ -8,7 +11,7 @@
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`size:`      | number |  |
+|`size`      | number |  |
 
 
 
@@ -17,14 +20,14 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[clear](#clear)      | void |  |
-|[delete](#delete)      | boolean |  |
-|[get](#get)      | V |  |
-|[has](#has)      | boolean |  |
-|[set](#set)      | Map<K, V> |  |
-|[entries](#entries)      | Iterator<[K, V]> |  |
-|[keys](#keys)      | Iterator<K> |  |
-|[values](#values)      | Iterator<V> |  |
+|[clear](#clear~71758)      | void |  |
+|[delete](#delete~46940)      | boolean |  |
+|[get](#get~64647)      | V |  |
+|[has](#has~19008)      | boolean |  |
+|[set](#set~86072)      | [Map<K](Map.md),V> |  |
+|[entries](#entries~17780)      | [Iterator<[K](Iterator.md),V]> |  |
+|[keys](#keys~94863)      | [Iterator<K>](Iterator.md) |  |
+|[values](#values~95382)      | [Iterator<V>](Iterator.md) |  |
 
 
 
@@ -106,7 +109,7 @@ boolean
 ##### Signature
 
 #### Returns
-Map<K, V>
+Map<K,V>
 
 #### Parameters
 
@@ -124,7 +127,7 @@ Map<K, V>
 ##### Signature
 
 #### Returns
-Iterator<[K, V]>
+Iterator<[K,V]>
 
 #### Parameters
 None
@@ -163,7 +166,7 @@ None
 ##### Signature
 
 #### Returns
-void, thisArg?: any): void
+void,thisArg?: any): void
 
 #### Parameters
 
@@ -172,6 +175,6 @@ void, thisArg?: any): void
 |:-------------|:---------------|:------------|
 | `callbackfn`    | (value |  |
 | `index`    | K |  |
-| `map`    | Map<K |  |
+| `map`    | [Map<K](Map.md) |  |
 | `V>`    |  |  |
 

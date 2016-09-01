@@ -1,5 +1,7 @@
 # ServiceScope class
 
+
+
 ServiceScope provides a formalized way for components to register and consume dependencies 
 ("services"), and to enable different implementations to be registered in different scopes. 
 This improves modularity by decoupling components from their dependencies in an extensible way. 
@@ -42,11 +44,12 @@ third parties. To avoid mistakes, it's best to always call consume() inside a ca
 serviceScope.whenFinished().
 
 
+
 ### Properties
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|`createAndProvide`     | public | ServiceKey<T>, | This is a shorthand function that its equivalent to constructing a new instance of the  simpleServiceClass, then registering it by calling ServiceScope |
+|`createAndProvide`     | public | [ServiceKey<T>](ServiceKey.md), | This is a shorthand function that its equivalent to constructing a new instance of the  simpleServiceClass, then registering it by calling ServiceScope |
 
 
 
@@ -55,16 +58,15 @@ serviceScope.whenFinished().
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor)     | public | [ServiceScope](ServiceScope.md) | PRIVATE CONSTRUCTOR - DO NOT CALL THIS FROM YOUR OWN CODE |
-|[consume](#consume)     | public | T | Components should call this function to "consume" a dependency, i |
-|[{](#{)     | simpleServiceClass: | T; | This is a shorthand function that its equivalent to constructing a new instance of the  simpleServiceClass, then registering it by calling ServiceScope |
-|[createDefaultAndProvide](#createdefaultandprovide)     | public | T | This is a shorthand function that constructs the default implementation of the specified  serviceKey, and then registers it by calling ServiceScope |
-|[finish](#finish)     | public | void | When a ServiceScope is first started, it is in an "unfinished" state where provide() is  allowed but consume() is not allowed |
-|[getParent](#getparent)     | public | [ServiceScope](ServiceScope.md) | Returns the parent of the current ServiceScope, or undefined if this is a root scope |
-|[provide](#provide)     | public | T | ServiceScope |
-|[startNewChild](#startnewchild)     | public | [ServiceScope](ServiceScope.md) | Constructs a new ServiceScope that is a child of the current scope |
-|[startNewRoot](#startnewroot)     | public, _static_ | [ServiceScope](ServiceScope.md) | Create a new root-level ServiceScope |
-|[whenFinished](#whenfinished)     | public | void | It is an error to call ServiceScope |
+|[constructor](#constructor~10027)     | public | [ServiceScope](ServiceScope.md) | PRIVATE CONSTRUCTOR - DO NOT CALL THIS FROM YOUR OWN CODE |
+|[consume<T>](#consume<t>~41915)     | public | T | Components should call this function to "consume" a dependency,i |
+|[createDefaultAndProvide<T>](#createdefaultandprovide<t>~71511)     | public | T | This is a shorthand function that constructs the default implementation of the specified  serviceKey, and then registers it by calling ServiceScope |
+|[finish](#finish~82543)     | public | void | When a ServiceScope is first started,it is in an "unfinished" state where provide() is  allowed but consume() is not allowed |
+|[getParent](#getparent~87977)     | public | [ServiceScope](ServiceScope.md) | Returns the parent of the current ServiceScope,or undefined if this is a root scope |
+|[provide<T>](#provide<t>~13992)     | public | T | ServiceScope |
+|[startNewChild](#startnewchild~78628)     | public | [ServiceScope](ServiceScope.md) | Constructs a new ServiceScope that is a child of the current scope |
+|[startNewRoot](#startnewroot~32051)     | public, _static_ | [ServiceScope](ServiceScope.md) | Create a new root-level ServiceScope |
+|[whenFinished](#whenfinished~94089)     | public | void | It is an error to call ServiceScope |
 
 
 
@@ -86,9 +88,9 @@ ServiceScope
 | `parent`    | [ServiceScope](ServiceScope.md) |  |
 
 
-## consume
+## consume<T>
 
-Components should call this function to "consume" a dependency, i.e. look up the serviceKey 
+Components should call this function to "consume" a dependency,i.e. look up the serviceKey 
 and return the registered service instance. If the instance cannot be found, then a default 
 instance will be autocreated and registered with the root ServiceScope.
 
@@ -102,28 +104,10 @@ T
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceKey`    | ServiceKey<T> |  |
+| `serviceKey`    | [ServiceKey<T>](ServiceKey.md) |  |
 
 
-## {
-
-This is a shorthand function that its equivalent to constructing a new instance of the 
-simpleServiceClass, then registering it by calling ServiceScope.provide().
-
-##### Signature
-
-#### Returns
-T;
-
-#### Parameters
-
-
-| Parameter	   | Type    | Description |
-|:-------------|:---------------|:------------|
-| `serviceScope`    | [ServiceScope](ServiceScope.md) |  |
-
-
-## createDefaultAndProvide
+## createDefaultAndProvide<T>
 
 This is a shorthand function that constructs the default implementation of the specified 
 serviceKey, and then registers it by calling ServiceScope.provide().
@@ -138,12 +122,12 @@ T
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceKey`    | ServiceKey<T> |  |
+| `serviceKey`    | [ServiceKey<T>](ServiceKey.md) |  |
 
 
 ## finish
 
-When a ServiceScope is first started, it is in an "unfinished" state where provide() is 
+When a ServiceScope is first started,it is in an "unfinished" state where provide() is 
 allowed but consume() is not allowed. After calling finish(), then consume() is allowed 
 but provide() is not allowed. This formalism completely eliminates a number of tricky bugs 
 such as: Scope2 is a child of Scope1, and Scope1 provides instance A1 of interface A; 
@@ -162,7 +146,7 @@ None
 
 ## getParent
 
-Returns the parent of the current ServiceScope, or undefined if this is a root scope.
+Returns the parent of the current ServiceScope,or undefined if this is a root scope.
 
 ##### Signature
 
@@ -173,7 +157,7 @@ ServiceScope
 None
 
 
-## provide
+## provide<T>
 
 ServiceScope.provide() is used to register an implemententation of the given serviceKey 
 for the current scope. It may only be used when the ServiceScope is in an "unfinished" 
@@ -189,7 +173,7 @@ T
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceKey`    | ServiceKey<T> |  |
+| `serviceKey`    | [ServiceKey<T>](ServiceKey.md) |  |
 | `service`    | T |  |
 
 

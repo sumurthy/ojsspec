@@ -3,137 +3,167 @@
     "descr": "",
     "values": [
       [
-        "\"audio\"",
+        "audio",
         "",
         ""
       ],
       [
-        "\"font\"",
+        "beacon",
         "",
         ""
       ],
       [
-        "\"internal\"",
+        "cspreport",
         "",
         ""
       ],
       [
-        "\"serviceworker\"",
+        "download",
         "",
         ""
       ],
       [
-        "\"xmlhttprequest\"",
+        "embed",
         "",
         ""
       ],
       [
-        "}",
-        "",
-        ""
-      ]
-    ]
-  },
-  "RequestMode": {
-    "descr": "",
-    "values": [
-      [
-        "cors",
+        "eventsource",
         "",
         ""
       ],
       [
-        "cors",
+        "favicon",
         "",
         ""
       ],
       [
-        "cors",
-        "",
-        ""
-      ]
-    ]
-  },
-  "RequestCredentials": {
-    "descr": "",
-    "values": [
-      [
-        "include",
+        "fetch",
         "",
         ""
       ],
       [
-        "include",
+        "font",
         "",
         ""
       ],
       [
-        "include",
-        "",
-        ""
-      ]
-    ]
-  },
-  "RequestCache": {
-    "descr": "",
-    "values": [
-      [
-        "only-if-cached",
+        "form",
         "",
         ""
       ],
       [
-        "only-if-cached",
+        "frame",
         "",
         ""
       ],
       [
-        "only-if-cached",
+        "hyperlink",
         "",
         ""
       ],
       [
-        "only-if-cached",
+        "iframe",
         "",
         ""
       ],
       [
-        "only-if-cached",
+        "image",
         "",
         ""
       ],
       [
-        "only-if-cached",
-        "",
-        ""
-      ]
-    ]
-  },
-  "ResponseType": {
-    "descr": "",
-    "values": [
-      [
-        "opaque",
+        "imageset",
         "",
         ""
       ],
       [
-        "opaque",
+        "import",
         "",
         ""
       ],
       [
-        "opaque",
+        "internal",
         "",
         ""
       ],
       [
-        "opaque",
+        "location",
         "",
         ""
       ],
       [
-        "opaque",
+        "manifest",
+        "",
+        ""
+      ],
+      [
+        "object",
+        "",
+        ""
+      ],
+      [
+        "ping",
+        "",
+        ""
+      ],
+      [
+        "plugin",
+        "",
+        ""
+      ],
+      [
+        "prefetch",
+        "",
+        ""
+      ],
+      [
+        "script",
+        "",
+        ""
+      ],
+      [
+        "serviceworker",
+        "",
+        ""
+      ],
+      [
+        "sharedworker",
+        "",
+        ""
+      ],
+      [
+        "subresource",
+        "",
+        ""
+      ],
+      [
+        "style",
+        "",
+        ""
+      ],
+      [
+        "track",
+        "",
+        ""
+      ],
+      [
+        "video",
+        "",
+        ""
+      ],
+      [
+        "worker",
+        "",
+        ""
+      ],
+      [
+        "xmlhttprequest",
+        "",
+        ""
+      ],
+      [
+        "xslt",
         "",
         ""
       ]

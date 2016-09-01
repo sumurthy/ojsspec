@@ -1,7 +1,10 @@
 <classheader>
 # %resourcename% %resourcetype%
 
+%extendsimplements%
+
 %resourcedescription%
+
 
 </classheader>
 

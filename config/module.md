@@ -40,3 +40,22 @@
 >|[%name%](%link%.md)    | %description% |
 
 </enumeration>
+
+<typedef>
+### Types
+
+| Name	   |  Type |
+|:-----------|:------------|
+>|%name%   | %type% |
+
+</typedef>
+
+
+<variable>
+### Variables
+
+| Variable	   | Type|
+|:-----------|:------------|
+>|%name%   | %type% |
+
+</variable>

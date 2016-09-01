@@ -1,15 +1,17 @@
 {
   "IClientSideWebPartStatusRenderer": {
-    "extendsName": null,
+    "implementsExtendsName": null,
     "descr": "error messages for a webpart.",
     "properties": {},
     "functions": {},
     "objects": {},
     "methods": {
-      "clearError": {
+      "clearError~11918": {
         "descr": "Clear the webpart error message.",
         "genericType": null,
         "returnType": "void",
+        "accessModifier": "",
+        "signature": "",
         "isOptional": false,
         "returnDesc": null,
         "params": [
@@ -21,10 +23,12 @@
           }
         ]
       },
-      "clearLoadingIndicator": {
+      "clearLoadingIndicator~98189": {
         "descr": "Clear the loading indicator.",
         "genericType": null,
         "returnType": "void",
+        "accessModifier": "",
+        "signature": "",
         "isOptional": false,
         "returnDesc": null,
         "params": [
@@ -36,10 +40,12 @@
           }
         ]
       },
-      "displayLoadingIndicator": {
+      "displayLoadingIndicator~12628": {
         "descr": "Display a loading spinner.",
         "genericType": null,
         "returnType": "void",
+        "accessModifier": "",
+        "signature": "",
         "isOptional": false,
         "returnDesc": null,
         "params": [
@@ -57,10 +63,12 @@
           }
         ]
       },
-      "renderError": {
+      "renderError~11840": {
         "descr": "Render the provided error message in the webpart container div.",
         "genericType": null,
         "returnType": "void",
+        "accessModifier": "",
+        "signature": "",
         "isOptional": false,
         "returnDesc": null,
         "params": [
@@ -81,90 +89,90 @@
     }
   },
   "IHtmlProperties": {
-    "extendsName": null,
-    "descr": "Structure of the data that a webpart developer can return on the onBeforeSerialize() API. \nThe outcome contains 3 kay/value dictionaries for properties that need to be search indexed. \nBoth keys and values are expected to be strings and will be HTML encoded during serialization. \n \n{ \nsearchableProperties: { 'prop1': 'value_of_prop1' }, \nlinkProperties: { 'prop2': 'http://www.contoso.com/page1.aspx' }, \nimageLinkPropertes: { 'prop3': 'http://www.contoso.com/imag.png' } \n} \n \nThis input would get translated to the following HTML string. \n \n\"<div data-sp-prop-name='prop1'>value1</div> \n<link data-sp-prop-name='prop2' href='http://www.contoso.com/page1.aspx'> \n<img data-sp-prop-name='prop2' href='http://www.contoso.com/image.png'>\" \n",
+    "implementsExtendsName": null,
+    "descr": "Structure of the data that a webpart developer can return on the onBeforeSerialize() API. \nThe outcome contains 3 kay/value dictionaries for properties that need to be search indexed. \nBoth keys and values are expected to be strings and will be HTML encoded during serialization. \n \n{ \nsearchableProperties: { 'prop1': 'value_of_prop1' }, \nlinkProperties: { 'prop2': 'http: \nimageLinkPropertes: { 'prop3': 'http: \n} \n \nThis input would get translated to the following HTML string. \n \n\"<div data-sp-prop-name='prop1'>value1</div> \n<link data-sp-prop-name='prop2' href='http: \n<img data-sp-prop-name='prop2' href='http: \n",
     "properties": {},
     "functions": {},
     "objects": {},
     "methods": {}
   },
   "IOdataList": {
-    "extendsName": null,
-    "descr": "Represents an OData SP.List object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx",
+    "implementsExtendsName": null,
+    "descr": "Represents an OData SP.List object. For more information about this object \nsee the MSDN documentation here: \nhttps:",
     "properties": {
-      "BaseTemplate:": {
+      "BaseTemplate": {
         "descr": "",
         "dataType": "number",
         "isOptional": false,
         "isCollection": false
       },
-      "Created:": {
+      "Created": {
         "descr": "Example: \"/Date(1453294804000)/\"",
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
       },
-      "CurrentChangeToken:": {
+      "CurrentChangeToken": {
         "descr": "Example: \"/Date(1453294804000)/\"",
         "dataType": "IODataChangeToken",
         "isOptional": false,
         "isCollection": false
       },
-      "Description:": {
+      "Description": {
         "descr": "Example: \"/Date(1453294804000)/\"",
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
       },
-      "EntityTypeName:": {
+      "EntityTypeName": {
         "descr": "Example: \"MyListTitleList\"",
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
       },
-      "Hidden:": {
+      "Hidden": {
         "descr": "Example: \"MyListTitleList\"",
         "dataType": "boolean",
         "isOptional": false,
         "isCollection": false
       },
-      "Id:": {
+      "Id": {
         "descr": "Example: \"/Guid(9fb9199b-65f2-4a4a-b597-11d1a44422c1)/\"",
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
       },
-      "LastItemDeletedDate:": {
+      "LastItemDeletedDate": {
         "descr": "Example: \"/Date(1453294809000)/\"",
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
       },
-      "LastItemModifiedDate:": {
+      "LastItemModifiedDate": {
         "descr": "Example: \"/Date(1453294809000)/\"",
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
       },
-      "ListItemEntityTypeFullName:": {
+      "ListItemEntityTypeFullName": {
         "descr": "Example: \"SP.Data.MyListTitleListItem\"",
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
       },
-      "ParentWebUrl:": {
+      "ParentWebUrl": {
         "descr": "Example: \"/sites/PubSite\"",
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
       },
-      "TemplateFeatureId:": {
+      "TemplateFeatureId": {
         "descr": "Example: \"/Guid(22a9ef51-737b-4ff2-9346-694633fe4416)/\"",
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
       },
-      "Title:": {
+      "Title": {
         "descr": "Example: \"Pages\"",
         "dataType": "string",
         "isOptional": false,
@@ -176,22 +184,22 @@
     "methods": {}
   },
   "IOdataListItem": {
-    "extendsName": null,
-    "descr": "Represents an OData SP.ListItem object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx",
+    "implementsExtendsName": null,
+    "descr": "Represents an OData SP.ListItem object. For more information about this object \nsee the MSDN documentation here: \nhttps:",
     "properties": {
-      "ID:": {
-        "descr": "Example: { StrinValue: \"0x010100C5...\" }",
+      "ID": {
+        "descr": "",
         "dataType": "number",
         "isOptional": false,
         "isCollection": false
       },
-      "Title:": {
-        "descr": "Example: { StrinValue: \"0x010100C5...\" }",
+      "Title": {
+        "descr": "",
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
       },
-      "UniqueId:": {
+      "UniqueId": {
         "descr": "Example: \"/Guid(d5369f3b-bd7a-412a-9c0f-7f0650bb5489)/\"",
         "dataType": "string",
         "isOptional": false,
@@ -203,46 +211,46 @@
     "methods": {}
   },
   "IOdataUser": {
-    "extendsName": null,
-    "descr": "Represents an OData SP.User object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx",
+    "implementsExtendsName": null,
+    "descr": "Represents an OData SP.User object. For more information about this object \nsee the MSDN documentation here: \nhttps:",
     "properties": {
-      "Email:": {
+      "Email": {
         "descr": "Example: \"someone@example.com\"",
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
       },
-      "Id:": {
+      "Id": {
         "descr": "Example: \"someone@example.com\"",
         "dataType": "number",
         "isOptional": false,
         "isCollection": false
       },
-      "IsSiteAdmin:": {
+      "IsSiteAdmin": {
         "descr": "Example: \"someone@example.com\"",
         "dataType": "boolean",
         "isOptional": false,
         "isCollection": false
       },
-      "LoginName:": {
+      "LoginName": {
         "descr": "Example: \"i:0#.w|domain\\user\"",
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
       },
-      "PrincipalType:": {
+      "PrincipalType": {
         "descr": "Example: \"i:0#.w|domain\\user\"",
         "dataType": "number",
         "isOptional": false,
         "isCollection": false
       },
-      "Title:": {
+      "Title": {
         "descr": "Example: \"DOMAIN\\user\"",
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
       },
-      "UserId:": {
+      "UserId": {
         "descr": "Example: \"DOMAIN\\user\"",
         "dataType": "IOdataUserId",
         "isOptional": false,
@@ -254,16 +262,16 @@
     "methods": {}
   },
   "IOdataUserId": {
-    "extendsName": null,
-    "descr": "Represents an OData SP.UserId object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx",
+    "implementsExtendsName": null,
+    "descr": "Represents an OData SP.UserId object. For more information about this object \nsee the MSDN documentation here: \nhttps:",
     "properties": {
-      "NameId:": {
+      "NameId": {
         "descr": "Example: \"s-1-5-21-2127521184-1604012920-1887927527-2632426\"",
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
       },
-      "NameIdIssuer:": {
+      "NameIdIssuer": {
         "descr": "Example: \"urn:office:idp:activedirectory\"",
         "dataType": "string",
         "isOptional": false,
@@ -275,7 +283,7 @@
     "methods": {}
   },
   "IPropertyPaneButtonProps": {
-    "extendsName": null,
+    "implementsExtendsName": null,
     "descr": "",
     "properties": {
       "ariaDescription": {
@@ -314,7 +322,7 @@
         "isOptional": false,
         "isCollection": false
       },
-      "text:": {
+      "text": {
         "descr": "Display text of the element.",
         "dataType": "string",
         "isOptional": false,
@@ -322,8 +330,8 @@
       }
     },
     "functions": {
-      "onClick:": {
-        "descr": "for an individual element. This is because, button click does not result in any property change, and hence \ncannot fire the 'onChange'' event for a property, and ends up becoming a no-op. To avoid this, giving the \ncontrol back to the web part, so that web part can make act acordingly. \n \ntodo: VSO# 233578:PropertyPane Button OnClick event api.",
+      "onClick~87044": {
+        "descr": "for an individual element. This is because,button click does not result in any property change,and hence \ncannot fire the 'onChange'' event for a property, and ends up becoming a no-op. To avoid this, giving the \ncontrol back to the web part, so that web part can make act acordingly. \n \ntodo: VSO# 233578:PropertyPane Button OnClick event api.",
         "isOptional": false,
         "returnType": "any",
         "returnDescr": null,
@@ -341,7 +349,7 @@
     "methods": {}
   },
   "IPropertyPaneCheckboxProps": {
-    "extendsName": null,
+    "implementsExtendsName": null,
     "descr": "",
     "properties": {
       "isChecked": {
@@ -368,7 +376,7 @@
     "methods": {}
   },
   "IPropertyPaneChoiceGroupOption": {
-    "extendsName": null,
+    "implementsExtendsName": null,
     "descr": "",
     "properties": {
       "imageSrc": {
@@ -389,7 +397,7 @@
         "isOptional": false,
         "isCollection": false
       },
-      "key:": {
+      "key": {
         "descr": "A required key to uniquely identify the option.",
         "dataType": "string | number",
         "isOptional": false,
@@ -401,7 +409,7 @@
         "isOptional": false,
         "isCollection": false
       },
-      "text:": {
+      "text": {
         "descr": "The text string for the option.",
         "dataType": "string",
         "isOptional": false,
@@ -413,7 +421,7 @@
     "methods": {}
   },
   "IPropertyPaneChoiceGroupProps": {
-    "extendsName": null,
+    "implementsExtendsName": null,
     "descr": "",
     "properties": {
       "label": {
@@ -422,7 +430,7 @@
         "isOptional": false,
         "isCollection": false
       },
-      "options:": {
+      "options": {
         "descr": "The options for the choice group.",
         "dataType": "IPropertyPaneChoiceGroupOption[]",
         "isOptional": false,
@@ -434,11 +442,11 @@
     "methods": {}
   },
   "IPropertyPaneCustomFieldProps": {
-    "extendsName": null,
+    "implementsExtendsName": null,
     "descr": "",
     "properties": {},
     "functions": {
-      "onDispose": {
+      "onDispose~56766": {
         "descr": "Event callback for onDispose.",
         "isOptional": true,
         "returnType": "void",
@@ -452,7 +460,7 @@
           }
         ]
       },
-      "onRender:": {
+      "onRender~37071": {
         "descr": "onRender will be called once the custom field mounted to the host element.",
         "isOptional": false,
         "returnType": "void",
@@ -471,16 +479,16 @@
     "methods": {}
   },
   "IPropertyPaneData": {
-    "extendsName": null,
+    "implementsExtendsName": null,
     "descr": "Web part - PropertyPane data contract.",
     "properties": {
-      "properties:": {
+      "properties": {
         "descr": "Property bag from the web part.",
         "dataType": "any",
         "isOptional": false,
         "isCollection": false
       },
-      "settings:": {
+      "settings": {
         "descr": "Web part configuration settings.",
         "dataType": "IPropertyPaneSettings",
         "isOptional": false,
@@ -488,28 +496,28 @@
       }
     },
     "functions": {
-      "onClose:": {
+      "onClose~56146": {
         "descr": "Event callback for 'Close' click.",
         "isOptional": false,
         "returnType": "void",
         "returnDescr": null,
         "params": []
       },
-      "onConfigurationComplete:": {
+      "onConfigurationComplete~37082": {
         "descr": "Event callback fired when the configuration is completed for the web part.",
         "isOptional": false,
         "returnType": "void",
         "returnDescr": null,
         "params": []
       },
-      "onLostFocus:": {
+      "onLostFocus~17967": {
         "descr": "Event callback fired when the focus is handed back to the web part",
         "isOptional": false,
         "returnType": "void",
         "returnDescr": null,
         "params": []
       },
-      "onPropertyChange:": {
+      "onPropertyChange~90600": {
         "descr": "Notification event fired when the property has already been validated and modified.",
         "isOptional": false,
         "returnType": "void",
@@ -529,14 +537,14 @@
           }
         ]
       },
-      "onRendered:": {
+      "onRendered~47948": {
         "descr": "Event callback fired after the PropertyPane is rendered.",
         "isOptional": false,
         "returnType": "void",
         "returnDescr": null,
         "params": []
       },
-      "onSave:": {
+      "onSave~85417": {
         "descr": "Event callback for 'Apply' click.",
         "isOptional": false,
         "returnType": "void",
@@ -548,7 +556,7 @@
     "methods": {}
   },
   "IPropertyPaneDropdownOption": {
-    "extendsName": null,
+    "implementsExtendsName": null,
     "descr": "",
     "properties": {
       "index": {
@@ -563,13 +571,13 @@
         "isOptional": false,
         "isCollection": false
       },
-      "key:": {
+      "key": {
         "descr": "A key to uniquely identify this option.",
         "dataType": "string | number",
         "isOptional": false,
         "isCollection": false
       },
-      "text:": {
+      "text": {
         "descr": "Text to render for this option.",
         "dataType": "string",
         "isOptional": false,
@@ -581,7 +589,7 @@
     "methods": {}
   },
   "IPropertyPaneDropdownProps": {
-    "extendsName": null,
+    "implementsExtendsName": null,
     "descr": "",
     "properties": {
       "isDisabled": {
@@ -590,7 +598,7 @@
         "isOptional": false,
         "isCollection": false
       },
-      "label:": {
+      "label": {
         "descr": "Descriptive label for the Dropdown.",
         "dataType": "string",
         "isOptional": false,
@@ -614,22 +622,22 @@
     "methods": {}
   },
   "IPropertyPaneField<TProperties>": {
-    "extendsName": null,
+    "implementsExtendsName": null,
     "descr": "",
     "properties": {
-      "properties:": {
+      "properties": {
         "descr": "Strongly typed properties object. Specific to each field type. \nExample: Checkbox has ICheckboxProps, TextField has ITextField props. \n \n",
         "dataType": "TProperties",
         "isOptional": false,
         "isCollection": false
       },
-      "targetProperty:": {
+      "targetProperty": {
         "descr": "Target property from the web part's property bag.",
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
       },
-      "type:": {
+      "type": {
         "descr": "Type of the PropertyPane field.",
         "dataType": "IPropertyPaneFieldType",
         "isOptional": false,
@@ -641,10 +649,10 @@
     "methods": {}
   },
   "IPropertyPaneGroup": {
-    "extendsName": null,
+    "implementsExtendsName": null,
     "descr": "PropertyPane group. Group is part of the PropertyPanePage.",
     "properties": {
-      "groupFields:": {
+      "groupFields": {
         "descr": "List of PropertyPane fields.",
         "dataType": "IPropertyPaneField<any>[]",
         "isOptional": false,
@@ -662,7 +670,7 @@
     "methods": {}
   },
   "IPropertyPaneLabelProps": {
-    "extendsName": null,
+    "implementsExtendsName": null,
     "descr": "",
     "properties": {
       "required": {
@@ -671,7 +679,7 @@
         "isOptional": false,
         "isCollection": false
       },
-      "text:": {
+      "text": {
         "descr": "Display text fot the label.",
         "dataType": "string",
         "isOptional": false,
@@ -683,10 +691,10 @@
     "methods": {}
   },
   "IPropertyPaneLinkProps": {
-    "extendsName": null,
+    "implementsExtendsName": null,
     "descr": "",
     "properties": {
-      "href:": {
+      "href": {
         "descr": "Location to which the link is targetted to.",
         "dataType": "string",
         "isOptional": false,
@@ -704,7 +712,7 @@
         "isOptional": false,
         "isCollection": false
       },
-      "text:": {
+      "text": {
         "descr": "Display text for the link.",
         "dataType": "string",
         "isOptional": false,
@@ -716,7 +724,7 @@
     "methods": {}
   },
   "IPropertyPanePage": {
-    "extendsName": null,
+    "implementsExtendsName": null,
     "descr": "PropertyPanePage interface.",
     "properties": {
       "displayGroupsAsAccordion": {
@@ -725,7 +733,7 @@
         "isOptional": false,
         "isCollection": false
       },
-      "groups:": {
+      "groups": {
         "descr": "List of groups to be displayed on the PropertyPane page.",
         "dataType": "IPropertyPaneGroup[]",
         "isOptional": false,
@@ -743,10 +751,10 @@
     "methods": {}
   },
   "IPropertyPanePageHeader": {
-    "extendsName": null,
+    "implementsExtendsName": null,
     "descr": "PropertyPane header. \nThis header remains same for all the pages.",
     "properties": {
-      "description:": {
+      "description": {
         "descr": "Header to display.",
         "dataType": "string",
         "isOptional": false,
@@ -764,7 +772,7 @@
     "methods": {}
   },
   "IPropertyPaneSettings": {
-    "extendsName": null,
+    "implementsExtendsName": null,
     "descr": "Web part configuration settings",
     "properties": {
       "currentPage": {
@@ -773,7 +781,7 @@
         "isOptional": false,
         "isCollection": false
       },
-      "pages:": {
+      "pages": {
         "descr": "Total number of pages on the PropertyPane.",
         "dataType": "IPropertyPanePage[]",
         "isOptional": false,
@@ -785,7 +793,7 @@
     "methods": {}
   },
   "IPropertyPaneSliderProps": {
-    "extendsName": null,
+    "implementsExtendsName": null,
     "descr": "",
     "properties": {
       "ariaLabel": {
@@ -806,13 +814,13 @@
         "isOptional": false,
         "isCollection": false
       },
-      "max:": {
+      "max": {
         "descr": "The max value of the Slider.",
         "dataType": "number",
         "isOptional": false,
         "isCollection": false
       },
-      "min:": {
+      "min": {
         "descr": "The min value of the Slider.",
         "dataType": "number",
         "isOptional": false,
@@ -842,11 +850,11 @@
     "methods": {}
   },
   "IPropertyPaneTextFieldProps": {
-    "extendsName": null,
+    "implementsExtendsName": null,
     "descr": "",
     "properties": {
       "ariaLabel": {
-        "descr": "Aria Label for textfield, if any.",
+        "descr": "Aria Label for textfield,if any.",
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
@@ -864,7 +872,7 @@
         "isCollection": false
       },
       "errorMessage": {
-        "descr": "Default value of the textfield, if any.",
+        "descr": "Default value of the textfield,if any.",
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
@@ -907,7 +915,7 @@
       }
     },
     "functions": {
-      "onGetErrorMessage": {
+      "onGetErrorMessage~56264": {
         "descr": "The method is used to get the validation error message and determine whether the input value is valid or not. \n \nWhen it returns string: \n- If valid, it returns empty string. \n- If invalid, it returns the error message string and the text field will \nshow a red border and show an error message below the text field. \n \nWhen it returns Promise<string>: \n- The resolved value is display as error message. \n- The rejected, the value is thrown away. \n",
         "isOptional": true,
         "returnType": "string | Promise<string>",
@@ -926,7 +934,7 @@
     "methods": {}
   },
   "IPropertyPaneToggleProps": {
-    "extendsName": null,
+    "implementsExtendsName": null,
     "descr": "",
     "properties": {
       "checked": {
@@ -947,7 +955,7 @@
         "isOptional": false,
         "isCollection": false
       },
-      "label:": {
+      "label": {
         "descr": "A label for the toggle.",
         "dataType": "string",
         "isOptional": false,
@@ -971,7 +979,7 @@
     "methods": {}
   },
   "IWebPartConfigurationEventCallback": {
-    "extendsName": null,
+    "implementsExtendsName": null,
     "descr": "Configuration event callback",
     "properties": {},
     "functions": {},
@@ -979,70 +987,70 @@
     "methods": {}
   },
   "IWebPartContext": {
-    "extendsName": "IClientSideComponentContext<IClientSideWebPartManifestInstance<any>>",
+    "implementsExtendsName": "IClientSideComponentContext<IClientSideWebPartManifestInstance<any>>",
     "descr": "Web part context interface.",
     "properties": {
-      "basicHttpClient:": {
+      "basicHttpClient": {
         "descr": "BasicHttpClient instance scoped to this web part.",
         "dataType": "BasicHttpClient",
         "isOptional": false,
         "isCollection": false
       },
-      "domElement:": {
+      "domElement": {
         "descr": "Reference to the DOM element that hosts this client side component.",
         "dataType": "HTMLElement",
         "isOptional": false,
         "isCollection": false
       },
-      "environment:": {
+      "environment": {
         "descr": "Environment that webparts are hosted in.",
         "dataType": "Environment",
         "isOptional": false,
         "isCollection": false
       },
-      "host:": {
+      "host": {
         "descr": "Web part host.",
         "dataType": "IWebPartHost",
         "isOptional": false,
         "isCollection": false
       },
-      "httpClient:": {
+      "httpClient": {
         "descr": "HttpClient instance scoped to this web part.",
         "dataType": "HttpClient",
         "isOptional": false,
         "isCollection": false
       },
-      "instanceId:": {
+      "instanceId": {
         "descr": "Web part instance id. This is a globally unique value.",
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
       },
-      "manifest:": {
+      "manifest": {
         "descr": "Client side component manifest.",
         "dataType": "TManifest",
         "isOptional": false,
         "isCollection": false
       },
-      "pageContext:": {
+      "pageContext": {
         "descr": "SharePoint page context.",
         "dataType": "PageContext",
         "isOptional": false,
         "isCollection": false
       },
-      "serviceScope:": {
+      "serviceScope": {
         "descr": "Service scope instance that is scoped to this particular web part.",
         "dataType": "ServiceScope",
         "isOptional": false,
         "isCollection": false
       },
-      "statusRenderer:": {
+      "statusRenderer": {
         "descr": "Web part status renderer.",
         "dataType": "IClientSideWebPartStatusRenderer",
         "isOptional": false,
         "isCollection": false
       },
-      "webPartTag:": {
+      "webPartTag": {
         "descr": "Web part tag to be used for logging and telemetry.",
         "dataType": "string",
         "isOptional": false,
@@ -1050,7 +1058,7 @@
       }
     },
     "functions": {
-      "configureStart:": {
+      "configureStart~85943": {
         "descr": "Function to open the PropertyPane to help configure this web part.",
         "isOptional": false,
         "returnType": "void",
@@ -1075,22 +1083,22 @@
     "methods": {}
   },
   "IWebPartData": {
-    "extendsName": null,
-    "descr": "a webpart, the output should be this structure. The structure of the 'properties' field is owned by the \nwebpart and is specific to the webpart. Each webpart can decide the set of properties it wants to \nserialialize.",
+    "implementsExtendsName": null,
+    "descr": "a webpart,the output should be this structure. The structure of the 'properties' field is owned by the \nwebpart and is specific to the webpart. Each webpart can decide the set of properties it wants to \nserialialize.",
     "properties": {
       "htmlProperties": {
-        "descr": "Definition: HTML markup equivalent for searchable properties and properties that need link fixup. \nformat: pseudo HTML \nmandatory: no. \ntype: string \nsupported values: a string containing pseudo HTML. \nexample: \"<div>searchable_property_value</div><link href='http://contoso.com/path_of_link.aspx' />\" \nexperimental: no",
+        "descr": "Definition: HTML markup equivalent for searchable properties and properties that need link fixup. \nformat: pseudo HTML \nmandatory: no. \ntype: string \nsupported values: a string containing pseudo HTML. \nexample: \"<div>searchable_property_value</div><link href='http: \nexperimental: no",
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
       },
-      "id:": {
+      "id": {
         "descr": "Definition: universally unique webpart Type id. \nUsage: uniquely identify a webpart. \nRequired: yes \nType: GUID \nSupported values: any GUID \nExample: \"dbef608d-3ad5-4f8f-b139-d916f2f0a294\"",
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
       },
-      "instanceId:": {
+      "instanceId": {
         "descr": "Definition: universally unique instance id of the webpart. A web part can have multiple instances on a page. \nThis id is expected to be universally unique accross time and page boundaries. \nhow used: used by the framework to uniquely identify an instance of a webpart. \nmandatory: yes. \ntype: string \nsupported values: a unique string. Could be GUID or other uniquely identifiable formats. \nexample: [\"dbef608d-3ad5-4f8f-b139-d916f2f0a294\"] \nexperimental: yes",
         "dataType": "string",
         "isOptional": false,
@@ -1102,14 +1110,14 @@
         "isOptional": false,
         "isCollection": false
       },
-      "title:": {
+      "title": {
         "descr": "Definition: webpart title. \nUsage: display the name of the webpart in the toolbox, webpart gallery and the page. \nRequired: yes \nType: string \nSupported values: string less than 100 characters \nExample: \"Text\"",
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
       },
-      "version:": {
-        "descr": "Definition: webpart version. \nUsage: versioning and evolving a webpart safely. \nRequired: yes \nType: string representing a semantic version (http://semver.org) \nSupported values: MAJOR.MINOR.PATCH \nExample: \"1.0.0\"",
+      "version": {
+        "descr": "Definition: webpart version. \nUsage: versioning and evolving a webpart safely. \nRequired: yes \nType: string representing a semantic version (http: \nSupported values: MAJOR.MINOR.PATCH \nExample: \"1.0.0\"",
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
@@ -1120,10 +1128,10 @@
     "methods": {}
   },
   "IWebPartHost": {
-    "extendsName": "IServiceScopeProvider",
-    "descr": "A web part host is a component, control or a page that hosts client side web parts. \nThe web part infrastructure provides many features inbuilt e.g. an HttpClient to make \nserver requests and the SPPageContext. The porpose of this interface is not to replicate \nthose feature. This interface outlines the services and features where there needs to be \na direct interaction between the host and the web part infrastructure. This interface also \noutlines some services where the web part host may want to override the default \nimplementations provided by the infrastructure. Let us discuss some examples: \n \n- APIs like setDirty, webPartConfigurationEventCallback help the web part infrastucture \ncommunicate the fact that some web part is in a dirty state or web part communication \nevents to the host. \n \n- In future we expect that this interface will be used to provide services where the host \nmight want to override the default implemenations. e.g. \n- the web part status rendering service. The default implementation of this service \nprovides an office fabric spinny. But a certain host could easily want to show a \ndifferent spinny. \n \n- The event aggregation service. Currently the web part manager hosts a single event \nevent aggregator. But there are possibilities when a page can have multiple hosts \nand each host may want to scope its event aggregation service.",
+    "implementsExtendsName": "IServiceScopeProvider",
+    "descr": "A web part host is a component,control or a page that hosts client side web parts. \nThe web part infrastructure provides many features inbuilt e.g. an HttpClient to make \nserver requests and the SPPageContext. The porpose of this interface is not to replicate \nthose feature. This interface outlines the services and features where there needs to be \na direct interaction between the host and the web part infrastructure. This interface also \noutlines some services where the web part host may want to override the default \nimplementations provided by the infrastructure. Let us discuss some examples: \n \n- APIs like setDirty, webPartConfigurationEventCallback help the web part infrastucture \ncommunicate the fact that some web part is in a dirty state or web part communication \nevents to the host. \n \n- In future we expect that this interface will be used to provide services where the host \nmight want to override the default implemenations. e.g. \n- the web part status rendering service. The default implementation of this service \nprovides an office fabric spinny. But a certain host could easily want to show a \ndifferent spinny. \n \n- The event aggregation service. Currently the web part manager hosts a single event \nevent aggregator. But there are possibilities when a page can have multiple hosts \nand each host may want to scope its event aggregation service.",
     "properties": {
-      "serviceScope:": {
+      "serviceScope": {
         "descr": "ServiceScope provides a formalized way for components to register and consume dependencies \n(\"services\"), and to enable different implementations to be registered in different scopes. \nThis improves modularity by decoupling components from their dependencies in an extensible way. \nserviceScope: ServiceScope;",
         "dataType": "ServiceScope",
         "isOptional": false,
@@ -1137,7 +1145,7 @@
       }
     },
     "functions": {
-      "setDirty": {
+      "setDirty~59250": {
         "descr": "ServiceScope provides a formalized way for components to register and consume dependencies \n(\"services\"), and to enable different implementations to be registered in different scopes. \nThis improves modularity by decoupling components from their dependencies in an extensible way. \nserviceScope: ServiceScope;",
         "isOptional": true,
         "returnType": "void",

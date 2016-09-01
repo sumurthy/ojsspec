@@ -1,6 +1,8 @@
 # IWebPartHost interface
 
-A web part host is a component, control or a page that hosts client side web parts. 
+_Implements/extends: [IServiceScopeProvider](IServiceScopeProvider.md)_
+
+A web part host is a component,control or a page that hosts client side web parts. 
 The web part infrastructure provides many features inbuilt e.g. an HttpClient to make 
 server requests and the SPPageContext. The porpose of this interface is not to replicate 
 those feature. This interface outlines the services and features where there needs to be 
@@ -24,11 +26,12 @@ and each host may want to scope its event aggregation service.
 
 
 
+
 ### Properties
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`serviceScope:`      | [ServiceScope](ServiceScope.md) | ServiceScope provides a formalized way for components to register and consume dependencies  ("services"), and to enable different implementations to be registered in different scopes |
+|`serviceScope`      | [ServiceScope](ServiceScope.md) | ServiceScope provides a formalized way for components to register and consume dependencies  ("services"), and to enable different implementations to be registered in different scopes |
 |`webPartConfigurationEventCallback`      | [IWebPartConfigurationEventCallback](IWebPartConfigurationEventCallback.md) | Web part configuration event callback |
 
 

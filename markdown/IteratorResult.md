@@ -4,12 +4,15 @@
 
 
 
+
+
+
 ### Properties
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`done:`      | boolean |  |
-|`value:`      | T |  |
+|`done`      | boolean |  |
+|`value`      | T |  |
 
 
 

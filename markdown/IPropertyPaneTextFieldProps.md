@@ -4,14 +4,17 @@
 
 
 
+
+
+
 ### Properties
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`ariaLabel`      | string | Aria Label for textfield, if any |
+|`ariaLabel`      | string | Aria Label for textfield,if any |
 |`deferredValidationTime`      | number | Text field will start to validate after users stop typing for `deferredValidationTime` milliseconds |
 |`description`      | string | The textfield input description |
-|`errorMessage`      | string | Default value of the textfield, if any |
+|`errorMessage`      | string | Default value of the textfield,if any |
 |`label`      | string | Label for the textfield |
 |`multiline`      | boolean | Whether or not the textfield is a multiline textfield |
 |`placeholder`      | string | placeholder text to be displayed in the Textfield |

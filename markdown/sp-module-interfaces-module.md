@@ -18,7 +18,10 @@
 | [ILocalizedString](ILocalizedString.md)   | Definition: A set of localized strings  |
 | [IModuleConfig](IModuleConfig.md)   | This is the base interface for a script module's definition  |
 | [IPath](IPath.md)   | This is the base interface for a set of debug and non-debug/minimized paths  |
-| [IStandardLibraryModule](IStandardLibraryModule.md)   | Definition: A path to this module's javascript resource either as a fully-qualified URL or as a path under the  paths provided in the "internalModuleBaseUrls" field  |
+| [IStandardLibraryModule](IStandardLibraryModule.md)   |   |
+
+
+
 
 
 

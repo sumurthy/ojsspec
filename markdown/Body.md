@@ -3,12 +3,14 @@
 
 
 
+
+
+
 ### Properties
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
 |`boolean`     | bodyUsed: | boolean |  |
-|`OBJECTERROR`     | } | } |  |
 
 
 
@@ -17,17 +19,17 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[Promise<ArrayBuffer>](#promise<arraybuffer>)     | arrayBuffer(): | Promise<ArrayBuffer> |  |
-|[Promise<Blob>](#promise<blob>)     | blob(): | Promise<Blob> |  |
-|[Promise<FormData>](#promise<formdata>)     | formData(): | Promise<FormData> |  |
-|[Promise<any>](#promise<any>)     | json(): | Promise<any> |  |
-|[Promise<T>](#promise<t>)     | json<T>(): | Promise<T> |  |
-|[Promise<string>](#promise<string>)     | text(): | Promise<string> |  |
+|[arrayBuffer](#arraybuffer~90575)     | public | [Promise<ArrayBuffer>](Promise.md) |  |
+|[blob](#blob~33247)     | public | [Promise<Blob>](Promise.md) |  |
+|[formData](#formdata~58078)     | public | [Promise<FormData>](Promise.md) |  |
+|[json](#json~58588)     | public | [Promise<any>](Promise.md) |  |
+|[json<T>](#json<t>~85455)     | public | [Promise<T>](Promise.md) |  |
+|[text](#text~54236)     | public | [Promise<string>](Promise.md) |  |
 
 
 
 
-## Promise<ArrayBuffer>
+## arrayBuffer
 
 
 
@@ -40,7 +42,7 @@ Promise<ArrayBuffer>
 None
 
 
-## Promise<Blob>
+## blob
 
 
 
@@ -53,7 +55,7 @@ Promise<Blob>
 None
 
 
-## Promise<FormData>
+## formData
 
 
 
@@ -66,7 +68,7 @@ Promise<FormData>
 None
 
 
-## Promise<any>
+## json
 
 
 
@@ -79,7 +81,7 @@ Promise<any>
 None
 
 
-## Promise<T>
+## json<T>
 
 
 
@@ -92,7 +94,7 @@ Promise<T>
 None
 
 
-## Promise<string>
+## text
 
 
 

@@ -1,8 +1,11 @@
 # Log class
 
+
+
 The Log class provides methods for logging messages at different levels (verbose, 
 info, warning, error) and with context information. Context information helps identify 
 which component generated the messages and makes the messages useful and filterable. 
+
 
 
 
@@ -13,10 +16,10 @@ which component generated the messages and makes the messages useful and filtera
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[error](#error)     | public, _static_ | void | The source provides context information for the logged error |
-|[info](#info)     | public, _static_ | void | more context information (e |
-|[verbose](#verbose)     | public, _static_ | void | more context information (e |
-|[warn](#warn)     | public, _static_ | void | more context information (e |
+|[error](#error~49719)     | public, _static_ | void | The source provides context information for the logged error |
+|[info](#info~70357)     | public, _static_ | void | more context information (e |
+|[verbose](#verbose~21286)     | public, _static_ | void | more context information (e |
+|[warn](#warn~85083)     | public, _static_ | void | more context information (e |
 
 
 
@@ -43,7 +46,7 @@ void
 
 ## info
 
-more context information (e.g., web part information) to the logged message.
+more context information (e.g.,web part information) to the logged message.
 
 ##### Signature
 
@@ -62,7 +65,7 @@ void
 
 ## verbose
 
-more context information (e.g., web part information) to the logged message.
+more context information (e.g.,web part information) to the logged message.
 
 ##### Signature
 
@@ -81,7 +84,7 @@ void
 
 ## warn
 
-more context information (e.g., web part information) to the logged message.
+more context information (e.g.,web part information) to the logged message.
 
 ##### Signature
 

@@ -1,5 +1,8 @@
 # Promise class
 
+_Implements/extends: [Thenable<R>](Thenable.md)_
+
+
 
 
 
@@ -10,8 +13,10 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor)     | public | [Promise](Promise.md) | If you call resolve in the body of the callback passed to the constructor,  your promise is fulfilled with result object passed to resolve |
-|[ErrorErrorError](#errorerrorerror)     | catch<U>(onRejected?: | Promise<U> | Sugar for promise |
+|[constructor](#constructor~44578)     | public | any => void) => void) | If you call resolve in the body of the callback passed to the constructor,  your promise is fulfilled with result object passed to resolve |
+|[then<U>](#then<u>~40664)     | public | [Promise<U>](Promise.md) | onFulfilled is called when/if "promise" resolves |
+|[then<U>](#then<u>~44397)     | public | [Promise<U>](Promise.md) | onFulfilled is called when/if "promise" resolves |
+|[catch<U>](#catch<u>~40382)     | public | [Promise<U>](Promise.md) | Sugar for promise |
 
 
 
@@ -27,7 +32,7 @@ Any errors thrown in the constructor callback will be implicitly passed to rejec
 ##### Signature
 
 #### Returns
-Promise
+any => void) => void)
 
 #### Parameters
 
@@ -37,9 +42,53 @@ Promise
 | `callback`    | (resolve |  |
 
 
-## ErrorErrorError
+## then<U>
 
-Sugar for promise.then(undefined, onRejected) 
+onFulfilled is called when/if "promise" resolves. onRejected is called when/if "promise" rejects. 
+Both are optional, if either/both are omitted the next onFulfilled/onRejected in the chain is called. 
+Both callbacks have a single parameter , the fulfillment value or rejection reason. 
+"then" returns a new promise equivalent to the value you return from onFulfilled/onRejected after being passed through Promise.resolve. 
+If an error is thrown in the callback, the returned promise rejects with that error. 
+
+
+##### Signature
+
+#### Returns
+Promise<U>
+
+#### Parameters
+
+
+| Parameter	   | Type    | Description |
+|:-------------|:---------------|:------------|
+| `onFulfilled`    | (value | _Optional._ |
+
+
+## then<U>
+
+onFulfilled is called when/if "promise" resolves. onRejected is called when/if "promise" rejects. 
+Both are optional, if either/both are omitted the next onFulfilled/onRejected in the chain is called. 
+Both callbacks have a single parameter , the fulfillment value or rejection reason. 
+"then" returns a new promise equivalent to the value you return from onFulfilled/onRejected after being passed through Promise.resolve. 
+If an error is thrown in the callback, the returned promise rejects with that error. 
+
+
+##### Signature
+
+#### Returns
+Promise<U>
+
+#### Parameters
+
+
+| Parameter	   | Type    | Description |
+|:-------------|:---------------|:------------|
+| `onFulfilled`    | (value | _Optional._ |
+
+
+## catch<U>
+
+Sugar for promise.then(undefined,onRejected) 
 
 
 ##### Signature

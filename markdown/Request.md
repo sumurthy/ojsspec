@@ -3,6 +3,9 @@
 
 
 
+
+
+
 ### Properties
 
 | Property	   | Access Modifier | Type	| Description|
@@ -13,7 +16,6 @@
 |`string|RequestMode`     | mode: | string,RequestMode |  |
 |`string|RequestCredentials`     | credentials: | string,RequestCredentials |  |
 |`string|RequestCache`     | cache: | string,RequestCache |  |
-|`OBJECTERROR`     | } | } |  |
 
 
 
@@ -22,7 +24,7 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor)     | public | [Request](Request.md) |  |
+|[constructor](#constructor~46377)     | public | [RequestInit](RequestInit.md) |  |
 
 
 
@@ -34,7 +36,7 @@
 ##### Signature
 
 #### Returns
-Request
+RequestInit
 
 #### Parameters
 

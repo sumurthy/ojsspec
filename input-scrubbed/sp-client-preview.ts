@@ -1121,8 +1121,7 @@ declare class MockWebPartContext {
  * @param targetProperty - Target property the Button is associated to.
  * @param properties - Strongly typed Button properties.
  */
-export function PropertyPaneButton(targetProperty: string,
-  properties: IPropertyPaneButtonProps): IPropertyPaneField<IPropertyPaneButtonProps>;
+export function PropertyPaneButton(targetProperty: string,  properties: IPropertyPaneButtonProps): IPropertyPaneField<IPropertyPaneButtonProps>;
 
 enum PropertyPaneButtonType {
   Command,
@@ -1139,32 +1138,28 @@ enum PropertyPaneButtonType {
  * @param targetProperty - Target property the checkbox is associated to.
  * @param properties - Strongly typed Checkbox properties.
  */
-export function PropertyPaneCheckbox(targetProperty: string,
-  properties: IPropertyPaneCheckboxProps): IPropertyPaneField<IPropertyPaneCheckboxProps>;
+export function PropertyPaneCheckbox(targetProperty: string,  properties: IPropertyPaneCheckboxProps): IPropertyPaneField<IPropertyPaneCheckboxProps>;
 
 /**
  * Helper method to create a Choice Group on the PropertyPane.
  * @param targetProperty - Target property the choice group is associated to.
  * @param properties - Strongly typed Choice Group properties.
  */
-export function PropertyPaneChoiceGroup(targetProperty: string,
-  properties: IPropertyPaneChoiceGroupProps): IPropertyPaneField<IPropertyPaneChoiceGroupProps>;
+export function PropertyPaneChoiceGroup(targetProperty: string,  properties: IPropertyPaneChoiceGroupProps): IPropertyPaneField<IPropertyPaneChoiceGroupProps>;
 
 /**
  * Helper method to create a Choice Group on the PropertyPane.
  * @param targetProperty - Target property the choice group is associated to.
  * @param properties - Strongly typed Choice Group properties.
  */
-export function PropertyPaneCustomField(targetProperty: string,
-  properties: IPropertyPaneCustomFieldProps): IPropertyPaneField<IPropertyPaneCustomFieldProps>;
+export function PropertyPaneCustomField(targetProperty: string,  properties: IPropertyPaneCustomFieldProps): IPropertyPaneField<IPropertyPaneCustomFieldProps>;
 
 /**
  * Helper method to create a Dropdown on the PropertyPane.
  * @param targetProperty - Target property the dropdown is associated to.
  * @param properties - Strongly typed Dropdown properties.
  */
-export function PropertyPaneDropdown(targetProperty: string,
-  properties: IPropertyPaneDropdownProps): IPropertyPaneField<IPropertyPaneDropdownProps>;
+export function PropertyPaneDropdown(targetProperty: string,  properties: IPropertyPaneDropdownProps): IPropertyPaneField<IPropertyPaneDropdownProps>;
 
 /**
  * Helper method to create a Horizontal Rule on the PropertyPane.
@@ -1177,40 +1172,35 @@ export function PropertyPaneHorizontalRule(): IPropertyPaneField<void>;
  * @param targetProperty - Target property the label is associated to.
  * @param properties - Strongly typed Label properties.
  */
-export function PropertyPaneLabel(targetProperty: string,
-  properties: IPropertyPaneLabelProps): IPropertyPaneField<IPropertyPaneLabelProps>;
+export function PropertyPaneLabel(targetProperty: string,  properties: IPropertyPaneLabelProps): IPropertyPaneField<IPropertyPaneLabelProps>;
 
 /**
  * Helper method to create a Link on the PropertyPane.
  * @param targetProperty - Target property the Link is associated to.
  * @param properties - Strongly typed Link properties.
  */
-export function PropertyPaneLink(targetProperty: string,
-  properties: IPropertyPaneLinkProps): IPropertyPaneField<IPropertyPaneLinkProps>;
+export function PropertyPaneLink(targetProperty: string,  properties: IPropertyPaneLinkProps): IPropertyPaneField<IPropertyPaneLinkProps>;
 
 /**
  * Helper method to create a Slider on the PropertyPane.
  * @param targetProperty - Target property the slider is associated to.
  * @param properties - Strongly typed Slider properties.
  */
-export function PropertyPaneSlider(targetProperty: string,
-  properties: IPropertyPaneSliderProps): IPropertyPaneField<IPropertyPaneSliderProps>;
+export function PropertyPaneSlider(targetProperty: string,  properties: IPropertyPaneSliderProps): IPropertyPaneField<IPropertyPaneSliderProps>;
 
 /**
  * Helper method to create a TextField on the PropertyPane.
  * @param targetProperty - Target property the textfield is associated to.
  * @param properties - Strongly typed TextField properties.
  */
-export function PropertyPaneTextField(targetProperty: string,
-  properties: IPropertyPaneTextFieldProps): IPropertyPaneField<IPropertyPaneTextFieldProps>;
+export function PropertyPaneTextField(targetProperty: string,  properties: IPropertyPaneTextFieldProps): IPropertyPaneField<IPropertyPaneTextFieldProps>;
 
 /**
  * Helper method to create a Toggle on the PropertyPane.
  * @param targetProperty - Target property the toggle is associated to.
  * @param properties - Strongly typed Toggle properties.
  */
-export function PropertyPaneToggle(targetProperty: string,
-  properties: IPropertyPaneToggleProps): IPropertyPaneField<IPropertyPaneToggleProps>;
+export function PropertyPaneToggle(targetProperty: string,  properties: IPropertyPaneToggleProps): IPropertyPaneField<IPropertyPaneToggleProps>;
 
 
 
