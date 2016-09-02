@@ -1,6 +1,8 @@
-# ServiceKey class
+# ServiceKey T class
 
 
+
+_Type parameters: T_
 
 The ServiceKey is a lookup key that is used when calling ServiceScope.consume() 
 to fetch a dependency. The key also defines a default implementation of the 
@@ -27,8 +29,9 @@ introduced without inadvertently breaking components that are loaded by an older
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor~93886)     | public | ServiceCreator<T> | PRIVATE - Do not call this from your own code |
-|[createCustom<T>](#createcustom<t>~94115)     | public, _static_ | [ServiceKey<T>](ServiceKey.md) | your application |
+|[constructor](#constructor~28889)     | public | ServiceCreator<T> | PRIVATE - Do not call this from your own code |
+|[serviceClass{new](#serviceclass{new~10866)     | public | [ServiceKey<T>;](ServiceKey.md) | your application |
+|[createCustom<T>](#createcustom<t>~47449)     | public, _static_ | [ServiceKey<T>](ServiceKey.md) | your application |
 
 
 
@@ -50,6 +53,23 @@ ServiceCreator<T>
 | `id`    | string |  |
 | `name`    | string |  |
 | `defaultCreator`    | ServiceCreator<T> |  |
+
+
+## serviceClass{new
+
+your application.
+
+##### Signature
+
+#### Returns
+ServiceKey<T>;
+
+#### Parameters
+
+
+| Parameter	   | Type    | Description |
+|:-------------|:---------------|:------------|
+| `serviceScope`    | [ServiceScope](ServiceScope.md) |  |
 
 
 ## createCustom<T>

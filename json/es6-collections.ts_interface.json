@@ -27,7 +27,7 @@
     "functions": {},
     "objects": {},
     "methods": {
-      "next~48721": {
+      "next~36494": {
         "descr": "",
         "genericType": null,
         "returnType": "IteratorResult<T>",
@@ -44,7 +44,7 @@
           }
         ]
       },
-      "return~63273": {
+      "return~67440": {
         "descr": "",
         "genericType": null,
         "returnType": "IteratorResult<T>",
@@ -61,7 +61,7 @@
           }
         ]
       },
-      "throw~63281": {
+      "throw~44983": {
         "descr": "",
         "genericType": null,
         "returnType": "IteratorResult<T>",
@@ -85,7 +85,7 @@
     "descr": "",
     "properties": {},
     "functions": {
-      "forEach~14146": {
+      "forEach~80587": {
         "descr": "",
         "isOptional": false,
         "returnType": "void): void",
@@ -115,7 +115,7 @@
       }
     },
     "functions": {
-      "forEach~65880": {
+      "forEach~95838": {
         "descr": "",
         "isOptional": false,
         "returnType": "void,thisArg?: any): void",
@@ -149,7 +149,7 @@
     },
     "objects": {},
     "methods": {
-      "clear~71758": {
+      "clear~29983": {
         "descr": "",
         "genericType": null,
         "returnType": "void",
@@ -159,7 +159,7 @@
         "returnDesc": null,
         "params": []
       },
-      "delete~46940": {
+      "delete~81670": {
         "descr": "",
         "genericType": null,
         "returnType": "boolean",
@@ -176,7 +176,7 @@
           }
         ]
       },
-      "get~64647": {
+      "get~21662": {
         "descr": "",
         "genericType": null,
         "returnType": "V",
@@ -193,7 +193,7 @@
           }
         ]
       },
-      "has~19008": {
+      "has~95835": {
         "descr": "",
         "genericType": null,
         "returnType": "boolean",
@@ -210,7 +210,7 @@
           }
         ]
       },
-      "set~86072": {
+      "set~78242": {
         "descr": "",
         "genericType": null,
         "returnType": "Map<K,V>",
@@ -233,7 +233,7 @@
           }
         ]
       },
-      "entries~17780": {
+      "entries~91137": {
         "descr": "",
         "genericType": null,
         "returnType": "Iterator<[K,V]>",
@@ -243,7 +243,7 @@
         "returnDesc": null,
         "params": []
       },
-      "keys~94863": {
+      "keys~60893": {
         "descr": "",
         "genericType": null,
         "returnType": "Iterator<K>",
@@ -253,7 +253,7 @@
         "returnDesc": null,
         "params": []
       },
-      "values~95382": {
+      "values~88034": {
         "descr": "",
         "genericType": null,
         "returnType": "Iterator<V>",
@@ -279,7 +279,7 @@
     "functions": {},
     "objects": {},
     "methods": {
-      "constructor<K,V>~42994": {
+      "constructor<K,V>~61785": {
         "descr": "",
         "genericType": "K,V",
         "returnType": "Map<K,V>",
@@ -289,7 +289,7 @@
         "returnDesc": null,
         "params": []
       },
-      "constructor<K,V>~74739": {
+      "constructor<K,V>~52000": {
         "descr": "",
         "genericType": "K,V",
         "returnType": "Map<K,V>",
@@ -325,7 +325,7 @@
       }
     },
     "functions": {
-      "forEach~78032": {
+      "forEach~84062": {
         "descr": "",
         "isOptional": false,
         "returnType": "void,thisArg?: any): void",
@@ -354,7 +354,7 @@
     },
     "objects": {},
     "methods": {
-      "add~44556": {
+      "add~54592": {
         "descr": "",
         "genericType": null,
         "returnType": "Set<T>",
@@ -371,7 +371,7 @@
           }
         ]
       },
-      "clear~35878": {
+      "clear~71612": {
         "descr": "",
         "genericType": null,
         "returnType": "void",
@@ -381,7 +381,7 @@
         "returnDesc": null,
         "params": []
       },
-      "delete~60713": {
+      "delete~28997": {
         "descr": "",
         "genericType": null,
         "returnType": "boolean",
@@ -398,7 +398,7 @@
           }
         ]
       },
-      "has~18904": {
+      "has~90178": {
         "descr": "",
         "genericType": null,
         "returnType": "boolean",
@@ -415,7 +415,7 @@
           }
         ]
       },
-      "entries~48054": {
+      "entries~47790": {
         "descr": "",
         "genericType": null,
         "returnType": "Iterator<[T,T]>",
@@ -425,7 +425,7 @@
         "returnDesc": null,
         "params": []
       },
-      "keys~85637": {
+      "keys~28122": {
         "descr": "",
         "genericType": null,
         "returnType": "Iterator<T>",
@@ -435,7 +435,7 @@
         "returnDesc": null,
         "params": []
       },
-      "values~87530": {
+      "values~55968": {
         "descr": "",
         "genericType": null,
         "returnType": "Iterator<T>",
@@ -461,7 +461,7 @@
     "functions": {},
     "objects": {},
     "methods": {
-      "constructor<T>~60750": {
+      "constructor<T>~80657": {
         "descr": "",
         "genericType": "T",
         "returnType": "Set<T>",
@@ -471,7 +471,7 @@
         "returnDesc": null,
         "params": []
       },
-      "constructor<T>~68248": {
+      "constructor<T>~79232": {
         "descr": "",
         "genericType": "T",
         "returnType": "Set<T>",
@@ -497,7 +497,7 @@
     "functions": {},
     "objects": {},
     "methods": {
-      "delete~24951": {
+      "delete~33503": {
         "descr": "",
         "genericType": null,
         "returnType": "boolean",
@@ -514,7 +514,7 @@
           }
         ]
       },
-      "clear~80849": {
+      "clear~81204": {
         "descr": "",
         "genericType": null,
         "returnType": "void",
@@ -524,7 +524,7 @@
         "returnDesc": null,
         "params": []
       },
-      "get~92751": {
+      "get~65569": {
         "descr": "",
         "genericType": null,
         "returnType": "V",
@@ -541,7 +541,7 @@
           }
         ]
       },
-      "has~97634": {
+      "has~54633": {
         "descr": "",
         "genericType": null,
         "returnType": "boolean",
@@ -558,7 +558,7 @@
           }
         ]
       },
-      "set~81665": {
+      "set~58925": {
         "descr": "",
         "genericType": null,
         "returnType": "WeakMap<K,V>",
@@ -597,7 +597,7 @@
     "functions": {},
     "objects": {},
     "methods": {
-      "constructor<K,V>~42166": {
+      "constructor<K,V>~98845": {
         "descr": "",
         "genericType": "K,V",
         "returnType": "WeakMap<K,V>",
@@ -607,7 +607,7 @@
         "returnDesc": null,
         "params": []
       },
-      "constructor<K,V>~18087": {
+      "constructor<K,V>~56803": {
         "descr": "",
         "genericType": "K,V",
         "returnType": "WeakMap<K,V>",
@@ -638,7 +638,7 @@
     "functions": {},
     "objects": {},
     "methods": {
-      "delete~23844": {
+      "delete~52411": {
         "descr": "",
         "genericType": null,
         "returnType": "boolean",
@@ -655,7 +655,7 @@
           }
         ]
       },
-      "clear~97087": {
+      "clear~83955": {
         "descr": "",
         "genericType": null,
         "returnType": "void",
@@ -665,7 +665,7 @@
         "returnDesc": null,
         "params": []
       },
-      "add~77073": {
+      "add~27296": {
         "descr": "",
         "genericType": null,
         "returnType": "WeakSet<T>",
@@ -682,7 +682,7 @@
           }
         ]
       },
-      "has~97051": {
+      "has~48624": {
         "descr": "",
         "genericType": null,
         "returnType": "boolean",
@@ -715,7 +715,7 @@
     "functions": {},
     "objects": {},
     "methods": {
-      "constructor<T>~98085": {
+      "constructor<T>~33901": {
         "descr": "",
         "genericType": "T",
         "returnType": "WeakSet<T>",
@@ -725,7 +725,7 @@
         "returnDesc": null,
         "params": []
       },
-      "constructor<T>~23825": {
+      "constructor<T>~22834": {
         "descr": "",
         "genericType": "T",
         "returnType": "WeakSet<T>",

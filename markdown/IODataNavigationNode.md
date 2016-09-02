@@ -2,6 +2,8 @@
 
 
 
+
+
 Represents an OData SP.NavigationNode object. 
 https:
 

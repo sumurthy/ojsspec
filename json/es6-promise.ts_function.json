@@ -1,5 +1,5 @@
 {
-  "resolve<R>~85015": {
+  "resolve<R>~15284": {
     "descr": "Make a new promise from the thenable. \nA thenable is promise-like in as far as it has a \"then\" method.",
     "signature": "resolve<R>(value?: R | Thenable<R>): Promise<R>",
     "returnType": "Promise<R>",
@@ -13,7 +13,7 @@
       }
     ]
   },
-  "reject~87339": {
+  "reject~33199": {
     "descr": "Make a promise that rejects to obj. For consistency and debugging (eg stack traces),obj should be an instanceof Error",
     "signature": "reject(error: any): Promise<any>",
     "returnType": "Promise<any>",
@@ -27,7 +27,7 @@
       }
     ]
   },
-  "all<R>~47572": {
+  "all<R>~71402": {
     "descr": "Make a promise that fulfills when every item in the array fulfills,and rejects if (and when) any item rejects. \nthe array passed to all can be a mixture of promise-like objects and other objects. \nThe fulfillment value is an array (in order) of fulfillment values. The rejection value is the first rejection value.",
     "signature": "all<R>(promises: (R | Thenable<R>)[]): Promise<R[]>",
     "returnType": "Promise<R[]>",
@@ -41,7 +41,7 @@
       }
     ]
   },
-  "race<R>~10579": {
+  "race<R>~84426": {
     "descr": "Make a Promise that fulfills when any item fulfills,and rejects if any item rejects.",
     "signature": "race<R>(promises: (R | Thenable<R>)[]): Promise<R>",
     "returnType": "Promise<R>",

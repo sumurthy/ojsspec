@@ -7,6 +7,8 @@
 
 
 
+
+
 ### Properties
 
 | Property	   | Type	| Description|
@@ -20,8 +22,8 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[constructor<K,V>](#constructor<k,v>~42166)      | [WeakMap<K](WeakMap.md),V> |  |
-|[constructor<K,V>](#constructor<k,v>~18087)      | [WeakMap<K](WeakMap.md),V> |  |
+|[constructor<K,V>](#constructor<k,v>~98845)      | [WeakMap<K](WeakMap.md),V> |  |
+|[constructor<K,V>](#constructor<k,v>~56803)      | [WeakMap<K](WeakMap.md),V> |  |
 
 
 

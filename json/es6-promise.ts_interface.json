@@ -4,7 +4,7 @@
     "descr": "",
     "properties": {},
     "functions": {
-      "then<U>~32043": {
+      "then<U>~99972": {
         "descr": "",
         "isOptional": false,
         "returnType": "U | Thenable<U>): Thenable<U>",
@@ -18,7 +18,7 @@
           }
         ]
       },
-      "then<U>~73599": {
+      "then<U>~96641": {
         "descr": "",
         "isOptional": false,
         "returnType": "void): Thenable<U>",

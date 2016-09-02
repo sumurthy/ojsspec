@@ -10,15 +10,17 @@
 
 
 
+
+
 ## Methods
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[delete](#delete~24951)      | boolean |  |
-|[clear](#clear~80849)      | void |  |
-|[get](#get~92751)      | V |  |
-|[has](#has~97634)      | boolean |  |
-|[set](#set~81665)      | [WeakMap<K](WeakMap.md),V> |  |
+|[delete](#delete~33503)      | boolean |  |
+|[clear](#clear~81204)      | void |  |
+|[get](#get~65569)      | V |  |
+|[has](#has~54633)      | boolean |  |
+|[set](#set~58925)      | [WeakMap<K](WeakMap.md),V> |  |
 
 
 

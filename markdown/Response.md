@@ -6,15 +6,18 @@
 
 
 
+
+
 ### Properties
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|`string|ResponseType`     | type: | string,ResponseType |  |
+|`string|ResponseType`     | type: | string,[ResponseType](ResponseType.md) |  |
 |`string`     | statusText: | string |  |
 |`number`     | status: | number |  |
 |`boolean`     | ok: | boolean |  |
 |`Headers`     | headers: | [Headers](Headers.md) |  |
+|`OBJECTERROR`     | } | } |  |
 
 
 
@@ -23,10 +26,10 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor~41343)     | public | [ResponseInit](ResponseInit.md) |  |
-|[error](#error~56041)     | public | [Response](Response.md) |  |
-|[redirect](#redirect~56718)     | public | [Response](Response.md) |  |
-|[clone](#clone~86778)     | public | [Response](Response.md) |  |
+|[constructor](#constructor~42878)     | public | [ResponseInit](ResponseInit.md) |  |
+|[error](#error~42620)     | public | [Response](Response.md) |  |
+|[redirect](#redirect~28395)     | public | [Response](Response.md) |  |
+|[clone](#clone~16151)     | public | [Response](Response.md) |  |
 
 
 

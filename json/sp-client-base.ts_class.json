@@ -14,7 +14,7 @@
       }
     },
     "methods": {
-      "constructor~42927": {
+      "constructor~55321": {
         "accessModifier": "public",
         "signature": "constructor(serviceScope: ServiceScope)",
         "isStatic": false,
@@ -32,7 +32,7 @@
           }
         ]
       },
-      "fetch~83242": {
+      "fetch~61588": {
         "accessModifier": "public",
         "signature": "public fetch(url: string,options: IBasicHttpClientOptions): Promise<Response>",
         "isStatic": false,
@@ -56,7 +56,7 @@
           }
         ]
       },
-      "fetchCore~16302": {
+      "fetchCore~97711": {
         "accessModifier": "protected",
         "signature": "protected fetchCore(request: Request): Promise<Response>",
         "isStatic": false,
@@ -74,7 +74,7 @@
           }
         ]
       },
-      "get~65965": {
+      "get~32500": {
         "accessModifier": "public",
         "signature": "public get(url: string,options?: IBasicHttpClientOptions): Promise<Response>",
         "isStatic": false,
@@ -98,7 +98,7 @@
           }
         ]
       },
-      "post~69124": {
+      "post~53245": {
         "accessModifier": "public",
         "signature": "public post(url: string,options: IBasicHttpClientOptions): Promise<Response>",
         "isStatic": false,
@@ -131,7 +131,7 @@
     "descr": " \nThis class contains various comparison utilities. \n",
     "properties": {},
     "methods": {
-      "shallowCompare~39803": {
+      "shallowCompare~98959": {
         "accessModifier": "public",
         "signature": "public shallowCompare(objA: Object,objB: Object): boolean",
         "isStatic": true,
@@ -206,7 +206,7 @@
     "descr": "This class represents a globally unique identifier,as described by \nIETF RFC 4122. The input string is normalized and validated by the class \nconstructor, which provides important guarantees that simplify other code \nthat works with the GUID. This class also provides basic functionality \nfor generating a pseudo-random GUID (\"version 4\" UUID from the RFC); \nhowever, be aware that the uniqueness depends on the browser's \nMath.random() function and may be not be suitable for some applications. \n",
     "properties": {},
     "methods": {
-      "equals~91036": {
+      "equals~24637": {
         "accessModifier": "public",
         "signature": "public equals(guid: Guid): boolean",
         "isStatic": false,
@@ -224,7 +224,7 @@
           }
         ]
       },
-      "isValid~79246": {
+      "isValid~43182": {
         "accessModifier": "public",
         "signature": "public isValid(guid: string): boolean",
         "isStatic": true,
@@ -242,7 +242,7 @@
           }
         ]
       },
-      "constructorGuid~69818": {
+      "constructorGuid~28839": {
         "accessModifier": "public",
         "signature": "public newGuid(randomProvider?: IRandomProvider): Guid",
         "isStatic": true,
@@ -260,7 +260,7 @@
           }
         ]
       },
-      "toString~60006": {
+      "toString~26710": {
         "accessModifier": "public",
         "signature": "public toString(): string",
         "isStatic": false,
@@ -271,7 +271,7 @@
         "returnDescr": null,
         "params": []
       },
-      "tryParse~41276": {
+      "tryParse~68405": {
         "accessModifier": "public",
         "signature": "public tryParse(guid: string): Guid",
         "isStatic": true,
@@ -298,7 +298,7 @@
     "descr": "HttpClient is used to perform REST calls against SharePoint. It adds default \nheaders, manages the digest needed for writes, and collects telemetry that \nhelps the service to monitor the performance of an application. \n \nFor communicating with non-SharePoint services, use the BasicHttpClient \nclass instead.",
     "properties": {},
     "methods": {
-      "constructor~86297": {
+      "constructor~18412": {
         "accessModifier": "public",
         "signature": "constructor(serviceScope: ServiceScope)",
         "isStatic": false,
@@ -316,7 +316,7 @@
           }
         ]
       },
-      "beginBatch~86648": {
+      "beginBatch~77519": {
         "accessModifier": "public",
         "signature": "public beginBatch(batchOptions?: IODataBatchOptions): ODataBatch",
         "isStatic": false,
@@ -334,7 +334,7 @@
           }
         ]
       },
-      "fetch~50255": {
+      "fetch~77995": {
         "accessModifier": "public",
         "signature": "public fetch(url: string,options: IHttpClientOptions): Promise<Response>",
         "isStatic": false,
@@ -358,7 +358,7 @@
           }
         ]
       },
-      "get~39010": {
+      "get~91538": {
         "accessModifier": "public",
         "signature": "public get(url: string,options?: IHttpClientOptions): Promise<Response>",
         "isStatic": false,
@@ -382,7 +382,7 @@
           }
         ]
       },
-      "getWebUrlFromRequestUrl~14241": {
+      "getWebUrlFromRequestUrl~86634": {
         "accessModifier": "public",
         "signature": "public getWebUrlFromRequestUrl(requestUrl: string): string",
         "isStatic": true,
@@ -400,7 +400,7 @@
           }
         ]
       },
-      "post~61649": {
+      "post~67357": {
         "accessModifier": "public",
         "signature": "public post(url: string,options: IHttpClientOptions): Promise<Response>",
         "isStatic": false,
@@ -433,7 +433,7 @@
     "descr": "The Log class provides methods for logging messages at different levels (verbose, \ninfo, warning, error) and with context information. Context information helps identify \nwhich component generated the messages and makes the messages useful and filterable. \n",
     "properties": {},
     "methods": {
-      "error~49719": {
+      "error~62388": {
         "accessModifier": "public",
         "signature": "public error(source: string,error: Error,scope?: ServiceScope): void",
         "isStatic": true,
@@ -463,7 +463,7 @@
           }
         ]
       },
-      "info~70357": {
+      "info~28613": {
         "accessModifier": "public",
         "signature": "public info(source: string,message: string,scope?: ServiceScope): void",
         "isStatic": true,
@@ -493,7 +493,7 @@
           }
         ]
       },
-      "verbose~21286": {
+      "verbose~97850": {
         "accessModifier": "public",
         "signature": "public verbose(source: string,message: string,scope?: ServiceScope): void",
         "isStatic": true,
@@ -523,7 +523,7 @@
           }
         ]
       },
-      "warn~85083": {
+      "warn~49341": {
         "accessModifier": "public",
         "signature": "public warn(source: string,message: string,scope?: ServiceScope): void",
         "isStatic": true,
@@ -562,7 +562,7 @@
     "descr": "The ODataBatch class accumulates a number of REST service calls and \ntransmits them as a single ODATA batch. This protocol is documented here: \nhttp: \n \nThe usage is to call ODataBatch.fetch() to queue each individual request, \nand then call ODataBatch.execute() to execute the batch operation. \nThe execute() method returns a promise that resolves when the real REST \ncall has completed. Each call to fetch() also returns a promise that will \nresolve with a Response object for that particular request. \n",
     "properties": {},
     "methods": {
-      "constructor~33852": {
+      "constructor~16730": {
         "accessModifier": "public",
         "signature": "public constructor(serviceScope: ServiceScope,batchOptions?: IODataBatchOptions)",
         "isStatic": false,
@@ -586,7 +586,7 @@
           }
         ]
       },
-      "execute~28301": {
+      "execute~55276": {
         "accessModifier": "public",
         "signature": "public execute(): Promise<ODataBatch>",
         "isStatic": false,
@@ -597,7 +597,7 @@
         "returnDescr": null,
         "params": []
       },
-      "fetch~98350": {
+      "fetch~97163": {
         "accessModifier": "public",
         "signature": "public fetch(url: string,options?: IODataBatchRequestOptions): Promise<Response>",
         "isStatic": false,
@@ -621,7 +621,7 @@
           }
         ]
       },
-      "get~25769": {
+      "get~61826": {
         "accessModifier": "public",
         "signature": "public get(url: string,options?: IODataBatchRequestOptions): Promise<Response>",
         "isStatic": false,
@@ -645,7 +645,7 @@
           }
         ]
       },
-      "post~72045": {
+      "post~23469": {
         "accessModifier": "public",
         "signature": "public post(url: string,options: IODataBatchRequestOptions): Promise<Response>",
         "isStatic": false,
@@ -719,7 +719,7 @@
       }
     },
     "methods": {
-      "constructor~33759": {
+      "constructor~51506": {
         "accessModifier": "public",
         "signature": "constructor(serviceScope: ServiceScope)",
         "isStatic": false,
@@ -779,7 +779,7 @@
       }
     },
     "methods": {
-      "constructor~93886": {
+      "constructor~28889": {
         "accessModifier": "public",
         "signature": "constructor(id: string,name: string,defaultCreator: ServiceCreator<T>)",
         "isStatic": false,
@@ -809,7 +809,25 @@
           }
         ]
       },
-      "createCustom<T>~94115": {
+      "serviceClass{new~10866": {
+        "accessModifier": "public",
+        "signature": "serviceClass: { new (serviceScope: ServiceScope) }): ServiceKey<T>;",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "your application.",
+        "genericType": null,
+        "returnType": "ServiceKey<T>;",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "serviceScope",
+            "dataType": "ServiceScope",
+            "descr": "",
+            "isOptional": false
+          }
+        ]
+      },
+      "createCustom<T>~47449": {
         "accessModifier": "public",
         "signature": "public createCustom < T >(name: string,defaultCreator: ServiceCreator<T>): ServiceKey<T>",
         "isStatic": true,
@@ -851,7 +869,7 @@
       }
     },
     "methods": {
-      "constructor~10027": {
+      "constructor~31343": {
         "accessModifier": "public",
         "signature": "constructor(parent: ServiceScope)",
         "isStatic": false,
@@ -869,7 +887,7 @@
           }
         ]
       },
-      "consume<T>~41915": {
+      "consume<T>~71775": {
         "accessModifier": "public",
         "signature": "public consume < T >(serviceKey: ServiceKey<T>): T",
         "isStatic": false,
@@ -887,7 +905,25 @@
           }
         ]
       },
-      "createDefaultAndProvide<T>~71511": {
+      "simpleServiceClass{new~33756": {
+        "accessModifier": "public",
+        "signature": "simpleServiceClass: { new (serviceScope: ServiceScope) }): T;",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "This is a shorthand function that its equivalent to constructing a new instance of the \nsimpleServiceClass, then registering it by calling ServiceScope.provide().",
+        "genericType": null,
+        "returnType": "T;",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "serviceScope",
+            "dataType": "ServiceScope",
+            "descr": "",
+            "isOptional": false
+          }
+        ]
+      },
+      "createDefaultAndProvide<T>~21190": {
         "accessModifier": "public",
         "signature": "public createDefaultAndProvide < T >(serviceKey: ServiceKey<T>): T",
         "isStatic": false,
@@ -905,7 +941,7 @@
           }
         ]
       },
-      "finish~82543": {
+      "finish~21070": {
         "accessModifier": "public",
         "signature": "public finish(): void",
         "isStatic": false,
@@ -916,7 +952,7 @@
         "returnDescr": null,
         "params": []
       },
-      "getParent~87977": {
+      "getParent~22331": {
         "accessModifier": "public",
         "signature": "public getParent(): ServiceScope",
         "isStatic": false,
@@ -927,7 +963,7 @@
         "returnDescr": null,
         "params": []
       },
-      "provide<T>~13992": {
+      "provide<T>~38955": {
         "accessModifier": "public",
         "signature": "public provide < T >(serviceKey: ServiceKey<T>,service: T): T",
         "isStatic": false,
@@ -951,7 +987,7 @@
           }
         ]
       },
-      "startNewChild~78628": {
+      "startNewChild~97603": {
         "accessModifier": "public",
         "signature": "public startNewChild(): ServiceScope",
         "isStatic": false,
@@ -962,7 +998,7 @@
         "returnDescr": null,
         "params": []
       },
-      "startNewRoot~32051": {
+      "startNewRoot~75453": {
         "accessModifier": "public",
         "signature": "public startNewRoot(): ServiceScope",
         "isStatic": true,
@@ -973,7 +1009,7 @@
         "returnDescr": null,
         "params": []
       },
-      "whenFinished~94089": {
+      "whenFinished~33129": {
         "accessModifier": "public",
         "signature": "public whenFinished(callback: () => void): void",
         "isStatic": false,
@@ -1297,7 +1333,7 @@
       }
     },
     "methods": {
-      "constructor~15461": {
+      "constructor~45677": {
         "accessModifier": "public",
         "signature": "constructor(value: IODataBasePermission)",
         "isStatic": false,
@@ -1315,7 +1351,7 @@
           }
         ]
       },
-      "hasAllPermissions~49313": {
+      "hasAllPermissions~44420": {
         "accessModifier": "public",
         "signature": "public hasAllPermissions(...requestedPerms: SPPermission[]): boolean",
         "isStatic": false,
@@ -1333,7 +1369,7 @@
           }
         ]
       },
-      "hasAnyPermissions~82211": {
+      "hasAnyPermissions~22818": {
         "accessModifier": "public",
         "signature": "public hasAnyPermissions(...requestedPerms: SPPermission[]): boolean",
         "isStatic": false,
@@ -1351,7 +1387,7 @@
           }
         ]
       },
-      "hasPermission~80265": {
+      "hasPermission~53252": {
         "accessModifier": "public",
         "signature": "public hasPermission(requestedPerm: SPPermission): boolean",
         "isStatic": false,
@@ -1461,7 +1497,7 @@
     "descr": "Class for storing and retrieving query parameters. \nThe URL can be server-relative and it will parse empty/null strings. \nThe query parameters must start with ? to indicate the first query parameter and \nuse & for all subsequent parameters. The class also supports fragments. \nEdge cases behavior: \nEmpty value (www.example.com/?test=) stores key and empty value \nNo equals in queryParam (www.example.com/?test) stores key and undefined value \nEmpty queryParam (www.example.com/?&debug=on) stores undefined key and value \nQuery param with only equals (www.example.com/?=&debug=on stores empty string key and value",
     "properties": {},
     "methods": {
-      "constructor~55835": {
+      "constructor~56911": {
         "accessModifier": "public",
         "signature": "constructor(url: string)",
         "isStatic": false,
@@ -1479,7 +1515,7 @@
           }
         ]
       },
-      "getValue~69182": {
+      "getValue~38952": {
         "accessModifier": "public",
         "signature": "public getValue(param: string): string",
         "isStatic": false,
@@ -1497,7 +1533,7 @@
           }
         ]
       },
-      "getValues~86840": {
+      "getValues~27548": {
         "accessModifier": "public",
         "signature": "public getValues(param: string): string[]",
         "isStatic": false,
@@ -1524,7 +1560,7 @@
     "descr": "Common helper functions for working with URLs. These utilities are intended to be simple, \nsmall, and extremely common. Do not add advanced parsing logic to this file.",
     "properties": {},
     "methods": {
-      "convertToODataStringLiteral~18495": {
+      "convertToODataStringLiteral~29099": {
         "accessModifier": "public",
         "signature": "public convertToODataStringLiteral(value: string): string",
         "isStatic": true,
@@ -1542,7 +1578,7 @@
           }
         ]
       },
-      "removeEndSlash~70016": {
+      "removeEndSlash~10676": {
         "accessModifier": "public",
         "signature": "public removeEndSlash(url: string): string",
         "isStatic": true,
@@ -1569,7 +1605,7 @@
     "descr": "This class implements provides a standard way to validate properties and function parameters. \nUnlike an assertion, the Validate checks are always performed and will always throw an error, \neven in a production release. As such, be careful not to overuse these checks in a way \nthat might impact performance.",
     "properties": {},
     "methods": {
-      "isNonemptyString~95764": {
+      "isNonemptyString~72133": {
         "accessModifier": "public",
         "signature": "public isNonemptyString(value: string,variableName: string): void",
         "isStatic": true,
@@ -1593,7 +1629,7 @@
           }
         ]
       },
-      "isNotNullOrUndefined~70703": {
+      "isNotNullOrUndefined~69344": {
         "accessModifier": "public",
         "signature": "public isNotNullOrUndefined(value: any,variableName: string): void",
         "isStatic": true,
@@ -1617,7 +1653,7 @@
           }
         ]
       },
-      "isTrue~46018": {
+      "isTrue~60273": {
         "accessModifier": "public",
         "signature": "public isTrue(value: boolean,variableName: string): void",
         "isStatic": true,

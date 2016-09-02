@@ -166,6 +166,116 @@
         "xslt",
         "",
         ""
+      ],
+      [
+        "}",
+        "",
+        ""
+      ]
+    ]
+  },
+  "RequestMode": {
+    "descr": "",
+    "values": [
+      [
+        "cors",
+        "",
+        ""
+      ],
+      [
+        "cors",
+        "",
+        ""
+      ],
+      [
+        "cors",
+        "",
+        ""
+      ]
+    ]
+  },
+  "RequestCredentials": {
+    "descr": "",
+    "values": [
+      [
+        "include",
+        "",
+        ""
+      ],
+      [
+        "include",
+        "",
+        ""
+      ],
+      [
+        "include",
+        "",
+        ""
+      ]
+    ]
+  },
+  "RequestCache": {
+    "descr": "",
+    "values": [
+      [
+        "only-if-cached",
+        "",
+        ""
+      ],
+      [
+        "only-if-cached",
+        "",
+        ""
+      ],
+      [
+        "only-if-cached",
+        "",
+        ""
+      ],
+      [
+        "only-if-cached",
+        "",
+        ""
+      ],
+      [
+        "only-if-cached",
+        "",
+        ""
+      ],
+      [
+        "only-if-cached",
+        "",
+        ""
+      ]
+    ]
+  },
+  "ResponseType": {
+    "descr": "",
+    "values": [
+      [
+        "opaque",
+        "",
+        ""
+      ],
+      [
+        "opaque",
+        "",
+        ""
+      ],
+      [
+        "opaque",
+        "",
+        ""
+      ],
+      [
+        "opaque",
+        "",
+        ""
+      ],
+      [
+        "opaque",
+        "",
+        ""
       ]
     ]
   }

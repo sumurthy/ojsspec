@@ -216,21 +216,42 @@ function doSubClassInterface(tline = '', localO = {}, localName = '', isClass = 
     if (tline.includes('%resourcename%')) tline = tline.replace('%resourcename%', localName)
     if (tline.includes('%resourcetype%')) {
         if (isClass) {
-            tline = tline.replace('%resourcetype%', 'class')
+            tline = tline.replace('%resourcetype%', ' class')
         } else {
-            tline = tline.replace('%resourcetype%', 'interface')
+            tline = tline.replace('%resourcetype%', ' interface')
+        }
+    }
+    if (tline.includes('%generictype%')) {
+        if (localO[localName]['genericType']) {
+            tline = tline.replace('%generictype%', ` <${localO[localName]['genericType']}>`)
+        }
+        else {
+            tline = tline.replace('%generictype%', '')
+        }
+    }
+    if (tline.includes('%typeparameters%')) {
+        if (localO[localName]['genericType']) {
+            tline = tline.replace('%typeparameters%', `_Type parameters: <${localO[localName]['genericType']}>_`)
+        }
+        else {
+            tline = tline.replace('%typeparameters%', '')
         }
     }
     if (tline.includes('%extendsimplements%')) {
         if (localO[localName]['implementsExtendsName']) {
             var ielink = getLinkForType(localO[localName]['implementsExtendsName'])
+            var tag = (isClass) ? 'Implements' : 'Extends'
             tline = tline.replace('%extendsimplements%',
-                        `_Implements/extends: ${ielink}_`)
+                        `_${tag}: ${ielink}_`)
         }
         else {
             tline = tline.replace('%extendsimplements%', '')
         }
     }
+
+
+
+
     return tline
 }
 

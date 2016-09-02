@@ -7,15 +7,18 @@
 
 
 
+
+
 ### Properties
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
 |`method`      | string |  |
 |`body`      | BodyInit |  |
-|`mode`      | string,RequestMode |  |
-|`credentials`      | string,RequestCredentials |  |
-|`cache`      | string,RequestCache |  |
+|`mode`      | string,[RequestMode](RequestMode.md) |  |
+|`credentials`      | string,[RequestCredentials](RequestCredentials.md) |  |
+|`cache`      | string,[RequestCache](RequestCache.md) |  |
+|`}`      | } |  |
 
 
 

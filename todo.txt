@@ -31,22 +31,21 @@ declare class MockWebPartContext {
     ICustomPropertyPaneFieldProps | ILabelProps | ISliderProps | IChoiceGroupProps |
     IButtonProps | ILinkProps | any;
     (Do this outside as a first step of file processing)
-8. Property has {}
-14. Headers class - all kinds of problems
+8. Property has {}. Handle this...
+
 17. Check Optional handling ? for methods, params, etc. Need it in markdown.
 18. Method-overloads: handle duplicate keys
-19. Make use of dFunction for enum and function file generation
 20. Handle these guys::
     public whenFinished(callback: () => void): void;
     forEach(callbackfn: (value: V, index: K, map: Map<K, V>) => void, thisArg?: any): void;
 
-23. Handle resolve<R>~85015 remove the random() from the names in the MDs...
 16. List type parameters. Type parameters: K, V? (What's the use??)
 
 
 
 
 LONGER TERM:
+19. Make use of dFunction for enum and function file generation
 1. Use TypeScript AST to generate the intermediary JSONs.
 3. Modules are not supported. Need recursive way to support them.
 6. properties/methods/functions: [{},{},{}] or {{}, {}, {}} ?

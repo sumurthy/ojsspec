@@ -2,6 +2,8 @@
 
 
 
+
+
 error messages for a webpart.
 
 
@@ -14,10 +16,10 @@ error messages for a webpart.
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[clearError](#clearerror~11918)      | void | Clear the webpart error message |
-|[clearLoadingIndicator](#clearloadingindicator~98189)      | void | Clear the loading indicator |
-|[displayLoadingIndicator](#displayloadingindicator~12628)      | void | Display a loading spinner |
-|[renderError](#rendererror~11840)      | void | Render the provided error message in the webpart container div |
+|[clearError](#clearerror~11706)      | void | Clear the webpart error message |
+|[clearLoadingIndicator](#clearloadingindicator~51123)      | void | Clear the loading indicator |
+|[displayLoadingIndicator](#displayloadingindicator~69041)      | void | Display a loading spinner |
+|[renderError](#rendererror~22376)      | void | Render the provided error message in the webpart container div |
 
 
 

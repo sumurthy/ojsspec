@@ -2,6 +2,8 @@
 
 
 
+
+
 The ODataBatch class accumulates a number of REST service calls and 
 transmits them as a single ODATA batch. This protocol is documented here: 
 http: 
@@ -22,11 +24,11 @@ resolve with a Response object for that particular request.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor~33852)     | public | [IODataBatchOptions](IODataBatchOptions.md) |  |
-|[execute](#execute~28301)     | public | [Promise<ODataBatch>](Promise.md) | Executes the batched queries that were queued using ODataBatch |
-|[fetch](#fetch~98350)     | public | [Promise<Response>](Promise.md) | Queues a new request,and returns a promise that can be used to access  the server response (after execute() has completed) |
-|[get](#get~25769)     | public | [Promise<Response>](Promise.md) | Calls fetch(),but sets the method to 'GET' |
-|[post](#post~72045)     | public | [Promise<Response>](Promise.md) | Calls fetch(),but sets the method to 'POST' |
+|[constructor](#constructor~16730)     | public | [IODataBatchOptions](IODataBatchOptions.md) |  |
+|[execute](#execute~55276)     | public | [Promise<ODataBatch>](Promise.md) | Executes the batched queries that were queued using ODataBatch |
+|[fetch](#fetch~97163)     | public | [Promise<Response>](Promise.md) | Queues a new request,and returns a promise that can be used to access  the server response (after execute() has completed) |
+|[get](#get~61826)     | public | [Promise<Response>](Promise.md) | Calls fetch(),but sets the method to 'GET' |
+|[post](#post~23469)     | public | [Promise<Response>](Promise.md) | Calls fetch(),but sets the method to 'POST' |
 
 
 

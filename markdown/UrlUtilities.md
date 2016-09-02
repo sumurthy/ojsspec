@@ -2,6 +2,8 @@
 
 
 
+
+
 Common helper functions for working with URLs. These utilities are intended to be simple, 
 small, and extremely common. Do not add advanced parsing logic to this file.
 
@@ -14,8 +16,8 @@ small, and extremely common. Do not add advanced parsing logic to this file.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[convertToODataStringLiteral](#converttoodatastringliteral~18495)     | public, _static_ | string | Converts a variable to an OData string literal and escapes apostrophes |
-|[removeEndSlash](#removeendslash~70016)     | public, _static_ | string | Removes any slash characters from the end of the URL |
+|[convertToODataStringLiteral](#converttoodatastringliteral~29099)     | public, _static_ | string | Converts a variable to an OData string literal and escapes apostrophes |
+|[removeEndSlash](#removeendslash~10676)     | public, _static_ | string | Removes any slash characters from the end of the URL |
 
 
 

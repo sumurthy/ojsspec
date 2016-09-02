@@ -6,16 +6,19 @@
 
 
 
+
+
 ### Properties
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
 |`string`     | referrer: | string |  |
 |`Headers`     | headers: | [Headers](Headers.md) |  |
-|`string|RequestContext`     | context: | string,RequestContext |  |
-|`string|RequestMode`     | mode: | string,RequestMode |  |
-|`string|RequestCredentials`     | credentials: | string,RequestCredentials |  |
-|`string|RequestCache`     | cache: | string,RequestCache |  |
+|`string|RequestContext`     | context: | string,[RequestContext](RequestContext.md) |  |
+|`string|RequestMode`     | mode: | string,[RequestMode](RequestMode.md) |  |
+|`string|RequestCredentials`     | credentials: | string,[RequestCredentials](RequestCredentials.md) |  |
+|`string|RequestCache`     | cache: | string,[RequestCache](RequestCache.md) |  |
+|`OBJECTERROR`     | } | } |  |
 
 
 
@@ -24,7 +27,7 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor~46377)     | public | [RequestInit](RequestInit.md) |  |
+|[constructor](#constructor~94862)     | public | [RequestInit](RequestInit.md) |  |
 
 
 

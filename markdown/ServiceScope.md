@@ -2,6 +2,8 @@
 
 
 
+
+
 ServiceScope provides a formalized way for components to register and consume dependencies 
 ("services"), and to enable different implementations to be registered in different scopes. 
 This improves modularity by decoupling components from their dependencies in an extensible way. 
@@ -58,15 +60,16 @@ serviceScope.whenFinished().
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor~10027)     | public | [ServiceScope](ServiceScope.md) | PRIVATE CONSTRUCTOR - DO NOT CALL THIS FROM YOUR OWN CODE |
-|[consume<T>](#consume<t>~41915)     | public | T | Components should call this function to "consume" a dependency,i |
-|[createDefaultAndProvide<T>](#createdefaultandprovide<t>~71511)     | public | T | This is a shorthand function that constructs the default implementation of the specified  serviceKey, and then registers it by calling ServiceScope |
-|[finish](#finish~82543)     | public | void | When a ServiceScope is first started,it is in an "unfinished" state where provide() is  allowed but consume() is not allowed |
-|[getParent](#getparent~87977)     | public | [ServiceScope](ServiceScope.md) | Returns the parent of the current ServiceScope,or undefined if this is a root scope |
-|[provide<T>](#provide<t>~13992)     | public | T | ServiceScope |
-|[startNewChild](#startnewchild~78628)     | public | [ServiceScope](ServiceScope.md) | Constructs a new ServiceScope that is a child of the current scope |
-|[startNewRoot](#startnewroot~32051)     | public, _static_ | [ServiceScope](ServiceScope.md) | Create a new root-level ServiceScope |
-|[whenFinished](#whenfinished~94089)     | public | void | It is an error to call ServiceScope |
+|[constructor](#constructor~31343)     | public | [ServiceScope](ServiceScope.md) | PRIVATE CONSTRUCTOR - DO NOT CALL THIS FROM YOUR OWN CODE |
+|[consume<T>](#consume<t>~71775)     | public | T | Components should call this function to "consume" a dependency,i |
+|[simpleServiceClass{new](#simpleserviceclass{new~33756)     | public | T; | This is a shorthand function that its equivalent to constructing a new instance of the  simpleServiceClass, then registering it by calling ServiceScope |
+|[createDefaultAndProvide<T>](#createdefaultandprovide<t>~21190)     | public | T | This is a shorthand function that constructs the default implementation of the specified  serviceKey, and then registers it by calling ServiceScope |
+|[finish](#finish~21070)     | public | void | When a ServiceScope is first started,it is in an "unfinished" state where provide() is  allowed but consume() is not allowed |
+|[getParent](#getparent~22331)     | public | [ServiceScope](ServiceScope.md) | Returns the parent of the current ServiceScope,or undefined if this is a root scope |
+|[provide<T>](#provide<t>~38955)     | public | T | ServiceScope |
+|[startNewChild](#startnewchild~97603)     | public | [ServiceScope](ServiceScope.md) | Constructs a new ServiceScope that is a child of the current scope |
+|[startNewRoot](#startnewroot~75453)     | public, _static_ | [ServiceScope](ServiceScope.md) | Create a new root-level ServiceScope |
+|[whenFinished](#whenfinished~33129)     | public | void | It is an error to call ServiceScope |
 
 
 
@@ -105,6 +108,24 @@ T
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `serviceKey`    | [ServiceKey<T>](ServiceKey.md) |  |
+
+
+## simpleServiceClass{new
+
+This is a shorthand function that its equivalent to constructing a new instance of the 
+simpleServiceClass, then registering it by calling ServiceScope.provide().
+
+##### Signature
+
+#### Returns
+T;
+
+#### Parameters
+
+
+| Parameter	   | Type    | Description |
+|:-------------|:---------------|:------------|
+| `serviceScope`    | [ServiceScope](ServiceScope.md) |  |
 
 
 ## createDefaultAndProvide<T>

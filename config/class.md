@@ -1,7 +1,9 @@
 <classheader>
-# %resourcename% %resourcetype%
+# %resourcename%%generictype%%resourcetype%
 
 %extendsimplements%
+
+%typeparameters% 
 
 %resourcedescription%
 

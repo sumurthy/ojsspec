@@ -2,6 +2,8 @@
 
 
 
+
+
 HttpClient is used to perform REST calls against SharePoint. It adds default 
 headers, manages the digest needed for writes, and collects telemetry that 
 helps the service to monitor the performance of an application. 
@@ -18,12 +20,12 @@ class instead.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor~86297)     | public | [ServiceScope](ServiceScope.md) |  |
-|[beginBatch](#beginbatch~86648)     | public | [ODataBatch](ODataBatch.md) | Begins an ODATA batch,which allows multiple REST queries to be bundled into  a single web request |
-|[fetch](#fetch~50255)     | public | [Promise<Response>](Promise.md) | Generally,the parameters and semantics for HttpClient |
-|[get](#get~39010)     | public | [Promise<Response>](Promise.md) | Calls fetch(),but sets the method to 'GET' |
-|[getWebUrlFromRequestUrl](#getweburlfromrequesturl~14241)     | public, _static_ | string | This uses a heuristic to guess the SPWeb URL associated with the provided  REST URL |
-|[post](#post~61649)     | public | [Promise<Response>](Promise.md) | Calls fetch(),but sets the method to 'POST' |
+|[constructor](#constructor~18412)     | public | [ServiceScope](ServiceScope.md) |  |
+|[beginBatch](#beginbatch~77519)     | public | [ODataBatch](ODataBatch.md) | Begins an ODATA batch,which allows multiple REST queries to be bundled into  a single web request |
+|[fetch](#fetch~77995)     | public | [Promise<Response>](Promise.md) | Generally,the parameters and semantics for HttpClient |
+|[get](#get~91538)     | public | [Promise<Response>](Promise.md) | Calls fetch(),but sets the method to 'GET' |
+|[getWebUrlFromRequestUrl](#getweburlfromrequesturl~86634)     | public, _static_ | string | This uses a heuristic to guess the SPWeb URL associated with the provided  REST URL |
+|[post](#post~67357)     | public | [Promise<Response>](Promise.md) | Calls fetch(),but sets the method to 'POST' |
 
 
 

@@ -1,6 +1,8 @@
-# Promise class
+# Promise R class
 
-_Implements/extends: [Thenable<R>](Thenable.md)_
+_Implements: [Thenable<R>](Thenable.md)_
+
+_Type parameters: R_
 
 
 
@@ -13,10 +15,10 @@ _Implements/extends: [Thenable<R>](Thenable.md)_
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor~44578)     | public | any => void) => void) | If you call resolve in the body of the callback passed to the constructor,  your promise is fulfilled with result object passed to resolve |
-|[then<U>](#then<u>~40664)     | public | [Promise<U>](Promise.md) | onFulfilled is called when/if "promise" resolves |
-|[then<U>](#then<u>~44397)     | public | [Promise<U>](Promise.md) | onFulfilled is called when/if "promise" resolves |
-|[catch<U>](#catch<u>~40382)     | public | [Promise<U>](Promise.md) | Sugar for promise |
+|[constructor](#constructor~82714)     | public | any => void) => void) | If you call resolve in the body of the callback passed to the constructor,  your promise is fulfilled with result object passed to resolve |
+|[then<U>](#then<u>~73846)     | public | [Promise<U>](Promise.md) | onFulfilled is called when/if "promise" resolves |
+|[then<U>](#then<u>~81047)     | public | [Promise<U>](Promise.md) | onFulfilled is called when/if "promise" resolves |
+|[catch<U>](#catch<u>~39224)     | public | [Promise<U>](Promise.md) | Sugar for promise |
 
 
 

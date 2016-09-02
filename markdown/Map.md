@@ -7,6 +7,8 @@
 
 
 
+
+
 ### Properties
 
 | Property	   | Type	| Description|
@@ -20,14 +22,14 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[clear](#clear~71758)      | void |  |
-|[delete](#delete~46940)      | boolean |  |
-|[get](#get~64647)      | V |  |
-|[has](#has~19008)      | boolean |  |
-|[set](#set~86072)      | [Map<K](Map.md),V> |  |
-|[entries](#entries~17780)      | [Iterator<[K](Iterator.md),V]> |  |
-|[keys](#keys~94863)      | [Iterator<K>](Iterator.md) |  |
-|[values](#values~95382)      | [Iterator<V>](Iterator.md) |  |
+|[clear](#clear~29983)      | void |  |
+|[delete](#delete~81670)      | boolean |  |
+|[get](#get~21662)      | V |  |
+|[has](#has~95835)      | boolean |  |
+|[set](#set~78242)      | [Map<K](Map.md),V> |  |
+|[entries](#entries~91137)      | [Iterator<[K](Iterator.md),V]> |  |
+|[keys](#keys~60893)      | [Iterator<K>](Iterator.md) |  |
+|[values](#values~88034)      | [Iterator<V>](Iterator.md) |  |
 
 
 

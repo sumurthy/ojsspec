@@ -32,6 +32,12 @@
         "dataType": "string|RequestCache",
         "isOptional": true,
         "isCollection": false
+      },
+      "}": {
+        "descr": "",
+        "dataType": "}",
+        "isOptional": false,
+        "isCollection": false
       }
     },
     "functions": {},
@@ -59,6 +65,12 @@
         "dataType": "HeaderInit",
         "isOptional": true,
         "isCollection": false
+      },
+      "}": {
+        "descr": "",
+        "dataType": "}",
+        "isOptional": false,
+        "isCollection": false
       }
     },
     "functions": {},
@@ -68,11 +80,18 @@
   "Window": {
     "implementsExtendsName": null,
     "descr": "",
-    "properties": {},
+    "properties": {
+      "}": {
+        "descr": "",
+        "dataType": "}",
+        "isOptional": false,
+        "isCollection": false
+      }
+    },
     "functions": {},
     "objects": {},
     "methods": {
-      "fetch~93996": {
+      "fetch~18789": {
         "descr": "",
         "genericType": null,
         "returnType": "Promise<Response>",

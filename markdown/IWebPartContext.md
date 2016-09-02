@@ -1,6 +1,8 @@
 # IWebPartContext interface
 
-_Implements/extends: IClientSideComponentContext<IClientSideWebPartManifestInstance<any>>_
+_Extends: IClientSideComponentContext<IClientSideWebPartManifestInstance<any>>_
+
+
 
 Web part context interface.
 

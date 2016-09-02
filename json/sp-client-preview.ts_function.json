@@ -1,5 +1,5 @@
 {
-  "exportcombineURLPaths~18160": {
+  "exportcombineURLPaths~76259": {
     "descr": "Combines any number of URL paths.",
     "signature": "combineURLPaths(...url: string[]): string",
     "returnType": "string",
@@ -13,7 +13,7 @@
       }
     ]
   },
-  "exportgetPathNameFromAbsoluteUrl~63965": {
+  "exportgetPathNameFromAbsoluteUrl~97783": {
     "descr": "Get's the path name from an absolute url. \n",
     "signature": "getPathNameFromAbsoluteUrl(url: string): string",
     "returnType": "string",
@@ -27,7 +27,7 @@
       }
     ]
   },
-  "exportPropertyPaneButton~86078": {
+  "exportPropertyPaneButton~32070": {
     "descr": "Helper method to create a Button on the PropertyPane.",
     "signature": "PropertyPaneButton(targetProperty: string,properties: IPropertyPaneButtonProps): IPropertyPaneField<IPropertyPaneButtonProps>",
     "returnType": "IPropertyPaneField<IPropertyPaneButtonProps>",
@@ -47,7 +47,7 @@
       }
     ]
   },
-  "exportPropertyPaneCheckbox~34207": {
+  "exportPropertyPaneCheckbox~25708": {
     "descr": "Helper method to create a Checkbox on the PropertyPane.",
     "signature": "PropertyPaneCheckbox(targetProperty: string,properties: IPropertyPaneCheckboxProps): IPropertyPaneField<IPropertyPaneCheckboxProps>",
     "returnType": "IPropertyPaneField<IPropertyPaneCheckboxProps>",
@@ -67,7 +67,7 @@
       }
     ]
   },
-  "exportPropertyPaneChoiceGroup~78657": {
+  "exportPropertyPaneChoiceGroup~44953": {
     "descr": "Helper method to create a Choice Group on the PropertyPane.",
     "signature": "PropertyPaneChoiceGroup(targetProperty: string,properties: IPropertyPaneChoiceGroupProps): IPropertyPaneField<IPropertyPaneChoiceGroupProps>",
     "returnType": "IPropertyPaneField<IPropertyPaneChoiceGroupProps>",
@@ -87,7 +87,7 @@
       }
     ]
   },
-  "exportPropertyPaneCustomField~33868": {
+  "exportPropertyPaneCustomField~40991": {
     "descr": "Helper method to create a Choice Group on the PropertyPane.",
     "signature": "PropertyPaneCustomField(targetProperty: string,properties: IPropertyPaneCustomFieldProps): IPropertyPaneField<IPropertyPaneCustomFieldProps>",
     "returnType": "IPropertyPaneField<IPropertyPaneCustomFieldProps>",
@@ -107,7 +107,7 @@
       }
     ]
   },
-  "exportPropertyPaneDropdown~21617": {
+  "exportPropertyPaneDropdown~66926": {
     "descr": "Helper method to create a Dropdown on the PropertyPane.",
     "signature": "PropertyPaneDropdown(targetProperty: string,properties: IPropertyPaneDropdownProps): IPropertyPaneField<IPropertyPaneDropdownProps>",
     "returnType": "IPropertyPaneField<IPropertyPaneDropdownProps>",
@@ -127,14 +127,14 @@
       }
     ]
   },
-  "exportPropertyPaneHorizontalRule~23288": {
+  "exportPropertyPaneHorizontalRule~61814": {
     "descr": "Helper method to create a Horizontal Rule on the PropertyPane.",
     "signature": "PropertyPaneHorizontalRule(): IPropertyPaneField<void>",
     "returnType": "IPropertyPaneField<void>",
     "returnDescr": null,
     "params": []
   },
-  "exportPropertyPaneLabel~34023": {
+  "exportPropertyPaneLabel~68576": {
     "descr": "Helper method to create a Label on the PropertyPane.",
     "signature": "PropertyPaneLabel(targetProperty: string,properties: IPropertyPaneLabelProps): IPropertyPaneField<IPropertyPaneLabelProps>",
     "returnType": "IPropertyPaneField<IPropertyPaneLabelProps>",
@@ -154,7 +154,7 @@
       }
     ]
   },
-  "exportPropertyPaneLink~52757": {
+  "exportPropertyPaneLink~41748": {
     "descr": "Helper method to create a Link on the PropertyPane.",
     "signature": "PropertyPaneLink(targetProperty: string,properties: IPropertyPaneLinkProps): IPropertyPaneField<IPropertyPaneLinkProps>",
     "returnType": "IPropertyPaneField<IPropertyPaneLinkProps>",
@@ -174,7 +174,7 @@
       }
     ]
   },
-  "exportPropertyPaneSlider~91210": {
+  "exportPropertyPaneSlider~94063": {
     "descr": "Helper method to create a Slider on the PropertyPane.",
     "signature": "PropertyPaneSlider(targetProperty: string,properties: IPropertyPaneSliderProps): IPropertyPaneField<IPropertyPaneSliderProps>",
     "returnType": "IPropertyPaneField<IPropertyPaneSliderProps>",
@@ -194,7 +194,7 @@
       }
     ]
   },
-  "exportPropertyPaneTextField~15696": {
+  "exportPropertyPaneTextField~35583": {
     "descr": "Helper method to create a TextField on the PropertyPane.",
     "signature": "PropertyPaneTextField(targetProperty: string,properties: IPropertyPaneTextFieldProps): IPropertyPaneField<IPropertyPaneTextFieldProps>",
     "returnType": "IPropertyPaneField<IPropertyPaneTextFieldProps>",
@@ -214,7 +214,7 @@
       }
     ]
   },
-  "exportPropertyPaneToggle~64011": {
+  "exportPropertyPaneToggle~42079": {
     "descr": "Helper method to create a Toggle on the PropertyPane.",
     "signature": "PropertyPaneToggle(targetProperty: string,properties: IPropertyPaneToggleProps): IPropertyPaneField<IPropertyPaneToggleProps>",
     "returnType": "IPropertyPaneField<IPropertyPaneToggleProps>",

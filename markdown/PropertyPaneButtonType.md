@@ -9,3 +9,4 @@
 |`Icon`:       |  |
 |`Normal`:       |  |
 |`Primary`:       |  |
+|`}`:       |  |

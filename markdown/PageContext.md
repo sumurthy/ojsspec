@@ -2,6 +2,8 @@
 
 
 
+
+
 The page context provides standard definitions for common SharePoint objects 
 that need to be shared between the client-side application, web parts, and other 
 components. Typically the data is fetched via REST queries when navigating to a 
@@ -27,7 +29,7 @@ application cache.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor~33759)     | public | [ServiceScope](ServiceScope.md) |  |
+|[constructor](#constructor~51506)     | public | [ServiceScope](ServiceScope.md) |  |
 
 
 

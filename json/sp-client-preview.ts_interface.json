@@ -6,7 +6,7 @@
     "functions": {},
     "objects": {},
     "methods": {
-      "clearError~11918": {
+      "clearError~11706": {
         "descr": "Clear the webpart error message.",
         "genericType": null,
         "returnType": "void",
@@ -23,7 +23,7 @@
           }
         ]
       },
-      "clearLoadingIndicator~98189": {
+      "clearLoadingIndicator~51123": {
         "descr": "Clear the loading indicator.",
         "genericType": null,
         "returnType": "void",
@@ -40,7 +40,7 @@
           }
         ]
       },
-      "displayLoadingIndicator~12628": {
+      "displayLoadingIndicator~69041": {
         "descr": "Display a loading spinner.",
         "genericType": null,
         "returnType": "void",
@@ -63,7 +63,7 @@
           }
         ]
       },
-      "renderError~11840": {
+      "renderError~22376": {
         "descr": "Render the provided error message in the webpart container div.",
         "genericType": null,
         "returnType": "void",
@@ -188,13 +188,13 @@
     "descr": "Represents an OData SP.ListItem object. For more information about this object \nsee the MSDN documentation here: \nhttps:",
     "properties": {
       "ID": {
-        "descr": "",
+        "descr": "Example: { StrinValue: \"0x010100C5...\" }",
         "dataType": "number",
         "isOptional": false,
         "isCollection": false
       },
       "Title": {
-        "descr": "",
+        "descr": "Example: { StrinValue: \"0x010100C5...\" }",
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
@@ -330,7 +330,7 @@
       }
     },
     "functions": {
-      "onClick~87044": {
+      "onClick~95085": {
         "descr": "for an individual element. This is because,button click does not result in any property change,and hence \ncannot fire the 'onChange'' event for a property, and ends up becoming a no-op. To avoid this, giving the \ncontrol back to the web part, so that web part can make act acordingly. \n \ntodo: VSO# 233578:PropertyPane Button OnClick event api.",
         "isOptional": false,
         "returnType": "any",
@@ -446,7 +446,7 @@
     "descr": "",
     "properties": {},
     "functions": {
-      "onDispose~56766": {
+      "onDispose~61204": {
         "descr": "Event callback for onDispose.",
         "isOptional": true,
         "returnType": "void",
@@ -460,7 +460,7 @@
           }
         ]
       },
-      "onRender~37071": {
+      "onRender~29564": {
         "descr": "onRender will be called once the custom field mounted to the host element.",
         "isOptional": false,
         "returnType": "void",
@@ -496,28 +496,28 @@
       }
     },
     "functions": {
-      "onClose~56146": {
+      "onClose~13348": {
         "descr": "Event callback for 'Close' click.",
         "isOptional": false,
         "returnType": "void",
         "returnDescr": null,
         "params": []
       },
-      "onConfigurationComplete~37082": {
+      "onConfigurationComplete~66027": {
         "descr": "Event callback fired when the configuration is completed for the web part.",
         "isOptional": false,
         "returnType": "void",
         "returnDescr": null,
         "params": []
       },
-      "onLostFocus~17967": {
+      "onLostFocus~45730": {
         "descr": "Event callback fired when the focus is handed back to the web part",
         "isOptional": false,
         "returnType": "void",
         "returnDescr": null,
         "params": []
       },
-      "onPropertyChange~90600": {
+      "onPropertyChange~54458": {
         "descr": "Notification event fired when the property has already been validated and modified.",
         "isOptional": false,
         "returnType": "void",
@@ -537,14 +537,14 @@
           }
         ]
       },
-      "onRendered~47948": {
+      "onRendered~84949": {
         "descr": "Event callback fired after the PropertyPane is rendered.",
         "isOptional": false,
         "returnType": "void",
         "returnDescr": null,
         "params": []
       },
-      "onSave~85417": {
+      "onSave~96905": {
         "descr": "Event callback for 'Apply' click.",
         "isOptional": false,
         "returnType": "void",
@@ -915,7 +915,7 @@
       }
     },
     "functions": {
-      "onGetErrorMessage~56264": {
+      "onGetErrorMessage~33907": {
         "descr": "The method is used to get the validation error message and determine whether the input value is valid or not. \n \nWhen it returns string: \n- If valid, it returns empty string. \n- If invalid, it returns the error message string and the text field will \nshow a red border and show an error message below the text field. \n \nWhen it returns Promise<string>: \n- The resolved value is display as error message. \n- The rejected, the value is thrown away. \n",
         "isOptional": true,
         "returnType": "string | Promise<string>",
@@ -1058,7 +1058,7 @@
       }
     },
     "functions": {
-      "configureStart~85943": {
+      "configureStart~18690": {
         "descr": "Function to open the PropertyPane to help configure this web part.",
         "isOptional": false,
         "returnType": "void",
@@ -1145,7 +1145,7 @@
       }
     },
     "functions": {
-      "setDirty~59250": {
+      "setDirty~61728": {
         "descr": "ServiceScope provides a formalized way for components to register and consume dependencies \n(\"services\"), and to enable different implementations to be registered in different scopes. \nThis improves modularity by decoupling components from their dependencies in an extensible way. \nserviceScope: ServiceScope;",
         "isOptional": true,
         "returnType": "void",

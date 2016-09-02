@@ -2,6 +2,8 @@
 
 
 
+
+
 BasicHttpClient implements a basic set of features for performing REST operations. 
 The subclass HttpClient extends this basic functionality with SharePoint-specific 
 enhancements.
@@ -21,11 +23,11 @@ enhancements.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor~42927)     | public | [ServiceScope](ServiceScope.md) |  |
-|[fetch](#fetch~83242)     | public | [Promise<Response>](Promise.md) | Performs a REST service call |
-|[fetchCore](#fetchcore~16302)     | protected | [Promise<Response>](Promise.md) | Performs a REST service call |
-|[get](#get~65965)     | public | [Promise<Response>](Promise.md) | Calls fetch(),but sets the method to 'GET' |
-|[post](#post~69124)     | public | [Promise<Response>](Promise.md) | Calls fetch(),but sets the method to 'POST' |
+|[constructor](#constructor~55321)     | public | [ServiceScope](ServiceScope.md) |  |
+|[fetch](#fetch~61588)     | public | [Promise<Response>](Promise.md) | Performs a REST service call |
+|[fetchCore](#fetchcore~97711)     | protected | [Promise<Response>](Promise.md) | Performs a REST service call |
+|[get](#get~32500)     | public | [Promise<Response>](Promise.md) | Calls fetch(),but sets the method to 'GET' |
+|[post](#post~53245)     | public | [Promise<Response>](Promise.md) | Calls fetch(),but sets the method to 'POST' |
 
 
 

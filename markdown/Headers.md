@@ -8,18 +8,26 @@
 
 
 
+### Properties
+
+| Property	   | Access Modifier | Type	| Description|
+|:-------------|:----|:-------|:-----------|
+|`OBJECTERROR`     | } | } |  |
+
+
+
 
 ## Methods
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[append](#append~77220)     | public | void |  |
-|[delete](#delete~76807)     | public | void |  |
-|[get](#get~23352)     | public | string |  |
-|[getAll](#getall~24498)     | public | Array<string> |  |
-|[has](#has~34415)     | public | boolean |  |
-|[set](#set~48615)     | public | void |  |
-|[forEach](#foreach~90709)     | public | void |  |
+|[append](#append~45952)     | public | void |  |
+|[delete](#delete~24911)     | public | void |  |
+|[get](#get~68340)     | public | string |  |
+|[getAll](#getall~27172)     | public | Array<string> |  |
+|[has](#has~55499)     | public | boolean |  |
+|[set](#set~40117)     | public | void |  |
+|[forEach](#foreach~13244)     | public | void |  |
 
 
 

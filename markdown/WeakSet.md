@@ -10,14 +10,16 @@
 
 
 
+
+
 ## Methods
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[delete](#delete~23844)      | boolean |  |
-|[clear](#clear~97087)      | void |  |
-|[add](#add~77073)      | [WeakSet<T>](WeakSet.md) |  |
-|[has](#has~97051)      | boolean |  |
+|[delete](#delete~52411)      | boolean |  |
+|[clear](#clear~83955)      | void |  |
+|[add](#add~27296)      | [WeakSet<T>](WeakSet.md) |  |
+|[has](#has~48624)      | boolean |  |
 
 
 

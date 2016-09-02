@@ -1,11 +1,10 @@
 # IBasicHttpClientOptions interface
 
-_Implements/extends: [RequestInit](RequestInit.md)_
+_Extends: [RequestInit](RequestInit.md)_
 
-This interface defines the options for the BasicHttpClient operations such as 
-get(), post(), fetch(), etc. It is based on the whatwg API standard 
-parameters that are documented here: 
-https:
+
+
+headers ?: HeaderInit|{ [index: string]: string }
 
 
 
@@ -16,10 +15,10 @@ https:
 |:-------------|:-------|:-----------|
 |`body`      | BodyInit |  |
 |`cache`      | [ILocalizedString](ILocalizedString.md),[ILocalizedString](ILocalizedString.md) |  |
-|`credentials`      | string,RequestCredentials |  |
+|`credentials`      | string,[RequestCredentials](RequestCredentials.md) |  |
 |`headers`      | HeaderInit |  |
 |`method`      | string |  |
-|`mode`      | string,RequestMode |  |
+|`mode`      | string,[RequestMode](RequestMode.md) |  |
 
 
 

@@ -86,7 +86,7 @@
       }
     },
     "methods": {
-      "constructor~47573": {
+      "constructor~88299": {
         "accessModifier": "public",
         "signature": "constructor(ctx: IWebPartContext)",
         "isStatic": false,
@@ -104,7 +104,7 @@
           }
         ]
       },
-      "clearError~58241": {
+      "clearError~58733": {
         "accessModifier": "protected",
         "signature": "protected clearError(): void",
         "isStatic": false,
@@ -115,7 +115,7 @@
         "returnDescr": null,
         "params": []
       },
-      "configureStart~44939": {
+      "configureStart~50010": {
         "accessModifier": "protected",
         "signature": "protected configureStart(refreshOnly?: boolean): void",
         "isStatic": false,
@@ -133,7 +133,7 @@
           }
         ]
       },
-      "deserialize~22810": {
+      "deserialize~34064": {
         "accessModifier": "protected",
         "signature": "protected deserialize(data: IWebPartData): TProperties",
         "isStatic": false,
@@ -151,7 +151,7 @@
           }
         ]
       },
-      "dispose~60837": {
+      "dispose~77441": {
         "accessModifier": "protected",
         "signature": "protected dispose(): void",
         "isStatic": false,
@@ -162,7 +162,7 @@
         "returnDescr": null,
         "params": []
       },
-      "onBeforeSerialize~19066": {
+      "onBeforeSerialize~92087": {
         "accessModifier": "protected",
         "signature": "protected onBeforeSerialize(): IHtmlProperties",
         "isStatic": false,
@@ -173,7 +173,7 @@
         "returnDescr": null,
         "params": []
       },
-      "onDisplayModeChanged~39655": {
+      "onDisplayModeChanged~68060": {
         "accessModifier": "protected",
         "signature": "protected onDisplayModeChanged(oldDisplayMode: DisplayMode): void",
         "isStatic": false,
@@ -191,7 +191,7 @@
           }
         ]
       },
-      "onInit<T>~48288": {
+      "onInit<T>~52849": {
         "accessModifier": "protected",
         "signature": "protected onInit < T >(): Promise<T>",
         "isStatic": false,
@@ -202,7 +202,7 @@
         "returnDescr": null,
         "params": []
       },
-      "onPropertyChange~77455": {
+      "onPropertyChange~18751": {
         "accessModifier": "protected",
         "signature": "protected onPropertyChange(propertyPath: string,newValue: any): void",
         "isStatic": false,
@@ -226,7 +226,7 @@
           }
         ]
       },
-      "onPropertyConfigurationComplete~26715": {
+      "onPropertyConfigurationComplete~99338": {
         "accessModifier": "protected",
         "signature": "protected onPropertyConfigurationComplete(): void",
         "isStatic": false,
@@ -237,7 +237,7 @@
         "returnDescr": null,
         "params": []
       },
-      "onPropertyPaneRendered~72219": {
+      "onPropertyPaneRendered~58592": {
         "accessModifier": "protected",
         "signature": "protected onPropertyPaneRendered(): void",
         "isStatic": false,
@@ -248,7 +248,7 @@
         "returnDescr": null,
         "params": []
       },
-      "onPropertyPaneSave~63997": {
+      "onPropertyPaneSave~22940": {
         "accessModifier": "protected",
         "signature": "protected onPropertyPaneSave(): void",
         "isStatic": false,
@@ -259,7 +259,7 @@
         "returnDescr": null,
         "params": []
       },
-      "render~43359": {
+      "render~48217": {
         "accessModifier": "public",
         "signature": "public render(): void",
         "isStatic": false,
@@ -270,7 +270,7 @@
         "returnDescr": null,
         "params": []
       },
-      "renderError~54437": {
+      "renderError~37889": {
         "accessModifier": "protected",
         "signature": "protected renderError(error: Error): void",
         "isStatic": false,
@@ -311,10 +311,42 @@
         "type": " string = 'WebPart.daf0b71c-6de8-4ef7-b511-faae7c388708.0ae4973a-70e3-451e-9f1f-3f25e5455a60'",
         "isCollection": false,
         "descr": ""
+      },
+      "OBJECTERROR": {
+        "dataType": "}",
+        "accessModifier": "}",
+        "isOptional": false,
+        "type": "}",
+        "isCollection": false,
+        "descr": ""
       }
     },
     "methods": {
-      "domElementHTMLElement=document.createElement~18749": {
+      "configureStart~68119": {
+        "accessModifier": "public",
+        "signature": "public configureStart: (id: string,propertyPaneState?: PropertyPaneState) => void = {} as any",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "PropertyPaneState => void = {} as any",
+        "returnDescr": null,
+        "params": [
+          {
+            "name": "id",
+            "dataType": "string",
+            "descr": "",
+            "isOptional": false
+          },
+          {
+            "name": "propertyPaneState",
+            "dataType": "PropertyPaneState",
+            "descr": "",
+            "isOptional": true
+          }
+        ]
+      },
+      "domElementHTMLElement=document.createElement~68033": {
         "accessModifier": "public",
         "signature": "public domElement: HTMLElement = document.createElement('div')",
         "isStatic": false,
@@ -330,6 +362,17 @@
             "isOptional": false
           }
         ]
+      },
+      "manifestIClientSideWebPartManifestInstance<{}>=newMockWebPartManifestInstance~20569": {
+        "accessModifier": "public",
+        "signature": "public manifest: IClientSideWebPartManifestInstance<{}> = new MockWebPartManifestInstance()",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": "{}",
+        "returnType": "IClientSideWebPartManifestInstance<{}> = new MockWebPartManifestInstance(",
+        "returnDescr": null,
+        "params": []
       }
     },
     "functions": {}

@@ -1,6 +1,8 @@
-# BaseClientSideWebPart class
+# BaseClientSideWebPart TProperties class
 
 
+
+_Type parameters: TProperties_
 
 This abstract class implements the the base functionality for a client side web part. Every client side web part 
 needs to inherit from this class. Along with the base functionality, this class provides some APIs that can be 
@@ -23,7 +25,7 @@ Please refer to the documentation of the individual APIs to make the right decis
 |`accessibleTitle`     | protected | string | This property points to the accessible title of web part made available to screen readers |
 |`context`     | protected | [IWebPartContext](IWebPartContext.md) |  |
 |`disableReactivePropertyChanges`     | protected | boolean | This property is used to change the web part's PropertyPane interaction from Reactive to NonReactive |
-|`displayMode`     | protected | DisplayMode | This property is the current display mode of the web part |
+|`displayMode`     | protected | [DisplayMode](DisplayMode.md) | This property is the current display mode of the web part |
 |`domElement`     | protected | HTMLElement | This property is a pointer to the root DOM element of the web part |
 |`previewImageUrl`     | protected | string | This property points to the preview image for the web part |
 |`properties`     | protected | TProperties | This property is the pointer to the custom property bag of the web part |
@@ -38,20 +40,20 @@ Please refer to the documentation of the individual APIs to make the right decis
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor~47573)     | public | [IWebPartContext](IWebPartContext.md) |   e |
-|[clearError](#clearerror~58241)     | protected | void | This API should be used to clear the error message from the web part display area |
-|[configureStart](#configurestart~44939)     | protected | void | if it is not already open |
-|[deserialize](#deserialize~22810)     | protected | TProperties |  |
-|[dispose](#dispose~60837)     | protected | void | This API is called at the end of the web part lifecycle |
-|[onBeforeSerialize](#onbeforeserialize~19066)     | protected | [IHtmlProperties](IHtmlProperties.md) | the documentation of IHtmlProperties interface for more details |
-|[onDisplayModeChanged](#ondisplaymodechanged~39655)     | protected | void |  |
-|[onInit<T>](#oninit<t>~48288)     | protected | [Promise<T>](Promise.md) | This API should be overridden to perform long running operations e |
-|[onPropertyChange](#onpropertychange~77455)     | protected | void | This API is invoked on property changes in the PropertyPane when the PropertyPane is being used in Reactive mode |
-|[onPropertyConfigurationComplete](#onpropertyconfigurationcomplete~26715)     | protected | void | This API is called when the current web part configuration process is completed |
-|[onPropertyPaneRendered](#onpropertypanerendered~72219)     | protected | void | This API is involed when the PropertyPane is rendered |
-|[onPropertyPaneSave](#onpropertypanesave~63997)     | protected | void | this API is invoked when the the changes are applied on the PropertyPane when the PropertyPane is used in  Non-Reactive mode |
-|[render](#render~43359)     | public | void | This API is called to render the web part |
-|[renderError](#rendererror~54437)     | protected | void | This API should be used to render an error message in the web part display area |
+|[constructor](#constructor~88299)     | public | [IWebPartContext](IWebPartContext.md) |   e |
+|[clearError](#clearerror~58733)     | protected | void | This API should be used to clear the error message from the web part display area |
+|[configureStart](#configurestart~50010)     | protected | void | if it is not already open |
+|[deserialize](#deserialize~34064)     | protected | TProperties |  |
+|[dispose](#dispose~77441)     | protected | void | This API is called at the end of the web part lifecycle |
+|[onBeforeSerialize](#onbeforeserialize~92087)     | protected | [IHtmlProperties](IHtmlProperties.md) | the documentation of IHtmlProperties interface for more details |
+|[onDisplayModeChanged](#ondisplaymodechanged~68060)     | protected | void |  |
+|[onInit<T>](#oninit<t>~52849)     | protected | [Promise<T>](Promise.md) | This API should be overridden to perform long running operations e |
+|[onPropertyChange](#onpropertychange~18751)     | protected | void | This API is invoked on property changes in the PropertyPane when the PropertyPane is being used in Reactive mode |
+|[onPropertyConfigurationComplete](#onpropertyconfigurationcomplete~99338)     | protected | void | This API is called when the current web part configuration process is completed |
+|[onPropertyPaneRendered](#onpropertypanerendered~58592)     | protected | void | This API is involed when the PropertyPane is rendered |
+|[onPropertyPaneSave](#onpropertypanesave~22940)     | protected | void | this API is invoked when the the changes are applied on the PropertyPane when the PropertyPane is used in  Non-Reactive mode |
+|[render](#render~48217)     | public | void | This API is called to render the web part |
+|[renderError](#rendererror~37889)     | protected | void | This API should be used to render an error message in the web part display area |
 
 
 
@@ -167,7 +169,7 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `oldDisplayMode`    | DisplayMode |  |
+| `oldDisplayMode`    | [DisplayMode](DisplayMode.md) |  |
 
 
 ## onInit<T>

@@ -9,12 +9,20 @@
 
 
 
+### Properties
+
+| Property	   | Type	| Description|
+|:-------------|:-------|:-----------|
+|`}`      | } |  |
+
+
+
 
 ## Methods
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[fetch](#fetch~93996)      | [Promise<Response>](Promise.md) |  |
+|[fetch](#fetch~18789)      | [Promise<Response>](Promise.md) |  |
 
 
 

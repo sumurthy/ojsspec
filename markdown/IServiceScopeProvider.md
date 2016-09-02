@@ -2,6 +2,8 @@
 
 
 
+
+
 This is a convenient interface that can be used to indicate that an object 
 has an associated ServiceScope.
 

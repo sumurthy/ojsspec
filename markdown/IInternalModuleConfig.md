@@ -1,6 +1,8 @@
 # IInternalModuleConfig interface
 
-_Implements/extends: [IModuleConfig](IModuleConfig.md)_
+_Extends: [IModuleConfig](IModuleConfig.md)_
+
+
 
 This is the interface for a script module with the "internal" type. Modules of this type must be provided by the 
 component developer. 
@@ -18,6 +20,7 @@ component developer.
 |`path`      | string ,[ IPath](IPath.md) | Definition: A path to this module's javascript resource either as a fully-qualified URL or as a path under the  paths provided in the "internalModuleBaseUrls" field |
 |`shouldNotPreload`      | boolean | Definition: If set to "true",this module should not be preloaded when loading the component |
 |`type`      | 'internal' , 'framework' , 'localized' | Definition: The type of the script block |
+|`}`      | } | Definition: The type of the script block |
 
 
 

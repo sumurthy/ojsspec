@@ -36,3 +36,4 @@
 |`worker`:       |  |
 |`xmlhttprequest`:       |  |
 |`xslt`:       |  |
+|`}`:       |  |

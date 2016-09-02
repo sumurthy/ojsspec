@@ -27,6 +27,10 @@
 | Enumeration	   | Description|
 |:-----------|:------------|
 |[RequestContext](RequestContext.md)    |  |
+|[RequestMode](RequestMode.md)    |  |
+|[RequestCredentials](RequestCredentials.md)    |  |
+|[RequestCache](RequestCache.md)    |  |
+|[ResponseType](ResponseType.md)    |  |
 
 
 ### Types

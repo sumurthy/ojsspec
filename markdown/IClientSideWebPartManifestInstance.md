@@ -1,6 +1,8 @@
 # IClientSideWebPartManifestInstance<TProperties> interface
 
-_Implements/extends: [IClientSideComponentManifest](IClientSideComponentManifest.md),[IClientSideWebPartManifestSharedProperties](IClientSideWebPartManifestSharedProperties.md),[IClientSideWebPartManifestEntry<TProperties>](IClientSideWebPartManifestEntry.md)_
+_Extends: [IClientSideComponentManifest](IClientSideComponentManifest.md),[IClientSideWebPartManifestSharedProperties](IClientSideWebPartManifestSharedProperties.md),[IClientSideWebPartManifestEntry<TProperties>](IClientSideWebPartManifestEntry.md)_
+
+
 
 Manifest that is relevant to a Web Part instance. 
 
@@ -27,6 +29,7 @@ Manifest that is relevant to a Web Part instance.
 |`searchablePropertyNames`      | string[] | Definition: List of names of Web Part properties that need to be indexed for search |
 |`title`      | [ILocalizedString](ILocalizedString.md) | Definition: Title of the web part represented as a single a dictionary of locale keys to title values |
 |`version`      | string | Definition: Client side component version |
+|`}`      | } | Definition: Client side component version |
 
 
 

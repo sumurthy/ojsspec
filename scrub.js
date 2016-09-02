@@ -34,6 +34,7 @@ function processLines(element = '', index = 0, lines = []) {
 
     outLine = line
 
+    //Don't scrub ENUMS
     if (line.includes(ENUM)) {
         skipFlag = true
     }
@@ -41,7 +42,7 @@ function processLines(element = '', index = 0, lines = []) {
     if (line.includes(BLOCK_END)) {
         skipFlag = false
     }
-
+    
     if (!SKIP.includes(firstWord) && !skipFlag) {
         if (line && (line.includes(EXTENDS) || line.includes(FUNCTION))) {
             if (!STATEMENT_END.includes(line.slice(-1))) {

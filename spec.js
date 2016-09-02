@@ -143,6 +143,7 @@ function processLines(element = '', index = 0, lines = []) {
 
 
     if (line.includes(BLOCK_BEGIN) && line.includes(BLOCK_END)) {
+        console.log('---------> ' + line);
         return
     }
 
@@ -290,6 +291,8 @@ function processLines(element = '', index = 0, lines = []) {
     else if (line.includes(ENUM)) {
         nEnum++
         enumKey = (firstWord == 'declare') ? thirdWord : secondWord
+        allTypes.types.push(enumKey)
+
         if (line.includes(BLOCK_BEGIN) && line.includes(BLOCK_END)) {
             enumObj[enumKey] = {}
             enumObj[enumKey]['descr'] = generalDesc

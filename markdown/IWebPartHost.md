@@ -1,6 +1,8 @@
 # IWebPartHost interface
 
-_Implements/extends: [IServiceScopeProvider](IServiceScopeProvider.md)_
+_Extends: [IServiceScopeProvider](IServiceScopeProvider.md)_
+
+
 
 A web part host is a component,control or a page that hosts client side web parts. 
 The web part infrastructure provides many features inbuilt e.g. an HttpClient to make 

@@ -1,6 +1,8 @@
 # IClientSideApplicationManifest interface
 
-_Implements/extends: [IClientSideComponentManifest](IClientSideComponentManifest.md)_
+_Extends: [IClientSideComponentManifest](IClientSideComponentManifest.md)_
+
+
 
 This is is the manifest for a client-side application.
 

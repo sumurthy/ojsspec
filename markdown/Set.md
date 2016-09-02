@@ -7,6 +7,8 @@
 
 
 
+
+
 ### Properties
 
 | Property	   | Type	| Description|
@@ -20,13 +22,13 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[add](#add~44556)      | [Set<T>](Set.md) |  |
-|[clear](#clear~35878)      | void |  |
-|[delete](#delete~60713)      | boolean |  |
-|[has](#has~18904)      | boolean |  |
-|[entries](#entries~48054)      | [Iterator<[T](Iterator.md),T]> |  |
-|[keys](#keys~85637)      | [Iterator<T>](Iterator.md) |  |
-|[values](#values~87530)      | [Iterator<T>](Iterator.md) |  |
+|[add](#add~54592)      | [Set<T>](Set.md) |  |
+|[clear](#clear~71612)      | void |  |
+|[delete](#delete~28997)      | boolean |  |
+|[has](#has~90178)      | boolean |  |
+|[entries](#entries~47790)      | [Iterator<[T](Iterator.md),T]> |  |
+|[keys](#keys~28122)      | [Iterator<T>](Iterator.md) |  |
+|[values](#values~55968)      | [Iterator<T>](Iterator.md) |  |
 
 
 

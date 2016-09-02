@@ -1,7 +1,7 @@
 {
   "IBasicHttpClientOptions": {
     "implementsExtendsName": "RequestInit",
-    "descr": "This interface defines the options for the BasicHttpClient operations such as \nget(), post(), fetch(), etc. It is based on the whatwg API standard \nparameters that are documented here: \nhttps:",
+    "descr": "headers ?: HeaderInit|{ [index: string]: string }",
     "properties": {
       "body": {
         "descr": "",
@@ -165,7 +165,7 @@
     "functions": {},
     "objects": {},
     "methods": {
-      "addDigestToCache~66673": {
+      "addDigestToCache~78197": {
         "descr": "the digest value will no longer be valid. \nNOTE: The expirationTime is a DOMHighResTimeStamp value whose units are \nfractional milliseconds; for example, to specify an expiration \n\"5 seconds from right now\", use performance.now()+5000.",
         "genericType": null,
         "returnType": "void",
@@ -194,7 +194,7 @@
           }
         ]
       },
-      "clearAllDigests~39933": {
+      "clearAllDigests~26690": {
         "descr": "Clears all values from the cache.",
         "genericType": null,
         "returnType": "void",
@@ -204,7 +204,7 @@
         "returnDesc": null,
         "params": []
       },
-      "clearDigest~14074": {
+      "clearDigest~89157": {
         "descr": "This may be a server-relative or absolute URL.",
         "genericType": null,
         "returnType": "boolean",
@@ -221,7 +221,7 @@
           }
         ]
       },
-      "fetchDigest~63232": {
+      "fetchDigest~41182": {
         "descr": "This may be a server-relative or absolute URL.",
         "genericType": null,
         "returnType": "Promise<string>",
@@ -242,7 +242,7 @@
   },
   "IHttpClientOptions": {
     "implementsExtendsName": "IBasicHttpClientOptions",
-    "descr": "This interface defines the options for the HttpClient operations such as \nget(), post(), fetch(), etc. It is based on the WHATWG API standard \nparameters that are documented here: \nhttps:",
+    "descr": "headers ?: HeaderInit|{ [index: string]: string }",
     "properties": {
       "body": {
         "descr": "",
@@ -326,7 +326,7 @@
     "descr": "Represents an OData SP.ChangeToken object. For more information about this object",
     "properties": {
       "StringValue": {
-        "descr": "",
+        "descr": "Example: { StringValue: \"13;9fb9199b-65f2-4a4a-b597-11d1a44422c1;635892156279130000;10721\" }",
         "dataType": "string",
         "isOptional": false,
         "isCollection": false

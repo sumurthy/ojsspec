@@ -5,7 +5,7 @@
     "descr": "",
     "properties": {},
     "methods": {
-      "constructor~44578": {
+      "constructor~82714": {
         "accessModifier": "public",
         "signature": "constructor(callback: (resolve : (value?: R | Thenable<R>) => void,reject: (error?: any) => void) => void)",
         "isStatic": false,
@@ -23,7 +23,7 @@
           }
         ]
       },
-      "then<U>~40664": {
+      "then<U>~73846": {
         "accessModifier": "public",
         "signature": "then<U>(onFulfilled?: (value: R) => U | Thenable<U>,onRejected?: (error: any) => U | Thenable<U>): Promise<U>",
         "isStatic": false,
@@ -41,7 +41,7 @@
           }
         ]
       },
-      "then<U>~44397": {
+      "then<U>~81047": {
         "accessModifier": "public",
         "signature": "then<U>(onFulfilled?: (value: R) => U | Thenable<U>,onRejected?: (error: any) => void): Promise<U>",
         "isStatic": false,
@@ -59,7 +59,7 @@
           }
         ]
       },
-      "catch<U>~40382": {
+      "catch<U>~39224": {
         "accessModifier": "public",
         "signature": "catch<U>(onRejected?: (error: any) => U | Thenable<U>): Promise<U>",
         "isStatic": false,

@@ -10,13 +10,15 @@
 
 
 
+
+
 ## Methods
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[next](#next~48721)      | [IteratorResult<T>](IteratorResult.md) |  |
-|[return](#return~63273)      | [IteratorResult<T>](IteratorResult.md) |  |
-|[throw](#throw~63281)      | [IteratorResult<T>](IteratorResult.md) |  |
+|[next](#next~36494)      | [IteratorResult<T>](IteratorResult.md) |  |
+|[return](#return~67440)      | [IteratorResult<T>](IteratorResult.md) |  |
+|[throw](#throw~44983)      | [IteratorResult<T>](IteratorResult.md) |  |
 
 
 

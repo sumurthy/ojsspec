@@ -14,6 +14,12 @@
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
+      },
+      "}": {
+        "descr": "The ID of the module.",
+        "dataType": "}",
+        "isOptional": false,
+        "isCollection": false
       }
     },
     "functions": {},
@@ -41,6 +47,12 @@
         "dataType": "string[]",
         "isOptional": false,
         "isCollection": true
+      },
+      "}": {
+        "descr": "Definition: This is a dictionary of named script resources. \"internal\" and \"localized\" modules may reference each \nother and \"framework\" modules are expected to be provided by the framework runtime. The resource named in the \n\"entryModuleId\" must contain the component's exported object. \nRequired: yes \nLocalized: no \nSupported values: A dictionary of named script resources. \nExample: \n{ \n\"myApplication.bundle\": { \n\"type\": \"internal\", \n\"path\": \"master_2015-04-20/my-application.bundle_1928f8a0.js\" \n}, \n\"@microsoft/sp-client-base\": { \n\"type\": \"framework\", \n\"version\": \"latest\" \n}, \n\"@microsoft/sp-client-preview\": { \n\"type\": \"framework\", \n\"version\": \"latest\" \n}, \n\"jQuery\": { \n\"type\": \"framework\", \n\"version\": \"2.2.4\", \n\"path\": \"https: \n}, \n\"myApplication_strings\": { \n\"type\": \"localized\", \n\"defaultPath\": \"master_2015-04-20/my-application_strings_default_af378e0d.js\", \n\"paths\": { \n\"en-us\": \"master_2015-04-20/my-application_strings_en-us_d38ff012.js\", \n\"fr-fr\": \"master_2015-04-20/my-application_strings_fr-fr_138af7e4.js\" \n} \n} \n}",
+        "dataType": "}",
+        "isOptional": false,
+        "isCollection": false
       }
     },
     "functions": {},
@@ -78,6 +90,12 @@
       "version": {
         "descr": "Definition: Client side component version. The value of this field is expected to be controlled by the developer \nof the client side component. The purpose of this field is to help client side component developers upgrade their \nclient side components in a managed way. This helps the consumers of the client side component make decisions \nabout when and how to upgrade the client side component. As the developer evolves the code for their client side \ncomponent, they can decide to bump the MAJOR, MINOR or PATCH version of the component. All incompatible API \nchanges should result in a MAJOR version bump. Backwards compatible functionality changes should result in a \nMINOR version bump, and backwards compatible bug fixes should result in a PATCH version bump. Please see \nhttp: \nUsage: Versioning and evolving a client side component safely in a controlled way. \nRequired: yes \nLocalized: no \nSupported values: string representing a semantic version (http: \nExample: \"1.0.0\"",
         "dataType": "string",
+        "isOptional": false,
+        "isCollection": false
+      },
+      "}": {
+        "descr": "Definition: Client side component version. The value of this field is expected to be controlled by the developer \nof the client side component. The purpose of this field is to help client side component developers upgrade their \nclient side components in a managed way. This helps the consumers of the client side component make decisions \nabout when and how to upgrade the client side component. As the developer evolves the code for their client side \ncomponent, they can decide to bump the MAJOR, MINOR or PATCH version of the component. All incompatible API \nchanges should result in a MAJOR version bump. Backwards compatible functionality changes should result in a \nMINOR version bump, and backwards compatible bug fixes should result in a PATCH version bump. Please see \nhttp: \nUsage: Versioning and evolving a client side component safely in a controlled way. \nRequired: yes \nLocalized: no \nSupported values: string representing a semantic version (http: \nExample: \"1.0.0\"",
+        "dataType": "}",
         "isOptional": false,
         "isCollection": false
       }
@@ -129,6 +147,12 @@
       "title": {
         "descr": "Definition: Title of the web part represented as a single a dictionary of locale keys to title values. This \nvalue will be displayed to the user in the toolbox. This title should be used in the Toolbox and other display \nareas. The Web Part developer may give an initial title to the webpart. The organization admin and page author \nwill have the ability to change this title as per need. \nUsage: display the name of the webpart in the toolbox, webpart gallery and the page. \nRequired: yes \nType: Object \nLocalized: yes \nSupported values: a dictionary of locale keys to strings. Should always have a 'default' key. \nExample: \"My Webpart\" \n{ \n\"default\": \"My WebPart\" \n\"en-us\": \"My WebPart\", \n\"fr-fr\": \"Ma WebPart\", \n\"zh\": \"我的 web 部件\" \n}",
         "dataType": "ILocalizedString",
+        "isOptional": false,
+        "isCollection": false
+      },
+      "}": {
+        "descr": "Definition: Title of the web part represented as a single a dictionary of locale keys to title values. This \nvalue will be displayed to the user in the toolbox. This title should be used in the Toolbox and other display \nareas. The Web Part developer may give an initial title to the webpart. The organization admin and page author \nwill have the ability to change this title as per need. \nUsage: display the name of the webpart in the toolbox, webpart gallery and the page. \nRequired: yes \nType: Object \nLocalized: yes \nSupported values: a dictionary of locale keys to strings. Should always have a 'default' key. \nExample: \"My Webpart\" \n{ \n\"default\": \"My WebPart\" \n\"en-us\": \"My WebPart\", \n\"fr-fr\": \"Ma WebPart\", \n\"zh\": \"我的 web 部件\" \n}",
+        "dataType": "}",
         "isOptional": false,
         "isCollection": false
       }
@@ -230,6 +254,12 @@
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
+      },
+      "}": {
+        "descr": "Definition: Client side component version. The value of this field is expected to be controlled by the developer \nof the client side component. The purpose of this field is to help client side component developers upgrade their \nclient side components in a managed way. This helps the consumers of the client side component make decisions \nabout when and how to upgrade the client side component. As the developer evolves the code for their client side \ncomponent, they can decide to bump the MAJOR, MINOR or PATCH version of the component. All incompatible API \nchanges should result in a MAJOR version bump. Backwards compatible functionality changes should result in a \nMINOR version bump, and backwards compatible bug fixes should result in a PATCH version bump. Please see \nhttp: \nUsage: Versioning and evolving a client side component safely in a controlled way. \nRequired: yes \nLocalized: no \nSupported values: string representing a semantic version (http: \nExample: \"1.0.0\"",
+        "dataType": "}",
+        "isOptional": false,
+        "isCollection": false
       }
     },
     "functions": {},
@@ -255,6 +285,12 @@
       "searchablePropertyNames": {
         "descr": "Definition: List of names of Web Part properties that need to be indexed for search. \nUsage: extract the specified value properties on the server and provide them to the search indexer. \nRequired: no. If not provided, no values are indexed. \nType: string array \nValues: the strings in the array are expected to be JSONPath for the object properties. \n(http: \nSupported values: any property names \nExample: [\"text\"]",
         "dataType": "string[]",
+        "isOptional": false,
+        "isCollection": false
+      },
+      "}": {
+        "descr": "Definition: List of names of Web Part properties that need to be indexed for search. \nUsage: extract the specified value properties on the server and provide them to the search indexer. \nRequired: no. If not provided, no values are indexed. \nType: string array \nValues: the strings in the array are expected to be JSONPath for the object properties. \n(http: \nSupported values: any property names \nExample: [\"text\"]",
+        "dataType": "}",
         "isOptional": false,
         "isCollection": false
       }
@@ -288,6 +324,12 @@
       "version": {
         "descr": "Definition: The version of the framework-supplied module to be loaded. For framework runtime modules such as \n\"@microsoft/sp-client-base,\" it is recommended the version of the framework module the component was developed \nagainst be specified. \nRequired: yes \nLocalized: no \nSupported values: string representing a semantic version (http: \nExample: \"2.2.4\"",
         "dataType": "string",
+        "isOptional": false,
+        "isCollection": false
+      },
+      "}": {
+        "descr": "Definition: The version of the framework-supplied module to be loaded. For framework runtime modules such as \n\"@microsoft/sp-client-base,\" it is recommended the version of the framework module the component was developed \nagainst be specified. \nRequired: yes \nLocalized: no \nSupported values: string representing a semantic version (http: \nExample: \"2.2.4\"",
+        "dataType": "}",
         "isOptional": false,
         "isCollection": false
       }
@@ -329,6 +371,12 @@
         "dataType": "'internal' | 'framework' | 'localized'",
         "isOptional": false,
         "isCollection": false
+      },
+      "}": {
+        "descr": "Definition: The type of the script block. \"framework\" modules are expected to be provided by the framework runtime, \n\"internal\" and \"localized\" modules must be available on the paths provided in the \"internalModuleBaseUrls\" field. \nModules with the \"internal\" type use the \"IInternalModuleConfig\" interface. Modules with the \"framework\" type use \nthe \"IFrameworkModuleConfig\" interface. Modules with the \"localized\" type use the \"ILocalizedInternalModuleConfig\" \ninterface. \nRequired: yes \nLocalized: no \nSupported values: \"internal\", \"framework\", \"localized\" \nExample: \"localized\"",
+        "dataType": "}",
+        "isOptional": false,
+        "isCollection": false
       }
     },
     "functions": {},
@@ -356,6 +404,12 @@
         "dataType": "'internal' | 'framework' | 'localized'",
         "isOptional": false,
         "isCollection": false
+      },
+      "}": {
+        "descr": "Definition: The type of the script block. \"framework\" modules are expected to be provided by the framework runtime, \n\"internal\" and \"localized\" modules must be available on the paths provided in the \"internalModuleBaseUrls\" field. \nModules with the \"internal\" type use the \"IInternalModuleConfig\" interface. Modules with the \"framework\" type use \nthe \"IFrameworkModuleConfig\" interface. Modules with the \"localized\" type use the \"ILocalizedInternalModuleConfig\" \ninterface. \nRequired: yes \nLocalized: no \nSupported values: \"internal\", \"framework\", \"localized\" \nExample: \"localized\"",
+        "dataType": "}",
+        "isOptional": false,
+        "isCollection": false
       }
     },
     "functions": {},
@@ -369,6 +423,12 @@
       "default": {
         "descr": "",
         "dataType": "string",
+        "isOptional": false,
+        "isCollection": false
+      },
+      "}": {
+        "descr": "",
+        "dataType": "}",
         "isOptional": false,
         "isCollection": false
       }
@@ -392,6 +452,12 @@
         "dataType": "'internal' | 'framework' | 'localized'",
         "isOptional": false,
         "isCollection": false
+      },
+      "}": {
+        "descr": "Definition: The type of the script block. \"framework\" modules are expected to be provided by the framework runtime, \n\"internal\" and \"localized\" modules must be available on the paths provided in the \"internalModuleBaseUrls\" field. \nModules with the \"internal\" type use the \"IInternalModuleConfig\" interface. Modules with the \"framework\" type use \nthe \"IFrameworkModuleConfig\" interface. Modules with the \"localized\" type use the \"ILocalizedInternalModuleConfig\" \ninterface. \nRequired: yes \nLocalized: no \nSupported values: \"internal\", \"framework\", \"localized\" \nExample: \"localized\"",
+        "dataType": "}",
+        "isOptional": false,
+        "isCollection": false
       }
     },
     "functions": {},
@@ -413,6 +479,12 @@
         "dataType": "string",
         "isOptional": false,
         "isCollection": false
+      },
+      "}": {
+        "descr": "Definition: A path to this module's javascript resource either as a fully-qualified URL or as a path under the \npaths provided in the \"internalModuleBaseUrls\" field. The script referenced by this field is loaded by default \nunless a debug version of the script is provided and explicitly requested. \nRequired: yes \nSupported values: The path to the default/non-debug script either as a fully-qualified URL or as a path under the \npaths providedin the \"internalModuleBaseUrls\" field. \nExample: \"master_2015-04-20/my-application.bundle_1928f8a0.js\"",
+        "dataType": "}",
+        "isOptional": false,
+        "isCollection": false
       }
     },
     "functions": {},
@@ -421,7 +493,7 @@
   },
   "IStandardLibraryModule": {
     "implementsExtendsName": null,
-    "descr": "",
+    "descr": "Definition: A path to this module's javascript resource either as a fully-qualified URL or as a path under the \npaths provided in the \"internalModuleBaseUrls\" field. The script referenced by this field is loaded by default \nunless a debug version of the script is provided and explicitly requested. \nRequired: yes \nSupported values: The path to the default/non-debug script either as a fully-qualified URL or as a path under the \npaths providedin the \"internalModuleBaseUrls\" field. \nExample: \"master_2015-04-20/my-application.bundle_1928f8a0.js\"",
     "properties": {
       "aliases": {
         "descr": "References to modules that are swappable for this module (for example,modules that contain a superset of \nthis module).",
@@ -444,6 +516,12 @@
       "preloadId": {
         "descr": "The ID of the bundle to preload.",
         "dataType": "string",
+        "isOptional": false,
+        "isCollection": false
+      },
+      "}": {
+        "descr": "The ID of the bundle to preload.",
+        "dataType": "}",
         "isOptional": false,
         "isCollection": false
       }

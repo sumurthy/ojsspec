@@ -2,6 +2,8 @@
 
 
 
+
+
 Structure of the data that a webpart developer can return on the onBeforeSerialize() API. 
 The outcome contains 3 kay/value dictionaries for properties that need to be search indexed. 
 Both keys and values are expected to be strings and will be HTML encoded during serialization. 

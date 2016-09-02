@@ -2,6 +2,8 @@
 
 
 
+
+
 This class can be used to determine if the current user has a requested set of permissions. 
 Specifies the built-in permissions available in SharePoint Foundation 
 Derived from OneDriveWeb/ODBNext/odsp-shared 
@@ -58,10 +60,10 @@ https:
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor~15461)     | public | [IODataBasePermission](IODataBasePermission.md) |  |
-|[hasAllPermissions](#hasallpermissions~49313)     | public | boolean | Function for determining if a given permission mask has all of the requested permissions |
-|[hasAnyPermissions](#hasanypermissions~82211)     | public | boolean | Function for determining if a given permission mask has any of the requested permissions |
-|[hasPermission](#haspermission~80265)     | public | boolean | Function for checking if a given permission mask has the requested permission |
+|[constructor](#constructor~45677)     | public | [IODataBasePermission](IODataBasePermission.md) |  |
+|[hasAllPermissions](#hasallpermissions~44420)     | public | boolean | Function for determining if a given permission mask has all of the requested permissions |
+|[hasAnyPermissions](#hasanypermissions~22818)     | public | boolean | Function for determining if a given permission mask has any of the requested permissions |
+|[hasPermission](#haspermission~53252)     | public | boolean | Function for checking if a given permission mask has the requested permission |
 
 
 

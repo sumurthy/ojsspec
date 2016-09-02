@@ -7,6 +7,8 @@
 
 
 
+
+
 ### Properties
 
 | Property	   | Type	| Description|
@@ -20,8 +22,8 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[constructor<K,V>](#constructor<k,v>~42994)      | [Map<K](Map.md),V> |  |
-|[constructor<K,V>](#constructor<k,v>~74739)      | [Map<K](Map.md),V> |  |
+|[constructor<K,V>](#constructor<k,v>~61785)      | [Map<K](Map.md),V> |  |
+|[constructor<K,V>](#constructor<k,v>~52000)      | [Map<K](Map.md),V> |  |
 
 
 

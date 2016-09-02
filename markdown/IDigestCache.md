@@ -2,6 +2,8 @@
 
 
 
+
+
 IDigestCache is an internal service used by HttpClient to maintain a cache of request digests 
 for each SPWeb URL. A request digest is a security token that the SharePoint server requires for 
 for any REST write operation, specified via the "X-RequestDigest" HTTP header. It is obtained 
@@ -19,10 +21,10 @@ of time. For more information, see the MSDN article
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[addDigestToCache](#adddigesttocache~66673)      | void | the digest value will no longer be valid |
-|[clearAllDigests](#clearalldigests~39933)      | void | Clears all values from the cache |
-|[clearDigest](#cleardigest~14074)      | boolean | This may be a server-relative or absolute URL |
-|[fetchDigest](#fetchdigest~63232)      | [Promise<string>](Promise.md) | This may be a server-relative or absolute URL |
+|[addDigestToCache](#adddigesttocache~78197)      | void | the digest value will no longer be valid |
+|[clearAllDigests](#clearalldigests~26690)      | void | Clears all values from the cache |
+|[clearDigest](#cleardigest~89157)      | boolean | This may be a server-relative or absolute URL |
+|[fetchDigest](#fetchdigest~41182)      | [Promise<string>](Promise.md) | This may be a server-relative or absolute URL |
 
 
 
