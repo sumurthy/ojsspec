@@ -1,8 +1,8 @@
-# WeakSet<T> interface
+# WeakSet <T> interface
 
 
 
-
+_Type parameters: <T>_
 
 
 
@@ -16,10 +16,10 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[delete](#delete~52411)      | boolean |  |
-|[clear](#clear~83955)      | void |  |
-|[add](#add~27296)      | [WeakSet<T>](WeakSet.md) |  |
-|[has](#has~48624)      | boolean |  |
+|[delete](#delete~hwgq9)      | boolean |  |
+|[clear](#clear~n1pq9)      | void |  |
+|[add](#add~7r2c9)      | [WeakSet<T>](WeakSet.md) |  |
+|[has](#has~mnoc9)      | boolean |  |
 
 
 
@@ -37,7 +37,7 @@ boolean
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | T |  |
+| `value`    | T | undefined |
 
 
 ## clear
@@ -67,7 +67,7 @@ WeakSet<T>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | T |  |
+| `value`    | T | undefined |
 
 
 ## has
@@ -84,5 +84,5 @@ boolean
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | T |  |
+| `value`    | T | undefined |
 

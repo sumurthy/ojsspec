@@ -22,25 +22,11 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[constructor<K,V>](#constructor<k,v>~61785)      | [Map<K](Map.md),V> |  |
-|[constructor<K,V>](#constructor<k,v>~52000)      | [Map<K](Map.md),V> |  |
+|[new<K,V>](#new<k,v>~b1yc9)      | [Map<K](Map.md),V> |  |
 
 
 
-## constructor<K,V>
-
-
-
-##### Signature
-
-#### Returns
-Map<K,V>
-
-#### Parameters
-None
-
-
-## constructor<K,V>
+## new<K,V>
 
 
 
@@ -54,6 +40,6 @@ Map<K,V>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `iterable`    | [ForEachable<[K](ForEachable.md) |  |
-| `V]>`    |  |  |
+| `iterable`    | [ForEachable<[K](ForEachable.md) | undefined |
+| ``    | V]> | undefined |
 

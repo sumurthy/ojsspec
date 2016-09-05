@@ -16,8 +16,8 @@ small, and extremely common. Do not add advanced parsing logic to this file.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[convertToODataStringLiteral](#converttoodatastringliteral~29099)     | public, _static_ | string | Converts a variable to an OData string literal and escapes apostrophes |
-|[removeEndSlash](#removeendslash~10676)     | public, _static_ | string | Removes any slash characters from the end of the URL |
+|[convertToODataStringLiteral](#converttoodatastringliteral~maqc9)     | public, _static_ | string | Converts a variable to an OData string literal and escapes apostrophes |
+|[removeEndSlash](#removeendslash~kcno9)     | public, _static_ | string | Removes any slash characters from the end of the URL |
 
 
 
@@ -44,7 +44,7 @@ string
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | string |  |
+| `value`    | string | undefined |
 
 
 ## removeEndSlash
@@ -66,5 +66,5 @@ string
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | string |  |
+| `url`    | string | undefined |
 

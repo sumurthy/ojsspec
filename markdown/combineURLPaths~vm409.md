@@ -1,7 +1,6 @@
-## exportgetPathNameFromAbsoluteUrl
+## combineURLPaths
 
-Get's the path name from an absolute url. 
-
+Combines any number of URL paths.
 
 ##### Signature
 
@@ -13,5 +12,5 @@ string
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | string |  |
+| `...url`    | string[] | undefined |
 

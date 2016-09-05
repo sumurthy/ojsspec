@@ -239,6 +239,7 @@ function doSubClassInterface(tline = '', localO = {}, localName = '', isClass = 
     }
     if (tline.includes('%extendsimplements%')) {
         if (localO[localName]['implementsExtendsName']) {
+            console.log(1);
             var ielink = getLinkForType(localO[localName]['implementsExtendsName'])
             var tag = (isClass) ? 'Implements' : 'Extends'
             tline = tline.replace('%extendsimplements%',
@@ -344,6 +345,8 @@ function addRegions(tline = '', type = '') {
         mline = mline.replace('%description%', descr)
             // For return function add Markdown HyperLink
         if (type === 'functions') {
+            console.log(2);
+
             var returnLink = getLinkForType(o[e]['returnType'])
             mline = mline.replace('%returns%', returnLink)
         }
@@ -395,20 +398,18 @@ function addMembers(tline = '', type = '', name = '', localO = {}) {
             descr = descr.split('.')[0].replace(/\n/g, ' ')
         }
         mline = mline.replace('%description%', descr)
-            // For return function add Markdown HyperLink
-            // if (type === 'function') {
-            //                            var returnLink = getLinkForType(o[e]['returnType'])
-            //                            mline = mline.replace('%returns%', returnLink)
-            // }
         mem_mdout.push(mline)
     })
 }
 
 function addParams(tline = '', member = {}, targetArray = []) {
 
+    console.log(member);
     member['params'].forEach((e) => {
         var mline = dclone(tline).substr(1)
         mline = mline.replace('%name%', e['name'])
+            // }
+        console.log(6);
         mline = mline.replace('%dtype%', `${getLinkForType(e['dataType'])}`)
         if (e['isOptional']) {
             mline = mline.replace('%optional% ', '_Optional._')
@@ -616,7 +617,7 @@ SetUp.cleanupOutput('./markdown')
 
 try {
     moduleT = FileOps.loadFile('./config/module.md')
-    classInterfaceT = FileOps.loadFile('./config/class.md')
+    classInterfaceT = FileOps.loadFile('./config/class_interface.md')
     methodfuncT = FileOps.loadFile('./config/method_function.md')
     enumT = FileOps.loadFile('./config/enum.md')
 

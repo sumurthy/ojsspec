@@ -1,4 +1,4 @@
-## exportPropertyPaneLink
+## PropertyPaneLink
 
 Helper method to create a Link on the PropertyPane.
 
@@ -12,6 +12,6 @@ IPropertyPaneField<IPropertyPaneLinkProps>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `targetProperty`    | string |  |
-| `properties`    | [IPropertyPaneLinkProps](IPropertyPaneLinkProps.md) |  |
+| `targetProperty`    | string | undefined |
+| `properties`    | [IPropertyPaneLinkProps](IPropertyPaneLinkProps.md) | undefined |
 

@@ -1,8 +1,8 @@
-# Set<T> interface
+# Set <T> interface
 
 
 
-
+_Type parameters: <T>_
 
 
 
@@ -22,21 +22,15 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[add](#add~54592)      | [Set<T>](Set.md) |  |
-|[clear](#clear~71612)      | void |  |
-|[delete](#delete~28997)      | boolean |  |
-|[has](#has~90178)      | boolean |  |
-|[entries](#entries~47790)      | [Iterator<[T](Iterator.md),T]> |  |
-|[keys](#keys~28122)      | [Iterator<T>](Iterator.md) |  |
-|[values](#values~55968)      | [Iterator<T>](Iterator.md) |  |
+|[add](#add~7r2c9)      | [Set<T>](Set.md) |  |
+|[clear](#clear~n1pq9)      | void |  |
+|[delete](#delete~hwgq9)      | boolean |  |
+|[forEach](#foreach~jqfq9)      | void |  |
+|[has](#has~mnoc9)      | boolean |  |
+|[entries](#entries~fmli9)      | [Iterator<[T](Iterator.md),T]> |  |
+|[keys](#keys~5ysm9)      | [Iterator<T>](Iterator.md) |  |
+|[values](#values~bdxe9)      | [Iterator<T>](Iterator.md) |  |
 
-
-
-## Functions
-
-| Function	   | Access Modifier | Returns	| Description|
-|:-------------|:----|:-------|:-----------|
-|forEach      | undefined | |  |
 
 
 ## add
@@ -53,7 +47,7 @@ Set<T>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | T |  |
+| `value`    | T | undefined |
 
 
 ## clear
@@ -83,7 +77,27 @@ boolean
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | T |  |
+| `value`    | T | undefined |
+
+
+## forEach
+
+
+
+##### Signature
+
+#### Returns
+void
+
+#### Parameters
+
+
+| Parameter	   | Type    | Description |
+|:-------------|:---------------|:------------|
+| `callbackfn`    | (value: T | undefined |
+| `index`    | T | undefined |
+| `set`    | [Set<T>) => void](Set.md) | undefined |
+| `thisArg`    | any | _Optional._undefined |
 
 
 ## has
@@ -100,7 +114,7 @@ boolean
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | T |  |
+| `value`    | T | undefined |
 
 
 ## entries
@@ -140,23 +154,4 @@ Iterator<T>
 
 #### Parameters
 None
-
-
-## forEach
-
-
-
-##### Signature
-
-#### Returns
-void,thisArg?: any): void
-
-#### Parameters
-
-
-| Parameter	   | Type    | Description |
-|:-------------|:---------------|:------------|
-| `callbackfn`    | (value |  |
-| `index`    | T |  |
-| `set`    | [Set<T>](Set.md) |  |
 

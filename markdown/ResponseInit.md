@@ -16,7 +16,6 @@
 |`status`      | number |  |
 |`statusText`      | string |  |
 |`headers`      | HeaderInit |  |
-|`}`      | } |  |
 
 
 

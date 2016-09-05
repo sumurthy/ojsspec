@@ -1,4 +1,4 @@
-## exportPropertyPaneHorizontalRule
+## PropertyPaneHorizontalRule
 
 Helper method to create a Horizontal Rule on the PropertyPane.
 

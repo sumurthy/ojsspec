@@ -4,7 +4,7 @@ _Extends: [IBasicHttpClientOptions](IBasicHttpClientOptions.md)_
 
 
 
-headers ?: HeaderInit|{ [index: string]: string }
+headers?: HeaderInit|{ [index: string]: string }
 
 
 

@@ -29,7 +29,7 @@ application cache.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor~51506)     | public | [ServiceScope](ServiceScope.md) |  |
+|[constructor](#constructor~3egg9)     | public | [ServiceScope](ServiceScope.md) |  |
 
 
 
@@ -48,5 +48,5 @@ ServiceScope
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceScope`    | [ServiceScope](ServiceScope.md) |  |
+| `serviceScope`    | [ServiceScope](ServiceScope.md) | undefined |
 

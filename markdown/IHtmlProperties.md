@@ -17,8 +17,8 @@ imageLinkPropertes: { 'prop3': 'http:
 This input would get translated to the following HTML string. 
  
 "<div data-sp-prop-name='prop1'>value1</div> 
-<link data-sp-prop-name='prop2' href='http: 
-<img data-sp-prop-name='prop2' href='http: 
+link data-sp-prop-name='prop2' href='http: 
+img data-sp-prop-name='prop2' href='http: 
 
 
 

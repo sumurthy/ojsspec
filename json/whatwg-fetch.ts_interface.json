@@ -1,119 +1,144 @@
 {
   "RequestInit": {
     "implementsExtendsName": null,
+    "genericType": null,
     "descr": "",
     "properties": {
       "method": {
-        "descr": "",
         "dataType": "string",
+        "accessModifier": null,
         "isOptional": true,
-        "isCollection": false
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "headers": {
+        "dataType": "string }",
+        "accessModifier": null,
+        "isOptional": true,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
       },
       "body": {
-        "descr": "",
         "dataType": "BodyInit",
+        "accessModifier": null,
         "isOptional": true,
-        "isCollection": false
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
       },
       "mode": {
-        "descr": "",
         "dataType": "string|RequestMode",
+        "accessModifier": null,
         "isOptional": true,
-        "isCollection": false
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
       },
       "credentials": {
-        "descr": "",
         "dataType": "string|RequestCredentials",
+        "accessModifier": null,
         "isOptional": true,
-        "isCollection": false
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
       },
       "cache": {
-        "descr": "",
         "dataType": "string|RequestCache",
+        "accessModifier": null,
         "isOptional": true,
-        "isCollection": false
-      },
-      "}": {
-        "descr": "",
-        "dataType": "}",
-        "isOptional": false,
-        "isCollection": false
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
       }
     },
     "functions": {},
-    "objects": {},
-    "methods": {}
+    "methods": {},
+    "objects": {}
   },
   "ResponseInit": {
     "implementsExtendsName": null,
+    "genericType": null,
     "descr": "",
     "properties": {
       "status": {
-        "descr": "",
         "dataType": "number",
+        "accessModifier": null,
         "isOptional": false,
-        "isCollection": false
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
       },
       "statusText": {
-        "descr": "",
         "dataType": "string",
+        "accessModifier": null,
         "isOptional": true,
-        "isCollection": false
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
       },
       "headers": {
-        "descr": "",
         "dataType": "HeaderInit",
+        "accessModifier": null,
         "isOptional": true,
-        "isCollection": false
-      },
-      "}": {
-        "descr": "",
-        "dataType": "}",
-        "isOptional": false,
-        "isCollection": false
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
       }
     },
     "functions": {},
-    "objects": {},
-    "methods": {}
+    "methods": {},
+    "objects": {}
   },
   "Window": {
     "implementsExtendsName": null,
+    "genericType": null,
     "descr": "",
-    "properties": {
-      "}": {
-        "descr": "",
-        "dataType": "}",
-        "isOptional": false,
-        "isCollection": false
-      }
-    },
+    "properties": {},
     "functions": {},
-    "objects": {},
     "methods": {
-      "fetch~18789": {
+      "fetch~ekuc9": {
+        "accessModifier": "public",
+        "signature": "fetch(url: string|Request,init?: RequestInit): Promise<Response>",
+        "isStatic": false,
+        "isOptional": false,
         "descr": "",
         "genericType": null,
         "returnType": "Promise<Response>",
-        "accessModifier": "",
-        "signature": "",
-        "isOptional": false,
-        "returnDesc": null,
+        "returnDescr": null,
         "params": [
           {
             "name": "url",
             "dataType": "string|Request",
-            "descr": "",
             "isOptional": false
           },
           {
             "name": "init",
             "dataType": "RequestInit",
-            "descr": "",
             "isOptional": true
           }
         ]
       }
-    }
+    },
+    "objects": {}
   }
 }

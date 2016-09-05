@@ -18,7 +18,6 @@
 |`string|RequestMode`     | mode: | string,[RequestMode](RequestMode.md) |  |
 |`string|RequestCredentials`     | credentials: | string,[RequestCredentials](RequestCredentials.md) |  |
 |`string|RequestCache`     | cache: | string,[RequestCache](RequestCache.md) |  |
-|`OBJECTERROR`     | } | } |  |
 
 
 
@@ -27,7 +26,7 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor~94862)     | public | [RequestInit](RequestInit.md) |  |
+|[constructor](#constructor~3egg9)     | public | [RequestInit](RequestInit.md) |  |
 
 
 
@@ -46,6 +45,6 @@ RequestInit
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `input`    | string,[Request](Request.md) |  |
-| `init`    | [RequestInit](RequestInit.md) | _Optional._ |
+| `input`    | string,[Request](Request.md) | undefined |
+| `init`    | [RequestInit](RequestInit.md) | _Optional._undefined |
 

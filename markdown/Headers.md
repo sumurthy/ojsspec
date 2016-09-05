@@ -8,12 +8,6 @@
 
 
 
-### Properties
-
-| Property	   | Access Modifier | Type	| Description|
-|:-------------|:----|:-------|:-----------|
-|`OBJECTERROR`     | } | } |  |
-
 
 
 
@@ -21,13 +15,13 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[append](#append~45952)     | public | void |  |
-|[delete](#delete~24911)     | public | void |  |
-|[get](#get~68340)     | public | string |  |
-|[getAll](#getall~27172)     | public | Array<string> |  |
-|[has](#has~55499)     | public | boolean |  |
-|[set](#set~40117)     | public | void |  |
-|[forEach](#foreach~13244)     | public | void |  |
+|[append](#append~o9sk9)     | public | void |  |
+|[delete](#delete~hwgq9)     | public | void |  |
+|[get](#get~xkvg9)     | public | string |  |
+|[getAll](#getall~cwr89)     | public | Array<string> |  |
+|[has](#has~mnoc9)     | public | boolean |  |
+|[set](#set~9zym9)     | public | void |  |
+|[forEach](#foreach~jqfq9)     | public | void |  |
 
 
 
@@ -46,8 +40,8 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `name`    | string |  |
-| `value`    | string |  |
+| `name`    | string | undefined |
+| `value`    | string | undefined |
 
 
 ## delete
@@ -64,7 +58,7 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `name`    | string |  |
+| `name`    | string | undefined |
 
 
 ## get
@@ -81,7 +75,7 @@ string
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `name`    | string |  |
+| `name`    | string | undefined |
 
 
 ## getAll
@@ -98,7 +92,7 @@ Array<string>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `name`    | string |  |
+| `name`    | string | undefined |
 
 
 ## has
@@ -115,7 +109,7 @@ boolean
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `name`    | string |  |
+| `name`    | string | undefined |
 
 
 ## set
@@ -132,8 +126,8 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `name`    | string |  |
-| `value`    | string |  |
+| `name`    | string | undefined |
+| `value`    | string | undefined |
 
 
 ## forEach
@@ -150,6 +144,6 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `callback`    | (value |  |
-| `name`    | string |  |
+| `callback`    | (value: string | undefined |
+| `name`    | string) => void | undefined |
 

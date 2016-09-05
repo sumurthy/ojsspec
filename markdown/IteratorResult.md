@@ -1,8 +1,8 @@
-# IteratorResult<T> interface
+# IteratorResult <T> interface
 
 
 
-
+_Type parameters: <T>_
 
 
 

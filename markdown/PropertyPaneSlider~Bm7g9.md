@@ -1,4 +1,4 @@
-## exportPropertyPaneSlider
+## PropertyPaneSlider
 
 Helper method to create a Slider on the PropertyPane.
 
@@ -12,6 +12,6 @@ IPropertyPaneField<IPropertyPaneSliderProps>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `targetProperty`    | string |  |
-| `properties`    | [IPropertyPaneSliderProps](IPropertyPaneSliderProps.md) |  |
+| `targetProperty`    | string | undefined |
+| `properties`    | [IPropertyPaneSliderProps](IPropertyPaneSliderProps.md) | undefined |
 

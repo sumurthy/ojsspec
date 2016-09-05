@@ -1,4 +1,4 @@
-## exportPropertyPaneLabel
+## PropertyPaneLabel
 
 Helper method to create a Label on the PropertyPane.
 
@@ -12,6 +12,6 @@ IPropertyPaneField<IPropertyPaneLabelProps>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `targetProperty`    | string |  |
-| `properties`    | [IPropertyPaneLabelProps](IPropertyPaneLabelProps.md) |  |
+| `targetProperty`    | string | undefined |
+| `properties`    | [IPropertyPaneLabelProps](IPropertyPaneLabelProps.md) | undefined |
 

@@ -21,6 +21,8 @@ const FUNCTION = 'function '
 const NEWLINE = '\n  '
 const ATSYMBOL = '@'
 const OBJECT_INSIDE  = /{(.*?)}/
+const IMPLEMENTS = 'implements '
+const EXTENDS = 'extends '
 
 let ignore_lines = []
 let cBuffer = {}
@@ -134,18 +136,27 @@ function processLines(element = '', index = 0, lines = []) {
     line = line.replace(/,\s/g, ',').trim()
     line = line.replace(';','')
     let isStatic = false
-
+    let hasAssignment = false
+    let assignValue = null
     // Should it be ' static ' or 'static '
     if (line.includes(' static ')) {
         isStatic = true
         line = line.replace(' static ', ' ')
     }
 
-
-    if (line.includes(BLOCK_BEGIN) && line.includes(BLOCK_END)) {
-        console.log('---------> ' + line);
-        return
+    // If the line has assignment, cut and save that to another location.
+    // Example: public eventAggregator: IEventAggregator = {} as any;
+    // Here, {} as any part is stowed away.
+    //
+    if (line.includes(' = ') && line.includes(':')) {
+        hasAssignment = true
+        assignValue = line.split(' = ').pop()
+        line = line.split(' = ').slice(0, -1).join()
     }
+
+    // if (line.includes(BLOCK_BEGIN) && line.includes(BLOCK_END)) {
+    //     return
+    // }
 
     let firstWord = line.split(' ', 1)[0]
     let secondWord = line.split(' ', 2)[1]
@@ -166,17 +177,13 @@ function processLines(element = '', index = 0, lines = []) {
         }
     }
 
-    if (SKIP.includes(firstWord)) {
-        return
-    }
+    if (SKIP.includes(firstWord)) return
     // else if (IGNORES.includes(secondWord)) {
     //   ignoreMode = true
     //   return
     // }
-    else if (firstWord === BLOCK_END && iBlock == 0) {
+    if (firstWord === BLOCK_END && iBlock == 0) {
         mode = ''
-            //Write out the file CLASS file
-            //
         block_end_reset()
         return
     } else if (firstWord === C_START) {
@@ -214,13 +221,6 @@ function processLines(element = '', index = 0, lines = []) {
                 default:
             }
         } else {
-            //
-            // if (generalDesc.length > 0) {
-            // 		generalDesc = generalDesc + NEWLINE + line.substr(2)
-            // }
-            // else {
-            // 		generalDesc = line.substr(2)
-            // }
             var o = Utils.readCommentAhead(lines, line.substr(2), index)
             ignore_lines = o['skip']
             generalDesc = o['descr']
@@ -228,44 +228,34 @@ function processLines(element = '', index = 0, lines = []) {
         return
     } else if (firstWord === C_END) {
         cmode = false
+        return
     } else if (line.includes(INTERFACEDEF)) {
         nInterface++
         mode = 'INTERFACE'
-        interfaceName = secondWord
+        interfaceName = Utils.trimGenerics(secondWord)
         allTypes.types.push(interfaceName)
         var extendsName = null
-        if (line.includes('extends')) {
+        if (line.includes(EXTENDS)) {
             extendsName = line.split('extends ')[1]
             extendsName = extendsName.split(BLOCK_BEGIN)[0].trim()
         }
-        // Build a interface object
-        iObj[interfaceName] = {} // JSON.parse(JSON.stringify(Objects.method))
-        iObj[interfaceName]['implementsExtendsName'] = extendsName
-        iObj[interfaceName]['descr'] = generalDesc
-        iObj[interfaceName]['properties'] = {}
-        iObj[interfaceName]['functions'] = {}
-        iObj[interfaceName]['objects'] = {}
-        iObj[interfaceName]['methods'] = {}
+        iObj[interfaceName] = {}
+        iObj[interfaceName] = Utils.createClassInterfaceObject(extendsName, secondWord, generalDesc)
+
         comment_reset()
         return
     } else if (line.includes(CLASSDEF)) {
         nClass++
         mode = 'CLASS'
-        className = Utils.trimGenerics(line.split(' ')[2])
+        var preClassName = line.split(' ')[2]
+        className = Utils.trimGenerics(preClassName)
         allTypes.types.push(className)
         var implementsName = null
-        if (line.includes('implements')) {
+        if (line.includes(IMPLEMENTS)) {
             implementsName = line.split('implements ')[1].split(BLOCK_BEGIN)[0].trim()
         }
-
-        // Build a interface object
-        classObj[className] = {} // JSON.parse(JSON.stringify(Objects.method))
-        classObj[className]['implementsExtendsName'] = implementsName
-        classObj[className]['genericType'] = Utils.genericInside(line.split(' ')[2])
-        classObj[className]['descr'] = generalDesc
-        classObj[className]['properties'] = {}
-        classObj[className]['methods'] = {}
-        classObj[className]['functions'] = {}
+        classObj[className] = {}
+        classObj[className] = Utils.createClassInterfaceObject(implementsName, preClassName, generalDesc)
         comment_reset()
         return
     }
@@ -318,19 +308,9 @@ function processLines(element = '', index = 0, lines = []) {
         }
         return
     } else if (line.includes(FUNCTION)) {
-        //var name = line.split('(')[0].split(' ').pop()
         var name = Utils.getMethodName(line)
-            // Build a function object
-        functionObj[name] = {} // JSON.parse(JSON.stringify(Objects.method))
-        functionObj[name]['descr'] = generalDesc
-        functionObj[name]['signature'] = line.split('function ')[1]
-        functionObj[name]['returnType'] = line.split(': ').pop()
-        if (commentObject['returnDescr'] === undefined) {
-            functionObj[name]['returnDescr'] = null
-        } else {
-            functionObj[name]['returnDescr'] = commentObject['returnDescr']
-        }
-        functionObj[name]['params'] = Utils.buildParamList(line, commentObject['param'])
+        var f = Utils.processMethod(line, generalDesc, commentObject, interfaceName, name, isStatic)
+        functionObj[name] = f
         nFunction++
         mode = 'FUNCTION'
         comment_reset()
@@ -339,87 +319,60 @@ function processLines(element = '', index = 0, lines = []) {
 
     // The Big Else....
     else {
+
         switch (mode) {
             case 'INTERFACE':
-                // iObj['properties'] = []
-                // iObj['objects'] = []
-                // iObj['methods'] = []
-
-                if (line.includes(') =>')) {
-                    //var f = Utils.processFunction(line, generalDesc, commentObject)
-                    var f = {}
-                    f['descr'] = generalDesc
-                    f['isOptional'] = (secondWord.includes('?')) ? true : false
-                    f['returnType'] = line.split('=> ').pop()
-                    f['returnDescr'] = (commentObject['returnDescr'] === undefined) ?
-                        null : commentObject['returnDescr']
-                    f['params'] = Utils.buildParamList(line, commentObject['param'])
-                    var name = Utils.getMethodName(line)
-                    iObj[interfaceName]['functions'][name] = f
-                } else if (line.includes(')') && line.includes('(')) { // has brackets
-                    var m = {}
-                    var name = Utils.getMethodName(line)
-
-                    m['descr'] = generalDesc
-                    m['genericType'] = Utils.genericInside(line.split('(')[0])
-                    m['returnType'] = lastWord.trim()
-                    m['accessModifier'] = ''
-                    m['signature'] = ''
-                    if ( (firstWord.split('(')[0].includes('?')) || (secondWord === '?')) {
-                        m['isOptional'] = true
-                    }
-                    else {
-                        m['isOptional'] = false
-                    }
-                    m['returnDesc'] = (commentObject['returnDescr'] === undefined) ?
-                        null : commentObject['returnDescr']
-                    m['params'] = Utils.buildParamList(line, commentObject['param'])
-                    iObj[interfaceName]['methods'][name] = m
-                } else if (line.includes(BLOCK_BEGIN)) {
+                var memberType = Utils.getMemberType(line, false)
+                if (memberType === 'SKIPBLOCK') {
+                //if (line.includes(BLOCK_BEGIN) && !line.includes(BLOCK_END)) {
                     // Handle object
                     var o = Utils.readObjectAhead(lines, index)
                     ignore_lines = o['skip']
                     iBlock--
-                } else {
+                //} else if (firstWord.includes(':') && !firstWord.includes('(')) {   //PROPERTY
+                } else if (memberType === 'PROPERTY') {   //PROPERTY
                     var p = {}
-                    var name = Utils.getPropName(firstWord)
-                    p['descr'] = generalDesc
-                    p['dataType'] = lastWord.trim()
-
-                    if ( (firstWord.split('(')[0].includes('?')) || (secondWord === '?')) {
-                        p['isOptional'] = true
-                    }
-                    else {
-                        p['isOptional'] = false
-                    }
-
+                    var name = Utils.getPropName(firstWord, false)
                     p['isCollection'] = (secondWord.includes('[]')) ? true : false
+                    var p = Utils.processProperty(name, line, generalDesc, assignValue, false)
+                    name = name.replace('?','')
                     iObj[interfaceName]['properties'][name] = p
+                } else if (memberType === 'METHOD') {   //METHOD
+                //} else if (line.includes(')') && line.includes('(')) { // has brackets
+                    var name = Utils.getMethodName(line) || "ErrorErrorError~99999"
+                    var m = Utils.processMethod(line, generalDesc, commentObject, interfaceName, name, isStatic)
+                    iObj[interfaceName]['methods'][name] = m
+                }  else {
+                    console.log('Error: Cannot determine the case of this line: ' + line);
                 }
-
                 break;
             case 'CLASS':
-                if (line.includes(')') && line.includes('(')) { // has brackets
-
-                    name = Utils.getMethodName(line)
-                    name = name || "ErrorErrorError~99999"
-                    var m = Utils.processMethod(line, generalDesc, commentObject, className, name, true, isStatic)
-
-                    classObj[className]['methods'][name] = m
-                } else if (line.includes(BLOCK_BEGIN)) {
+                var memberType = Utils.getMemberType(line)
+                if (memberType === 'SKIPBLOCK') {
+                //if (line.includes(BLOCK_BEGIN) && !line.includes(BLOCK_END)) {
                     // Handle object
                     var o = Utils.readObjectAhead(lines, index)
                     ignore_lines = o['skip']
                     iBlock--
-                } else {
+                // } else if (secondWord.includes(':') && !secondWord.includes('(') && (!firstWord.includes('('))) { //PROPERTY
+                } else if (memberType === 'PROPERTY') {   //PROPERTY
                     if (secondWord) {
-                        var name = secondWord.replace(':', '')
+                        var name = Utils.getPropName(secondWord, false)
                     }
                     else {
                         var name = 'PROPERTYNAMEERROR~99999'
                     }
-                    var p = Utils.processProperty(line, generalDesc)
+                    var p = Utils.processProperty(name, line, generalDesc, assignValue)
+                    name = name.replace('?','')
                     classObj[className]['properties'][name] = p
+                // } else if (line.includes(')') && line.includes('(')) { // has brackets
+                } else if (memberType === 'METHOD') {   //METHOD
+                    name = Utils.getMethodName(line)
+                    name = name || "ErrorErrorError~99999"
+                    var m = Utils.processMethod(line, generalDesc, commentObject, className, name, isStatic)
+                    classObj[className]['methods'][name] = m
+                }  else {
+                    console.log('Error: Cannot determine the case of this line: ' + line);
                 }
                 break;
             case 'ENUM':

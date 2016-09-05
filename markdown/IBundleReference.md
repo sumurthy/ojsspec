@@ -15,7 +15,6 @@
 |:-------------|:-------|:-----------|
 |`entryName`      | string | If present,this is the name of a field on the module returned from the associated bundle that maps to  this library |
 |`id`      | string | The ID of the module |
-|`}`      | } | The ID of the module |
 
 
 

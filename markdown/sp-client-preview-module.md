@@ -28,7 +28,7 @@
 | [IPropertyPaneData](IPropertyPaneData.md)   | Web part - PropertyPane data contract  |
 | [IPropertyPaneDropdownOption](IPropertyPaneDropdownOption.md)   |   |
 | [IPropertyPaneDropdownProps](IPropertyPaneDropdownProps.md)   |   |
-| [IPropertyPaneField<TProperties>](IPropertyPaneField<TProperties>.md)   |   |
+| [IPropertyPaneField](IPropertyPaneField.md)   |   |
 | [IPropertyPaneGroup](IPropertyPaneGroup.md)   | PropertyPane group  |
 | [IPropertyPaneLabelProps](IPropertyPaneLabelProps.md)   |   |
 | [IPropertyPaneLinkProps](IPropertyPaneLinkProps.md)   |   |
@@ -49,19 +49,19 @@
 
 | Function	   | Returns | Description |
 |:-------------|:------|:---------------|
-| [exportcombineURLPaths](exportcombineURLPaths~76259.md) |`string `   | Combines any number of URL paths  |
-| [exportgetPathNameFromAbsoluteUrl](exportgetPathNameFromAbsoluteUrl~97783.md) |`string `   | Get's the path name from an absolute url  |
-| [exportPropertyPaneButton](exportPropertyPaneButton~32070.md) |`[IPropertyPaneField<IPropertyPaneButtonProps>](IPropertyPaneField.md) `   | Helper method to create a Button on the PropertyPane  |
-| [exportPropertyPaneCheckbox](exportPropertyPaneCheckbox~25708.md) |`[IPropertyPaneField<IPropertyPaneCheckboxProps>](IPropertyPaneField.md) `   | Helper method to create a Checkbox on the PropertyPane  |
-| [exportPropertyPaneChoiceGroup](exportPropertyPaneChoiceGroup~44953.md) |`[IPropertyPaneField<IPropertyPaneChoiceGroupProps>](IPropertyPaneField.md) `   | Helper method to create a Choice Group on the PropertyPane  |
-| [exportPropertyPaneCustomField](exportPropertyPaneCustomField~40991.md) |`[IPropertyPaneField<IPropertyPaneCustomFieldProps>](IPropertyPaneField.md) `   | Helper method to create a Choice Group on the PropertyPane  |
-| [exportPropertyPaneDropdown](exportPropertyPaneDropdown~66926.md) |`[IPropertyPaneField<IPropertyPaneDropdownProps>](IPropertyPaneField.md) `   | Helper method to create a Dropdown on the PropertyPane  |
-| [exportPropertyPaneHorizontalRule](exportPropertyPaneHorizontalRule~61814.md) |`[IPropertyPaneField<void>](IPropertyPaneField.md) `   | Helper method to create a Horizontal Rule on the PropertyPane  |
-| [exportPropertyPaneLabel](exportPropertyPaneLabel~68576.md) |`[IPropertyPaneField<IPropertyPaneLabelProps>](IPropertyPaneField.md) `   | Helper method to create a Label on the PropertyPane  |
-| [exportPropertyPaneLink](exportPropertyPaneLink~41748.md) |`[IPropertyPaneField<IPropertyPaneLinkProps>](IPropertyPaneField.md) `   | Helper method to create a Link on the PropertyPane  |
-| [exportPropertyPaneSlider](exportPropertyPaneSlider~94063.md) |`[IPropertyPaneField<IPropertyPaneSliderProps>](IPropertyPaneField.md) `   | Helper method to create a Slider on the PropertyPane  |
-| [exportPropertyPaneTextField](exportPropertyPaneTextField~35583.md) |`[IPropertyPaneField<IPropertyPaneTextFieldProps>](IPropertyPaneField.md) `   | Helper method to create a TextField on the PropertyPane  |
-| [exportPropertyPaneToggle](exportPropertyPaneToggle~42079.md) |`[IPropertyPaneField<IPropertyPaneToggleProps>](IPropertyPaneField.md) `   | Helper method to create a Toggle on the PropertyPane  |
+| [combineURLPaths](combineURLPaths~vm409.md) |`string `   | Combines any number of URL paths  |
+| [getPathNameFromAbsoluteUrl](getPathNameFromAbsoluteUrl~LxLU9.md) |`string `   | Get's the path name from an absolute url  |
+| [PropertyPaneButton](PropertyPaneButton~gfP89.md) |`[IPropertyPaneField<IPropertyPaneButtonProps>](IPropertyPaneField.md) `   | Helper method to create a Button on the PropertyPane  |
+| [PropertyPaneCheckbox](PropertyPaneCheckbox~V0849.md) |`[IPropertyPaneField<IPropertyPaneCheckboxProps>](IPropertyPaneField.md) `   | Helper method to create a Checkbox on the PropertyPane  |
+| [PropertyPaneChoiceGroup](PropertyPaneChoiceGroup~jUI09.md) |`[IPropertyPaneField<IPropertyPaneChoiceGroupProps>](IPropertyPaneField.md) `   | Helper method to create a Choice Group on the PropertyPane  |
+| [PropertyPaneCustomField](PropertyPaneCustomField~QzDs9.md) |`[IPropertyPaneField<IPropertyPaneCustomFieldProps>](IPropertyPaneField.md) `   | Helper method to create a Choice Group on the PropertyPane  |
+| [PropertyPaneDropdown](PropertyPaneDropdown~ro4g9.md) |`[IPropertyPaneField<IPropertyPaneDropdownProps>](IPropertyPaneField.md) `   | Helper method to create a Dropdown on the PropertyPane  |
+| [PropertyPaneHorizontalRule](PropertyPaneHorizontalRule~c9a89.md) |`[IPropertyPaneField<void>](IPropertyPaneField.md) `   | Helper method to create a Horizontal Rule on the PropertyPane  |
+| [PropertyPaneLabel](PropertyPaneLabel~lVOg9.md) |`[IPropertyPaneField<IPropertyPaneLabelProps>](IPropertyPaneField.md) `   | Helper method to create a Label on the PropertyPane  |
+| [PropertyPaneLink](PropertyPaneLink~juxg9.md) |`[IPropertyPaneField<IPropertyPaneLinkProps>](IPropertyPaneField.md) `   | Helper method to create a Link on the PropertyPane  |
+| [PropertyPaneSlider](PropertyPaneSlider~Bm7g9.md) |`[IPropertyPaneField<IPropertyPaneSliderProps>](IPropertyPaneField.md) `   | Helper method to create a Slider on the PropertyPane  |
+| [PropertyPaneTextField](PropertyPaneTextField~Kc9c9.md) |`[IPropertyPaneField<IPropertyPaneTextFieldProps>](IPropertyPaneField.md) `   | Helper method to create a TextField on the PropertyPane  |
+| [PropertyPaneToggle](PropertyPaneToggle~dEnY9.md) |`[IPropertyPaneField<IPropertyPaneToggleProps>](IPropertyPaneField.md) `   | Helper method to create a Toggle on the PropertyPane  |
 
 
 ### Enumerations

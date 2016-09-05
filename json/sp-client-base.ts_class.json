@@ -8,13 +8,16 @@
         "dataType": "ServiceScope",
         "accessModifier": "protected",
         "isOptional": false,
-        "type": " ServiceScope",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "Calls fetch(),but sets the method to 'POST'."
       }
     },
+    "functions": {},
     "methods": {
-      "constructor~55321": {
+      "constructor~3EGg9": {
         "accessModifier": "public",
         "signature": "constructor(serviceScope: ServiceScope)",
         "isStatic": false,
@@ -27,12 +30,11 @@
           {
             "name": "serviceScope",
             "dataType": "ServiceScope",
-            "descr": "",
             "isOptional": false
           }
         ]
       },
-      "fetch~61588": {
+      "fetch~ekuc9": {
         "accessModifier": "public",
         "signature": "public fetch(url: string,options: IBasicHttpClientOptions): Promise<Response>",
         "isStatic": false,
@@ -45,18 +47,16 @@
           {
             "name": "url",
             "dataType": "string",
-            "descr": "",
             "isOptional": false
           },
           {
             "name": "options",
             "dataType": "IBasicHttpClientOptions",
-            "descr": "",
             "isOptional": false
           }
         ]
       },
-      "fetchCore~97711": {
+      "fetchCore~p9z89": {
         "accessModifier": "protected",
         "signature": "protected fetchCore(request: Request): Promise<Response>",
         "isStatic": false,
@@ -69,12 +69,11 @@
           {
             "name": "request",
             "dataType": "Request",
-            "descr": "",
             "isOptional": false
           }
         ]
       },
-      "get~32500": {
+      "get~XkVg9": {
         "accessModifier": "public",
         "signature": "public get(url: string,options?: IBasicHttpClientOptions): Promise<Response>",
         "isStatic": false,
@@ -87,18 +86,16 @@
           {
             "name": "url",
             "dataType": "string",
-            "descr": "",
             "isOptional": false
           },
           {
             "name": "options",
             "dataType": "IBasicHttpClientOptions",
-            "descr": "",
             "isOptional": true
           }
         ]
       },
-      "post~53245": {
+      "post~1DUs9": {
         "accessModifier": "public",
         "signature": "public post(url: string,options: IBasicHttpClientOptions): Promise<Response>",
         "isStatic": false,
@@ -111,27 +108,26 @@
           {
             "name": "url",
             "dataType": "string",
-            "descr": "",
             "isOptional": false
           },
           {
             "name": "options",
             "dataType": "IBasicHttpClientOptions",
-            "descr": "",
             "isOptional": false
           }
         ]
       }
     },
-    "functions": {}
+    "objects": {}
   },
   "Compare": {
     "implementsExtendsName": null,
     "genericType": null,
     "descr": " \nThis class contains various comparison utilities. \n",
     "properties": {},
+    "functions": {},
     "methods": {
-      "shallowCompare~98959": {
+      "shallowCompare~bspw9": {
         "accessModifier": "public",
         "signature": "public shallowCompare(objA: Object,objB: Object): boolean",
         "isStatic": true,
@@ -144,19 +140,17 @@
           {
             "name": "objA",
             "dataType": "Object",
-            "descr": "",
             "isOptional": false
           },
           {
             "name": "objB",
             "dataType": "Object",
-            "descr": "",
             "isOptional": false
           }
         ]
       }
     },
-    "functions": {}
+    "objects": {}
   },
   "CultureInfo": {
     "implementsExtendsName": null,
@@ -167,7 +161,9 @@
         "dataType": "string",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " string",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "This string determines the language default format for dates,times,numbers,currency values, \nthe sorting order of text, casing conventions, and string comparisons. This property may have \nan empty string, but will never be undefined. \nExample: If the currentCultureName is \"en-au\" then the application could use this information \nto display the date as 1/8 instead of 8/1."
       },
@@ -175,13 +171,16 @@
         "dataType": "string",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " string",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "This string determines the default user interface language. This used for localization and \ntranslation of text. This property may have an empty string, but will never be undefined. \nExample: If the currentUICultureName is \"es-mx\", then the application could use this \ninformation to translate the word \"hello\" to \"hola\"."
       }
     },
+    "functions": {},
     "methods": {},
-    "functions": {}
+    "objects": {}
   },
   "Environment": {
     "implementsExtendsName": null,
@@ -192,21 +191,25 @@
         "dataType": "EnvironmentType",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " EnvironmentType",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "An enum that describes which type of enviroment the framework is running in."
       }
     },
+    "functions": {},
     "methods": {},
-    "functions": {}
+    "objects": {}
   },
   "Guid": {
     "implementsExtendsName": null,
     "genericType": null,
     "descr": "This class represents a globally unique identifier,as described by \nIETF RFC 4122. The input string is normalized and validated by the class \nconstructor, which provides important guarantees that simplify other code \nthat works with the GUID. This class also provides basic functionality \nfor generating a pseudo-random GUID (\"version 4\" UUID from the RFC); \nhowever, be aware that the uniqueness depends on the browser's \nMath.random() function and may be not be suitable for some applications. \n",
     "properties": {},
+    "functions": {},
     "methods": {
-      "equals~24637": {
+      "equals~NHLc9": {
         "accessModifier": "public",
         "signature": "public equals(guid: Guid): boolean",
         "isStatic": false,
@@ -219,12 +222,11 @@
           {
             "name": "guid",
             "dataType": "Guid",
-            "descr": "",
             "isOptional": false
           }
         ]
       },
-      "isValid~43182": {
+      "isValid~HbTk9": {
         "accessModifier": "public",
         "signature": "public isValid(guid: string): boolean",
         "isStatic": true,
@@ -237,12 +239,11 @@
           {
             "name": "guid",
             "dataType": "string",
-            "descr": "",
             "isOptional": false
           }
         ]
       },
-      "constructorGuid~28839": {
+      "newGuid~CeDE9": {
         "accessModifier": "public",
         "signature": "public newGuid(randomProvider?: IRandomProvider): Guid",
         "isStatic": true,
@@ -255,12 +256,11 @@
           {
             "name": "randomProvider",
             "dataType": "IRandomProvider",
-            "descr": "",
             "isOptional": true
           }
         ]
       },
-      "toString~26710": {
+      "toString~qLKI9": {
         "accessModifier": "public",
         "signature": "public toString(): string",
         "isStatic": false,
@@ -271,7 +271,7 @@
         "returnDescr": null,
         "params": []
       },
-      "tryParse~68405": {
+      "tryParse~Rx2E9": {
         "accessModifier": "public",
         "signature": "public tryParse(guid: string): Guid",
         "isStatic": true,
@@ -284,21 +284,21 @@
           {
             "name": "guid",
             "dataType": "string",
-            "descr": "",
             "isOptional": false
           }
         ]
       }
     },
-    "functions": {}
+    "objects": {}
   },
   "HttpClient": {
     "implementsExtendsName": null,
     "genericType": null,
     "descr": "HttpClient is used to perform REST calls against SharePoint. It adds default \nheaders, manages the digest needed for writes, and collects telemetry that \nhelps the service to monitor the performance of an application. \n \nFor communicating with non-SharePoint services, use the BasicHttpClient \nclass instead.",
     "properties": {},
+    "functions": {},
     "methods": {
-      "constructor~18412": {
+      "constructor~3EGg9": {
         "accessModifier": "public",
         "signature": "constructor(serviceScope: ServiceScope)",
         "isStatic": false,
@@ -311,12 +311,11 @@
           {
             "name": "serviceScope",
             "dataType": "ServiceScope",
-            "descr": "",
             "isOptional": false
           }
         ]
       },
-      "beginBatch~77519": {
+      "beginBatch~p9yM9": {
         "accessModifier": "public",
         "signature": "public beginBatch(batchOptions?: IODataBatchOptions): ODataBatch",
         "isStatic": false,
@@ -329,12 +328,11 @@
           {
             "name": "batchOptions",
             "dataType": "IODataBatchOptions",
-            "descr": "",
             "isOptional": true
           }
         ]
       },
-      "fetch~77995": {
+      "fetch~ekuc9": {
         "accessModifier": "public",
         "signature": "public fetch(url: string,options: IHttpClientOptions): Promise<Response>",
         "isStatic": false,
@@ -347,18 +345,16 @@
           {
             "name": "url",
             "dataType": "string",
-            "descr": "",
             "isOptional": false
           },
           {
             "name": "options",
             "dataType": "IHttpClientOptions",
-            "descr": "",
             "isOptional": false
           }
         ]
       },
-      "get~91538": {
+      "get~XkVg9": {
         "accessModifier": "public",
         "signature": "public get(url: string,options?: IHttpClientOptions): Promise<Response>",
         "isStatic": false,
@@ -371,18 +367,16 @@
           {
             "name": "url",
             "dataType": "string",
-            "descr": "",
             "isOptional": false
           },
           {
             "name": "options",
             "dataType": "IHttpClientOptions",
-            "descr": "",
             "isOptional": true
           }
         ]
       },
-      "getWebUrlFromRequestUrl~86634": {
+      "getWebUrlFromRequestUrl~tJa09": {
         "accessModifier": "public",
         "signature": "public getWebUrlFromRequestUrl(requestUrl: string): string",
         "isStatic": true,
@@ -395,12 +389,11 @@
           {
             "name": "requestUrl",
             "dataType": "string",
-            "descr": "",
             "isOptional": false
           }
         ]
       },
-      "post~67357": {
+      "post~1DUs9": {
         "accessModifier": "public",
         "signature": "public post(url: string,options: IHttpClientOptions): Promise<Response>",
         "isStatic": false,
@@ -413,27 +406,26 @@
           {
             "name": "url",
             "dataType": "string",
-            "descr": "",
             "isOptional": false
           },
           {
             "name": "options",
             "dataType": "IHttpClientOptions",
-            "descr": "",
             "isOptional": false
           }
         ]
       }
     },
-    "functions": {}
+    "objects": {}
   },
   "Log": {
     "implementsExtendsName": null,
     "genericType": null,
     "descr": "The Log class provides methods for logging messages at different levels (verbose, \ninfo, warning, error) and with context information. Context information helps identify \nwhich component generated the messages and makes the messages useful and filterable. \n",
     "properties": {},
+    "functions": {},
     "methods": {
-      "error~62388": {
+      "error~o8Xg9": {
         "accessModifier": "public",
         "signature": "public error(source: string,error: Error,scope?: ServiceScope): void",
         "isStatic": true,
@@ -446,24 +438,21 @@
           {
             "name": "source",
             "dataType": "string",
-            "descr": "",
             "isOptional": false
           },
           {
             "name": "error",
             "dataType": "Error",
-            "descr": "",
             "isOptional": false
           },
           {
             "name": "scope",
             "dataType": "ServiceScope",
-            "descr": "",
             "isOptional": true
           }
         ]
       },
-      "info~28613": {
+      "info~z4eE9": {
         "accessModifier": "public",
         "signature": "public info(source: string,message: string,scope?: ServiceScope): void",
         "isStatic": true,
@@ -476,24 +465,21 @@
           {
             "name": "source",
             "dataType": "string",
-            "descr": "",
             "isOptional": false
           },
           {
             "name": "message",
             "dataType": "string",
-            "descr": "",
             "isOptional": false
           },
           {
             "name": "scope",
             "dataType": "ServiceScope",
-            "descr": "",
             "isOptional": true
           }
         ]
       },
-      "verbose~97850": {
+      "verbose~j0n09": {
         "accessModifier": "public",
         "signature": "public verbose(source: string,message: string,scope?: ServiceScope): void",
         "isStatic": true,
@@ -506,24 +492,21 @@
           {
             "name": "source",
             "dataType": "string",
-            "descr": "",
             "isOptional": false
           },
           {
             "name": "message",
             "dataType": "string",
-            "descr": "",
             "isOptional": false
           },
           {
             "name": "scope",
             "dataType": "ServiceScope",
-            "descr": "",
             "isOptional": true
           }
         ]
       },
-      "warn~49341": {
+      "warn~L5949": {
         "accessModifier": "public",
         "signature": "public warn(source: string,message: string,scope?: ServiceScope): void",
         "isStatic": true,
@@ -536,33 +519,31 @@
           {
             "name": "source",
             "dataType": "string",
-            "descr": "",
             "isOptional": false
           },
           {
             "name": "message",
             "dataType": "string",
-            "descr": "",
             "isOptional": false
           },
           {
             "name": "scope",
             "dataType": "ServiceScope",
-            "descr": "",
             "isOptional": true
           }
         ]
       }
     },
-    "functions": {}
+    "objects": {}
   },
   "ODataBatch": {
     "implementsExtendsName": null,
     "genericType": null,
     "descr": "The ODataBatch class accumulates a number of REST service calls and \ntransmits them as a single ODATA batch. This protocol is documented here: \nhttp: \n \nThe usage is to call ODataBatch.fetch() to queue each individual request, \nand then call ODataBatch.execute() to execute the batch operation. \nThe execute() method returns a promise that resolves when the real REST \ncall has completed. Each call to fetch() also returns a promise that will \nresolve with a Response object for that particular request. \n",
     "properties": {},
+    "functions": {},
     "methods": {
-      "constructor~16730": {
+      "constructor~3EGg9": {
         "accessModifier": "public",
         "signature": "public constructor(serviceScope: ServiceScope,batchOptions?: IODataBatchOptions)",
         "isStatic": false,
@@ -575,18 +556,16 @@
           {
             "name": "serviceScope",
             "dataType": "ServiceScope",
-            "descr": "",
             "isOptional": false
           },
           {
             "name": "batchOptions",
             "dataType": "IODataBatchOptions",
-            "descr": "",
             "isOptional": true
           }
         ]
       },
-      "execute~55276": {
+      "execute~6ceI9": {
         "accessModifier": "public",
         "signature": "public execute(): Promise<ODataBatch>",
         "isStatic": false,
@@ -597,7 +576,7 @@
         "returnDescr": null,
         "params": []
       },
-      "fetch~97163": {
+      "fetch~ekuc9": {
         "accessModifier": "public",
         "signature": "public fetch(url: string,options?: IODataBatchRequestOptions): Promise<Response>",
         "isStatic": false,
@@ -610,18 +589,16 @@
           {
             "name": "url",
             "dataType": "string",
-            "descr": "",
             "isOptional": false
           },
           {
             "name": "options",
             "dataType": "IODataBatchRequestOptions",
-            "descr": "",
             "isOptional": true
           }
         ]
       },
-      "get~61826": {
+      "get~XkVg9": {
         "accessModifier": "public",
         "signature": "public get(url: string,options?: IODataBatchRequestOptions): Promise<Response>",
         "isStatic": false,
@@ -634,18 +611,16 @@
           {
             "name": "url",
             "dataType": "string",
-            "descr": "",
             "isOptional": false
           },
           {
             "name": "options",
             "dataType": "IODataBatchRequestOptions",
-            "descr": "",
             "isOptional": true
           }
         ]
       },
-      "post~23469": {
+      "post~1DUs9": {
         "accessModifier": "public",
         "signature": "public post(url: string,options: IODataBatchRequestOptions): Promise<Response>",
         "isStatic": false,
@@ -658,19 +633,17 @@
           {
             "name": "url",
             "dataType": "string",
-            "descr": "",
             "isOptional": false
           },
           {
             "name": "options",
             "dataType": "IODataBatchRequestOptions",
-            "descr": "",
             "isOptional": false
           }
         ]
       }
     },
-    "functions": {}
+    "objects": {}
   },
   "PageContext": {
     "implementsExtendsName": null,
@@ -681,7 +654,9 @@
         "dataType": "CultureInfo",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " CultureInfo",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "This class is primarily used with the PageContext class. It provides culture info \nfor the current user of the application."
       },
@@ -689,7 +664,9 @@
         "dataType": "boolean",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " boolean",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "Returns whether the PageContext has been initialized."
       },
@@ -697,7 +674,9 @@
         "dataType": "SPSite",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " SPSite",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "Contextual information for the SharePoint site collection (\"site\") that is hosting the page. \nThe site object will be defined if the PageContext was initialized."
       },
@@ -705,7 +684,9 @@
         "dataType": "SPUser",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " SPUser",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "This class is primarily used with the PageContext class. It provides contextual information \nfor the SharePoint user that is accessing the page."
       },
@@ -713,13 +694,16 @@
         "dataType": "SPWeb",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " SPWeb",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "Contextual information for the SharePoint site (\"web\") that is hosting the page. The web object \nwill be defined if the PageContext was initialized."
       }
     },
+    "functions": {},
     "methods": {
-      "constructor~51506": {
+      "constructor~3EGg9": {
         "accessModifier": "public",
         "signature": "constructor(serviceScope: ServiceScope)",
         "isStatic": false,
@@ -732,32 +716,25 @@
           {
             "name": "serviceScope",
             "dataType": "ServiceScope",
-            "descr": "",
             "isOptional": false
           }
         ]
       }
     },
-    "functions": {}
+    "objects": {}
   },
   "ServiceKey": {
     "implementsExtendsName": null,
     "genericType": "T",
     "descr": "The ServiceKey is a lookup key that is used when calling ServiceScope.consume() \nto fetch a dependency. The key also defines a default implementation of the \ndependency, which will be autocreated by the root scope if the dependency is not found. \nProviding a default implementation ensures that new dependencies can be safely \nintroduced without inadvertently breaking components that are loaded by an older host \n(that does not provide the new dependency).",
     "properties": {
-      "create": {
-        "dataType": "string,",
-        "accessModifier": "public",
-        "isOptional": false,
-        "type": " string,",
-        "isCollection": false,
-        "descr": "your application."
-      },
       "defaultCreator": {
         "dataType": "ServiceCreator<T>",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " ServiceCreator<T>",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "your application."
       },
@@ -765,7 +742,9 @@
         "dataType": "string",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " string",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "your application."
       },
@@ -773,13 +752,16 @@
         "dataType": "string",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " string",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "your application."
       }
     },
+    "functions": {},
     "methods": {
-      "constructor~28889": {
+      "constructor~3EGg9": {
         "accessModifier": "public",
         "signature": "constructor(id: string,name: string,defaultCreator: ServiceCreator<T>)",
         "isStatic": false,
@@ -792,44 +774,45 @@
           {
             "name": "id",
             "dataType": "string",
-            "descr": "",
             "isOptional": false
           },
           {
             "name": "name",
             "dataType": "string",
-            "descr": "",
             "isOptional": false
           },
           {
             "name": "defaultCreator",
             "dataType": "ServiceCreator<T>",
-            "descr": "",
             "isOptional": false
           }
         ]
       },
-      "serviceClass{new~10866": {
+      "create<T>~5l6A9": {
         "accessModifier": "public",
-        "signature": "serviceClass: { new (serviceScope: ServiceScope) }): ServiceKey<T>;",
-        "isStatic": false,
+        "signature": "public create<T>(name: string,serviceClass: { new (serviceScope: ServiceScope) }): ServiceKey<T>;",
+        "isStatic": true,
         "isOptional": false,
         "descr": "your application.",
-        "genericType": null,
+        "genericType": "T",
         "returnType": "ServiceKey<T>;",
         "returnDescr": null,
         "params": [
           {
-            "name": "serviceScope",
-            "dataType": "ServiceScope",
-            "descr": "",
+            "name": "name",
+            "dataType": "string",
+            "isOptional": false
+          },
+          {
+            "name": "serviceClass",
+            "dataType": "{ new (serviceScope: ServiceScope) }",
             "isOptional": false
           }
         ]
       },
-      "createCustom<T>~47449": {
+      "createCustom<T>~fPzE9": {
         "accessModifier": "public",
-        "signature": "public createCustom < T >(name: string,defaultCreator: ServiceCreator<T>): ServiceKey<T>",
+        "signature": "public createCustom<T>(name: string,defaultCreator: ServiceCreator<T>): ServiceKey<T>",
         "isStatic": true,
         "isOptional": false,
         "descr": "your application.",
@@ -840,36 +823,26 @@
           {
             "name": "name",
             "dataType": "string",
-            "descr": "",
             "isOptional": false
           },
           {
             "name": "defaultCreator",
             "dataType": "ServiceCreator<T>",
-            "descr": "",
             "isOptional": false
           }
         ]
       }
     },
-    "functions": {}
+    "objects": {}
   },
   "ServiceScope": {
     "implementsExtendsName": null,
     "genericType": null,
     "descr": "ServiceScope provides a formalized way for components to register and consume dependencies \n(\"services\"), and to enable different implementations to be registered in different scopes. \nThis improves modularity by decoupling components from their dependencies in an extensible way. \n \nFor example, suppose that various components need access to an IPageManager instance. We could \nsimply make the PageManager a singleton (i.e. global variable), but this will not work e.g. if \nwe need to create a pop-up dialog that requires a second PageManager instance. A better solution \nwould be to add the PageManager as a constructor parameter for each component that requires it, \nhowever then we immediately face the problem that any code that calls these constructors \nalso needs a PageManager parameter. In an application with many such dependencies, business \nlogic that ties together many subsystems would eventually pick up a constructor parameter \nfor every possible dependency, which is unwieldy. A natural solution would be to move all the \ndependencies into a class with name like \"ApplicationContext\", and then pass this around as our \nconstructor parameter. This enables the PageManager to be passed to classes that need it \nwithout cluttering the intermediary classes that don't. However, it still has a design problem \nthat \"ApplicationContext\" has hard-coded dependencies on many unrelated things. A more flexible \napproach is to make it a dictionary that can look up items for consumers/providers who know the \nright lookup key (i.e. ServiceKey). This is the popular \"service locator\" design pattern, \nfamiliar from the SPContext API in classic SharePoint. \n \nServiceScope takes this idea a step further in two important ways: First, it provides a scoping \nmechanism so that e.g. if we had two different pages, they could each consume a unique PageManager \ninstance while still sharing other common dependencies. Secondly, it allows for a ServiceKey \nto provide a default implementation of the dependency. This is important for API stability in \nour modular client-side environment: For example, suppose that version 2.0 of our application \nintroduced a new IDiagnosticTracing interface that a version 2.0 component will expect to consume. \nIf the version 2.0 component gets loaded by an older 1.0 application, it would fail. We could \nfix this by requiring each consumer to check for any missing dependencies and handle that case, \nbut it would require a lot of checks. A better solution is to ensure that a default implementation \nalways exists, perhaps just a trivial behavior, so that components don't have to worry about it. \n \nUsage: ServiceScope instances are created by calling either ServiceScope.startNewRoot() or \nServiceScope.startNewChild(). They are initially in an \"unfinished\" state, during which provide() \ncan be called to register service keys, but consume() is forbidden. After ServiceScope.finish() \nis called, consume() is allowed and provide() is now forbidden. These semantics ensure that \nServiceScope.consume() always returns the same result for the same key, and does not depend on \norder of initialization. It also allows us to support circular dependencies without worrying \nabout infinite loops, even when working with external components that were implemented by \nthird parties. To avoid mistakes, it's best to always call consume() inside a callback from \nserviceScope.whenFinished().",
-    "properties": {
-      "createAndProvide": {
-        "dataType": "ServiceKey<T>,",
-        "accessModifier": "public",
-        "isOptional": false,
-        "type": " ServiceKey<T>,",
-        "isCollection": false,
-        "descr": "This is a shorthand function that its equivalent to constructing a new instance of the \nsimpleServiceClass, then registering it by calling ServiceScope.provide()."
-      }
-    },
+    "properties": {},
+    "functions": {},
     "methods": {
-      "constructor~31343": {
+      "constructor~3EGg9": {
         "accessModifier": "public",
         "signature": "constructor(parent: ServiceScope)",
         "isStatic": false,
@@ -882,14 +855,13 @@
           {
             "name": "parent",
             "dataType": "ServiceScope",
-            "descr": "",
             "isOptional": false
           }
         ]
       },
-      "consume<T>~71775": {
+      "consume<T>~wJAw9": {
         "accessModifier": "public",
-        "signature": "public consume < T >(serviceKey: ServiceKey<T>): T",
+        "signature": "public consume<T>(serviceKey: ServiceKey<T>): T",
         "isStatic": false,
         "isOptional": false,
         "descr": "Components should call this function to \"consume\" a dependency,i.e. look up the serviceKey \nand return the registered service instance. If the instance cannot be found, then a default \ninstance will be autocreated and registered with the root ServiceScope.",
@@ -900,32 +872,35 @@
           {
             "name": "serviceKey",
             "dataType": "ServiceKey<T>",
-            "descr": "",
             "isOptional": false
           }
         ]
       },
-      "simpleServiceClass{new~33756": {
+      "createAndProvide<T>~Lj5g9": {
         "accessModifier": "public",
-        "signature": "simpleServiceClass: { new (serviceScope: ServiceScope) }): T;",
+        "signature": "public createAndProvide<T>(serviceKey: ServiceKey<T>,simpleServiceClass: { new (serviceScope: ServiceScope) }): T;",
         "isStatic": false,
         "isOptional": false,
         "descr": "This is a shorthand function that its equivalent to constructing a new instance of the \nsimpleServiceClass, then registering it by calling ServiceScope.provide().",
-        "genericType": null,
+        "genericType": "T",
         "returnType": "T;",
         "returnDescr": null,
         "params": [
           {
-            "name": "serviceScope",
-            "dataType": "ServiceScope",
-            "descr": "",
+            "name": "serviceKey",
+            "dataType": "ServiceKey<T>",
+            "isOptional": false
+          },
+          {
+            "name": "simpleServiceClass",
+            "dataType": "{ new (serviceScope: ServiceScope) }",
             "isOptional": false
           }
         ]
       },
-      "createDefaultAndProvide<T>~21190": {
+      "createDefaultAndProvide<T>~Q7xY9": {
         "accessModifier": "public",
-        "signature": "public createDefaultAndProvide < T >(serviceKey: ServiceKey<T>): T",
+        "signature": "public createDefaultAndProvide<T>(serviceKey: ServiceKey<T>): T",
         "isStatic": false,
         "isOptional": false,
         "descr": "This is a shorthand function that constructs the default implementation of the specified \nserviceKey, and then registers it by calling ServiceScope.provide().",
@@ -936,12 +911,11 @@
           {
             "name": "serviceKey",
             "dataType": "ServiceKey<T>",
-            "descr": "",
             "isOptional": false
           }
         ]
       },
-      "finish~21070": {
+      "finish~wwNo9": {
         "accessModifier": "public",
         "signature": "public finish(): void",
         "isStatic": false,
@@ -952,7 +926,7 @@
         "returnDescr": null,
         "params": []
       },
-      "getParent~22331": {
+      "getParent~XEmY9": {
         "accessModifier": "public",
         "signature": "public getParent(): ServiceScope",
         "isStatic": false,
@@ -963,9 +937,9 @@
         "returnDescr": null,
         "params": []
       },
-      "provide<T>~38955": {
+      "provide<T>~QdN49": {
         "accessModifier": "public",
-        "signature": "public provide < T >(serviceKey: ServiceKey<T>,service: T): T",
+        "signature": "public provide<T>(serviceKey: ServiceKey<T>,service: T): T",
         "isStatic": false,
         "isOptional": false,
         "descr": "ServiceScope.provide() is used to register an implemententation of the given serviceKey \nfor the current scope. It may only be used when the ServiceScope is in an \"unfinished\" \nstate, i.e. before finish() has been called.",
@@ -976,18 +950,16 @@
           {
             "name": "serviceKey",
             "dataType": "ServiceKey<T>",
-            "descr": "",
             "isOptional": false
           },
           {
             "name": "service",
             "dataType": "T",
-            "descr": "",
             "isOptional": false
           }
         ]
       },
-      "startNewChild~97603": {
+      "startNewChild~YzVU9": {
         "accessModifier": "public",
         "signature": "public startNewChild(): ServiceScope",
         "isStatic": false,
@@ -998,7 +970,7 @@
         "returnDescr": null,
         "params": []
       },
-      "startNewRoot~75453": {
+      "startNewRoot~TX989": {
         "accessModifier": "public",
         "signature": "public startNewRoot(): ServiceScope",
         "isStatic": true,
@@ -1009,7 +981,7 @@
         "returnDescr": null,
         "params": []
       },
-      "whenFinished~33129": {
+      "whenFinished~pzLE9": {
         "accessModifier": "public",
         "signature": "public whenFinished(callback: () => void): void",
         "isStatic": false,
@@ -1021,14 +993,13 @@
         "params": [
           {
             "name": "callback",
-            "dataType": "(",
-            "descr": "",
+            "dataType": "() => void",
             "isOptional": false
           }
         ]
       }
     },
-    "functions": {}
+    "objects": {}
   },
   "SPPermission": {
     "implementsExtendsName": null,
@@ -1039,7 +1010,9 @@
         "dataType": "SPPermission",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " SPPermission",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "Add,change,or delete HTML pages or web part Pages,and edit the Web site using a SharePoint \nFoundation–compatible editor."
       },
@@ -1047,7 +1020,9 @@
         "dataType": "SPPermission",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " SPPermission",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "Add or remove personal web parts on a web part Page."
       },
@@ -1055,7 +1030,9 @@
         "dataType": "SPPermission",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " SPPermission",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "Add items to lists,add documents to document libraries,and add Web discussion comments."
       },
@@ -1063,7 +1040,9 @@
         "dataType": "SPPermission",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " SPPermission",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "Apply a style sheet (.css file) to the Web site."
       },
@@ -1071,7 +1050,9 @@
         "dataType": "SPPermission",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " SPPermission",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "Apply a theme or borders to the entire Web site."
       },
@@ -1079,7 +1060,9 @@
         "dataType": "SPPermission",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " SPPermission",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "Approve a minor version of a list item or document."
       },
@@ -1087,7 +1070,9 @@
         "dataType": "SPPermission",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " SPPermission",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "Enumerate files and folders in a Web site using Microsoft Office SharePoint Designer 2007 and WebDAV interfaces."
       },
@@ -1095,7 +1080,9 @@
         "dataType": "SPPermission",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " SPPermission",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "View information about users of the Web site."
       },
@@ -1103,7 +1090,9 @@
         "dataType": "SPPermission",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " SPPermission",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "Discard or check in a document which is checked out to another user."
       },
@@ -1111,7 +1100,9 @@
         "dataType": "SPPermission",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " SPPermission",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "Create e-mail alerts."
       },
@@ -1119,7 +1110,9 @@
         "dataType": "SPPermission",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " SPPermission",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "Create a group of users that can be used anywhere within the site collection."
       },
@@ -1127,7 +1120,9 @@
         "dataType": "SPPermission",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " SPPermission",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "Create a Web site using Self-Service Site Creation."
       },
@@ -1135,7 +1130,9 @@
         "dataType": "SPPermission",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " SPPermission",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "Delete items from a list,documents from a document library,and Web discussion comments in documents."
       },
@@ -1143,7 +1140,9 @@
         "dataType": "SPPermission",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " SPPermission",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "Delete past versions of a list item or document."
       },
@@ -1151,7 +1150,9 @@
         "dataType": "SPPermission",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " SPPermission",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "Edit items in lists,edit documents in document libraries,edit Web discussion comments in documents, \nand customize web part Pages in document libraries."
       },
@@ -1159,7 +1160,9 @@
         "dataType": "SPPermission",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " SPPermission",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "Allows a user to change his or her user information,such as adding a picture."
       },
@@ -1167,7 +1170,9 @@
         "dataType": "SPPermission",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " SPPermission",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "Has no permissions on the Web site. Not available through the user interface."
       },
@@ -1175,7 +1180,9 @@
         "dataType": "SPPermission",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " SPPermission",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "Enumerate permissions on the Web site,list,folder,document,or list item."
       },
@@ -1183,7 +1190,9 @@
         "dataType": "SPPermission",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " SPPermission",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "Has all permissions on the Web site. Not available through the user interface."
       },
@@ -1191,7 +1200,9 @@
         "dataType": "SPPermission",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " SPPermission",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "View the layouts page?"
       },
@@ -1199,7 +1210,9 @@
         "dataType": "SPPermission",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " SPPermission",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "Manage alerts for all users of the Web site."
       },
@@ -1207,7 +1220,9 @@
         "dataType": "SPPermission",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " SPPermission",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "Create and delete lists,add or remove columns in a list,and add or remove public views of a list."
       },
@@ -1215,7 +1230,9 @@
         "dataType": "SPPermission",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " SPPermission",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "Create and change permission levels on the Web site and assign permissions to users and groups."
       },
@@ -1223,7 +1240,9 @@
         "dataType": "SPPermission",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " SPPermission",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "Create,change,and delete personal views of lists."
       },
@@ -1231,7 +1250,9 @@
         "dataType": "SPPermission",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " SPPermission",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "Create subsites such as team sites,Meeting Workspace sites,and Document Workspace sites."
       },
@@ -1239,7 +1260,9 @@
         "dataType": "SPPermission",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " SPPermission",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "Grant the ability to perform all administration tasks for the Web site as well as manage content. \nActivate, deactivate,or edit properties of Web site scoped Features through the object model or \nthrough the user interface (UI). When grantedon the root Web site of a site collection, activate, \ndeactivate, or edit properties of site collection scoped Features through the object model. To \nbrowse to the Site Collection Features page and activate or deactivate site collection scoped \nFeatures through the UI, you must be a site collection administrator."
       },
@@ -1247,7 +1270,9 @@
         "dataType": "SPPermission",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " SPPermission",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "Allow users to open a Web site,list,or folder to access items inside that container."
       },
@@ -1255,7 +1280,9 @@
         "dataType": "SPPermission",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " SPPermission",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "View the source of documents with server-side file handlers."
       },
@@ -1263,7 +1290,9 @@
         "dataType": "SPPermission",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " SPPermission",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "Update web parts to display personalized information."
       },
@@ -1271,7 +1300,9 @@
         "dataType": "SPPermission",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " SPPermission",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "Use features that launch client applications otherwise,users must work on documents locally and upload changes."
       },
@@ -1279,7 +1310,9 @@
         "dataType": "SPPermission",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " SPPermission",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "Use SOAP,WebDAV,or Microsoft Office SharePoint Designer 2007 interfaces to access the Web site."
       },
@@ -1287,7 +1320,9 @@
         "dataType": "IODataBasePermission",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " IODataBasePermission",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "Returns the value of this SPPermission object"
       },
@@ -1295,7 +1330,9 @@
         "dataType": "SPPermission",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " SPPermission",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "View forms,views,and application pages,and enumerate lists."
       },
@@ -1303,7 +1340,9 @@
         "dataType": "SPPermission",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " SPPermission",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "View items in lists,documents in document libraries,and view Web discussion comments."
       },
@@ -1311,7 +1350,9 @@
         "dataType": "SPPermission",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " SPPermission",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "View pages in a Web site."
       },
@@ -1319,7 +1360,9 @@
         "dataType": "SPPermission",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " SPPermission",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "View reports on Web site usage."
       },
@@ -1327,13 +1370,16 @@
         "dataType": "SPPermission",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " SPPermission",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "View past versions of a list item or document."
       }
     },
+    "functions": {},
     "methods": {
-      "constructor~45677": {
+      "constructor~3EGg9": {
         "accessModifier": "public",
         "signature": "constructor(value: IODataBasePermission)",
         "isStatic": false,
@@ -1346,12 +1392,11 @@
           {
             "name": "value",
             "dataType": "IODataBasePermission",
-            "descr": "",
             "isOptional": false
           }
         ]
       },
-      "hasAllPermissions~44420": {
+      "hasAllPermissions~9qQk9": {
         "accessModifier": "public",
         "signature": "public hasAllPermissions(...requestedPerms: SPPermission[]): boolean",
         "isStatic": false,
@@ -1364,12 +1409,11 @@
           {
             "name": "...requestedPerms",
             "dataType": "SPPermission[]",
-            "descr": "",
             "isOptional": false
           }
         ]
       },
-      "hasAnyPermissions~22818": {
+      "hasAnyPermissions~KL1k9": {
         "accessModifier": "public",
         "signature": "public hasAnyPermissions(...requestedPerms: SPPermission[]): boolean",
         "isStatic": false,
@@ -1382,12 +1426,11 @@
           {
             "name": "...requestedPerms",
             "dataType": "SPPermission[]",
-            "descr": "",
             "isOptional": false
           }
         ]
       },
-      "hasPermission~53252": {
+      "hasPermission~s9lY9": {
         "accessModifier": "public",
         "signature": "public hasPermission(requestedPerm: SPPermission): boolean",
         "isStatic": false,
@@ -1400,13 +1443,12 @@
           {
             "name": "requestedPerm",
             "dataType": "SPPermission",
-            "descr": "",
             "isOptional": false
           }
         ]
       }
     },
-    "functions": {}
+    "objects": {}
   },
   "SPSite": {
     "implementsExtendsName": null,
@@ -1417,13 +1459,16 @@
         "dataType": "string",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " string",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "The GUID that identifies the SPSite on the server."
       }
     },
+    "functions": {},
     "methods": {},
-    "functions": {}
+    "objects": {}
   },
   "SPUser": {
     "implementsExtendsName": null,
@@ -1434,7 +1479,9 @@
         "dataType": "string",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " string",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "The display name for the current user. \nExample: \"John Doe\""
       },
@@ -1442,13 +1489,16 @@
         "dataType": "string",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " string",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "The login name for specified user. \nExample: \"example@microsoft.com\""
       }
     },
+    "functions": {},
     "methods": {},
-    "functions": {}
+    "objects": {}
   },
   "SPWeb": {
     "implementsExtendsName": null,
@@ -1459,7 +1509,9 @@
         "dataType": "string",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " string",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "Returns the absolute URL for this SPWeb. \nExample: \"https:"
       },
@@ -1467,7 +1519,9 @@
         "dataType": "Guid",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " Guid",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "The GUID that identifies the SPWeb on the server or undefined if the Guid string \nvalue is invalid."
       },
@@ -1475,7 +1529,9 @@
         "dataType": "string",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " string",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "Returns the server-relative URL for this SPWeb. \nExample: \"/sites/PubSite/SubWeb\""
       },
@@ -1483,21 +1539,25 @@
         "dataType": "string",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " string",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "Returns the title of the SharePoint site."
       }
     },
+    "functions": {},
     "methods": {},
-    "functions": {}
+    "objects": {}
   },
   "UrlQueryParameterCollection": {
     "implementsExtendsName": null,
     "genericType": null,
-    "descr": "Class for storing and retrieving query parameters. \nThe URL can be server-relative and it will parse empty/null strings. \nThe query parameters must start with ? to indicate the first query parameter and \nuse & for all subsequent parameters. The class also supports fragments. \nEdge cases behavior: \nEmpty value (www.example.com/?test=) stores key and empty value \nNo equals in queryParam (www.example.com/?test) stores key and undefined value \nEmpty queryParam (www.example.com/?&debug=on) stores undefined key and value \nQuery param with only equals (www.example.com/?=&debug=on stores empty string key and value",
+    "descr": "Class for storing and retrieving query parameters. \nThe URL can be server-relative and it will parse empty/null strings. \nThe query parameters must start with? to indicate the first query parameter and \nuse & for all subsequent parameters. The class also supports fragments. \nEdge cases behavior: \nEmpty value (www.example.com/?test=) stores key and empty value \nNo equals in queryParam (www.example.com/?test) stores key and undefined value \nEmpty queryParam (www.example.com/?&debug=on) stores undefined key and value \nQuery param with only equals (www.example.com/?=&debug=on stores empty string key and value",
     "properties": {},
+    "functions": {},
     "methods": {
-      "constructor~56911": {
+      "constructor~3EGg9": {
         "accessModifier": "public",
         "signature": "constructor(url: string)",
         "isStatic": false,
@@ -1510,12 +1570,11 @@
           {
             "name": "url",
             "dataType": "string",
-            "descr": "",
             "isOptional": false
           }
         ]
       },
-      "getValue~38952": {
+      "getValue~fqkA9": {
         "accessModifier": "public",
         "signature": "public getValue(param: string): string",
         "isStatic": false,
@@ -1528,12 +1587,11 @@
           {
             "name": "param",
             "dataType": "string",
-            "descr": "",
             "isOptional": false
           }
         ]
       },
-      "getValues~27548": {
+      "getValues~8n0Q9": {
         "accessModifier": "public",
         "signature": "public getValues(param: string): string[]",
         "isStatic": false,
@@ -1546,21 +1604,21 @@
           {
             "name": "param",
             "dataType": "string",
-            "descr": "",
             "isOptional": false
           }
         ]
       }
     },
-    "functions": {}
+    "objects": {}
   },
   "UrlUtilities": {
     "implementsExtendsName": null,
     "genericType": null,
     "descr": "Common helper functions for working with URLs. These utilities are intended to be simple, \nsmall, and extremely common. Do not add advanced parsing logic to this file.",
     "properties": {},
+    "functions": {},
     "methods": {
-      "convertToODataStringLiteral~29099": {
+      "convertToODataStringLiteral~Maqc9": {
         "accessModifier": "public",
         "signature": "public convertToODataStringLiteral(value: string): string",
         "isStatic": true,
@@ -1573,12 +1631,11 @@
           {
             "name": "value",
             "dataType": "string",
-            "descr": "",
             "isOptional": false
           }
         ]
       },
-      "removeEndSlash~10676": {
+      "removeEndSlash~kcNo9": {
         "accessModifier": "public",
         "signature": "public removeEndSlash(url: string): string",
         "isStatic": true,
@@ -1591,21 +1648,21 @@
           {
             "name": "url",
             "dataType": "string",
-            "descr": "",
             "isOptional": false
           }
         ]
       }
     },
-    "functions": {}
+    "objects": {}
   },
   "Validate": {
     "implementsExtendsName": null,
     "genericType": null,
     "descr": "This class implements provides a standard way to validate properties and function parameters. \nUnlike an assertion, the Validate checks are always performed and will always throw an error, \neven in a production release. As such, be careful not to overuse these checks in a way \nthat might impact performance.",
     "properties": {},
+    "functions": {},
     "methods": {
-      "isNonemptyString~72133": {
+      "isNonemptyString~P7xU9": {
         "accessModifier": "public",
         "signature": "public isNonemptyString(value: string,variableName: string): void",
         "isStatic": true,
@@ -1618,18 +1675,16 @@
           {
             "name": "value",
             "dataType": "string",
-            "descr": "",
             "isOptional": false
           },
           {
             "name": "variableName",
             "dataType": "string",
-            "descr": "",
             "isOptional": false
           }
         ]
       },
-      "isNotNullOrUndefined~69344": {
+      "isNotNullOrUndefined~v0mM9": {
         "accessModifier": "public",
         "signature": "public isNotNullOrUndefined(value: any,variableName: string): void",
         "isStatic": true,
@@ -1642,18 +1697,16 @@
           {
             "name": "value",
             "dataType": "any",
-            "descr": "",
             "isOptional": false
           },
           {
             "name": "variableName",
             "dataType": "string",
-            "descr": "",
             "isOptional": false
           }
         ]
       },
-      "isTrue~60273": {
+      "isTrue~1EA89": {
         "accessModifier": "public",
         "signature": "public isTrue(value: boolean,variableName: string): void",
         "isStatic": true,
@@ -1666,18 +1719,16 @@
           {
             "name": "value",
             "dataType": "boolean",
-            "descr": "",
             "isOptional": false
           },
           {
             "name": "variableName",
             "dataType": "string",
-            "descr": "",
             "isOptional": false
           }
         ]
       }
     },
-    "functions": {}
+    "objects": {}
   }
 }

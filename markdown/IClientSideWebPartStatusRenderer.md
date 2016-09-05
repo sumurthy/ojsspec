@@ -16,10 +16,10 @@ error messages for a webpart.
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[clearError](#clearerror~11706)      | void | Clear the webpart error message |
-|[clearLoadingIndicator](#clearloadingindicator~51123)      | void | Clear the loading indicator |
-|[displayLoadingIndicator](#displayloadingindicator~69041)      | void | Display a loading spinner |
-|[renderError](#rendererror~22376)      | void | Render the provided error message in the webpart container div |
+|[clearError](#clearerror~xlfc9)      | void | Clear the webpart error message |
+|[clearLoadingIndicator](#clearloadingindicator~s6nw9)      | void | Clear the loading indicator |
+|[displayLoadingIndicator](#displayloadingindicator~qh9g9)      | void | Display a loading spinner |
+|[renderError](#rendererror~vxc09)      | void | Render the provided error message in the webpart container div |
 
 
 
@@ -37,7 +37,7 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `domElement`    | HTMLElement |  |
+| `domElement`    | HTMLElement | undefined |
 
 
 ## clearLoadingIndicator
@@ -54,7 +54,7 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `domElement`    | Element |  |
+| `domElement`    | Element | undefined |
 
 
 ## displayLoadingIndicator
@@ -71,8 +71,8 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `domElement`    | Element |  |
-| `loadingMessage`    | string |  |
+| `domElement`    | Element | undefined |
+| `loadingMessage`    | string | undefined |
 
 
 ## renderError
@@ -89,6 +89,6 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `domElement`    | HTMLElement |  |
-| `error`    | Error , string |  |
+| `domElement`    | HTMLElement | undefined |
+| `error`    | Error , string | undefined |
 

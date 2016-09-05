@@ -23,11 +23,11 @@ enhancements.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor~55321)     | public | [ServiceScope](ServiceScope.md) |  |
-|[fetch](#fetch~61588)     | public | [Promise<Response>](Promise.md) | Performs a REST service call |
-|[fetchCore](#fetchcore~97711)     | protected | [Promise<Response>](Promise.md) | Performs a REST service call |
-|[get](#get~32500)     | public | [Promise<Response>](Promise.md) | Calls fetch(),but sets the method to 'GET' |
-|[post](#post~53245)     | public | [Promise<Response>](Promise.md) | Calls fetch(),but sets the method to 'POST' |
+|[constructor](#constructor~3egg9)     | public | [ServiceScope](ServiceScope.md) |  |
+|[fetch](#fetch~ekuc9)     | public | [Promise<Response>](Promise.md) | Performs a REST service call |
+|[fetchCore](#fetchcore~p9z89)     | protected | [Promise<Response>](Promise.md) | Performs a REST service call |
+|[get](#get~xkvg9)     | public | [Promise<Response>](Promise.md) | Calls fetch(),but sets the method to 'GET' |
+|[post](#post~1dus9)     | public | [Promise<Response>](Promise.md) | Calls fetch(),but sets the method to 'POST' |
 
 
 
@@ -46,7 +46,7 @@ ServiceScope
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceScope`    | [ServiceScope](ServiceScope.md) |  |
+| `serviceScope`    | [ServiceScope](ServiceScope.md) | undefined |
 
 
 ## fetch
@@ -66,8 +66,8 @@ Promise<Response>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | string |  |
-| `options`    | [IBasicHttpClientOptions](IBasicHttpClientOptions.md) |  |
+| `url`    | string | undefined |
+| `options`    | [IBasicHttpClientOptions](IBasicHttpClientOptions.md) | undefined |
 
 
 ## fetchCore
@@ -87,7 +87,7 @@ Promise<Response>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `request`    | [Request](Request.md) |  |
+| `request`    | [Request](Request.md) | undefined |
 
 
 ## get
@@ -104,8 +104,8 @@ Promise<Response>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | string |  |
-| `options`    | [IBasicHttpClientOptions](IBasicHttpClientOptions.md) | _Optional._ |
+| `url`    | string | undefined |
+| `options`    | [IBasicHttpClientOptions](IBasicHttpClientOptions.md) | _Optional._undefined |
 
 
 ## post
@@ -122,6 +122,6 @@ Promise<Response>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | string |  |
-| `options`    | [IBasicHttpClientOptions](IBasicHttpClientOptions.md) |  |
+| `url`    | string | undefined |
+| `options`    | [IBasicHttpClientOptions](IBasicHttpClientOptions.md) | undefined |
 

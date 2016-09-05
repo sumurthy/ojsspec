@@ -1,8 +1,8 @@
-# IPropertyPaneField<TProperties> interface
+# IPropertyPaneField <TProperties> interface
 
 
 
-
+_Type parameters: <TProperties>_
 
 
 

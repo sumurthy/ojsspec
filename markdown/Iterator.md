@@ -1,8 +1,8 @@
-# Iterator<T> interface
+# Iterator <T> interface
 
 
 
-
+_Type parameters: <T>_
 
 
 
@@ -16,9 +16,9 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[next](#next~36494)      | [IteratorResult<T>](IteratorResult.md) |  |
-|[return](#return~67440)      | [IteratorResult<T>](IteratorResult.md) |  |
-|[throw](#throw~44983)      | [IteratorResult<T>](IteratorResult.md) |  |
+|[next](#next~lclm9)      | [IteratorResult<T>](IteratorResult.md) |  |
+|[return](#return~77oo9)      | [IteratorResult<T>](IteratorResult.md) |  |
+|[throw](#throw~ty949)      | [IteratorResult<T>](IteratorResult.md) |  |
 
 
 
@@ -36,7 +36,7 @@ IteratorResult<T>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | any | _Optional._ |
+| `value`    | any | _Optional._undefined |
 
 
 ## return
@@ -53,7 +53,7 @@ IteratorResult<T>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | any | _Optional._ |
+| `value`    | any | _Optional._undefined |
 
 
 ## throw
@@ -70,5 +70,5 @@ IteratorResult<T>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `e`    | any | _Optional._ |
+| `e`    | any | _Optional._undefined |
 

@@ -1,11 +1,11 @@
-
+/// <reference path="../typings/tsd.d.ts" />
 
 interface IBundleReference {
   /**
    * If present, this is the name of a field on the module returned from the associated bundle that maps to
    * this library. Otherwise, the module returned from the bundle maps to this library.
    */
-  entryName?: string;
+  entryName ?: string;
   /**
    * The ID of the module.
    */
@@ -51,18 +51,18 @@ interface IClientSideComponentLoaderConfig {
    * Required: no
    * Example: mySpWebpart
    */
-  exportedModuleName?: string;
+  exportedModuleName ?: string;
   /**
    * Definition: This is an array of fully-qualified paths to be prepended to each of the script resource paths with the
    *  "internal" or "localized" type. If one fails to load, the loader will attempt to load from the next until there
    *  are no base paths remaning. All "internal" and "localized" script resources that do not have fully-qualified URLs
    *  as their "path" field values must be hosted under each of the paths listed in this property. For example, if an
    *  internal module's "path" field value is "master_2015-04-20/my-application.bundle_1928f8a0.js" and this field's
-   *  value is [ "https:
+   *  value is [ "https://contoso.akamaihd.net/files/", "https://contoso.msecnd.net/files/" ], the loader will first
    *  attempt to load this script resource from the URL
-   *  "https:
+   *  "https://contoso.akamaihd.net/files/master_2015-04-20/my-application.bundle_1928f8a0.js". If loading from
    *  that URL fails, the loader will then attempt to load this script resource from
-   *  "https:
+   *  "https://contoso.msecnd.net/files/master_2015-04-20/my-application.bundle_1928f8a0.js". If that URL fails to load,
    *  the component will fail to load and an error will be returned. It is important to note that the support for
    *  multiple base URLs is purely for failover support. This means that all files must be present on all hosts
    *  listed in this field.
@@ -70,7 +70,7 @@ interface IClientSideComponentLoaderConfig {
    * Required: yes
    * Localized: no
    * Supported values: Any URL that contains all internal scripts referenced in the "scriptResources" dictionary.
-   * Example: [ "https:
+   * Example: [ "https://contoso.akamaihd.net/files/", "https://contoso.msecnd.net/files/" ]
    */
   internalModuleBaseUrls: string[];
   /**
@@ -97,7 +97,7 @@ interface IClientSideComponentLoaderConfig {
    *    "jQuery": {
    *      "type": "framework",
    *      "version": "2.2.4",
-   *      "path": "https:
+   *      "path": "https://code.jquery.com/jquery-2.2.4.min.js"
    *    },
    *    "myApplication_strings": {
    *      "type": "localized",
@@ -173,11 +173,11 @@ interface IClientSideLibraryManifest extends IClientSideComponentManifest {
    *  component, they can decide to bump the MAJOR, MINOR or PATCH version of the component. All incompatible API
    *  changes should result in a MAJOR version bump. Backwards compatible functionality changes should result in a
    *  MINOR version bump, and backwards compatible bug fixes should result in a PATCH version bump. Please see
-   *  http:
+   *  http://semver.org for more details on how to manage the version of your components.
    * Usage: Versioning and evolving a client side component safely in a controlled way.
    * Required: yes
    * Localized: no
-   * Supported values: string representing a semantic version (http:
+   * Supported values: string representing a semantic version (http://semver.org) i.e. MAJOR.MINOR.PATCH
    * Example: "1.0.0"
    */
   version: string;
@@ -224,7 +224,7 @@ interface IClientSideWebPartManifestEntry<TProperties> {
    *
    * @beta
    */
-  group?: ILocalizedString;
+  group ?: ILocalizedString;
   groupId: string;
   /**
    * Definition: The icon for the WebPart, to be displayed in the toolbox, represented an image URL. The image at the
@@ -234,12 +234,12 @@ interface IClientSideWebPartManifestEntry<TProperties> {
    * Type: string
    * Localized: no
    * Supported values: Any absolute URL.
-   * Example: "https:
+   * Example: "https://contoso.akamaihd.net/files/myWebpartIcon.png"
    */
-  iconImageUrl?: string;
+  iconImageUrl ?: string;
   /**
    * Definition: The icon for the Web Part, to be displayed in the toolbox, represented as a character name in the
-   *  Office 365 icon font file. The icon font is specified here: http:
+   *  Office 365 icon font file. The icon font is specified here: http://o365icons.cloudapp.net/. If this field has
    *  a value, the '{@link iconImageUrl}' field will be ignored.
    * Required: no
    * Type: string
@@ -247,7 +247,7 @@ interface IClientSideWebPartManifestEntry<TProperties> {
    * Supported values: Any character name in the Office 365 Icon Font.
    * Example: "graph"
    */
-  officeFabricIconFontName?: string;
+  officeFabricIconFontName ?: string;
   /**
    * Definition: every Web Part is expected to have some custom properties. e.g. an image Web Part may have the image
    *  url and caption text as custom properties, a list Web Part may have the list id and list title as custom
@@ -260,7 +260,7 @@ interface IClientSideWebPartManifestEntry<TProperties> {
    * Required: yes
    * Localized: no
    * Supported values: any
-   * Example: {"imageSource": "https:
+   * Example: {"imageSource": "https://contoso.akamaihd.net/files/contosoLogo.jpg", "captionText": "Contoso logo"}"
    */
   properties: TProperties;
   /**
@@ -289,7 +289,10 @@ interface IClientSideWebPartManifestEntry<TProperties> {
  *
  * @public
  */
-interface IClientSideWebPartManifestInstance<TProperties> extendsIClientSideComponentManifest,IClientSideWebPartManifestSharedProperties,IClientSideWebPartManifestEntry<TProperties> {
+interface IClientSideWebPartManifestInstance<TProperties> extends
+ IClientSideComponentManifest,
+ IClientSideWebPartManifestSharedProperties,
+ IClientSideWebPartManifestEntry<TProperties> {
   /**
    * Definition: Type of client side component. Components with the "Application" type are defined by the
    *  "IClientSideApplicationManifest" interface. Components with the "WebPart" type are defined by the
@@ -335,7 +338,7 @@ interface IClientSideWebPartManifestInstance<TProperties> extendsIClientSideComp
    *
    * @beta
    */
-  group?: ILocalizedString;
+  group ?: ILocalizedString;
   groupId: string;
   /**
    * Definition: The icon for the WebPart, to be displayed in the toolbox, represented an image URL. The image at the
@@ -345,9 +348,9 @@ interface IClientSideWebPartManifestInstance<TProperties> extendsIClientSideComp
    * Type: string
    * Localized: no
    * Supported values: Any absolute URL.
-   * Example: "https:
+   * Example: "https://contoso.akamaihd.net/files/myWebpartIcon.png"
    */
-  iconImageUrl?: string;
+  iconImageUrl ?: string;
   /**
    * Definition: A universally unique component id. Each client side component is required to have this id. Once an
    *  id has been used for a component, it cannot be changed. A change in this value is treated same as the creation of
@@ -366,10 +369,10 @@ interface IClientSideWebPartManifestInstance<TProperties> extendsIClientSideComp
    * Type: string array
    * Supported values: any property names
    * Values: the strings in the array are expected to be JSONPath for the object properties.
-   *         (http:
+   *         (http://goessner.net/articles/JsonPath/)
    * Example: ["image[0].source"]
    */
-  imageLinkPropertyNames?: string[];
+  imageLinkPropertyNames ?: string[];
   /**
    * Definition: List of names of Web Part properties that are links and need to be link fixed up.
    *  Link fixup is a SharePoint feature to help make sure SharePoint internal links in the content
@@ -377,11 +380,11 @@ interface IClientSideWebPartManifestInstance<TProperties> extendsIClientSideComp
    * Required: no. If not provided, all values are sanitized
    * Type: string array
    * Values: the strings in the array are expected to be JSONPath for the object properties.
-   *         (http:
+   *         (http://goessner.net/articles/JsonPath/)
    * Supported values: any property names
    * Example: ["destination.url"]
    */
-  linkPropertyNames?: string[];
+  linkPropertyNames ?: string[];
   /**
    * Definition: This portion of the configuration describes how the component is to be loaded and initialized by a
    *  client. It contains an enumeration of scripts that the component requires along with a single entrypoint script.
@@ -406,7 +409,7 @@ interface IClientSideWebPartManifestInstance<TProperties> extendsIClientSideComp
   manifestVersion: number;
   /**
    * Definition: The icon for the Web Part, to be displayed in the toolbox, represented as a character name in the
-   *  Office 365 icon font file. The icon font is specified here: http:
+   *  Office 365 icon font file. The icon font is specified here: http://o365icons.cloudapp.net/. If this field has
    *  a value, the '{@link iconImageUrl}' field will be ignored.
    * Required: no
    * Type: string
@@ -414,7 +417,7 @@ interface IClientSideWebPartManifestInstance<TProperties> extendsIClientSideComp
    * Supported values: Any character name in the Office 365 Icon Font.
    * Example: "graph"
    */
-  officeFabricIconFontName?: string;
+  officeFabricIconFontName ?: string;
   /**
    * Definition: every Web Part is expected to have some custom properties. e.g. an image Web Part may have the image
    *  url and caption text as custom properties, a list Web Part may have the list id and list title as custom
@@ -427,7 +430,7 @@ interface IClientSideWebPartManifestInstance<TProperties> extendsIClientSideComp
    * Required: yes
    * Localized: no
    * Supported values: any
-   * Example: {"imageSource": "https:
+   * Example: {"imageSource": "https://contoso.akamaihd.net/files/contosoLogo.jpg", "captionText": "Contoso logo"}"
    */
   properties: TProperties;
   /**
@@ -436,11 +439,11 @@ interface IClientSideWebPartManifestInstance<TProperties> extendsIClientSideComp
    * Required: no. If not provided, no values are indexed.
    * Type: string array
    * Values: the strings in the array are expected to be JSONPath for the object properties.
-   *         (http:
+   *         (http://goessner.net/articles/JsonPath/)
    * Supported values: any property names
    * Example: ["text"]
    */
-  searchablePropertyNames?: string[];
+  searchablePropertyNames ?: string[];
   /**
    * Definition: Title of the web part represented as a single a dictionary of locale keys to title values. This
    *  value will be displayed to the user in the toolbox. This title should be used in the Toolbox and other display
@@ -468,11 +471,11 @@ interface IClientSideWebPartManifestInstance<TProperties> extendsIClientSideComp
    *  component, they can decide to bump the MAJOR, MINOR or PATCH version of the component. All incompatible API
    *  changes should result in a MAJOR version bump. Backwards compatible functionality changes should result in a
    *  MINOR version bump, and backwards compatible bug fixes should result in a PATCH version bump. Please see
-   *  http:
+   *  http://semver.org for more details on how to manage the version of your components.
    * Usage: Versioning and evolving a client side component safely in a controlled way.
    * Required: yes
    * Localized: no
-   * Supported values: string representing a semantic version (http:
+   * Supported values: string representing a semantic version (http://semver.org) i.e. MAJOR.MINOR.PATCH
    * Example: "1.0.0"
    */
   version: string;
@@ -493,10 +496,10 @@ interface IClientSideWebPartManifestSharedProperties {
    * Type: string array
    * Supported values: any property names
    * Values: the strings in the array are expected to be JSONPath for the object properties.
-   *         (http:
+   *         (http://goessner.net/articles/JsonPath/)
    * Example: ["image[0].source"]
    */
-  imageLinkPropertyNames?: string[];
+  imageLinkPropertyNames ?: string[];
   /**
    * Definition: List of names of Web Part properties that are links and need to be link fixed up.
    *  Link fixup is a SharePoint feature to help make sure SharePoint internal links in the content
@@ -504,22 +507,22 @@ interface IClientSideWebPartManifestSharedProperties {
    * Required: no. If not provided, all values are sanitized
    * Type: string array
    * Values: the strings in the array are expected to be JSONPath for the object properties.
-   *         (http:
+   *         (http://goessner.net/articles/JsonPath/)
    * Supported values: any property names
    * Example: ["destination.url"]
    */
-  linkPropertyNames?: string[];
+  linkPropertyNames ?: string[];
   /**
    * Definition: List of names of Web Part properties that need to be indexed for search.
    * Usage: extract the specified value properties on the server and provide them to the search indexer.
    * Required: no. If not provided, no values are indexed.
    * Type: string array
    * Values: the strings in the array are expected to be JSONPath for the object properties.
-   *         (http:
+   *         (http://goessner.net/articles/JsonPath/)
    * Supported values: any property names
    * Example: ["text"]
    */
-  searchablePropertyNames?: string[];
+  searchablePropertyNames ?: string[];
 }
 
 /**
@@ -538,9 +541,9 @@ interface IFrameworkModuleConfig extends IModuleConfig {
    * Localized: no
    * Supported values: The path to the module either as a fully-qualified URL or as a path under the
    *  paths providedin the "internalModuleBaseUrls" field.
-   * Example: "https:
+   * Example: "https://code.jquery.com/jquery-2.2.4.min.js"
    */
-  failoverPath?: string | IPath;
+  failoverPath ?: string | IPath;
   /**
    * Definition: If set to "true", this module should not be preloaded when loading the component. The most common case
    *  for setting this property to "true" is when a module is defined in a manifest, but is not required for the
@@ -550,7 +553,7 @@ interface IFrameworkModuleConfig extends IModuleConfig {
    * Required: no
    * Example: true
    */
-  shouldNotPreload?: boolean;
+  shouldNotPreload ?: boolean;
   /**
    * Definition: The type of the script block. "framework" modules are expected to be provided by the framework runtime,
    *  "internal" and "localized" modules must be available on the paths provided in the "internalModuleBaseUrls" field.
@@ -569,7 +572,7 @@ interface IFrameworkModuleConfig extends IModuleConfig {
    *  against be specified.
    * Required: yes
    * Localized: no
-   * Supported values: string representing a semantic version (http:
+   * Supported values: string representing a semantic version (http://semver.org), or "latest".
    * Example: "2.2.4"
    */
   version: string;
@@ -593,7 +596,7 @@ interface IInternalModuleConfig extends IModuleConfig {
    *  IClientSideComponentLoaderConfig.scriptResources[]
    * Example: ["jquery"]
    */
-  globalDependencies?: string[];
+  globalDependencies ?: string[];
   /**
    * Definition: In order to load scripts that don't follow the AMD/module-pattern where "define" or "require" is
    *  called and dependencies are explicitly listed and exports are explicitly returned, the module loader needs to
@@ -607,16 +610,16 @@ interface IInternalModuleConfig extends IModuleConfig {
    *  the module loader will throw an exception and the component will fail to load.
    * Example: "$"
    */
-  globalName?: string;
+  globalName ?: string;
   /**
    * Definition: A path to this module's javascript resource either as a fully-qualified URL or as a path under the
    *  paths provided in the "internalModuleBaseUrls" field. For example, if this field's value is
    *  "master_2015-04-20/my-application.bundle_1928f8a0.js" and the "internalModuleBaseUrls" field's value is
-   *  [ "https:
+   *  [ "https://contoso.akamaihd.net/files/", "https://contoso.msecnd.net/files/" ], the loader will first attempt to
    *  load this script resource from the URL
-   *  "https:
+   *  "https://contoso.akamaihd.net/files/master_2015-04-20/my-application.bundle_1928f8a0.js". If loading from that URL
    *  fails, the loader will then attempt to load this script resource from
-   *  "https:
+   *  "https://contoso.msecnd.net/files/master_2015-04-20/my-application.bundle_1928f8a0.js". If that URL fails to load,
    *  the component will fail to load and an error will be returned.
    * Required: yes
    * Localized: no
@@ -634,7 +637,7 @@ interface IInternalModuleConfig extends IModuleConfig {
    * Required: no
    * Example: true
    */
-  shouldNotPreload?: boolean;
+  shouldNotPreload ?: boolean;
   /**
    * Definition: The type of the script block. "framework" modules are expected to be provided by the framework runtime,
    *  "internal" and "localized" modules must be available on the paths provided in the "internalModuleBaseUrls" field.
@@ -691,7 +694,8 @@ interface ILocalizedInternalModuleConfig extends IModuleConfig {
    *  }
    */
   paths?: {
-    [ locale: string ]: string | IPath}
+    [ locale: string ]: string | IPath
+  }
   /**
    * Definition: If set to "true", this module should not be preloaded when loading the component. The most common case
    *  for setting this property to "true" is when a module is defined in a manifest, but is not required for the
@@ -701,7 +705,7 @@ interface ILocalizedInternalModuleConfig extends IModuleConfig {
    * Required: no
    * Example: true
    */
-  shouldNotPreload?: boolean;
+  shouldNotPreload ?: boolean;
   /**
    * Definition: The type of the script block. "framework" modules are expected to be provided by the framework runtime,
    *  "internal" and "localized" modules must be available on the paths provided in the "internalModuleBaseUrls" field.
@@ -746,7 +750,7 @@ interface IModuleConfig {
    * Required: no
    * Example: true
    */
-  shouldNotPreload?: boolean;
+  shouldNotPreload ?: boolean;
   /**
    * Definition: The type of the script block. "framework" modules are expected to be provided by the framework runtime,
    *  "internal" and "localized" modules must be available on the paths provided in the "internalModuleBaseUrls" field.
@@ -777,7 +781,7 @@ interface IPath {
    *  paths providedin the "internalModuleBaseUrls" field.
    * Example: "master_2015-04-20/my-application.bundle_18182c39.debug.js"
    */
-  debug?: string;
+  debug ?: string;
   /**
    * Definition: A path to this module's javascript resource either as a fully-qualified URL or as a path under the
    *  paths provided in the "internalModuleBaseUrls" field. The script referenced by this field is loaded by default

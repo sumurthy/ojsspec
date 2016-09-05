@@ -1,8 +1,8 @@
-# WeakMap<K,V> interface
+# WeakMap <K,V> interface
 
 
 
-
+_Type parameters: <K,V>_
 
 
 
@@ -16,11 +16,11 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[delete](#delete~33503)      | boolean |  |
-|[clear](#clear~81204)      | void |  |
-|[get](#get~65569)      | V |  |
-|[has](#has~54633)      | boolean |  |
-|[set](#set~58925)      | [WeakMap<K](WeakMap.md),V> |  |
+|[delete](#delete~hwgq9)      | boolean |  |
+|[clear](#clear~n1pq9)      | void |  |
+|[get](#get~xkvg9)      | V |  |
+|[has](#has~mnoc9)      | boolean |  |
+|[set](#set~9zym9)      | [WeakMap<K](WeakMap.md),V> |  |
 
 
 
@@ -38,7 +38,7 @@ boolean
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key`    | K |  |
+| `key`    | K | undefined |
 
 
 ## clear
@@ -68,7 +68,7 @@ V
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key`    | K |  |
+| `key`    | K | undefined |
 
 
 ## has
@@ -85,7 +85,7 @@ boolean
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key`    | K |  |
+| `key`    | K | undefined |
 
 
 ## set
@@ -102,6 +102,6 @@ WeakMap<K,V>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key`    | K |  |
-| `value`    | V | _Optional._ |
+| `key`    | K | undefined |
+| `value`    | V | _Optional._undefined |
 

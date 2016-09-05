@@ -6,7 +6,7 @@
 
 Class for storing and retrieving query parameters. 
 The URL can be server-relative and it will parse empty/null strings. 
-The query parameters must start with ? to indicate the first query parameter and 
+The query parameters must start with? to indicate the first query parameter and 
 use & for all subsequent parameters. The class also supports fragments. 
 Edge cases behavior: 
 Empty value (www.example.com/?test=) stores key and empty value 
@@ -23,9 +23,9 @@ Query param with only equals (www.example.com/?=&debug=on stores empty string ke
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor~56911)     | public | string |  |
-|[getValue](#getvalue~38952)     | public | string | Returns the value of the first matching query parameter or undefined if the key doesn't exist |
-|[getValues](#getvalues~27548)     | public | string[] | Returns the values of all of the matching query parameters or undefined if the key doesn't exist |
+|[constructor](#constructor~3egg9)     | public | string |  |
+|[getValue](#getvalue~fqka9)     | public | string | Returns the value of the first matching query parameter or undefined if the key doesn't exist |
+|[getValues](#getvalues~8n0q9)     | public | string[] | Returns the values of all of the matching query parameters or undefined if the key doesn't exist |
 
 
 
@@ -44,7 +44,7 @@ string
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | string |  |
+| `url`    | string | undefined |
 
 
 ## getValue
@@ -68,7 +68,7 @@ string
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `param`    | string |  |
+| `param`    | string | undefined |
 
 
 ## getValues
@@ -92,5 +92,5 @@ string[]
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `param`    | string |  |
+| `param`    | string | undefined |
 

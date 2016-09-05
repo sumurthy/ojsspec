@@ -1,4 +1,4 @@
-## exportPropertyPaneToggle
+## PropertyPaneToggle
 
 Helper method to create a Toggle on the PropertyPane.
 
@@ -12,6 +12,6 @@ IPropertyPaneField<IPropertyPaneToggleProps>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `targetProperty`    | string |  |
-| `properties`    | [IPropertyPaneToggleProps](IPropertyPaneToggleProps.md) |  |
+| `targetProperty`    | string | undefined |
+| `properties`    | [IPropertyPaneToggleProps](IPropertyPaneToggleProps.md) | undefined |
 

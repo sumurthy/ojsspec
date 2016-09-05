@@ -1,4 +1,4 @@
-
+/// <reference path="../typings/tsd.d.ts" />
 
 /**
  * This abstract class implements the the base functionality for a client side web part. Every client side web part
@@ -130,7 +130,7 @@ declare class BaseClientSideWebPart<TProperties> {
    * the initial rendering of the web part. The loading indicator is displayed during the lifetime of this method.
    * This API is called only once during the lifecycle of a web part.
    */
-  protected onInit<T>(): Promise<T>;
+  protected onInit < T >(): Promise<T>;
   /**
    * This API is invoked on property changes in the PropertyPane when the PropertyPane is being used in Reactive mode.
    * The base implementation of this API updates the web part property bag and re-render the web part. This API also
@@ -269,15 +269,15 @@ interface IClientSideWebPartStatusRenderer {
  *
  * {
  *   searchableProperties: { 'prop1': 'value_of_prop1' },
- *   linkProperties: { 'prop2': 'http:
- *   imageLinkPropertes: { 'prop3': 'http:
+ *   linkProperties: { 'prop2': 'http://www.contoso.com/page1.aspx' },
+ *   imageLinkPropertes: { 'prop3': 'http://www.contoso.com/imag.png' }
  * }
  *
  * This input would get translated to the following HTML string.
  *
  * "<div data-sp-prop-name='prop1'>value1</div>
- *<link data-sp-prop-name='prop2' href='http:
- *<img data-sp-prop-name='prop2' href='http:
+ * <link data-sp-prop-name='prop2' href='http://www.contoso.com/page1.aspx'>
+ * <img data-sp-prop-name='prop2' href='http://www.contoso.com/image.png'>"
  *
  */
 interface IHtmlProperties {
@@ -295,7 +295,7 @@ interface IHtmlProperties {
 /**
  * Represents an OData SP.List object.  For more information about this object
  * see the MSDN documentation here:
- * https:
+ * https://msdn.microsoft.com/en-us/library/office/jj860569.aspx
  */
 interface IOdataList {
   BaseTemplate: number;
@@ -343,7 +343,7 @@ interface IOdataList {
 /**
  * Represents an OData SP.ListItem object.  For more information about this object
  * see the MSDN documentation here:
- * https:
+ * https://msdn.microsoft.com/en-us/library/office/jj860569.aspx
  */
 interface IOdataListItem {
   /**
@@ -363,7 +363,7 @@ interface IOdataListItem {
 /**
  * Represents an OData SP.User object.  For more information about this object
  * see the MSDN documentation here:
- * https:
+ * https://msdn.microsoft.com/en-us/library/office/jj860569.aspx
  */
 interface IOdataUser {
   /**
@@ -387,7 +387,7 @@ interface IOdataUser {
 /**
  * Represents an OData SP.UserId object.  For more information about this object
  * see the MSDN documentation here:
- * https:
+ * https://msdn.microsoft.com/en-us/library/office/jj860569.aspx
  */
 interface IOdataUserId {
   /**
@@ -411,29 +411,29 @@ interface IPropertyPaneButtonProps {
    *
    * Besides the compound button, other button types will need more information provided to screen reader.
    */
-  ariaDescription?: string;
+  ariaDescription ?: string;
   /**
    * The aria label of the button for the benefit of screen readers.
    */
-  ariaLabel?: string;
+  ariaLabel ?: string;
   /**
    * The type of button to render.
    * @defaultvalue ButtonType.normal.
    */
-  buttonType?: PropertyPaneButtonType;
+  buttonType ?: PropertyPaneButtonType;
   /**
    * Description of the action this button takes.
    * Only used for compound buttons.
    */
-  description?: string;
+  description ?: string;
   /**
    * Whether the button is disabled.
    */
-  disabled?: boolean;
+  disabled ?: boolean;
   /**
    * The button icon shown in command or hero type.
    */
-  icon?: string;
+  icon ?: string;
   /**
    * A callback which is invoked on the button click, which takes in the existing value for the bound property
    * and returns the new value and which is then used to update the properties bag. This update will result in
@@ -466,16 +466,16 @@ interface IPropertyPaneCheckboxProps {
    * Whether the checkbox is checked or not.
    * @defaultvalue false.
    */
-  isChecked?: boolean;
+  isChecked ?: boolean;
   /**
    * Whether the checkbox is enabled or not.
    * @defaultvalue true.
    */
-  isEnabled?: boolean;
+  isEnabled ?: boolean;
   /**
    * Label to display next to the checkbox.
    */
-  text?: string;
+  text ?: string;
 }
 
 interface IPropertyPaneChoiceGroupOption {
@@ -489,17 +489,17 @@ interface IPropertyPaneChoiceGroupOption {
   /**
    * The src of image for choice field.
    */
-  imageSrc?: string;
+  imageSrc ?: string;
   /**
    * Whether the options is checked or not.
    * @defaultvalue false.
    */
-  isChecked?: boolean;
+  isChecked ?: boolean;
   /**
    * Whether the option is disabled or not.
    * @defaultvalue false.
    */
-  isDisabled?: boolean;
+  isDisabled ?: boolean;
   /**
    * A required key to uniquely identify the option.
    */
@@ -507,7 +507,7 @@ interface IPropertyPaneChoiceGroupOption {
   /**
    * The src of image for choice field which is selected.
    */
-  selectedImageSrc?: string;
+  selectedImageSrc ?: string;
   /**
    * The text string for the option.
    */
@@ -523,7 +523,7 @@ interface IPropertyPaneChoiceGroupProps {
   /**
    * Descriptive label for the choice group.
    */
-  label?: string;
+  label ?: string;
   /**
    * The options for the choice group.
    */
@@ -539,7 +539,7 @@ interface IPropertyPaneCustomFieldProps {
   /**
    * Event callback for onDispose.
    */
-  onDispose?: (elem: HTMLElement) => void;
+  onDispose ?: (elem: HTMLElement) => void;
   /**
    * onRender will be called once the custom field mounted to the host element.
    */
@@ -593,11 +593,11 @@ interface IPropertyPaneDropdownOption {
   /**
    * Index for this option.
    */
-  index?: number;
+  index ?: number;
   /**
    * Whether this option is currently selected.
    */
-  isSelected?: boolean;
+  isSelected ?: boolean;
   /**
    * A key to uniquely identify this option.
    */
@@ -617,7 +617,7 @@ interface IPropertyPaneDropdownProps {
   /**
    * Whether or not the Dropdown is disabled.
    */
-  isDisabled?: boolean;
+  isDisabled ?: boolean;
   /**
    * Descriptive label for the Dropdown.
    */
@@ -625,11 +625,11 @@ interface IPropertyPaneDropdownProps {
   /**
    * Collection of options for this Dropdown.
    */
-  options?: IPropertyPaneDropdownOption[];
+  options ?: IPropertyPaneDropdownOption[];
   /**
    * The key of the initially selected option.
    */
-  selectedKey?: string | number;
+  selectedKey ?: string | number;
 }
 
 /**
@@ -663,9 +663,9 @@ enum IPropertyPaneFieldType {
   Dropdown = 6,
   Heading = 9,
   HorizontalRule = 12,
-
+  // (undocumented)
   Label = 7,
-
+  // (undocumented)
   Link = 13,
   Slider = 8,
   TextField = 3,
@@ -683,7 +683,7 @@ interface IPropertyPaneGroup {
   /**
    * Display name for the group.
    */
-  groupName?: string;
+  groupName ?: string;
 }
 
 /**
@@ -697,7 +697,7 @@ interface IPropertyPaneLabelProps {
    * If true, a red asterisk is displayed to the right of the label.
    * @defaultvalue false.
    */
-  required?: boolean;
+  required ?: boolean;
   /**
    * Display text fot the label.
    */
@@ -717,7 +717,7 @@ interface IPropertyPaneLinkProps {
   /**
    *  The props of pop up window.
    */
-  popupWindowProps?: IPopupWindowProps;
+  popupWindowProps ?: IPopupWindowProps;
   /**
    * This attribute specifies where to display the linked resource.
    * Following values can be used:
@@ -727,7 +727,7 @@ interface IPropertyPaneLinkProps {
    *           If no parent exists, then this option behaves same as '_self'
    * _top - Load the response into the original window.
    */
-  target?: string;
+  target ?: string;
   /**
    * Display text for the link.
    */
@@ -741,7 +741,7 @@ interface IPropertyPanePage {
   /**
    * Indicates whether the groups on the PropertyPanePage are displayed as accordion or not.
    */
-  displayGroupsAsAccordion?: boolean;
+  displayGroupsAsAccordion ?: boolean;
   /**
    * List of groups to be displayed on the PropertyPane page.
    */
@@ -749,7 +749,7 @@ interface IPropertyPanePage {
   /**
    * PropertyPane page header.
    */
-  header?: IPropertyPanePageHeader;
+  header ?: IPropertyPanePageHeader;
 }
 
 /**
@@ -764,7 +764,7 @@ interface IPropertyPanePageHeader {
   /**
    * Image url for the background image.
    */
-  image?: string;
+  image ?: string;
 }
 
 /**
@@ -774,7 +774,7 @@ interface IPropertyPaneSettings {
   /**
    * Page to be displayed on the PropertyPane.
    */
-  currentPage?: number;
+  currentPage ?: number;
   /**
    * Total number of pages on the PropertyPane.
    */
@@ -790,15 +790,15 @@ interface IPropertyPaneSliderProps {
   /**
    * A description of the Slider for the benefit of screen readers.
    */
-  ariaLabel?: string;
+  ariaLabel ?: string;
   /**
    * Whether or not the Slider is disabled.
    */
-  disabled?: boolean;
+  disabled ?: boolean;
   /**
    * Description label of the Slider.
    */
-  label?: string;
+  label ?: string;
   /**
    * The max value of the Slider.
    */
@@ -811,18 +811,18 @@ interface IPropertyPaneSliderProps {
    * Whether to show the value on the right of the Slider.
    * If you want to show the value by yourself, you may want to set this value to false.
    */
-  showValue?: boolean;
+  showValue ?: boolean;
   /**
    * The difference between the two adjacent values of the Slider.
    * @default 1.
    */
-  step?: number;
+  step ?: number;
   /**
    * The initial value of the Slider. Use this if you intend to pass in a new value as a result of onChange events.
    *
    * @default to min.
    */
-  value?: number;
+  value ?: number;
 }
 
 /**
@@ -834,29 +834,29 @@ interface IPropertyPaneTextFieldProps {
   /**
    * Aria Label for textfield, if any.
    */
-  ariaLabel?: string;
+  ariaLabel ?: string;
   /**
    * Text field will start to validate after users stop typing for `deferredValidationTime` milliseconds.
    * @default 200.
    */
-  deferredValidationTime?: number;
+  deferredValidationTime ?: number;
   /**
    * The textfield input description.
    */
-  description?: string;
+  description ?: string;
   /**
    * Default value of the textfield, if any.
    */
-  errorMessage?: string;
+  errorMessage ?: string;
   /**
    * Label for the textfield.
    */
-  label?: string;
+  label ?: string;
   /**
    * Whether or not the textfield is a multiline textfield.
    * @default false.
    */
-  multiline?: boolean;
+  multiline ?: boolean;
   /**
    * The method is used to get the validation error message and determine whether the input value is valid or not.
    *
@@ -870,26 +870,26 @@ interface IPropertyPaneTextFieldProps {
    *   - The rejected, the value is thrown away.
    *
    */
-  onGetErrorMessage?: (value: string) => string | Promise<string>;
+  onGetErrorMessage ?: (value: string) => string | Promise<string>;
   /**
    * placeholder text to be displayed in the Textfield.
    */
-  placeholder?: string;
+  placeholder ?: string;
   /**
    * Whether or not the multiline textfield is resizable.
    * @default true.
    */
-  resizable?: boolean;
+  resizable ?: boolean;
   /**
    * Whether or not the textfield is underlined.
    * @default false.
    */
-  underlined?: boolean;
+  underlined ?: boolean;
   /**
    * Current value of the textfield. Only provide this if the textfield is a controlled component where you
    * are maintaining its current state.
    */
-  value?: string;
+  value ?: string;
 }
 
 /**
@@ -902,15 +902,15 @@ interface IPropertyPaneToggleProps {
    * Checked state of the toggle.
    * If you are maintaining state yourself, use this property.
    */
-  checked?: boolean;
+  checked ?: boolean;
   /**
    * Optional disabled flag.
    */
-  disabled?: boolean;
+  disabled ?: boolean;
   /**
    * A key to uniquely identify the field.
    */
-  key?: string | number;
+  key ?: string | number;
   /**
    * A label for the toggle.
    */
@@ -918,11 +918,11 @@ interface IPropertyPaneToggleProps {
   /**
    * Test display when toggle is OFF.
    */
-  offText?: string;
+  offText ?: string;
   /**
    * Text to display when toggle is ON.
    */
-  onText?: string;
+  onText ?: string;
 }
 
 
@@ -1007,10 +1007,10 @@ interface IWebPartData {
    * mandatory: no.
    * type: string
    * supported values: a string containing pseudo HTML.
-   * example: "<div>searchable_property_value</div><link href='http:
+   * example: "<div>searchable_property_value</div><link href='http://contoso.com/path_of_link.aspx' />"
    * experimental: no
    */
-  htmlProperties?: string;
+  htmlProperties ?: string;
   /**
    * Definition: universally unique webpart Type id.
    * Usage: uniquely identify a webpart.
@@ -1040,7 +1040,7 @@ interface IWebPartData {
    * supported values: any JSON stringifiable object hierarchy.
    * example: { 'value': 'text value' }
    */
-  properties?: any;
+  properties ?: any;
   /**
    * Definition: webpart title.
    * Usage: display the name of the webpart in the toolbox, webpart gallery and the page.
@@ -1054,7 +1054,7 @@ interface IWebPartData {
    * Definition: webpart version.
    * Usage: versioning and evolving a webpart safely.
    * Required: yes
-   * Type: string representing a semantic version (http:
+   * Type: string representing a semantic version (http://semver.org)
    * Supported values: MAJOR.MINOR.PATCH
    * Example: "1.0.0"
    */
@@ -1094,11 +1094,11 @@ interface IWebPartHost extends IServiceScopeProvider {
    * serviceScope: ServiceScope;
    */
   serviceScope: ServiceScope;
-  setDirty?: (instanceId: string, data?: any) => void;
+  setDirty ?: (instanceId: string, data?: any) => void;
   /**
    * Web part configuration event callback.
    */
-  webPartConfigurationEventCallback?: IWebPartConfigurationEventCallback;
+  webPartConfigurationEventCallback ?: IWebPartConfigurationEventCallback;
 }
 
 declare class MockWebPartContext {
@@ -1122,12 +1122,13 @@ declare class MockWebPartContext {
  * @param targetProperty - Target property the Button is associated to.
  * @param properties - Strongly typed Button properties.
  */
-export function PropertyPaneButton(targetProperty: string,properties: IPropertyPaneButtonProps): IPropertyPaneField<IPropertyPaneButtonProps>;
+export function PropertyPaneButton(targetProperty: string,
+  properties: IPropertyPaneButtonProps): IPropertyPaneField<IPropertyPaneButtonProps>;
 
 enum PropertyPaneButtonType {
   Command,
   Compound,
-
+  // (undocumented)
   Hero,
   Icon,
   Normal,
@@ -1139,28 +1140,32 @@ enum PropertyPaneButtonType {
  * @param targetProperty - Target property the checkbox is associated to.
  * @param properties - Strongly typed Checkbox properties.
  */
-export function PropertyPaneCheckbox(targetProperty: string,properties: IPropertyPaneCheckboxProps): IPropertyPaneField<IPropertyPaneCheckboxProps>;
+export function PropertyPaneCheckbox(targetProperty: string,
+  properties: IPropertyPaneCheckboxProps): IPropertyPaneField<IPropertyPaneCheckboxProps>;
 
 /**
  * Helper method to create a Choice Group on the PropertyPane.
  * @param targetProperty - Target property the choice group is associated to.
  * @param properties - Strongly typed Choice Group properties.
  */
-export function PropertyPaneChoiceGroup(targetProperty: string,properties: IPropertyPaneChoiceGroupProps): IPropertyPaneField<IPropertyPaneChoiceGroupProps>;
+export function PropertyPaneChoiceGroup(targetProperty: string,
+  properties: IPropertyPaneChoiceGroupProps): IPropertyPaneField<IPropertyPaneChoiceGroupProps>;
 
 /**
  * Helper method to create a Choice Group on the PropertyPane.
  * @param targetProperty - Target property the choice group is associated to.
  * @param properties - Strongly typed Choice Group properties.
  */
-export function PropertyPaneCustomField(targetProperty: string,properties: IPropertyPaneCustomFieldProps): IPropertyPaneField<IPropertyPaneCustomFieldProps>;
+export function PropertyPaneCustomField(targetProperty: string,
+  properties: IPropertyPaneCustomFieldProps): IPropertyPaneField<IPropertyPaneCustomFieldProps>;
 
 /**
  * Helper method to create a Dropdown on the PropertyPane.
  * @param targetProperty - Target property the dropdown is associated to.
  * @param properties - Strongly typed Dropdown properties.
  */
-export function PropertyPaneDropdown(targetProperty: string,properties: IPropertyPaneDropdownProps): IPropertyPaneField<IPropertyPaneDropdownProps>;
+export function PropertyPaneDropdown(targetProperty: string,
+  properties: IPropertyPaneDropdownProps): IPropertyPaneField<IPropertyPaneDropdownProps>;
 
 /**
  * Helper method to create a Horizontal Rule on the PropertyPane.
@@ -1173,35 +1178,40 @@ export function PropertyPaneHorizontalRule(): IPropertyPaneField<void>;
  * @param targetProperty - Target property the label is associated to.
  * @param properties - Strongly typed Label properties.
  */
-export function PropertyPaneLabel(targetProperty: string,properties: IPropertyPaneLabelProps): IPropertyPaneField<IPropertyPaneLabelProps>;
+export function PropertyPaneLabel(targetProperty: string,
+  properties: IPropertyPaneLabelProps): IPropertyPaneField<IPropertyPaneLabelProps>;
 
 /**
  * Helper method to create a Link on the PropertyPane.
  * @param targetProperty - Target property the Link is associated to.
  * @param properties - Strongly typed Link properties.
  */
-export function PropertyPaneLink(targetProperty: string,properties: IPropertyPaneLinkProps): IPropertyPaneField<IPropertyPaneLinkProps>;
+export function PropertyPaneLink(targetProperty: string,
+  properties: IPropertyPaneLinkProps): IPropertyPaneField<IPropertyPaneLinkProps>;
 
 /**
  * Helper method to create a Slider on the PropertyPane.
  * @param targetProperty - Target property the slider is associated to.
  * @param properties - Strongly typed Slider properties.
  */
-export function PropertyPaneSlider(targetProperty: string,properties: IPropertyPaneSliderProps): IPropertyPaneField<IPropertyPaneSliderProps>;
+export function PropertyPaneSlider(targetProperty: string,
+  properties: IPropertyPaneSliderProps): IPropertyPaneField<IPropertyPaneSliderProps>;
 
 /**
  * Helper method to create a TextField on the PropertyPane.
  * @param targetProperty - Target property the textfield is associated to.
  * @param properties - Strongly typed TextField properties.
  */
-export function PropertyPaneTextField(targetProperty: string,properties: IPropertyPaneTextFieldProps): IPropertyPaneField<IPropertyPaneTextFieldProps>;
+export function PropertyPaneTextField(targetProperty: string,
+  properties: IPropertyPaneTextFieldProps): IPropertyPaneField<IPropertyPaneTextFieldProps>;
 
 /**
  * Helper method to create a Toggle on the PropertyPane.
  * @param targetProperty - Target property the toggle is associated to.
  * @param properties - Strongly typed Toggle properties.
  */
-export function PropertyPaneToggle(targetProperty: string,properties: IPropertyPaneToggleProps): IPropertyPaneField<IPropertyPaneToggleProps>;
+export function PropertyPaneToggle(targetProperty: string,
+  properties: IPropertyPaneToggleProps): IPropertyPaneField<IPropertyPaneToggleProps>;
 
 
 
@@ -1218,14 +1228,14 @@ export function PropertyPaneToggle(targetProperty: string,properties: IPropertyP
 
 
 enum WebPartConfigurationEvent {
-
+  // (undocumented)
   ApplyClicked = 4,
-
+  // (undocumented)
   CloseComplete = 3,
-
+  // (undocumented)
   ConfigurationComplete = 1,
-
+  // (undocumented)
   LostFocus = 5,
-
+  // (undocumented)
   OpenComplete = 2
 }

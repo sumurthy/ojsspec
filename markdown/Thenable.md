@@ -1,4 +1,8 @@
-# Thenable<R> interface
+# Thenable <R> interface
+
+
+
+_Type parameters: <R>_
 
 
 
@@ -8,17 +12,12 @@
 
 
 
+## Methods
 
+| Method	   |  Returns	| Description|
+|:-------------|:-------|:-----------|
+|[then<U>](#then<u>~6quy9)      | [Thenable<U>](Thenable.md) |  |
 
-
-
-
-## Functions
-
-| Function	   | Access Modifier | Returns	| Description|
-|:-------------|:----|:-------|:-----------|
-|then<U>      | undefined | |  |
-|then<U>      | undefined | |  |
 
 
 ## then<U>
@@ -28,29 +27,13 @@
 ##### Signature
 
 #### Returns
-U | Thenable<U>): Thenable<U>
+Thenable<U>
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `onFulfilled`    | (value | _Optional._ |
-
-
-## then<U>
-
-
-
-##### Signature
-
-#### Returns
-void): Thenable<U>
-
-#### Parameters
-
-
-| Parameter	   | Type    | Description |
-|:-------------|:---------------|:------------|
-| `onFulfilled`    | (value | _Optional._ |
+| `onFulfilled`    | (value: R) => U ,[ Thenable<U>](Thenable.md) | _Optional._undefined |
+| `onRejected`    | (error: any) => void | _Optional._undefined |
 

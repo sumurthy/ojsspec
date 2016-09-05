@@ -8,4 +8,3 @@
 |`ConfigurationComplete`: =1      |  |
 |`LostFocus`: =5      |  |
 |`OpenComplete`: =2      |  |
-|`}`:       |  |

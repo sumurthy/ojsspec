@@ -21,10 +21,10 @@ of time. For more information, see the MSDN article
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[addDigestToCache](#adddigesttocache~78197)      | void | the digest value will no longer be valid |
-|[clearAllDigests](#clearalldigests~26690)      | void | Clears all values from the cache |
-|[clearDigest](#cleardigest~89157)      | boolean | This may be a server-relative or absolute URL |
-|[fetchDigest](#fetchdigest~41182)      | [Promise<string>](Promise.md) | This may be a server-relative or absolute URL |
+|[addDigestToCache](#adddigesttocache~70fw9)      | void | the digest value will no longer be valid |
+|[clearAllDigests](#clearalldigests~kkza9)      | void | Clears all values from the cache |
+|[clearDigest](#cleardigest~4hro9)      | boolean | This may be a server-relative or absolute URL |
+|[fetchDigest](#fetchdigest~xktc9)      | [Promise<string>](Promise.md) | This may be a server-relative or absolute URL |
 
 
 
@@ -45,9 +45,9 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `webUrl`    | string |  |
-| `digestValue`    | string |  |
-| `expirationTimestamp`    | number |  |
+| `webUrl`    | string | undefined |
+| `digestValue`    | string | undefined |
+| `expirationTimestamp`    | number | undefined |
 
 
 ## clearAllDigests
@@ -77,7 +77,7 @@ boolean
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `webUrl`    | string |  |
+| `webUrl`    | string | undefined |
 
 
 ## fetchDigest
@@ -94,5 +94,5 @@ Promise<string>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `webUrl`    | string |  |
+| `webUrl`    | string | undefined |
 

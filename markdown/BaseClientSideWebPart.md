@@ -1,8 +1,8 @@
-# BaseClientSideWebPart TProperties class
+# BaseClientSideWebPart <TProperties> class
 
 
 
-_Type parameters: TProperties_
+_Type parameters: <TProperties>_
 
 This abstract class implements the the base functionality for a client side web part. Every client side web part 
 needs to inherit from this class. Along with the base functionality, this class provides some APIs that can be 
@@ -40,20 +40,20 @@ Please refer to the documentation of the individual APIs to make the right decis
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor~88299)     | public | [IWebPartContext](IWebPartContext.md) |   e |
-|[clearError](#clearerror~58733)     | protected | void | This API should be used to clear the error message from the web part display area |
-|[configureStart](#configurestart~50010)     | protected | void | if it is not already open |
-|[deserialize](#deserialize~34064)     | protected | TProperties |  |
-|[dispose](#dispose~77441)     | protected | void | This API is called at the end of the web part lifecycle |
-|[onBeforeSerialize](#onbeforeserialize~92087)     | protected | [IHtmlProperties](IHtmlProperties.md) | the documentation of IHtmlProperties interface for more details |
-|[onDisplayModeChanged](#ondisplaymodechanged~68060)     | protected | void |  |
-|[onInit<T>](#oninit<t>~52849)     | protected | [Promise<T>](Promise.md) | This API should be overridden to perform long running operations e |
-|[onPropertyChange](#onpropertychange~18751)     | protected | void | This API is invoked on property changes in the PropertyPane when the PropertyPane is being used in Reactive mode |
-|[onPropertyConfigurationComplete](#onpropertyconfigurationcomplete~99338)     | protected | void | This API is called when the current web part configuration process is completed |
-|[onPropertyPaneRendered](#onpropertypanerendered~58592)     | protected | void | This API is involed when the PropertyPane is rendered |
-|[onPropertyPaneSave](#onpropertypanesave~22940)     | protected | void | this API is invoked when the the changes are applied on the PropertyPane when the PropertyPane is used in  Non-Reactive mode |
-|[render](#render~48217)     | public | void | This API is called to render the web part |
-|[renderError](#rendererror~37889)     | protected | void | This API should be used to render an error message in the web part display area |
+|[constructor](#constructor~3egg9)     | public | [IWebPartContext](IWebPartContext.md) |   e |
+|[clearError](#clearerror~xlfc9)     | protected | void | This API should be used to clear the error message from the web part display area |
+|[configureStart](#configurestart~3kks9)     | protected | void | if it is not already open |
+|[deserialize](#deserialize~n2e89)     | protected | TProperties |  |
+|[dispose](#dispose~xs8y9)     | protected | void | This API is called at the end of the web part lifecycle |
+|[onBeforeSerialize](#onbeforeserialize~jlok9)     | protected | [IHtmlProperties](IHtmlProperties.md) | the documentation of IHtmlProperties interface for more details |
+|[onDisplayModeChanged](#ondisplaymodechanged~l3vu9)     | protected | void |  |
+|[onInit<T>](#oninit<t>~mxes9)     | protected | [Promise<T>](Promise.md) | This API should be overridden to perform long running operations e |
+|[onPropertyChange](#onpropertychange~xdzg9)     | protected | void | This API is invoked on property changes in the PropertyPane when the PropertyPane is being used in Reactive mode |
+|[onPropertyConfigurationComplete](#onpropertyconfigurationcomplete~64o89)     | protected | void | This API is called when the current web part configuration process is completed |
+|[onPropertyPaneRendered](#onpropertypanerendered~9zcu9)     | protected | void | This API is involed when the PropertyPane is rendered |
+|[onPropertyPaneSave](#onpropertypanesave~qdfc9)     | protected | void | this API is invoked when the the changes are applied on the PropertyPane when the PropertyPane is used in  Non-Reactive mode |
+|[render](#render~u4mg9)     | public | void | This API is called to render the web part |
+|[renderError](#rendererror~vxc09)     | protected | void | This API should be used to render an error message in the web part display area |
 
 
 
@@ -78,7 +78,7 @@ IWebPartContext
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `ctx`    | [IWebPartContext](IWebPartContext.md) |  |
+| `ctx`    | [IWebPartContext](IWebPartContext.md) | undefined |
 
 
 ## clearError
@@ -108,7 +108,7 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `refreshOnly`    | boolean | _Optional._ |
+| `refreshOnly`    | boolean | _Optional._undefined |
 
 
 ## deserialize
@@ -125,7 +125,7 @@ TProperties
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `data`    | [IWebPartData](IWebPartData.md) |  |
+| `data`    | [IWebPartData](IWebPartData.md) | undefined |
 
 
 ## dispose
@@ -169,7 +169,7 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `oldDisplayMode`    | [DisplayMode](DisplayMode.md) |  |
+| `oldDisplayMode`    | [DisplayMode](DisplayMode.md) | undefined |
 
 
 ## onInit<T>
@@ -204,8 +204,8 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `propertyPath`    | string |  |
-| `newValue`    | any |  |
+| `propertyPath`    | string | undefined |
+| `newValue`    | any | undefined |
 
 
 ## onPropertyConfigurationComplete
@@ -281,5 +281,5 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `error`    | Error |  |
+| `error`    | Error | undefined |
 

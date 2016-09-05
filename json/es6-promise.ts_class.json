@@ -4,10 +4,11 @@
     "genericType": "R",
     "descr": "",
     "properties": {},
+    "functions": {},
     "methods": {
-      "constructor~82714": {
+      "constructor~3EGg9": {
         "accessModifier": "public",
-        "signature": "constructor(callback: (resolve : (value?: R | Thenable<R>) => void,reject: (error?: any) => void) => void)",
+        "signature": "constructor(callback: (resolve: (value?: R | Thenable<R>) => void,reject: (error?: any) => void) => void)",
         "isStatic": false,
         "isOptional": false,
         "descr": "If you call resolve in the body of the callback passed to the constructor, \nyour promise is fulfilled with result object passed to resolve. \nIf you call reject your promise is rejected with the object passed to resolve. \nFor consistency and debugging (eg stack traces), obj should be an instanceof Error. \nAny errors thrown in the constructor callback will be implicitly passed to reject().",
@@ -17,31 +18,17 @@
         "params": [
           {
             "name": "callback",
-            "dataType": "(resolve",
-            "descr": "",
+            "dataType": "(resolve: (value?: R | Thenable<R>) => void",
+            "isOptional": false
+          },
+          {
+            "name": "reject",
+            "dataType": "(error?: any) => void) => void",
             "isOptional": false
           }
         ]
       },
-      "then<U>~73846": {
-        "accessModifier": "public",
-        "signature": "then<U>(onFulfilled?: (value: R) => U | Thenable<U>,onRejected?: (error: any) => U | Thenable<U>): Promise<U>",
-        "isStatic": false,
-        "isOptional": false,
-        "descr": "onFulfilled is called when/if \"promise\" resolves. onRejected is called when/if \"promise\" rejects. \nBoth are optional, if either/both are omitted the next onFulfilled/onRejected in the chain is called. \nBoth callbacks have a single parameter , the fulfillment value or rejection reason. \n\"then\" returns a new promise equivalent to the value you return from onFulfilled/onRejected after being passed through Promise.resolve. \nIf an error is thrown in the callback, the returned promise rejects with that error. \n",
-        "genericType": "U",
-        "returnType": "Promise<U>",
-        "returnDescr": null,
-        "params": [
-          {
-            "name": "onFulfilled",
-            "dataType": "(value",
-            "descr": "",
-            "isOptional": true
-          }
-        ]
-      },
-      "then<U>~81047": {
+      "then<U>~6quY9": {
         "accessModifier": "public",
         "signature": "then<U>(onFulfilled?: (value: R) => U | Thenable<U>,onRejected?: (error: any) => void): Promise<U>",
         "isStatic": false,
@@ -53,13 +40,17 @@
         "params": [
           {
             "name": "onFulfilled",
-            "dataType": "(value",
-            "descr": "",
+            "dataType": "(value: R) => U | Thenable<U>",
+            "isOptional": true
+          },
+          {
+            "name": "onRejected",
+            "dataType": "(error: any) => void",
             "isOptional": true
           }
         ]
       },
-      "catch<U>~39224": {
+      "catch<U>~KEfU9": {
         "accessModifier": "public",
         "signature": "catch<U>(onRejected?: (error: any) => U | Thenable<U>): Promise<U>",
         "isStatic": false,
@@ -71,13 +62,12 @@
         "params": [
           {
             "name": "onRejected",
-            "dataType": "(error",
-            "descr": "",
+            "dataType": "(error: any) => U | Thenable<U>",
             "isOptional": true
           }
         ]
       }
     },
-    "functions": {}
+    "objects": {}
   }
 }

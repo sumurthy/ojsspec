@@ -1,4 +1,4 @@
-## exportPropertyPaneButton
+## PropertyPaneButton
 
 Helper method to create a Button on the PropertyPane.
 
@@ -12,6 +12,6 @@ IPropertyPaneField<IPropertyPaneButtonProps>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `targetProperty`    | string |  |
-| `properties`    | [IPropertyPaneButtonProps](IPropertyPaneButtonProps.md) |  |
+| `targetProperty`    | string | undefined |
+| `properties`    | [IPropertyPaneButtonProps](IPropertyPaneButtonProps.md) | undefined |
 

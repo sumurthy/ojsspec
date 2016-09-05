@@ -8,7 +8,9 @@
         "dataType": "string",
         "accessModifier": "protected",
         "isOptional": false,
-        "type": " string",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "This property points to the accessible title of web part made available to screen readers. The base implementation \nreturns that default title in the manifest. Web parts that want to provide more descriptive title containing \ncontextual information need to override this API. \n"
       },
@@ -16,7 +18,9 @@
         "dataType": "IWebPartContext",
         "accessModifier": "protected",
         "isOptional": false,
-        "type": " IWebPartContext",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": ""
       },
@@ -24,7 +28,9 @@
         "dataType": "boolean",
         "accessModifier": "protected",
         "isOptional": false,
-        "type": " boolean",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "This property is used to change the web part's PropertyPane interaction from Reactive to NonReactive. The default \nbehaviour is Reactive. Where, \nReactive implies that changes made in the PropertyPane are transmitted to the web part instantly and the user can \nsee instant updates. This helps the page creator get instant feedback and decide if they should keep the new \nconfiguration changes or not. \nNonReactive implies that the configuraiton changes are transmitted to the web part only after 'Apply' PropertyPane \nbutton is clicked. \n"
       },
@@ -32,7 +38,9 @@
         "dataType": "DisplayMode",
         "accessModifier": "protected",
         "isOptional": false,
-        "type": " DisplayMode",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "This property is the current display mode of the web part. \n"
       },
@@ -40,7 +48,9 @@
         "dataType": "HTMLElement",
         "accessModifier": "protected",
         "isOptional": false,
-        "type": " HTMLElement",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "This property is a pointer to the root DOM element of the web part. This is a DIV element and contains the whole \nDOM subtree of the web part. \n"
       },
@@ -48,7 +58,9 @@
         "dataType": "string",
         "accessModifier": "protected",
         "isOptional": false,
-        "type": " string",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "This property points to the preview image for the web part. The base implementation returns undefined. Web parts \nthat want to provide a valid preview image url need to override this API. The preview image url can be used to \ncreate a preview of the web part or of the page on which the web part is present. \n"
       },
@@ -56,7 +68,9 @@
         "dataType": "TProperties",
         "accessModifier": "protected",
         "isOptional": false,
-        "type": " TProperties",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "This property is the pointer to the custom property bag of the web part. \n"
       },
@@ -64,7 +78,9 @@
         "dataType": "IPropertyPaneSettings",
         "accessModifier": "protected",
         "isOptional": false,
-        "type": " IPropertyPaneSettings",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": ""
       },
@@ -72,7 +88,9 @@
         "dataType": "boolean",
         "accessModifier": "protected",
         "isOptional": false,
-        "type": " boolean",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "This property indicates whether the web part was rendered from the default properties,as opposed to using \nserialized state from the last time that the web part was saved. \n"
       },
@@ -80,13 +98,16 @@
         "dataType": "boolean",
         "accessModifier": "protected",
         "isOptional": false,
-        "type": " boolean",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": "This property indicates whether the web part has been rendered once or not. After the first time rendering, \nthe value of this property is always true. Till a full re-render of the web part happens. \n"
       }
     },
+    "functions": {},
     "methods": {
-      "constructor~88299": {
+      "constructor~3EGg9": {
         "accessModifier": "public",
         "signature": "constructor(ctx: IWebPartContext)",
         "isStatic": false,
@@ -99,12 +120,11 @@
           {
             "name": "ctx",
             "dataType": "IWebPartContext",
-            "descr": "",
             "isOptional": false
           }
         ]
       },
-      "clearError~58733": {
+      "clearError~XLFc9": {
         "accessModifier": "protected",
         "signature": "protected clearError(): void",
         "isStatic": false,
@@ -115,7 +135,7 @@
         "returnDescr": null,
         "params": []
       },
-      "configureStart~50010": {
+      "configureStart~3kKs9": {
         "accessModifier": "protected",
         "signature": "protected configureStart(refreshOnly?: boolean): void",
         "isStatic": false,
@@ -128,12 +148,11 @@
           {
             "name": "refreshOnly",
             "dataType": "boolean",
-            "descr": "",
             "isOptional": true
           }
         ]
       },
-      "deserialize~34064": {
+      "deserialize~n2e89": {
         "accessModifier": "protected",
         "signature": "protected deserialize(data: IWebPartData): TProperties",
         "isStatic": false,
@@ -146,12 +165,11 @@
           {
             "name": "data",
             "dataType": "IWebPartData",
-            "descr": "",
             "isOptional": false
           }
         ]
       },
-      "dispose~77441": {
+      "dispose~Xs8Y9": {
         "accessModifier": "protected",
         "signature": "protected dispose(): void",
         "isStatic": false,
@@ -162,7 +180,7 @@
         "returnDescr": null,
         "params": []
       },
-      "onBeforeSerialize~92087": {
+      "onBeforeSerialize~jLOk9": {
         "accessModifier": "protected",
         "signature": "protected onBeforeSerialize(): IHtmlProperties",
         "isStatic": false,
@@ -173,7 +191,7 @@
         "returnDescr": null,
         "params": []
       },
-      "onDisplayModeChanged~68060": {
+      "onDisplayModeChanged~l3vU9": {
         "accessModifier": "protected",
         "signature": "protected onDisplayModeChanged(oldDisplayMode: DisplayMode): void",
         "isStatic": false,
@@ -186,14 +204,13 @@
           {
             "name": "oldDisplayMode",
             "dataType": "DisplayMode",
-            "descr": "",
             "isOptional": false
           }
         ]
       },
-      "onInit<T>~52849": {
+      "onInit<T>~mxes9": {
         "accessModifier": "protected",
-        "signature": "protected onInit < T >(): Promise<T>",
+        "signature": "protected onInit<T>(): Promise<T>",
         "isStatic": false,
         "isOptional": false,
         "descr": "This API should be overridden to perform long running operations e.g. data fetching from a remote service before \nthe initial rendering of the web part. The loading indicator is displayed during the lifetime of this method. \nThis API is called only once during the lifecycle of a web part.",
@@ -202,7 +219,7 @@
         "returnDescr": null,
         "params": []
       },
-      "onPropertyChange~18751": {
+      "onPropertyChange~Xdzg9": {
         "accessModifier": "protected",
         "signature": "protected onPropertyChange(propertyPath: string,newValue: any): void",
         "isStatic": false,
@@ -215,18 +232,16 @@
           {
             "name": "propertyPath",
             "dataType": "string",
-            "descr": "",
             "isOptional": false
           },
           {
             "name": "newValue",
             "dataType": "any",
-            "descr": "",
             "isOptional": false
           }
         ]
       },
-      "onPropertyConfigurationComplete~99338": {
+      "onPropertyConfigurationComplete~64o89": {
         "accessModifier": "protected",
         "signature": "protected onPropertyConfigurationComplete(): void",
         "isStatic": false,
@@ -237,7 +252,7 @@
         "returnDescr": null,
         "params": []
       },
-      "onPropertyPaneRendered~58592": {
+      "onPropertyPaneRendered~9zCU9": {
         "accessModifier": "protected",
         "signature": "protected onPropertyPaneRendered(): void",
         "isStatic": false,
@@ -248,7 +263,7 @@
         "returnDescr": null,
         "params": []
       },
-      "onPropertyPaneSave~22940": {
+      "onPropertyPaneSave~Qdfc9": {
         "accessModifier": "protected",
         "signature": "protected onPropertyPaneSave(): void",
         "isStatic": false,
@@ -259,7 +274,7 @@
         "returnDescr": null,
         "params": []
       },
-      "render~48217": {
+      "render~u4mg9": {
         "accessModifier": "public",
         "signature": "public render(): void",
         "isStatic": false,
@@ -270,7 +285,7 @@
         "returnDescr": null,
         "params": []
       },
-      "renderError~37889": {
+      "renderError~VXc09": {
         "accessModifier": "protected",
         "signature": "protected renderError(error: Error): void",
         "isStatic": false,
@@ -283,98 +298,151 @@
           {
             "name": "error",
             "dataType": "Error",
-            "descr": "",
             "isOptional": false
           }
         ]
       }
     },
-    "functions": {}
+    "objects": {}
   },
   "MockWebPartContext": {
     "implementsExtendsName": null,
     "genericType": null,
     "descr": "",
     "properties": {
-      "instanceId": {
-        "dataType": "string = 'wpInstanceId'",
+      "basicHttpClient": {
+        "dataType": "BasicHttpClient",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " string = 'wpInstanceId'",
+        "function": null,
+        "returnType": null,
+        "assignValue": "{} as any",
+        "isCollection": false,
+        "descr": ""
+      },
+      "configureStart": {
+        "dataType": "function",
+        "accessModifier": "public",
+        "isOptional": false,
+        "function": "(id: string,propertyPaneState?: PropertyPaneState)",
+        "returnType": "void",
+        "assignValue": "{} as any",
+        "isCollection": false,
+        "descr": ""
+      },
+      "domElement": {
+        "dataType": "HTMLElement",
+        "accessModifier": "public",
+        "isOptional": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": "document.createElement('div')",
+        "isCollection": false,
+        "descr": ""
+      },
+      "environment": {
+        "dataType": "Environment",
+        "accessModifier": "public",
+        "isOptional": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": "{} as any",
+        "isCollection": false,
+        "descr": ""
+      },
+      "eventAggregator": {
+        "dataType": "IEventAggregator",
+        "accessModifier": "public",
+        "isOptional": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": "{} as any",
+        "isCollection": false,
+        "descr": ""
+      },
+      "host": {
+        "dataType": "IWebPartHost",
+        "accessModifier": "public",
+        "isOptional": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": "{} as any",
+        "isCollection": false,
+        "descr": ""
+      },
+      "httpClient": {
+        "dataType": "HttpClient",
+        "accessModifier": "public",
+        "isOptional": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": "{} as any",
+        "isCollection": false,
+        "descr": ""
+      },
+      "instanceId": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": "'wpInstanceId'",
+        "isCollection": false,
+        "descr": ""
+      },
+      "manifest": {
+        "dataType": "IClientSideWebPartManifestInstance<{}>",
+        "accessModifier": "public",
+        "isOptional": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": "new MockWebPartManifestInstance()",
+        "isCollection": false,
+        "descr": ""
+      },
+      "pageContext": {
+        "dataType": "PageContext",
+        "accessModifier": "public",
+        "isOptional": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": "{} as any",
+        "isCollection": false,
+        "descr": ""
+      },
+      "serviceScope": {
+        "dataType": "ServiceScope",
+        "accessModifier": "public",
+        "isOptional": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": "{} as any",
+        "isCollection": false,
+        "descr": ""
+      },
+      "statusRenderer": {
+        "dataType": "IClientSideWebPartStatusRenderer",
+        "accessModifier": "public",
+        "isOptional": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": "{} as any",
         "isCollection": false,
         "descr": ""
       },
       "webPartTag": {
-        "dataType": "string = 'WebPart.daf0b71c-6de8-4ef7-b511-faae7c388708.0ae4973a-70e3-451e-9f1f-3f25e5455a60'",
+        "dataType": "string",
         "accessModifier": "public",
         "isOptional": false,
-        "type": " string = 'WebPart.daf0b71c-6de8-4ef7-b511-faae7c388708.0ae4973a-70e3-451e-9f1f-3f25e5455a60'",
-        "isCollection": false,
-        "descr": ""
-      },
-      "OBJECTERROR": {
-        "dataType": "}",
-        "accessModifier": "}",
-        "isOptional": false,
-        "type": "}",
+        "function": null,
+        "returnType": null,
+        "assignValue": "'WebPart.daf0b71c-6de8-4ef7-b511-faae7c388708.0ae4973a-70e3-451e-9f1f-3f25e5455a60'",
         "isCollection": false,
         "descr": ""
       }
     },
-    "methods": {
-      "configureStart~68119": {
-        "accessModifier": "public",
-        "signature": "public configureStart: (id: string,propertyPaneState?: PropertyPaneState) => void = {} as any",
-        "isStatic": false,
-        "isOptional": false,
-        "descr": "",
-        "genericType": null,
-        "returnType": "PropertyPaneState => void = {} as any",
-        "returnDescr": null,
-        "params": [
-          {
-            "name": "id",
-            "dataType": "string",
-            "descr": "",
-            "isOptional": false
-          },
-          {
-            "name": "propertyPaneState",
-            "dataType": "PropertyPaneState",
-            "descr": "",
-            "isOptional": true
-          }
-        ]
-      },
-      "domElementHTMLElement=document.createElement~68033": {
-        "accessModifier": "public",
-        "signature": "public domElement: HTMLElement = document.createElement('div')",
-        "isStatic": false,
-        "isOptional": false,
-        "descr": "",
-        "genericType": null,
-        "returnType": "HTMLElement = document.createElement('div'",
-        "returnDescr": null,
-        "params": [
-          {
-            "name": "'div'",
-            "descr": "",
-            "isOptional": false
-          }
-        ]
-      },
-      "manifestIClientSideWebPartManifestInstance<{}>=newMockWebPartManifestInstance~20569": {
-        "accessModifier": "public",
-        "signature": "public manifest: IClientSideWebPartManifestInstance<{}> = new MockWebPartManifestInstance()",
-        "isStatic": false,
-        "isOptional": false,
-        "descr": "",
-        "genericType": "{}",
-        "returnType": "IClientSideWebPartManifestInstance<{}> = new MockWebPartManifestInstance(",
-        "returnDescr": null,
-        "params": []
-      }
-    },
-    "functions": {}
+    "functions": {},
+    "methods": {},
+    "objects": {}
   }
 }

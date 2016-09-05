@@ -1,8 +1,8 @@
-# ServiceKey T class
+# ServiceKey <T> class
 
 
 
-_Type parameters: T_
+_Type parameters: <T>_
 
 The ServiceKey is a lookup key that is used when calling ServiceScope.consume() 
 to fetch a dependency. The key also defines a default implementation of the 
@@ -17,7 +17,6 @@ introduced without inadvertently breaking components that are loaded by an older
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|`create`     | public | string, | your application |
 |`defaultCreator`     | public | ServiceCreator<T> | your application |
 |`id`     | public | string | your application |
 |`name`     | public | string | your application |
@@ -29,9 +28,9 @@ introduced without inadvertently breaking components that are loaded by an older
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor~28889)     | public | ServiceCreator<T> | PRIVATE - Do not call this from your own code |
-|[serviceClass{new](#serviceclass{new~10866)     | public | [ServiceKey<T>;](ServiceKey.md) | your application |
-|[createCustom<T>](#createcustom<t>~47449)     | public, _static_ | [ServiceKey<T>](ServiceKey.md) | your application |
+|[constructor](#constructor~3egg9)     | public | ServiceCreator<T> | PRIVATE - Do not call this from your own code |
+|[create<T>](#create<t>~5l6a9)     | public, _static_ | [ServiceKey<T>;](ServiceKey.md) | your application |
+|[createCustom<T>](#createcustom<t>~fpze9)     | public, _static_ | [ServiceKey<T>](ServiceKey.md) | your application |
 
 
 
@@ -50,12 +49,12 @@ ServiceCreator<T>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `id`    | string |  |
-| `name`    | string |  |
-| `defaultCreator`    | ServiceCreator<T> |  |
+| `id`    | string | undefined |
+| `name`    | string | undefined |
+| `defaultCreator`    | ServiceCreator<T> | undefined |
 
 
-## serviceClass{new
+## create<T>
 
 your application.
 
@@ -69,7 +68,8 @@ ServiceKey<T>;
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceScope`    | [ServiceScope](ServiceScope.md) |  |
+| `name`    | string | undefined |
+| `serviceClass`    | { new (serviceScope: ServiceScope) } | undefined |
 
 
 ## createCustom<T>
@@ -86,6 +86,6 @@ ServiceKey<T>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `name`    | string |  |
-| `defaultCreator`    | ServiceCreator<T> |  |
+| `name`    | string | undefined |
+| `defaultCreator`    | ServiceCreator<T> | undefined |
 

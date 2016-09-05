@@ -22,7 +22,6 @@ Example: "My Application"
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
 |`default`      | string |  |
-|`}`      | } |  |
 
 
 

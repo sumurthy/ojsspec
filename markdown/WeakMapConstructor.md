@@ -22,25 +22,11 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[constructor<K,V>](#constructor<k,v>~98845)      | [WeakMap<K](WeakMap.md),V> |  |
-|[constructor<K,V>](#constructor<k,v>~56803)      | [WeakMap<K](WeakMap.md),V> |  |
+|[new<K,V>](#new<k,v>~b1yc9)      | [WeakMap<K](WeakMap.md),V> |  |
 
 
 
-## constructor<K,V>
-
-
-
-##### Signature
-
-#### Returns
-WeakMap<K,V>
-
-#### Parameters
-None
-
-
-## constructor<K,V>
+## new<K,V>
 
 
 
@@ -54,6 +40,6 @@ WeakMap<K,V>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `iterable`    | [ForEachable<[K](ForEachable.md) |  |
-| `V]>`    |  |  |
+| `iterable`    | [ForEachable<[K](ForEachable.md) | undefined |
+| ``    | V]> | undefined |
 

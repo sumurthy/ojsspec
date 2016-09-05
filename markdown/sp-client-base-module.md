@@ -30,11 +30,11 @@
 
 | Class	   |  Description |
 |:-------------|:---------------|
-| [IBasicHttpClientOptions](IBasicHttpClientOptions.md)   | headers ?: HeaderInit|{ [index: string]: string }  |
+| [IBasicHttpClientOptions](IBasicHttpClientOptions.md)   | headers?: HeaderInit|{ [index: string]: string }  |
 | [IClientSideApplicationManifest](IClientSideApplicationManifest.md)   | This is is the manifest for a client-side application  |
 | [IClientSideComponentManifest](IClientSideComponentManifest.md)   | This is the base interface that is extended by the interfaces  that represent the manifest for each kind of client-side component  |
 | [IDigestCache](IDigestCache.md)   | IDigestCache is an internal service used by HttpClient to maintain a cache of request digests  for each SPWeb URL  |
-| [IHttpClientOptions](IHttpClientOptions.md)   | headers ?: HeaderInit|{ [index: string]: string }  |
+| [IHttpClientOptions](IHttpClientOptions.md)   | headers?: HeaderInit|{ [index: string]: string }  |
 | [IODataBasePermission](IODataBasePermission.md)   | Data used for creating a SPPermission object  |
 | [IODataBatchOptions](IODataBatchOptions.md)   | This interface is passed to the ODataBatch constructor  |
 | [IODataChangeToken](IODataChangeToken.md)   | Represents an OData SP  |

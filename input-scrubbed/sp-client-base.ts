@@ -243,15 +243,15 @@ declare class HttpClient extends BasicHttpClient {
  * parameters that are documented here:
  * https:
  * @public
- * headers ?: HeaderInit|{ [index: string]: string };
+ * headers?: HeaderInit|{ [index: string]: string };
  */
 interface IBasicHttpClientOptions extends RequestInit {
-  body ?: BodyInit;
-  cache ?: ILocalizedString|ILocalizedString;
-  credentials ?: string|RequestCredentials;
-  headers ?: HeaderInit;
-  method ?: string;
-  mode ?: string|RequestMode;
+  body?: BodyInit;
+  cache?: ILocalizedString|ILocalizedString;
+  credentials?: string|RequestCredentials;
+  headers?: HeaderInit;
+  method?: string;
+  mode?: string|RequestMode;
 }
 
 /**
@@ -423,14 +423,14 @@ interface IDigestCache {
  * parameters that are documented here:
  * https:
  * @public
- * headers ?: HeaderInit|{ [index: string]: string };
+ * headers?: HeaderInit|{ [index: string]: string };
  */
 interface IHttpClientOptions extends IBasicHttpClientOptions {
-  body ?: BodyInit;
-  cache ?: ILocalizedString|ILocalizedString;
-  credentials ?: string|RequestCredentials;
-  method ?: string;
-  mode ?: string|RequestMode;
+  body?: BodyInit;
+  cache?: ILocalizedString|ILocalizedString;
+  credentials?: string|RequestCredentials;
+  method?: string;
+  mode?: string|RequestMode;
   /**
    * For a write operation, HttpClient will automatically add the
    * "X-RequestDigest" header, which may need to be fetched using a seperate
@@ -441,7 +441,7 @@ interface IHttpClientOptions extends IBasicHttpClientOptions {
    * do not contain a reserved URL segment; in this case, the webUrl can
    * be explicitly specified using this option.
    */
-  webUrl ?: string;
+  webUrl?: string;
 }
 
 /**
@@ -467,7 +467,7 @@ interface IODataBatchOptions {
    * passed to fetch(), but if not, the webUrl can be explicitly specified
    * using this option.
    */
-  webUrl ?: string;
+  webUrl?: string;
 }
 
 /**
@@ -523,34 +523,34 @@ interface IODataNavigationNode {
   /**
    * Gets or sets an array of Navigation Nodes that are children to the current node.
    */
-  Children ?: IODataNavigationNode[];
+  Children?: IODataNavigationNode[];
   /**
    * Gets a value that specifies the identifier for the navigation node.
    */
-  Id ?: number;
+  Id?: number;
   /**
    * @TODO Figure out what this is?
    */
-  IsDocLib ?: boolean;
+  IsDocLib?: boolean;
   /**
    * Gets or sets a value that specifies whether the navigation node URL potentially
    * corresponds to pages outside of the site collection.
    */
-  IsExternal ?: boolean;
+  IsExternal?: boolean;
   /**
    * Gets or sets a value that specifies if the node navigation link should be visible.
    */
-  IsVisible ?: boolean;
+  IsVisible?: boolean;
   /**
    * Gets or sets a value that specifies the anchor text for the node navigation link.
    */
-  Title ?: string;
+  Title?: string;
   /**
    * Gets or sets a value that specifies the URL to be stored with the navigation node.
    * It must be a URL of relative form if IsExternal is false. It must be a URL of
    * relative or absolute form.
    */
-  Url ?: string;
+  Url?: string;
 }
 
 /**
@@ -582,84 +582,84 @@ interface IODataWeb {
    * Gets a value that specifies when the site was created.
    * Example: "/Date(2016,0,20,12,58,7,0)/"
    */
-  Created ?: string;
+  Created?: string;
   /**
    * Represents the unique sequential location of a change within the change log.
    */
-  CurrentChangeToken ?: IODataChangeToken;
+  CurrentChangeToken?: IODataChangeToken;
   /**
    * Gets or sets the URL for a custom master page file to apply to the website.
    * Example: "/sites/PubSite/_catalogs/masterpage/seattle.master"
    */
-  CustomMasterUrl ?: string;
+  CustomMasterUrl?: string;
   /**
    * Gets or sets the description for the site.
    */
-  Description ?: string;
+  Description?: string;
   /**
    * Gets a value that specifies the site identifier for the site.
    * Example: "/Guid(92ea328e-9f50-49a6-9da5-2f2dd5577041)/"
    */
-  Id ?: string;
+  Id?: string;
   /**
    * Value that represents if the web was
    */
-  IsMultilingual ?: boolean;
+  IsMultilingual?: boolean;
   /**
    * Gets a value that specifies the LCID for the language that is used on the site.
    * Example: 1033
    */
-  Language ?: number;
+  Language?: number;
   /**
    * Gets a value that specifies when an item was last modified in the site.
    * Example: "/Date(1453618828000)/"
    */
-  LastItemModifiedDate ?: string;
+  LastItemModifiedDate?: string;
   /**
    * Gets or sets the URL of the master page that is used for the website.
    * Example: "/sites/PubSite/_catalogs/masterpage/seattle.master"
    */
-  MasterUrl ?: string;
+  MasterUrl?: string;
   /**
    * Determines if a particular web will be crawled by search or not.
    */
-  NoCrawl ?: boolean;
+  NoCrawl?: boolean;
   /**
    * Gets or sets a value that specifies whether the Quick Launch area is enabled on the site.
    */
-  QuickLaunchEnabled ?: boolean;
+  QuickLaunchEnabled?: boolean;
   /**
    * Gets or sets a value that determines whether the recycle bin is enabled for the website.
    */
-  RecycleBinEnabled ?: boolean;
+  RecycleBinEnabled?: boolean;
   /**
    * Gets or sets the server-relative URL for the Web site.
    * Example: "/sites/PubSite"
    */
-  ServerRelativeUrl ?: string;
+  ServerRelativeUrl?: string;
   /**
    * Gets the url for the logo of this particular site.
    */
-  SiteLogoUrl ?: string;
+  SiteLogoUrl?: string;
   /**
    * The title of the web.
    */
-  Title ?: string;
+  Title?: string;
   /**
    * Gets or sets the user interface (UI) version of the Web site.
    * Example: 15
    */
-  UIVersion ?: number;
+  UIVersion?: number;
   /**
    * Gets the absolute URL for the website.
    * Example: "http:
    */
-  Url ?: string;
+  Url?: string;
   /**
    * Gets the name of the site definition or site template that was used to create the site.
    * Example: "BLANKINTERNET"
    */
-  WebTemplate ?: string;
+  WebTemplate?: string;
 }
 
 /**
@@ -848,8 +848,7 @@ declare class ServiceKey<T> {
    * @param serviceClass - the TypeScript class that implements the service.
    * @returns - the newly created ServiceKey
    */
-  public static create < T >(name: string,
-      serviceClass: { new (serviceScope: ServiceScope); }): ServiceKey<T>;
+  public static create<T>(name: string,serviceClass: { new (serviceScope: ServiceScope); }): ServiceKey<T>;
   /**
    * Constructs a new ServiceKey whose default implementation will be obtained
    * by invoking the specified callback.
@@ -858,7 +857,7 @@ declare class ServiceKey<T> {
    * @param defaultCreator - A callback that returns an object that implements the T interface
    * @returns - the newly created ServiceKey
    */
-  public static createCustom < T >(name: string, defaultCreator: ServiceCreator<T>): ServiceKey<T>;
+  public static createCustom<T>(name: string, defaultCreator: ServiceCreator<T>): ServiceKey<T>;
   public defaultCreator: ServiceCreator<T>;
   public id: string;
   public name: string;
@@ -919,7 +918,7 @@ declare class ServiceScope {
    * @param serviceKey - the key that was used when provide() was called to register the service
    * @returns - the service instance
    */
-  public consume < T >(serviceKey: ServiceKey<T>): T;
+  public consume<T>(serviceKey: ServiceKey<T>): T;
   /**
    * This is a shorthand function that its equivalent to constructing a new instance of the
    * simpleServiceClass, then registering it by calling ServiceScope.provide().
@@ -927,15 +926,14 @@ declare class ServiceScope {
    * @param simpleServiceClass - the TypeScript class to be constructed
    * @returns - a newly constructed instance of simpleServiceClass
    */
-  public createAndProvide < T >(serviceKey: ServiceKey<T>,
-      simpleServiceClass: { new (serviceScope: ServiceScope); }): T;
+  public createAndProvide<T>(serviceKey: ServiceKey<T>,simpleServiceClass: { new (serviceScope: ServiceScope); }): T;
   /**
    * This is a shorthand function that constructs the default implementation of the specified
    * serviceKey, and then registers it by calling ServiceScope.provide().
    * @param serviceKey - the key that can be used later to consume the service
    * @returns - a service instance that was constructed using ServiceKey.defaultCreator
    */
-  public createDefaultAndProvide < T >(serviceKey: ServiceKey<T>): T;
+  public createDefaultAndProvide<T>(serviceKey: ServiceKey<T>): T;
   /**
    * When a ServiceScope is first started, it is in an "unfinished" state where provide() is
    * allowed but consume() is not allowed.  After calling finish(), then consume() is allowed
@@ -959,7 +957,7 @@ declare class ServiceScope {
    * @param service - the service instance that is being registered
    * @returns - the same object that was passed as the "service" parameter
    */
-  public provide < T >(serviceKey: ServiceKey<T>, service: T): T;
+  public provide<T>(serviceKey: ServiceKey<T>, service: T): T;
   /**
    * Constructs a new ServiceScope that is a child of the current scope.  For any keys
    * that are not explicitly provided by the child scope, the parent hierarchy will be
@@ -981,7 +979,7 @@ declare class ServiceScope {
    * later when the scope is finished.
    * @param callback - A block of code that needs to call ServiceScope.consume()
    */
-  public whenFinished(callback: () => void): void;
+          public whenFinished(callback: () => void): void;
 }
 
 
@@ -1232,7 +1230,7 @@ declare class SPWeb {
 /**
  * Class for storing and retrieving query parameters.
  * The URL can be server-relative and it will parse empty/null strings.
- * The query parameters must start with ? to indicate the first query parameter and
+ * The query parameters must start with? to indicate the first query parameter and
  * use & for all subsequent parameters. The class also supports fragments.
  * Edge cases behavior:
  * Empty value (www.example.com/?test=) stores key and empty value

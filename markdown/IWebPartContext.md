@@ -14,6 +14,7 @@ Web part context interface.
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
 |`basicHttpClient`      | [BasicHttpClient](BasicHttpClient.md) | BasicHttpClient instance scoped to this web part |
+|`configureStart`      | function | Function to open the PropertyPane to help configure this web part |
 |`domElement`      | HTMLElement | Reference to the DOM element that hosts this client side component |
 |`environment`      | [Environment](Environment.md) | Environment that webparts are hosted in |
 |`host`      | [IWebPartHost](IWebPartHost.md) | Web part host |
@@ -27,29 +28,4 @@ Web part context interface.
 
 
 
-
-
-## Functions
-
-| Function	   | Access Modifier | Returns	| Description|
-|:-------------|:----|:-------|:-----------|
-|configureStart      | undefined | | Function to open the PropertyPane to help configure this web part |
-
-
-## configureStart
-
-Function to open the PropertyPane to help configure this web part.
-
-##### Signature
-
-#### Returns
-void
-
-#### Parameters
-
-
-| Parameter	   | Type    | Description |
-|:-------------|:---------------|:------------|
-| `id`    | string |  |
-| `propertyPaneState`    | PropertyPaneState | _Optional._ |
 

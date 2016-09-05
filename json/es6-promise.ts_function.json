@@ -1,56 +1,68 @@
 {
-  "resolve<R>~15284": {
+  "resolve<R>~qYa89": {
+    "accessModifier": "public",
+    "signature": "function resolve<R>(value?: R | Thenable<R>): Promise<R>",
+    "isStatic": false,
+    "isOptional": false,
     "descr": "Make a new promise from the thenable. \nA thenable is promise-like in as far as it has a \"then\" method.",
-    "signature": "resolve<R>(value?: R | Thenable<R>): Promise<R>",
+    "genericType": "R",
     "returnType": "Promise<R>",
     "returnDescr": null,
     "params": [
       {
         "name": "value",
         "dataType": "R | Thenable<R>",
-        "descr": "",
         "isOptional": true
       }
     ]
   },
-  "reject~33199": {
+  "reject~Xzp89": {
+    "accessModifier": "public",
+    "signature": "function reject(error: any): Promise<any>",
+    "isStatic": false,
+    "isOptional": false,
     "descr": "Make a promise that rejects to obj. For consistency and debugging (eg stack traces),obj should be an instanceof Error",
-    "signature": "reject(error: any): Promise<any>",
+    "genericType": null,
     "returnType": "Promise<any>",
     "returnDescr": null,
     "params": [
       {
         "name": "error",
         "dataType": "any",
-        "descr": "",
         "isOptional": false
       }
     ]
   },
-  "all<R>~71402": {
+  "all<R>~SjwM9": {
+    "accessModifier": "public",
+    "signature": "function all<R>(promises: (R | Thenable<R>)[]): Promise<R[]>",
+    "isStatic": false,
+    "isOptional": false,
     "descr": "Make a promise that fulfills when every item in the array fulfills,and rejects if (and when) any item rejects. \nthe array passed to all can be a mixture of promise-like objects and other objects. \nThe fulfillment value is an array (in order) of fulfillment values. The rejection value is the first rejection value.",
-    "signature": "all<R>(promises: (R | Thenable<R>)[]): Promise<R[]>",
+    "genericType": "R",
     "returnType": "Promise<R[]>",
     "returnDescr": null,
     "params": [
       {
         "name": "promises",
-        "dataType": "(R | Thenable<R>",
-        "descr": "",
+        "dataType": "(R | Thenable<R>)[]",
         "isOptional": false
       }
     ]
   },
-  "race<R>~84426": {
+  "race<R>~iD0o9": {
+    "accessModifier": "public",
+    "signature": "function race<R>(promises: (R | Thenable<R>)[]): Promise<R>",
+    "isStatic": false,
+    "isOptional": false,
     "descr": "Make a Promise that fulfills when any item fulfills,and rejects if any item rejects.",
-    "signature": "race<R>(promises: (R | Thenable<R>)[]): Promise<R>",
+    "genericType": "R",
     "returnType": "Promise<R>",
     "returnDescr": null,
     "params": [
       {
         "name": "promises",
-        "dataType": "(R | Thenable<R>",
-        "descr": "",
+        "dataType": "(R | Thenable<R>)[]",
         "isOptional": false
       }
     ]

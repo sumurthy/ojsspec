@@ -8,7 +8,9 @@
         "dataType": "string",
         "accessModifier": "referrer:",
         "isOptional": false,
-        "type": " string",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": ""
       },
@@ -16,7 +18,9 @@
         "dataType": "Headers",
         "accessModifier": "headers:",
         "isOptional": false,
-        "type": " Headers",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": ""
       },
@@ -24,7 +28,9 @@
         "dataType": "string|RequestContext",
         "accessModifier": "context:",
         "isOptional": false,
-        "type": " string|RequestContext",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": ""
       },
@@ -32,7 +38,9 @@
         "dataType": "string|RequestMode",
         "accessModifier": "mode:",
         "isOptional": false,
-        "type": " string|RequestMode",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": ""
       },
@@ -40,7 +48,9 @@
         "dataType": "string|RequestCredentials",
         "accessModifier": "credentials:",
         "isOptional": false,
-        "type": " string|RequestCredentials",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": ""
       },
@@ -48,21 +58,16 @@
         "dataType": "string|RequestCache",
         "accessModifier": "cache:",
         "isOptional": false,
-        "type": " string|RequestCache",
-        "isCollection": false,
-        "descr": ""
-      },
-      "OBJECTERROR": {
-        "dataType": "}",
-        "accessModifier": "}",
-        "isOptional": false,
-        "type": "}",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": ""
       }
     },
+    "functions": {},
     "methods": {
-      "constructor~94862": {
+      "constructor~3EGg9": {
         "accessModifier": "public",
         "signature": "constructor(input: string|Request,init?:RequestInit)",
         "isStatic": false,
@@ -75,36 +80,26 @@
           {
             "name": "input",
             "dataType": "string|Request",
-            "descr": "",
             "isOptional": false
           },
           {
             "name": "init",
             "dataType": "RequestInit",
-            "descr": "",
             "isOptional": true
           }
         ]
       }
     },
-    "functions": {}
+    "objects": {}
   },
   "Headers": {
     "implementsExtendsName": null,
     "genericType": null,
     "descr": "",
-    "properties": {
-      "OBJECTERROR": {
-        "dataType": "}",
-        "accessModifier": "}",
-        "isOptional": false,
-        "type": "}",
-        "isCollection": false,
-        "descr": ""
-      }
-    },
+    "properties": {},
+    "functions": {},
     "methods": {
-      "append~45952": {
+      "append~O9Sk9": {
         "accessModifier": "public",
         "signature": "append(name: string,value: string): void",
         "isStatic": false,
@@ -117,18 +112,16 @@
           {
             "name": "name",
             "dataType": "string",
-            "descr": "",
             "isOptional": false
           },
           {
             "name": "value",
             "dataType": "string",
-            "descr": "",
             "isOptional": false
           }
         ]
       },
-      "delete~24911": {
+      "delete~hWgQ9": {
         "accessModifier": "public",
         "signature": "delete(name: string):void",
         "isStatic": false,
@@ -141,12 +134,11 @@
           {
             "name": "name",
             "dataType": "string",
-            "descr": "",
             "isOptional": false
           }
         ]
       },
-      "get~68340": {
+      "get~XkVg9": {
         "accessModifier": "public",
         "signature": "get(name: string): string",
         "isStatic": false,
@@ -159,12 +151,11 @@
           {
             "name": "name",
             "dataType": "string",
-            "descr": "",
             "isOptional": false
           }
         ]
       },
-      "getAll~27172": {
+      "getAll~cWR89": {
         "accessModifier": "public",
         "signature": "getAll(name: string): Array<string>",
         "isStatic": false,
@@ -177,12 +168,11 @@
           {
             "name": "name",
             "dataType": "string",
-            "descr": "",
             "isOptional": false
           }
         ]
       },
-      "has~55499": {
+      "has~mnOc9": {
         "accessModifier": "public",
         "signature": "has(name: string): boolean",
         "isStatic": false,
@@ -195,12 +185,11 @@
           {
             "name": "name",
             "dataType": "string",
-            "descr": "",
             "isOptional": false
           }
         ]
       },
-      "set~40117": {
+      "set~9ZyM9": {
         "accessModifier": "public",
         "signature": "set(name: string,value: string): void",
         "isStatic": false,
@@ -213,18 +202,16 @@
           {
             "name": "name",
             "dataType": "string",
-            "descr": "",
             "isOptional": false
           },
           {
             "name": "value",
             "dataType": "string",
-            "descr": "",
             "isOptional": false
           }
         ]
       },
-      "forEach~13244": {
+      "forEach~JQFQ9": {
         "accessModifier": "public",
         "signature": "forEach(callback: (value: string,name: string) => void): void",
         "isStatic": false,
@@ -236,20 +223,18 @@
         "params": [
           {
             "name": "callback",
-            "dataType": "(value",
-            "descr": "",
+            "dataType": "(value: string",
             "isOptional": false
           },
           {
             "name": "name",
-            "dataType": "string",
-            "descr": "",
+            "dataType": "string) => void",
             "isOptional": false
           }
         ]
       }
     },
-    "functions": {}
+    "objects": {}
   },
   "Body": {
     "implementsExtendsName": null,
@@ -260,21 +245,16 @@
         "dataType": "boolean",
         "accessModifier": "bodyUsed:",
         "isOptional": false,
-        "type": " boolean",
-        "isCollection": false,
-        "descr": ""
-      },
-      "OBJECTERROR": {
-        "dataType": "}",
-        "accessModifier": "}",
-        "isOptional": false,
-        "type": "}",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": ""
       }
     },
+    "functions": {},
     "methods": {
-      "arrayBuffer~54940": {
+      "arrayBuffer~3XbQ9": {
         "accessModifier": "public",
         "signature": "arrayBuffer(): Promise<ArrayBuffer>",
         "isStatic": false,
@@ -285,7 +265,7 @@
         "returnDescr": null,
         "params": []
       },
-      "blob~57134": {
+      "blob~GuLg9": {
         "accessModifier": "public",
         "signature": "blob(): Promise<Blob>",
         "isStatic": false,
@@ -296,7 +276,7 @@
         "returnDescr": null,
         "params": []
       },
-      "formData~26294": {
+      "formData~ZXNA9": {
         "accessModifier": "public",
         "signature": "formData(): Promise<FormData>",
         "isStatic": false,
@@ -307,7 +287,7 @@
         "returnDescr": null,
         "params": []
       },
-      "json~85062": {
+      "json~KJno9": {
         "accessModifier": "public",
         "signature": "json(): Promise<any>",
         "isStatic": false,
@@ -318,7 +298,7 @@
         "returnDescr": null,
         "params": []
       },
-      "json<T>~50281": {
+      "json<T>~qXBg9": {
         "accessModifier": "public",
         "signature": "json<T>(): Promise<T>",
         "isStatic": false,
@@ -329,7 +309,7 @@
         "returnDescr": null,
         "params": []
       },
-      "text~80612": {
+      "text~yydE9": {
         "accessModifier": "public",
         "signature": "text(): Promise<string>",
         "isStatic": false,
@@ -341,7 +321,7 @@
         "params": []
       }
     },
-    "functions": {}
+    "objects": {}
   },
   "Response": {
     "implementsExtendsName": null,
@@ -352,7 +332,9 @@
         "dataType": "string|ResponseType",
         "accessModifier": "type:",
         "isOptional": false,
-        "type": " string|ResponseType",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": ""
       },
@@ -360,7 +342,9 @@
         "dataType": "string",
         "accessModifier": "statusText:",
         "isOptional": false,
-        "type": " string",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": ""
       },
@@ -368,7 +352,9 @@
         "dataType": "number",
         "accessModifier": "status:",
         "isOptional": false,
-        "type": " number",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": ""
       },
@@ -376,7 +362,9 @@
         "dataType": "boolean",
         "accessModifier": "ok:",
         "isOptional": false,
-        "type": " boolean",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": ""
       },
@@ -384,21 +372,16 @@
         "dataType": "Headers",
         "accessModifier": "headers:",
         "isOptional": false,
-        "type": " Headers",
-        "isCollection": false,
-        "descr": ""
-      },
-      "OBJECTERROR": {
-        "dataType": "}",
-        "accessModifier": "}",
-        "isOptional": false,
-        "type": "}",
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "isCollection": false,
         "descr": ""
       }
     },
+    "functions": {},
     "methods": {
-      "constructor~42878": {
+      "constructor~3EGg9": {
         "accessModifier": "public",
         "signature": "constructor(body?: BodyInit,init?: ResponseInit)",
         "isStatic": false,
@@ -411,18 +394,16 @@
           {
             "name": "body",
             "dataType": "BodyInit",
-            "descr": "",
             "isOptional": true
           },
           {
             "name": "init",
             "dataType": "ResponseInit",
-            "descr": "",
             "isOptional": true
           }
         ]
       },
-      "error~42620": {
+      "error~o8Xg9": {
         "accessModifier": "public",
         "signature": "error(): Response",
         "isStatic": false,
@@ -433,7 +414,7 @@
         "returnDescr": null,
         "params": []
       },
-      "redirect~28395": {
+      "redirect~iKT49": {
         "accessModifier": "public",
         "signature": "redirect(url: string,status: number): Response",
         "isStatic": false,
@@ -446,18 +427,16 @@
           {
             "name": "url",
             "dataType": "string",
-            "descr": "",
             "isOptional": false
           },
           {
             "name": "status",
             "dataType": "number",
-            "descr": "",
             "isOptional": false
           }
         ]
       },
-      "clone~16151": {
+      "clone~mtKw9": {
         "accessModifier": "public",
         "signature": "clone(): Response",
         "isStatic": false,
@@ -469,6 +448,6 @@
         "params": []
       }
     },
-    "functions": {}
+    "objects": {}
   }
 }

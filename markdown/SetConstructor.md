@@ -22,25 +22,11 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[constructor<T>](#constructor<t>~80657)      | [Set<T>](Set.md) |  |
-|[constructor<T>](#constructor<t>~79232)      | [Set<T>](Set.md) |  |
+|[new<T>](#new<t>~6qpu9)      | [Set<T>](Set.md) |  |
 
 
 
-## constructor<T>
-
-
-
-##### Signature
-
-#### Returns
-Set<T>
-
-#### Parameters
-None
-
-
-## constructor<T>
+## new<T>
 
 
 
@@ -54,5 +40,5 @@ Set<T>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `iterable`    | [ForEachable<T>](ForEachable.md) |  |
+| `iterable`    | [ForEachable<T>](ForEachable.md) | undefined |
 

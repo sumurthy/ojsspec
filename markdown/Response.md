@@ -17,7 +17,6 @@
 |`number`     | status: | number |  |
 |`boolean`     | ok: | boolean |  |
 |`Headers`     | headers: | [Headers](Headers.md) |  |
-|`OBJECTERROR`     | } | } |  |
 
 
 
@@ -26,10 +25,10 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor~42878)     | public | [ResponseInit](ResponseInit.md) |  |
-|[error](#error~42620)     | public | [Response](Response.md) |  |
-|[redirect](#redirect~28395)     | public | [Response](Response.md) |  |
-|[clone](#clone~16151)     | public | [Response](Response.md) |  |
+|[constructor](#constructor~3egg9)     | public | [ResponseInit](ResponseInit.md) |  |
+|[error](#error~o8xg9)     | public | [Response](Response.md) |  |
+|[redirect](#redirect~ikt49)     | public | [Response](Response.md) |  |
+|[clone](#clone~mtkw9)     | public | [Response](Response.md) |  |
 
 
 
@@ -48,8 +47,8 @@ ResponseInit
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `body`    | BodyInit | _Optional._ |
-| `init`    | [ResponseInit](ResponseInit.md) | _Optional._ |
+| `body`    | BodyInit | _Optional._undefined |
+| `init`    | [ResponseInit](ResponseInit.md) | _Optional._undefined |
 
 
 ## error
@@ -79,8 +78,8 @@ Response
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | string |  |
-| `status`    | number |  |
+| `url`    | string | undefined |
+| `status`    | number | undefined |
 
 
 ## clone

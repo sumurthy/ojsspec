@@ -18,10 +18,10 @@ which component generated the messages and makes the messages useful and filtera
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[error](#error~62388)     | public, _static_ | void | The source provides context information for the logged error |
-|[info](#info~28613)     | public, _static_ | void | more context information (e |
-|[verbose](#verbose~97850)     | public, _static_ | void | more context information (e |
-|[warn](#warn~49341)     | public, _static_ | void | more context information (e |
+|[error](#error~o8xg9)     | public, _static_ | void | The source provides context information for the logged error |
+|[info](#info~z4ee9)     | public, _static_ | void | more context information (e |
+|[verbose](#verbose~j0n09)     | public, _static_ | void | more context information (e |
+|[warn](#warn~l5949)     | public, _static_ | void | more context information (e |
 
 
 
@@ -41,9 +41,9 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `source`    | string |  |
-| `error`    | Error |  |
-| `scope`    | [ServiceScope](ServiceScope.md) | _Optional._ |
+| `source`    | string | undefined |
+| `error`    | Error | undefined |
+| `scope`    | [ServiceScope](ServiceScope.md) | _Optional._undefined |
 
 
 ## info
@@ -60,9 +60,9 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `source`    | string |  |
-| `message`    | string |  |
-| `scope`    | [ServiceScope](ServiceScope.md) | _Optional._ |
+| `source`    | string | undefined |
+| `message`    | string | undefined |
+| `scope`    | [ServiceScope](ServiceScope.md) | _Optional._undefined |
 
 
 ## verbose
@@ -79,9 +79,9 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `source`    | string |  |
-| `message`    | string |  |
-| `scope`    | [ServiceScope](ServiceScope.md) | _Optional._ |
+| `source`    | string | undefined |
+| `message`    | string | undefined |
+| `scope`    | [ServiceScope](ServiceScope.md) | _Optional._undefined |
 
 
 ## warn
@@ -98,7 +98,7 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `source`    | string |  |
-| `message`    | string |  |
-| `scope`    | [ServiceScope](ServiceScope.md) | _Optional._ |
+| `source`    | string | undefined |
+| `message`    | string | undefined |
+| `scope`    | [ServiceScope](ServiceScope.md) | _Optional._undefined |
 

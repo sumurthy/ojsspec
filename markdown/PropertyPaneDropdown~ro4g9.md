@@ -1,4 +1,4 @@
-## exportPropertyPaneDropdown
+## PropertyPaneDropdown
 
 Helper method to create a Dropdown on the PropertyPane.
 
@@ -12,6 +12,6 @@ IPropertyPaneField<IPropertyPaneDropdownProps>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `targetProperty`    | string |  |
-| `properties`    | [IPropertyPaneDropdownProps](IPropertyPaneDropdownProps.md) |  |
+| `targetProperty`    | string | undefined |
+| `properties`    | [IPropertyPaneDropdownProps](IPropertyPaneDropdownProps.md) | undefined |
 

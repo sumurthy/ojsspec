@@ -4,7 +4,7 @@ _Extends: [RequestInit](RequestInit.md)_
 
 
 
-headers ?: HeaderInit|{ [index: string]: string }
+headers?: HeaderInit|{ [index: string]: string }
 
 
 

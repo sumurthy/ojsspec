@@ -1,4 +1,4 @@
-## exportPropertyPaneChoiceGroup
+## PropertyPaneChoiceGroup
 
 Helper method to create a Choice Group on the PropertyPane.
 
@@ -12,6 +12,6 @@ IPropertyPaneField<IPropertyPaneChoiceGroupProps>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `targetProperty`    | string |  |
-| `properties`    | [IPropertyPaneChoiceGroupProps](IPropertyPaneChoiceGroupProps.md) |  |
+| `targetProperty`    | string | undefined |
+| `properties`    | [IPropertyPaneChoiceGroupProps](IPropertyPaneChoiceGroupProps.md) | undefined |
 

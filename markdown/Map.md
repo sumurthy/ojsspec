@@ -1,8 +1,8 @@
-# Map<K,V> interface
+# Map <K,V> interface
 
 
 
-
+_Type parameters: <K,V>_
 
 
 
@@ -22,22 +22,16 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[clear](#clear~29983)      | void |  |
-|[delete](#delete~81670)      | boolean |  |
-|[get](#get~21662)      | V |  |
-|[has](#has~95835)      | boolean |  |
-|[set](#set~78242)      | [Map<K](Map.md),V> |  |
-|[entries](#entries~91137)      | [Iterator<[K](Iterator.md),V]> |  |
-|[keys](#keys~60893)      | [Iterator<K>](Iterator.md) |  |
-|[values](#values~88034)      | [Iterator<V>](Iterator.md) |  |
+|[clear](#clear~n1pq9)      | void |  |
+|[delete](#delete~hwgq9)      | boolean |  |
+|[forEach](#foreach~jqfq9)      | void |  |
+|[get](#get~xkvg9)      | V |  |
+|[has](#has~mnoc9)      | boolean |  |
+|[set](#set~9zym9)      | [Map<K](Map.md),V> |  |
+|[entries](#entries~fmli9)      | [Iterator<[K](Iterator.md),V]> |  |
+|[keys](#keys~5ysm9)      | [Iterator<K>](Iterator.md) |  |
+|[values](#values~bdxe9)      | [Iterator<V>](Iterator.md) |  |
 
-
-
-## Functions
-
-| Function	   | Access Modifier | Returns	| Description|
-|:-------------|:----|:-------|:-----------|
-|forEach      | undefined | |  |
 
 
 ## clear
@@ -67,7 +61,28 @@ boolean
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key`    | K |  |
+| `key`    | K | undefined |
+
+
+## forEach
+
+
+
+##### Signature
+
+#### Returns
+void
+
+#### Parameters
+
+
+| Parameter	   | Type    | Description |
+|:-------------|:---------------|:------------|
+| `callbackfn`    | (value: V | undefined |
+| `index`    | K | undefined |
+| `map`    | [Map<K](Map.md) | undefined |
+| ``    | V>) => void | undefined |
+| `thisArg`    | any | _Optional._undefined |
 
 
 ## get
@@ -84,7 +99,7 @@ V
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key`    | K |  |
+| `key`    | K | undefined |
 
 
 ## has
@@ -101,7 +116,7 @@ boolean
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key`    | K |  |
+| `key`    | K | undefined |
 
 
 ## set
@@ -118,8 +133,8 @@ Map<K,V>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key`    | K |  |
-| `value`    | V | _Optional._ |
+| `key`    | K | undefined |
+| `value`    | V | _Optional._undefined |
 
 
 ## entries
@@ -159,24 +174,4 @@ Iterator<V>
 
 #### Parameters
 None
-
-
-## forEach
-
-
-
-##### Signature
-
-#### Returns
-void,thisArg?: any): void
-
-#### Parameters
-
-
-| Parameter	   | Type    | Description |
-|:-------------|:---------------|:------------|
-| `callbackfn`    | (value |  |
-| `index`    | K |  |
-| `map`    | [Map<K](Map.md) |  |
-| `V>`    |  |  |
 

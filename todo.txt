@@ -1,19 +1,4 @@
 21. sp-Client-preview.ts
-declare class MockWebPartContext {
-  public basicHttpClient: BasicHttpClient = {} as any;
-  public configureStart: (id: string, propertyPaneState?: PropertyPaneState) => void = {} as any;
-  public domElement: HTMLElement = document.createElement('div');
-  public environment: Environment = {} as any;
-  public eventAggregator: IEventAggregator = {} as any;
-  public host: IWebPartHost = {} as any;
-  public httpClient: HttpClient = {} as any;
-  public instanceId: string = 'wpInstanceId';
-  public manifest: IClientSideWebPartManifestInstance<{}> = new MockWebPartManifestInstance();
-  public pageContext: PageContext = {} as any;
-  public serviceScope: ServiceScope = {} as any;
-  public statusRenderer: IClientSideWebPartStatusRenderer = {} as any;
-  public webPartTag: string = 'WebPart.daf0b71c-6de8-4ef7-b511-faae7c388708.0ae4973a-70e3-451e-9f1f-3f25e5455a60';
-}
 4. HANDLE OBJECT TYPE OF DATA: (similar to module/object data type support)
   interface IHtmlProperties {
     imageLinkProperties: {
@@ -26,23 +11,16 @@ declare class MockWebPartContext {
       [ propName: string ]: string
     }
   }
-5. Multi-line properties:
-    properties: ICheckboxProps | ITextFieldProps | IToggleProps | IDropdownProps |
-    ICustomPropertyPaneFieldProps | ILabelProps | ISliderProps | IChoiceGroupProps |
-    IButtonProps | ILinkProps | any;
-    (Do this outside as a first step of file processing)
 8. Property has {}. Handle this...
 
 17. Check Optional handling ? for methods, params, etc. Need it in markdown.
-18. Method-overloads: handle duplicate keys
 20. Handle these guys::
-    public whenFinished(callback: () => void): void;
+    public whenFinished(callback: () => void): void; //Function as parameter.
     forEach(callbackfn: (value: V, index: K, map: Map<K, V>) => void, thisArg?: any): void;
 
-16. List type parameters. Type parameters: K, V? (What's the use??)
-
-
-
+17. Can't have random numbers name. Maybe we can do Sha256 strings.
+18. Parameter needs to show types
+    public provide < T >(serviceKey: ServiceKey<T>, service: T): T;
 
 LONGER TERM:
 19. Make use of dFunction for enum and function file generation

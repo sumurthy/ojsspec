@@ -18,9 +18,9 @@ that might impact performance.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[isNonemptyString](#isnonemptystring~72133)     | public, _static_ | void | Throws an exception if the specified string is null,undefined,or an empty string |
-|[isNotNullOrUndefined](#isnotnullorundefined~69344)     | public, _static_ | void | Throws an exception if the specified value is null or undefined |
-|[isTrue](#istrue~60273)     | public, _static_ | void | Throws an exception if the specified value is not true |
+|[isNonemptyString](#isnonemptystring~p7xu9)     | public, _static_ | void | Throws an exception if the specified string is null,undefined,or an empty string |
+|[isNotNullOrUndefined](#isnotnullorundefined~v0mm9)     | public, _static_ | void | Throws an exception if the specified value is null or undefined |
+|[isTrue](#istrue~1ea89)     | public, _static_ | void | Throws an exception if the specified value is not true |
 
 
 
@@ -39,8 +39,8 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | string |  |
-| `variableName`    | string |  |
+| `value`    | string | undefined |
+| `variableName`    | string | undefined |
 
 
 ## isNotNullOrUndefined
@@ -57,8 +57,8 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | any |  |
-| `variableName`    | string |  |
+| `value`    | any | undefined |
+| `variableName`    | string | undefined |
 
 
 ## isTrue
@@ -75,6 +75,6 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | boolean |  |
-| `variableName`    | string |  |
+| `value`    | boolean | undefined |
+| `variableName`    | string | undefined |
 

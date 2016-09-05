@@ -1,39 +1,34 @@
 {
-  "Thenable<R>": {
+  "Thenable": {
     "implementsExtendsName": null,
+    "genericType": "R",
     "descr": "",
     "properties": {},
-    "functions": {
-      "then<U>~99972": {
-        "descr": "",
+    "functions": {},
+    "methods": {
+      "then<U>~6quY9": {
+        "accessModifier": "public",
+        "signature": "then<U>(onFulfilled?: (value: R) => U | Thenable<U>,onRejected?: (error: any) => void): Thenable<U>",
+        "isStatic": false,
         "isOptional": false,
-        "returnType": "U | Thenable<U>): Thenable<U>",
+        "descr": "",
+        "genericType": "U",
+        "returnType": "Thenable<U>",
         "returnDescr": null,
         "params": [
           {
             "name": "onFulfilled",
-            "dataType": "(value",
-            "descr": "",
+            "dataType": "(value: R) => U | Thenable<U>",
             "isOptional": true
-          }
-        ]
-      },
-      "then<U>~96641": {
-        "descr": "",
-        "isOptional": false,
-        "returnType": "void): Thenable<U>",
-        "returnDescr": null,
-        "params": [
+          },
           {
-            "name": "onFulfilled",
-            "dataType": "(value",
-            "descr": "",
+            "name": "onRejected",
+            "dataType": "(error: any) => void",
             "isOptional": true
           }
         ]
       }
     },
-    "objects": {},
-    "methods": {}
+    "objects": {}
   }
 }

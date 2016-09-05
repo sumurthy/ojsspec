@@ -1,4 +1,8 @@
-# ForEachable<T> interface
+# ForEachable <T> interface
+
+
+
+_Type parameters: <T>_
 
 
 
@@ -8,16 +12,12 @@
 
 
 
+## Methods
 
+| Method	   |  Returns	| Description|
+|:-------------|:-------|:-----------|
+|[forEach](#foreach~jqfq9)      | void |  |
 
-
-
-
-## Functions
-
-| Function	   | Access Modifier | Returns	| Description|
-|:-------------|:----|:-------|:-----------|
-|forEach      | undefined | |  |
 
 
 ## forEach
@@ -27,12 +27,12 @@
 ##### Signature
 
 #### Returns
-void): void
+void
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `callbackfn`    | (value |  |
+| `callbackfn`    | (value: T) => void | undefined |
 
