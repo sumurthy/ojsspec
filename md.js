@@ -56,18 +56,19 @@ function getLinkForType(type = '') {
 
     var out = ''
     var splitChar = ','
+    var type = Utils.replaceCommaInGenerics(type)
     if (type.includes('|')) {
         splitChar = '|'
     }
     type.split(splitChar).forEach((e) => {
         if (allTypes.includes(e.trim())) {
-            out = out + `[${e}](${Utils.trimGenerics(e)}.md)` + ','
+            out = out + `[${e.replace(/\^/g, ',')}](${Utils.trimGenerics(e)}.md)` + ','
         }
         else if (allTypes.includes(Utils.trimGenerics(e))) {
-            out = out + `[${e}](${Utils.trimGenerics(e)}.md)` + ','
+            out = out + `[${e.replace(/\^/g, ',')}](${Utils.trimGenerics(e)}.md)` + ','
         }
         else {
-            out = out + e + ','
+            out = out + e.replace(/\^/g, ',') + ','
         }
     })
     out = out.trim()
