@@ -13,7 +13,7 @@
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`prototype`      | [`WeakMap<any,any>`](WeakMap.md) |  |
+|`prototype`      | [WeakMap<any,any>](WeakMap.md) |  |
 
 
 
