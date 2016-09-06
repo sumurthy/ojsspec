@@ -12,6 +12,6 @@ IPropertyPaneField<IPropertyPaneLabelProps>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `targetProperty`    | string | undefined |
-| `properties`    | [IPropertyPaneLabelProps](IPropertyPaneLabelProps.md) | undefined |
+| `targetProperty`    | string |  |
+| `properties`    | [IPropertyPaneLabelProps](IPropertyPaneLabelProps.md) |  |
 

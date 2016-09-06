@@ -14,5 +14,5 @@ Promise<R[]>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `promises`    | (R ,[ Thenable<R>)[]](Thenable.md) | undefined |
+| `promises`    | (R ,[ Thenable<R>)[]](Thenable.md) |  |
 

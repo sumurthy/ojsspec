@@ -49,9 +49,9 @@ ServiceCreator<T>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `id`    | string | undefined |
-| `name`    | string | undefined |
-| `defaultCreator`    | ServiceCreator<T> | undefined |
+| `id`    | string |  |
+| `name`    | string |  |
+| `defaultCreator`    | ServiceCreator<T> |  |
 
 
 ## create<T>
@@ -68,8 +68,8 @@ ServiceKey<T>;
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `name`    | string | undefined |
-| `serviceClass`    | { new (serviceScope: ServiceScope) } | undefined |
+| `name`    | string |  |
+| `serviceClass`    | { new (serviceScope: ServiceScope) } |  |
 
 
 ## createCustom<T>
@@ -86,6 +86,6 @@ ServiceKey<T>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `name`    | string | undefined |
-| `defaultCreator`    | ServiceCreator<T> | undefined |
+| `name`    | string |  |
+| `defaultCreator`    | ServiceCreator<T> |  |
 

@@ -44,7 +44,7 @@ string
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | string | undefined |
+| `url`    | string |  |
 
 
 ## getValue
@@ -68,7 +68,7 @@ string
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `param`    | string | undefined |
+| `param`    | string |  |
 
 
 ## getValues
@@ -92,5 +92,5 @@ string[]
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `param`    | string | undefined |
+| `param`    | string |  |
 

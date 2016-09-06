@@ -34,6 +34,6 @@ Promise<Response>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | string,[Request](Request.md) | undefined |
-| `init`    | [RequestInit](RequestInit.md) | _Optional._undefined |
+| `url`    | string,[Request](Request.md) |  |
+| `init`    | [RequestInit](RequestInit.md) | _Optional._ |
 

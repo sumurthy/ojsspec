@@ -49,7 +49,8 @@
           {
             "name": "value",
             "dataType": "any",
-            "isOptional": true
+            "isOptional": true,
+            "descr": ""
           }
         ]
       },
@@ -66,7 +67,8 @@
           {
             "name": "value",
             "dataType": "any",
-            "isOptional": true
+            "isOptional": true,
+            "descr": ""
           }
         ]
       },
@@ -83,7 +85,8 @@
           {
             "name": "e",
             "dataType": "any",
-            "isOptional": true
+            "isOptional": true,
+            "descr": ""
           }
         ]
       }
@@ -110,7 +113,8 @@
           {
             "name": "callbackfn",
             "dataType": "(value: T) => void",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           }
         ]
       }
@@ -159,7 +163,8 @@
           {
             "name": "key",
             "dataType": "K",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           }
         ]
       },
@@ -175,28 +180,15 @@
         "params": [
           {
             "name": "callbackfn",
-            "dataType": "(value: V",
-            "isOptional": false
-          },
-          {
-            "name": "index",
-            "dataType": "K",
-            "isOptional": false
-          },
-          {
-            "name": "map",
-            "dataType": "Map<K",
-            "isOptional": false
-          },
-          {
-            "name": "",
-            "dataType": "V>) => void",
-            "isOptional": false
+            "dataType": "(value: V,index: K,map: Map<K,V>) => void",
+            "isOptional": false,
+            "descr": ""
           },
           {
             "name": "thisArg",
             "dataType": "any",
-            "isOptional": true
+            "isOptional": true,
+            "descr": ""
           }
         ]
       },
@@ -213,7 +205,8 @@
           {
             "name": "key",
             "dataType": "K",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           }
         ]
       },
@@ -230,7 +223,8 @@
           {
             "name": "key",
             "dataType": "K",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           }
         ]
       },
@@ -247,12 +241,14 @@
           {
             "name": "key",
             "dataType": "K",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           },
           {
             "name": "value",
             "dataType": "V",
-            "isOptional": true
+            "isOptional": true,
+            "descr": ""
           }
         ]
       },
@@ -310,7 +306,7 @@
     },
     "functions": {},
     "methods": {
-      "new<K,V>~b1yc9": {
+      "constructor<K,V>~VNf09": {
         "accessModifier": "public",
         "signature": "new<K,V>(iterable: ForEachable<[K,V]>): Map<K,V>",
         "isStatic": false,
@@ -322,13 +318,9 @@
         "params": [
           {
             "name": "iterable",
-            "dataType": "ForEachable<[K",
-            "isOptional": false
-          },
-          {
-            "name": "",
-            "dataType": "V]>",
-            "isOptional": false
+            "dataType": "ForEachable<[K,V]>",
+            "isOptional": false,
+            "descr": ""
           }
         ]
       }
@@ -366,7 +358,8 @@
           {
             "name": "value",
             "dataType": "T",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           }
         ]
       },
@@ -394,7 +387,8 @@
           {
             "name": "value",
             "dataType": "T",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           }
         ]
       },
@@ -410,23 +404,15 @@
         "params": [
           {
             "name": "callbackfn",
-            "dataType": "(value: T",
-            "isOptional": false
-          },
-          {
-            "name": "index",
-            "dataType": "T",
-            "isOptional": false
-          },
-          {
-            "name": "set",
-            "dataType": "Set<T>) => void",
-            "isOptional": false
+            "dataType": "(value: T,index: T,set: Set<T>) => void",
+            "isOptional": false,
+            "descr": ""
           },
           {
             "name": "thisArg",
             "dataType": "any",
-            "isOptional": true
+            "isOptional": true,
+            "descr": ""
           }
         ]
       },
@@ -443,7 +429,8 @@
           {
             "name": "value",
             "dataType": "T",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           }
         ]
       },
@@ -501,7 +488,7 @@
     },
     "functions": {},
     "methods": {
-      "new<T>~6QPU9": {
+      "constructor<T>~xWmg9": {
         "accessModifier": "public",
         "signature": "new<T>(iterable: ForEachable<T>): Set<T>",
         "isStatic": false,
@@ -514,7 +501,8 @@
           {
             "name": "iterable",
             "dataType": "ForEachable<T>",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           }
         ]
       }
@@ -541,7 +529,8 @@
           {
             "name": "key",
             "dataType": "K",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           }
         ]
       },
@@ -569,7 +558,8 @@
           {
             "name": "key",
             "dataType": "K",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           }
         ]
       },
@@ -586,7 +576,8 @@
           {
             "name": "key",
             "dataType": "K",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           }
         ]
       },
@@ -603,12 +594,14 @@
           {
             "name": "key",
             "dataType": "K",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           },
           {
             "name": "value",
             "dataType": "V",
-            "isOptional": true
+            "isOptional": true,
+            "descr": ""
           }
         ]
       }
@@ -633,7 +626,7 @@
     },
     "functions": {},
     "methods": {
-      "new<K,V>~b1yc9": {
+      "constructor<K,V>~VNf09": {
         "accessModifier": "public",
         "signature": "new<K,V>(iterable: ForEachable<[K,V]>): WeakMap<K,V>",
         "isStatic": false,
@@ -645,13 +638,9 @@
         "params": [
           {
             "name": "iterable",
-            "dataType": "ForEachable<[K",
-            "isOptional": false
-          },
-          {
-            "name": "",
-            "dataType": "V]>",
-            "isOptional": false
+            "dataType": "ForEachable<[K,V]>",
+            "isOptional": false,
+            "descr": ""
           }
         ]
       }
@@ -678,7 +667,8 @@
           {
             "name": "value",
             "dataType": "T",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           }
         ]
       },
@@ -706,7 +696,8 @@
           {
             "name": "value",
             "dataType": "T",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           }
         ]
       },
@@ -723,7 +714,8 @@
           {
             "name": "value",
             "dataType": "T",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           }
         ]
       }
@@ -748,7 +740,7 @@
     },
     "functions": {},
     "methods": {
-      "new<T>~6QPU9": {
+      "constructor<T>~xWmg9": {
         "accessModifier": "public",
         "signature": "new<T>(iterable: ForEachable<T>): WeakSet<T>",
         "isStatic": false,
@@ -761,7 +753,8 @@
           {
             "name": "iterable",
             "dataType": "ForEachable<T>",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           }
         ]
       }

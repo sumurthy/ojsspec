@@ -21,6 +21,7 @@
 17. Can't have random numbers name. Maybe we can do Sha256 strings.
 18. Parameter needs to show types
     public provide < T >(serviceKey: ServiceKey<T>, service: T): T;
+19. WeakMap.md : Fix the link issue |[set](#set~9zym9)      | [WeakMap<K](WeakMap.md),V> |  |
 
 LONGER TERM:
 19. Make use of dFunction for enum and function file generation

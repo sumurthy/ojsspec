@@ -47,8 +47,8 @@ IODataBatchOptions
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceScope`    | [ServiceScope](ServiceScope.md) | undefined |
-| `batchOptions`    | [IODataBatchOptions](IODataBatchOptions.md) | _Optional._undefined |
+| `serviceScope`    | [ServiceScope](ServiceScope.md) |  |
+| `batchOptions`    | [IODataBatchOptions](IODataBatchOptions.md) | _Optional._ |
 
 
 ## execute
@@ -91,8 +91,8 @@ Promise<Response>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | string | undefined |
-| `options`    | IODataBatchRequestOptions | _Optional._undefined |
+| `url`    | string |  |
+| `options`    | IODataBatchRequestOptions | _Optional._ |
 
 
 ## get
@@ -109,8 +109,8 @@ Promise<Response>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | string | undefined |
-| `options`    | IODataBatchRequestOptions | _Optional._undefined |
+| `url`    | string |  |
+| `options`    | IODataBatchRequestOptions | _Optional._ |
 
 
 ## post
@@ -127,6 +127,6 @@ Promise<Response>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | string | undefined |
-| `options`    | IODataBatchRequestOptions | undefined |
+| `url`    | string |  |
+| `options`    | IODataBatchRequestOptions |  |
 

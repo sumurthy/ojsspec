@@ -34,6 +34,6 @@ Thenable<U>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `onFulfilled`    | (value: R) => U ,[ Thenable<U>](Thenable.md) | _Optional._undefined |
-| `onRejected`    | (error: any) => void | _Optional._undefined |
+| `onFulfilled`    | (value: R) => U ,[ Thenable<U>](Thenable.md) | _Optional._ |
+| `onRejected`    | (error: any) => void | _Optional._ |
 

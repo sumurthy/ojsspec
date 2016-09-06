@@ -269,17 +269,20 @@
           {
             "name": "webUrl",
             "dataType": "string",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           },
           {
             "name": "digestValue",
             "dataType": "string",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           },
           {
             "name": "expirationTimestamp",
             "dataType": "number",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           }
         ]
       },
@@ -307,7 +310,8 @@
           {
             "name": "webUrl",
             "dataType": "string",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           }
         ]
       },
@@ -324,7 +328,8 @@
           {
             "name": "webUrl",
             "dataType": "string",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           }
         ]
       }

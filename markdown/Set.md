@@ -47,7 +47,7 @@ Set<T>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | T | undefined |
+| `value`    | T |  |
 
 
 ## clear
@@ -77,7 +77,7 @@ boolean
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | T | undefined |
+| `value`    | T |  |
 
 
 ## forEach
@@ -94,10 +94,8 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `callbackfn`    | (value: T | undefined |
-| `index`    | T | undefined |
-| `set`    | [Set<T>) => void](Set.md) | undefined |
-| `thisArg`    | any | _Optional._undefined |
+| `callbackfn`    | (value: T,index: T,set: Set<T>) => void |  |
+| `thisArg`    | any | _Optional._ |
 
 
 ## has
@@ -114,7 +112,7 @@ boolean
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | T | undefined |
+| `value`    | T |  |
 
 
 ## entries

@@ -41,9 +41,9 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `source`    | string | undefined |
-| `error`    | Error | undefined |
-| `scope`    | [ServiceScope](ServiceScope.md) | _Optional._undefined |
+| `source`    | string |  |
+| `error`    | Error |  |
+| `scope`    | [ServiceScope](ServiceScope.md) | _Optional._ |
 
 
 ## info
@@ -60,9 +60,9 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `source`    | string | undefined |
-| `message`    | string | undefined |
-| `scope`    | [ServiceScope](ServiceScope.md) | _Optional._undefined |
+| `source`    | string |  |
+| `message`    | string |  |
+| `scope`    | [ServiceScope](ServiceScope.md) | _Optional._ |
 
 
 ## verbose
@@ -79,9 +79,9 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `source`    | string | undefined |
-| `message`    | string | undefined |
-| `scope`    | [ServiceScope](ServiceScope.md) | _Optional._undefined |
+| `source`    | string |  |
+| `message`    | string |  |
+| `scope`    | [ServiceScope](ServiceScope.md) | _Optional._ |
 
 
 ## warn
@@ -98,7 +98,7 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `source`    | string | undefined |
-| `message`    | string | undefined |
-| `scope`    | [ServiceScope](ServiceScope.md) | _Optional._undefined |
+| `source`    | string |  |
+| `message`    | string |  |
+| `scope`    | [ServiceScope](ServiceScope.md) | _Optional._ |
 

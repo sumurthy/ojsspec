@@ -37,7 +37,7 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `domElement`    | HTMLElement | undefined |
+| `domElement`    | HTMLElement |  |
 
 
 ## clearLoadingIndicator
@@ -54,7 +54,7 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `domElement`    | Element | undefined |
+| `domElement`    | Element |  |
 
 
 ## displayLoadingIndicator
@@ -71,8 +71,8 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `domElement`    | Element | undefined |
-| `loadingMessage`    | string | undefined |
+| `domElement`    | Element |  |
+| `loadingMessage`    | string |  |
 
 
 ## renderError
@@ -89,6 +89,6 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `domElement`    | HTMLElement | undefined |
-| `error`    | Error , string | undefined |
+| `domElement`    | HTMLElement |  |
+| `error`    | Error , string |  |
 

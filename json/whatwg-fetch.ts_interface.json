@@ -129,12 +129,14 @@
           {
             "name": "url",
             "dataType": "string|Request",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           },
           {
             "name": "init",
             "dataType": "RequestInit",
-            "isOptional": true
+            "isOptional": true,
+            "descr": ""
           }
         ]
       }

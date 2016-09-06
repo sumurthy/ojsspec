@@ -40,8 +40,8 @@ any => void) => void)
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `callback`    | (resolve: (value?: R ,[ Thenable<R>) => void](Thenable.md) | undefined |
-| `reject`    | (error?: any) => void) => void | undefined |
+| `callback`    | (resolve: (value?: R ,[ Thenable<R>) => void](Thenable.md) |  |
+| `reject`    | (error?: any) => void) => void |  |
 
 
 ## then<U>
@@ -63,8 +63,8 @@ Promise<U>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `onFulfilled`    | (value: R) => U ,[ Thenable<U>](Thenable.md) | _Optional._undefined |
-| `onRejected`    | (error: any) => void | _Optional._undefined |
+| `onFulfilled`    | (value: R) => U ,[ Thenable<U>](Thenable.md) | _Optional._ |
+| `onRejected`    | (error: any) => void | _Optional._ |
 
 
 ## catch<U>
@@ -82,5 +82,5 @@ Promise<U>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `onRejected`    | (error: any) => U ,[ Thenable<U>](Thenable.md) | _Optional._undefined |
+| `onRejected`    | (error: any) => U ,[ Thenable<U>](Thenable.md) | _Optional._ |
 

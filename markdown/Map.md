@@ -61,7 +61,7 @@ boolean
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key`    | K | undefined |
+| `key`    | K |  |
 
 
 ## forEach
@@ -78,11 +78,8 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `callbackfn`    | (value: V | undefined |
-| `index`    | K | undefined |
-| `map`    | [Map<K](Map.md) | undefined |
-| ``    | V>) => void | undefined |
-| `thisArg`    | any | _Optional._undefined |
+| `callbackfn`    | (value: V,index: K,map: Map<K,V>) => void |  |
+| `thisArg`    | any | _Optional._ |
 
 
 ## get
@@ -99,7 +96,7 @@ V
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key`    | K | undefined |
+| `key`    | K |  |
 
 
 ## has
@@ -116,7 +113,7 @@ boolean
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key`    | K | undefined |
+| `key`    | K |  |
 
 
 ## set
@@ -133,8 +130,8 @@ Map<K,V>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key`    | K | undefined |
-| `value`    | V | _Optional._undefined |
+| `key`    | K |  |
+| `value`    | V | _Optional._ |
 
 
 ## entries

@@ -22,11 +22,11 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[new<T>](#new<t>~6qpu9)      | [Set<T>](Set.md) |  |
+|[constructor<T>](#constructor<t>~xwmg9)      | [Set<T>](Set.md) |  |
 
 
 
-## new<T>
+## constructor<T>
 
 
 
@@ -40,5 +40,5 @@ Set<T>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `iterable`    | [ForEachable<T>](ForEachable.md) | undefined |
+| `iterable`    | [ForEachable<T>](ForEachable.md) |  |
 

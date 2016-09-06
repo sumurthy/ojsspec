@@ -78,7 +78,7 @@ IWebPartContext
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `ctx`    | [IWebPartContext](IWebPartContext.md) | undefined |
+| `ctx`    | [IWebPartContext](IWebPartContext.md) |  |
 
 
 ## clearError
@@ -108,7 +108,7 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `refreshOnly`    | boolean | _Optional._undefined |
+| `refreshOnly`    | boolean | _Optional._ |
 
 
 ## deserialize
@@ -125,7 +125,7 @@ TProperties
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `data`    | [IWebPartData](IWebPartData.md) | undefined |
+| `data`    | [IWebPartData](IWebPartData.md) |  |
 
 
 ## dispose
@@ -169,7 +169,7 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `oldDisplayMode`    | [DisplayMode](DisplayMode.md) | undefined |
+| `oldDisplayMode`    | [DisplayMode](DisplayMode.md) |  |
 
 
 ## onInit<T>
@@ -204,8 +204,8 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `propertyPath`    | string | undefined |
-| `newValue`    | any | undefined |
+| `propertyPath`    | string |  |
+| `newValue`    | any |  |
 
 
 ## onPropertyConfigurationComplete
@@ -281,5 +281,5 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `error`    | Error | undefined |
+| `error`    | Error |  |
 

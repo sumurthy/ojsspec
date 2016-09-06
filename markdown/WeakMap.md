@@ -38,7 +38,7 @@ boolean
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key`    | K | undefined |
+| `key`    | K |  |
 
 
 ## clear
@@ -68,7 +68,7 @@ V
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key`    | K | undefined |
+| `key`    | K |  |
 
 
 ## has
@@ -85,7 +85,7 @@ boolean
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key`    | K | undefined |
+| `key`    | K |  |
 
 
 ## set
@@ -102,6 +102,6 @@ WeakMap<K,V>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key`    | K | undefined |
-| `value`    | V | _Optional._undefined |
+| `key`    | K |  |
+| `value`    | V | _Optional._ |
 

@@ -12,6 +12,6 @@ IPropertyPaneField<IPropertyPaneLinkProps>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `targetProperty`    | string | undefined |
-| `properties`    | [IPropertyPaneLinkProps](IPropertyPaneLinkProps.md) | undefined |
+| `targetProperty`    | string |  |
+| `properties`    | [IPropertyPaneLinkProps](IPropertyPaneLinkProps.md) |  |
 

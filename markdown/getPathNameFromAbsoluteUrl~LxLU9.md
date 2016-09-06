@@ -13,5 +13,5 @@ string
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | string | undefined |
+| `url`    | string |  |
 

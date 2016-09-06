@@ -37,7 +37,7 @@ boolean
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | T | undefined |
+| `value`    | T |  |
 
 
 ## clear
@@ -67,7 +67,7 @@ WeakSet<T>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | T | undefined |
+| `value`    | T |  |
 
 
 ## has
@@ -84,5 +84,5 @@ boolean
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | T | undefined |
+| `value`    | T |  |
 

@@ -82,7 +82,7 @@ ServiceScope
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `parent`    | [ServiceScope](ServiceScope.md) | undefined |
+| `parent`    | [ServiceScope](ServiceScope.md) |  |
 
 
 ## consume<T>
@@ -101,7 +101,7 @@ T
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceKey`    | [ServiceKey<T>](ServiceKey.md) | undefined |
+| `serviceKey`    | [ServiceKey<T>](ServiceKey.md) |  |
 
 
 ## createAndProvide<T>
@@ -119,8 +119,8 @@ T;
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceKey`    | [ServiceKey<T>](ServiceKey.md) | undefined |
-| `simpleServiceClass`    | { new (serviceScope: ServiceScope) } | undefined |
+| `serviceKey`    | [ServiceKey<T>](ServiceKey.md) |  |
+| `simpleServiceClass`    | { new (serviceScope: ServiceScope) } |  |
 
 
 ## createDefaultAndProvide<T>
@@ -138,7 +138,7 @@ T
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceKey`    | [ServiceKey<T>](ServiceKey.md) | undefined |
+| `serviceKey`    | [ServiceKey<T>](ServiceKey.md) |  |
 
 
 ## finish
@@ -189,8 +189,8 @@ T
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceKey`    | [ServiceKey<T>](ServiceKey.md) | undefined |
-| `service`    | T | undefined |
+| `serviceKey`    | [ServiceKey<T>](ServiceKey.md) |  |
+| `service`    | T |  |
 
 
 ## startNewChild
@@ -240,5 +240,5 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `callback`    | () => void | undefined |
+| `callback`    | () => void |  |
 

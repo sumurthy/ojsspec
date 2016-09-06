@@ -40,8 +40,8 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `name`    | string | undefined |
-| `value`    | string | undefined |
+| `name`    | string |  |
+| `value`    | string |  |
 
 
 ## delete
@@ -58,7 +58,7 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `name`    | string | undefined |
+| `name`    | string |  |
 
 
 ## get
@@ -75,7 +75,7 @@ string
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `name`    | string | undefined |
+| `name`    | string |  |
 
 
 ## getAll
@@ -92,7 +92,7 @@ Array<string>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `name`    | string | undefined |
+| `name`    | string |  |
 
 
 ## has
@@ -109,7 +109,7 @@ boolean
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `name`    | string | undefined |
+| `name`    | string |  |
 
 
 ## set
@@ -126,8 +126,8 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `name`    | string | undefined |
-| `value`    | string | undefined |
+| `name`    | string |  |
+| `value`    | string |  |
 
 
 ## forEach
@@ -144,6 +144,5 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `callback`    | (value: string | undefined |
-| `name`    | string) => void | undefined |
+| `callback`    | (value: string,name: string) => void |  |
 

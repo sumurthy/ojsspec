@@ -59,7 +59,6 @@ function getLinkForType(type = '') {
     if (type.includes('|')) {
         splitChar = '|'
     }
-
     type.split(splitChar).forEach((e) => {
         if (allTypes.includes(e.trim())) {
             out = out + `[${e}](${Utils.trimGenerics(e)}.md)` + ','
@@ -75,10 +74,7 @@ function getLinkForType(type = '') {
     if (out.endsWith(',')) {
         out = out.substring(0, out.length - 1)
     }
-
     return out
-
-
 }
 
 
@@ -334,7 +330,7 @@ function addRegions(tline = '', type = '') {
     Object.keys(o).forEach((e) => {
         var mline = dclone(tline).substr(1)
         mline = mline.replace('%name%', e.split('~')[0])
-        mline = mline.replace('%type%', o[e]['dataType'])
+        mline = mline.replace('%type%', `${getLinkForType(o[e]['dataType'])}`)
 
         mline = mline.replace('%link%', `${e}`)
             //Get first sentence

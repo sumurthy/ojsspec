@@ -82,7 +82,7 @@ IODataBasePermission
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | [IODataBasePermission](IODataBasePermission.md) | undefined |
+| `value`    | [IODataBasePermission](IODataBasePermission.md) |  |
 
 
 ## hasAllPermissions
@@ -99,7 +99,7 @@ boolean
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `...requestedPerms`    | SPPermission[] | undefined |
+| `...requestedPerms`    | SPPermission[] |  |
 
 
 ## hasAnyPermissions
@@ -116,7 +116,7 @@ boolean
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `...requestedPerms`    | SPPermission[] | undefined |
+| `...requestedPerms`    | SPPermission[] |  |
 
 
 ## hasPermission
@@ -133,5 +133,5 @@ boolean
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `requestedPerm`    | [SPPermission](SPPermission.md) | undefined |
+| `requestedPerm`    | [SPPermission](SPPermission.md) |  |
 

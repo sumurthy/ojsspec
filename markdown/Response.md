@@ -47,8 +47,8 @@ ResponseInit
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `body`    | BodyInit | _Optional._undefined |
-| `init`    | [ResponseInit](ResponseInit.md) | _Optional._undefined |
+| `body`    | BodyInit | _Optional._ |
+| `init`    | [ResponseInit](ResponseInit.md) | _Optional._ |
 
 
 ## error
@@ -78,8 +78,8 @@ Response
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | string | undefined |
-| `status`    | number | undefined |
+| `url`    | string |  |
+| `status`    | number |  |
 
 
 ## clone

@@ -19,12 +19,14 @@
           {
             "name": "callback",
             "dataType": "(resolve: (value?: R | Thenable<R>) => void",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           },
           {
             "name": "reject",
             "dataType": "(error?: any) => void) => void",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           }
         ]
       },
@@ -41,12 +43,14 @@
           {
             "name": "onFulfilled",
             "dataType": "(value: R) => U | Thenable<U>",
-            "isOptional": true
+            "isOptional": true,
+            "descr": ""
           },
           {
             "name": "onRejected",
             "dataType": "(error: any) => void",
-            "isOptional": true
+            "isOptional": true,
+            "descr": ""
           }
         ]
       },
@@ -63,7 +67,8 @@
           {
             "name": "onRejected",
             "dataType": "(error: any) => U | Thenable<U>",
-            "isOptional": true
+            "isOptional": true,
+            "descr": ""
           }
         ]
       }

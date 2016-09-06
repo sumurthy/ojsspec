@@ -46,7 +46,7 @@ ServiceScope
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceScope`    | [ServiceScope](ServiceScope.md) | undefined |
+| `serviceScope`    | [ServiceScope](ServiceScope.md) |  |
 
 
 ## fetch
@@ -66,8 +66,8 @@ Promise<Response>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | string | undefined |
-| `options`    | [IBasicHttpClientOptions](IBasicHttpClientOptions.md) | undefined |
+| `url`    | string |  |
+| `options`    | [IBasicHttpClientOptions](IBasicHttpClientOptions.md) |  |
 
 
 ## fetchCore
@@ -87,7 +87,7 @@ Promise<Response>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `request`    | [Request](Request.md) | undefined |
+| `request`    | [Request](Request.md) |  |
 
 
 ## get
@@ -104,8 +104,8 @@ Promise<Response>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | string | undefined |
-| `options`    | [IBasicHttpClientOptions](IBasicHttpClientOptions.md) | _Optional._undefined |
+| `url`    | string |  |
+| `options`    | [IBasicHttpClientOptions](IBasicHttpClientOptions.md) | _Optional._ |
 
 
 ## post
@@ -122,6 +122,6 @@ Promise<Response>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | string | undefined |
-| `options`    | [IBasicHttpClientOptions](IBasicHttpClientOptions.md) | undefined |
+| `url`    | string |  |
+| `options`    | [IBasicHttpClientOptions](IBasicHttpClientOptions.md) |  |
 

@@ -19,12 +19,14 @@
           {
             "name": "onFulfilled",
             "dataType": "(value: R) => U | Thenable<U>",
-            "isOptional": true
+            "isOptional": true,
+            "descr": ""
           },
           {
             "name": "onRejected",
             "dataType": "(error: any) => void",
-            "isOptional": true
+            "isOptional": true,
+            "descr": ""
           }
         ]
       }

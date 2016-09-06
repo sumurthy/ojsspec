@@ -12,6 +12,6 @@ IPropertyPaneField<IPropertyPaneChoiceGroupProps>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `targetProperty`    | string | undefined |
-| `properties`    | [IPropertyPaneChoiceGroupProps](IPropertyPaneChoiceGroupProps.md) | undefined |
+| `targetProperty`    | string |  |
+| `properties`    | [IPropertyPaneChoiceGroupProps](IPropertyPaneChoiceGroupProps.md) |  |
 

@@ -39,8 +39,8 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | string | undefined |
-| `variableName`    | string | undefined |
+| `value`    | string |  |
+| `variableName`    | string |  |
 
 
 ## isNotNullOrUndefined
@@ -57,8 +57,8 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | any | undefined |
-| `variableName`    | string | undefined |
+| `value`    | any |  |
+| `variableName`    | string |  |
 
 
 ## isTrue
@@ -75,6 +75,6 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | boolean | undefined |
-| `variableName`    | string | undefined |
+| `value`    | boolean |  |
+| `variableName`    | string |  |
 

@@ -151,7 +151,7 @@ function processLines(element = '', index = 0, lines = []) {
     if (line.includes(' = ') && line.includes(':')) {
         hasAssignment = true
         assignValue = line.split(' = ').pop()
-        line = line.split(' = ').slice(0, -1).join()
+        line = line.split(' = ').slice(0, -1).join('')
     }
 
     // if (line.includes(BLOCK_BEGIN) && line.includes(BLOCK_END)) {

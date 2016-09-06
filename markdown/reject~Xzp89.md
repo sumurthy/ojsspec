@@ -12,5 +12,5 @@ Promise<any>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `error`    | any | undefined |
+| `error`    | any |  |
 

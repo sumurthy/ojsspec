@@ -12,6 +12,6 @@ IPropertyPaneField<IPropertyPaneDropdownProps>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `targetProperty`    | string | undefined |
-| `properties`    | [IPropertyPaneDropdownProps](IPropertyPaneDropdownProps.md) | undefined |
+| `targetProperty`    | string |  |
+| `properties`    | [IPropertyPaneDropdownProps](IPropertyPaneDropdownProps.md) |  |
 

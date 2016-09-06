@@ -12,7 +12,8 @@
       {
         "name": "...url",
         "dataType": "string[]",
-        "isOptional": false
+        "isOptional": false,
+        "descr": ""
       }
     ]
   },
@@ -29,7 +30,8 @@
       {
         "name": "url",
         "dataType": "string",
-        "isOptional": false
+        "isOptional": false,
+        "descr": ""
       }
     ]
   },
@@ -46,12 +48,14 @@
       {
         "name": "targetProperty",
         "dataType": "string",
-        "isOptional": false
+        "isOptional": false,
+        "descr": ""
       },
       {
         "name": "properties",
         "dataType": "IPropertyPaneButtonProps",
-        "isOptional": false
+        "isOptional": false,
+        "descr": ""
       }
     ]
   },
@@ -68,12 +72,14 @@
       {
         "name": "targetProperty",
         "dataType": "string",
-        "isOptional": false
+        "isOptional": false,
+        "descr": ""
       },
       {
         "name": "properties",
         "dataType": "IPropertyPaneCheckboxProps",
-        "isOptional": false
+        "isOptional": false,
+        "descr": ""
       }
     ]
   },
@@ -90,12 +96,14 @@
       {
         "name": "targetProperty",
         "dataType": "string",
-        "isOptional": false
+        "isOptional": false,
+        "descr": ""
       },
       {
         "name": "properties",
         "dataType": "IPropertyPaneChoiceGroupProps",
-        "isOptional": false
+        "isOptional": false,
+        "descr": ""
       }
     ]
   },
@@ -112,12 +120,14 @@
       {
         "name": "targetProperty",
         "dataType": "string",
-        "isOptional": false
+        "isOptional": false,
+        "descr": ""
       },
       {
         "name": "properties",
         "dataType": "IPropertyPaneCustomFieldProps",
-        "isOptional": false
+        "isOptional": false,
+        "descr": ""
       }
     ]
   },
@@ -134,12 +144,14 @@
       {
         "name": "targetProperty",
         "dataType": "string",
-        "isOptional": false
+        "isOptional": false,
+        "descr": ""
       },
       {
         "name": "properties",
         "dataType": "IPropertyPaneDropdownProps",
-        "isOptional": false
+        "isOptional": false,
+        "descr": ""
       }
     ]
   },
@@ -167,12 +179,14 @@
       {
         "name": "targetProperty",
         "dataType": "string",
-        "isOptional": false
+        "isOptional": false,
+        "descr": ""
       },
       {
         "name": "properties",
         "dataType": "IPropertyPaneLabelProps",
-        "isOptional": false
+        "isOptional": false,
+        "descr": ""
       }
     ]
   },
@@ -189,12 +203,14 @@
       {
         "name": "targetProperty",
         "dataType": "string",
-        "isOptional": false
+        "isOptional": false,
+        "descr": ""
       },
       {
         "name": "properties",
         "dataType": "IPropertyPaneLinkProps",
-        "isOptional": false
+        "isOptional": false,
+        "descr": ""
       }
     ]
   },
@@ -211,12 +227,14 @@
       {
         "name": "targetProperty",
         "dataType": "string",
-        "isOptional": false
+        "isOptional": false,
+        "descr": ""
       },
       {
         "name": "properties",
         "dataType": "IPropertyPaneSliderProps",
-        "isOptional": false
+        "isOptional": false,
+        "descr": ""
       }
     ]
   },
@@ -233,12 +251,14 @@
       {
         "name": "targetProperty",
         "dataType": "string",
-        "isOptional": false
+        "isOptional": false,
+        "descr": ""
       },
       {
         "name": "properties",
         "dataType": "IPropertyPaneTextFieldProps",
-        "isOptional": false
+        "isOptional": false,
+        "descr": ""
       }
     ]
   },
@@ -255,12 +275,14 @@
       {
         "name": "targetProperty",
         "dataType": "string",
-        "isOptional": false
+        "isOptional": false,
+        "descr": ""
       },
       {
         "name": "properties",
         "dataType": "IPropertyPaneToggleProps",
-        "isOptional": false
+        "isOptional": false,
+        "descr": ""
       }
     ]
   }

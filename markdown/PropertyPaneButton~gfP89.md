@@ -12,6 +12,6 @@ IPropertyPaneField<IPropertyPaneButtonProps>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `targetProperty`    | string | undefined |
-| `properties`    | [IPropertyPaneButtonProps](IPropertyPaneButtonProps.md) | undefined |
+| `targetProperty`    | string |  |
+| `properties`    | [IPropertyPaneButtonProps](IPropertyPaneButtonProps.md) |  |
 

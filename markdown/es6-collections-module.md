@@ -27,8 +27,8 @@
 
 | Variable	   | Type|
 |:-----------|:------------|
-|Map   | MapConstructor |
-|Set   | SetConstructor |
-|WeakMap   | WeakMapConstructor |
-|WeakSet   | WeakSetConstructor |
+|Map   | [MapConstructor](MapConstructor.md) |
+|Set   | [SetConstructor](SetConstructor.md) |
+|WeakMap   | [WeakMapConstructor](WeakMapConstructor.md) |
+|WeakSet   | [WeakSetConstructor](WeakSetConstructor.md) |
 

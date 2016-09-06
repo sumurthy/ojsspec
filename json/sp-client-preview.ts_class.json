@@ -120,7 +120,8 @@
           {
             "name": "ctx",
             "dataType": "IWebPartContext",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           }
         ]
       },
@@ -148,7 +149,8 @@
           {
             "name": "refreshOnly",
             "dataType": "boolean",
-            "isOptional": true
+            "isOptional": true,
+            "descr": ""
           }
         ]
       },
@@ -165,7 +167,8 @@
           {
             "name": "data",
             "dataType": "IWebPartData",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           }
         ]
       },
@@ -204,7 +207,8 @@
           {
             "name": "oldDisplayMode",
             "dataType": "DisplayMode",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           }
         ]
       },
@@ -232,12 +236,14 @@
           {
             "name": "propertyPath",
             "dataType": "string",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           },
           {
             "name": "newValue",
             "dataType": "any",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           }
         ]
       },
@@ -298,7 +304,8 @@
           {
             "name": "error",
             "dataType": "Error",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           }
         ]
       }

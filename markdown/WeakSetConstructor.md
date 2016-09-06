@@ -22,11 +22,11 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[new<T>](#new<t>~6qpu9)      | [WeakSet<T>](WeakSet.md) |  |
+|[constructor<T>](#constructor<t>~xwmg9)      | [WeakSet<T>](WeakSet.md) |  |
 
 
 
-## new<T>
+## constructor<T>
 
 
 
@@ -40,5 +40,5 @@ WeakSet<T>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `iterable`    | [ForEachable<T>](ForEachable.md) | undefined |
+| `iterable`    | [ForEachable<T>](ForEachable.md) |  |
 

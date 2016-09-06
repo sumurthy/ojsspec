@@ -38,6 +38,6 @@ boolean
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `objA`    | Object | undefined |
-| `objB`    | Object | undefined |
+| `objA`    | Object |  |
+| `objB`    | Object |  |
 

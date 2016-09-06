@@ -44,7 +44,7 @@ string
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | string | undefined |
+| `value`    | string |  |
 
 
 ## removeEndSlash
@@ -66,5 +66,5 @@ string
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | string | undefined |
+| `url`    | string |  |
 

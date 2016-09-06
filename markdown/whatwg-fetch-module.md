@@ -37,9 +37,9 @@
 
 | Name	   |  Type |
 |:-----------|:------------|
-|HeaderInit   | undefined |
-|BodyInit   | undefined |
-|RequestInfo   | undefined |
+|HeaderInit   |  |
+|BodyInit   |  |
+|RequestInfo   |  |
 
 
 

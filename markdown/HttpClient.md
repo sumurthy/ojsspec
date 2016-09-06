@@ -44,7 +44,7 @@ ServiceScope
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceScope`    | [ServiceScope](ServiceScope.md) | undefined |
+| `serviceScope`    | [ServiceScope](ServiceScope.md) |  |
 
 
 ## beginBatch
@@ -62,7 +62,7 @@ ODataBatch
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `batchOptions`    | [IODataBatchOptions](IODataBatchOptions.md) | _Optional._undefined |
+| `batchOptions`    | [IODataBatchOptions](IODataBatchOptions.md) | _Optional._ |
 
 
 ## fetch
@@ -97,8 +97,8 @@ Promise<Response>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | string | undefined |
-| `options`    | [IHttpClientOptions](IHttpClientOptions.md) | undefined |
+| `url`    | string |  |
+| `options`    | [IHttpClientOptions](IHttpClientOptions.md) |  |
 
 
 ## get
@@ -115,8 +115,8 @@ Promise<Response>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | string | undefined |
-| `options`    | [IHttpClientOptions](IHttpClientOptions.md) | _Optional._undefined |
+| `url`    | string |  |
+| `options`    | [IHttpClientOptions](IHttpClientOptions.md) | _Optional._ |
 
 
 ## getWebUrlFromRequestUrl
@@ -140,7 +140,7 @@ string
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `requestUrl`    | string | undefined |
+| `requestUrl`    | string |  |
 
 
 ## post
@@ -157,6 +157,6 @@ Promise<Response>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | string | undefined |
-| `options`    | [IHttpClientOptions](IHttpClientOptions.md) | undefined |
+| `url`    | string |  |
+| `options`    | [IHttpClientOptions](IHttpClientOptions.md) |  |
 

@@ -45,6 +45,6 @@ RequestInit
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `input`    | string,[Request](Request.md) | undefined |
-| `init`    | [RequestInit](RequestInit.md) | _Optional._undefined |
+| `input`    | string,[Request](Request.md) |  |
+| `init`    | [RequestInit](RequestInit.md) | _Optional._ |
 

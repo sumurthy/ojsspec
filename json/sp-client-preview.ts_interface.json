@@ -19,7 +19,8 @@
           {
             "name": "domElement",
             "dataType": "HTMLElement",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           }
         ]
       },
@@ -36,7 +37,8 @@
           {
             "name": "domElement",
             "dataType": "Element",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           }
         ]
       },
@@ -53,12 +55,14 @@
           {
             "name": "domElement",
             "dataType": "Element",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           },
           {
             "name": "loadingMessage",
             "dataType": "string",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           }
         ]
       },
@@ -75,12 +79,14 @@
           {
             "name": "domElement",
             "dataType": "HTMLElement",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           },
           {
             "name": "error",
             "dataType": "Error | string",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           }
         ]
       }

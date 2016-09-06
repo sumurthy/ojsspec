@@ -12,7 +12,8 @@
       {
         "name": "value",
         "dataType": "R | Thenable<R>",
-        "isOptional": true
+        "isOptional": true,
+        "descr": ""
       }
     ]
   },
@@ -29,7 +30,8 @@
       {
         "name": "error",
         "dataType": "any",
-        "isOptional": false
+        "isOptional": false,
+        "descr": ""
       }
     ]
   },
@@ -46,7 +48,8 @@
       {
         "name": "promises",
         "dataType": "(R | Thenable<R>)[]",
-        "isOptional": false
+        "isOptional": false,
+        "descr": ""
       }
     ]
   },
@@ -63,7 +66,8 @@
       {
         "name": "promises",
         "dataType": "(R | Thenable<R>)[]",
-        "isOptional": false
+        "isOptional": false,
+        "descr": ""
       }
     ]
   }

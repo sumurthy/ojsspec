@@ -80,12 +80,14 @@
           {
             "name": "input",
             "dataType": "string|Request",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           },
           {
             "name": "init",
             "dataType": "RequestInit",
-            "isOptional": true
+            "isOptional": true,
+            "descr": ""
           }
         ]
       }
@@ -112,12 +114,14 @@
           {
             "name": "name",
             "dataType": "string",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           },
           {
             "name": "value",
             "dataType": "string",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           }
         ]
       },
@@ -134,7 +138,8 @@
           {
             "name": "name",
             "dataType": "string",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           }
         ]
       },
@@ -151,7 +156,8 @@
           {
             "name": "name",
             "dataType": "string",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           }
         ]
       },
@@ -168,7 +174,8 @@
           {
             "name": "name",
             "dataType": "string",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           }
         ]
       },
@@ -185,7 +192,8 @@
           {
             "name": "name",
             "dataType": "string",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           }
         ]
       },
@@ -202,12 +210,14 @@
           {
             "name": "name",
             "dataType": "string",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           },
           {
             "name": "value",
             "dataType": "string",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           }
         ]
       },
@@ -223,13 +233,9 @@
         "params": [
           {
             "name": "callback",
-            "dataType": "(value: string",
-            "isOptional": false
-          },
-          {
-            "name": "name",
-            "dataType": "string) => void",
-            "isOptional": false
+            "dataType": "(value: string,name: string) => void",
+            "isOptional": false,
+            "descr": ""
           }
         ]
       }
@@ -394,12 +400,14 @@
           {
             "name": "body",
             "dataType": "BodyInit",
-            "isOptional": true
+            "isOptional": true,
+            "descr": ""
           },
           {
             "name": "init",
             "dataType": "ResponseInit",
-            "isOptional": true
+            "isOptional": true,
+            "descr": ""
           }
         ]
       },
@@ -427,12 +435,14 @@
           {
             "name": "url",
             "dataType": "string",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           },
           {
             "name": "status",
             "dataType": "number",
-            "isOptional": false
+            "isOptional": false,
+            "descr": ""
           }
         ]
       },

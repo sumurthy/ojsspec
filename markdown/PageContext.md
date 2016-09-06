@@ -48,5 +48,5 @@ ServiceScope
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceScope`    | [ServiceScope](ServiceScope.md) | undefined |
+| `serviceScope`    | [ServiceScope](ServiceScope.md) |  |
 

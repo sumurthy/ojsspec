@@ -43,12 +43,42 @@ var self = module.exports = {
         random = random.slice(-5).replace(/\W+/g, '9')
         return random
     },
+    replaceCommaInGenerics: (line='') => {
+        var open = false
+        var replaced = false
+        var out = []
+
+        for (var i = 0, len = line.length; i < len; i++) {
+            if (line[i] === '<') open = true
+
+            if (line[i] === '>') open = false
+
+            if (line[i] === '(') {
+                open = true
+            }
+            if (line[i] === ')') {
+                open = false
+            }
+            if (open && line[i] === ',') {
+                out[i] = '^'
+                replaced = true
+            } else {
+                out[i] = line[i]
+            }
+
+        }
+        if (replaced) {
+            console.log('<<< ' + line);
+            console.log('>>> ' + out.join('')); }
+        return out.join('')
+    },
     /**
      * Build param list
      * @param  {String} [line='']         [description]
      * @param  {Array}  [paramComment=[]] [description]
      * @return {[type]}                   [description]
      */
+
     buildParamList: (line = '', paramComment = []) => {
         var out = []
         // var p = BETWEEN_BRACKETS.exec(line)
@@ -56,12 +86,13 @@ var self = module.exports = {
         if (!p) {
             return out
         }
+        p = self.replaceCommaInGenerics(p)
         var parray = p.split(',').map((_) => _.trim()) //between brackets list
         // Build a parameter object.
         parray.forEach((e) => {
             var fp = {}
-            fp['name'] = e.substring(0, e.indexOf(':')).replace('?', '').trim()
-            fp['dataType'] = e.substring((e.indexOf(':') + 1)).trim()
+            fp['name'] = e.substring(0, e.indexOf(':')).replace('?', '').replace(/\^/g, ',').trim()
+            fp['dataType'] = e.substring((e.indexOf(':') + 1)).replace(/\^/g, ',').trim()
             if (!fp['dataType']) {
                 fp['dataType'] = null
             }
@@ -69,6 +100,7 @@ var self = module.exports = {
             if (e.substring(0, e.indexOf(':')).includes('?')) {
                 fp['isOptional'] = true
             }
+            fp['descr'] = ''
             // For each element, determine if there is a @param description. If so, add description element to function object
             if (paramComment.length > 0) {
                 paramComment.forEach((d) => {
@@ -151,7 +183,7 @@ var self = module.exports = {
         if (!withOptional) name = name.replace('?', '')
         name = name.replace(':', '')
         name = name.replace(/\s+/g, '') //remove spaces
-        if (name === 'new') {
+        if (name.startsWith('new')) {
             name = name.replace('new', 'constructor')
         }
         //name = name + '~' + (Math.floor(Math.random() * 90000) + 10000)

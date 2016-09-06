@@ -45,9 +45,9 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `webUrl`    | string | undefined |
-| `digestValue`    | string | undefined |
-| `expirationTimestamp`    | number | undefined |
+| `webUrl`    | string |  |
+| `digestValue`    | string |  |
+| `expirationTimestamp`    | number |  |
 
 
 ## clearAllDigests
@@ -77,7 +77,7 @@ boolean
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `webUrl`    | string | undefined |
+| `webUrl`    | string |  |
 
 
 ## fetchDigest
@@ -94,5 +94,5 @@ Promise<string>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `webUrl`    | string | undefined |
+| `webUrl`    | string |  |
 

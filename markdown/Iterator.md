@@ -36,7 +36,7 @@ IteratorResult<T>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | any | _Optional._undefined |
+| `value`    | any | _Optional._ |
 
 
 ## return
@@ -53,7 +53,7 @@ IteratorResult<T>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | any | _Optional._undefined |
+| `value`    | any | _Optional._ |
 
 
 ## throw
@@ -70,5 +70,5 @@ IteratorResult<T>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `e`    | any | _Optional._undefined |
+| `e`    | any | _Optional._ |
 

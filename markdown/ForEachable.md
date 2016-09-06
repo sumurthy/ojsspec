@@ -34,5 +34,5 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `callbackfn`    | (value: T) => void | undefined |
+| `callbackfn`    | (value: T) => void |  |
 
