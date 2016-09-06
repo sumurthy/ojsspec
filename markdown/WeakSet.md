@@ -16,10 +16,10 @@ _Type parameters: `<T>`_
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`delete`](#delete)      | boolean |  |
-|[`clear`](#clear)      | void |  |
+|[`delete`](#delete)      | `boolean` |  |
+|[`clear`](#clear)      | `void` |  |
 |[`add`](#add)      | [`WeakSet<T>`](WeakSet.md) |  |
-|[`has`](#has)      | boolean |  |
+|[`has`](#has)      | `boolean` |  |
 
 
 
@@ -31,14 +31,14 @@ _Type parameters: `<T>`_
 `delete(value: T): boolean`
 
 #### Returns
-boolean
+`boolean`
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | T |  |
+| `value`    | `T` |  |
 
 
 ## clear
@@ -49,7 +49,7 @@ boolean
 `clear(): void`
 
 #### Returns
-void
+`void`
 
 #### Parameters
 None
@@ -70,7 +70,7 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | T |  |
+| `value`    | `T` |  |
 
 
 ## has
@@ -81,12 +81,12 @@ None
 `has(value: T): boolean`
 
 #### Returns
-boolean
+`boolean`
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | T |  |
+| `value`    | `T` |  |
 

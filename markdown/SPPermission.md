@@ -61,9 +61,9 @@ https:
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
 |[`constructor`](#constructor)     | `public` | [`IODataBasePermission`](IODataBasePermission.md) |  |
-|[`hasAllPermissions`](#hasallpermissions)     | `public` | boolean | Function for determining if a given permission mask has all of the requested permissions |
-|[`hasAnyPermissions`](#hasanypermissions)     | `public` | boolean | Function for determining if a given permission mask has any of the requested permissions |
-|[`hasPermission`](#haspermission)     | `public` | boolean | Function for checking if a given permission mask has the requested permission |
+|[`hasAllPermissions`](#hasallpermissions)     | `public` | `boolean` | Function for determining if a given permission mask has all of the requested permissions |
+|[`hasAnyPermissions`](#hasanypermissions)     | `public` | `boolean` | Function for determining if a given permission mask has any of the requested permissions |
+|[`hasPermission`](#haspermission)     | `public` | `boolean` | Function for checking if a given permission mask has the requested permission |
 
 
 
@@ -94,14 +94,14 @@ Function for determining if a given permission mask has all of the requested per
 `public hasAllPermissions(...requestedPerms: SPPermission[]): boolean`
 
 #### Returns
-boolean
+`boolean`
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `...requestedPerms`    | SPPermission[] |  |
+| `...requestedPerms`    | `SPPermission[]` |  |
 
 
 ## hasAnyPermissions
@@ -112,14 +112,14 @@ Function for determining if a given permission mask has any of the requested per
 `public hasAnyPermissions(...requestedPerms: SPPermission[]): boolean`
 
 #### Returns
-boolean
+`boolean`
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `...requestedPerms`    | SPPermission[] |  |
+| `...requestedPerms`    | `SPPermission[]` |  |
 
 
 ## hasPermission
@@ -130,7 +130,7 @@ Function for checking if a given permission mask has the requested permission.
 `public hasPermission(requestedPerm: SPPermission): boolean`
 
 #### Returns
-boolean
+`boolean`
 
 #### Parameters
 

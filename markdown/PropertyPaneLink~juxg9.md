@@ -13,6 +13,6 @@ Helper method to create a Link on the PropertyPane.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `targetProperty`    | string |  |
+| `targetProperty`    | `string` |  |
 | `properties`    | [`IPropertyPaneLinkProps`](IPropertyPaneLinkProps.md) |  |
 

@@ -49,8 +49,8 @@
 
 | Function	   | Returns | Description |
 |:-------------|:------|:---------------|
-| [combineURLPaths](combineURLPaths~vm409.md) |`string `   | Combines any number of URL paths  |
-| [getPathNameFromAbsoluteUrl](getPathNameFromAbsoluteUrl~LxLU9.md) |`string `   | Get's the path name from an absolute url  |
+| [combineURLPaths](combineURLPaths~vm409.md) |``string` `   | Combines any number of URL paths  |
+| [getPathNameFromAbsoluteUrl](getPathNameFromAbsoluteUrl~LxLU9.md) |``string` `   | Get's the path name from an absolute url  |
 | [PropertyPaneButton](PropertyPaneButton~gfP89.md) |`[`IPropertyPaneField<IPropertyPaneButtonProps>`](IPropertyPaneField.md) `   | Helper method to create a Button on the PropertyPane  |
 | [PropertyPaneCheckbox](PropertyPaneCheckbox~V0849.md) |`[`IPropertyPaneField<IPropertyPaneCheckboxProps>`](IPropertyPaneField.md) `   | Helper method to create a Checkbox on the PropertyPane  |
 | [PropertyPaneChoiceGroup](PropertyPaneChoiceGroup~jUI09.md) |`[`IPropertyPaneField<IPropertyPaneChoiceGroupProps>`](IPropertyPaneField.md) `   | Helper method to create a Choice Group on the PropertyPane  |

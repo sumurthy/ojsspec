@@ -17,9 +17,9 @@ introduced without inadvertently breaking components that are loaded by an older
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|`defaultCreator`     | `public` | ServiceCreator<T> | your application |
-|`id`     | `public` | string | your application |
-|`name`     | `public` | string | your application |
+|`defaultCreator`     | `public` | `ServiceCreator<T>` | your application |
+|`id`     | `public` | `string` | your application |
+|`name`     | `public` | `string` | your application |
 
 
 
@@ -28,7 +28,7 @@ introduced without inadvertently breaking components that are loaded by an older
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`constructor`](#constructor)     | `public` | ServiceCreator<T> | PRIVATE - Do not call this from your own code |
+|[`constructor`](#constructor)     | `public` | `ServiceCreator<T>` | PRIVATE - Do not call this from your own code |
 |[`create<T>`](#create<t>)     | `public, _static_` | [`ServiceKey<T>;`](ServiceKey.md) | your application |
 |[`createCustom<T>`](#createcustom<t>)     | `public, _static_` | [`ServiceKey<T>`](ServiceKey.md) | your application |
 
@@ -43,16 +43,16 @@ PRIVATE - Do not call this from your own code.
 `constructor(id: string,name: string,defaultCreator: ServiceCreator<T>)`
 
 #### Returns
-ServiceCreator<T>
+`ServiceCreator<T>`
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `id`    | string |  |
-| `name`    | string |  |
-| `defaultCreator`    | ServiceCreator<T> |  |
+| `id`    | `string` |  |
+| `name`    | `string` |  |
+| `defaultCreator`    | `ServiceCreator<T>` |  |
 
 
 ## create<T>
@@ -70,8 +70,8 @@ your application.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `name`    | string |  |
-| `serviceClass`    | { new (serviceScope: ServiceScope) } |  |
+| `name`    | `string` |  |
+| `serviceClass`    | `{ new (serviceScope: ServiceScope) }` |  |
 
 
 ## createCustom<T>
@@ -89,6 +89,6 @@ your application.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `name`    | string |  |
-| `defaultCreator`    | ServiceCreator<T> |  |
+| `name`    | `string` |  |
+| `defaultCreator`    | `ServiceCreator<T>` |  |
 

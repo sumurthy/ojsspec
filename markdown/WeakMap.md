@@ -16,10 +16,10 @@ _Type parameters: `<K,V>`_
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`delete`](#delete)      | boolean |  |
-|[`clear`](#clear)      | void |  |
-|[`get`](#get)      | V |  |
-|[`has`](#has)      | boolean |  |
+|[`delete`](#delete)      | `boolean` |  |
+|[`clear`](#clear)      | `void` |  |
+|[`get`](#get)      | `V` |  |
+|[`has`](#has)      | `boolean` |  |
 |[`set`](#set)      | [`WeakMap<K,V>`](WeakMap.md) |  |
 
 
@@ -32,14 +32,14 @@ _Type parameters: `<K,V>`_
 `delete(key: K): boolean`
 
 #### Returns
-boolean
+`boolean`
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key`    | K |  |
+| `key`    | `K` |  |
 
 
 ## clear
@@ -50,7 +50,7 @@ boolean
 `clear(): void`
 
 #### Returns
-void
+`void`
 
 #### Parameters
 None
@@ -64,14 +64,14 @@ None
 `get(key: K): V`
 
 #### Returns
-V
+`V`
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key`    | K |  |
+| `key`    | `K` |  |
 
 
 ## has
@@ -82,14 +82,14 @@ V
 `has(key: K): boolean`
 
 #### Returns
-boolean
+`boolean`
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key`    | K |  |
+| `key`    | `K` |  |
 
 
 ## set
@@ -107,6 +107,6 @@ boolean
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key`    | K |  |
-| `value`    | V | _Optional._ |
+| `key`    | `K` |  |
+| `value`    | `V` | _Optional._ |
 

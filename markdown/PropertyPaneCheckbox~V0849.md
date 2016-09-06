@@ -13,6 +13,6 @@ Helper method to create a Checkbox on the PropertyPane.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `targetProperty`    | string |  |
+| `targetProperty`    | `string` |  |
 | `properties`    | [`IPropertyPaneCheckboxProps`](IPropertyPaneCheckboxProps.md) |  |
 

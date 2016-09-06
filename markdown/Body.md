@@ -12,7 +12,7 @@
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|`boolean`     | `bodyUsed:` | boolean |  |
+|`boolean`     | `bodyUsed:` | `boolean` |  |
 
 
 

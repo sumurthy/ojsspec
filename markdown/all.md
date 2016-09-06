@@ -15,5 +15,5 @@ The fulfillment value is an array (in order) of fulfillment values. The rejectio
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `promises`    | (R ,[` Thenable<R>)[]`](Thenable.md) |  |
+| `promises`    | `(R `,[` Thenable<R>)[]`](Thenable.md) |  |
 

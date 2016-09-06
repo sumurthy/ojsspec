@@ -68,7 +68,7 @@ https:
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | string |  |
+| `url`    | `string` |  |
 | `options`    | [`IBasicHttpClientOptions`](IBasicHttpClientOptions.md) |  |
 
 
@@ -108,7 +108,7 @@ Calls fetch(),but sets the method to 'GET'.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | string |  |
+| `url`    | `string` |  |
 | `options`    | [`IBasicHttpClientOptions`](IBasicHttpClientOptions.md) | _Optional._ |
 
 
@@ -127,6 +127,6 @@ Calls fetch(),but sets the method to 'POST'.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | string |  |
+| `url`    | `string` |  |
 | `options`    | [`IBasicHttpClientOptions`](IBasicHttpClientOptions.md) |  |
 

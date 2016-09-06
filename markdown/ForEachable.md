@@ -16,7 +16,7 @@ _Type parameters: `<T>`_
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`forEach`](#foreach)      | void |  |
+|[`forEach`](#foreach)      | `void` |  |
 
 
 
@@ -28,12 +28,12 @@ _Type parameters: `<T>`_
 `forEach(callbackfn: (value: T) => void): void`
 
 #### Returns
-void
+`void`
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `callbackfn`    | (value: T) => void |  |
+| `callbackfn`    | `(value: T) => void` |  |
 

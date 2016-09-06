@@ -15,13 +15,13 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`append`](#append)     | `public` | void |  |
-|[`delete`](#delete)     | `public` | void |  |
-|[`get`](#get)     | `public` | string |  |
-|[`getAll`](#getall)     | `public` | Array<string> |  |
-|[`has`](#has)     | `public` | boolean |  |
-|[`set`](#set)     | `public` | void |  |
-|[`forEach`](#foreach)     | `public` | void |  |
+|[`append`](#append)     | `public` | `void` |  |
+|[`delete`](#delete)     | `public` | `void` |  |
+|[`get`](#get)     | `public` | `string` |  |
+|[`getAll`](#getall)     | `public` | `Array<string>` |  |
+|[`has`](#has)     | `public` | `boolean` |  |
+|[`set`](#set)     | `public` | `void` |  |
+|[`forEach`](#foreach)     | `public` | `void` |  |
 
 
 
@@ -34,15 +34,15 @@
 `append(name: string,value: string): void`
 
 #### Returns
-void
+`void`
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `name`    | string |  |
-| `value`    | string |  |
+| `name`    | `string` |  |
+| `value`    | `string` |  |
 
 
 ## delete
@@ -53,14 +53,14 @@ void
 `delete(name: string):void`
 
 #### Returns
-void
+`void`
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `name`    | string |  |
+| `name`    | `string` |  |
 
 
 ## get
@@ -71,14 +71,14 @@ void
 `get(name: string): string`
 
 #### Returns
-string
+`string`
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `name`    | string |  |
+| `name`    | `string` |  |
 
 
 ## getAll
@@ -89,14 +89,14 @@ string
 `getAll(name: string): Array<string>`
 
 #### Returns
-Array<string>
+`Array<string>`
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `name`    | string |  |
+| `name`    | `string` |  |
 
 
 ## has
@@ -107,14 +107,14 @@ Array<string>
 `has(name: string): boolean`
 
 #### Returns
-boolean
+`boolean`
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `name`    | string |  |
+| `name`    | `string` |  |
 
 
 ## set
@@ -125,15 +125,15 @@ boolean
 `set(name: string,value: string): void`
 
 #### Returns
-void
+`void`
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `name`    | string |  |
-| `value`    | string |  |
+| `name`    | `string` |  |
+| `value`    | `string` |  |
 
 
 ## forEach
@@ -144,12 +144,12 @@ void
 `forEach(callback: (value: string,name: string) => void): void`
 
 #### Returns
-void
+`void`
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `callback`    | (value: string,name: string) => void |  |
+| `callback`    | `(value: string,name: string) => void` |  |
 

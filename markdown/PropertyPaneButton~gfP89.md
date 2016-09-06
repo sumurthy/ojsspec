@@ -13,6 +13,6 @@ Helper method to create a Button on the PropertyPane.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `targetProperty`    | string |  |
+| `targetProperty`    | `string` |  |
 | `properties`    | [`IPropertyPaneButtonProps`](IPropertyPaneButtonProps.md) |  |
 

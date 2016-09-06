@@ -21,9 +21,9 @@ of time. For more information, see the MSDN article
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`addDigestToCache`](#adddigesttocache)      | void | the digest value will no longer be valid |
-|[`clearAllDigests`](#clearalldigests)      | void | Clears all values from the cache |
-|[`clearDigest`](#cleardigest)      | boolean | This may be a server-relative or absolute URL |
+|[`addDigestToCache`](#adddigesttocache)      | `void` | the digest value will no longer be valid |
+|[`clearAllDigests`](#clearalldigests)      | `void` | Clears all values from the cache |
+|[`clearDigest`](#cleardigest)      | `boolean` | This may be a server-relative or absolute URL |
 |[`fetchDigest`](#fetchdigest)      | [`Promise<string>`](Promise.md) | This may be a server-relative or absolute URL |
 
 
@@ -39,16 +39,16 @@ fractional milliseconds; for example, to specify an expiration
 `addDigestToCache(webUrl: string,digestValue: string,expirationTimestamp: number): void`
 
 #### Returns
-void
+`void`
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `webUrl`    | string |  |
-| `digestValue`    | string |  |
-| `expirationTimestamp`    | number |  |
+| `webUrl`    | `string` |  |
+| `digestValue`    | `string` |  |
+| `expirationTimestamp`    | `number` |  |
 
 
 ## clearAllDigests
@@ -59,7 +59,7 @@ Clears all values from the cache.
 `clearAllDigests(): void`
 
 #### Returns
-void
+`void`
 
 #### Parameters
 None
@@ -73,14 +73,14 @@ This may be a server-relative or absolute URL.
 `clearDigest(webUrl: string): boolean`
 
 #### Returns
-boolean
+`boolean`
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `webUrl`    | string |  |
+| `webUrl`    | `string` |  |
 
 
 ## fetchDigest
@@ -98,5 +98,5 @@ This may be a server-relative or absolute URL.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `webUrl`    | string |  |
+| `webUrl`    | `string` |  |
 

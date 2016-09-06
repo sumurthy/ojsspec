@@ -13,5 +13,5 @@ Make a promise that rejects to obj. For consistency and debugging (eg stack trac
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `error`    | any |  |
+| `error`    | `any` |  |
 

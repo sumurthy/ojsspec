@@ -13,7 +13,7 @@ _Type parameters: `<K,V>`_
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`size`      | number |  |
+|`size`      | `number` |  |
 
 
 
@@ -22,11 +22,11 @@ _Type parameters: `<K,V>`_
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`clear`](#clear)      | void |  |
-|[`delete`](#delete)      | boolean |  |
-|[`forEach`](#foreach)      | void |  |
-|[`get`](#get)      | V |  |
-|[`has`](#has)      | boolean |  |
+|[`clear`](#clear)      | `void` |  |
+|[`delete`](#delete)      | `boolean` |  |
+|[`forEach`](#foreach)      | `void` |  |
+|[`get`](#get)      | `V` |  |
+|[`has`](#has)      | `boolean` |  |
 |[`set`](#set)      | [`Map<K,V>`](Map.md) |  |
 |[`entries`](#entries)      | [`Iterator<[K,V]>`](Iterator.md) |  |
 |[`keys`](#keys)      | [`Iterator<K>`](Iterator.md) |  |
@@ -42,7 +42,7 @@ _Type parameters: `<K,V>`_
 `clear(): void`
 
 #### Returns
-void
+`void`
 
 #### Parameters
 None
@@ -56,14 +56,14 @@ None
 `delete(key: K): boolean`
 
 #### Returns
-boolean
+`boolean`
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key`    | K |  |
+| `key`    | `K` |  |
 
 
 ## forEach
@@ -74,15 +74,15 @@ boolean
 `forEach(callbackfn: (value: V,index: K,map: Map<K,V>) => void,thisArg?: any): void`
 
 #### Returns
-void
+`void`
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `callbackfn`    | (value: V,index: K,map: Map<K,V>) => void |  |
-| `thisArg`    | any | _Optional._ |
+| `callbackfn`    | `(value: V,index: K,map: Map<K,V>) => void` |  |
+| `thisArg`    | `any` | _Optional._ |
 
 
 ## get
@@ -93,14 +93,14 @@ void
 `get(key: K): V`
 
 #### Returns
-V
+`V`
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key`    | K |  |
+| `key`    | `K` |  |
 
 
 ## has
@@ -111,14 +111,14 @@ V
 `has(key: K): boolean`
 
 #### Returns
-boolean
+`boolean`
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key`    | K |  |
+| `key`    | `K` |  |
 
 
 ## set
@@ -136,8 +136,8 @@ boolean
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `key`    | K |  |
-| `value`    | V | _Optional._ |
+| `key`    | `K` |  |
+| `value`    | `V` | _Optional._ |
 
 
 ## entries

@@ -12,10 +12,10 @@
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|`string|ResponseType`     | `type:` | string,[`ResponseType`](ResponseType.md) |  |
-|`string`     | `statusText:` | string |  |
-|`number`     | `status:` | number |  |
-|`boolean`     | `ok:` | boolean |  |
+|`string|ResponseType`     | `type:` | `string`,[`ResponseType`](ResponseType.md) |  |
+|`string`     | `statusText:` | `string` |  |
+|`number`     | `status:` | `number` |  |
+|`boolean`     | `ok:` | `boolean` |  |
 |`Headers`     | `headers:` | [`Headers`](Headers.md) |  |
 
 
@@ -48,7 +48,7 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `body`    | BodyInit | _Optional._ |
+| `body`    | `BodyInit` | _Optional._ |
 | `init`    | [`ResponseInit`](ResponseInit.md) | _Optional._ |
 
 
@@ -81,8 +81,8 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | string |  |
-| `status`    | number |  |
+| `url`    | `string` |  |
+| `status`    | `number` |  |
 
 
 ## clone

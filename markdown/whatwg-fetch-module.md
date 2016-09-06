@@ -37,9 +37,9 @@
 
 | Name	   |  Type |
 |:-----------|:------------|
-|HeaderInit   |  |
-|BodyInit   |  |
-|RequestInfo   |  |
+|HeaderInit   | `` |
+|BodyInit   | `` |
+|RequestInfo   | `` |
 
 
 
@@ -47,5 +47,5 @@
 
 | Variable	   | Type|
 |:-----------|:------------|
-|fetch   | window.fetch |
+|fetch   | `window.fetch` |
 

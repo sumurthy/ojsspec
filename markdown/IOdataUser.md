@@ -15,12 +15,12 @@ https:
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`Email`      | string | Example: "someone@example |
-|`Id`      | number | Example: "someone@example |
-|`IsSiteAdmin`      | boolean | Example: "someone@example |
-|`LoginName`      | string | Example: "i:0# |
-|`PrincipalType`      | number | Example: "i:0# |
-|`Title`      | string | Example: "DOMAIN\user" |
+|`Email`      | `string` | Example: "someone@example |
+|`Id`      | `number` | Example: "someone@example |
+|`IsSiteAdmin`      | `boolean` | Example: "someone@example |
+|`LoginName`      | `string` | Example: "i:0# |
+|`PrincipalType`      | `number` | Example: "i:0# |
+|`Title`      | `string` | Example: "DOMAIN\user" |
 |`UserId`      | [`IOdataUserId`](IOdataUserId.md) | Example: "DOMAIN\user" |
 
 

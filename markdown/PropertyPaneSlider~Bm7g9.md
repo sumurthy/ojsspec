@@ -13,6 +13,6 @@ Helper method to create a Slider on the PropertyPane.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `targetProperty`    | string |  |
+| `targetProperty`    | `string` |  |
 | `properties`    | [`IPropertyPaneSliderProps`](IPropertyPaneSliderProps.md) |  |
 

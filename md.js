@@ -68,7 +68,7 @@ function getLinkForType(type = '') {
             out = out + `[\`${e.replace(/\^/g, ',')}\`](${Utils.trimGenerics(e)}.md)` + ','
         }
         else {
-            out = out + e.replace(/\^/g, ',') + ','
+            out = out + '`' + e.replace(/\^/g, ',') + '`' + ','
         }
     })
     out = out.trim()

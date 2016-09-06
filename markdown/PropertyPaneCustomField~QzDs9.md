@@ -13,6 +13,6 @@ Helper method to create a Choice Group on the PropertyPane.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `targetProperty`    | string |  |
+| `targetProperty`    | `string` |  |
 | `properties`    | [`IPropertyPaneCustomFieldProps`](IPropertyPaneCustomFieldProps.md) |  |
 

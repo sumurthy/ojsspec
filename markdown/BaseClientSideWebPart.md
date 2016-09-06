@@ -22,16 +22,16 @@ Please refer to the documentation of the individual APIs to make the right decis
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|`accessibleTitle`     | `protected` | string | This property points to the accessible title of web part made available to screen readers |
+|`accessibleTitle`     | `protected` | `string` | This property points to the accessible title of web part made available to screen readers |
 |`context`     | `protected` | [`IWebPartContext`](IWebPartContext.md) |  |
-|`disableReactivePropertyChanges`     | `protected` | boolean | This property is used to change the web part's PropertyPane interaction from Reactive to NonReactive |
+|`disableReactivePropertyChanges`     | `protected` | `boolean` | This property is used to change the web part's PropertyPane interaction from Reactive to NonReactive |
 |`displayMode`     | `protected` | [`DisplayMode`](DisplayMode.md) | This property is the current display mode of the web part |
-|`domElement`     | `protected` | HTMLElement | This property is a pointer to the root DOM element of the web part |
-|`previewImageUrl`     | `protected` | string | This property points to the preview image for the web part |
-|`properties`     | `protected` | TProperties | This property is the pointer to the custom property bag of the web part |
+|`domElement`     | `protected` | `HTMLElement` | This property is a pointer to the root DOM element of the web part |
+|`previewImageUrl`     | `protected` | `string` | This property points to the preview image for the web part |
+|`properties`     | `protected` | `TProperties` | This property is the pointer to the custom property bag of the web part |
 |`propertyPaneSettings`     | `protected` | [`IPropertyPaneSettings`](IPropertyPaneSettings.md) |  |
-|`renderedFromDefaultProperties`     | `protected` | boolean | This property indicates whether the web part was rendered from the default properties,as opposed to using  serialized state from the last time that the web part was saved |
-|`renderedOnce`     | `protected` | boolean | This property indicates whether the web part has been rendered once or not |
+|`renderedFromDefaultProperties`     | `protected` | `boolean` | This property indicates whether the web part was rendered from the default properties,as opposed to using  serialized state from the last time that the web part was saved |
+|`renderedOnce`     | `protected` | `boolean` | This property indicates whether the web part has been rendered once or not |
 
 
 
@@ -41,19 +41,19 @@ Please refer to the documentation of the individual APIs to make the right decis
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
 |[`constructor`](#constructor)     | `public` | [`IWebPartContext`](IWebPartContext.md) |   e |
-|[`clearError`](#clearerror)     | `protected` | void | This API should be used to clear the error message from the web part display area |
-|[`configureStart`](#configurestart)     | `protected` | void | if it is not already open |
-|[`deserialize`](#deserialize)     | `protected` | TProperties |  |
-|[`dispose`](#dispose)     | `protected` | void | This API is called at the end of the web part lifecycle |
+|[`clearError`](#clearerror)     | `protected` | `void` | This API should be used to clear the error message from the web part display area |
+|[`configureStart`](#configurestart)     | `protected` | `void` | if it is not already open |
+|[`deserialize`](#deserialize)     | `protected` | `TProperties` |  |
+|[`dispose`](#dispose)     | `protected` | `void` | This API is called at the end of the web part lifecycle |
 |[`onBeforeSerialize`](#onbeforeserialize)     | `protected` | [`IHtmlProperties`](IHtmlProperties.md) | the documentation of IHtmlProperties interface for more details |
-|[`onDisplayModeChanged`](#ondisplaymodechanged)     | `protected` | void |  |
+|[`onDisplayModeChanged`](#ondisplaymodechanged)     | `protected` | `void` |  |
 |[`onInit<T>`](#oninit<t>)     | `protected` | [`Promise<T>`](Promise.md) | This API should be overridden to perform long running operations e |
-|[`onPropertyChange`](#onpropertychange)     | `protected` | void | This API is invoked on property changes in the PropertyPane when the PropertyPane is being used in Reactive mode |
-|[`onPropertyConfigurationComplete`](#onpropertyconfigurationcomplete)     | `protected` | void | This API is called when the current web part configuration process is completed |
-|[`onPropertyPaneRendered`](#onpropertypanerendered)     | `protected` | void | This API is involed when the PropertyPane is rendered |
-|[`onPropertyPaneSave`](#onpropertypanesave)     | `protected` | void | this API is invoked when the the changes are applied on the PropertyPane when the PropertyPane is used in  Non-Reactive mode |
-|[`render`](#render)     | `public` | void | This API is called to render the web part |
-|[`renderError`](#rendererror)     | `protected` | void | This API should be used to render an error message in the web part display area |
+|[`onPropertyChange`](#onpropertychange)     | `protected` | `void` | This API is invoked on property changes in the PropertyPane when the PropertyPane is being used in Reactive mode |
+|[`onPropertyConfigurationComplete`](#onpropertyconfigurationcomplete)     | `protected` | `void` | This API is called when the current web part configuration process is completed |
+|[`onPropertyPaneRendered`](#onpropertypanerendered)     | `protected` | `void` | This API is involed when the PropertyPane is rendered |
+|[`onPropertyPaneSave`](#onpropertypanesave)     | `protected` | `void` | this API is invoked when the the changes are applied on the PropertyPane when the PropertyPane is used in  Non-Reactive mode |
+|[`render`](#render)     | `public` | `void` | This API is called to render the web part |
+|[`renderError`](#rendererror)     | `protected` | `void` | This API should be used to render an error message in the web part display area |
 
 
 
@@ -90,7 +90,7 @@ This API should be used to clear the error message from the web part display are
 `protected clearError(): void`
 
 #### Returns
-void
+`void`
 
 #### Parameters
 None
@@ -104,14 +104,14 @@ if it is not already open.
 `protected configureStart(refreshOnly?: boolean): void`
 
 #### Returns
-void
+`void`
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `refreshOnly`    | boolean | _Optional._ |
+| `refreshOnly`    | `boolean` | _Optional._ |
 
 
 ## deserialize
@@ -122,7 +122,7 @@ void
 `protected deserialize(data: IWebPartData): TProperties`
 
 #### Returns
-TProperties
+`TProperties`
 
 #### Parameters
 
@@ -141,7 +141,7 @@ resources that the web part is holding onto.
 `protected dispose(): void`
 
 #### Returns
-void
+`void`
 
 #### Parameters
 None
@@ -169,7 +169,7 @@ None
 `protected onDisplayModeChanged(oldDisplayMode: DisplayMode): void`
 
 #### Returns
-void
+`void`
 
 #### Parameters
 
@@ -206,15 +206,15 @@ invokes the web part host's setDirty API.
 `protected onPropertyChange(propertyPath: string,newValue: any): void`
 
 #### Returns
-void
+`void`
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `propertyPath`    | string |  |
-| `newValue`    | any |  |
+| `propertyPath`    | `string` |  |
+| `newValue`    | `any` |  |
 
 
 ## onPropertyConfigurationComplete
@@ -228,7 +228,7 @@ for the previously selected web part.
 `protected onPropertyConfigurationComplete(): void`
 
 #### Returns
-void
+`void`
 
 #### Parameters
 None
@@ -242,7 +242,7 @@ This API is involed when the PropertyPane is rendered.
 `protected onPropertyPaneRendered(): void`
 
 #### Returns
-void
+`void`
 
 #### Parameters
 None
@@ -257,7 +257,7 @@ Non-Reactive mode. This API is not invoked when the PropertyPane is used in Reac
 `protected onPropertyPaneSave(): void`
 
 #### Returns
-void
+`void`
 
 #### Parameters
 None
@@ -272,7 +272,7 @@ required to override this API.
 `public render(): void`
 
 #### Returns
-void
+`void`
 
 #### Parameters
 None
@@ -288,12 +288,12 @@ using the trace logger.
 `protected renderError(error: Error): void`
 
 #### Returns
-void
+`void`
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `error`    | Error |  |
+| `error`    | `Error` |  |
 

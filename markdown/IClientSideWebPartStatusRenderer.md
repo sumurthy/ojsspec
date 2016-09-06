@@ -16,10 +16,10 @@ error messages for a webpart.
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`clearError`](#clearerror)      | void | Clear the webpart error message |
-|[`clearLoadingIndicator`](#clearloadingindicator)      | void | Clear the loading indicator |
-|[`displayLoadingIndicator`](#displayloadingindicator)      | void | Display a loading spinner |
-|[`renderError`](#rendererror)      | void | Render the provided error message in the webpart container div |
+|[`clearError`](#clearerror)      | `void` | Clear the webpart error message |
+|[`clearLoadingIndicator`](#clearloadingindicator)      | `void` | Clear the loading indicator |
+|[`displayLoadingIndicator`](#displayloadingindicator)      | `void` | Display a loading spinner |
+|[`renderError`](#rendererror)      | `void` | Render the provided error message in the webpart container div |
 
 
 
@@ -31,14 +31,14 @@ Clear the webpart error message.
 `clearError(domElement: HTMLElement): void`
 
 #### Returns
-void
+`void`
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `domElement`    | HTMLElement |  |
+| `domElement`    | `HTMLElement` |  |
 
 
 ## clearLoadingIndicator
@@ -49,14 +49,14 @@ Clear the loading indicator.
 `clearLoadingIndicator(domElement: Element): void`
 
 #### Returns
-void
+`void`
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `domElement`    | Element |  |
+| `domElement`    | `Element` |  |
 
 
 ## displayLoadingIndicator
@@ -67,15 +67,15 @@ Display a loading spinner.
 `displayLoadingIndicator(domElement: Element,loadingMessage: string): void`
 
 #### Returns
-void
+`void`
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `domElement`    | Element |  |
-| `loadingMessage`    | string |  |
+| `domElement`    | `Element` |  |
+| `loadingMessage`    | `string` |  |
 
 
 ## renderError
@@ -86,13 +86,13 @@ Render the provided error message in the webpart container div.
 `renderError(domElement: HTMLElement,error: Error | string): void`
 
 #### Returns
-void
+`void`
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `domElement`    | HTMLElement |  |
-| `error`    | Error , string |  |
+| `domElement`    | `HTMLElement` |  |
+| `error`    | `Error `,` string` |  |
 

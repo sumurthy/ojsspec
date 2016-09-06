@@ -13,7 +13,7 @@ _Type parameters: `<T>`_
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`size`      | number |  |
+|`size`      | `number` |  |
 
 
 
@@ -23,10 +23,10 @@ _Type parameters: `<T>`_
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
 |[`add`](#add)      | [`Set<T>`](Set.md) |  |
-|[`clear`](#clear)      | void |  |
-|[`delete`](#delete)      | boolean |  |
-|[`forEach`](#foreach)      | void |  |
-|[`has`](#has)      | boolean |  |
+|[`clear`](#clear)      | `void` |  |
+|[`delete`](#delete)      | `boolean` |  |
+|[`forEach`](#foreach)      | `void` |  |
+|[`has`](#has)      | `boolean` |  |
 |[`entries`](#entries)      | [`Iterator<[T,T]>`](Iterator.md) |  |
 |[`keys`](#keys)      | [`Iterator<T>`](Iterator.md) |  |
 |[`values`](#values)      | [`Iterator<T>`](Iterator.md) |  |
@@ -48,7 +48,7 @@ _Type parameters: `<T>`_
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | T |  |
+| `value`    | `T` |  |
 
 
 ## clear
@@ -59,7 +59,7 @@ _Type parameters: `<T>`_
 `clear(): void`
 
 #### Returns
-void
+`void`
 
 #### Parameters
 None
@@ -73,14 +73,14 @@ None
 `delete(value: T): boolean`
 
 #### Returns
-boolean
+`boolean`
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | T |  |
+| `value`    | `T` |  |
 
 
 ## forEach
@@ -91,15 +91,15 @@ boolean
 `forEach(callbackfn: (value: T,index: T,set: Set<T>) => void,thisArg?: any): void`
 
 #### Returns
-void
+`void`
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `callbackfn`    | (value: T,index: T,set: Set<T>) => void |  |
-| `thisArg`    | any | _Optional._ |
+| `callbackfn`    | `(value: T,index: T,set: Set<T>) => void` |  |
+| `thisArg`    | `any` | _Optional._ |
 
 
 ## has
@@ -110,14 +110,14 @@ void
 `has(value: T): boolean`
 
 #### Returns
-boolean
+`boolean`
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | T |  |
+| `value`    | `T` |  |
 
 
 ## entries

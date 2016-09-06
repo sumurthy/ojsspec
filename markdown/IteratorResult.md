@@ -13,8 +13,8 @@ _Type parameters: `<T>`_
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`done`      | boolean |  |
-|`value`      | T |  |
+|`done`      | `boolean` |  |
+|`value`      | `T` |  |
 
 
 

@@ -94,8 +94,8 @@ explicitly.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | string |  |
-| `options`    | IODataBatchRequestOptions | _Optional._ |
+| `url`    | `string` |  |
+| `options`    | `IODataBatchRequestOptions` | _Optional._ |
 
 
 ## get
@@ -113,8 +113,8 @@ Calls fetch(),but sets the method to 'GET'.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | string |  |
-| `options`    | IODataBatchRequestOptions | _Optional._ |
+| `url`    | `string` |  |
+| `options`    | `IODataBatchRequestOptions` | _Optional._ |
 
 
 ## post
@@ -132,6 +132,6 @@ Calls fetch(),but sets the method to 'POST'.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | string |  |
-| `options`    | IODataBatchRequestOptions |  |
+| `url`    | `string` |  |
+| `options`    | `IODataBatchRequestOptions` |  |
 

@@ -13,6 +13,6 @@ Helper method to create a Toggle on the PropertyPane.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `targetProperty`    | string |  |
+| `targetProperty`    | `string` |  |
 | `properties`    | [`IPropertyPaneToggleProps`](IPropertyPaneToggleProps.md) |  |
 

@@ -13,6 +13,6 @@ Helper method to create a Label on the PropertyPane.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `targetProperty`    | string |  |
+| `targetProperty`    | `string` |  |
 | `properties`    | [`IPropertyPaneLabelProps`](IPropertyPaneLabelProps.md) |  |
 

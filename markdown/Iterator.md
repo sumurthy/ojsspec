@@ -37,7 +37,7 @@ _Type parameters: `<T>`_
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | any | _Optional._ |
+| `value`    | `any` | _Optional._ |
 
 
 ## return
@@ -55,7 +55,7 @@ _Type parameters: `<T>`_
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | any | _Optional._ |
+| `value`    | `any` | _Optional._ |
 
 
 ## throw
@@ -73,5 +73,5 @@ _Type parameters: `<T>`_
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `e`    | any | _Optional._ |
+| `e`    | `any` | _Optional._ |
 

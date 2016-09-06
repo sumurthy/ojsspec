@@ -13,7 +13,7 @@ Web part configuration settings
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`currentPage`      | number | Page to be displayed on the PropertyPane |
+|`currentPage`      | `number` | Page to be displayed on the PropertyPane |
 |`pages`      | [`IPropertyPanePage`](IPropertyPanePage.md) | Total number of pages on the PropertyPane |
 
 

@@ -22,10 +22,10 @@ Math.random() function and may be not be suitable for some applications.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`equals`](#equals)     | `public` | boolean | represent the same value |
-|[`isValid`](#isvalid)     | `public, _static_` | boolean | Indicates whether a guid is valid (according to RFC4122) |
+|[`equals`](#equals)     | `public` | `boolean` | represent the same value |
+|[`isValid`](#isvalid)     | `public, _static_` | `boolean` | Indicates whether a guid is valid (according to RFC4122) |
 |[`constructorGuid`](#constructorguid)     | `public, _static_` | [`Guid`](Guid.md) | Returns a new Guid instance with a pseudo-randomly generated Guid |
-|[`toString`](#tostring)     | `public` | string | Example: 'd5369f3b-bd7a-412a-9c0f-7f0650bb5489' |
+|[`toString`](#tostring)     | `public` | `string` | Example: 'd5369f3b-bd7a-412a-9c0f-7f0650bb5489' |
 |[`tryParse`](#tryparse)     | `public, _static_` | [`Guid`](Guid.md) | Trys to construct a new Guid instance using guid string |
 
 
@@ -39,7 +39,7 @@ represent the same value
 `public equals(guid: Guid): boolean`
 
 #### Returns
-boolean
+`boolean`
 
 #### Parameters
 
@@ -58,14 +58,14 @@ Indicates whether a guid is valid (according to RFC4122).
 `public isValid(guid: string): boolean`
 
 #### Returns
-boolean
+`boolean`
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `guid`    | string |  |
+| `guid`    | `string` |  |
 
 
 ## constructorGuid
@@ -84,7 +84,7 @@ Returns a new Guid instance with a pseudo-randomly generated Guid.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `randomProvider`    | IRandomProvider | _Optional._ |
+| `randomProvider`    | `IRandomProvider` | _Optional._ |
 
 
 ## toString
@@ -95,7 +95,7 @@ Example: 'd5369f3b-bd7a-412a-9c0f-7f0650bb5489'
 `public toString(): string`
 
 #### Returns
-string
+`string`
 
 #### Parameters
 None
@@ -119,5 +119,5 @@ RFC 4122, tryParse will return undefined.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `guid`    | string |  |
+| `guid`    | `string` |  |
 

@@ -24,7 +24,7 @@ class instead.
 |[`beginBatch`](#beginbatch)     | `public` | [`ODataBatch`](ODataBatch.md) | Begins an ODATA batch,which allows multiple REST queries to be bundled into  a single web request |
 |[`fetch`](#fetch)     | `public` | [`Promise<Response>`](Promise.md) | Generally,the parameters and semantics for HttpClient |
 |[`get`](#get)     | `public` | [`Promise<Response>`](Promise.md) | Calls fetch(),but sets the method to 'GET' |
-|[`getWebUrlFromRequestUrl`](#getweburlfromrequesturl)     | `public, _static_` | string | This uses a heuristic to guess the SPWeb URL associated with the provided  REST URL |
+|[`getWebUrlFromRequestUrl`](#getweburlfromrequesturl)     | `public, _static_` | `string` | This uses a heuristic to guess the SPWeb URL associated with the provided  REST URL |
 |[`post`](#post)     | `public` | [`Promise<Response>`](Promise.md) | Calls fetch(),but sets the method to 'POST' |
 
 
@@ -100,7 +100,7 @@ to specify it explicitly.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | string |  |
+| `url`    | `string` |  |
 | `options`    | [`IHttpClientOptions`](IHttpClientOptions.md) |  |
 
 
@@ -119,7 +119,7 @@ Calls fetch(),but sets the method to 'GET'.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | string |  |
+| `url`    | `string` |  |
 | `options`    | [`IHttpClientOptions`](IHttpClientOptions.md) | _Optional._ |
 
 
@@ -138,14 +138,14 @@ is "http:
 `public getWebUrlFromRequestUrl(requestUrl: string): string`
 
 #### Returns
-string
+`string`
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `requestUrl`    | string |  |
+| `requestUrl`    | `string` |  |
 
 
 ## post
@@ -163,6 +163,6 @@ Calls fetch(),but sets the method to 'POST'.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | string |  |
+| `url`    | `string` |  |
 | `options`    | [`IHttpClientOptions`](IHttpClientOptions.md) |  |
 

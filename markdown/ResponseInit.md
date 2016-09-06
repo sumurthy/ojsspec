@@ -13,9 +13,9 @@
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`status`      | number |  |
-|`statusText`      | string |  |
-|`headers`      | HeaderInit |  |
+|`status`      | `number` |  |
+|`statusText`      | `string` |  |
+|`headers`      | `HeaderInit` |  |
 
 
 

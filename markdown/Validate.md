@@ -18,9 +18,9 @@ that might impact performance.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`isNonemptyString`](#isnonemptystring)     | `public, _static_` | void | Throws an exception if the specified string is null,undefined,or an empty string |
-|[`isNotNullOrUndefined`](#isnotnullorundefined)     | `public, _static_` | void | Throws an exception if the specified value is null or undefined |
-|[`isTrue`](#istrue)     | `public, _static_` | void | Throws an exception if the specified value is not true |
+|[`isNonemptyString`](#isnonemptystring)     | `public, _static_` | `void` | Throws an exception if the specified string is null,undefined,or an empty string |
+|[`isNotNullOrUndefined`](#isnotnullorundefined)     | `public, _static_` | `void` | Throws an exception if the specified value is null or undefined |
+|[`isTrue`](#istrue)     | `public, _static_` | `void` | Throws an exception if the specified value is not true |
 
 
 
@@ -33,15 +33,15 @@ Throws an exception if the specified string is null,undefined,or an empty string
 `public isNonemptyString(value: string,variableName: string): void`
 
 #### Returns
-void
+`void`
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | string |  |
-| `variableName`    | string |  |
+| `value`    | `string` |  |
+| `variableName`    | `string` |  |
 
 
 ## isNotNullOrUndefined
@@ -52,15 +52,15 @@ Throws an exception if the specified value is null or undefined.
 `public isNotNullOrUndefined(value: any,variableName: string): void`
 
 #### Returns
-void
+`void`
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | any |  |
-| `variableName`    | string |  |
+| `value`    | `any` |  |
+| `variableName`    | `string` |  |
 
 
 ## isTrue
@@ -71,13 +71,13 @@ Throws an exception if the specified value is not true.
 `public isTrue(value: boolean,variableName: string): void`
 
 #### Returns
-void
+`void`
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | boolean |  |
-| `variableName`    | string |  |
+| `value`    | `boolean` |  |
+| `variableName`    | `string` |  |
 

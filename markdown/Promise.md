@@ -15,7 +15,7 @@ _Type parameters: `<R>`_
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`constructor`](#constructor)     | `public` | any => void) => void) | If you call resolve in the body of the callback passed to the constructor,  your promise is fulfilled with result object passed to resolve |
+|[`constructor`](#constructor)     | `public` | `any => void) => void)` | If you call resolve in the body of the callback passed to the constructor,  your promise is fulfilled with result object passed to resolve |
 |[`then<U>`](#then<u>)     | `public` | [`Promise<U>`](Promise.md) | onFulfilled is called when/if "promise" resolves |
 |[`catch<U>`](#catch<u>)     | `public` | [`Promise<U>`](Promise.md) | Sugar for promise |
 
@@ -34,15 +34,15 @@ Any errors thrown in the constructor callback will be implicitly passed to rejec
 `constructor(callback: (resolve: (value?: R | Thenable<R>) => void,reject: (error?: any) => void) => void)`
 
 #### Returns
-any => void) => void)
+`any => void) => void)`
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `callback`    | (resolve: (value?: R ,[` Thenable<R>) => void`](Thenable.md) |  |
-| `reject`    | (error?: any) => void) => void |  |
+| `callback`    | `(resolve: (value?: R `,[` Thenable<R>) => void`](Thenable.md) |  |
+| `reject`    | `(error?: any) => void) => void` |  |
 
 
 ## then<U>
@@ -65,8 +65,8 @@ If an error is thrown in the callback, the returned promise rejects with that er
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `onFulfilled`    | (value: R) => U ,[` Thenable<U>`](Thenable.md) | _Optional._ |
-| `onRejected`    | (error: any) => void | _Optional._ |
+| `onFulfilled`    | `(value: R) => U `,[` Thenable<U>`](Thenable.md) | _Optional._ |
+| `onRejected`    | `(error: any) => void` | _Optional._ |
 
 
 ## catch<U>
@@ -85,5 +85,5 @@ Sugar for promise.then(undefined,onRejected)
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `onRejected`    | (error: any) => U ,[` Thenable<U>`](Thenable.md) | _Optional._ |
+| `onRejected`    | `(error: any) => U `,[` Thenable<U>`](Thenable.md) | _Optional._ |
 

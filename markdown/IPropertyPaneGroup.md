@@ -14,7 +14,7 @@ PropertyPane group. Group is part of the PropertyPanePage.
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
 |`groupFields`      | [`IPropertyPaneField<any>`](IPropertyPaneField.md) | List of PropertyPane fields |
-|`groupName`      | string | Display name for the group |
+|`groupName`      | `string` | Display name for the group |
 
 
 

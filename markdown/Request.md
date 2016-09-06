@@ -12,12 +12,12 @@
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|`string`     | `referrer:` | string |  |
+|`string`     | `referrer:` | `string` |  |
 |`Headers`     | `headers:` | [`Headers`](Headers.md) |  |
-|`string|RequestContext`     | `context:` | string,[`RequestContext`](RequestContext.md) |  |
-|`string|RequestMode`     | `mode:` | string,[`RequestMode`](RequestMode.md) |  |
-|`string|RequestCredentials`     | `credentials:` | string,[`RequestCredentials`](RequestCredentials.md) |  |
-|`string|RequestCache`     | `cache:` | string,[`RequestCache`](RequestCache.md) |  |
+|`string|RequestContext`     | `context:` | `string`,[`RequestContext`](RequestContext.md) |  |
+|`string|RequestMode`     | `mode:` | `string`,[`RequestMode`](RequestMode.md) |  |
+|`string|RequestCredentials`     | `credentials:` | `string`,[`RequestCredentials`](RequestCredentials.md) |  |
+|`string|RequestCache`     | `cache:` | `string`,[`RequestCache`](RequestCache.md) |  |
 
 
 
@@ -46,6 +46,6 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `input`    | string,[`Request`](Request.md) |  |
+| `input`    | `string`,[`Request`](Request.md) |  |
 | `init`    | [`RequestInit`](RequestInit.md) | _Optional._ |
 

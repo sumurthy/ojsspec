@@ -13,6 +13,6 @@ Helper method to create a Dropdown on the PropertyPane.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `targetProperty`    | string |  |
+| `targetProperty`    | `string` |  |
 | `properties`    | [`IPropertyPaneDropdownProps`](IPropertyPaneDropdownProps.md) |  |
 
