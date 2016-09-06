@@ -40,7 +40,7 @@ _Type parameters: `<T>`_
 ##### Signature
 
 #### Returns
-Set<T>
+`Set<T>`
 
 #### Parameters
 
@@ -57,7 +57,7 @@ Set<T>
 ##### Signature
 
 #### Returns
-void
+`void`
 
 #### Parameters
 None
@@ -70,7 +70,7 @@ None
 ##### Signature
 
 #### Returns
-boolean
+`boolean`
 
 #### Parameters
 
@@ -87,7 +87,7 @@ boolean
 ##### Signature
 
 #### Returns
-void
+`void`
 
 #### Parameters
 
@@ -105,7 +105,7 @@ void
 ##### Signature
 
 #### Returns
-boolean
+`boolean`
 
 #### Parameters
 
@@ -122,7 +122,7 @@ boolean
 ##### Signature
 
 #### Returns
-Iterator<[T,T]>
+`Iterator<[T,T]>`
 
 #### Parameters
 None
@@ -135,7 +135,7 @@ None
 ##### Signature
 
 #### Returns
-Iterator<T>
+`Iterator<T>`
 
 #### Parameters
 None
@@ -148,7 +148,7 @@ None
 ##### Signature
 
 #### Returns
-Iterator<T>
+`Iterator<T>`
 
 #### Parameters
 None

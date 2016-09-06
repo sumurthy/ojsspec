@@ -5,7 +5,7 @@ Helper method to create a Checkbox on the PropertyPane.
 ##### Signature
 
 #### Returns
-IPropertyPaneField<IPropertyPaneCheckboxProps>
+`IPropertyPaneField<IPropertyPaneCheckboxProps>`
 
 #### Parameters
 

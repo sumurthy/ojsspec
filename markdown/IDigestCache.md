@@ -38,7 +38,7 @@ fractional milliseconds; for example, to specify an expiration
 ##### Signature
 
 #### Returns
-void
+`void`
 
 #### Parameters
 
@@ -57,7 +57,7 @@ Clears all values from the cache.
 ##### Signature
 
 #### Returns
-void
+`void`
 
 #### Parameters
 None
@@ -70,7 +70,7 @@ This may be a server-relative or absolute URL.
 ##### Signature
 
 #### Returns
-boolean
+`boolean`
 
 #### Parameters
 
@@ -87,7 +87,7 @@ This may be a server-relative or absolute URL.
 ##### Signature
 
 #### Returns
-Promise<string>
+`Promise<string>`
 
 #### Parameters
 

@@ -5,7 +5,7 @@ Helper method to create a Choice Group on the PropertyPane.
 ##### Signature
 
 #### Returns
-IPropertyPaneField<IPropertyPaneChoiceGroupProps>
+`IPropertyPaneField<IPropertyPaneChoiceGroupProps>`
 
 #### Parameters
 

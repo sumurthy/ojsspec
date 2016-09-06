@@ -30,7 +30,7 @@ _Type parameters: `<T>`_
 ##### Signature
 
 #### Returns
-boolean
+`boolean`
 
 #### Parameters
 
@@ -47,7 +47,7 @@ boolean
 ##### Signature
 
 #### Returns
-void
+`void`
 
 #### Parameters
 None
@@ -60,7 +60,7 @@ None
 ##### Signature
 
 #### Returns
-WeakSet<T>
+`WeakSet<T>`
 
 #### Parameters
 
@@ -77,7 +77,7 @@ WeakSet<T>
 ##### Signature
 
 #### Returns
-boolean
+`boolean`
 
 #### Parameters
 

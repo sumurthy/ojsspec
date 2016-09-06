@@ -27,7 +27,7 @@
 ##### Signature
 
 #### Returns
-Promise<Response>
+`Promise<Response>`
 
 #### Parameters
 

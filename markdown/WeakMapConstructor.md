@@ -33,7 +33,7 @@
 ##### Signature
 
 #### Returns
-WeakMap<K,V>
+`WeakMap<K,V>`
 
 #### Parameters
 

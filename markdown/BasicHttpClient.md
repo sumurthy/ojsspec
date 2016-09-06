@@ -39,7 +39,7 @@ enhancements.
 ##### Signature
 
 #### Returns
-ServiceScope
+`ServiceScope`
 
 #### Parameters
 
@@ -59,7 +59,7 @@ https:
 ##### Signature
 
 #### Returns
-Promise<Response>
+`Promise<Response>`
 
 #### Parameters
 
@@ -80,7 +80,7 @@ https:
 ##### Signature
 
 #### Returns
-Promise<Response>
+`Promise<Response>`
 
 #### Parameters
 
@@ -97,7 +97,7 @@ Calls fetch(),but sets the method to 'GET'.
 ##### Signature
 
 #### Returns
-Promise<Response>
+`Promise<Response>`
 
 #### Parameters
 
@@ -115,7 +115,7 @@ Calls fetch(),but sets the method to 'POST'.
 ##### Signature
 
 #### Returns
-Promise<Response>
+`Promise<Response>`
 
 #### Parameters
 

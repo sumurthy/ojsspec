@@ -267,7 +267,7 @@ function doSubMember(tline = '', member = {}, membername = '') {
         }
     }
 
-    if (tline.includes('%returntype%')) tline = tline.replace('%returntype%', member['returnType'])
+    if (tline.includes('%returntype%')) tline = tline.replace('%returntype%', `\`${member['returnType']}\``)
 
     return tline
 }

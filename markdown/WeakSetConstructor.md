@@ -33,7 +33,7 @@
 ##### Signature
 
 #### Returns
-WeakSet<T>
+`WeakSet<T>`
 
 #### Parameters
 

@@ -32,7 +32,7 @@ Throws an exception if the specified string is null,undefined,or an empty string
 ##### Signature
 
 #### Returns
-void
+`void`
 
 #### Parameters
 
@@ -50,7 +50,7 @@ Throws an exception if the specified value is null or undefined.
 ##### Signature
 
 #### Returns
-void
+`void`
 
 #### Parameters
 
@@ -68,7 +68,7 @@ Throws an exception if the specified value is not true.
 ##### Signature
 
 #### Returns
-void
+`void`
 
 #### Parameters
 

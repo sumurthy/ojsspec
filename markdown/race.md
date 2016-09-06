@@ -5,7 +5,7 @@ Make a Promise that fulfills when any item fulfills,and rejects if any item reje
 ##### Signature
 
 #### Returns
-Promise<R>
+`Promise<R>`
 
 #### Parameters
 

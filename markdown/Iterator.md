@@ -29,7 +29,7 @@ _Type parameters: `<T>`_
 ##### Signature
 
 #### Returns
-IteratorResult<T>
+`IteratorResult<T>`
 
 #### Parameters
 
@@ -46,7 +46,7 @@ IteratorResult<T>
 ##### Signature
 
 #### Returns
-IteratorResult<T>
+`IteratorResult<T>`
 
 #### Parameters
 
@@ -63,7 +63,7 @@ IteratorResult<T>
 ##### Signature
 
 #### Returns
-IteratorResult<T>
+`IteratorResult<T>`
 
 #### Parameters
 

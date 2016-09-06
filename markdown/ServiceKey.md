@@ -42,7 +42,7 @@ PRIVATE - Do not call this from your own code.
 ##### Signature
 
 #### Returns
-ServiceCreator<T>
+`ServiceCreator<T>`
 
 #### Parameters
 
@@ -61,7 +61,7 @@ your application.
 ##### Signature
 
 #### Returns
-ServiceKey<T>;
+`ServiceKey<T>;`
 
 #### Parameters
 
@@ -79,7 +79,7 @@ your application.
 ##### Signature
 
 #### Returns
-ServiceKey<T>
+`ServiceKey<T>`
 
 #### Parameters
 

@@ -5,7 +5,7 @@ Helper method to create a Slider on the PropertyPane.
 ##### Signature
 
 #### Returns
-IPropertyPaneField<IPropertyPaneSliderProps>
+`IPropertyPaneField<IPropertyPaneSliderProps>`
 
 #### Parameters
 

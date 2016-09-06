@@ -27,7 +27,7 @@ _Type parameters: `<T>`_
 ##### Signature
 
 #### Returns
-void
+`void`
 
 #### Parameters
 

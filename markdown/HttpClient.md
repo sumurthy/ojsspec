@@ -37,7 +37,7 @@ class instead.
 ##### Signature
 
 #### Returns
-ServiceScope
+`ServiceScope`
 
 #### Parameters
 
@@ -55,7 +55,7 @@ a single web request.
 ##### Signature
 
 #### Returns
-ODataBatch
+`ODataBatch`
 
 #### Parameters
 
@@ -90,7 +90,7 @@ to specify it explicitly.
 ##### Signature
 
 #### Returns
-Promise<Response>
+`Promise<Response>`
 
 #### Parameters
 
@@ -108,7 +108,7 @@ Calls fetch(),but sets the method to 'GET'.
 ##### Signature
 
 #### Returns
-Promise<Response>
+`Promise<Response>`
 
 #### Parameters
 
@@ -133,7 +133,7 @@ is "http:
 ##### Signature
 
 #### Returns
-string
+`string`
 
 #### Parameters
 
@@ -150,7 +150,7 @@ Calls fetch(),but sets the method to 'POST'.
 ##### Signature
 
 #### Returns
-Promise<Response>
+`Promise<Response>`
 
 #### Parameters
 

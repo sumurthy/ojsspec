@@ -38,7 +38,7 @@
 ##### Signature
 
 #### Returns
-Promise<ArrayBuffer>
+`Promise<ArrayBuffer>`
 
 #### Parameters
 None
@@ -51,7 +51,7 @@ None
 ##### Signature
 
 #### Returns
-Promise<Blob>
+`Promise<Blob>`
 
 #### Parameters
 None
@@ -64,7 +64,7 @@ None
 ##### Signature
 
 #### Returns
-Promise<FormData>
+`Promise<FormData>`
 
 #### Parameters
 None
@@ -77,7 +77,7 @@ None
 ##### Signature
 
 #### Returns
-Promise<any>
+`Promise<any>`
 
 #### Parameters
 None
@@ -90,7 +90,7 @@ None
 ##### Signature
 
 #### Returns
-Promise<T>
+`Promise<T>`
 
 #### Parameters
 None
@@ -103,7 +103,7 @@ None
 ##### Signature
 
 #### Returns
-Promise<string>
+`Promise<string>`
 
 #### Parameters
 None

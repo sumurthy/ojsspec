@@ -38,7 +38,7 @@ represent the same value
 ##### Signature
 
 #### Returns
-boolean
+`boolean`
 
 #### Parameters
 
@@ -56,7 +56,7 @@ Indicates whether a guid is valid (according to RFC4122).
 ##### Signature
 
 #### Returns
-boolean
+`boolean`
 
 #### Parameters
 
@@ -74,7 +74,7 @@ Returns a new Guid instance with a pseudo-randomly generated Guid.
 ##### Signature
 
 #### Returns
-Guid
+`Guid`
 
 #### Parameters
 
@@ -91,7 +91,7 @@ Example: 'd5369f3b-bd7a-412a-9c0f-7f0650bb5489'
 ##### Signature
 
 #### Returns
-string
+`string`
 
 #### Parameters
 None
@@ -107,7 +107,7 @@ RFC 4122, tryParse will return undefined.
 ##### Signature
 
 #### Returns
-Guid
+`Guid`
 
 #### Parameters
 

@@ -40,7 +40,7 @@
 ##### Signature
 
 #### Returns
-ResponseInit
+`ResponseInit`
 
 #### Parameters
 
@@ -58,7 +58,7 @@ ResponseInit
 ##### Signature
 
 #### Returns
-Response
+`Response`
 
 #### Parameters
 None
@@ -71,7 +71,7 @@ None
 ##### Signature
 
 #### Returns
-Response
+`Response`
 
 #### Parameters
 
@@ -89,7 +89,7 @@ Response
 ##### Signature
 
 #### Returns
-Response
+`Response`
 
 #### Parameters
 None

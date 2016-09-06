@@ -27,7 +27,7 @@ _Type parameters: `<R>`_
 ##### Signature
 
 #### Returns
-Thenable<U>
+`Thenable<U>`
 
 #### Parameters
 

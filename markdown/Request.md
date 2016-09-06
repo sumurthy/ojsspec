@@ -38,7 +38,7 @@
 ##### Signature
 
 #### Returns
-RequestInit
+`RequestInit`
 
 #### Parameters
 

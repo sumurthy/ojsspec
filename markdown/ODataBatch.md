@@ -40,7 +40,7 @@ resolve with a Response object for that particular request.
 ##### Signature
 
 #### Returns
-IODataBatchOptions
+`IODataBatchOptions`
 
 #### Parameters
 
@@ -58,7 +58,7 @@ Executes the batched queries that were queued using ODataBatch.fetch().
 ##### Signature
 
 #### Returns
-Promise<ODataBatch>
+`Promise<ODataBatch>`
 
 #### Parameters
 None
@@ -84,7 +84,7 @@ explicitly.
 ##### Signature
 
 #### Returns
-Promise<Response>
+`Promise<Response>`
 
 #### Parameters
 
@@ -102,7 +102,7 @@ Calls fetch(),but sets the method to 'GET'.
 ##### Signature
 
 #### Returns
-Promise<Response>
+`Promise<Response>`
 
 #### Parameters
 
@@ -120,7 +120,7 @@ Calls fetch(),but sets the method to 'POST'.
 ##### Signature
 
 #### Returns
-Promise<Response>
+`Promise<Response>`
 
 #### Parameters
 

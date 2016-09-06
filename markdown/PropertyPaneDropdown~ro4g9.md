@@ -5,7 +5,7 @@ Helper method to create a Dropdown on the PropertyPane.
 ##### Signature
 
 #### Returns
-IPropertyPaneField<IPropertyPaneDropdownProps>
+`IPropertyPaneField<IPropertyPaneDropdownProps>`
 
 #### Parameters
 

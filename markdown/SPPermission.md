@@ -75,7 +75,7 @@ https:
 ##### Signature
 
 #### Returns
-IODataBasePermission
+`IODataBasePermission`
 
 #### Parameters
 
@@ -92,7 +92,7 @@ Function for determining if a given permission mask has all of the requested per
 ##### Signature
 
 #### Returns
-boolean
+`boolean`
 
 #### Parameters
 
@@ -109,7 +109,7 @@ Function for determining if a given permission mask has any of the requested per
 ##### Signature
 
 #### Returns
-boolean
+`boolean`
 
 #### Parameters
 
@@ -126,7 +126,7 @@ Function for checking if a given permission mask has the requested permission.
 ##### Signature
 
 #### Returns
-boolean
+`boolean`
 
 #### Parameters
 

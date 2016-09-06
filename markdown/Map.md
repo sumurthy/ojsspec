@@ -41,7 +41,7 @@ _Type parameters: `<K,V>`_
 ##### Signature
 
 #### Returns
-void
+`void`
 
 #### Parameters
 None
@@ -54,7 +54,7 @@ None
 ##### Signature
 
 #### Returns
-boolean
+`boolean`
 
 #### Parameters
 
@@ -71,7 +71,7 @@ boolean
 ##### Signature
 
 #### Returns
-void
+`void`
 
 #### Parameters
 
@@ -89,7 +89,7 @@ void
 ##### Signature
 
 #### Returns
-V
+`V`
 
 #### Parameters
 
@@ -106,7 +106,7 @@ V
 ##### Signature
 
 #### Returns
-boolean
+`boolean`
 
 #### Parameters
 
@@ -123,7 +123,7 @@ boolean
 ##### Signature
 
 #### Returns
-Map<K,V>
+`Map<K,V>`
 
 #### Parameters
 
@@ -141,7 +141,7 @@ Map<K,V>
 ##### Signature
 
 #### Returns
-Iterator<[K,V]>
+`Iterator<[K,V]>`
 
 #### Parameters
 None
@@ -154,7 +154,7 @@ None
 ##### Signature
 
 #### Returns
-Iterator<K>
+`Iterator<K>`
 
 #### Parameters
 None
@@ -167,7 +167,7 @@ None
 ##### Signature
 
 #### Returns
-Iterator<V>
+`Iterator<V>`
 
 #### Parameters
 None

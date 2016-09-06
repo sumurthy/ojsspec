@@ -33,7 +33,7 @@
 ##### Signature
 
 #### Returns
-void
+`void`
 
 #### Parameters
 
@@ -51,7 +51,7 @@ void
 ##### Signature
 
 #### Returns
-void
+`void`
 
 #### Parameters
 
@@ -68,7 +68,7 @@ void
 ##### Signature
 
 #### Returns
-string
+`string`
 
 #### Parameters
 
@@ -85,7 +85,7 @@ string
 ##### Signature
 
 #### Returns
-Array<string>
+`Array<string>`
 
 #### Parameters
 
@@ -102,7 +102,7 @@ Array<string>
 ##### Signature
 
 #### Returns
-boolean
+`boolean`
 
 #### Parameters
 
@@ -119,7 +119,7 @@ boolean
 ##### Signature
 
 #### Returns
-void
+`void`
 
 #### Parameters
 
@@ -137,7 +137,7 @@ void
 ##### Signature
 
 #### Returns
-void
+`void`
 
 #### Parameters
 

@@ -41,7 +41,7 @@ application cache.
 ##### Signature
 
 #### Returns
-ServiceScope
+`ServiceScope`
 
 #### Parameters
 

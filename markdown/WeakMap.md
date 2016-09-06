@@ -31,7 +31,7 @@ _Type parameters: `<K,V>`_
 ##### Signature
 
 #### Returns
-boolean
+`boolean`
 
 #### Parameters
 
@@ -48,7 +48,7 @@ boolean
 ##### Signature
 
 #### Returns
-void
+`void`
 
 #### Parameters
 None
@@ -61,7 +61,7 @@ None
 ##### Signature
 
 #### Returns
-V
+`V`
 
 #### Parameters
 
@@ -78,7 +78,7 @@ V
 ##### Signature
 
 #### Returns
-boolean
+`boolean`
 
 #### Parameters
 
@@ -95,7 +95,7 @@ boolean
 ##### Signature
 
 #### Returns
-WeakMap<K,V>
+`WeakMap<K,V>`
 
 #### Parameters
 

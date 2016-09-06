@@ -5,7 +5,7 @@ Helper method to create a Button on the PropertyPane.
 ##### Signature
 
 #### Returns
-IPropertyPaneField<IPropertyPaneButtonProps>
+`IPropertyPaneField<IPropertyPaneButtonProps>`
 
 #### Parameters
 

@@ -31,7 +31,7 @@ only object types.
 ##### Signature
 
 #### Returns
-boolean
+`boolean`
 
 #### Parameters
 

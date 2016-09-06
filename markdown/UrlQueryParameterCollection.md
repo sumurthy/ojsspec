@@ -37,7 +37,7 @@ Query param with only equals (www.example.com/?=&debug=on stores empty string ke
 ##### Signature
 
 #### Returns
-string
+`string`
 
 #### Parameters
 
@@ -61,7 +61,7 @@ getValue('lost') ---> undefined
 ##### Signature
 
 #### Returns
-string
+`string`
 
 #### Parameters
 
@@ -85,7 +85,7 @@ getValues('lost') ---> undefined
 ##### Signature
 
 #### Returns
-string[]
+`string[]`
 
 #### Parameters
 

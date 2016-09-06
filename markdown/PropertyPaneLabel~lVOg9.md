@@ -5,7 +5,7 @@ Helper method to create a Label on the PropertyPane.
 ##### Signature
 
 #### Returns
-IPropertyPaneField<IPropertyPaneLabelProps>
+`IPropertyPaneField<IPropertyPaneLabelProps>`
 
 #### Parameters
 

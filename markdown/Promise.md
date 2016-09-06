@@ -33,7 +33,7 @@ Any errors thrown in the constructor callback will be implicitly passed to rejec
 ##### Signature
 
 #### Returns
-any => void) => void)
+`any => void) => void)`
 
 #### Parameters
 
@@ -56,7 +56,7 @@ If an error is thrown in the callback, the returned promise rejects with that er
 ##### Signature
 
 #### Returns
-Promise<U>
+`Promise<U>`
 
 #### Parameters
 
@@ -75,7 +75,7 @@ Sugar for promise.then(undefined,onRejected)
 ##### Signature
 
 #### Returns
-Promise<U>
+`Promise<U>`
 
 #### Parameters
 
