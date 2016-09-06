@@ -11,13 +11,7 @@
       [ propName: string ]: string
     }
   }
-8. Property has {}. Handle this...
-
-17. Check Optional handling ? for methods, params, etc. Need it in markdown.
-20. Handle these guys::
-    public whenFinished(callback: () => void): void; //Function as parameter.
-    forEach(callbackfn: (value: V, index: K, map: Map<K, V>) => void, thisArg?: any): void;
-
+5. Check Optional handling ? for methods, params, etc. Need it in markdown.
 17. Can't have random numbers name. Maybe we can do Sha256 strings.
 19. Check general description of below:
 /**

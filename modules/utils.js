@@ -43,29 +43,29 @@ var self = module.exports = {
         random = random.slice(-5).replace(/\W+/g, '9')
         return random
     },
+    /**
+     * While splitting parameter list, we need to supress/replace commas within the param list to
+     * ensure it doesn't get picked up as a parameter.
+     * @param  {String} [line=''] [description]
+     * @return {[type]}           [description]
+     */
     replaceCommaInGenerics: (line='') => {
-        var open = false
+        var openBrace = false
+        var openBracket = false
         var replaced = false
         var out = []
 
         for (var i = 0, len = line.length; i < len; i++) {
-            if (line[i] === '<') open = true
-
-            if (line[i] === '>') open = false
-
-            if (line[i] === '(') {
-                open = true
-            }
-            if (line[i] === ')') {
-                open = false
-            }
-            if (open && line[i] === ',') {
+            if (line[i] === '<') openBracket = true
+            if (line[i] === '>') openBracket = false
+            if (line[i] === '(') openBrace = true
+            if (line[i] === ')') openBrace = false
+            if ((openBrace || openBracket) && line[i] === ',') {
                 out[i] = '^'
                 replaced = true
             } else {
                 out[i] = line[i]
             }
-
         }
         if (replaced) {
             console.log('<<< ' + line);
