@@ -15,13 +15,13 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`append`](#append)     | public | void |  |
-|[`delete`](#delete)     | public | void |  |
-|[`get`](#get)     | public | string |  |
-|[`getAll`](#getall)     | public | Array<string> |  |
-|[`has`](#has)     | public | boolean |  |
-|[`set`](#set)     | public | void |  |
-|[`forEach`](#foreach)     | public | void |  |
+|[`append`](#append)     | `public` | void |  |
+|[`delete`](#delete)     | `public` | void |  |
+|[`get`](#get)     | `public` | string |  |
+|[`getAll`](#getall)     | `public` | Array<string> |  |
+|[`has`](#has)     | `public` | boolean |  |
+|[`set`](#set)     | `public` | void |  |
+|[`forEach`](#foreach)     | `public` | void |  |
 
 
 

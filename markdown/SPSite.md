@@ -14,7 +14,7 @@ information for the SharePoint site collection ("site") that hosts the page.
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|`id`     | public | string | The GUID that identifies the SPSite on the server |
+|`id`     | `public` | string | The GUID that identifies the SPSite on the server |
 
 
 

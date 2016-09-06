@@ -376,10 +376,10 @@ function addMembers(tline = '', type = '', name = '', localO = {}) {
 
         var mline = dclone(tline).substr(1)
         if (o[e]['isStatic']) {
-            mline = mline.replace('%access%', `${o[e]['accessModifier']}, _static_`)
+            mline = mline.replace('%access%', `\`${o[e]['accessModifier']}, _static_\``)
         }
         else {
-            mline = mline.replace('%access%', `${o[e]['accessModifier']}`)
+            mline = mline.replace('%access%', `\`${o[e]['accessModifier']}\``)
         }
         if ((type === 'method') || type === 'imethod') {
             mline = mline.replace('%type%', `${getLinkForType(o[e]['returnType'])}`)

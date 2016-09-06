@@ -12,7 +12,7 @@
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|`boolean`     | bodyUsed: | boolean |  |
+|`boolean`     | `bodyUsed:` | boolean |  |
 
 
 
@@ -21,12 +21,12 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`arrayBuffer`](#arraybuffer)     | public | [`Promise<ArrayBuffer>`](Promise.md) |  |
-|[`blob`](#blob)     | public | [`Promise<Blob>`](Promise.md) |  |
-|[`formData`](#formdata)     | public | [`Promise<FormData>`](Promise.md) |  |
-|[`json`](#json)     | public | [`Promise<any>`](Promise.md) |  |
-|[`json<T>`](#json<t>)     | public | [`Promise<T>`](Promise.md) |  |
-|[`text`](#text)     | public | [`Promise<string>`](Promise.md) |  |
+|[`arrayBuffer`](#arraybuffer)     | `public` | [`Promise<ArrayBuffer>`](Promise.md) |  |
+|[`blob`](#blob)     | `public` | [`Promise<Blob>`](Promise.md) |  |
+|[`formData`](#formdata)     | `public` | [`Promise<FormData>`](Promise.md) |  |
+|[`json`](#json)     | `public` | [`Promise<any>`](Promise.md) |  |
+|[`json<T>`](#json<t>)     | `public` | [`Promise<T>`](Promise.md) |  |
+|[`text`](#text)     | `public` | [`Promise<string>`](Promise.md) |  |
 
 
 

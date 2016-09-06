@@ -22,11 +22,11 @@ Math.random() function and may be not be suitable for some applications.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`equals`](#equals)     | public | boolean | represent the same value |
-|[`isValid`](#isvalid)     | public, _static_ | boolean | Indicates whether a guid is valid (according to RFC4122) |
-|[`constructorGuid`](#constructorguid)     | public, _static_ | [`Guid`](Guid.md) | Returns a new Guid instance with a pseudo-randomly generated Guid |
-|[`toString`](#tostring)     | public | string | Example: 'd5369f3b-bd7a-412a-9c0f-7f0650bb5489' |
-|[`tryParse`](#tryparse)     | public, _static_ | [`Guid`](Guid.md) | Trys to construct a new Guid instance using guid string |
+|[`equals`](#equals)     | `public` | boolean | represent the same value |
+|[`isValid`](#isvalid)     | `public, _static_` | boolean | Indicates whether a guid is valid (according to RFC4122) |
+|[`constructorGuid`](#constructorguid)     | `public, _static_` | [`Guid`](Guid.md) | Returns a new Guid instance with a pseudo-randomly generated Guid |
+|[`toString`](#tostring)     | `public` | string | Example: 'd5369f3b-bd7a-412a-9c0f-7f0650bb5489' |
+|[`tryParse`](#tryparse)     | `public, _static_` | [`Guid`](Guid.md) | Trys to construct a new Guid instance using guid string |
 
 
 

@@ -17,9 +17,9 @@ introduced without inadvertently breaking components that are loaded by an older
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|`defaultCreator`     | public | ServiceCreator<T> | your application |
-|`id`     | public | string | your application |
-|`name`     | public | string | your application |
+|`defaultCreator`     | `public` | ServiceCreator<T> | your application |
+|`id`     | `public` | string | your application |
+|`name`     | `public` | string | your application |
 
 
 
@@ -28,9 +28,9 @@ introduced without inadvertently breaking components that are loaded by an older
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`constructor`](#constructor)     | public | ServiceCreator<T> | PRIVATE - Do not call this from your own code |
-|[`create<T>`](#create<t>)     | public, _static_ | [`ServiceKey<T>;`](ServiceKey.md) | your application |
-|[`createCustom<T>`](#createcustom<t>)     | public, _static_ | [`ServiceKey<T>`](ServiceKey.md) | your application |
+|[`constructor`](#constructor)     | `public` | ServiceCreator<T> | PRIVATE - Do not call this from your own code |
+|[`create<T>`](#create<t>)     | `public, _static_` | [`ServiceKey<T>;`](ServiceKey.md) | your application |
+|[`createCustom<T>`](#createcustom<t>)     | `public, _static_` | [`ServiceKey<T>`](ServiceKey.md) | your application |
 
 
 

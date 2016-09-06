@@ -12,11 +12,11 @@
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|`string|ResponseType`     | type: | string,[`ResponseType`](ResponseType.md) |  |
-|`string`     | statusText: | string |  |
-|`number`     | status: | number |  |
-|`boolean`     | ok: | boolean |  |
-|`Headers`     | headers: | [`Headers`](Headers.md) |  |
+|`string|ResponseType`     | `type:` | string,[`ResponseType`](ResponseType.md) |  |
+|`string`     | `statusText:` | string |  |
+|`number`     | `status:` | number |  |
+|`boolean`     | `ok:` | boolean |  |
+|`Headers`     | `headers:` | [`Headers`](Headers.md) |  |
 
 
 
@@ -25,10 +25,10 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`constructor`](#constructor)     | public | [`ResponseInit`](ResponseInit.md) |  |
-|[`error`](#error)     | public | [`Response`](Response.md) |  |
-|[`redirect`](#redirect)     | public | [`Response`](Response.md) |  |
-|[`clone`](#clone)     | public | [`Response`](Response.md) |  |
+|[`constructor`](#constructor)     | `public` | [`ResponseInit`](ResponseInit.md) |  |
+|[`error`](#error)     | `public` | [`Response`](Response.md) |  |
+|[`redirect`](#redirect)     | `public` | [`Response`](Response.md) |  |
+|[`clone`](#clone)     | `public` | [`Response`](Response.md) |  |
 
 
 

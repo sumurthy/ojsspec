@@ -24,11 +24,11 @@ resolve with a Response object for that particular request.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`constructor`](#constructor)     | public | [`IODataBatchOptions`](IODataBatchOptions.md) |  |
-|[`execute`](#execute)     | public | [`Promise<ODataBatch>`](Promise.md) | Executes the batched queries that were queued using ODataBatch |
-|[`fetch`](#fetch)     | public | [`Promise<Response>`](Promise.md) | Queues a new request,and returns a promise that can be used to access  the server response (after execute() has completed) |
-|[`get`](#get)     | public | [`Promise<Response>`](Promise.md) | Calls fetch(),but sets the method to 'GET' |
-|[`post`](#post)     | public | [`Promise<Response>`](Promise.md) | Calls fetch(),but sets the method to 'POST' |
+|[`constructor`](#constructor)     | `public` | [`IODataBatchOptions`](IODataBatchOptions.md) |  |
+|[`execute`](#execute)     | `public` | [`Promise<ODataBatch>`](Promise.md) | Executes the batched queries that were queued using ODataBatch |
+|[`fetch`](#fetch)     | `public` | [`Promise<Response>`](Promise.md) | Queues a new request,and returns a promise that can be used to access  the server response (after execute() has completed) |
+|[`get`](#get)     | `public` | [`Promise<Response>`](Promise.md) | Calls fetch(),but sets the method to 'GET' |
+|[`post`](#post)     | `public` | [`Promise<Response>`](Promise.md) | Calls fetch(),but sets the method to 'POST' |
 
 
 
