@@ -16,8 +16,8 @@ small, and extremely common. Do not add advanced parsing logic to this file.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[convertToODataStringLiteral](#converttoodatastringliteral~maqc9)     | public, _static_ | string | Converts a variable to an OData string literal and escapes apostrophes |
-|[removeEndSlash](#removeendslash~kcno9)     | public, _static_ | string | Removes any slash characters from the end of the URL |
+|[`convertToODataStringLiteral`](#converttoodatastringliteral~maqc9)     | public, _static_ | string | Converts a variable to an OData string literal and escapes apostrophes |
+|[`removeEndSlash`](#removeendslash~kcno9)     | public, _static_ | string | Removes any slash characters from the end of the URL |
 
 
 
@@ -35,6 +35,7 @@ convertToODataStringLiteral("example list") ---> "'example list'"
 convertToODataStringLiteral("'example list'") ---> "'''example list'''"
 
 ##### Signature
+`public convertToODataStringLiteral(value: string): string`
 
 #### Returns
 `string`
@@ -57,6 +58,7 @@ removeEndSlash('/example') ---> '/example'
 removeEndSlash('/') ---> ''
 
 ##### Signature
+`public removeEndSlash(url: string): string`
 
 #### Returns
 `string`

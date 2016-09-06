@@ -23,11 +23,11 @@ enhancements.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor~3egg9)     | public | [`ServiceScope`](ServiceScope.md) |  |
-|[fetch](#fetch~ekuc9)     | public | [`Promise<Response>`](Promise.md) | Performs a REST service call |
-|[fetchCore](#fetchcore~p9z89)     | protected | [`Promise<Response>`](Promise.md) | Performs a REST service call |
-|[get](#get~xkvg9)     | public | [`Promise<Response>`](Promise.md) | Calls fetch(),but sets the method to 'GET' |
-|[post](#post~1dus9)     | public | [`Promise<Response>`](Promise.md) | Calls fetch(),but sets the method to 'POST' |
+|[`constructor`](#constructor~3egg9)     | public | [`ServiceScope`](ServiceScope.md) |  |
+|[`fetch`](#fetch~ekuc9)     | public | [`Promise<Response>`](Promise.md) | Performs a REST service call |
+|[`fetchCore`](#fetchcore~p9z89)     | protected | [`Promise<Response>`](Promise.md) | Performs a REST service call |
+|[`get`](#get~xkvg9)     | public | [`Promise<Response>`](Promise.md) | Calls fetch(),but sets the method to 'GET' |
+|[`post`](#post~1dus9)     | public | [`Promise<Response>`](Promise.md) | Calls fetch(),but sets the method to 'POST' |
 
 
 
@@ -37,6 +37,7 @@ enhancements.
 
 
 ##### Signature
+`constructor(serviceScope: ServiceScope)`
 
 #### Returns
 `ServiceScope`
@@ -57,6 +58,7 @@ are essentially the same as the WHATWG API standard that is documented here:
 https:
 
 ##### Signature
+`public fetch(url: string,options: IBasicHttpClientOptions): Promise<Response>`
 
 #### Returns
 `Promise<Response>`
@@ -78,6 +80,7 @@ are essentially the same as the WHATWG API standard that is documented here:
 https:
 
 ##### Signature
+`protected fetchCore(request: Request): Promise<Response>`
 
 #### Returns
 `Promise<Response>`
@@ -95,6 +98,7 @@ https:
 Calls fetch(),but sets the method to 'GET'.
 
 ##### Signature
+`public get(url: string,options?: IBasicHttpClientOptions): Promise<Response>`
 
 #### Returns
 `Promise<Response>`
@@ -113,6 +117,7 @@ Calls fetch(),but sets the method to 'GET'.
 Calls fetch(),but sets the method to 'POST'.
 
 ##### Signature
+`public post(url: string,options: IBasicHttpClientOptions): Promise<Response>`
 
 #### Returns
 `Promise<Response>`

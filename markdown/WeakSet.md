@@ -16,10 +16,10 @@ _Type parameters: `<T>`_
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[delete](#delete~hwgq9)      | boolean |  |
-|[clear](#clear~n1pq9)      | void |  |
-|[add](#add~7r2c9)      | [`WeakSet<T>`](WeakSet.md) |  |
-|[has](#has~mnoc9)      | boolean |  |
+|[`delete`](#delete~hwgq9)      | boolean |  |
+|[`clear`](#clear~n1pq9)      | void |  |
+|[`add`](#add~7r2c9)      | [`WeakSet<T>`](WeakSet.md) |  |
+|[`has`](#has~mnoc9)      | boolean |  |
 
 
 
@@ -28,6 +28,7 @@ _Type parameters: `<T>`_
 
 
 ##### Signature
+`delete(value: T): boolean`
 
 #### Returns
 `boolean`
@@ -45,6 +46,7 @@ _Type parameters: `<T>`_
 
 
 ##### Signature
+`clear(): void`
 
 #### Returns
 `void`
@@ -58,6 +60,7 @@ None
 
 
 ##### Signature
+`add(value: T): WeakSet<T>`
 
 #### Returns
 `WeakSet<T>`
@@ -75,6 +78,7 @@ None
 
 
 ##### Signature
+`has(value: T): boolean`
 
 #### Returns
 `boolean`

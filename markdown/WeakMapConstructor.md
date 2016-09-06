@@ -22,7 +22,7 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[constructor<K,V>](#constructor<k,v>~vnf09)      | [`WeakMap<K,V>`](WeakMap.md) |  |
+|[`constructor<K,V>`](#constructor<k,v>~vnf09)      | [`WeakMap<K,V>`](WeakMap.md) |  |
 
 
 
@@ -31,6 +31,7 @@
 
 
 ##### Signature
+`new<K,V>(iterable: ForEachable<[K,V]>): WeakMap<K,V>`
 
 #### Returns
 `WeakMap<K,V>`

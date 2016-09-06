@@ -25,10 +25,10 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor~3egg9)     | public | [`ResponseInit`](ResponseInit.md) |  |
-|[error](#error~o8xg9)     | public | [`Response`](Response.md) |  |
-|[redirect](#redirect~ikt49)     | public | [`Response`](Response.md) |  |
-|[clone](#clone~mtkw9)     | public | [`Response`](Response.md) |  |
+|[`constructor`](#constructor~3egg9)     | public | [`ResponseInit`](ResponseInit.md) |  |
+|[`error`](#error~o8xg9)     | public | [`Response`](Response.md) |  |
+|[`redirect`](#redirect~ikt49)     | public | [`Response`](Response.md) |  |
+|[`clone`](#clone~mtkw9)     | public | [`Response`](Response.md) |  |
 
 
 
@@ -38,6 +38,7 @@
 
 
 ##### Signature
+`constructor(body?: BodyInit,init?: ResponseInit)`
 
 #### Returns
 `ResponseInit`
@@ -56,6 +57,7 @@
 
 
 ##### Signature
+`error(): Response`
 
 #### Returns
 `Response`
@@ -69,6 +71,7 @@ None
 
 
 ##### Signature
+`redirect(url: string,status: number): Response`
 
 #### Returns
 `Response`
@@ -87,6 +90,7 @@ None
 
 
 ##### Signature
+`clone(): Response`
 
 #### Returns
 `Response`

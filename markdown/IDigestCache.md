@@ -21,10 +21,10 @@ of time. For more information, see the MSDN article
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[addDigestToCache](#adddigesttocache~70fw9)      | void | the digest value will no longer be valid |
-|[clearAllDigests](#clearalldigests~kkza9)      | void | Clears all values from the cache |
-|[clearDigest](#cleardigest~4hro9)      | boolean | This may be a server-relative or absolute URL |
-|[fetchDigest](#fetchdigest~xktc9)      | [`Promise<string>`](Promise.md) | This may be a server-relative or absolute URL |
+|[`addDigestToCache`](#adddigesttocache~70fw9)      | void | the digest value will no longer be valid |
+|[`clearAllDigests`](#clearalldigests~kkza9)      | void | Clears all values from the cache |
+|[`clearDigest`](#cleardigest~4hro9)      | boolean | This may be a server-relative or absolute URL |
+|[`fetchDigest`](#fetchdigest~xktc9)      | [`Promise<string>`](Promise.md) | This may be a server-relative or absolute URL |
 
 
 
@@ -36,6 +36,7 @@ fractional milliseconds; for example, to specify an expiration
 "5 seconds from right now", use performance.now()+5000.
 
 ##### Signature
+`addDigestToCache(webUrl: string,digestValue: string,expirationTimestamp: number): void`
 
 #### Returns
 `void`
@@ -55,6 +56,7 @@ fractional milliseconds; for example, to specify an expiration
 Clears all values from the cache.
 
 ##### Signature
+`clearAllDigests(): void`
 
 #### Returns
 `void`
@@ -68,6 +70,7 @@ None
 This may be a server-relative or absolute URL.
 
 ##### Signature
+`clearDigest(webUrl: string): boolean`
 
 #### Returns
 `boolean`
@@ -85,6 +88,7 @@ This may be a server-relative or absolute URL.
 This may be a server-relative or absolute URL.
 
 ##### Signature
+`fetchDigest(webUrl: string): Promise<string>`
 
 #### Returns
 `Promise<string>`

@@ -22,14 +22,14 @@ _Type parameters: `<T>`_
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[add](#add~7r2c9)      | [`Set<T>`](Set.md) |  |
-|[clear](#clear~n1pq9)      | void |  |
-|[delete](#delete~hwgq9)      | boolean |  |
-|[forEach](#foreach~jqfq9)      | void |  |
-|[has](#has~mnoc9)      | boolean |  |
-|[entries](#entries~fmli9)      | [`Iterator<[T,T]>`](Iterator.md) |  |
-|[keys](#keys~5ysm9)      | [`Iterator<T>`](Iterator.md) |  |
-|[values](#values~bdxe9)      | [`Iterator<T>`](Iterator.md) |  |
+|[`add`](#add~7r2c9)      | [`Set<T>`](Set.md) |  |
+|[`clear`](#clear~n1pq9)      | void |  |
+|[`delete`](#delete~hwgq9)      | boolean |  |
+|[`forEach`](#foreach~jqfq9)      | void |  |
+|[`has`](#has~mnoc9)      | boolean |  |
+|[`entries`](#entries~fmli9)      | [`Iterator<[T,T]>`](Iterator.md) |  |
+|[`keys`](#keys~5ysm9)      | [`Iterator<T>`](Iterator.md) |  |
+|[`values`](#values~bdxe9)      | [`Iterator<T>`](Iterator.md) |  |
 
 
 
@@ -38,6 +38,7 @@ _Type parameters: `<T>`_
 
 
 ##### Signature
+`add(value: T): Set<T>`
 
 #### Returns
 `Set<T>`
@@ -55,6 +56,7 @@ _Type parameters: `<T>`_
 
 
 ##### Signature
+`clear(): void`
 
 #### Returns
 `void`
@@ -68,6 +70,7 @@ None
 
 
 ##### Signature
+`delete(value: T): boolean`
 
 #### Returns
 `boolean`
@@ -85,6 +88,7 @@ None
 
 
 ##### Signature
+`forEach(callbackfn: (value: T,index: T,set: Set<T>) => void,thisArg?: any): void`
 
 #### Returns
 `void`
@@ -103,6 +107,7 @@ None
 
 
 ##### Signature
+`has(value: T): boolean`
 
 #### Returns
 `boolean`
@@ -120,6 +125,7 @@ None
 
 
 ##### Signature
+`entries(): Iterator<[T,T]>`
 
 #### Returns
 `Iterator<[T,T]>`
@@ -133,6 +139,7 @@ None
 
 
 ##### Signature
+`keys(): Iterator<T>`
 
 #### Returns
 `Iterator<T>`
@@ -146,6 +153,7 @@ None
 
 
 ##### Signature
+`values(): Iterator<T>`
 
 #### Returns
 `Iterator<T>`

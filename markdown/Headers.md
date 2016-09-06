@@ -15,13 +15,13 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[append](#append~o9sk9)     | public | void |  |
-|[delete](#delete~hwgq9)     | public | void |  |
-|[get](#get~xkvg9)     | public | string |  |
-|[getAll](#getall~cwr89)     | public | Array<string> |  |
-|[has](#has~mnoc9)     | public | boolean |  |
-|[set](#set~9zym9)     | public | void |  |
-|[forEach](#foreach~jqfq9)     | public | void |  |
+|[`append`](#append~o9sk9)     | public | void |  |
+|[`delete`](#delete~hwgq9)     | public | void |  |
+|[`get`](#get~xkvg9)     | public | string |  |
+|[`getAll`](#getall~cwr89)     | public | Array<string> |  |
+|[`has`](#has~mnoc9)     | public | boolean |  |
+|[`set`](#set~9zym9)     | public | void |  |
+|[`forEach`](#foreach~jqfq9)     | public | void |  |
 
 
 
@@ -31,6 +31,7 @@
 
 
 ##### Signature
+`append(name: string,value: string): void`
 
 #### Returns
 `void`
@@ -49,6 +50,7 @@
 
 
 ##### Signature
+`delete(name: string):void`
 
 #### Returns
 `void`
@@ -66,6 +68,7 @@
 
 
 ##### Signature
+`get(name: string): string`
 
 #### Returns
 `string`
@@ -83,6 +86,7 @@
 
 
 ##### Signature
+`getAll(name: string): Array<string>`
 
 #### Returns
 `Array<string>`
@@ -100,6 +104,7 @@
 
 
 ##### Signature
+`has(name: string): boolean`
 
 #### Returns
 `boolean`
@@ -117,6 +122,7 @@
 
 
 ##### Signature
+`set(name: string,value: string): void`
 
 #### Returns
 `void`
@@ -135,6 +141,7 @@
 
 
 ##### Signature
+`forEach(callback: (value: string,name: string) => void): void`
 
 #### Returns
 `void`

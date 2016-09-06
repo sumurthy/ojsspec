@@ -26,7 +26,7 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor~3egg9)     | public | [`RequestInit`](RequestInit.md) |  |
+|[`constructor`](#constructor~3egg9)     | public | [`RequestInit`](RequestInit.md) |  |
 
 
 
@@ -36,6 +36,7 @@
 
 
 ##### Signature
+`constructor(input: string|Request,init?:RequestInit)`
 
 #### Returns
 `RequestInit`

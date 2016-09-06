@@ -16,7 +16,7 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[fetch](#fetch~ekuc9)      | [`Promise<Response>`](Promise.md) |  |
+|[`fetch`](#fetch~ekuc9)      | [`Promise<Response>`](Promise.md) |  |
 
 
 
@@ -25,6 +25,7 @@
 
 
 ##### Signature
+`fetch(url: string|Request,init?: RequestInit): Promise<Response>`
 
 #### Returns
 `Promise<Response>`

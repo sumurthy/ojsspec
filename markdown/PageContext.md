@@ -29,7 +29,7 @@ application cache.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor~3egg9)     | public | [`ServiceScope`](ServiceScope.md) |  |
+|[`constructor`](#constructor~3egg9)     | public | [`ServiceScope`](ServiceScope.md) |  |
 
 
 
@@ -39,6 +39,7 @@ application cache.
 
 
 ##### Signature
+`constructor(serviceScope: ServiceScope)`
 
 #### Returns
 `ServiceScope`

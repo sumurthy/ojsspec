@@ -24,11 +24,11 @@ resolve with a Response object for that particular request.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor~3egg9)     | public | [`IODataBatchOptions`](IODataBatchOptions.md) |  |
-|[execute](#execute~6cei9)     | public | [`Promise<ODataBatch>`](Promise.md) | Executes the batched queries that were queued using ODataBatch |
-|[fetch](#fetch~ekuc9)     | public | [`Promise<Response>`](Promise.md) | Queues a new request,and returns a promise that can be used to access  the server response (after execute() has completed) |
-|[get](#get~xkvg9)     | public | [`Promise<Response>`](Promise.md) | Calls fetch(),but sets the method to 'GET' |
-|[post](#post~1dus9)     | public | [`Promise<Response>`](Promise.md) | Calls fetch(),but sets the method to 'POST' |
+|[`constructor`](#constructor~3egg9)     | public | [`IODataBatchOptions`](IODataBatchOptions.md) |  |
+|[`execute`](#execute~6cei9)     | public | [`Promise<ODataBatch>`](Promise.md) | Executes the batched queries that were queued using ODataBatch |
+|[`fetch`](#fetch~ekuc9)     | public | [`Promise<Response>`](Promise.md) | Queues a new request,and returns a promise that can be used to access  the server response (after execute() has completed) |
+|[`get`](#get~xkvg9)     | public | [`Promise<Response>`](Promise.md) | Calls fetch(),but sets the method to 'GET' |
+|[`post`](#post~1dus9)     | public | [`Promise<Response>`](Promise.md) | Calls fetch(),but sets the method to 'POST' |
 
 
 
@@ -38,6 +38,7 @@ resolve with a Response object for that particular request.
 
 
 ##### Signature
+`public constructor(serviceScope: ServiceScope,batchOptions?: IODataBatchOptions)`
 
 #### Returns
 `IODataBatchOptions`
@@ -56,6 +57,7 @@ resolve with a Response object for that particular request.
 Executes the batched queries that were queued using ODataBatch.fetch().
 
 ##### Signature
+`public execute(): Promise<ODataBatch>`
 
 #### Returns
 `Promise<ODataBatch>`
@@ -82,6 +84,7 @@ explicitly.
 
 
 ##### Signature
+`public fetch(url: string,options?: IODataBatchRequestOptions): Promise<Response>`
 
 #### Returns
 `Promise<Response>`
@@ -100,6 +103,7 @@ explicitly.
 Calls fetch(),but sets the method to 'GET'.
 
 ##### Signature
+`public get(url: string,options?: IODataBatchRequestOptions): Promise<Response>`
 
 #### Returns
 `Promise<Response>`
@@ -118,6 +122,7 @@ Calls fetch(),but sets the method to 'GET'.
 Calls fetch(),but sets the method to 'POST'.
 
 ##### Signature
+`public post(url: string,options: IODataBatchRequestOptions): Promise<Response>`
 
 #### Returns
 `Promise<Response>`

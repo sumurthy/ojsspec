@@ -60,10 +60,10 @@ https:
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor~3egg9)     | public | [`IODataBasePermission`](IODataBasePermission.md) |  |
-|[hasAllPermissions](#hasallpermissions~9qqk9)     | public | boolean | Function for determining if a given permission mask has all of the requested permissions |
-|[hasAnyPermissions](#hasanypermissions~kl1k9)     | public | boolean | Function for determining if a given permission mask has any of the requested permissions |
-|[hasPermission](#haspermission~s9ly9)     | public | boolean | Function for checking if a given permission mask has the requested permission |
+|[`constructor`](#constructor~3egg9)     | public | [`IODataBasePermission`](IODataBasePermission.md) |  |
+|[`hasAllPermissions`](#hasallpermissions~9qqk9)     | public | boolean | Function for determining if a given permission mask has all of the requested permissions |
+|[`hasAnyPermissions`](#hasanypermissions~kl1k9)     | public | boolean | Function for determining if a given permission mask has any of the requested permissions |
+|[`hasPermission`](#haspermission~s9ly9)     | public | boolean | Function for checking if a given permission mask has the requested permission |
 
 
 
@@ -73,6 +73,7 @@ https:
 
 
 ##### Signature
+`constructor(value: IODataBasePermission)`
 
 #### Returns
 `IODataBasePermission`
@@ -90,6 +91,7 @@ https:
 Function for determining if a given permission mask has all of the requested permissions.
 
 ##### Signature
+`public hasAllPermissions(...requestedPerms: SPPermission[]): boolean`
 
 #### Returns
 `boolean`
@@ -107,6 +109,7 @@ Function for determining if a given permission mask has all of the requested per
 Function for determining if a given permission mask has any of the requested permissions.
 
 ##### Signature
+`public hasAnyPermissions(...requestedPerms: SPPermission[]): boolean`
 
 #### Returns
 `boolean`
@@ -124,6 +127,7 @@ Function for determining if a given permission mask has any of the requested per
 Function for checking if a given permission mask has the requested permission.
 
 ##### Signature
+`public hasPermission(requestedPerm: SPPermission): boolean`
 
 #### Returns
 `boolean`

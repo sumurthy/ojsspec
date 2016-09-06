@@ -18,9 +18,9 @@ that might impact performance.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[isNonemptyString](#isnonemptystring~p7xu9)     | public, _static_ | void | Throws an exception if the specified string is null,undefined,or an empty string |
-|[isNotNullOrUndefined](#isnotnullorundefined~v0mm9)     | public, _static_ | void | Throws an exception if the specified value is null or undefined |
-|[isTrue](#istrue~1ea89)     | public, _static_ | void | Throws an exception if the specified value is not true |
+|[`isNonemptyString`](#isnonemptystring~p7xu9)     | public, _static_ | void | Throws an exception if the specified string is null,undefined,or an empty string |
+|[`isNotNullOrUndefined`](#isnotnullorundefined~v0mm9)     | public, _static_ | void | Throws an exception if the specified value is null or undefined |
+|[`isTrue`](#istrue~1ea89)     | public, _static_ | void | Throws an exception if the specified value is not true |
 
 
 
@@ -30,6 +30,7 @@ that might impact performance.
 Throws an exception if the specified string is null,undefined,or an empty string.
 
 ##### Signature
+`public isNonemptyString(value: string,variableName: string): void`
 
 #### Returns
 `void`
@@ -48,6 +49,7 @@ Throws an exception if the specified string is null,undefined,or an empty string
 Throws an exception if the specified value is null or undefined.
 
 ##### Signature
+`public isNotNullOrUndefined(value: any,variableName: string): void`
 
 #### Returns
 `void`
@@ -66,6 +68,7 @@ Throws an exception if the specified value is null or undefined.
 Throws an exception if the specified value is not true.
 
 ##### Signature
+`public isTrue(value: boolean,variableName: string): void`
 
 #### Returns
 `void`

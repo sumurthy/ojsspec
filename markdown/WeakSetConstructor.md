@@ -22,7 +22,7 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[constructor<T>](#constructor<t>~xwmg9)      | [`WeakSet<T>`](WeakSet.md) |  |
+|[`constructor<T>`](#constructor<t>~xwmg9)      | [`WeakSet<T>`](WeakSet.md) |  |
 
 
 
@@ -31,6 +31,7 @@
 
 
 ##### Signature
+`new<T>(iterable: ForEachable<T>): WeakSet<T>`
 
 #### Returns
 `WeakSet<T>`

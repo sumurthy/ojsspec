@@ -3,7 +3,7 @@
 %memberdescription%
 
 ##### Signature
-`%apisignature%`
+%apisignature%
 
 #### Returns
 %returntype%

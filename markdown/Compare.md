@@ -17,7 +17,7 @@ This class contains various comparison utilities.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[shallowCompare](#shallowcompare~bspw9)     | public, _static_ | boolean | Performs shallow comparison between two objects to determine if they are equal |
+|[`shallowCompare`](#shallowcompare~bspw9)     | public, _static_ | boolean | Performs shallow comparison between two objects to determine if they are equal |
 
 
 
@@ -29,6 +29,7 @@ only object types.
 
 
 ##### Signature
+`public shallowCompare(objA: Object,objB: Object): boolean`
 
 #### Returns
 `boolean`

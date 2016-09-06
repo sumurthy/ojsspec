@@ -21,12 +21,12 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[arrayBuffer](#arraybuffer~3xbq9)     | public | [`Promise<ArrayBuffer>`](Promise.md) |  |
-|[blob](#blob~gulg9)     | public | [`Promise<Blob>`](Promise.md) |  |
-|[formData](#formdata~zxna9)     | public | [`Promise<FormData>`](Promise.md) |  |
-|[json](#json~kjno9)     | public | [`Promise<any>`](Promise.md) |  |
-|[json<T>](#json<t>~qxbg9)     | public | [`Promise<T>`](Promise.md) |  |
-|[text](#text~yyde9)     | public | [`Promise<string>`](Promise.md) |  |
+|[`arrayBuffer`](#arraybuffer~3xbq9)     | public | [`Promise<ArrayBuffer>`](Promise.md) |  |
+|[`blob`](#blob~gulg9)     | public | [`Promise<Blob>`](Promise.md) |  |
+|[`formData`](#formdata~zxna9)     | public | [`Promise<FormData>`](Promise.md) |  |
+|[`json`](#json~kjno9)     | public | [`Promise<any>`](Promise.md) |  |
+|[`json<T>`](#json<t>~qxbg9)     | public | [`Promise<T>`](Promise.md) |  |
+|[`text`](#text~yyde9)     | public | [`Promise<string>`](Promise.md) |  |
 
 
 
@@ -36,6 +36,7 @@
 
 
 ##### Signature
+`arrayBuffer(): Promise<ArrayBuffer>`
 
 #### Returns
 `Promise<ArrayBuffer>`
@@ -49,6 +50,7 @@ None
 
 
 ##### Signature
+`blob(): Promise<Blob>`
 
 #### Returns
 `Promise<Blob>`
@@ -62,6 +64,7 @@ None
 
 
 ##### Signature
+`formData(): Promise<FormData>`
 
 #### Returns
 `Promise<FormData>`
@@ -75,6 +78,7 @@ None
 
 
 ##### Signature
+`json(): Promise<any>`
 
 #### Returns
 `Promise<any>`
@@ -88,6 +92,7 @@ None
 
 
 ##### Signature
+`json<T>(): Promise<T>`
 
 #### Returns
 `Promise<T>`
@@ -101,6 +106,7 @@ None
 
 
 ##### Signature
+`text(): Promise<string>`
 
 #### Returns
 `Promise<string>`

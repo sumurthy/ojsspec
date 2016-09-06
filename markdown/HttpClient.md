@@ -20,12 +20,12 @@ class instead.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor~3egg9)     | public | [`ServiceScope`](ServiceScope.md) |  |
-|[beginBatch](#beginbatch~p9ym9)     | public | [`ODataBatch`](ODataBatch.md) | Begins an ODATA batch,which allows multiple REST queries to be bundled into  a single web request |
-|[fetch](#fetch~ekuc9)     | public | [`Promise<Response>`](Promise.md) | Generally,the parameters and semantics for HttpClient |
-|[get](#get~xkvg9)     | public | [`Promise<Response>`](Promise.md) | Calls fetch(),but sets the method to 'GET' |
-|[getWebUrlFromRequestUrl](#getweburlfromrequesturl~tja09)     | public, _static_ | string | This uses a heuristic to guess the SPWeb URL associated with the provided  REST URL |
-|[post](#post~1dus9)     | public | [`Promise<Response>`](Promise.md) | Calls fetch(),but sets the method to 'POST' |
+|[`constructor`](#constructor~3egg9)     | public | [`ServiceScope`](ServiceScope.md) |  |
+|[`beginBatch`](#beginbatch~p9ym9)     | public | [`ODataBatch`](ODataBatch.md) | Begins an ODATA batch,which allows multiple REST queries to be bundled into  a single web request |
+|[`fetch`](#fetch~ekuc9)     | public | [`Promise<Response>`](Promise.md) | Generally,the parameters and semantics for HttpClient |
+|[`get`](#get~xkvg9)     | public | [`Promise<Response>`](Promise.md) | Calls fetch(),but sets the method to 'GET' |
+|[`getWebUrlFromRequestUrl`](#getweburlfromrequesturl~tja09)     | public, _static_ | string | This uses a heuristic to guess the SPWeb URL associated with the provided  REST URL |
+|[`post`](#post~1dus9)     | public | [`Promise<Response>`](Promise.md) | Calls fetch(),but sets the method to 'POST' |
 
 
 
@@ -35,6 +35,7 @@ class instead.
 
 
 ##### Signature
+`constructor(serviceScope: ServiceScope)`
 
 #### Returns
 `ServiceScope`
@@ -53,6 +54,7 @@ Begins an ODATA batch,which allows multiple REST queries to be bundled into
 a single web request.
 
 ##### Signature
+`public beginBatch(batchOptions?: IODataBatchOptions): ODataBatch`
 
 #### Returns
 `ODataBatch`
@@ -88,6 +90,7 @@ to specify it explicitly.
 
 
 ##### Signature
+`public fetch(url: string,options: IHttpClientOptions): Promise<Response>`
 
 #### Returns
 `Promise<Response>`
@@ -106,6 +109,7 @@ to specify it explicitly.
 Calls fetch(),but sets the method to 'GET'.
 
 ##### Signature
+`public get(url: string,options?: IHttpClientOptions): Promise<Response>`
 
 #### Returns
 `Promise<Response>`
@@ -131,6 +135,7 @@ is "http:
 "http:
 
 ##### Signature
+`public getWebUrlFromRequestUrl(requestUrl: string): string`
 
 #### Returns
 `string`
@@ -148,6 +153,7 @@ is "http:
 Calls fetch(),but sets the method to 'POST'.
 
 ##### Signature
+`public post(url: string,options: IHttpClientOptions): Promise<Response>`
 
 #### Returns
 `Promise<Response>`

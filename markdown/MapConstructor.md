@@ -22,7 +22,7 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[constructor<K,V>](#constructor<k,v>~vnf09)      | [`Map<K,V>`](Map.md) |  |
+|[`constructor<K,V>`](#constructor<k,v>~vnf09)      | [`Map<K,V>`](Map.md) |  |
 
 
 
@@ -31,6 +31,7 @@
 
 
 ##### Signature
+`new<K,V>(iterable: ForEachable<[K,V]>): Map<K,V>`
 
 #### Returns
 `Map<K,V>`

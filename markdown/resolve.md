@@ -4,6 +4,7 @@ Make a new promise from the thenable.
 A thenable is promise-like in as far as it has a "then" method.
 
 ##### Signature
+`function resolve<R>(value?: R | Thenable<R>): Promise<R>`
 
 #### Returns
 `Promise<R>`

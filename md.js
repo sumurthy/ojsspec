@@ -256,7 +256,7 @@ function doSubClassInterface(tline = '', localO = {}, localName = '', isClass = 
 function doSubMember(tline = '', member = {}, membername = '') {
     if (tline.includes('%membername%')) tline = tline.replace('%membername%', membername.split('~')[0])
     if (tline.includes('%memberdescription%')) tline = tline.replace('%memberdescription%', member['descr'])
-    if (tline.includes('%apisignature%')) tline = tline.replace('%apisignature%', member['signature'])
+    if (tline.includes('%apisignature%')) tline = tline.replace('%apisignature%', `\`${member['signature']}\``)
 
     if (tline.includes('%noparam%')) {
         if (member['params'].length === 0) {
@@ -383,7 +383,7 @@ function addMembers(tline = '', type = '', name = '', localO = {}) {
         }
         if ((type === 'method') || type === 'imethod') {
             mline = mline.replace('%type%', `${getLinkForType(o[e]['returnType'])}`)
-            mline = mline.replace('%name%', `[${e.split('~')[0]}](#${e.toLowerCase()})`)
+            mline = mline.replace('%name%', `[\`${e.split('~')[0]}\`](#${e.toLowerCase()})`)
         } else {
             mline = mline.replace('%name%', e.split('~')[0])
             mline = mline.replace('%type%', `${getLinkForType(o[e]['dataType'])}`)

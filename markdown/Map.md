@@ -22,15 +22,15 @@ _Type parameters: `<K,V>`_
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[clear](#clear~n1pq9)      | void |  |
-|[delete](#delete~hwgq9)      | boolean |  |
-|[forEach](#foreach~jqfq9)      | void |  |
-|[get](#get~xkvg9)      | V |  |
-|[has](#has~mnoc9)      | boolean |  |
-|[set](#set~9zym9)      | [`Map<K,V>`](Map.md) |  |
-|[entries](#entries~fmli9)      | [`Iterator<[K,V]>`](Iterator.md) |  |
-|[keys](#keys~5ysm9)      | [`Iterator<K>`](Iterator.md) |  |
-|[values](#values~bdxe9)      | [`Iterator<V>`](Iterator.md) |  |
+|[`clear`](#clear~n1pq9)      | void |  |
+|[`delete`](#delete~hwgq9)      | boolean |  |
+|[`forEach`](#foreach~jqfq9)      | void |  |
+|[`get`](#get~xkvg9)      | V |  |
+|[`has`](#has~mnoc9)      | boolean |  |
+|[`set`](#set~9zym9)      | [`Map<K,V>`](Map.md) |  |
+|[`entries`](#entries~fmli9)      | [`Iterator<[K,V]>`](Iterator.md) |  |
+|[`keys`](#keys~5ysm9)      | [`Iterator<K>`](Iterator.md) |  |
+|[`values`](#values~bdxe9)      | [`Iterator<V>`](Iterator.md) |  |
 
 
 
@@ -39,6 +39,7 @@ _Type parameters: `<K,V>`_
 
 
 ##### Signature
+`clear(): void`
 
 #### Returns
 `void`
@@ -52,6 +53,7 @@ None
 
 
 ##### Signature
+`delete(key: K): boolean`
 
 #### Returns
 `boolean`
@@ -69,6 +71,7 @@ None
 
 
 ##### Signature
+`forEach(callbackfn: (value: V,index: K,map: Map<K,V>) => void,thisArg?: any): void`
 
 #### Returns
 `void`
@@ -87,6 +90,7 @@ None
 
 
 ##### Signature
+`get(key: K): V`
 
 #### Returns
 `V`
@@ -104,6 +108,7 @@ None
 
 
 ##### Signature
+`has(key: K): boolean`
 
 #### Returns
 `boolean`
@@ -121,6 +126,7 @@ None
 
 
 ##### Signature
+`set(key: K,value?: V): Map<K,V>`
 
 #### Returns
 `Map<K,V>`
@@ -139,6 +145,7 @@ None
 
 
 ##### Signature
+`entries(): Iterator<[K,V]>`
 
 #### Returns
 `Iterator<[K,V]>`
@@ -152,6 +159,7 @@ None
 
 
 ##### Signature
+`keys(): Iterator<K>`
 
 #### Returns
 `Iterator<K>`
@@ -165,6 +173,7 @@ None
 
 
 ##### Signature
+`values(): Iterator<V>`
 
 #### Returns
 `Iterator<V>`

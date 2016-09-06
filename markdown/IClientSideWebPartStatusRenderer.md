@@ -16,10 +16,10 @@ error messages for a webpart.
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[clearError](#clearerror~xlfc9)      | void | Clear the webpart error message |
-|[clearLoadingIndicator](#clearloadingindicator~s6nw9)      | void | Clear the loading indicator |
-|[displayLoadingIndicator](#displayloadingindicator~qh9g9)      | void | Display a loading spinner |
-|[renderError](#rendererror~vxc09)      | void | Render the provided error message in the webpart container div |
+|[`clearError`](#clearerror~xlfc9)      | void | Clear the webpart error message |
+|[`clearLoadingIndicator`](#clearloadingindicator~s6nw9)      | void | Clear the loading indicator |
+|[`displayLoadingIndicator`](#displayloadingindicator~qh9g9)      | void | Display a loading spinner |
+|[`renderError`](#rendererror~vxc09)      | void | Render the provided error message in the webpart container div |
 
 
 
@@ -28,6 +28,7 @@ error messages for a webpart.
 Clear the webpart error message.
 
 ##### Signature
+`clearError(domElement: HTMLElement): void`
 
 #### Returns
 `void`
@@ -45,6 +46,7 @@ Clear the webpart error message.
 Clear the loading indicator.
 
 ##### Signature
+`clearLoadingIndicator(domElement: Element): void`
 
 #### Returns
 `void`
@@ -62,6 +64,7 @@ Clear the loading indicator.
 Display a loading spinner.
 
 ##### Signature
+`displayLoadingIndicator(domElement: Element,loadingMessage: string): void`
 
 #### Returns
 `void`
@@ -80,6 +83,7 @@ Display a loading spinner.
 Render the provided error message in the webpart container div.
 
 ##### Signature
+`renderError(domElement: HTMLElement,error: Error | string): void`
 
 #### Returns
 `void`

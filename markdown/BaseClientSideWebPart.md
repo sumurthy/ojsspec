@@ -40,20 +40,20 @@ Please refer to the documentation of the individual APIs to make the right decis
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor~3egg9)     | public | [`IWebPartContext`](IWebPartContext.md) |   e |
-|[clearError](#clearerror~xlfc9)     | protected | void | This API should be used to clear the error message from the web part display area |
-|[configureStart](#configurestart~3kks9)     | protected | void | if it is not already open |
-|[deserialize](#deserialize~n2e89)     | protected | TProperties |  |
-|[dispose](#dispose~xs8y9)     | protected | void | This API is called at the end of the web part lifecycle |
-|[onBeforeSerialize](#onbeforeserialize~jlok9)     | protected | [`IHtmlProperties`](IHtmlProperties.md) | the documentation of IHtmlProperties interface for more details |
-|[onDisplayModeChanged](#ondisplaymodechanged~l3vu9)     | protected | void |  |
-|[onInit<T>](#oninit<t>~mxes9)     | protected | [`Promise<T>`](Promise.md) | This API should be overridden to perform long running operations e |
-|[onPropertyChange](#onpropertychange~xdzg9)     | protected | void | This API is invoked on property changes in the PropertyPane when the PropertyPane is being used in Reactive mode |
-|[onPropertyConfigurationComplete](#onpropertyconfigurationcomplete~64o89)     | protected | void | This API is called when the current web part configuration process is completed |
-|[onPropertyPaneRendered](#onpropertypanerendered~9zcu9)     | protected | void | This API is involed when the PropertyPane is rendered |
-|[onPropertyPaneSave](#onpropertypanesave~qdfc9)     | protected | void | this API is invoked when the the changes are applied on the PropertyPane when the PropertyPane is used in  Non-Reactive mode |
-|[render](#render~u4mg9)     | public | void | This API is called to render the web part |
-|[renderError](#rendererror~vxc09)     | protected | void | This API should be used to render an error message in the web part display area |
+|[`constructor`](#constructor~3egg9)     | public | [`IWebPartContext`](IWebPartContext.md) |   e |
+|[`clearError`](#clearerror~xlfc9)     | protected | void | This API should be used to clear the error message from the web part display area |
+|[`configureStart`](#configurestart~3kks9)     | protected | void | if it is not already open |
+|[`deserialize`](#deserialize~n2e89)     | protected | TProperties |  |
+|[`dispose`](#dispose~xs8y9)     | protected | void | This API is called at the end of the web part lifecycle |
+|[`onBeforeSerialize`](#onbeforeserialize~jlok9)     | protected | [`IHtmlProperties`](IHtmlProperties.md) | the documentation of IHtmlProperties interface for more details |
+|[`onDisplayModeChanged`](#ondisplaymodechanged~l3vu9)     | protected | void |  |
+|[`onInit<T>`](#oninit<t>~mxes9)     | protected | [`Promise<T>`](Promise.md) | This API should be overridden to perform long running operations e |
+|[`onPropertyChange`](#onpropertychange~xdzg9)     | protected | void | This API is invoked on property changes in the PropertyPane when the PropertyPane is being used in Reactive mode |
+|[`onPropertyConfigurationComplete`](#onpropertyconfigurationcomplete~64o89)     | protected | void | This API is called when the current web part configuration process is completed |
+|[`onPropertyPaneRendered`](#onpropertypanerendered~9zcu9)     | protected | void | This API is involed when the PropertyPane is rendered |
+|[`onPropertyPaneSave`](#onpropertypanesave~qdfc9)     | protected | void | this API is invoked when the the changes are applied on the PropertyPane when the PropertyPane is used in  Non-Reactive mode |
+|[`render`](#render~u4mg9)     | public | void | This API is called to render the web part |
+|[`renderError`](#rendererror~vxc09)     | protected | void | This API should be used to render an error message in the web part display area |
 
 
 
@@ -69,6 +69,7 @@ super(context);
 }
 
 ##### Signature
+`constructor(ctx: IWebPartContext)`
 
 #### Returns
 `IWebPartContext`
@@ -86,6 +87,7 @@ super(context);
 This API should be used to clear the error message from the web part display area.
 
 ##### Signature
+`protected clearError(): void`
 
 #### Returns
 `void`
@@ -99,6 +101,7 @@ None
 if it is not already open.
 
 ##### Signature
+`protected configureStart(refreshOnly?: boolean): void`
 
 #### Returns
 `void`
@@ -116,6 +119,7 @@ if it is not already open.
 
 
 ##### Signature
+`protected deserialize(data: IWebPartData): TProperties`
 
 #### Returns
 `TProperties`
@@ -134,6 +138,7 @@ This API is called at the end of the web part lifecycle. It should be overridden
 resources that the web part is holding onto.
 
 ##### Signature
+`protected dispose(): void`
 
 #### Returns
 `void`
@@ -147,6 +152,7 @@ None
 the documentation of IHtmlProperties interface for more details.
 
 ##### Signature
+`protected onBeforeSerialize(): IHtmlProperties`
 
 #### Returns
 `IHtmlProperties`
@@ -160,6 +166,7 @@ None
 
 
 ##### Signature
+`protected onDisplayModeChanged(oldDisplayMode: DisplayMode): void`
 
 #### Returns
 `void`
@@ -179,6 +186,7 @@ the initial rendering of the web part. The loading indicator is displayed during
 This API is called only once during the lifecycle of a web part.
 
 ##### Signature
+`protected onInit<T>(): Promise<T>`
 
 #### Returns
 `Promise<T>`
@@ -195,6 +203,7 @@ invokes the web part host's setDirty API.
 
 
 ##### Signature
+`protected onPropertyChange(propertyPath: string,newValue: any): void`
 
 #### Returns
 `void`
@@ -216,6 +225,7 @@ for the previously selected web part.
 
 
 ##### Signature
+`protected onPropertyConfigurationComplete(): void`
 
 #### Returns
 `void`
@@ -229,6 +239,7 @@ None
 This API is involed when the PropertyPane is rendered.
 
 ##### Signature
+`protected onPropertyPaneRendered(): void`
 
 #### Returns
 `void`
@@ -243,6 +254,7 @@ this API is invoked when the the changes are applied on the PropertyPane when th
 Non-Reactive mode. This API is not invoked when the PropertyPane is used in Reactive mode.
 
 ##### Signature
+`protected onPropertyPaneSave(): void`
 
 #### Returns
 `void`
@@ -257,6 +269,7 @@ This API is called to render the web part. There is no base implementation of th
 required to override this API.
 
 ##### Signature
+`public render(): void`
 
 #### Returns
 `void`
@@ -272,6 +285,7 @@ using the trace logger.
 
 
 ##### Signature
+`protected renderError(error: Error): void`
 
 #### Returns
 `void`

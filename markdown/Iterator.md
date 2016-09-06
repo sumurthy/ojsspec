@@ -16,9 +16,9 @@ _Type parameters: `<T>`_
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[next](#next~lclm9)      | [`IteratorResult<T>`](IteratorResult.md) |  |
-|[return](#return~77oo9)      | [`IteratorResult<T>`](IteratorResult.md) |  |
-|[throw](#throw~ty949)      | [`IteratorResult<T>`](IteratorResult.md) |  |
+|[`next`](#next~lclm9)      | [`IteratorResult<T>`](IteratorResult.md) |  |
+|[`return`](#return~77oo9)      | [`IteratorResult<T>`](IteratorResult.md) |  |
+|[`throw`](#throw~ty949)      | [`IteratorResult<T>`](IteratorResult.md) |  |
 
 
 
@@ -27,6 +27,7 @@ _Type parameters: `<T>`_
 
 
 ##### Signature
+`next(value?: any): IteratorResult<T>`
 
 #### Returns
 `IteratorResult<T>`
@@ -44,6 +45,7 @@ _Type parameters: `<T>`_
 
 
 ##### Signature
+`return?(value?: any): IteratorResult<T>`
 
 #### Returns
 `IteratorResult<T>`
@@ -61,6 +63,7 @@ _Type parameters: `<T>`_
 
 
 ##### Signature
+`throw?(e?: any): IteratorResult<T>`
 
 #### Returns
 `IteratorResult<T>`

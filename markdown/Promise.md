@@ -15,9 +15,9 @@ _Type parameters: `<R>`_
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor~3egg9)     | public | any => void) => void) | If you call resolve in the body of the callback passed to the constructor,  your promise is fulfilled with result object passed to resolve |
-|[then<U>](#then<u>~6quy9)     | public | [`Promise<U>`](Promise.md) | onFulfilled is called when/if "promise" resolves |
-|[catch<U>](#catch<u>~kefu9)     | public | [`Promise<U>`](Promise.md) | Sugar for promise |
+|[`constructor`](#constructor~3egg9)     | public | any => void) => void) | If you call resolve in the body of the callback passed to the constructor,  your promise is fulfilled with result object passed to resolve |
+|[`then<U>`](#then<u>~6quy9)     | public | [`Promise<U>`](Promise.md) | onFulfilled is called when/if "promise" resolves |
+|[`catch<U>`](#catch<u>~kefu9)     | public | [`Promise<U>`](Promise.md) | Sugar for promise |
 
 
 
@@ -31,6 +31,7 @@ For consistency and debugging (eg stack traces), obj should be an instanceof Err
 Any errors thrown in the constructor callback will be implicitly passed to reject().
 
 ##### Signature
+`constructor(callback: (resolve: (value?: R | Thenable<R>) => void,reject: (error?: any) => void) => void)`
 
 #### Returns
 `any => void) => void)`
@@ -54,6 +55,7 @@ If an error is thrown in the callback, the returned promise rejects with that er
 
 
 ##### Signature
+`then<U>(onFulfilled?: (value: R) => U | Thenable<U>,onRejected?: (error: any) => void): Promise<U>`
 
 #### Returns
 `Promise<U>`
@@ -73,6 +75,7 @@ Sugar for promise.then(undefined,onRejected)
 
 
 ##### Signature
+`catch<U>(onRejected?: (error: any) => U | Thenable<U>): Promise<U>`
 
 #### Returns
 `Promise<U>`
