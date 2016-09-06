@@ -220,7 +220,7 @@ function doSubClassInterface(tline = '', localO = {}, localName = '', isClass = 
     }
     if (tline.includes('%generictype%')) {
         if (localO[localName]['genericType']) {
-            tline = tline.replace('%generictype%', ` <${localO[localName]['genericType']}>`)
+            tline = tline.replace('%generictype%', ` \`<${localO[localName]['genericType']}>\``)
         }
         else {
             tline = tline.replace('%generictype%', '')
@@ -228,7 +228,7 @@ function doSubClassInterface(tline = '', localO = {}, localName = '', isClass = 
     }
     if (tline.includes('%typeparameters%')) {
         if (localO[localName]['genericType']) {
-            tline = tline.replace('%typeparameters%', `_Type parameters: <${localO[localName]['genericType']}>_`)
+            tline = tline.replace('%typeparameters%', `_Type parameters: \`<${localO[localName]['genericType']}>\`_`)
         }
         else {
             tline = tline.replace('%typeparameters%', '')
