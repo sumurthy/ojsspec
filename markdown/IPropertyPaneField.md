@@ -15,7 +15,7 @@ _Type parameters: <TProperties>_
 |:-------------|:-------|:-----------|
 |`properties`      | TProperties | Strongly typed properties object |
 |`targetProperty`      | string | Target property from the web part's property bag |
-|`type`      | [IPropertyPaneFieldType](IPropertyPaneFieldType.md) | Type of the PropertyPane field |
+|`type`      | [`IPropertyPaneFieldType`](IPropertyPaneFieldType.md) | Type of the PropertyPane field |
 
 
 

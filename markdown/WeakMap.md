@@ -20,7 +20,7 @@ _Type parameters: <K,V>_
 |[clear](#clear~n1pq9)      | void |  |
 |[get](#get~xkvg9)      | V |  |
 |[has](#has~mnoc9)      | boolean |  |
-|[set](#set~9zym9)      | [WeakMap<K,V>](WeakMap.md) |  |
+|[set](#set~9zym9)      | [`WeakMap<K,V>`](WeakMap.md) |  |
 
 
 

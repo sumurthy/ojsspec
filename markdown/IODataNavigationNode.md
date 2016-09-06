@@ -14,7 +14,7 @@ https:
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`Children`      | [IODataNavigationNode](IODataNavigationNode.md) | Gets or sets an array of Navigation Nodes that are children to the current node |
+|`Children`      | [`IODataNavigationNode`](IODataNavigationNode.md) | Gets or sets an array of Navigation Nodes that are children to the current node |
 |`Id`      | number | Gets a value that specifies the identifier for the navigation node |
 |`IsDocLib`      | boolean |  |
 |`IsExternal`      | boolean | Gets or sets a value that specifies whether the navigation node URL potentially  corresponds to pages outside of the site collection |

@@ -16,7 +16,7 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[fetch](#fetch~ekuc9)      | [Promise<Response>](Promise.md) |  |
+|[fetch](#fetch~ekuc9)      | [`Promise<Response>`](Promise.md) |  |
 
 
 
@@ -34,6 +34,6 @@ Promise<Response>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | string,[Request](Request.md) |  |
-| `init`    | [RequestInit](RequestInit.md) | _Optional._ |
+| `url`    | string,[`Request`](Request.md) |  |
+| `init`    | [`RequestInit`](RequestInit.md) | _Optional._ |
 

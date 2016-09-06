@@ -13,5 +13,5 @@ IPropertyPaneField<IPropertyPaneCheckboxProps>
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `targetProperty`    | string |  |
-| `properties`    | [IPropertyPaneCheckboxProps](IPropertyPaneCheckboxProps.md) |  |
+| `properties`    | [`IPropertyPaneCheckboxProps`](IPropertyPaneCheckboxProps.md) |  |
 

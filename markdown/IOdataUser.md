@@ -21,7 +21,7 @@ https:
 |`LoginName`      | string | Example: "i:0# |
 |`PrincipalType`      | number | Example: "i:0# |
 |`Title`      | string | Example: "DOMAIN\user" |
-|`UserId`      | [IOdataUserId](IOdataUserId.md) | Example: "DOMAIN\user" |
+|`UserId`      | [`IOdataUserId`](IOdataUserId.md) | Example: "DOMAIN\user" |
 
 
 

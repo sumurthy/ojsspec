@@ -62,10 +62,10 @@ function getLinkForType(type = '') {
     }
     type.split(splitChar).forEach((e) => {
         if (allTypes.includes(e.trim())) {
-            out = out + `[${e.replace(/\^/g, ',')}](${Utils.trimGenerics(e)}.md)` + ','
+            out = out + `[\`${e.replace(/\^/g, ',')}\`](${Utils.trimGenerics(e)}.md)` + ','
         }
         else if (allTypes.includes(Utils.trimGenerics(e))) {
-            out = out + `[${e.replace(/\^/g, ',')}](${Utils.trimGenerics(e)}.md)` + ','
+            out = out + `[\`${e.replace(/\^/g, ',')}\`](${Utils.trimGenerics(e)}.md)` + ','
         }
         else {
             out = out + e.replace(/\^/g, ',') + ','

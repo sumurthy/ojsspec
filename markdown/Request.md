@@ -13,11 +13,11 @@
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
 |`string`     | referrer: | string |  |
-|`Headers`     | headers: | [Headers](Headers.md) |  |
-|`string|RequestContext`     | context: | string,[RequestContext](RequestContext.md) |  |
-|`string|RequestMode`     | mode: | string,[RequestMode](RequestMode.md) |  |
-|`string|RequestCredentials`     | credentials: | string,[RequestCredentials](RequestCredentials.md) |  |
-|`string|RequestCache`     | cache: | string,[RequestCache](RequestCache.md) |  |
+|`Headers`     | headers: | [`Headers`](Headers.md) |  |
+|`string|RequestContext`     | context: | string,[`RequestContext`](RequestContext.md) |  |
+|`string|RequestMode`     | mode: | string,[`RequestMode`](RequestMode.md) |  |
+|`string|RequestCredentials`     | credentials: | string,[`RequestCredentials`](RequestCredentials.md) |  |
+|`string|RequestCache`     | cache: | string,[`RequestCache`](RequestCache.md) |  |
 
 
 
@@ -26,7 +26,7 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor~3egg9)     | public | [RequestInit](RequestInit.md) |  |
+|[constructor](#constructor~3egg9)     | public | [`RequestInit`](RequestInit.md) |  |
 
 
 
@@ -45,6 +45,6 @@ RequestInit
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `input`    | string,[Request](Request.md) |  |
-| `init`    | [RequestInit](RequestInit.md) | _Optional._ |
+| `input`    | string,[`Request`](Request.md) |  |
+| `init`    | [`RequestInit`](RequestInit.md) | _Optional._ |
 

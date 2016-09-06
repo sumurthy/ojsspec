@@ -17,7 +17,7 @@ https:
 |:-------------|:-------|:-----------|
 |`BaseTemplate`      | number |  |
 |`Created`      | string | Example: "/Date(1453294804000)/" |
-|`CurrentChangeToken`      | [IODataChangeToken](IODataChangeToken.md) | Example: "/Date(1453294804000)/" |
+|`CurrentChangeToken`      | [`IODataChangeToken`](IODataChangeToken.md) | Example: "/Date(1453294804000)/" |
 |`Description`      | string | Example: "/Date(1453294804000)/" |
 |`EntityTypeName`      | string | Example: "MyListTitleList" |
 |`Hidden`      | boolean | Example: "MyListTitleList" |

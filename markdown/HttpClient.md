@@ -20,12 +20,12 @@ class instead.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor~3egg9)     | public | [ServiceScope](ServiceScope.md) |  |
-|[beginBatch](#beginbatch~p9ym9)     | public | [ODataBatch](ODataBatch.md) | Begins an ODATA batch,which allows multiple REST queries to be bundled into  a single web request |
-|[fetch](#fetch~ekuc9)     | public | [Promise<Response>](Promise.md) | Generally,the parameters and semantics for HttpClient |
-|[get](#get~xkvg9)     | public | [Promise<Response>](Promise.md) | Calls fetch(),but sets the method to 'GET' |
+|[constructor](#constructor~3egg9)     | public | [`ServiceScope`](ServiceScope.md) |  |
+|[beginBatch](#beginbatch~p9ym9)     | public | [`ODataBatch`](ODataBatch.md) | Begins an ODATA batch,which allows multiple REST queries to be bundled into  a single web request |
+|[fetch](#fetch~ekuc9)     | public | [`Promise<Response>`](Promise.md) | Generally,the parameters and semantics for HttpClient |
+|[get](#get~xkvg9)     | public | [`Promise<Response>`](Promise.md) | Calls fetch(),but sets the method to 'GET' |
 |[getWebUrlFromRequestUrl](#getweburlfromrequesturl~tja09)     | public, _static_ | string | This uses a heuristic to guess the SPWeb URL associated with the provided  REST URL |
-|[post](#post~1dus9)     | public | [Promise<Response>](Promise.md) | Calls fetch(),but sets the method to 'POST' |
+|[post](#post~1dus9)     | public | [`Promise<Response>`](Promise.md) | Calls fetch(),but sets the method to 'POST' |
 
 
 
@@ -44,7 +44,7 @@ ServiceScope
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceScope`    | [ServiceScope](ServiceScope.md) |  |
+| `serviceScope`    | [`ServiceScope`](ServiceScope.md) |  |
 
 
 ## beginBatch
@@ -62,7 +62,7 @@ ODataBatch
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `batchOptions`    | [IODataBatchOptions](IODataBatchOptions.md) | _Optional._ |
+| `batchOptions`    | [`IODataBatchOptions`](IODataBatchOptions.md) | _Optional._ |
 
 
 ## fetch
@@ -98,7 +98,7 @@ Promise<Response>
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `url`    | string |  |
-| `options`    | [IHttpClientOptions](IHttpClientOptions.md) |  |
+| `options`    | [`IHttpClientOptions`](IHttpClientOptions.md) |  |
 
 
 ## get
@@ -116,7 +116,7 @@ Promise<Response>
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `url`    | string |  |
-| `options`    | [IHttpClientOptions](IHttpClientOptions.md) | _Optional._ |
+| `options`    | [`IHttpClientOptions`](IHttpClientOptions.md) | _Optional._ |
 
 
 ## getWebUrlFromRequestUrl
@@ -158,5 +158,5 @@ Promise<Response>
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `url`    | string |  |
-| `options`    | [IHttpClientOptions](IHttpClientOptions.md) |  |
+| `options`    | [`IHttpClientOptions`](IHttpClientOptions.md) |  |
 

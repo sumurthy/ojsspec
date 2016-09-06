@@ -43,7 +43,7 @@ void
 |:-------------|:---------------|:------------|
 | `source`    | string |  |
 | `error`    | Error |  |
-| `scope`    | [ServiceScope](ServiceScope.md) | _Optional._ |
+| `scope`    | [`ServiceScope`](ServiceScope.md) | _Optional._ |
 
 
 ## info
@@ -62,7 +62,7 @@ void
 |:-------------|:---------------|:------------|
 | `source`    | string |  |
 | `message`    | string |  |
-| `scope`    | [ServiceScope](ServiceScope.md) | _Optional._ |
+| `scope`    | [`ServiceScope`](ServiceScope.md) | _Optional._ |
 
 
 ## verbose
@@ -81,7 +81,7 @@ void
 |:-------------|:---------------|:------------|
 | `source`    | string |  |
 | `message`    | string |  |
-| `scope`    | [ServiceScope](ServiceScope.md) | _Optional._ |
+| `scope`    | [`ServiceScope`](ServiceScope.md) | _Optional._ |
 
 
 ## warn
@@ -100,5 +100,5 @@ void
 |:-------------|:---------------|:------------|
 | `source`    | string |  |
 | `message`    | string |  |
-| `scope`    | [ServiceScope](ServiceScope.md) | _Optional._ |
+| `scope`    | [`ServiceScope`](ServiceScope.md) | _Optional._ |
 

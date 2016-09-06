@@ -13,5 +13,5 @@ IPropertyPaneField<IPropertyPaneSliderProps>
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `targetProperty`    | string |  |
-| `properties`    | [IPropertyPaneSliderProps](IPropertyPaneSliderProps.md) |  |
+| `properties`    | [`IPropertyPaneSliderProps`](IPropertyPaneSliderProps.md) |  |
 

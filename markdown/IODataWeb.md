@@ -16,7 +16,7 @@ https:
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
 |`Created`      | string | Gets a value that specifies when the site was created |
-|`CurrentChangeToken`      | [IODataChangeToken](IODataChangeToken.md) | Represents the unique sequential location of a change within the change log |
+|`CurrentChangeToken`      | [`IODataChangeToken`](IODataChangeToken.md) | Represents the unique sequential location of a change within the change log |
 |`CustomMasterUrl`      | string | Gets or sets the URL for a custom master page file to apply to the website |
 |`Description`      | string | Gets or sets the description for the site |
 |`Id`      | string | Gets a value that specifies the site identifier for the site |

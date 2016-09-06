@@ -21,12 +21,12 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[arrayBuffer](#arraybuffer~3xbq9)     | public | [Promise<ArrayBuffer>](Promise.md) |  |
-|[blob](#blob~gulg9)     | public | [Promise<Blob>](Promise.md) |  |
-|[formData](#formdata~zxna9)     | public | [Promise<FormData>](Promise.md) |  |
-|[json](#json~kjno9)     | public | [Promise<any>](Promise.md) |  |
-|[json<T>](#json<t>~qxbg9)     | public | [Promise<T>](Promise.md) |  |
-|[text](#text~yyde9)     | public | [Promise<string>](Promise.md) |  |
+|[arrayBuffer](#arraybuffer~3xbq9)     | public | [`Promise<ArrayBuffer>`](Promise.md) |  |
+|[blob](#blob~gulg9)     | public | [`Promise<Blob>`](Promise.md) |  |
+|[formData](#formdata~zxna9)     | public | [`Promise<FormData>`](Promise.md) |  |
+|[json](#json~kjno9)     | public | [`Promise<any>`](Promise.md) |  |
+|[json<T>](#json<t>~qxbg9)     | public | [`Promise<T>`](Promise.md) |  |
+|[text](#text~yyde9)     | public | [`Promise<string>`](Promise.md) |  |
 
 
 

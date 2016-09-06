@@ -54,15 +54,15 @@ serviceScope.whenFinished().
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor~3egg9)     | public | [ServiceScope](ServiceScope.md) | PRIVATE CONSTRUCTOR - DO NOT CALL THIS FROM YOUR OWN CODE |
+|[constructor](#constructor~3egg9)     | public | [`ServiceScope`](ServiceScope.md) | PRIVATE CONSTRUCTOR - DO NOT CALL THIS FROM YOUR OWN CODE |
 |[consume<T>](#consume<t>~wjaw9)     | public | T | Components should call this function to "consume" a dependency,i |
 |[createAndProvide<T>](#createandprovide<t>~lj5g9)     | public | T; | This is a shorthand function that its equivalent to constructing a new instance of the  simpleServiceClass, then registering it by calling ServiceScope |
 |[createDefaultAndProvide<T>](#createdefaultandprovide<t>~q7xy9)     | public | T | This is a shorthand function that constructs the default implementation of the specified  serviceKey, and then registers it by calling ServiceScope |
 |[finish](#finish~wwno9)     | public | void | When a ServiceScope is first started,it is in an "unfinished" state where provide() is  allowed but consume() is not allowed |
-|[getParent](#getparent~xemy9)     | public | [ServiceScope](ServiceScope.md) | Returns the parent of the current ServiceScope,or undefined if this is a root scope |
+|[getParent](#getparent~xemy9)     | public | [`ServiceScope`](ServiceScope.md) | Returns the parent of the current ServiceScope,or undefined if this is a root scope |
 |[provide<T>](#provide<t>~qdn49)     | public | T | ServiceScope |
-|[startNewChild](#startnewchild~yzvu9)     | public | [ServiceScope](ServiceScope.md) | Constructs a new ServiceScope that is a child of the current scope |
-|[startNewRoot](#startnewroot~tx989)     | public, _static_ | [ServiceScope](ServiceScope.md) | Create a new root-level ServiceScope |
+|[startNewChild](#startnewchild~yzvu9)     | public | [`ServiceScope`](ServiceScope.md) | Constructs a new ServiceScope that is a child of the current scope |
+|[startNewRoot](#startnewroot~tx989)     | public, _static_ | [`ServiceScope`](ServiceScope.md) | Create a new root-level ServiceScope |
 |[whenFinished](#whenfinished~pzle9)     | public | void | It is an error to call ServiceScope |
 
 
@@ -82,7 +82,7 @@ ServiceScope
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `parent`    | [ServiceScope](ServiceScope.md) |  |
+| `parent`    | [`ServiceScope`](ServiceScope.md) |  |
 
 
 ## consume<T>
@@ -101,7 +101,7 @@ T
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceKey`    | [ServiceKey<T>](ServiceKey.md) |  |
+| `serviceKey`    | [`ServiceKey<T>`](ServiceKey.md) |  |
 
 
 ## createAndProvide<T>
@@ -119,7 +119,7 @@ T;
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceKey`    | [ServiceKey<T>](ServiceKey.md) |  |
+| `serviceKey`    | [`ServiceKey<T>`](ServiceKey.md) |  |
 | `simpleServiceClass`    | { new (serviceScope: ServiceScope) } |  |
 
 
@@ -138,7 +138,7 @@ T
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceKey`    | [ServiceKey<T>](ServiceKey.md) |  |
+| `serviceKey`    | [`ServiceKey<T>`](ServiceKey.md) |  |
 
 
 ## finish
@@ -189,7 +189,7 @@ T
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceKey`    | [ServiceKey<T>](ServiceKey.md) |  |
+| `serviceKey`    | [`ServiceKey<T>`](ServiceKey.md) |  |
 | `service`    | T |  |
 
 

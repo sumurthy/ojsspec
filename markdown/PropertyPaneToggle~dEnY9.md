@@ -13,5 +13,5 @@ IPropertyPaneField<IPropertyPaneToggleProps>
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `targetProperty`    | string |  |
-| `properties`    | [IPropertyPaneToggleProps](IPropertyPaneToggleProps.md) |  |
+| `properties`    | [`IPropertyPaneToggleProps`](IPropertyPaneToggleProps.md) |  |
 

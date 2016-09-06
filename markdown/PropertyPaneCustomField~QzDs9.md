@@ -13,5 +13,5 @@ IPropertyPaneField<IPropertyPaneCustomFieldProps>
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `targetProperty`    | string |  |
-| `properties`    | [IPropertyPaneCustomFieldProps](IPropertyPaneCustomFieldProps.md) |  |
+| `properties`    | [`IPropertyPaneCustomFieldProps`](IPropertyPaneCustomFieldProps.md) |  |
 

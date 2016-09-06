@@ -29,8 +29,8 @@ introduced without inadvertently breaking components that are loaded by an older
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
 |[constructor](#constructor~3egg9)     | public | ServiceCreator<T> | PRIVATE - Do not call this from your own code |
-|[create<T>](#create<t>~5l6a9)     | public, _static_ | [ServiceKey<T>;](ServiceKey.md) | your application |
-|[createCustom<T>](#createcustom<t>~fpze9)     | public, _static_ | [ServiceKey<T>](ServiceKey.md) | your application |
+|[create<T>](#create<t>~5l6a9)     | public, _static_ | [`ServiceKey<T>;`](ServiceKey.md) | your application |
+|[createCustom<T>](#createcustom<t>~fpze9)     | public, _static_ | [`ServiceKey<T>`](ServiceKey.md) | your application |
 
 
 

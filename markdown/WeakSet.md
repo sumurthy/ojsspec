@@ -18,7 +18,7 @@ _Type parameters: <T>_
 |:-------------|:-------|:-----------|
 |[delete](#delete~hwgq9)      | boolean |  |
 |[clear](#clear~n1pq9)      | void |  |
-|[add](#add~7r2c9)      | [WeakSet<T>](WeakSet.md) |  |
+|[add](#add~7r2c9)      | [`WeakSet<T>`](WeakSet.md) |  |
 |[has](#has~mnoc9)      | boolean |  |
 
 

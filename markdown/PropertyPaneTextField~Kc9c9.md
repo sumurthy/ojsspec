@@ -13,5 +13,5 @@ IPropertyPaneField<IPropertyPaneTextFieldProps>
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `targetProperty`    | string |  |
-| `properties`    | [IPropertyPaneTextFieldProps](IPropertyPaneTextFieldProps.md) |  |
+| `properties`    | [`IPropertyPaneTextFieldProps`](IPropertyPaneTextFieldProps.md) |  |
 

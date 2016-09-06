@@ -23,13 +23,13 @@ Please refer to the documentation of the individual APIs to make the right decis
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
 |`accessibleTitle`     | protected | string | This property points to the accessible title of web part made available to screen readers |
-|`context`     | protected | [IWebPartContext](IWebPartContext.md) |  |
+|`context`     | protected | [`IWebPartContext`](IWebPartContext.md) |  |
 |`disableReactivePropertyChanges`     | protected | boolean | This property is used to change the web part's PropertyPane interaction from Reactive to NonReactive |
-|`displayMode`     | protected | [DisplayMode](DisplayMode.md) | This property is the current display mode of the web part |
+|`displayMode`     | protected | [`DisplayMode`](DisplayMode.md) | This property is the current display mode of the web part |
 |`domElement`     | protected | HTMLElement | This property is a pointer to the root DOM element of the web part |
 |`previewImageUrl`     | protected | string | This property points to the preview image for the web part |
 |`properties`     | protected | TProperties | This property is the pointer to the custom property bag of the web part |
-|`propertyPaneSettings`     | protected | [IPropertyPaneSettings](IPropertyPaneSettings.md) |  |
+|`propertyPaneSettings`     | protected | [`IPropertyPaneSettings`](IPropertyPaneSettings.md) |  |
 |`renderedFromDefaultProperties`     | protected | boolean | This property indicates whether the web part was rendered from the default properties,as opposed to using  serialized state from the last time that the web part was saved |
 |`renderedOnce`     | protected | boolean | This property indicates whether the web part has been rendered once or not |
 
@@ -40,14 +40,14 @@ Please refer to the documentation of the individual APIs to make the right decis
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor~3egg9)     | public | [IWebPartContext](IWebPartContext.md) |   e |
+|[constructor](#constructor~3egg9)     | public | [`IWebPartContext`](IWebPartContext.md) |   e |
 |[clearError](#clearerror~xlfc9)     | protected | void | This API should be used to clear the error message from the web part display area |
 |[configureStart](#configurestart~3kks9)     | protected | void | if it is not already open |
 |[deserialize](#deserialize~n2e89)     | protected | TProperties |  |
 |[dispose](#dispose~xs8y9)     | protected | void | This API is called at the end of the web part lifecycle |
-|[onBeforeSerialize](#onbeforeserialize~jlok9)     | protected | [IHtmlProperties](IHtmlProperties.md) | the documentation of IHtmlProperties interface for more details |
+|[onBeforeSerialize](#onbeforeserialize~jlok9)     | protected | [`IHtmlProperties`](IHtmlProperties.md) | the documentation of IHtmlProperties interface for more details |
 |[onDisplayModeChanged](#ondisplaymodechanged~l3vu9)     | protected | void |  |
-|[onInit<T>](#oninit<t>~mxes9)     | protected | [Promise<T>](Promise.md) | This API should be overridden to perform long running operations e |
+|[onInit<T>](#oninit<t>~mxes9)     | protected | [`Promise<T>`](Promise.md) | This API should be overridden to perform long running operations e |
 |[onPropertyChange](#onpropertychange~xdzg9)     | protected | void | This API is invoked on property changes in the PropertyPane when the PropertyPane is being used in Reactive mode |
 |[onPropertyConfigurationComplete](#onpropertyconfigurationcomplete~64o89)     | protected | void | This API is called when the current web part configuration process is completed |
 |[onPropertyPaneRendered](#onpropertypanerendered~9zcu9)     | protected | void | This API is involed when the PropertyPane is rendered |
@@ -78,7 +78,7 @@ IWebPartContext
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `ctx`    | [IWebPartContext](IWebPartContext.md) |  |
+| `ctx`    | [`IWebPartContext`](IWebPartContext.md) |  |
 
 
 ## clearError
@@ -125,7 +125,7 @@ TProperties
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `data`    | [IWebPartData](IWebPartData.md) |  |
+| `data`    | [`IWebPartData`](IWebPartData.md) |  |
 
 
 ## dispose
@@ -169,7 +169,7 @@ void
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `oldDisplayMode`    | [DisplayMode](DisplayMode.md) |  |
+| `oldDisplayMode`    | [`DisplayMode`](DisplayMode.md) |  |
 
 
 ## onInit<T>

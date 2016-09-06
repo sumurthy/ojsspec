@@ -12,11 +12,11 @@
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|`string|ResponseType`     | type: | string,[ResponseType](ResponseType.md) |  |
+|`string|ResponseType`     | type: | string,[`ResponseType`](ResponseType.md) |  |
 |`string`     | statusText: | string |  |
 |`number`     | status: | number |  |
 |`boolean`     | ok: | boolean |  |
-|`Headers`     | headers: | [Headers](Headers.md) |  |
+|`Headers`     | headers: | [`Headers`](Headers.md) |  |
 
 
 
@@ -25,10 +25,10 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor~3egg9)     | public | [ResponseInit](ResponseInit.md) |  |
-|[error](#error~o8xg9)     | public | [Response](Response.md) |  |
-|[redirect](#redirect~ikt49)     | public | [Response](Response.md) |  |
-|[clone](#clone~mtkw9)     | public | [Response](Response.md) |  |
+|[constructor](#constructor~3egg9)     | public | [`ResponseInit`](ResponseInit.md) |  |
+|[error](#error~o8xg9)     | public | [`Response`](Response.md) |  |
+|[redirect](#redirect~ikt49)     | public | [`Response`](Response.md) |  |
+|[clone](#clone~mtkw9)     | public | [`Response`](Response.md) |  |
 
 
 
@@ -48,7 +48,7 @@ ResponseInit
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `body`    | BodyInit | _Optional._ |
-| `init`    | [ResponseInit](ResponseInit.md) | _Optional._ |
+| `init`    | [`ResponseInit`](ResponseInit.md) | _Optional._ |
 
 
 ## error

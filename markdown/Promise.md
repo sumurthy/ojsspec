@@ -1,6 +1,6 @@
 # Promise <R> class
 
-_Implements: [Thenable<R>](Thenable.md)_
+_Implements: [`Thenable<R>`](Thenable.md)_
 
 _Type parameters: <R>_
 
@@ -16,8 +16,8 @@ _Type parameters: <R>_
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
 |[constructor](#constructor~3egg9)     | public | any => void) => void) | If you call resolve in the body of the callback passed to the constructor,  your promise is fulfilled with result object passed to resolve |
-|[then<U>](#then<u>~6quy9)     | public | [Promise<U>](Promise.md) | onFulfilled is called when/if "promise" resolves |
-|[catch<U>](#catch<u>~kefu9)     | public | [Promise<U>](Promise.md) | Sugar for promise |
+|[then<U>](#then<u>~6quy9)     | public | [`Promise<U>`](Promise.md) | onFulfilled is called when/if "promise" resolves |
+|[catch<U>](#catch<u>~kefu9)     | public | [`Promise<U>`](Promise.md) | Sugar for promise |
 
 
 
@@ -40,7 +40,7 @@ any => void) => void)
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `callback`    | (resolve: (value?: R ,[ Thenable<R>) => void](Thenable.md) |  |
+| `callback`    | (resolve: (value?: R ,[` Thenable<R>) => void`](Thenable.md) |  |
 | `reject`    | (error?: any) => void) => void |  |
 
 
@@ -63,7 +63,7 @@ Promise<U>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `onFulfilled`    | (value: R) => U ,[ Thenable<U>](Thenable.md) | _Optional._ |
+| `onFulfilled`    | (value: R) => U ,[` Thenable<U>`](Thenable.md) | _Optional._ |
 | `onRejected`    | (error: any) => void | _Optional._ |
 
 
@@ -82,5 +82,5 @@ Promise<U>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `onRejected`    | (error: any) => U ,[ Thenable<U>](Thenable.md) | _Optional._ |
+| `onRejected`    | (error: any) => U ,[` Thenable<U>`](Thenable.md) | _Optional._ |
 

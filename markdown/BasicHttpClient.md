@@ -14,7 +14,7 @@ enhancements.
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|`serviceScope`     | protected | [ServiceScope](ServiceScope.md) | Calls fetch(),but sets the method to 'POST' |
+|`serviceScope`     | protected | [`ServiceScope`](ServiceScope.md) | Calls fetch(),but sets the method to 'POST' |
 
 
 
@@ -23,11 +23,11 @@ enhancements.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[constructor](#constructor~3egg9)     | public | [ServiceScope](ServiceScope.md) |  |
-|[fetch](#fetch~ekuc9)     | public | [Promise<Response>](Promise.md) | Performs a REST service call |
-|[fetchCore](#fetchcore~p9z89)     | protected | [Promise<Response>](Promise.md) | Performs a REST service call |
-|[get](#get~xkvg9)     | public | [Promise<Response>](Promise.md) | Calls fetch(),but sets the method to 'GET' |
-|[post](#post~1dus9)     | public | [Promise<Response>](Promise.md) | Calls fetch(),but sets the method to 'POST' |
+|[constructor](#constructor~3egg9)     | public | [`ServiceScope`](ServiceScope.md) |  |
+|[fetch](#fetch~ekuc9)     | public | [`Promise<Response>`](Promise.md) | Performs a REST service call |
+|[fetchCore](#fetchcore~p9z89)     | protected | [`Promise<Response>`](Promise.md) | Performs a REST service call |
+|[get](#get~xkvg9)     | public | [`Promise<Response>`](Promise.md) | Calls fetch(),but sets the method to 'GET' |
+|[post](#post~1dus9)     | public | [`Promise<Response>`](Promise.md) | Calls fetch(),but sets the method to 'POST' |
 
 
 
@@ -46,7 +46,7 @@ ServiceScope
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceScope`    | [ServiceScope](ServiceScope.md) |  |
+| `serviceScope`    | [`ServiceScope`](ServiceScope.md) |  |
 
 
 ## fetch
@@ -67,7 +67,7 @@ Promise<Response>
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `url`    | string |  |
-| `options`    | [IBasicHttpClientOptions](IBasicHttpClientOptions.md) |  |
+| `options`    | [`IBasicHttpClientOptions`](IBasicHttpClientOptions.md) |  |
 
 
 ## fetchCore
@@ -87,7 +87,7 @@ Promise<Response>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `request`    | [Request](Request.md) |  |
+| `request`    | [`Request`](Request.md) |  |
 
 
 ## get
@@ -105,7 +105,7 @@ Promise<Response>
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `url`    | string |  |
-| `options`    | [IBasicHttpClientOptions](IBasicHttpClientOptions.md) | _Optional._ |
+| `options`    | [`IBasicHttpClientOptions`](IBasicHttpClientOptions.md) | _Optional._ |
 
 
 ## post
@@ -123,5 +123,5 @@ Promise<Response>
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `url`    | string |  |
-| `options`    | [IBasicHttpClientOptions](IBasicHttpClientOptions.md) |  |
+| `options`    | [`IBasicHttpClientOptions`](IBasicHttpClientOptions.md) |  |
 

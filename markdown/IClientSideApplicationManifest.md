@@ -1,6 +1,6 @@
 # IClientSideApplicationManifest interface
 
-_Extends: [IClientSideComponentManifest](IClientSideComponentManifest.md)_
+_Extends: [`IClientSideComponentManifest`](IClientSideComponentManifest.md)_
 
 
 

@@ -13,7 +13,7 @@
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`prototype`      | [Set<any>](Set.md) |  |
+|`prototype`      | [`Set<any>`](Set.md) |  |
 
 
 
@@ -22,7 +22,7 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[constructor<T>](#constructor<t>~xwmg9)      | [Set<T>](Set.md) |  |
+|[constructor<T>](#constructor<t>~xwmg9)      | [`Set<T>`](Set.md) |  |
 
 
 
@@ -40,5 +40,5 @@ Set<T>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `iterable`    | [ForEachable<T>](ForEachable.md) |  |
+| `iterable`    | [`ForEachable<T>`](ForEachable.md) |  |
 

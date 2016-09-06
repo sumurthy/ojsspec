@@ -27,10 +27,10 @@ _Type parameters: <K,V>_
 |[forEach](#foreach~jqfq9)      | void |  |
 |[get](#get~xkvg9)      | V |  |
 |[has](#has~mnoc9)      | boolean |  |
-|[set](#set~9zym9)      | [Map<K,V>](Map.md) |  |
-|[entries](#entries~fmli9)      | [Iterator<[K,V]>](Iterator.md) |  |
-|[keys](#keys~5ysm9)      | [Iterator<K>](Iterator.md) |  |
-|[values](#values~bdxe9)      | [Iterator<V>](Iterator.md) |  |
+|[set](#set~9zym9)      | [`Map<K,V>`](Map.md) |  |
+|[entries](#entries~fmli9)      | [`Iterator<[K,V]>`](Iterator.md) |  |
+|[keys](#keys~5ysm9)      | [`Iterator<K>`](Iterator.md) |  |
+|[values](#values~bdxe9)      | [`Iterator<V>`](Iterator.md) |  |
 
 
 

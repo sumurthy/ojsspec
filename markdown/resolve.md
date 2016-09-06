@@ -13,5 +13,5 @@ Promise<R>
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | R ,[ Thenable<R>](Thenable.md) | _Optional._ |
+| `value`    | R ,[` Thenable<R>`](Thenable.md) | _Optional._ |
 
