@@ -21,10 +21,10 @@ of time. For more information, see the MSDN article
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`addDigestToCache`](#adddigesttocache~70fw9)      | void | the digest value will no longer be valid |
-|[`clearAllDigests`](#clearalldigests~kkza9)      | void | Clears all values from the cache |
-|[`clearDigest`](#cleardigest~4hro9)      | boolean | This may be a server-relative or absolute URL |
-|[`fetchDigest`](#fetchdigest~xktc9)      | [`Promise<string>`](Promise.md) | This may be a server-relative or absolute URL |
+|[`addDigestToCache`](#adddigesttocache)      | void | the digest value will no longer be valid |
+|[`clearAllDigests`](#clearalldigests)      | void | Clears all values from the cache |
+|[`clearDigest`](#cleardigest)      | boolean | This may be a server-relative or absolute URL |
+|[`fetchDigest`](#fetchdigest)      | [`Promise<string>`](Promise.md) | This may be a server-relative or absolute URL |
 
 
 

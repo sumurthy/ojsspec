@@ -22,7 +22,7 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`constructor<K,V>`](#constructor<k,v>~vnf09)      | [`Map<K,V>`](Map.md) |  |
+|[`constructor<K,V>`](#constructor<k,v>)      | [`Map<K,V>`](Map.md) |  |
 
 
 

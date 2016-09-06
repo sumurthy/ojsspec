@@ -383,7 +383,7 @@ function addMembers(tline = '', type = '', name = '', localO = {}) {
         }
         if ((type === 'method') || type === 'imethod') {
             mline = mline.replace('%type%', `${getLinkForType(o[e]['returnType'])}`)
-            mline = mline.replace('%name%', `[\`${e.split('~')[0]}\`](#${e.toLowerCase()})`)
+            mline = mline.replace('%name%', `[\`${e.split('~')[0]}\`](#${e.split('~')[0].toLowerCase()})`)
         } else {
             mline = mline.replace('%name%', e.split('~')[0])
             mline = mline.replace('%type%', `${getLinkForType(o[e]['dataType'])}`)

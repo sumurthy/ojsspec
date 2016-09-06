@@ -15,9 +15,9 @@ _Type parameters: `<R>`_
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`constructor`](#constructor~3egg9)     | public | any => void) => void) | If you call resolve in the body of the callback passed to the constructor,  your promise is fulfilled with result object passed to resolve |
-|[`then<U>`](#then<u>~6quy9)     | public | [`Promise<U>`](Promise.md) | onFulfilled is called when/if "promise" resolves |
-|[`catch<U>`](#catch<u>~kefu9)     | public | [`Promise<U>`](Promise.md) | Sugar for promise |
+|[`constructor`](#constructor)     | public | any => void) => void) | If you call resolve in the body of the callback passed to the constructor,  your promise is fulfilled with result object passed to resolve |
+|[`then<U>`](#then<u>)     | public | [`Promise<U>`](Promise.md) | onFulfilled is called when/if "promise" resolves |
+|[`catch<U>`](#catch<u>)     | public | [`Promise<U>`](Promise.md) | Sugar for promise |
 
 
 

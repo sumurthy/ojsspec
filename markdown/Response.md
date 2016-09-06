@@ -25,10 +25,10 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`constructor`](#constructor~3egg9)     | public | [`ResponseInit`](ResponseInit.md) |  |
-|[`error`](#error~o8xg9)     | public | [`Response`](Response.md) |  |
-|[`redirect`](#redirect~ikt49)     | public | [`Response`](Response.md) |  |
-|[`clone`](#clone~mtkw9)     | public | [`Response`](Response.md) |  |
+|[`constructor`](#constructor)     | public | [`ResponseInit`](ResponseInit.md) |  |
+|[`error`](#error)     | public | [`Response`](Response.md) |  |
+|[`redirect`](#redirect)     | public | [`Response`](Response.md) |  |
+|[`clone`](#clone)     | public | [`Response`](Response.md) |  |
 
 
 

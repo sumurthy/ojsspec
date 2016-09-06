@@ -22,15 +22,15 @@ _Type parameters: `<K,V>`_
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`clear`](#clear~n1pq9)      | void |  |
-|[`delete`](#delete~hwgq9)      | boolean |  |
-|[`forEach`](#foreach~jqfq9)      | void |  |
-|[`get`](#get~xkvg9)      | V |  |
-|[`has`](#has~mnoc9)      | boolean |  |
-|[`set`](#set~9zym9)      | [`Map<K,V>`](Map.md) |  |
-|[`entries`](#entries~fmli9)      | [`Iterator<[K,V]>`](Iterator.md) |  |
-|[`keys`](#keys~5ysm9)      | [`Iterator<K>`](Iterator.md) |  |
-|[`values`](#values~bdxe9)      | [`Iterator<V>`](Iterator.md) |  |
+|[`clear`](#clear)      | void |  |
+|[`delete`](#delete)      | boolean |  |
+|[`forEach`](#foreach)      | void |  |
+|[`get`](#get)      | V |  |
+|[`has`](#has)      | boolean |  |
+|[`set`](#set)      | [`Map<K,V>`](Map.md) |  |
+|[`entries`](#entries)      | [`Iterator<[K,V]>`](Iterator.md) |  |
+|[`keys`](#keys)      | [`Iterator<K>`](Iterator.md) |  |
+|[`values`](#values)      | [`Iterator<V>`](Iterator.md) |  |
 
 
 

@@ -22,7 +22,7 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`constructor<T>`](#constructor<t>~xwmg9)      | [`WeakSet<T>`](WeakSet.md) |  |
+|[`constructor<T>`](#constructor<t>)      | [`WeakSet<T>`](WeakSet.md) |  |
 
 
 

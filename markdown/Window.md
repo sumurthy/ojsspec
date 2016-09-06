@@ -16,7 +16,7 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`fetch`](#fetch~ekuc9)      | [`Promise<Response>`](Promise.md) |  |
+|[`fetch`](#fetch)      | [`Promise<Response>`](Promise.md) |  |
 
 
 

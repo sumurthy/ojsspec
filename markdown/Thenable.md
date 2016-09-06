@@ -16,7 +16,7 @@ _Type parameters: `<R>`_
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`then<U>`](#then<u>~6quy9)      | [`Thenable<U>`](Thenable.md) |  |
+|[`then<U>`](#then<u>)      | [`Thenable<U>`](Thenable.md) |  |
 
 
 

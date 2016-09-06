@@ -26,7 +26,7 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`constructor`](#constructor~3egg9)     | public | [`RequestInit`](RequestInit.md) |  |
+|[`constructor`](#constructor)     | public | [`RequestInit`](RequestInit.md) |  |
 
 
 

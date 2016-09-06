@@ -23,11 +23,11 @@ enhancements.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`constructor`](#constructor~3egg9)     | public | [`ServiceScope`](ServiceScope.md) |  |
-|[`fetch`](#fetch~ekuc9)     | public | [`Promise<Response>`](Promise.md) | Performs a REST service call |
-|[`fetchCore`](#fetchcore~p9z89)     | protected | [`Promise<Response>`](Promise.md) | Performs a REST service call |
-|[`get`](#get~xkvg9)     | public | [`Promise<Response>`](Promise.md) | Calls fetch(),but sets the method to 'GET' |
-|[`post`](#post~1dus9)     | public | [`Promise<Response>`](Promise.md) | Calls fetch(),but sets the method to 'POST' |
+|[`constructor`](#constructor)     | public | [`ServiceScope`](ServiceScope.md) |  |
+|[`fetch`](#fetch)     | public | [`Promise<Response>`](Promise.md) | Performs a REST service call |
+|[`fetchCore`](#fetchcore)     | protected | [`Promise<Response>`](Promise.md) | Performs a REST service call |
+|[`get`](#get)     | public | [`Promise<Response>`](Promise.md) | Calls fetch(),but sets the method to 'GET' |
+|[`post`](#post)     | public | [`Promise<Response>`](Promise.md) | Calls fetch(),but sets the method to 'POST' |
 
 
 

@@ -22,7 +22,7 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`constructor<T>`](#constructor<t>~xwmg9)      | [`Set<T>`](Set.md) |  |
+|[`constructor<T>`](#constructor<t>)      | [`Set<T>`](Set.md) |  |
 
 
 

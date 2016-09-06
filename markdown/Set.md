@@ -22,14 +22,14 @@ _Type parameters: `<T>`_
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`add`](#add~7r2c9)      | [`Set<T>`](Set.md) |  |
-|[`clear`](#clear~n1pq9)      | void |  |
-|[`delete`](#delete~hwgq9)      | boolean |  |
-|[`forEach`](#foreach~jqfq9)      | void |  |
-|[`has`](#has~mnoc9)      | boolean |  |
-|[`entries`](#entries~fmli9)      | [`Iterator<[T,T]>`](Iterator.md) |  |
-|[`keys`](#keys~5ysm9)      | [`Iterator<T>`](Iterator.md) |  |
-|[`values`](#values~bdxe9)      | [`Iterator<T>`](Iterator.md) |  |
+|[`add`](#add)      | [`Set<T>`](Set.md) |  |
+|[`clear`](#clear)      | void |  |
+|[`delete`](#delete)      | boolean |  |
+|[`forEach`](#foreach)      | void |  |
+|[`has`](#has)      | boolean |  |
+|[`entries`](#entries)      | [`Iterator<[T,T]>`](Iterator.md) |  |
+|[`keys`](#keys)      | [`Iterator<T>`](Iterator.md) |  |
+|[`values`](#values)      | [`Iterator<T>`](Iterator.md) |  |
 
 
 

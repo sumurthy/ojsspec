@@ -16,7 +16,7 @@ _Type parameters: `<T>`_
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`forEach`](#foreach~jqfq9)      | void |  |
+|[`forEach`](#foreach)      | void |  |
 
 
 

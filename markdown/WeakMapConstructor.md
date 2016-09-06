@@ -22,7 +22,7 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`constructor<K,V>`](#constructor<k,v>~vnf09)      | [`WeakMap<K,V>`](WeakMap.md) |  |
+|[`constructor<K,V>`](#constructor<k,v>)      | [`WeakMap<K,V>`](WeakMap.md) |  |
 
 
 

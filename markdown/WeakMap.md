@@ -16,11 +16,11 @@ _Type parameters: `<K,V>`_
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`delete`](#delete~hwgq9)      | boolean |  |
-|[`clear`](#clear~n1pq9)      | void |  |
-|[`get`](#get~xkvg9)      | V |  |
-|[`has`](#has~mnoc9)      | boolean |  |
-|[`set`](#set~9zym9)      | [`WeakMap<K,V>`](WeakMap.md) |  |
+|[`delete`](#delete)      | boolean |  |
+|[`clear`](#clear)      | void |  |
+|[`get`](#get)      | V |  |
+|[`has`](#has)      | boolean |  |
+|[`set`](#set)      | [`WeakMap<K,V>`](WeakMap.md) |  |
 
 
 
