@@ -34,7 +34,7 @@
 `new<T>(iterable: ForEachable<T>): WeakSet<T>`
 
 #### Returns
-`WeakSet<T>`
+[`WeakSet<T>`](WeakSet.md)
 
 #### Parameters
 

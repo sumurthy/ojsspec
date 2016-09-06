@@ -7,7 +7,7 @@ A thenable is promise-like in as far as it has a "then" method.
 `function resolve<R>(value?: R | Thenable<R>): Promise<R>`
 
 #### Returns
-`Promise<R>`
+[`Promise<R>`](Promise.md)
 
 #### Parameters
 

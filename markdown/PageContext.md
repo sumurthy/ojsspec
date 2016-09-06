@@ -42,7 +42,7 @@ application cache.
 `constructor(serviceScope: ServiceScope)`
 
 #### Returns
-`ServiceScope`
+[`ServiceScope`](ServiceScope.md)
 
 #### Parameters
 

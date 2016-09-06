@@ -6,7 +6,7 @@ Make a Promise that fulfills when any item fulfills,and rejects if any item reje
 `function race<R>(promises: (R | Thenable<R>)[]): Promise<R>`
 
 #### Returns
-`Promise<R>`
+[`Promise<R>`](Promise.md)
 
 #### Parameters
 

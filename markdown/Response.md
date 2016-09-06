@@ -41,7 +41,7 @@
 `constructor(body?: BodyInit,init?: ResponseInit)`
 
 #### Returns
-`ResponseInit`
+[`ResponseInit`](ResponseInit.md)
 
 #### Parameters
 
@@ -60,7 +60,7 @@
 `error(): Response`
 
 #### Returns
-`Response`
+[`Response`](Response.md)
 
 #### Parameters
 None
@@ -74,7 +74,7 @@ None
 `redirect(url: string,status: number): Response`
 
 #### Returns
-`Response`
+[`Response`](Response.md)
 
 #### Parameters
 
@@ -93,7 +93,7 @@ None
 `clone(): Response`
 
 #### Returns
-`Response`
+[`Response`](Response.md)
 
 #### Parameters
 None

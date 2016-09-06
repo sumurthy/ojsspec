@@ -31,7 +31,7 @@ _Type parameters: `<T>`_
 `delete(value: T): boolean`
 
 #### Returns
-`boolean`
+boolean
 
 #### Parameters
 
@@ -49,7 +49,7 @@ _Type parameters: `<T>`_
 `clear(): void`
 
 #### Returns
-`void`
+void
 
 #### Parameters
 None
@@ -63,7 +63,7 @@ None
 `add(value: T): WeakSet<T>`
 
 #### Returns
-`WeakSet<T>`
+[`WeakSet<T>`](WeakSet.md)
 
 #### Parameters
 
@@ -81,7 +81,7 @@ None
 `has(value: T): boolean`
 
 #### Returns
-`boolean`
+boolean
 
 #### Parameters
 

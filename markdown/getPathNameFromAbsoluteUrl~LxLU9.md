@@ -7,7 +7,7 @@ Get's the path name from an absolute url.
 `export function getPathNameFromAbsoluteUrl(url: string): string`
 
 #### Returns
-`string`
+string
 
 #### Parameters
 

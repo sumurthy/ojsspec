@@ -41,7 +41,7 @@ _Type parameters: `<T>`_
 `add(value: T): Set<T>`
 
 #### Returns
-`Set<T>`
+[`Set<T>`](Set.md)
 
 #### Parameters
 
@@ -59,7 +59,7 @@ _Type parameters: `<T>`_
 `clear(): void`
 
 #### Returns
-`void`
+void
 
 #### Parameters
 None
@@ -73,7 +73,7 @@ None
 `delete(value: T): boolean`
 
 #### Returns
-`boolean`
+boolean
 
 #### Parameters
 
@@ -91,7 +91,7 @@ None
 `forEach(callbackfn: (value: T,index: T,set: Set<T>) => void,thisArg?: any): void`
 
 #### Returns
-`void`
+void
 
 #### Parameters
 
@@ -110,7 +110,7 @@ None
 `has(value: T): boolean`
 
 #### Returns
-`boolean`
+boolean
 
 #### Parameters
 
@@ -128,7 +128,7 @@ None
 `entries(): Iterator<[T,T]>`
 
 #### Returns
-`Iterator<[T,T]>`
+[`Iterator<[T,T]>`](Iterator.md)
 
 #### Parameters
 None
@@ -142,7 +142,7 @@ None
 `keys(): Iterator<T>`
 
 #### Returns
-`Iterator<T>`
+[`Iterator<T>`](Iterator.md)
 
 #### Parameters
 None
@@ -156,7 +156,7 @@ None
 `values(): Iterator<T>`
 
 #### Returns
-`Iterator<T>`
+[`Iterator<T>`](Iterator.md)
 
 #### Parameters
 None

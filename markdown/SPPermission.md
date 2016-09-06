@@ -76,7 +76,7 @@ https:
 `constructor(value: IODataBasePermission)`
 
 #### Returns
-`IODataBasePermission`
+[`IODataBasePermission`](IODataBasePermission.md)
 
 #### Parameters
 
@@ -94,7 +94,7 @@ Function for determining if a given permission mask has all of the requested per
 `public hasAllPermissions(...requestedPerms: SPPermission[]): boolean`
 
 #### Returns
-`boolean`
+boolean
 
 #### Parameters
 
@@ -112,7 +112,7 @@ Function for determining if a given permission mask has any of the requested per
 `public hasAnyPermissions(...requestedPerms: SPPermission[]): boolean`
 
 #### Returns
-`boolean`
+boolean
 
 #### Parameters
 
@@ -130,7 +130,7 @@ Function for checking if a given permission mask has the requested permission.
 `public hasPermission(requestedPerm: SPPermission): boolean`
 
 #### Returns
-`boolean`
+boolean
 
 #### Parameters
 

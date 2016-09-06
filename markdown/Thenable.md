@@ -28,7 +28,7 @@ _Type parameters: `<R>`_
 `then<U>(onFulfilled?: (value: R) => U | Thenable<U>,onRejected?: (error: any) => void): Thenable<U>`
 
 #### Returns
-`Thenable<U>`
+[`Thenable<U>`](Thenable.md)
 
 #### Parameters
 

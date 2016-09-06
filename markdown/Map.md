@@ -42,7 +42,7 @@ _Type parameters: `<K,V>`_
 `clear(): void`
 
 #### Returns
-`void`
+void
 
 #### Parameters
 None
@@ -56,7 +56,7 @@ None
 `delete(key: K): boolean`
 
 #### Returns
-`boolean`
+boolean
 
 #### Parameters
 
@@ -74,7 +74,7 @@ None
 `forEach(callbackfn: (value: V,index: K,map: Map<K,V>) => void,thisArg?: any): void`
 
 #### Returns
-`void`
+void
 
 #### Parameters
 
@@ -93,7 +93,7 @@ None
 `get(key: K): V`
 
 #### Returns
-`V`
+V
 
 #### Parameters
 
@@ -111,7 +111,7 @@ None
 `has(key: K): boolean`
 
 #### Returns
-`boolean`
+boolean
 
 #### Parameters
 
@@ -129,7 +129,7 @@ None
 `set(key: K,value?: V): Map<K,V>`
 
 #### Returns
-`Map<K,V>`
+[`Map<K,V>`](Map.md)
 
 #### Parameters
 
@@ -148,7 +148,7 @@ None
 `entries(): Iterator<[K,V]>`
 
 #### Returns
-`Iterator<[K,V]>`
+[`Iterator<[K,V]>`](Iterator.md)
 
 #### Parameters
 None
@@ -162,7 +162,7 @@ None
 `keys(): Iterator<K>`
 
 #### Returns
-`Iterator<K>`
+[`Iterator<K>`](Iterator.md)
 
 #### Parameters
 None
@@ -176,7 +176,7 @@ None
 `values(): Iterator<V>`
 
 #### Returns
-`Iterator<V>`
+[`Iterator<V>`](Iterator.md)
 
 #### Parameters
 None

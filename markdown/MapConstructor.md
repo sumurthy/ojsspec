@@ -34,7 +34,7 @@
 `new<K,V>(iterable: ForEachable<[K,V]>): Map<K,V>`
 
 #### Returns
-`Map<K,V>`
+[`Map<K,V>`](Map.md)
 
 #### Parameters
 

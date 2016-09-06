@@ -39,7 +39,7 @@ fractional milliseconds; for example, to specify an expiration
 `addDigestToCache(webUrl: string,digestValue: string,expirationTimestamp: number): void`
 
 #### Returns
-`void`
+void
 
 #### Parameters
 
@@ -59,7 +59,7 @@ Clears all values from the cache.
 `clearAllDigests(): void`
 
 #### Returns
-`void`
+void
 
 #### Parameters
 None
@@ -73,7 +73,7 @@ This may be a server-relative or absolute URL.
 `clearDigest(webUrl: string): boolean`
 
 #### Returns
-`boolean`
+boolean
 
 #### Parameters
 
@@ -91,7 +91,7 @@ This may be a server-relative or absolute URL.
 `fetchDigest(webUrl: string): Promise<string>`
 
 #### Returns
-`Promise<string>`
+[`Promise<string>`](Promise.md)
 
 #### Parameters
 

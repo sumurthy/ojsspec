@@ -34,7 +34,7 @@
 `append(name: string,value: string): void`
 
 #### Returns
-`void`
+void
 
 #### Parameters
 
@@ -53,7 +53,7 @@
 `delete(name: string):void`
 
 #### Returns
-`void`
+void
 
 #### Parameters
 
@@ -71,7 +71,7 @@
 `get(name: string): string`
 
 #### Returns
-`string`
+string
 
 #### Parameters
 
@@ -89,7 +89,7 @@
 `getAll(name: string): Array<string>`
 
 #### Returns
-`Array<string>`
+Array<string>
 
 #### Parameters
 
@@ -107,7 +107,7 @@
 `has(name: string): boolean`
 
 #### Returns
-`boolean`
+boolean
 
 #### Parameters
 
@@ -125,7 +125,7 @@
 `set(name: string,value: string): void`
 
 #### Returns
-`void`
+void
 
 #### Parameters
 
@@ -144,7 +144,7 @@
 `forEach(callback: (value: string,name: string) => void): void`
 
 #### Returns
-`void`
+void
 
 #### Parameters
 

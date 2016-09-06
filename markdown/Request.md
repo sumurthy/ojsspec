@@ -39,7 +39,7 @@
 `constructor(input: string|Request,init?:RequestInit)`
 
 #### Returns
-`RequestInit`
+[`RequestInit`](RequestInit.md)
 
 #### Parameters
 

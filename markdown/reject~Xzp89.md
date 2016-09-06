@@ -6,7 +6,7 @@ Make a promise that rejects to obj. For consistency and debugging (eg stack trac
 `function reject(error: any): Promise<any>`
 
 #### Returns
-`Promise<any>`
+[`Promise<any>`](Promise.md)
 
 #### Parameters
 

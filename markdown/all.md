@@ -8,7 +8,7 @@ The fulfillment value is an array (in order) of fulfillment values. The rejectio
 `function all<R>(promises: (R | Thenable<R>)[]): Promise<R[]>`
 
 #### Returns
-`Promise<R[]>`
+[`Promise<R[]>`](Promise.md)
 
 #### Parameters
 

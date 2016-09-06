@@ -28,7 +28,7 @@
 `fetch(url: string|Request,init?: RequestInit): Promise<Response>`
 
 #### Returns
-`Promise<Response>`
+[`Promise<Response>`](Promise.md)
 
 #### Parameters
 

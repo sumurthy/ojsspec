@@ -76,7 +76,7 @@ PRIVATE CONSTRUCTOR - DO NOT CALL THIS FROM YOUR OWN CODE.
 `constructor(parent: ServiceScope)`
 
 #### Returns
-`ServiceScope`
+[`ServiceScope`](ServiceScope.md)
 
 #### Parameters
 
@@ -96,7 +96,7 @@ instance will be autocreated and registered with the root ServiceScope.
 `public consume<T>(serviceKey: ServiceKey<T>): T`
 
 #### Returns
-`T`
+T
 
 #### Parameters
 
@@ -115,7 +115,7 @@ simpleServiceClass, then registering it by calling ServiceScope.provide().
 `public createAndProvide<T>(serviceKey: ServiceKey<T>,simpleServiceClass: { new (serviceScope: ServiceScope) }): T;`
 
 #### Returns
-`T;`
+T;
 
 #### Parameters
 
@@ -135,7 +135,7 @@ serviceKey, and then registers it by calling ServiceScope.provide().
 `public createDefaultAndProvide<T>(serviceKey: ServiceKey<T>): T`
 
 #### Returns
-`T`
+T
 
 #### Parameters
 
@@ -159,7 +159,7 @@ the previous call, which would be very confusing for developers.
 `public finish(): void`
 
 #### Returns
-`void`
+void
 
 #### Parameters
 None
@@ -173,7 +173,7 @@ Returns the parent of the current ServiceScope,or undefined if this is a root sc
 `public getParent(): ServiceScope`
 
 #### Returns
-`ServiceScope`
+[`ServiceScope`](ServiceScope.md)
 
 #### Parameters
 None
@@ -189,7 +189,7 @@ state, i.e. before finish() has been called.
 `public provide<T>(serviceKey: ServiceKey<T>,service: T): T`
 
 #### Returns
-`T`
+T
 
 #### Parameters
 
@@ -210,7 +210,7 @@ consulted.
 `public startNewChild(): ServiceScope`
 
 #### Returns
-`ServiceScope`
+[`ServiceScope`](ServiceScope.md)
 
 #### Parameters
 None
@@ -225,7 +225,7 @@ default implementations of ServiceKeys.
 `public startNewRoot(): ServiceScope`
 
 #### Returns
-`ServiceScope`
+[`ServiceScope`](ServiceScope.md)
 
 #### Parameters
 None
@@ -243,7 +243,7 @@ later when the scope is finished.
 `public whenFinished(callback: () => void): void`
 
 #### Returns
-`void`
+void
 
 #### Parameters
 

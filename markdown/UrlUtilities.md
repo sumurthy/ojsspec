@@ -38,7 +38,7 @@ convertToODataStringLiteral("'example list'") ---> "'''example list'''"
 `public convertToODataStringLiteral(value: string): string`
 
 #### Returns
-`string`
+string
 
 #### Parameters
 
@@ -61,7 +61,7 @@ removeEndSlash('/') ---> ''
 `public removeEndSlash(url: string): string`
 
 #### Returns
-`string`
+string
 
 #### Parameters
 

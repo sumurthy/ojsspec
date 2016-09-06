@@ -39,7 +39,7 @@
 `arrayBuffer(): Promise<ArrayBuffer>`
 
 #### Returns
-`Promise<ArrayBuffer>`
+[`Promise<ArrayBuffer>`](Promise.md)
 
 #### Parameters
 None
@@ -53,7 +53,7 @@ None
 `blob(): Promise<Blob>`
 
 #### Returns
-`Promise<Blob>`
+[`Promise<Blob>`](Promise.md)
 
 #### Parameters
 None
@@ -67,7 +67,7 @@ None
 `formData(): Promise<FormData>`
 
 #### Returns
-`Promise<FormData>`
+[`Promise<FormData>`](Promise.md)
 
 #### Parameters
 None
@@ -81,7 +81,7 @@ None
 `json(): Promise<any>`
 
 #### Returns
-`Promise<any>`
+[`Promise<any>`](Promise.md)
 
 #### Parameters
 None
@@ -95,7 +95,7 @@ None
 `json<T>(): Promise<T>`
 
 #### Returns
-`Promise<T>`
+[`Promise<T>`](Promise.md)
 
 #### Parameters
 None
@@ -109,7 +109,7 @@ None
 `text(): Promise<string>`
 
 #### Returns
-`Promise<string>`
+[`Promise<string>`](Promise.md)
 
 #### Parameters
 None

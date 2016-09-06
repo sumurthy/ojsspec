@@ -35,7 +35,7 @@ If the source's length is more than 20, only the first 20 characters are kept.
 `public error(source: string,error: Error,scope?: ServiceScope): void`
 
 #### Returns
-`void`
+void
 
 #### Parameters
 
@@ -55,7 +55,7 @@ more context information (e.g.,web part information) to the logged message.
 `public info(source: string,message: string,scope?: ServiceScope): void`
 
 #### Returns
-`void`
+void
 
 #### Parameters
 
@@ -75,7 +75,7 @@ more context information (e.g.,web part information) to the logged message.
 `public verbose(source: string,message: string,scope?: ServiceScope): void`
 
 #### Returns
-`void`
+void
 
 #### Parameters
 
@@ -95,7 +95,7 @@ more context information (e.g.,web part information) to the logged message.
 `public warn(source: string,message: string,scope?: ServiceScope): void`
 
 #### Returns
-`void`
+void
 
 #### Parameters
 

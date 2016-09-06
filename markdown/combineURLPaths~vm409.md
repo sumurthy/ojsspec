@@ -6,7 +6,7 @@ Combines any number of URL paths.
 `export function combineURLPaths(...url: string[]): string`
 
 #### Returns
-`string`
+string
 
 #### Parameters
 

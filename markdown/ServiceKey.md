@@ -43,7 +43,7 @@ PRIVATE - Do not call this from your own code.
 `constructor(id: string,name: string,defaultCreator: ServiceCreator<T>)`
 
 #### Returns
-`ServiceCreator<T>`
+ServiceCreator<T>
 
 #### Parameters
 
@@ -63,7 +63,7 @@ your application.
 `public create<T>(name: string,serviceClass: { new (serviceScope: ServiceScope) }): ServiceKey<T>;`
 
 #### Returns
-`ServiceKey<T>;`
+[`ServiceKey<T>;`](ServiceKey.md)
 
 #### Parameters
 
@@ -82,7 +82,7 @@ your application.
 `public createCustom<T>(name: string,defaultCreator: ServiceCreator<T>): ServiceKey<T>`
 
 #### Returns
-`ServiceKey<T>`
+[`ServiceKey<T>`](ServiceKey.md)
 
 #### Parameters
 

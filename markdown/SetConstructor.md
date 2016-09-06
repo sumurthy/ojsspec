@@ -34,7 +34,7 @@
 `new<T>(iterable: ForEachable<T>): Set<T>`
 
 #### Returns
-`Set<T>`
+[`Set<T>`](Set.md)
 
 #### Parameters
 

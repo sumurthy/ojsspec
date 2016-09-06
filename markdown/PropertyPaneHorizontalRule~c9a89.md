@@ -6,7 +6,7 @@ Helper method to create a Horizontal Rule on the PropertyPane.
 `export function PropertyPaneHorizontalRule(): IPropertyPaneField<void>`
 
 #### Returns
-`IPropertyPaneField<void>`
+[`IPropertyPaneField<void>`](IPropertyPaneField.md)
 
 #### Parameters
 None

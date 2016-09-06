@@ -33,7 +33,7 @@ Throws an exception if the specified string is null,undefined,or an empty string
 `public isNonemptyString(value: string,variableName: string): void`
 
 #### Returns
-`void`
+void
 
 #### Parameters
 
@@ -52,7 +52,7 @@ Throws an exception if the specified value is null or undefined.
 `public isNotNullOrUndefined(value: any,variableName: string): void`
 
 #### Returns
-`void`
+void
 
 #### Parameters
 
@@ -71,7 +71,7 @@ Throws an exception if the specified value is not true.
 `public isTrue(value: boolean,variableName: string): void`
 
 #### Returns
-`void`
+void
 
 #### Parameters
 

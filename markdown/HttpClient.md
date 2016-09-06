@@ -38,7 +38,7 @@ class instead.
 `constructor(serviceScope: ServiceScope)`
 
 #### Returns
-`ServiceScope`
+[`ServiceScope`](ServiceScope.md)
 
 #### Parameters
 
@@ -57,7 +57,7 @@ a single web request.
 `public beginBatch(batchOptions?: IODataBatchOptions): ODataBatch`
 
 #### Returns
-`ODataBatch`
+[`ODataBatch`](ODataBatch.md)
 
 #### Parameters
 
@@ -93,7 +93,7 @@ to specify it explicitly.
 `public fetch(url: string,options: IHttpClientOptions): Promise<Response>`
 
 #### Returns
-`Promise<Response>`
+[`Promise<Response>`](Promise.md)
 
 #### Parameters
 
@@ -112,7 +112,7 @@ Calls fetch(),but sets the method to 'GET'.
 `public get(url: string,options?: IHttpClientOptions): Promise<Response>`
 
 #### Returns
-`Promise<Response>`
+[`Promise<Response>`](Promise.md)
 
 #### Parameters
 
@@ -138,7 +138,7 @@ is "http:
 `public getWebUrlFromRequestUrl(requestUrl: string): string`
 
 #### Returns
-`string`
+string
 
 #### Parameters
 
@@ -156,7 +156,7 @@ Calls fetch(),but sets the method to 'POST'.
 `public post(url: string,options: IHttpClientOptions): Promise<Response>`
 
 #### Returns
-`Promise<Response>`
+[`Promise<Response>`](Promise.md)
 
 #### Parameters
 

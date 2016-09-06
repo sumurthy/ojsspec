@@ -34,7 +34,7 @@
 `new<K,V>(iterable: ForEachable<[K,V]>): WeakMap<K,V>`
 
 #### Returns
-`WeakMap<K,V>`
+[`WeakMap<K,V>`](WeakMap.md)
 
 #### Parameters
 

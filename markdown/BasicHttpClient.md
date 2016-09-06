@@ -40,7 +40,7 @@ enhancements.
 `constructor(serviceScope: ServiceScope)`
 
 #### Returns
-`ServiceScope`
+[`ServiceScope`](ServiceScope.md)
 
 #### Parameters
 
@@ -61,7 +61,7 @@ https:
 `public fetch(url: string,options: IBasicHttpClientOptions): Promise<Response>`
 
 #### Returns
-`Promise<Response>`
+[`Promise<Response>`](Promise.md)
 
 #### Parameters
 
@@ -83,7 +83,7 @@ https:
 `protected fetchCore(request: Request): Promise<Response>`
 
 #### Returns
-`Promise<Response>`
+[`Promise<Response>`](Promise.md)
 
 #### Parameters
 
@@ -101,7 +101,7 @@ Calls fetch(),but sets the method to 'GET'.
 `public get(url: string,options?: IBasicHttpClientOptions): Promise<Response>`
 
 #### Returns
-`Promise<Response>`
+[`Promise<Response>`](Promise.md)
 
 #### Parameters
 
@@ -120,7 +120,7 @@ Calls fetch(),but sets the method to 'POST'.
 `public post(url: string,options: IBasicHttpClientOptions): Promise<Response>`
 
 #### Returns
-`Promise<Response>`
+[`Promise<Response>`](Promise.md)
 
 #### Parameters
 

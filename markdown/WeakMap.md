@@ -32,7 +32,7 @@ _Type parameters: `<K,V>`_
 `delete(key: K): boolean`
 
 #### Returns
-`boolean`
+boolean
 
 #### Parameters
 
@@ -50,7 +50,7 @@ _Type parameters: `<K,V>`_
 `clear(): void`
 
 #### Returns
-`void`
+void
 
 #### Parameters
 None
@@ -64,7 +64,7 @@ None
 `get(key: K): V`
 
 #### Returns
-`V`
+V
 
 #### Parameters
 
@@ -82,7 +82,7 @@ None
 `has(key: K): boolean`
 
 #### Returns
-`boolean`
+boolean
 
 #### Parameters
 
@@ -100,7 +100,7 @@ None
 `set(key: K,value?: V): WeakMap<K,V>`
 
 #### Returns
-`WeakMap<K,V>`
+[`WeakMap<K,V>`](WeakMap.md)
 
 #### Parameters
 

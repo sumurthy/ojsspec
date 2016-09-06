@@ -72,7 +72,7 @@ super(context);
 `constructor(ctx: IWebPartContext)`
 
 #### Returns
-`IWebPartContext`
+[`IWebPartContext`](IWebPartContext.md)
 
 #### Parameters
 
@@ -90,7 +90,7 @@ This API should be used to clear the error message from the web part display are
 `protected clearError(): void`
 
 #### Returns
-`void`
+void
 
 #### Parameters
 None
@@ -104,7 +104,7 @@ if it is not already open.
 `protected configureStart(refreshOnly?: boolean): void`
 
 #### Returns
-`void`
+void
 
 #### Parameters
 
@@ -122,7 +122,7 @@ if it is not already open.
 `protected deserialize(data: IWebPartData): TProperties`
 
 #### Returns
-`TProperties`
+TProperties
 
 #### Parameters
 
@@ -141,7 +141,7 @@ resources that the web part is holding onto.
 `protected dispose(): void`
 
 #### Returns
-`void`
+void
 
 #### Parameters
 None
@@ -155,7 +155,7 @@ the documentation of IHtmlProperties interface for more details.
 `protected onBeforeSerialize(): IHtmlProperties`
 
 #### Returns
-`IHtmlProperties`
+[`IHtmlProperties`](IHtmlProperties.md)
 
 #### Parameters
 None
@@ -169,7 +169,7 @@ None
 `protected onDisplayModeChanged(oldDisplayMode: DisplayMode): void`
 
 #### Returns
-`void`
+void
 
 #### Parameters
 
@@ -189,7 +189,7 @@ This API is called only once during the lifecycle of a web part.
 `protected onInit<T>(): Promise<T>`
 
 #### Returns
-`Promise<T>`
+[`Promise<T>`](Promise.md)
 
 #### Parameters
 None
@@ -206,7 +206,7 @@ invokes the web part host's setDirty API.
 `protected onPropertyChange(propertyPath: string,newValue: any): void`
 
 #### Returns
-`void`
+void
 
 #### Parameters
 
@@ -228,7 +228,7 @@ for the previously selected web part.
 `protected onPropertyConfigurationComplete(): void`
 
 #### Returns
-`void`
+void
 
 #### Parameters
 None
@@ -242,7 +242,7 @@ This API is involed when the PropertyPane is rendered.
 `protected onPropertyPaneRendered(): void`
 
 #### Returns
-`void`
+void
 
 #### Parameters
 None
@@ -257,7 +257,7 @@ Non-Reactive mode. This API is not invoked when the PropertyPane is used in Reac
 `protected onPropertyPaneSave(): void`
 
 #### Returns
-`void`
+void
 
 #### Parameters
 None
@@ -272,7 +272,7 @@ required to override this API.
 `public render(): void`
 
 #### Returns
-`void`
+void
 
 #### Parameters
 None
@@ -288,7 +288,7 @@ using the trace logger.
 `protected renderError(error: Error): void`
 
 #### Returns
-`void`
+void
 
 #### Parameters
 

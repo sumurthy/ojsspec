@@ -28,7 +28,7 @@ _Type parameters: `<T>`_
 `forEach(callbackfn: (value: T) => void): void`
 
 #### Returns
-`void`
+void
 
 #### Parameters
 

@@ -41,7 +41,7 @@ resolve with a Response object for that particular request.
 `public constructor(serviceScope: ServiceScope,batchOptions?: IODataBatchOptions)`
 
 #### Returns
-`IODataBatchOptions`
+[`IODataBatchOptions`](IODataBatchOptions.md)
 
 #### Parameters
 
@@ -60,7 +60,7 @@ Executes the batched queries that were queued using ODataBatch.fetch().
 `public execute(): Promise<ODataBatch>`
 
 #### Returns
-`Promise<ODataBatch>`
+[`Promise<ODataBatch>`](Promise.md)
 
 #### Parameters
 None
@@ -87,7 +87,7 @@ explicitly.
 `public fetch(url: string,options?: IODataBatchRequestOptions): Promise<Response>`
 
 #### Returns
-`Promise<Response>`
+[`Promise<Response>`](Promise.md)
 
 #### Parameters
 
@@ -106,7 +106,7 @@ Calls fetch(),but sets the method to 'GET'.
 `public get(url: string,options?: IODataBatchRequestOptions): Promise<Response>`
 
 #### Returns
-`Promise<Response>`
+[`Promise<Response>`](Promise.md)
 
 #### Parameters
 
@@ -125,7 +125,7 @@ Calls fetch(),but sets the method to 'POST'.
 `public post(url: string,options: IODataBatchRequestOptions): Promise<Response>`
 
 #### Returns
-`Promise<Response>`
+[`Promise<Response>`](Promise.md)
 
 #### Parameters
 

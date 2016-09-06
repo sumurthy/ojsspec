@@ -39,7 +39,7 @@ represent the same value
 `public equals(guid: Guid): boolean`
 
 #### Returns
-`boolean`
+boolean
 
 #### Parameters
 
@@ -58,7 +58,7 @@ Indicates whether a guid is valid (according to RFC4122).
 `public isValid(guid: string): boolean`
 
 #### Returns
-`boolean`
+boolean
 
 #### Parameters
 
@@ -77,7 +77,7 @@ Returns a new Guid instance with a pseudo-randomly generated Guid.
 `public newGuid(randomProvider?: IRandomProvider): Guid`
 
 #### Returns
-`Guid`
+[`Guid`](Guid.md)
 
 #### Parameters
 
@@ -95,7 +95,7 @@ Example: 'd5369f3b-bd7a-412a-9c0f-7f0650bb5489'
 `public toString(): string`
 
 #### Returns
-`string`
+string
 
 #### Parameters
 None
@@ -112,7 +112,7 @@ RFC 4122, tryParse will return undefined.
 `public tryParse(guid: string): Guid`
 
 #### Returns
-`Guid`
+[`Guid`](Guid.md)
 
 #### Parameters
 

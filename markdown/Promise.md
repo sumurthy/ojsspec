@@ -34,7 +34,7 @@ Any errors thrown in the constructor callback will be implicitly passed to rejec
 `constructor(callback: (resolve: (value?: R | Thenable<R>) => void,reject: (error?: any) => void) => void)`
 
 #### Returns
-`any => void) => void)`
+any => void) => void)
 
 #### Parameters
 
@@ -58,7 +58,7 @@ If an error is thrown in the callback, the returned promise rejects with that er
 `then<U>(onFulfilled?: (value: R) => U | Thenable<U>,onRejected?: (error: any) => void): Promise<U>`
 
 #### Returns
-`Promise<U>`
+[`Promise<U>`](Promise.md)
 
 #### Parameters
 
@@ -78,7 +78,7 @@ Sugar for promise.then(undefined,onRejected)
 `catch<U>(onRejected?: (error: any) => U | Thenable<U>): Promise<U>`
 
 #### Returns
-`Promise<U>`
+[`Promise<U>`](Promise.md)
 
 #### Parameters
 

@@ -38,7 +38,7 @@ Query param with only equals (www.example.com/?=&debug=on stores empty string ke
 `constructor(url: string)`
 
 #### Returns
-`string`
+string
 
 #### Parameters
 
@@ -63,7 +63,7 @@ getValue('lost') ---> undefined
 `public getValue(param: string): string`
 
 #### Returns
-`string`
+string
 
 #### Parameters
 
@@ -88,7 +88,7 @@ getValues('lost') ---> undefined
 `public getValues(param: string): string[]`
 
 #### Returns
-`string[]`
+string[]
 
 #### Parameters
 

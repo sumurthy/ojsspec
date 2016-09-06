@@ -32,7 +32,7 @@ only object types.
 `public shallowCompare(objA: Object,objB: Object): boolean`
 
 #### Returns
-`boolean`
+boolean
 
 #### Parameters
 

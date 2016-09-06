@@ -30,7 +30,7 @@ _Type parameters: `<T>`_
 `next(value?: any): IteratorResult<T>`
 
 #### Returns
-`IteratorResult<T>`
+[`IteratorResult<T>`](IteratorResult.md)
 
 #### Parameters
 
@@ -48,7 +48,7 @@ _Type parameters: `<T>`_
 `return?(value?: any): IteratorResult<T>`
 
 #### Returns
-`IteratorResult<T>`
+[`IteratorResult<T>`](IteratorResult.md)
 
 #### Parameters
 
@@ -66,7 +66,7 @@ _Type parameters: `<T>`_
 `throw?(e?: any): IteratorResult<T>`
 
 #### Returns
-`IteratorResult<T>`
+[`IteratorResult<T>`](IteratorResult.md)
 
 #### Parameters
 
