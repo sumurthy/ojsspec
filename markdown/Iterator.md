@@ -1,8 +1,8 @@
-# Iterator <T> interface
+# Iterator `<T>` interface
 
 
 
-_Type parameters: <T>_
+_Type parameters: `<T>`_
 
 
 

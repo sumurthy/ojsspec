@@ -1,8 +1,8 @@
-# WeakMap <K,V> interface
+# WeakMap `<K,V>` interface
 
 
 
-_Type parameters: <K,V>_
+_Type parameters: `<K,V>`_
 
 
 

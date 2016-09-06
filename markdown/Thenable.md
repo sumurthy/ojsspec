@@ -1,8 +1,8 @@
-# Thenable <R> interface
+# Thenable `<R>` interface
 
 
 
-_Type parameters: <R>_
+_Type parameters: `<R>`_
 
 
 

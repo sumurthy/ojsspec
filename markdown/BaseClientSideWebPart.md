@@ -1,8 +1,8 @@
-# BaseClientSideWebPart <TProperties> class
+# BaseClientSideWebPart `<TProperties>` class
 
 
 
-_Type parameters: <TProperties>_
+_Type parameters: `<TProperties>`_
 
 This abstract class implements the the base functionality for a client side web part. Every client side web part 
 needs to inherit from this class. Along with the base functionality, this class provides some APIs that can be 

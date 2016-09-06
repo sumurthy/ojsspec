@@ -1,8 +1,8 @@
-# IClientSideWebPartManifestEntry <TProperties> interface
+# IClientSideWebPartManifestEntry `<TProperties>` interface
 
 
 
-_Type parameters: <TProperties>_
+_Type parameters: `<TProperties>`_
 
 This interface specifies the set of properties that can be pre-configured by a Web Part developer. Each 
 pre-configured instance of the Web Part will need a copy of these properties. Organization admins and 

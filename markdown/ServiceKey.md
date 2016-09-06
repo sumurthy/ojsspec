@@ -1,8 +1,8 @@
-# ServiceKey <T> class
+# ServiceKey `<T>` class
 
 
 
-_Type parameters: <T>_
+_Type parameters: `<T>`_
 
 The ServiceKey is a lookup key that is used when calling ServiceScope.consume() 
 to fetch a dependency. The key also defines a default implementation of the 

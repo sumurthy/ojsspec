@@ -1,8 +1,8 @@
-# Promise <R> class
+# Promise `<R>` class
 
 _Implements: [`Thenable<R>`](Thenable.md)_
 
-_Type parameters: <R>_
+_Type parameters: `<R>`_
 
 
 

@@ -1,8 +1,8 @@
-# IClientSideWebPartManifestInstance <TProperties> interface
+# IClientSideWebPartManifestInstance `<TProperties>` interface
 
 
 
-_Type parameters: <TProperties>_
+_Type parameters: `<TProperties>`_
 
 Manifest that is relevant to a Web Part instance. 
 

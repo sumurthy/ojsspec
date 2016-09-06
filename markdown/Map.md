@@ -1,8 +1,8 @@
-# Map <K,V> interface
+# Map `<K,V>` interface
 
 
 
-_Type parameters: <K,V>_
+_Type parameters: `<K,V>`_
 
 
 
