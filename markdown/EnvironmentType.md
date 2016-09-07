@@ -1,4 +1,4 @@
-## EnvironmentType enumeration
+# EnvironmentType enumeration
 Environment type enumeration
 
 | Member	   | Description|

@@ -31,11 +31,11 @@ Math.random() function and may be not be suitable for some applications.
 
 
 
-## equals
+### equals
 
 represent the same value
 
-##### Signature
+#### Signature
 `public equals(guid: Guid): boolean`
 
 #### Returns
@@ -49,12 +49,12 @@ represent the same value
 | `guid`    | [`Guid`](Guid.md) |  |
 
 
-## isValid
+### isValid
 
 Indicates whether a guid is valid (according to RFC4122). 
 
 
-##### Signature
+#### Signature
 `public isValid(guid: string): boolean`
 
 #### Returns
@@ -68,12 +68,12 @@ Indicates whether a guid is valid (according to RFC4122).
 | `guid`    | `string` |  |
 
 
-## constructorGuid
+### constructorGuid
 
 Returns a new Guid instance with a pseudo-randomly generated Guid. 
 
 
-##### Signature
+#### Signature
 `public newGuid(randomProvider?: IRandomProvider): Guid`
 
 #### Returns
@@ -87,11 +87,11 @@ Returns a new Guid instance with a pseudo-randomly generated Guid.
 | `randomProvider`    | `IRandomProvider` | _Optional._ |
 
 
-## toString
+### toString
 
 Example: 'd5369f3b-bd7a-412a-9c0f-7f0650bb5489'
 
-##### Signature
+#### Signature
 `public toString(): string`
 
 #### Returns
@@ -101,14 +101,14 @@ Example: 'd5369f3b-bd7a-412a-9c0f-7f0650bb5489'
 None
 
 
-## tryParse
+### tryParse
 
 Trys to construct a new Guid instance using guid string. The guid argument 
 is normalized and validated. If the argument is not a valid "version 4" UUID from 
 RFC 4122, tryParse will return undefined. 
 
 
-##### Signature
+#### Signature
 `public tryParse(guid: string): Guid`
 
 #### Returns

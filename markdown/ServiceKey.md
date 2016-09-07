@@ -35,11 +35,11 @@ introduced without inadvertently breaking components that are loaded by an older
 
 
 
-## constructor
+### constructor
 
 PRIVATE - Do not call this from your own code.
 
-##### Signature
+#### Signature
 `constructor(id: string,name: string,defaultCreator: ServiceCreator<T>)`
 
 #### Returns
@@ -55,11 +55,11 @@ PRIVATE - Do not call this from your own code.
 | `defaultCreator`    | `ServiceCreator<T>` |  |
 
 
-## create<T>
+### create<T>
 
 your application.
 
-##### Signature
+#### Signature
 `public create<T>(name: string,serviceClass: { new (serviceScope: ServiceScope) }): ServiceKey<T>;`
 
 #### Returns
@@ -74,11 +74,11 @@ your application.
 | `serviceClass`    | `{ new (serviceScope: ServiceScope) }` |  |
 
 
-## createCustom<T>
+### createCustom<T>
 
 your application.
 
-##### Signature
+#### Signature
 `public createCustom<T>(name: string,defaultCreator: ServiceCreator<T>): ServiceKey<T>`
 
 #### Returns

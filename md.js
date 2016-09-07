@@ -246,14 +246,18 @@ function doSubClassInterface(tline = '', localO = {}, localName = '', isClass = 
             tline = tline.replace('%extendsimplements%', '')
         }
     }
-
-
-
-
     return tline
 }
 
-function doSubMember(tline = '', member = {}, membername = '') {
+function doSubMember(tline = '', member = {}, membername = '', isClass = true, ownFile = false) {
+
+    if (tline.includes('%hashcount%')) {
+        if (ownFile) {
+            tline = tline.replace('%hashcount%', '#')
+        } else {
+            tline = tline.replace('%hashcount%', '###')
+        }
+    }
     if (tline.includes('%membername%')) tline = tline.replace('%membername%', membername.split('~')[0])
     if (tline.includes('%memberdescription%')) tline = tline.replace('%memberdescription%', member['descr'])
     if (tline.includes('%apisignature%')) tline = tline.replace('%apisignature%', `\`${member['signature']}\``)
@@ -490,7 +494,7 @@ function genClassInterfaceView(isClass = true, localName = '') {
 
 }
 
-function genMemberview(memName = '', member = {}, targetArray = [], isClass = true) {
+function genMemberview(memName = '', member = {}, targetArray = [], isClass = true, ownFile = false) {
 
     methodfuncT.forEach((tline) => {
         tline = tline.trim()
@@ -508,7 +512,7 @@ function genMemberview(memName = '', member = {}, targetArray = [], isClass = tr
         var hasVar = tline.includes('%') ? true : false
         if (WRITE_BACK.includes(key)) {
             if (hasVar) {
-                tline = doSubMember(tline, member, memName)
+                tline = doSubMember(tline, member, memName, isClass, ownFile)
             }
             targetArray.push(tline)
         } else if (TAKE_REPEAT_ACTION.includes(key)) {
@@ -562,7 +566,7 @@ function genModuleView() {
 
 function genFunctionView() {
     Object.keys(functionObj).forEach((e) => {
-        genMemberview(e, functionObj[e], func_mdout, false)
+        genMemberview(e, functionObj[e], func_mdout, false, true)
         console.log(`*** Writing Function file for ${e}`)
         FileOps.writeFile(func_mdout, `./markdown/${Utils.trimGenerics(e)}.md`)
         func_mdout = []

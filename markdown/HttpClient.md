@@ -30,11 +30,11 @@ class instead.
 
 
 
-## constructor
+### constructor
 
 
 
-##### Signature
+#### Signature
 `constructor(serviceScope: ServiceScope)`
 
 #### Returns
@@ -48,12 +48,12 @@ class instead.
 | `serviceScope`    | [`ServiceScope`](ServiceScope.md) |  |
 
 
-## beginBatch
+### beginBatch
 
 Begins an ODATA batch,which allows multiple REST queries to be bundled into 
 a single web request.
 
-##### Signature
+#### Signature
 `public beginBatch(batchOptions?: IODataBatchOptions): ODataBatch`
 
 #### Returns
@@ -67,7 +67,7 @@ a single web request.
 | `batchOptions`    | [`IODataBatchOptions`](IODataBatchOptions.md) | _Optional._ |
 
 
-## fetch
+### fetch
 
 Generally,the parameters and semantics for HttpClient.fetch() are essentially 
 the same as the WHATWG API standard that is documented here: 
@@ -89,7 +89,7 @@ in the original URL passed to fetch(); if not, use IHttpClientOptions.webUrl
 to specify it explicitly. 
 
 
-##### Signature
+#### Signature
 `public fetch(url: string,options: IHttpClientOptions): Promise<Response>`
 
 #### Returns
@@ -104,11 +104,11 @@ to specify it explicitly.
 | `options`    | [`IHttpClientOptions`](IHttpClientOptions.md) |  |
 
 
-## get
+### get
 
 Calls fetch(),but sets the method to 'GET'.
 
-##### Signature
+#### Signature
 `public get(url: string,options?: IHttpClientOptions): Promise<Response>`
 
 #### Returns
@@ -123,7 +123,7 @@ Calls fetch(),but sets the method to 'GET'.
 | `options`    | [`IHttpClientOptions`](IHttpClientOptions.md) | _Optional._ |
 
 
-## getWebUrlFromRequestUrl
+### getWebUrlFromRequestUrl
 
 This uses a heuristic to guess the SPWeb URL associated with the provided 
 REST URL. This is necessary for operations such as the X-RequestDigest 
@@ -134,7 +134,7 @@ the returned URL would be "/sites/site/web". Or if the requestUrl
 is "http: 
 "http:
 
-##### Signature
+#### Signature
 `public getWebUrlFromRequestUrl(requestUrl: string): string`
 
 #### Returns
@@ -148,11 +148,11 @@ is "http:
 | `requestUrl`    | `string` |  |
 
 
-## post
+### post
 
 Calls fetch(),but sets the method to 'POST'.
 
-##### Signature
+#### Signature
 `public post(url: string,options: IHttpClientOptions): Promise<Response>`
 
 #### Returns

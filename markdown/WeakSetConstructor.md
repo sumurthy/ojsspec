@@ -26,11 +26,11 @@
 
 
 
-## constructor<T>
+### constructor<T>
 
 
 
-##### Signature
+#### Signature
 `new<T>(iterable: ForEachable<T>): WeakSet<T>`
 
 #### Returns

@@ -33,11 +33,11 @@ resolve with a Response object for that particular request.
 
 
 
-## constructor
+### constructor
 
 
 
-##### Signature
+#### Signature
 `public constructor(serviceScope: ServiceScope,batchOptions?: IODataBatchOptions)`
 
 #### Returns
@@ -52,11 +52,11 @@ resolve with a Response object for that particular request.
 | `batchOptions`    | [`IODataBatchOptions`](IODataBatchOptions.md) | _Optional._ |
 
 
-## execute
+### execute
 
 Executes the batched queries that were queued using ODataBatch.fetch().
 
-##### Signature
+#### Signature
 `public execute(): Promise<ODataBatch>`
 
 #### Returns
@@ -66,7 +66,7 @@ Executes the batched queries that were queued using ODataBatch.fetch().
 None
 
 
-## fetch
+### fetch
 
 Queues a new request,and returns a promise that can be used to access 
 the server response (after execute() has completed). The parameters for 
@@ -83,7 +83,7 @@ in the first URL passed to fetch(). If not, use IODataBatchOptions.webUrl to spe
 explicitly. 
 
 
-##### Signature
+#### Signature
 `public fetch(url: string,options?: IODataBatchRequestOptions): Promise<Response>`
 
 #### Returns
@@ -98,11 +98,11 @@ explicitly.
 | `options`    | `IODataBatchRequestOptions` | _Optional._ |
 
 
-## get
+### get
 
 Calls fetch(),but sets the method to 'GET'.
 
-##### Signature
+#### Signature
 `public get(url: string,options?: IODataBatchRequestOptions): Promise<Response>`
 
 #### Returns
@@ -117,11 +117,11 @@ Calls fetch(),but sets the method to 'GET'.
 | `options`    | `IODataBatchRequestOptions` | _Optional._ |
 
 
-## post
+### post
 
 Calls fetch(),but sets the method to 'POST'.
 
-##### Signature
+#### Signature
 `public post(url: string,options: IODataBatchRequestOptions): Promise<Response>`
 
 #### Returns

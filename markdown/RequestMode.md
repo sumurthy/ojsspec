@@ -1,4 +1,4 @@
-## RequestMode enumeration
+# RequestMode enumeration
 
 
 | Member	   | Description|

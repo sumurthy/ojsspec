@@ -1,8 +1,8 @@
-## PropertyPaneToggle
+# PropertyPaneToggle
 
 Helper method to create a Toggle on the PropertyPane.
 
-##### Signature
+#### Signature
 `export function PropertyPaneToggle(targetProperty: string,properties: IPropertyPaneToggleProps): IPropertyPaneField<IPropertyPaneToggleProps>`
 
 #### Returns

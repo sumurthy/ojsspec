@@ -30,11 +30,11 @@ Query param with only equals (www.example.com/?=&debug=on stores empty string ke
 
 
 
-## constructor
+### constructor
 
 
 
-##### Signature
+#### Signature
 `constructor(url: string)`
 
 #### Returns
@@ -48,7 +48,7 @@ Query param with only equals (www.example.com/?=&debug=on stores empty string ke
 | `url`    | `string` |  |
 
 
-## getValue
+### getValue
 
 Returns the value of the first matching query parameter or undefined if the key doesn't exist. 
 Examples: this._queryParameterList = [ 
@@ -59,7 +59,7 @@ getValue('TEST') ---> 'done'
 getValue('debug') ---> 'false' 
 getValue('lost') ---> undefined
 
-##### Signature
+#### Signature
 `public getValue(param: string): string`
 
 #### Returns
@@ -73,7 +73,7 @@ getValue('lost') ---> undefined
 | `param`    | `string` |  |
 
 
-## getValues
+### getValues
 
 Returns the values of all of the matching query parameters or undefined if the key doesn't exist. 
 Examples: this._queryParameterList = [ 
@@ -84,7 +84,7 @@ getValues('TEST') ---> ['done', 'notdone']
 getValues('debug') ---> ['false'] 
 getValues('lost') ---> undefined
 
-##### Signature
+#### Signature
 `public getValues(param: string): string[]`
 
 #### Returns

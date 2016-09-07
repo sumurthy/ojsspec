@@ -31,11 +31,11 @@
 
 
 
-## constructor
+### constructor
 
 
 
-##### Signature
+#### Signature
 `constructor(input: string|Request,init?:RequestInit)`
 
 #### Returns

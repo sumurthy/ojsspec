@@ -33,11 +33,11 @@ _Type parameters: `<T>`_
 
 
 
-## add
+### add
 
 
 
-##### Signature
+#### Signature
 `add(value: T): Set<T>`
 
 #### Returns
@@ -51,11 +51,11 @@ _Type parameters: `<T>`_
 | `value`    | `T` |  |
 
 
-## clear
+### clear
 
 
 
-##### Signature
+#### Signature
 `clear(): void`
 
 #### Returns
@@ -65,11 +65,11 @@ _Type parameters: `<T>`_
 None
 
 
-## delete
+### delete
 
 
 
-##### Signature
+#### Signature
 `delete(value: T): boolean`
 
 #### Returns
@@ -83,11 +83,11 @@ None
 | `value`    | `T` |  |
 
 
-## forEach
+### forEach
 
 
 
-##### Signature
+#### Signature
 `forEach(callbackfn: (value: T,index: T,set: Set<T>) => void,thisArg?: any): void`
 
 #### Returns
@@ -102,11 +102,11 @@ None
 | `thisArg`    | `any` | _Optional._ |
 
 
-## has
+### has
 
 
 
-##### Signature
+#### Signature
 `has(value: T): boolean`
 
 #### Returns
@@ -120,11 +120,11 @@ None
 | `value`    | `T` |  |
 
 
-## entries
+### entries
 
 
 
-##### Signature
+#### Signature
 `entries(): Iterator<[T,T]>`
 
 #### Returns
@@ -134,11 +134,11 @@ None
 None
 
 
-## keys
+### keys
 
 
 
-##### Signature
+#### Signature
 `keys(): Iterator<T>`
 
 #### Returns
@@ -148,11 +148,11 @@ None
 None
 
 
-## values
+### values
 
 
 
-##### Signature
+#### Signature
 `values(): Iterator<T>`
 
 #### Returns

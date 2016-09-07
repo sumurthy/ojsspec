@@ -1,8 +1,8 @@
-## PropertyPaneHorizontalRule
+# PropertyPaneHorizontalRule
 
 Helper method to create a Horizontal Rule on the PropertyPane.
 
-##### Signature
+#### Signature
 `export function PropertyPaneHorizontalRule(): IPropertyPaneField<void>`
 
 #### Returns

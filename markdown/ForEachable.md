@@ -20,11 +20,11 @@ _Type parameters: `<T>`_
 
 
 
-## forEach
+### forEach
 
 
 
-##### Signature
+#### Signature
 `forEach(callbackfn: (value: T) => void): void`
 
 #### Returns

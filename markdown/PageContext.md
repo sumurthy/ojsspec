@@ -34,11 +34,11 @@ application cache.
 
 
 
-## constructor
+### constructor
 
 
 
-##### Signature
+#### Signature
 `constructor(serviceScope: ServiceScope)`
 
 #### Returns

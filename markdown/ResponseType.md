@@ -1,4 +1,4 @@
-## ResponseType enumeration
+# ResponseType enumeration
 
 
 | Member	   | Description|

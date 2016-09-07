@@ -22,7 +22,7 @@ small, and extremely common. Do not add advanced parsing logic to this file.
 
 
 
-## convertToODataStringLiteral
+### convertToODataStringLiteral
 
 Converts a variable to an OData string literal and escapes apostrophes. 
 OData specification: 
@@ -34,7 +34,7 @@ convertToODataStringLiteral("example's list") ---> "'example''s list'"
 convertToODataStringLiteral("example list") ---> "'example list'" 
 convertToODataStringLiteral("'example list'") ---> "'''example list'''"
 
-##### Signature
+#### Signature
 `public convertToODataStringLiteral(value: string): string`
 
 #### Returns
@@ -48,7 +48,7 @@ convertToODataStringLiteral("'example list'") ---> "'''example list'''"
 | `value`    | `string` |  |
 
 
-## removeEndSlash
+### removeEndSlash
 
 Removes any slash characters from the end of the URL. 
 This function assumes that the input is already a valid absolute or server-relative URL. 
@@ -57,7 +57,7 @@ removeEndSlash('http:
 removeEndSlash('/example') ---> '/example' 
 removeEndSlash('/') ---> ''
 
-##### Signature
+#### Signature
 `public removeEndSlash(url: string): string`
 
 #### Returns

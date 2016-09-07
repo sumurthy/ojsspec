@@ -32,11 +32,11 @@ enhancements.
 
 
 
-## constructor
+### constructor
 
 
 
-##### Signature
+#### Signature
 `constructor(serviceScope: ServiceScope)`
 
 #### Returns
@@ -50,14 +50,14 @@ enhancements.
 | `serviceScope`    | [`ServiceScope`](ServiceScope.md) |  |
 
 
-## fetch
+### fetch
 
 Performs a REST service call. Although the HttpClient subclass adds 
 additional enhancements, the parameters and semantics for BasicHttpClient.fetch() 
 are essentially the same as the WHATWG API standard that is documented here: 
 https:
 
-##### Signature
+#### Signature
 `public fetch(url: string,options: IBasicHttpClientOptions): Promise<Response>`
 
 #### Returns
@@ -72,14 +72,14 @@ https:
 | `options`    | [`IBasicHttpClientOptions`](IBasicHttpClientOptions.md) |  |
 
 
-## fetchCore
+### fetchCore
 
 Performs a REST service call. Although the HttpClient subclass adds 
 additional enhancements, the parameters and semantics for BasicHttpClient.fetch() 
 are essentially the same as the WHATWG API standard that is documented here: 
 https:
 
-##### Signature
+#### Signature
 `protected fetchCore(request: Request): Promise<Response>`
 
 #### Returns
@@ -93,11 +93,11 @@ https:
 | `request`    | [`Request`](Request.md) |  |
 
 
-## get
+### get
 
 Calls fetch(),but sets the method to 'GET'.
 
-##### Signature
+#### Signature
 `public get(url: string,options?: IBasicHttpClientOptions): Promise<Response>`
 
 #### Returns
@@ -112,11 +112,11 @@ Calls fetch(),but sets the method to 'GET'.
 | `options`    | [`IBasicHttpClientOptions`](IBasicHttpClientOptions.md) | _Optional._ |
 
 
-## post
+### post
 
 Calls fetch(),but sets the method to 'POST'.
 
-##### Signature
+#### Signature
 `public post(url: string,options: IBasicHttpClientOptions): Promise<Response>`
 
 #### Returns

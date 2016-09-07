@@ -20,11 +20,11 @@
 
 
 
-## fetch
+### fetch
 
 
 
-##### Signature
+#### Signature
 `fetch(url: string|Request,init?: RequestInit): Promise<Response>`
 
 #### Returns

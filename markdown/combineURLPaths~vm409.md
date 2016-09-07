@@ -1,8 +1,8 @@
-## combineURLPaths
+# combineURLPaths
 
 Combines any number of URL paths.
 
-##### Signature
+#### Signature
 `export function combineURLPaths(...url: string[]): string`
 
 #### Returns

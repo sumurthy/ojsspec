@@ -68,11 +68,11 @@ serviceScope.whenFinished().
 
 
 
-## constructor
+### constructor
 
 PRIVATE CONSTRUCTOR - DO NOT CALL THIS FROM YOUR OWN CODE.
 
-##### Signature
+#### Signature
 `constructor(parent: ServiceScope)`
 
 #### Returns
@@ -86,13 +86,13 @@ PRIVATE CONSTRUCTOR - DO NOT CALL THIS FROM YOUR OWN CODE.
 | `parent`    | [`ServiceScope`](ServiceScope.md) |  |
 
 
-## consume<T>
+### consume<T>
 
 Components should call this function to "consume" a dependency,i.e. look up the serviceKey 
 and return the registered service instance. If the instance cannot be found, then a default 
 instance will be autocreated and registered with the root ServiceScope.
 
-##### Signature
+#### Signature
 `public consume<T>(serviceKey: ServiceKey<T>): T`
 
 #### Returns
@@ -106,12 +106,12 @@ instance will be autocreated and registered with the root ServiceScope.
 | `serviceKey`    | [`ServiceKey<T>`](ServiceKey.md) |  |
 
 
-## createAndProvide<T>
+### createAndProvide<T>
 
 This is a shorthand function that its equivalent to constructing a new instance of the 
 simpleServiceClass, then registering it by calling ServiceScope.provide().
 
-##### Signature
+#### Signature
 `public createAndProvide<T>(serviceKey: ServiceKey<T>,simpleServiceClass: { new (serviceScope: ServiceScope) }): T;`
 
 #### Returns
@@ -126,12 +126,12 @@ simpleServiceClass, then registering it by calling ServiceScope.provide().
 | `simpleServiceClass`    | `{ new (serviceScope: ServiceScope) }` |  |
 
 
-## createDefaultAndProvide<T>
+### createDefaultAndProvide<T>
 
 This is a shorthand function that constructs the default implementation of the specified 
 serviceKey, and then registers it by calling ServiceScope.provide().
 
-##### Signature
+#### Signature
 `public createDefaultAndProvide<T>(serviceKey: ServiceKey<T>): T`
 
 #### Returns
@@ -145,7 +145,7 @@ serviceKey, and then registers it by calling ServiceScope.provide().
 | `serviceKey`    | [`ServiceKey<T>`](ServiceKey.md) |  |
 
 
-## finish
+### finish
 
 When a ServiceScope is first started,it is in an "unfinished" state where provide() is 
 allowed but consume() is not allowed. After calling finish(), then consume() is allowed 
@@ -155,7 +155,7 @@ if someone consumes A1 from Scope2 (via inheritance) before Scope2.provide() is 
 with A2, then a subsequent call to Scope2.consume() might return a different result than 
 the previous call, which would be very confusing for developers.
 
-##### Signature
+#### Signature
 `public finish(): void`
 
 #### Returns
@@ -165,11 +165,11 @@ the previous call, which would be very confusing for developers.
 None
 
 
-## getParent
+### getParent
 
 Returns the parent of the current ServiceScope,or undefined if this is a root scope.
 
-##### Signature
+#### Signature
 `public getParent(): ServiceScope`
 
 #### Returns
@@ -179,13 +179,13 @@ Returns the parent of the current ServiceScope,or undefined if this is a root sc
 None
 
 
-## provide<T>
+### provide<T>
 
 ServiceScope.provide() is used to register an implemententation of the given serviceKey 
 for the current scope. It may only be used when the ServiceScope is in an "unfinished" 
 state, i.e. before finish() has been called.
 
-##### Signature
+#### Signature
 `public provide<T>(serviceKey: ServiceKey<T>,service: T): T`
 
 #### Returns
@@ -200,13 +200,13 @@ state, i.e. before finish() has been called.
 | `service`    | `T` |  |
 
 
-## startNewChild
+### startNewChild
 
 Constructs a new ServiceScope that is a child of the current scope. For any keys 
 that are not explicitly provided by the child scope, the parent hierarchy will be 
 consulted.
 
-##### Signature
+#### Signature
 `public startNewChild(): ServiceScope`
 
 #### Returns
@@ -216,12 +216,12 @@ consulted.
 None
 
 
-## startNewRoot
+### startNewRoot
 
 Create a new root-level ServiceScope. Only root-level scopes have the ability to autocreate 
 default implementations of ServiceKeys.
 
-##### Signature
+#### Signature
 `public startNewRoot(): ServiceScope`
 
 #### Returns
@@ -231,7 +231,7 @@ default implementations of ServiceKeys.
 None
 
 
-## whenFinished
+### whenFinished
 
 It is an error to call ServiceScope.consume() before finish() has been called. 
 The most reliable way to protect your component against this error is to perform the 
@@ -239,7 +239,7 @@ consume() calls inside a whenFinished() callback. If the service scope is alread
 finished, then the callback will be executed immediately; otherwise, it will be executed 
 later when the scope is finished.
 
-##### Signature
+#### Signature
 `public whenFinished(callback: () => void): void`
 
 #### Returns

@@ -1,8 +1,8 @@
-## race<R>
+# race<R>
 
 Make a Promise that fulfills when any item fulfills,and rejects if any item rejects.
 
-##### Signature
+#### Signature
 `function race<R>(promises: (R | Thenable<R>)[]): Promise<R>`
 
 #### Returns

@@ -1,8 +1,8 @@
-## %membername%
+%hashcount% %membername%
 
 %memberdescription%
 
-##### Signature
+#### Signature
 %apisignature%
 
 #### Returns

@@ -26,12 +26,12 @@ which component generated the messages and makes the messages useful and filtera
 
 
 
-## error
+### error
 
 The source provides context information for the logged error. 
 If the source's length is more than 20, only the first 20 characters are kept.
 
-##### Signature
+#### Signature
 `public error(source: string,error: Error,scope?: ServiceScope): void`
 
 #### Returns
@@ -47,11 +47,11 @@ If the source's length is more than 20, only the first 20 characters are kept.
 | `scope`    | [`ServiceScope`](ServiceScope.md) | _Optional._ |
 
 
-## info
+### info
 
 more context information (e.g.,web part information) to the logged message.
 
-##### Signature
+#### Signature
 `public info(source: string,message: string,scope?: ServiceScope): void`
 
 #### Returns
@@ -67,11 +67,11 @@ more context information (e.g.,web part information) to the logged message.
 | `scope`    | [`ServiceScope`](ServiceScope.md) | _Optional._ |
 
 
-## verbose
+### verbose
 
 more context information (e.g.,web part information) to the logged message.
 
-##### Signature
+#### Signature
 `public verbose(source: string,message: string,scope?: ServiceScope): void`
 
 #### Returns
@@ -87,11 +87,11 @@ more context information (e.g.,web part information) to the logged message.
 | `scope`    | [`ServiceScope`](ServiceScope.md) | _Optional._ |
 
 
-## warn
+### warn
 
 more context information (e.g.,web part information) to the logged message.
 
-##### Signature
+#### Signature
 `public warn(source: string,message: string,scope?: ServiceScope): void`
 
 #### Returns

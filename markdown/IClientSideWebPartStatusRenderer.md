@@ -23,11 +23,11 @@ error messages for a webpart.
 
 
 
-## clearError
+### clearError
 
 Clear the webpart error message.
 
-##### Signature
+#### Signature
 `clearError(domElement: HTMLElement): void`
 
 #### Returns
@@ -41,11 +41,11 @@ Clear the webpart error message.
 | `domElement`    | `HTMLElement` |  |
 
 
-## clearLoadingIndicator
+### clearLoadingIndicator
 
 Clear the loading indicator.
 
-##### Signature
+#### Signature
 `clearLoadingIndicator(domElement: Element): void`
 
 #### Returns
@@ -59,11 +59,11 @@ Clear the loading indicator.
 | `domElement`    | `Element` |  |
 
 
-## displayLoadingIndicator
+### displayLoadingIndicator
 
 Display a loading spinner.
 
-##### Signature
+#### Signature
 `displayLoadingIndicator(domElement: Element,loadingMessage: string): void`
 
 #### Returns
@@ -78,11 +78,11 @@ Display a loading spinner.
 | `loadingMessage`    | `string` |  |
 
 
-## renderError
+### renderError
 
 Render the provided error message in the webpart container div.
 
-##### Signature
+#### Signature
 `renderError(domElement: HTMLElement,error: Error | string): void`
 
 #### Returns

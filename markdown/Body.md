@@ -31,11 +31,11 @@
 
 
 
-## arrayBuffer
+### arrayBuffer
 
 
 
-##### Signature
+#### Signature
 `arrayBuffer(): Promise<ArrayBuffer>`
 
 #### Returns
@@ -45,11 +45,11 @@
 None
 
 
-## blob
+### blob
 
 
 
-##### Signature
+#### Signature
 `blob(): Promise<Blob>`
 
 #### Returns
@@ -59,11 +59,11 @@ None
 None
 
 
-## formData
+### formData
 
 
 
-##### Signature
+#### Signature
 `formData(): Promise<FormData>`
 
 #### Returns
@@ -73,11 +73,11 @@ None
 None
 
 
-## json
+### json
 
 
 
-##### Signature
+#### Signature
 `json(): Promise<any>`
 
 #### Returns
@@ -87,11 +87,11 @@ None
 None
 
 
-## json<T>
+### json<T>
 
 
 
-##### Signature
+#### Signature
 `json<T>(): Promise<T>`
 
 #### Returns
@@ -101,11 +101,11 @@ None
 None
 
 
-## text
+### text
 
 
 
-##### Signature
+#### Signature
 `text(): Promise<string>`
 
 #### Returns

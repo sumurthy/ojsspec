@@ -34,11 +34,11 @@ _Type parameters: `<K,V>`_
 
 
 
-## clear
+### clear
 
 
 
-##### Signature
+#### Signature
 `clear(): void`
 
 #### Returns
@@ -48,11 +48,11 @@ _Type parameters: `<K,V>`_
 None
 
 
-## delete
+### delete
 
 
 
-##### Signature
+#### Signature
 `delete(key: K): boolean`
 
 #### Returns
@@ -66,11 +66,11 @@ None
 | `key`    | `K` |  |
 
 
-## forEach
+### forEach
 
 
 
-##### Signature
+#### Signature
 `forEach(callbackfn: (value: V,index: K,map: Map<K,V>) => void,thisArg?: any): void`
 
 #### Returns
@@ -85,11 +85,11 @@ None
 | `thisArg`    | `any` | _Optional._ |
 
 
-## get
+### get
 
 
 
-##### Signature
+#### Signature
 `get(key: K): V`
 
 #### Returns
@@ -103,11 +103,11 @@ None
 | `key`    | `K` |  |
 
 
-## has
+### has
 
 
 
-##### Signature
+#### Signature
 `has(key: K): boolean`
 
 #### Returns
@@ -121,11 +121,11 @@ None
 | `key`    | `K` |  |
 
 
-## set
+### set
 
 
 
-##### Signature
+#### Signature
 `set(key: K,value?: V): Map<K,V>`
 
 #### Returns
@@ -140,11 +140,11 @@ None
 | `value`    | `V` | _Optional._ |
 
 
-## entries
+### entries
 
 
 
-##### Signature
+#### Signature
 `entries(): Iterator<[K,V]>`
 
 #### Returns
@@ -154,11 +154,11 @@ None
 None
 
 
-## keys
+### keys
 
 
 
-##### Signature
+#### Signature
 `keys(): Iterator<K>`
 
 #### Returns
@@ -168,11 +168,11 @@ None
 None
 
 
-## values
+### values
 
 
 
-##### Signature
+#### Signature
 `values(): Iterator<V>`
 
 #### Returns

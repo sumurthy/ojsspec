@@ -26,11 +26,11 @@
 
 
 
-## append
+### append
 
 
 
-##### Signature
+#### Signature
 `append(name: string,value: string): void`
 
 #### Returns
@@ -45,11 +45,11 @@
 | `value`    | `string` |  |
 
 
-## delete
+### delete
 
 
 
-##### Signature
+#### Signature
 `delete(name: string):void`
 
 #### Returns
@@ -63,11 +63,11 @@
 | `name`    | `string` |  |
 
 
-## get
+### get
 
 
 
-##### Signature
+#### Signature
 `get(name: string): string`
 
 #### Returns
@@ -81,11 +81,11 @@
 | `name`    | `string` |  |
 
 
-## getAll
+### getAll
 
 
 
-##### Signature
+#### Signature
 `getAll(name: string): Array<string>`
 
 #### Returns
@@ -99,11 +99,11 @@
 | `name`    | `string` |  |
 
 
-## has
+### has
 
 
 
-##### Signature
+#### Signature
 `has(name: string): boolean`
 
 #### Returns
@@ -117,11 +117,11 @@
 | `name`    | `string` |  |
 
 
-## set
+### set
 
 
 
-##### Signature
+#### Signature
 `set(name: string,value: string): void`
 
 #### Returns
@@ -136,11 +136,11 @@
 | `value`    | `string` |  |
 
 
-## forEach
+### forEach
 
 
 
-##### Signature
+#### Signature
 `forEach(callback: (value: string,name: string) => void): void`
 
 #### Returns

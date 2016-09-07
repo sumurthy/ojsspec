@@ -28,14 +28,14 @@ of time. For more information, see the MSDN article
 
 
 
-## addDigestToCache
+### addDigestToCache
 
 the digest value will no longer be valid. 
 NOTE: The expirationTime is a DOMHighResTimeStamp value whose units are 
 fractional milliseconds; for example, to specify an expiration 
 "5 seconds from right now", use performance.now()+5000.
 
-##### Signature
+#### Signature
 `addDigestToCache(webUrl: string,digestValue: string,expirationTimestamp: number): void`
 
 #### Returns
@@ -51,11 +51,11 @@ fractional milliseconds; for example, to specify an expiration
 | `expirationTimestamp`    | `number` |  |
 
 
-## clearAllDigests
+### clearAllDigests
 
 Clears all values from the cache.
 
-##### Signature
+#### Signature
 `clearAllDigests(): void`
 
 #### Returns
@@ -65,11 +65,11 @@ Clears all values from the cache.
 None
 
 
-## clearDigest
+### clearDigest
 
 This may be a server-relative or absolute URL.
 
-##### Signature
+#### Signature
 `clearDigest(webUrl: string): boolean`
 
 #### Returns
@@ -83,11 +83,11 @@ This may be a server-relative or absolute URL.
 | `webUrl`    | `string` |  |
 
 
-## fetchDigest
+### fetchDigest
 
 This may be a server-relative or absolute URL.
 
-##### Signature
+#### Signature
 `fetchDigest(webUrl: string): Promise<string>`
 
 #### Returns

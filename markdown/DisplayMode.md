@@ -1,4 +1,4 @@
-## DisplayMode enumeration
+# DisplayMode enumeration
 Display mode enumeration
 
 | Member	   | Description|

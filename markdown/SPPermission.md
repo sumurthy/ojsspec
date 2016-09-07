@@ -68,11 +68,11 @@ https:
 
 
 
-## constructor
+### constructor
 
 
 
-##### Signature
+#### Signature
 `constructor(value: IODataBasePermission)`
 
 #### Returns
@@ -86,11 +86,11 @@ https:
 | `value`    | [`IODataBasePermission`](IODataBasePermission.md) |  |
 
 
-## hasAllPermissions
+### hasAllPermissions
 
 Function for determining if a given permission mask has all of the requested permissions.
 
-##### Signature
+#### Signature
 `public hasAllPermissions(...requestedPerms: SPPermission[]): boolean`
 
 #### Returns
@@ -104,11 +104,11 @@ Function for determining if a given permission mask has all of the requested per
 | `...requestedPerms`    | `SPPermission[]` |  |
 
 
-## hasAnyPermissions
+### hasAnyPermissions
 
 Function for determining if a given permission mask has any of the requested permissions.
 
-##### Signature
+#### Signature
 `public hasAnyPermissions(...requestedPerms: SPPermission[]): boolean`
 
 #### Returns
@@ -122,11 +122,11 @@ Function for determining if a given permission mask has any of the requested per
 | `...requestedPerms`    | `SPPermission[]` |  |
 
 
-## hasPermission
+### hasPermission
 
 Function for checking if a given permission mask has the requested permission.
 
-##### Signature
+#### Signature
 `public hasPermission(requestedPerm: SPPermission): boolean`
 
 #### Returns

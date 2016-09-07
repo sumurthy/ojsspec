@@ -25,11 +25,11 @@ that might impact performance.
 
 
 
-## isNonemptyString
+### isNonemptyString
 
 Throws an exception if the specified string is null,undefined,or an empty string.
 
-##### Signature
+#### Signature
 `public isNonemptyString(value: string,variableName: string): void`
 
 #### Returns
@@ -44,11 +44,11 @@ Throws an exception if the specified string is null,undefined,or an empty string
 | `variableName`    | `string` |  |
 
 
-## isNotNullOrUndefined
+### isNotNullOrUndefined
 
 Throws an exception if the specified value is null or undefined.
 
-##### Signature
+#### Signature
 `public isNotNullOrUndefined(value: any,variableName: string): void`
 
 #### Returns
@@ -63,11 +63,11 @@ Throws an exception if the specified value is null or undefined.
 | `variableName`    | `string` |  |
 
 
-## isTrue
+### isTrue
 
 Throws an exception if the specified value is not true.
 
-##### Signature
+#### Signature
 `public isTrue(value: boolean,variableName: string): void`
 
 #### Returns

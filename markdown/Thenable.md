@@ -20,11 +20,11 @@ _Type parameters: `<R>`_
 
 
 
-## then<U>
+### then<U>
 
 
 
-##### Signature
+#### Signature
 `then<U>(onFulfilled?: (value: R) => U | Thenable<U>,onRejected?: (error: any) => void): Thenable<U>`
 
 #### Returns

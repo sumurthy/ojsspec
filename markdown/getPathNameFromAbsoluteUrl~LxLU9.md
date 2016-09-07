@@ -1,9 +1,9 @@
-## getPathNameFromAbsoluteUrl
+# getPathNameFromAbsoluteUrl
 
 Get's the path name from an absolute url. 
 
 
-##### Signature
+#### Signature
 `export function getPathNameFromAbsoluteUrl(url: string): string`
 
 #### Returns

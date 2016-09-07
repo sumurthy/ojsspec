@@ -33,11 +33,11 @@
 
 
 
-## constructor
+### constructor
 
 
 
-##### Signature
+#### Signature
 `constructor(body?: BodyInit,init?: ResponseInit)`
 
 #### Returns
@@ -52,11 +52,11 @@
 | `init`    | [`ResponseInit`](ResponseInit.md) | _Optional._ |
 
 
-## error
+### error
 
 
 
-##### Signature
+#### Signature
 `error(): Response`
 
 #### Returns
@@ -66,11 +66,11 @@
 None
 
 
-## redirect
+### redirect
 
 
 
-##### Signature
+#### Signature
 `redirect(url: string,status: number): Response`
 
 #### Returns
@@ -85,11 +85,11 @@ None
 | `status`    | `number` |  |
 
 
-## clone
+### clone
 
 
 
-##### Signature
+#### Signature
 `clone(): Response`
 
 #### Returns

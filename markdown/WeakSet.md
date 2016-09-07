@@ -23,11 +23,11 @@ _Type parameters: `<T>`_
 
 
 
-## delete
+### delete
 
 
 
-##### Signature
+#### Signature
 `delete(value: T): boolean`
 
 #### Returns
@@ -41,11 +41,11 @@ _Type parameters: `<T>`_
 | `value`    | `T` |  |
 
 
-## clear
+### clear
 
 
 
-##### Signature
+#### Signature
 `clear(): void`
 
 #### Returns
@@ -55,11 +55,11 @@ _Type parameters: `<T>`_
 None
 
 
-## add
+### add
 
 
 
-##### Signature
+#### Signature
 `add(value: T): WeakSet<T>`
 
 #### Returns
@@ -73,11 +73,11 @@ None
 | `value`    | `T` |  |
 
 
-## has
+### has
 
 
 
-##### Signature
+#### Signature
 `has(value: T): boolean`
 
 #### Returns

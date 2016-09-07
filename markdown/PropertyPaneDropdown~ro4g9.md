@@ -1,8 +1,8 @@
-## PropertyPaneDropdown
+# PropertyPaneDropdown
 
 Helper method to create a Dropdown on the PropertyPane.
 
-##### Signature
+#### Signature
 `export function PropertyPaneDropdown(targetProperty: string,properties: IPropertyPaneDropdownProps): IPropertyPaneField<IPropertyPaneDropdownProps>`
 
 #### Returns

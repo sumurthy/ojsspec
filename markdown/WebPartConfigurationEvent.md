@@ -1,4 +1,4 @@
-## WebPartConfigurationEvent enumeration
+# WebPartConfigurationEvent enumeration
 
 
 | Member	   | Description|

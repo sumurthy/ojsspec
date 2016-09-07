@@ -1,4 +1,4 @@
-## %enumname% enumeration
+# %enumname% enumeration
 %description%
 
 | Member	   | Description|

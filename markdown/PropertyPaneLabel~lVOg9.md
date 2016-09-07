@@ -1,8 +1,8 @@
-## PropertyPaneLabel
+# PropertyPaneLabel
 
 Helper method to create a Label on the PropertyPane.
 
-##### Signature
+#### Signature
 `export function PropertyPaneLabel(targetProperty: string,properties: IPropertyPaneLabelProps): IPropertyPaneField<IPropertyPaneLabelProps>`
 
 #### Returns

@@ -26,11 +26,11 @@
 
 
 
-## constructor<K,V>
+### constructor<K,V>
 
 
 
-##### Signature
+#### Signature
 `new<K,V>(iterable: ForEachable<[K,V]>): Map<K,V>`
 
 #### Returns

@@ -1,8 +1,8 @@
-## PropertyPaneSlider
+# PropertyPaneSlider
 
 Helper method to create a Slider on the PropertyPane.
 
-##### Signature
+#### Signature
 `export function PropertyPaneSlider(targetProperty: string,properties: IPropertyPaneSliderProps): IPropertyPaneField<IPropertyPaneSliderProps>`
 
 #### Returns

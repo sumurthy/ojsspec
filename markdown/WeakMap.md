@@ -24,11 +24,11 @@ _Type parameters: `<K,V>`_
 
 
 
-## delete
+### delete
 
 
 
-##### Signature
+#### Signature
 `delete(key: K): boolean`
 
 #### Returns
@@ -42,11 +42,11 @@ _Type parameters: `<K,V>`_
 | `key`    | `K` |  |
 
 
-## clear
+### clear
 
 
 
-##### Signature
+#### Signature
 `clear(): void`
 
 #### Returns
@@ -56,11 +56,11 @@ _Type parameters: `<K,V>`_
 None
 
 
-## get
+### get
 
 
 
-##### Signature
+#### Signature
 `get(key: K): V`
 
 #### Returns
@@ -74,11 +74,11 @@ None
 | `key`    | `K` |  |
 
 
-## has
+### has
 
 
 
-##### Signature
+#### Signature
 `has(key: K): boolean`
 
 #### Returns
@@ -92,11 +92,11 @@ None
 | `key`    | `K` |  |
 
 
-## set
+### set
 
 
 
-##### Signature
+#### Signature
 `set(key: K,value?: V): WeakMap<K,V>`
 
 #### Returns

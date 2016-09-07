@@ -22,11 +22,11 @@ _Type parameters: `<T>`_
 
 
 
-## next
+### next
 
 
 
-##### Signature
+#### Signature
 `next(value?: any): IteratorResult<T>`
 
 #### Returns
@@ -40,11 +40,11 @@ _Type parameters: `<T>`_
 | `value`    | `any` | _Optional._ |
 
 
-## return
+### return
 
 
 
-##### Signature
+#### Signature
 `return?(value?: any): IteratorResult<T>`
 
 #### Returns
@@ -58,11 +58,11 @@ _Type parameters: `<T>`_
 | `value`    | `any` | _Optional._ |
 
 
-## throw
+### throw
 
 
 
-##### Signature
+#### Signature
 `throw?(e?: any): IteratorResult<T>`
 
 #### Returns

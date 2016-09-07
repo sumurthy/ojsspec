@@ -22,13 +22,13 @@ This class contains various comparison utilities.
 
 
 
-## shallowCompare
+### shallowCompare
 
 Performs shallow comparison between two objects to determine if they are equal. This method compares 
 only object types. 
 
 
-##### Signature
+#### Signature
 `public shallowCompare(objA: Object,objB: Object): boolean`
 
 #### Returns
