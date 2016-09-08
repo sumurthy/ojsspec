@@ -6,7 +6,7 @@ Helper method to create a Label on the PropertyPane.
 `export function PropertyPaneLabel(targetProperty: string,properties: IPropertyPaneLabelProps): IPropertyPaneField<IPropertyPaneLabelProps>`
 
 #### Returns
-[`IPropertyPaneField<IPropertyPaneLabelProps>`](IPropertyPaneField.md)
+[`IPropertyPaneField<IPropertyPaneLabelProps>`](ipropertypanefield.md)
 
 #### Parameters
 
@@ -14,5 +14,5 @@ Helper method to create a Label on the PropertyPane.
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `targetProperty`    | `string` |  |
-| `properties`    | [`IPropertyPaneLabelProps`](IPropertyPaneLabelProps.md) |  |
+| `properties`    | [`IPropertyPaneLabelProps`](ipropertypanelabelprops.md) |  |
 

@@ -6,7 +6,7 @@
 
 Represents an OData SP.List object. For more information about this object 
 see the MSDN documentation here: 
-https:
+https://msdn.microsoft.com/en-us/library/office/jj860569.aspx
 
 
 
@@ -17,7 +17,7 @@ https:
 |:-------------|:-------|:-----------|
 |`BaseTemplate`      | `number` |  |
 |`Created`      | `string` | Example: "/Date(1453294804000)/" |
-|`CurrentChangeToken`      | [`IODataChangeToken`](IODataChangeToken.md) | Example: "/Date(1453294804000)/" |
+|`CurrentChangeToken`      | [`IODataChangeToken`](iodatachangetoken.md) | Example: "/Date(1453294804000)/" |
 |`Description`      | `string` | Example: "/Date(1453294804000)/" |
 |`EntityTypeName`      | `string` | Example: "MyListTitleList" |
 |`Hidden`      | `boolean` | Example: "MyListTitleList" |

@@ -1,6 +1,6 @@
 # Promise `<R>` class
 
-_Implements: [`Thenable<R>`](Thenable.md)_
+_Implements: [`Thenable<R>`](thenable.md)_
 
 _Type parameters: `<R>`_
 
@@ -16,8 +16,8 @@ _Type parameters: `<R>`_
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
 |[`constructor`](#constructor)     | `public` | `any => void) => void)` | If you call resolve in the body of the callback passed to the constructor,  your promise is fulfilled with result object passed to resolve |
-|[`then<U>`](#then<u>)     | `public` | [`Promise<U>`](Promise.md) | onFulfilled is called when/if "promise" resolves |
-|[`catch<U>`](#catch<u>)     | `public` | [`Promise<U>`](Promise.md) | Sugar for promise |
+|[`then<U>`](#then<u>)     | `public` | [`Promise<U>`](promise.md) | onFulfilled is called when/if "promise" resolves |
+|[`catch<U>`](#catch<u>)     | `public` | [`Promise<U>`](promise.md) | Sugar for promise |
 
 
 
@@ -41,7 +41,7 @@ Any errors thrown in the constructor callback will be implicitly passed to rejec
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `callback`    | `(resolve: (value?: R `,[` Thenable<R>) => void`](Thenable.md) |  |
+| `callback`    | `(resolve: (value?: R `,[` Thenable<R>) => void`](thenable.md) |  |
 | `reject`    | `(error?: any) => void) => void` |  |
 
 
@@ -58,14 +58,14 @@ If an error is thrown in the callback, the returned promise rejects with that er
 `then<U>(onFulfilled?: (value: R) => U | Thenable<U>,onRejected?: (error: any) => void): Promise<U>`
 
 #### Returns
-[`Promise<U>`](Promise.md)
+[`Promise<U>`](promise.md)
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `onFulfilled`    | `(value: R) => U `,[` Thenable<U>`](Thenable.md) | _Optional._ |
+| `onFulfilled`    | `(value: R) => U `,[` Thenable<U>`](thenable.md) | _Optional._ |
 | `onRejected`    | `(error: any) => void` | _Optional._ |
 
 
@@ -78,12 +78,12 @@ Sugar for promise.then(undefined,onRejected)
 `catch<U>(onRejected?: (error: any) => U | Thenable<U>): Promise<U>`
 
 #### Returns
-[`Promise<U>`](Promise.md)
+[`Promise<U>`](promise.md)
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `onRejected`    | `(error: any) => U `,[` Thenable<U>`](Thenable.md) | _Optional._ |
+| `onRejected`    | `(error: any) => U `,[` Thenable<U>`](thenable.md) | _Optional._ |
 

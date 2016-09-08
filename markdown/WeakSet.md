@@ -18,7 +18,7 @@ _Type parameters: `<T>`_
 |:-------------|:-------|:-----------|
 |[`delete`](#delete)      | `boolean` |  |
 |[`clear`](#clear)      | `void` |  |
-|[`add`](#add)      | [`WeakSet<T>`](WeakSet.md) |  |
+|[`add`](#add)      | [`WeakSet<T>`](weakset.md) |  |
 |[`has`](#has)      | `boolean` |  |
 
 
@@ -63,7 +63,7 @@ None
 `add(value: T): WeakSet<T>`
 
 #### Returns
-[`WeakSet<T>`](WeakSet.md)
+[`WeakSet<T>`](weakset.md)
 
 #### Parameters
 

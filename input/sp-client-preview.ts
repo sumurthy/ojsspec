@@ -4,10 +4,10 @@
  * This abstract class implements the the base functionality for a client side web part. Every client side web part
  * needs to inherit from this class. Along with the base functionality, this class provides some APIs that can be
  * used by the web part. These APIs fall in two catagories.
- *
+ * 
  * The first category of APIs provide data and functionality. Example, the web part context (i.e. this.context). This
  * API should be used to access contextual data relevant to this web part instance.
- *
+ * 
  * The second category of APIs provide a base implementation for the web part lifecycle and can be overridden for an
  * updated implementation. The render() API is the only API that is mandatory to be implemented/overridden by a web
  * part. All other life cycle APIs have a base implementation and can be overridden based on the needs of the web part.
@@ -17,9 +17,9 @@ declare class BaseClientSideWebPart<TProperties> {
   /**
    * Constructor for the BaseClientSideWebPart class.
    * If a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor.
-   *
+   * 
    * @param context - web part context.
-   *
+   * 
    * e.g.
    *   constructor(conext: IWebPartContext) {
    *     super(context);
@@ -33,7 +33,7 @@ declare class BaseClientSideWebPart<TProperties> {
    * This property points to the accessible title of web part made available to screen readers. The base implementation
    * returns that default title in the manifest. Web parts that want to provide more descriptive title containing
    * contextual information need to override this API.
-   *
+   * 
    * @readonly
    */
   protected accessibleTitle: string;
@@ -43,7 +43,7 @@ declare class BaseClientSideWebPart<TProperties> {
   protected clearError(): void;
   /**
    * This API should be used to invoke the PropertyPane to help configure the web part.
-   *
+   * 
    * @param boolean - If specified and true - refresh a PropertyPane that's already been open, but not open
    * if it is not already open.
    */
@@ -51,7 +51,7 @@ declare class BaseClientSideWebPart<TProperties> {
   /**
    * This property is a pointer to the web part context.
    * @see IWebPartContex for more details.
-   *
+   * 
    * @readonly
    */
   protected context: IWebPartContext;
@@ -63,10 +63,10 @@ declare class BaseClientSideWebPart<TProperties> {
    * or newer version of the web part code. This API gives the web part developer an opportunity to re-structure their
    * data to the appropriate data schema. The persisted data contains the version number information. That information
    * can be used to make decisions on how to re-structure the data.
-   *
+   * 
    * @param data - web part persisted data.
    * @returns - web part property bag.
-   *
+   * 
    */
   protected deserialize(data: IWebPartData): TProperties;
   /**
@@ -77,13 +77,13 @@ declare class BaseClientSideWebPart<TProperties> {
    * configuration changes or not.
    * NonReactive implies that the configuraiton changes are transmitted to the web part only after 'Apply' PropertyPane
    * button is clicked.
-   *
+   * 
    * @readonly
    */
   protected disableReactivePropertyChanges: boolean;
   /**
    * This property is the current display mode of the web part.
-   *
+   * 
    * @readonly
    */
   protected displayMode: DisplayMode;
@@ -96,7 +96,7 @@ declare class BaseClientSideWebPart<TProperties> {
   /**
    * This property is a pointer to the root DOM element of the web part. This is a DIV element and contains the whole
    * DOM subtree of the web part.
-   *
+   * 
    * @readonly
    */
   protected domElement: HTMLElement;
@@ -106,10 +106,9 @@ declare class BaseClientSideWebPart<TProperties> {
   /**
    * This API is called before a web part is serialized. The default implementation is a no-op. A web part developer
    * is expected to override this API when the web part's state is not fully reflected in the property bag i.e.
-   * this.propertie
-   * s. In the overridden method, the web part developer is expected to update the state of the web
+   * this.properties. In the overridden method, the web part developer is expected to update the state of the web
    * part property bag. This way the web part serialization process will use the upto date state of the web part.
-   *
+   * 
    * @returns - reference to searchable properties and properties that need link fixup. Please read
    * the documentation of IHtmlProperties interface for more details.
    */
@@ -119,9 +118,9 @@ declare class BaseClientSideWebPart<TProperties> {
    * the web part render method to re-render the web part with the new display mode. If a web part developer does not
    * want a full re-render to happen on display mode change, they can override this API and perform specific updates
    * to the web part DOM to switch its display mode.
-   *
+   * 
    * @param oldDisplayMode - The old display mode.
-   *
+   * 
    */
   protected onDisplayModeChanged(oldDisplayMode: DisplayMode): void;
 
@@ -135,7 +134,7 @@ declare class BaseClientSideWebPart<TProperties> {
    * This API is invoked on property changes in the PropertyPane when the PropertyPane is being used in Reactive mode.
    * The base implementation of this API updates the web part property bag and re-render the web part. This API also
    * invokes the web part host's setDirty API.
-   *
+   * 
    * @param propertyPath - JSON path of the property in the property bag.
    * @param newValue - New value of the property.
    */
@@ -144,7 +143,7 @@ declare class BaseClientSideWebPart<TProperties> {
    * This API is called when the current web part configuration process is completed. ConfigurationComplete event
    * is fired when user switches between web parts while the PropertyPane is open, and this event handler is called
    * for the previously selected web part.
-   *
+   * 
    */
   protected onPropertyConfigurationComplete(): void;
   /**
@@ -160,14 +159,14 @@ declare class BaseClientSideWebPart<TProperties> {
    * This property points to the preview image for the web part. The base implementation returns undefined. Web parts
    * that want to provide a valid preview image url need to override this API. The preview image url can be used to
    * create a preview of the web part or of the page on which the web part is present.
-   *
+   * 
    * @readonly
    */
   protected previewImageUrl: string;
 
   /**
    * This property is the pointer to the custom property bag of the web part.
-   *
+   * 
    * @readonly
    */
   protected properties: TProperties;
@@ -176,9 +175,9 @@ declare class BaseClientSideWebPart<TProperties> {
    * This property is the pointer to the web part configuration settings. If the web part wants to use the PropertyPane
    * for configuration, this API needs to be overridden and the web part needs to return the set of properties it wants
    * to display in the PropertyPane.
-   *
+   * 
    * @see IPropertyPane and other PropertyPane integration wiki documentation for more details.
-   *
+   * 
    * @readonly
    */
   protected propertyPaneSettings: IPropertyPaneSettings;
@@ -190,7 +189,7 @@ declare class BaseClientSideWebPart<TProperties> {
   /**
    * This property indicates whether the web part was rendered from the default properties, as opposed to using
    * serialized state from the last time that the web part was saved.
-   *
+   * 
    * @readonly
    */
   protected renderedFromDefaultProperties: boolean;
@@ -198,7 +197,7 @@ declare class BaseClientSideWebPart<TProperties> {
   /**
    * This property indicates whether the web part has been rendered once or not. After the first time rendering,
    * the value of this property is always true. Till a full re-render of the web part happens.
-   *
+   * 
    * @readonly
    */
   protected renderedOnce: boolean;
@@ -206,7 +205,7 @@ declare class BaseClientSideWebPart<TProperties> {
   /**
    * This API should be used to render an error message in the web part display area. Also logs the error message
    * using the trace logger.
-   *
+   * 
    * @param error - An error object containing the error message to render.
    */
   protected renderError(error: Error): void;
@@ -223,7 +222,7 @@ export function combineURLPaths(...url: string[]): string;
 
 /**
  * Get's the path name from an absolute url.
- *
+ * 
  */
 export function getPathNameFromAbsoluteUrl(url: string): string;
 
@@ -266,19 +265,19 @@ interface IClientSideWebPartStatusRenderer {
  * Structure of the data that a webpart developer can return on the onBeforeSerialize() API.
  * The outcome contains 3 kay/value dictionaries for properties that need to be search indexed.
  * Both keys and values are expected to be strings and will be HTML encoded during serialization.
- *
+ * 
  * {
  *   searchableProperties: { 'prop1': 'value_of_prop1' },
  *   linkProperties: { 'prop2': 'http://www.contoso.com/page1.aspx' },
  *   imageLinkPropertes: { 'prop3': 'http://www.contoso.com/imag.png' }
  * }
- *
+ * 
  * This input would get translated to the following HTML string.
- *
+ * 
  * "<div data-sp-prop-name='prop1'>value1</div>
  * <link data-sp-prop-name='prop2' href='http://www.contoso.com/page1.aspx'>
  * <img data-sp-prop-name='prop2' href='http://www.contoso.com/image.png'>"
- *
+ * 
  */
 interface IHtmlProperties {
   imageLinkProperties: {
@@ -402,13 +401,13 @@ interface IOdataUserId {
 
 /**
  * @Copyright (c) Microsoft Corporation.  All rights reserved.
- *
+ * 
  * @file PropertyPaneButton related interfaces.PropertyPane button props.
  */
 interface IPropertyPaneButtonProps {
   /**
    * Detailed description of the button for the benefit of screen readers.
-   *
+   * 
    * Besides the compound button, other button types will need more information provided to screen reader.
    */
   ariaDescription ?: string;
@@ -438,15 +437,15 @@ interface IPropertyPaneButtonProps {
    * A callback which is invoked on the button click, which takes in the existing value for the bound property
    * and returns the new value and which is then used to update the properties bag. This update will result in
    * the re-render of the PropertyPane with the new props.
-   *
+   * 
    * @param {value} - Value associated with element's target property in the properties bag.
    * @returns - New value for the target property, which will eventually be updated in the properties bag.
-   *
+   * 
    * @internalremarks: This is the only place where the web part developer's is allowed to pass in the callback
    * for an individual element. This is because, button click does not result in any property change, and hence
    * cannot fire the 'onChange'' event for a property, and ends up becoming a no-op. To avoid this, giving the
    * control back to the web part, so that web part can make act acordingly.
-   *
+   * 
    * todo: VSO# 233578:PropertyPane Button OnClick event api.
    */
   onClick: (value: any) => any;
@@ -458,7 +457,7 @@ interface IPropertyPaneButtonProps {
 
 /**
  * @Copyright (c) Microsoft Corporation.  All rights reserved.
- *
+ * 
  * @file PropertyPaneCheckbox props.
  */
 interface IPropertyPaneCheckboxProps {
@@ -516,7 +515,7 @@ interface IPropertyPaneChoiceGroupOption {
 
 /**
  * @Copyright (c) Microsoft Corporation.  All rights reserved.
- *
+ * 
  * @file PropertyPaneChoiceGroup related interfaces.PropertyPane ChoiceGroup props.
  */
 interface IPropertyPaneChoiceGroupProps {
@@ -532,7 +531,7 @@ interface IPropertyPaneChoiceGroupProps {
 
 /**
  * @Copyright (c) Microsoft Corporation.  All rights reserved.
- *
+ * 
  * @file CustomPropertyPaneField related interfaces.PropertyPane CustomPropertyField props.
  */
 interface IPropertyPaneCustomFieldProps {
@@ -610,7 +609,7 @@ interface IPropertyPaneDropdownOption {
 
 /**
  * @Copyright (c) Microsoft Corporation.  All rights reserved.
- *
+ * 
  * @file PropertyPaneDropdown props.
  */
 interface IPropertyPaneDropdownProps {
@@ -634,15 +633,15 @@ interface IPropertyPaneDropdownProps {
 
 /**
  * @Copyright (c) Microsoft Corporation.  All rights reserved.
- *
+ * 
  * @file PropertyPaneField related interfaces.PropertyPane field.
  */
 interface IPropertyPaneField<TProperties> {
   /**
    * Strongly typed properties object. Specific to each field type.
    * Example: Checkbox has ICheckboxProps, TextField has ITextField props.
-   *
-   *
+   * 
+   * 
    */
   properties: TProperties;
   /**
@@ -688,7 +687,7 @@ interface IPropertyPaneGroup {
 
 /**
  * @Copyright (c) Microsoft Corporation.  All rights reserved.
- *
+ * 
  * @file PropertyPaneLabel props.
  */
 interface IPropertyPaneLabelProps {
@@ -706,7 +705,7 @@ interface IPropertyPaneLabelProps {
 
 /**
  * @Copyright (c) Microsoft Corporation.  All rights reserved.
- *
+ * 
  * @file PropertyPaneLink props.
  */
 interface IPropertyPaneLinkProps {
@@ -783,7 +782,7 @@ interface IPropertyPaneSettings {
 
 /**
  * @Copyright (c) Microsoft Corporation.  All rights reserved.
- *
+ * 
  * @file PropertyPaneSlider props.
  */
 interface IPropertyPaneSliderProps {
@@ -819,7 +818,7 @@ interface IPropertyPaneSliderProps {
   step ?: number;
   /**
    * The initial value of the Slider. Use this if you intend to pass in a new value as a result of onChange events.
-   *
+   * 
    * @default to min.
    */
   value ?: number;
@@ -827,7 +826,7 @@ interface IPropertyPaneSliderProps {
 
 /**
  * @Copyright (c) Microsoft Corporation.  All rights reserved.
- *
+ * 
  * @file PropertyPaneTextField props.PropertyPaneTextField component props.
  */
 interface IPropertyPaneTextFieldProps {
@@ -859,16 +858,16 @@ interface IPropertyPaneTextFieldProps {
   multiline ?: boolean;
   /**
    * The method is used to get the validation error message and determine whether the input value is valid or not.
-   *
+   * 
    *   When it returns string:
    *   - If valid, it returns empty string.
    *   - If invalid, it returns the error message string and the text field will
    *     show a red border and show an error message below the text field.
-   *
+   * 
    *   When it returns Promise<string>:
    *   - The resolved value is display as error message.
    *   - The rejected, the value is thrown away.
-   *
+   * 
    */
   onGetErrorMessage ?: (value: string) => string | Promise<string>;
   /**
@@ -894,7 +893,7 @@ interface IPropertyPaneTextFieldProps {
 
 /**
  * @Copyright (c) Microsoft Corporation.  All rights reserved.
- *
+ * 
  * @file PropertyPaneToggle props.PropertyPaneToggle component props.
  */
 interface IPropertyPaneToggleProps {
@@ -994,7 +993,7 @@ interface IWebPartContext extends IClientSideComponentContext<IClientSideWebPart
 
 /**
  * @Copyright (c) Microsoft Corporation.  All rights reserved.
- *
+ * 
  * @file IWebPartData.tsThis structure represents the the serialized state of a webpart. When the serialize() API is called on
  * a webpart, the output should be this structure. The structure of the 'properties' field is owned by the
  * webpart and is specific to the webpart. Each webpart can decide the set of properties it wants to
@@ -1071,17 +1070,17 @@ interface IWebPartData {
  * a direct interaction between the host and the web part infrastructure. This interface also
  * outlines some services where the web part host may want to override the default
  * implementations provided by the infrastructure. Let us discuss some examples:
- *
+ * 
  *  - APIs like setDirty, webPartConfigurationEventCallback help the web part infrastucture
  *    communicate the fact that some web part is in a dirty state  or web part communication
  *    events to the host.
- *
+ * 
  * - In future we expect that this interface will be used to provide services where the host
  *   might want to override the default implemenations. e.g.
  *   - the web part status rendering service. The default implementation of this service
  *     provides an office fabric spinny. But a certain host could easily want to show a
  *     different spinny.
- *
+ * 
  *   - The event aggregation service. Currently the web part manager hosts a single event
  *     event aggregator. But there are possibilities when a page can have multiple hosts
  *     and each host may want to scope its event aggregation service.
@@ -1239,3 +1238,4 @@ enum WebPartConfigurationEvent {
   // (undocumented)
   OpenComplete = 2
 }
+

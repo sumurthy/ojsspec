@@ -16,11 +16,11 @@ application cache.
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|`cultureInfo`     | `public` | [`CultureInfo`](CultureInfo.md) | This class is primarily used with the PageContext class |
+|`cultureInfo`     | `public` | [`CultureInfo`](cultureinfo.md) | This class is primarily used with the PageContext class |
 |`isInitialized`     | `public` | `boolean` | Returns whether the PageContext has been initialized |
-|`site`     | `public` | [`SPSite`](SPSite.md) | Contextual information for the SharePoint site collection ("site") that is hosting the page |
-|`user`     | `public` | [`SPUser`](SPUser.md) | This class is primarily used with the PageContext class |
-|`web`     | `public` | [`SPWeb`](SPWeb.md) | Contextual information for the SharePoint site ("web") that is hosting the page |
+|`site`     | `public` | [`SPSite`](spsite.md) | Contextual information for the SharePoint site collection ("site") that is hosting the page |
+|`user`     | `public` | [`SPUser`](spuser.md) | This class is primarily used with the PageContext class |
+|`web`     | `public` | [`SPWeb`](spweb.md) | Contextual information for the SharePoint site ("web") that is hosting the page |
 
 
 
@@ -29,7 +29,7 @@ application cache.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`constructor`](#constructor)     | `public` | [`ServiceScope`](ServiceScope.md) |  |
+|[`constructor`](#constructor)     | `public` | [`ServiceScope`](servicescope.md) |  |
 
 
 
@@ -42,12 +42,12 @@ application cache.
 `constructor(serviceScope: ServiceScope)`
 
 #### Returns
-[`ServiceScope`](ServiceScope.md)
+[`ServiceScope`](servicescope.md)
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceScope`    | [`ServiceScope`](ServiceScope.md) |  |
+| `serviceScope`    | [`ServiceScope`](servicescope.md) |  |
 

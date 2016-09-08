@@ -6,7 +6,7 @@ Helper method to create a Checkbox on the PropertyPane.
 `export function PropertyPaneCheckbox(targetProperty: string,properties: IPropertyPaneCheckboxProps): IPropertyPaneField<IPropertyPaneCheckboxProps>`
 
 #### Returns
-[`IPropertyPaneField<IPropertyPaneCheckboxProps>`](IPropertyPaneField.md)
+[`IPropertyPaneField<IPropertyPaneCheckboxProps>`](ipropertypanefield.md)
 
 #### Parameters
 
@@ -14,5 +14,5 @@ Helper method to create a Checkbox on the PropertyPane.
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `targetProperty`    | `string` |  |
-| `properties`    | [`IPropertyPaneCheckboxProps`](IPropertyPaneCheckboxProps.md) |  |
+| `properties`    | [`IPropertyPaneCheckboxProps`](ipropertypanecheckboxprops.md) |  |
 

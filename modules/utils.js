@@ -67,9 +67,6 @@ var self = module.exports = {
                 out[i] = line[i]
             }
         }
-        if (replaced) {
-            console.log('<<< ' + line);
-            console.log('>>> ' + out.join('')); }
         return out.join('')
     },
     /**
@@ -125,11 +122,11 @@ var self = module.exports = {
             let firstWord = line.split(' ', 1)[0]
             let secondWord = line.split(' ', 2)[1]
 
-            o['skip'].push(i)
 
             if (firstWord === '*/' || (secondWord !== undefined && secondWord.startsWith('@'))) {
                 return o
             } else {
+                o['skip'].push(i)
                 o['descr'] = o['descr'] + ' \n' + line.substr(2)
             }
         }
@@ -151,7 +148,10 @@ var self = module.exports = {
         return o
     },
     compact: (line='') => {
-        line = line.split('//')[0].trimRight()
+        var firstWord = line.trim().split(' ', 1)[0]
+        if (!SKIP.includes(firstWord)) {
+            line = line.split('//')[0].trimRight()
+        }
         line = line.replace(/\s+</g,'<') //Replace space+< to just <.
         line = line.replace(/<\s+/g,'<') //Replace space+< to just <.
         line = line.replace(/\s+>/g,'>') //Replace space+< to just <.
@@ -335,7 +335,6 @@ var self = module.exports = {
                 type = 'METHOD'
             }
         }
-        //console.log(type + ' **** ' + line);
         return type
     },
     stripQualifier: (line='') => {

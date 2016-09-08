@@ -1,5 +1,5 @@
 # EnvironmentType enumeration
-Environment type enumeration
+
 
 | Member	   | Description|
 |:-------------|:-------|

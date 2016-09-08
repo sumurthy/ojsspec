@@ -4,7 +4,6 @@
 
 
 
-framework. It contains all data for loading an entrypoint script and its dependency scripts. 
 
 
 

@@ -4,8 +4,6 @@
 
 
 
- 
-This class contains various comparison utilities. 
 
 
 

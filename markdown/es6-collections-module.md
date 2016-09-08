@@ -6,17 +6,17 @@
 
 | Class	   |  Description |
 |:-------------|:---------------|
-| [IteratorResult](IteratorResult.md)   |   |
-| [Iterator](Iterator.md)   |   |
-| [ForEachable](ForEachable.md)   |   |
-| [Map](Map.md)   |   |
-| [MapConstructor](MapConstructor.md)   |   |
-| [Set](Set.md)   |   |
-| [SetConstructor](SetConstructor.md)   |   |
-| [WeakMap](WeakMap.md)   |   |
-| [WeakMapConstructor](WeakMapConstructor.md)   |   |
-| [WeakSet](WeakSet.md)   |   |
-| [WeakSetConstructor](WeakSetConstructor.md)   |   |
+| [IteratorResult](iteratorresult.md)   |   |
+| [Iterator](iterator.md)   |   |
+| [ForEachable](foreachable.md)   |   |
+| [Map](map.md)   |   |
+| [MapConstructor](mapconstructor.md)   |   |
+| [Set](set.md)   |   |
+| [SetConstructor](setconstructor.md)   |   |
+| [WeakMap](weakmap.md)   |   |
+| [WeakMapConstructor](weakmapconstructor.md)   |   |
+| [WeakSet](weakset.md)   |   |
+| [WeakSetConstructor](weaksetconstructor.md)   |   |
 
 
 
@@ -27,8 +27,8 @@
 
 | Variable	   | Type|
 |:-----------|:------------|
-|Map   | [`MapConstructor`](MapConstructor.md) |
-|Set   | [`SetConstructor`](SetConstructor.md) |
-|WeakMap   | [`WeakMapConstructor`](WeakMapConstructor.md) |
-|WeakSet   | [`WeakSetConstructor`](WeakSetConstructor.md) |
+|Map   | [`MapConstructor`](mapconstructor.md) |
+|Set   | [`SetConstructor`](setconstructor.md) |
+|WeakMap   | [`WeakMapConstructor`](weakmapconstructor.md) |
+|WeakSet   | [`WeakSetConstructor`](weaksetconstructor.md) |
 

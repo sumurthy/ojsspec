@@ -2,7 +2,7 @@
   "IBasicHttpClientOptions": {
     "implementsExtendsName": "RequestInit",
     "genericType": null,
-    "descr": "headers?: HeaderInit|{ [index: string]: string }",
+    "descr": "This interface defines the options for the BasicHttpClient operations such as \nget(), post(), fetch(), etc. It is based on the whatwg API standard \nparameters that are documented here: \nhttps://fetch.spec.whatwg.org/",
     "properties": {
       "body": {
         "dataType": "BodyInit",
@@ -15,7 +15,7 @@
         "descr": ""
       },
       "cache": {
-        "dataType": "ILocalizedString|ILocalizedString",
+        "dataType": "string|RequestCache",
         "accessModifier": null,
         "isOptional": true,
         "function": null,
@@ -35,7 +35,7 @@
         "descr": ""
       },
       "headers": {
-        "dataType": "HeaderInit",
+        "dataType": "string }",
         "accessModifier": null,
         "isOptional": true,
         "function": null,
@@ -261,7 +261,7 @@
         "signature": "addDigestToCache(webUrl: string,digestValue: string,expirationTimestamp: number): void",
         "isStatic": false,
         "isOptional": false,
-        "descr": "the digest value will no longer be valid. \nNOTE: The expirationTime is a DOMHighResTimeStamp value whose units are \nfractional milliseconds; for example, to specify an expiration \n\"5 seconds from right now\", use performance.now()+5000.",
+        "descr": "Inserts a specific request digest value into the cache. Normally this is unnecessary because \nthe framework will automatically issue a REST request to fetch the digest when necessary; \nhowever, in advanced scenarios addDigestToCache() can be used to avoid the overhead of the \nREST call. \n",
         "genericType": null,
         "returnType": "void",
         "returnDescr": null,
@@ -302,7 +302,7 @@
         "signature": "clearDigest(webUrl: string): boolean",
         "isStatic": false,
         "isOptional": false,
-        "descr": "This may be a server-relative or absolute URL.",
+        "descr": "Clears the cached digest for the specified SPWeb URL. This operation is useful \ne.g. if an error indicates that a digest was invalidated prior to its expiration time. \n",
         "genericType": null,
         "returnType": "boolean",
         "returnDescr": null,
@@ -320,7 +320,7 @@
         "signature": "fetchDigest(webUrl: string): Promise<string>",
         "isStatic": false,
         "isOptional": false,
-        "descr": "This may be a server-relative or absolute URL.",
+        "descr": "Returns a digest string for the specified SPWeb URL. If the cache already contains a usable value, \nthe promise is fulfilled immediately. Otherwise, the promise will be pending and resolve after \nan HTTP request obtains the digest, which will be added to the cache.",
         "genericType": null,
         "returnType": "Promise<string>",
         "returnDescr": null,
@@ -339,7 +339,7 @@
   "IHttpClientOptions": {
     "implementsExtendsName": "IBasicHttpClientOptions",
     "genericType": null,
-    "descr": "headers?: HeaderInit|{ [index: string]: string }",
+    "descr": "This interface defines the options for the HttpClient operations such as \nget(), post(), fetch(), etc. It is based on the WHATWG API standard \nparameters that are documented here: \nhttps://fetch.spec.whatwg.org/",
     "properties": {
       "body": {
         "dataType": "BodyInit",
@@ -352,7 +352,7 @@
         "descr": ""
       },
       "cache": {
-        "dataType": "ILocalizedString|ILocalizedString",
+        "dataType": "string|RequestCache",
         "accessModifier": null,
         "isOptional": true,
         "function": null,
@@ -363,6 +363,16 @@
       },
       "credentials": {
         "dataType": "string|RequestCredentials",
+        "accessModifier": null,
+        "isOptional": true,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "headers": {
+        "dataType": "string }",
         "accessModifier": null,
         "isOptional": true,
         "function": null,
@@ -399,7 +409,7 @@
         "returnType": null,
         "assignValue": null,
         "isCollection": false,
-        "descr": "For a write operation,HttpClient will automatically add the \n\"X-RequestDigest\" header, which may need to be fetched using a seperate \nrequest such as \"https: \nTypically the SPWeb URL (\"https: \nexample) can be guessed by looking for a reserved URL segment such \nas \"_api\" in the original REST query, however certain REST endpoints \ndo not contain a reserved URL segment; in this case, the webUrl can \nbe explicitly specified using this option."
+        "descr": "For a write operation,HttpClient will automatically add the \n\"X-RequestDigest\" header, which may need to be fetched using a seperate \nrequest such as \"https://example.com/sites/sample/_api/contextinfo\". \nTypically the SPWeb URL (\"https://example.com/sites/sample\" in this \nexample) can be guessed by looking for a reserved URL segment such \nas \"_api\" in the original REST query, however certain REST endpoints \ndo not contain a reserved URL segment; in this case, the webUrl can \nbe explicitly specified using this option."
       }
     },
     "functions": {},
@@ -449,7 +459,7 @@
         "returnType": null,
         "assignValue": null,
         "isCollection": false,
-        "descr": "ODataBatch will need to perform its POST to an endpoint such as \n\"http: \n(\"https: \nlooking for a reserved URL segment such as \"_api\" in the first URL \npassed to fetch(), but if not, the webUrl can be explicitly specified \nusing this option."
+        "descr": "ODataBatch will need to perform its POST to an endpoint such as \n\"http://example.com/sites/sample/_api/$batch\". Typically the SPWeb URL \n(\"https://example.com/sites/sample\" in this example) can be guessed by \nlooking for a reserved URL segment such as \"_api\" in the first URL \npassed to fetch(), but if not, the webUrl can be explicitly specified \nusing this option."
       }
     },
     "functions": {},
@@ -549,7 +559,7 @@
   "IODataNavigationNode": {
     "implementsExtendsName": null,
     "genericType": null,
-    "descr": "Represents an OData SP.NavigationNode object. \nhttps:",
+    "descr": "Represents an OData SP.NavigationNode object. \nhttps://msdn.microsoft.com/en-us/library/office/jj246311.aspx",
     "properties": {
       "Children": {
         "dataType": "IODataNavigationNode",
@@ -629,7 +639,7 @@
   "IODataNavigationNodeCollection": {
     "implementsExtendsName": null,
     "genericType": null,
-    "descr": "Represents an OData Microsoft.SharePoint.Navigation.SPNavigation object. \nhttps:",
+    "descr": "Represents an OData Microsoft.SharePoint.Navigation.SPNavigation object. \nhttps://msdn.microsoft.com/en-us/library/office/ee557907.aspx",
     "properties": {
       "quickLaunch": {
         "dataType": "IODataNavigationNode",
@@ -659,7 +669,7 @@
   "IODataWeb": {
     "implementsExtendsName": null,
     "genericType": null,
-    "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps:",
+    "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx",
     "properties": {
       "Created": {
         "dataType": "string",
@@ -829,7 +839,7 @@
         "returnType": null,
         "assignValue": null,
         "isCollection": false,
-        "descr": "Gets the absolute URL for the website. \nExample: \"http:"
+        "descr": "Gets the absolute URL for the website. \nExample: \"http://example.com/sites/PubSite\""
       },
       "WebTemplate": {
         "dataType": "string",

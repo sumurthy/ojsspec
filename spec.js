@@ -27,6 +27,7 @@ const EXTENDS = 'extends '
 let ignore_lines = []
 let cBuffer = {}
 let ignoreMode = false
+let paramEncountered = false
 let mode = ''
 let cmode = false
 let iBlock = 0
@@ -99,6 +100,8 @@ function block_end_reset() {
 
 function block_begin_reset() {
     generalDesc = ''
+    paramEncountered = false
+
 }
 
 function comment_reset() {
@@ -176,7 +179,6 @@ function processLines(element = '', index = 0, lines = []) {
             iBlock--;
         }
     }
-
     if (SKIP.includes(firstWord)) return
     // else if (IGNORES.includes(secondWord)) {
     //   ignoreMode = true
@@ -197,6 +199,8 @@ function processLines(element = '', index = 0, lines = []) {
         } else if (secondWord.startsWith(ATSYMBOL)) {
             // PROCESS @param, etc.
             //
+            paramEncountered = true
+
             switch (secondWord) {
                 case '@param':
                     //4th word has param name and 5th has the description. Those are the only important ones to consider
@@ -221,9 +225,11 @@ function processLines(element = '', index = 0, lines = []) {
                 default:
             }
         } else {
-            var o = Utils.readCommentAhead(lines, line.substr(2), index)
-            ignore_lines = o['skip']
-            generalDesc = o['descr']
+            if (!paramEncountered) {
+                var o = Utils.readCommentAhead(lines, line.substr(2), index)
+                ignore_lines = o['skip']
+                generalDesc = o['descr']
+            }
         }
         return
     } else if (firstWord === C_END) {
@@ -425,7 +431,6 @@ function processFile(fileName) {
     expandAllTypes()
     FileOps.writeObject(allTypes, `./json/allTypes.json`)
 
-    console.log(`*** interface = ${nInterface}, class = ${nClass},
-        function = ${nFunction}, enum = ${nEnum}, variable = ${nVariable}, type = ${nType}`);
+    console.log(`*** interface = ${nInterface}, class = ${nClass}, function = ${nFunction}, enum = ${nEnum}, variable = ${nVariable}, type = ${nType}`);
     file_reset()
 }

@@ -22,7 +22,7 @@
         "returnType": null,
         "assignValue": null,
         "isCollection": false,
-        "descr": ""
+        "descr": "This property is a pointer to the web part context."
       },
       "disableReactivePropertyChanges": {
         "dataType": "boolean",
@@ -82,7 +82,7 @@
         "returnType": null,
         "assignValue": null,
         "isCollection": false,
-        "descr": ""
+        "descr": "This property is the pointer to the web part configuration settings. If the web part wants to use the PropertyPane \nfor configuration, this API needs to be overridden and the web part needs to return the set of properties it wants \nto display in the PropertyPane. \n"
       },
       "renderedFromDefaultProperties": {
         "dataType": "boolean",
@@ -112,7 +112,7 @@
         "signature": "constructor(ctx: IWebPartContext)",
         "isStatic": false,
         "isOptional": false,
-        "descr": " \ne.g. \nconstructor(conext: IWebPartContext) { \nsuper(context); \n. \n. class specific constructor code .. \n}",
+        "descr": "Constructor for the BaseClientSideWebPart class. \nIf a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor. \n",
         "genericType": null,
         "returnType": "IWebPartContext",
         "returnDescr": null,
@@ -141,7 +141,7 @@
         "signature": "protected configureStart(refreshOnly?: boolean): void",
         "isStatic": false,
         "isOptional": false,
-        "descr": "if it is not already open.",
+        "descr": "This API should be used to invoke the PropertyPane to help configure the web part. \n",
         "genericType": null,
         "returnType": "void",
         "returnDescr": null,
@@ -159,7 +159,7 @@
         "signature": "protected deserialize(data: IWebPartData): TProperties",
         "isStatic": false,
         "isOptional": false,
-        "descr": "",
+        "descr": "This API is called once during the lifetime of the web part during the intial render and just before the onInit \nAPI call. The purpose of this API is to help a web part developer deserialize the web part data and manage the \nversioning of their data as the web part code evolves. The web part data may have been persisted with an older \nor newer version of the web part code. This API gives the web part developer an opportunity to re-structure their \ndata to the appropriate data schema. The persisted data contains the version number information. That information \ncan be used to make decisions on how to re-structure the data. \n",
         "genericType": null,
         "returnType": "TProperties",
         "returnDescr": null,
@@ -188,7 +188,7 @@
         "signature": "protected onBeforeSerialize(): IHtmlProperties",
         "isStatic": false,
         "isOptional": false,
-        "descr": "the documentation of IHtmlProperties interface for more details.",
+        "descr": "This API is called before a web part is serialized. The default implementation is a no-op. A web part developer \nis expected to override this API when the web part's state is not fully reflected in the property bag i.e. \nthis.properties. In the overridden method, the web part developer is expected to update the state of the web \npart property bag. This way the web part serialization process will use the upto date state of the web part. \n",
         "genericType": null,
         "returnType": "IHtmlProperties",
         "returnDescr": null,
@@ -199,7 +199,7 @@
         "signature": "protected onDisplayModeChanged(oldDisplayMode: DisplayMode): void",
         "isStatic": false,
         "isOptional": false,
-        "descr": "",
+        "descr": "This API is called when the display mode of a web part is changed. The default implementation of this API calls \nthe web part render method to re-render the web part with the new display mode. If a web part developer does not \nwant a full re-render to happen on display mode change, they can override this API and perform specific updates \nto the web part DOM to switch its display mode. \n",
         "genericType": null,
         "returnType": "void",
         "returnDescr": null,

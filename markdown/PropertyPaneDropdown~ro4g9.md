@@ -6,7 +6,7 @@ Helper method to create a Dropdown on the PropertyPane.
 `export function PropertyPaneDropdown(targetProperty: string,properties: IPropertyPaneDropdownProps): IPropertyPaneField<IPropertyPaneDropdownProps>`
 
 #### Returns
-[`IPropertyPaneField<IPropertyPaneDropdownProps>`](IPropertyPaneField.md)
+[`IPropertyPaneField<IPropertyPaneDropdownProps>`](ipropertypanefield.md)
 
 #### Parameters
 
@@ -14,5 +14,5 @@ Helper method to create a Dropdown on the PropertyPane.
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `targetProperty`    | `string` |  |
-| `properties`    | [`IPropertyPaneDropdownProps`](IPropertyPaneDropdownProps.md) |  |
+| `properties`    | [`IPropertyPaneDropdownProps`](ipropertypanedropdownprops.md) |  |
 

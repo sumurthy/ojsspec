@@ -20,7 +20,7 @@ Web part - PropertyPane data contract.
 |`onRendered`      | `function` | Event callback fired after the PropertyPane is rendered |
 |`onSave`      | `function` | Event callback for 'Apply' click |
 |`properties`      | `any` | Property bag from the web part |
-|`settings`      | [`IPropertyPaneSettings`](IPropertyPaneSettings.md) | Web part configuration settings |
+|`settings`      | [`IPropertyPaneSettings`](ipropertypanesettings.md) | Web part configuration settings |
 
 
 

@@ -6,7 +6,7 @@
 
 The ODataBatch class accumulates a number of REST service calls and 
 transmits them as a single ODATA batch. This protocol is documented here: 
-http: 
+http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html 
  
 The usage is to call ODataBatch.fetch() to queue each individual request, 
 and then call ODataBatch.execute() to execute the batch operation. 
@@ -24,11 +24,11 @@ resolve with a Response object for that particular request.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`constructor`](#constructor)     | `public` | [`IODataBatchOptions`](IODataBatchOptions.md) |  |
-|[`execute`](#execute)     | `public` | [`Promise<ODataBatch>`](Promise.md) | Executes the batched queries that were queued using ODataBatch |
-|[`fetch`](#fetch)     | `public` | [`Promise<Response>`](Promise.md) | Queues a new request,and returns a promise that can be used to access  the server response (after execute() has completed) |
-|[`get`](#get)     | `public` | [`Promise<Response>`](Promise.md) | Calls fetch(),but sets the method to 'GET' |
-|[`post`](#post)     | `public` | [`Promise<Response>`](Promise.md) | Calls fetch(),but sets the method to 'POST' |
+|[`constructor`](#constructor)     | `public` | [`IODataBatchOptions`](iodatabatchoptions.md) |  |
+|[`execute`](#execute)     | `public` | [`Promise<ODataBatch>`](promise.md) | Executes the batched queries that were queued using ODataBatch |
+|[`fetch`](#fetch)     | `public` | [`Promise<Response>`](promise.md) | Queues a new request,and returns a promise that can be used to access  the server response (after execute() has completed) |
+|[`get`](#get)     | `public` | [`Promise<Response>`](promise.md) | Calls fetch(),but sets the method to 'GET' |
+|[`post`](#post)     | `public` | [`Promise<Response>`](promise.md) | Calls fetch(),but sets the method to 'POST' |
 
 
 
@@ -41,15 +41,15 @@ resolve with a Response object for that particular request.
 `public constructor(serviceScope: ServiceScope,batchOptions?: IODataBatchOptions)`
 
 #### Returns
-[`IODataBatchOptions`](IODataBatchOptions.md)
+[`IODataBatchOptions`](iodatabatchoptions.md)
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceScope`    | [`ServiceScope`](ServiceScope.md) |  |
-| `batchOptions`    | [`IODataBatchOptions`](IODataBatchOptions.md) | _Optional._ |
+| `serviceScope`    | [`ServiceScope`](servicescope.md) |  |
+| `batchOptions`    | [`IODataBatchOptions`](iodatabatchoptions.md) | _Optional._ |
 
 
 ### execute
@@ -60,7 +60,7 @@ Executes the batched queries that were queued using ODataBatch.fetch().
 `public execute(): Promise<ODataBatch>`
 
 #### Returns
-[`Promise<ODataBatch>`](Promise.md)
+[`Promise<ODataBatch>`](promise.md)
 
 #### Parameters
 None
@@ -71,13 +71,13 @@ None
 Queues a new request,and returns a promise that can be used to access 
 the server response (after execute() has completed). The parameters for 
 this function are basically the same as the WHATWG API standard documented here: 
-https: 
+https://fetch.spec.whatwg.org/ 
  
 However, be aware that certain REST headers are ignored or not allowed inside 
 a batch. See the ODATA documentation for details. 
  
 When execute() is called, it will POST to a URL such as 
-"http: 
+"http://example.com/sites/sample/_api/$batch". Typically ODataBatch can successfully 
 guess the appropriate SPWeb URL by looking for a reserved URL segment such as "_api" 
 in the first URL passed to fetch(). If not, use IODataBatchOptions.webUrl to specify it 
 explicitly. 
@@ -87,7 +87,7 @@ explicitly.
 `public fetch(url: string,options?: IODataBatchRequestOptions): Promise<Response>`
 
 #### Returns
-[`Promise<Response>`](Promise.md)
+[`Promise<Response>`](promise.md)
 
 #### Parameters
 
@@ -106,7 +106,7 @@ Calls fetch(),but sets the method to 'GET'.
 `public get(url: string,options?: IODataBatchRequestOptions): Promise<Response>`
 
 #### Returns
-[`Promise<Response>`](Promise.md)
+[`Promise<Response>`](promise.md)
 
 #### Parameters
 
@@ -125,7 +125,7 @@ Calls fetch(),but sets the method to 'POST'.
 `public post(url: string,options: IODataBatchRequestOptions): Promise<Response>`
 
 #### Returns
-[`Promise<Response>`](Promise.md)
+[`Promise<Response>`](promise.md)
 
 #### Parameters
 

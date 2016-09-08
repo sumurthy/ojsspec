@@ -6,7 +6,7 @@
 
 Represents an OData SP.User object. For more information about this object 
 see the MSDN documentation here: 
-https:
+https://msdn.microsoft.com/en-us/library/office/jj860569.aspx
 
 
 
@@ -21,7 +21,7 @@ https:
 |`LoginName`      | `string` | Example: "i:0# |
 |`PrincipalType`      | `number` | Example: "i:0# |
 |`Title`      | `string` | Example: "DOMAIN\user" |
-|`UserId`      | [`IOdataUserId`](IOdataUserId.md) | Example: "DOMAIN\user" |
+|`UserId`      | [`IOdataUserId`](iodatauserid.md) | Example: "DOMAIN\user" |
 
 
 

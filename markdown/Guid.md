@@ -22,18 +22,19 @@ Math.random() function and may be not be suitable for some applications.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`equals`](#equals)     | `public` | `boolean` | represent the same value |
+|[`equals`](#equals)     | `public` | `boolean` | Compare this instance to another Guid instance   |
 |[`isValid`](#isvalid)     | `public, _static_` | `boolean` | Indicates whether a guid is valid (according to RFC4122) |
-|[`constructorGuid`](#constructorguid)     | `public, _static_` | [`Guid`](Guid.md) | Returns a new Guid instance with a pseudo-randomly generated Guid |
-|[`toString`](#tostring)     | `public` | `string` | Example: 'd5369f3b-bd7a-412a-9c0f-7f0650bb5489' |
-|[`tryParse`](#tryparse)     | `public, _static_` | [`Guid`](Guid.md) | Trys to construct a new Guid instance using guid string |
+|[`constructorGuid`](#constructorguid)     | `public, _static_` | [`Guid`](guid.md) | Returns a new Guid instance with a pseudo-randomly generated Guid |
+|[`toString`](#tostring)     | `public` | `string` | Object |
+|[`tryParse`](#tryparse)     | `public, _static_` | [`Guid`](guid.md) | Trys to construct a new Guid instance using guid string |
 
 
 
 
 ### equals
 
-represent the same value
+Compare this instance to another Guid instance 
+
 
 #### Signature
 `public equals(guid: Guid): boolean`
@@ -46,7 +47,7 @@ represent the same value
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `guid`    | [`Guid`](Guid.md) |  |
+| `guid`    | [`Guid`](guid.md) |  |
 
 
 ### isValid
@@ -77,7 +78,7 @@ Returns a new Guid instance with a pseudo-randomly generated Guid.
 `public newGuid(randomProvider?: IRandomProvider): Guid`
 
 #### Returns
-[`Guid`](Guid.md)
+[`Guid`](guid.md)
 
 #### Parameters
 
@@ -89,7 +90,8 @@ Returns a new Guid instance with a pseudo-randomly generated Guid.
 
 ### toString
 
-Example: 'd5369f3b-bd7a-412a-9c0f-7f0650bb5489'
+Object.prototype.toString override 
+
 
 #### Signature
 `public toString(): string`
@@ -112,7 +114,7 @@ RFC 4122, tryParse will return undefined.
 `public tryParse(guid: string): Guid`
 
 #### Returns
-[`Guid`](Guid.md)
+[`Guid`](guid.md)
 
 #### Parameters
 

@@ -20,12 +20,12 @@ class instead.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`constructor`](#constructor)     | `public` | [`ServiceScope`](ServiceScope.md) |  |
-|[`beginBatch`](#beginbatch)     | `public` | [`ODataBatch`](ODataBatch.md) | Begins an ODATA batch,which allows multiple REST queries to be bundled into  a single web request |
-|[`fetch`](#fetch)     | `public` | [`Promise<Response>`](Promise.md) | Generally,the parameters and semantics for HttpClient |
-|[`get`](#get)     | `public` | [`Promise<Response>`](Promise.md) | Calls fetch(),but sets the method to 'GET' |
+|[`constructor`](#constructor)     | `public` | [`ServiceScope`](servicescope.md) |  |
+|[`beginBatch`](#beginbatch)     | `public` | [`ODataBatch`](odatabatch.md) | Begins an ODATA batch,which allows multiple REST queries to be bundled into  a single web request |
+|[`fetch`](#fetch)     | `public` | [`Promise<Response>`](promise.md) | Generally,the parameters and semantics for HttpClient |
+|[`get`](#get)     | `public` | [`Promise<Response>`](promise.md) | Calls fetch(),but sets the method to 'GET' |
 |[`getWebUrlFromRequestUrl`](#getweburlfromrequesturl)     | `public, _static_` | `string` | This uses a heuristic to guess the SPWeb URL associated with the provided  REST URL |
-|[`post`](#post)     | `public` | [`Promise<Response>`](Promise.md) | Calls fetch(),but sets the method to 'POST' |
+|[`post`](#post)     | `public` | [`Promise<Response>`](promise.md) | Calls fetch(),but sets the method to 'POST' |
 
 
 
@@ -38,14 +38,14 @@ class instead.
 `constructor(serviceScope: ServiceScope)`
 
 #### Returns
-[`ServiceScope`](ServiceScope.md)
+[`ServiceScope`](servicescope.md)
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceScope`    | [`ServiceScope`](ServiceScope.md) |  |
+| `serviceScope`    | [`ServiceScope`](servicescope.md) |  |
 
 
 ### beginBatch
@@ -57,21 +57,21 @@ a single web request.
 `public beginBatch(batchOptions?: IODataBatchOptions): ODataBatch`
 
 #### Returns
-[`ODataBatch`](ODataBatch.md)
+[`ODataBatch`](odatabatch.md)
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `batchOptions`    | [`IODataBatchOptions`](IODataBatchOptions.md) | _Optional._ |
+| `batchOptions`    | [`IODataBatchOptions`](iodatabatchoptions.md) | _Optional._ |
 
 
 ### fetch
 
 Generally,the parameters and semantics for HttpClient.fetch() are essentially 
 the same as the WHATWG API standard that is documented here: 
-https: 
+https://fetch.spec.whatwg.org/ 
  
 The HttpClient subclass adds some additional behaviors that are convenient when 
 working with SharePoint ODATA API's (which can be avoided by using 
@@ -83,7 +83,7 @@ support for preloading
  
 For a write operation, HttpClient will automatically add the "X-RequestDigest" 
 header, which may need to be obtained by issuing a seperate request such as 
-"https: 
+"https://example.com/sites/sample/_api/contextinfo". Typically the appropriate 
 SPWeb URL can be guessed by looking for a reserved URL segment such as "_api" 
 in the original URL passed to fetch(); if not, use IHttpClientOptions.webUrl 
 to specify it explicitly. 
@@ -93,7 +93,7 @@ to specify it explicitly.
 `public fetch(url: string,options: IHttpClientOptions): Promise<Response>`
 
 #### Returns
-[`Promise<Response>`](Promise.md)
+[`Promise<Response>`](promise.md)
 
 #### Parameters
 
@@ -101,7 +101,7 @@ to specify it explicitly.
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `url`    | `string` |  |
-| `options`    | [`IHttpClientOptions`](IHttpClientOptions.md) |  |
+| `options`    | [`IHttpClientOptions`](ihttpclientoptions.md) |  |
 
 
 ### get
@@ -112,7 +112,7 @@ Calls fetch(),but sets the method to 'GET'.
 `public get(url: string,options?: IHttpClientOptions): Promise<Response>`
 
 #### Returns
-[`Promise<Response>`](Promise.md)
+[`Promise<Response>`](promise.md)
 
 #### Parameters
 
@@ -120,7 +120,7 @@ Calls fetch(),but sets the method to 'GET'.
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `url`    | `string` |  |
-| `options`    | [`IHttpClientOptions`](IHttpClientOptions.md) | _Optional._ |
+| `options`    | [`IHttpClientOptions`](ihttpclientoptions.md) | _Optional._ |
 
 
 ### getWebUrlFromRequestUrl
@@ -131,8 +131,8 @@ and ODATA batching, which require POSTing to a separate REST endpoint
 in order to complete a request. 
 For excample, if the requestUrl is "/sites/site/web/_api/service", 
 the returned URL would be "/sites/site/web". Or if the requestUrl 
-is "http: 
-"http:
+is "http://example.com/_layouts/service", the returned URL would be 
+"http://example.com".
 
 #### Signature
 `public getWebUrlFromRequestUrl(requestUrl: string): string`
@@ -156,7 +156,7 @@ Calls fetch(),but sets the method to 'POST'.
 `public post(url: string,options: IHttpClientOptions): Promise<Response>`
 
 #### Returns
-[`Promise<Response>`](Promise.md)
+[`Promise<Response>`](promise.md)
 
 #### Parameters
 
@@ -164,5 +164,5 @@ Calls fetch(),but sets the method to 'POST'.
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `url`    | `string` |  |
-| `options`    | [`IHttpClientOptions`](IHttpClientOptions.md) |  |
+| `options`    | [`IHttpClientOptions`](ihttpclientoptions.md) |  |
 

@@ -26,7 +26,7 @@ small, and extremely common. Do not add advanced parsing logic to this file.
 
 Converts a variable to an OData string literal and escapes apostrophes. 
 OData specification: 
-https: 
+https://tools.oasis-open.org/version-control/ 
 browse/wsvn/odata/trunk/spec/ABNF/odata-abnf-construction-rules.txt 
 SQUOTE-in-string = SQUOTE SQUOTE ; two consecutive single quotes represent one within a string literal 
 Examples: 
@@ -53,7 +53,7 @@ convertToODataStringLiteral("'example list'") ---> "'''example list'''"
 Removes any slash characters from the end of the URL. 
 This function assumes that the input is already a valid absolute or server-relative URL. 
 Examples: 
-removeEndSlash('http: 
+removeEndSlash('http://example.com/') ---> 'http://example.com' 
 removeEndSlash('/example') ---> '/example' 
 removeEndSlash('/') ---> ''
 

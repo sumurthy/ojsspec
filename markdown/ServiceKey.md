@@ -17,9 +17,9 @@ introduced without inadvertently breaking components that are loaded by an older
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|`defaultCreator`     | `public` | `ServiceCreator<T>` | your application |
-|`id`     | `public` | `string` | your application |
-|`name`     | `public` | `string` | your application |
+|`defaultCreator`     | `public` | `ServiceCreator<T>` | Constructs a new ServiceKey whose default implementation will be obtained  by invoking the specified callback |
+|`id`     | `public` | `string` | Constructs a new ServiceKey whose default implementation will be obtained  by invoking the specified callback |
+|`name`     | `public` | `string` | Constructs a new ServiceKey whose default implementation will be obtained  by invoking the specified callback |
 
 
 
@@ -29,8 +29,8 @@ introduced without inadvertently breaking components that are loaded by an older
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
 |[`constructor`](#constructor)     | `public` | `ServiceCreator<T>` | PRIVATE - Do not call this from your own code |
-|[`create<T>`](#create<t>)     | `public, _static_` | [`ServiceKey<T>;`](ServiceKey.md) | your application |
-|[`createCustom<T>`](#createcustom<t>)     | `public, _static_` | [`ServiceKey<T>`](ServiceKey.md) | your application |
+|[`create<T>`](#create<t>)     | `public, _static_` | [`ServiceKey<T>;`](servicekey.md) | Constructs a new ServiceKey whose default implementation will be a new instance of  a TypeScript class that accepts the standard constructor parameter |
+|[`createCustom<T>`](#createcustom<t>)     | `public, _static_` | [`ServiceKey<T>`](servicekey.md) | Constructs a new ServiceKey whose default implementation will be obtained  by invoking the specified callback |
 
 
 
@@ -57,13 +57,15 @@ PRIVATE - Do not call this from your own code.
 
 ### create<T>
 
-your application.
+Constructs a new ServiceKey whose default implementation will be a new instance of 
+a TypeScript class that accepts the standard constructor parameter. If you want to 
+specify custom constructor parameters, use createCustom() instead.
 
 #### Signature
 `public create<T>(name: string,serviceClass: { new (serviceScope: ServiceScope) }): ServiceKey<T>;`
 
 #### Returns
-[`ServiceKey<T>;`](ServiceKey.md)
+[`ServiceKey<T>;`](servicekey.md)
 
 #### Parameters
 
@@ -76,13 +78,14 @@ your application.
 
 ### createCustom<T>
 
-your application.
+Constructs a new ServiceKey whose default implementation will be obtained 
+by invoking the specified callback.
 
 #### Signature
 `public createCustom<T>(name: string,defaultCreator: ServiceCreator<T>): ServiceKey<T>`
 
 #### Returns
-[`ServiceKey<T>`](ServiceKey.md)
+[`ServiceKey<T>`](servicekey.md)
 
 #### Parameters
 

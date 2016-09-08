@@ -1,10 +1,13 @@
 # IHttpClientOptions interface
 
-_Extends: [`IBasicHttpClientOptions`](IBasicHttpClientOptions.md)_
+_Extends: [`IBasicHttpClientOptions`](ibasichttpclientoptions.md)_
 
 
 
-headers?: HeaderInit|{ [index: string]: string }
+This interface defines the options for the HttpClient operations such as 
+get(), post(), fetch(), etc. It is based on the WHATWG API standard 
+parameters that are documented here: 
+https://fetch.spec.whatwg.org/
 
 
 
@@ -14,11 +17,12 @@ headers?: HeaderInit|{ [index: string]: string }
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
 |`body`      | `BodyInit` |  |
-|`cache`      | [`ILocalizedString`](ILocalizedString.md),[`ILocalizedString`](ILocalizedString.md) |  |
-|`credentials`      | `string`,[`RequestCredentials`](RequestCredentials.md) |  |
+|`cache`      | `string`,[`RequestCache`](requestcache.md) |  |
+|`credentials`      | `string`,[`RequestCredentials`](requestcredentials.md) |  |
+|`headers`      | `string }` |  |
 |`method`      | `string` |  |
-|`mode`      | `string`,[`RequestMode`](RequestMode.md) |  |
-|`webUrl`      | `string` | For a write operation,HttpClient will automatically add the  "X-RequestDigest" header, which may need to be fetched using a seperate  request such as "https:  Typically the SPWeb URL ("https:  example) can be guessed by looking for a reserved URL segment such  as "_api" in the original REST query, however certain REST endpoints  do not contain a reserved URL segment; in this case, the webUrl can  be explicitly specified using this option |
+|`mode`      | `string`,[`RequestMode`](requestmode.md) |  |
+|`webUrl`      | `string` | For a write operation,HttpClient will automatically add the  "X-RequestDigest" header, which may need to be fetched using a seperate  request such as "https://example |
 
 
 

@@ -4,7 +4,7 @@ import Utils from './modules/utils'
 import SetUp from './modules/setuproutine'
 
 const STATEMENT_END = [';', '{', '}']
-const SKIP = ['*', '//', '/**', '///', '', '*/', '/*']
+    const SKIP = ['*', '//', '/**', '///', '', '*/', '/*']
 const BLOCK_END = '}'
 const ENUM = 'enum '
 const EXTENDS = ' extends'
@@ -32,9 +32,7 @@ function processLines(element = '', index = 0, lines = []) {
     if (ignore_lines.includes(index)) {
         return
     }
-
     var line = Utils.compact(element)
-
     let firstWord = line.trim().split(' ', 1)[0]
     var outLine = ''
 
@@ -55,9 +53,9 @@ function processLines(element = '', index = 0, lines = []) {
                 var o = Utils.unWrapStatement(lines, index)
                 ignore_lines = o['skip']
                 outLine = o['line']
-                console.log(`Incomplete function/interface statement line: ${line}`);
-                console.log('Unwrapping to this line: ' + outLine);
-                console.log(' ');
+                // console.log(`Incomplete function/interface statement line: ${line}`);
+                // console.log('Unwrapping to this line: ' + outLine);
+                // console.log(' ');
                 nFuncInt++
             }
         }
@@ -66,9 +64,9 @@ function processLines(element = '', index = 0, lines = []) {
                 var o = Utils.unWrapStatement(lines, index)
                 ignore_lines = o['skip']
                 outLine = o['line']
-                console.log(`Incomplete multi type statement line: ${line}`);
-                console.log('Unwrapping to this line: ' + outLine);
-                console.log(' ');
+                // console.log(`Incomplete multi type statement line: ${line}`);
+                // console.log('Unwrapping to this line: ' + outLine);
+                // console.log(' ');
                 nMultiTypes++
             }
         }
@@ -77,9 +75,9 @@ function processLines(element = '', index = 0, lines = []) {
                 var o = Utils.unWrapStatement(lines, index)
                 ignore_lines = o['skip']
                 outLine = o['line']
-                console.log(`Incomplete prop/method statement line: ${line}`);
-                console.log('Unwrapping to this line: ' + outLine);
-                console.log(' ');
+                // console.log(`Incomplete prop/method statement line: ${line}`);
+                // console.log('Unwrapping to this line: ' + outLine);
+                // console.log(' ');
                 nMember++
             }
         }

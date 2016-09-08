@@ -13,7 +13,7 @@
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`prototype`      | [`WeakMap<any,any>`](WeakMap.md) |  |
+|`prototype`      | [`WeakMap<any,any>`](weakmap.md) |  |
 
 
 
@@ -22,7 +22,7 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`constructor<K,V>`](#constructor<k,v>)      | [`WeakMap<K,V>`](WeakMap.md) |  |
+|[`constructor<K,V>`](#constructor<k,v>)      | [`WeakMap<K,V>`](weakmap.md) |  |
 
 
 
@@ -34,12 +34,12 @@
 `new<K,V>(iterable: ForEachable<[K,V]>): WeakMap<K,V>`
 
 #### Returns
-[`WeakMap<K,V>`](WeakMap.md)
+[`WeakMap<K,V>`](weakmap.md)
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `iterable`    | [`ForEachable<[K,V]>`](ForEachable.md) |  |
+| `iterable`    | [`ForEachable<[K,V]>`](foreachable.md) |  |
 

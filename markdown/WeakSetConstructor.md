@@ -13,7 +13,7 @@
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`prototype`      | [`WeakSet<any>`](WeakSet.md) |  |
+|`prototype`      | [`WeakSet<any>`](weakset.md) |  |
 
 
 
@@ -22,7 +22,7 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`constructor<T>`](#constructor<t>)      | [`WeakSet<T>`](WeakSet.md) |  |
+|[`constructor<T>`](#constructor<t>)      | [`WeakSet<T>`](weakset.md) |  |
 
 
 
@@ -34,12 +34,12 @@
 `new<T>(iterable: ForEachable<T>): WeakSet<T>`
 
 #### Returns
-[`WeakSet<T>`](WeakSet.md)
+[`WeakSet<T>`](weakset.md)
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `iterable`    | [`ForEachable<T>`](ForEachable.md) |  |
+| `iterable`    | [`ForEachable<T>`](foreachable.md) |  |
 

@@ -5,7 +5,7 @@
 
 | Class	   |  Description |
 |:-------------|:---------------|
-| [Promise](Promise.md)     |  |
+| [Promise](promise.md)     |  |
 
 
 
@@ -13,7 +13,7 @@
 
 | Class	   |  Description |
 |:-------------|:---------------|
-| [Thenable](Thenable.md)   |   |
+| [Thenable](thenable.md)   |   |
 
 
 
@@ -21,10 +21,10 @@
 
 | Function	   | Returns | Description |
 |:-------------|:------|:---------------|
-| [resolve<R>](resolve<R>~qYa89.md) |`[`Promise<R>`](Promise.md) `   | Make a new promise from the thenable  |
-| [reject](reject~Xzp89.md) |`[`Promise<any>`](Promise.md) `   | Make a promise that rejects to obj  |
-| [all<R>](all<R>~SjwM9.md) |`[`Promise<R[]>`](Promise.md) `   | Make a promise that fulfills when every item in the array fulfills,and rejects if (and when) any item rejects  |
-| [race<R>](race<R>~iD0o9.md) |`[`Promise<R>`](Promise.md) `   | Make a Promise that fulfills when any item fulfills,and rejects if any item rejects  |
+| [resolve<R>](resolve<r>~qya89.md) |`[`Promise<R>`](promise.md) `   | Make a new promise from the thenable  |
+| [reject](reject~xzp89.md) |`[`Promise<any>`](promise.md) `   | Make a promise that rejects to obj  |
+| [all<R>](all<r>~sjwm9.md) |`[`Promise<R[]>`](promise.md) `   | Make a promise that fulfills when every item in the array fulfills,and rejects if (and when) any item rejects  |
+| [race<R>](race<r>~id0o9.md) |`[`Promise<R>`](promise.md) `   | Make a Promise that fulfills when any item fulfills,and rejects if any item rejects  |
 
 
 

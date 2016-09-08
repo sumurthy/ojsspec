@@ -62,10 +62,10 @@ function getLinkForType(type = '') {
     }
     type.split(splitChar).forEach((e) => {
         if (allTypes.includes(e.trim())) {
-            out = out + `[\`${e.replace(/\^/g, ',')}\`](${Utils.trimGenerics(e)}.md)` + ','
+            out = out + `[\`${e.replace(/\^/g, ',')}\`](${Utils.trimGenerics(e).toLowerCase()}.md)` + ','
         }
         else if (allTypes.includes(Utils.trimGenerics(e))) {
-            out = out + `[\`${e.replace(/\^/g, ',')}\`](${Utils.trimGenerics(e)}.md)` + ','
+            out = out + `[\`${e.replace(/\^/g, ',')}\`](${Utils.trimGenerics(e).toLowerCase()}.md)` + ','
         }
         else {
             out = out + '`' + e.replace(/\^/g, ',') + '`' + ','
@@ -236,7 +236,6 @@ function doSubClassInterface(tline = '', localO = {}, localName = '', isClass = 
     }
     if (tline.includes('%extendsimplements%')) {
         if (localO[localName]['implementsExtendsName']) {
-            console.log(1);
             var ielink = getLinkForType(localO[localName]['implementsExtendsName'])
             var tag = (isClass) ? 'Implements' : 'Extends'
             tline = tline.replace('%extendsimplements%',
@@ -337,7 +336,7 @@ function addRegions(tline = '', type = '') {
         mline = mline.replace('%name%', e.split('~')[0])
         mline = mline.replace('%type%', `${getLinkForType(o[e]['dataType'])}`)
 
-        mline = mline.replace('%link%', `${e}`)
+        mline = mline.replace('%link%', `${e.toLowerCase()}`)
             //Get first sentence
         var descr = o[e]['descr']
         if (descr) {
@@ -346,8 +345,6 @@ function addRegions(tline = '', type = '') {
         mline = mline.replace('%description%', descr)
             // For return function add Markdown HyperLink
         if (type === 'functions') {
-            console.log(2);
-
             var returnLink = getLinkForType(o[e]['returnType'])
             mline = mline.replace('%returns%', returnLink)
         }
@@ -405,12 +402,10 @@ function addMembers(tline = '', type = '', name = '', localO = {}) {
 
 function addParams(tline = '', member = {}, targetArray = []) {
 
-    console.log(member);
     member['params'].forEach((e) => {
         var mline = dclone(tline).substr(1)
         mline = mline.replace('%name%', e['name'])
             // }
-        console.log(6);
         mline = mline.replace('%dtype%', `${getLinkForType(e['dataType'])}`)
         if (e['isOptional']) {
             mline = mline.replace('%optional% ', '_Optional._')

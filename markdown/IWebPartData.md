@@ -4,9 +4,7 @@
 
 
 
-a webpart,the output should be this structure. The structure of the 'properties' field is owned by the 
-webpart and is specific to the webpart. Each webpart can decide the set of properties it wants to 
-serialialize.
+
 
 
 

@@ -27,10 +27,10 @@ _Type parameters: `<K,V>`_
 |[`forEach`](#foreach)      | `void` |  |
 |[`get`](#get)      | `V` |  |
 |[`has`](#has)      | `boolean` |  |
-|[`set`](#set)      | [`Map<K,V>`](Map.md) |  |
-|[`entries`](#entries)      | [`Iterator<[K,V]>`](Iterator.md) |  |
-|[`keys`](#keys)      | [`Iterator<K>`](Iterator.md) |  |
-|[`values`](#values)      | [`Iterator<V>`](Iterator.md) |  |
+|[`set`](#set)      | [`Map<K,V>`](map.md) |  |
+|[`entries`](#entries)      | [`Iterator<[K,V]>`](iterator.md) |  |
+|[`keys`](#keys)      | [`Iterator<K>`](iterator.md) |  |
+|[`values`](#values)      | [`Iterator<V>`](iterator.md) |  |
 
 
 
@@ -129,7 +129,7 @@ None
 `set(key: K,value?: V): Map<K,V>`
 
 #### Returns
-[`Map<K,V>`](Map.md)
+[`Map<K,V>`](map.md)
 
 #### Parameters
 
@@ -148,7 +148,7 @@ None
 `entries(): Iterator<[K,V]>`
 
 #### Returns
-[`Iterator<[K,V]>`](Iterator.md)
+[`Iterator<[K,V]>`](iterator.md)
 
 #### Parameters
 None
@@ -162,7 +162,7 @@ None
 `keys(): Iterator<K>`
 
 #### Returns
-[`Iterator<K>`](Iterator.md)
+[`Iterator<K>`](iterator.md)
 
 #### Parameters
 None
@@ -176,7 +176,7 @@ None
 `values(): Iterator<V>`
 
 #### Returns
-[`Iterator<V>`](Iterator.md)
+[`Iterator<V>`](iterator.md)
 
 #### Parameters
 None

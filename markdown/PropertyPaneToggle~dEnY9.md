@@ -6,7 +6,7 @@ Helper method to create a Toggle on the PropertyPane.
 `export function PropertyPaneToggle(targetProperty: string,properties: IPropertyPaneToggleProps): IPropertyPaneField<IPropertyPaneToggleProps>`
 
 #### Returns
-[`IPropertyPaneField<IPropertyPaneToggleProps>`](IPropertyPaneField.md)
+[`IPropertyPaneField<IPropertyPaneToggleProps>`](ipropertypanefield.md)
 
 #### Parameters
 
@@ -14,5 +14,5 @@ Helper method to create a Toggle on the PropertyPane.
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `targetProperty`    | `string` |  |
-| `properties`    | [`IPropertyPaneToggleProps`](IPropertyPaneToggleProps.md) |  |
+| `properties`    | [`IPropertyPaneToggleProps`](ipropertypanetoggleprops.md) |  |
 

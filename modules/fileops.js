@@ -42,6 +42,7 @@ module.exports  = {
 	},
 
   writeFile:  (lines=[], path='') => {
+    path = path.toLowerCase()
     try {
         fs.writeFileSync(path, lines.join(nl))
     }

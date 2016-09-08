@@ -22,14 +22,14 @@ _Type parameters: `<T>`_
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`add`](#add)      | [`Set<T>`](Set.md) |  |
+|[`add`](#add)      | [`Set<T>`](set.md) |  |
 |[`clear`](#clear)      | `void` |  |
 |[`delete`](#delete)      | `boolean` |  |
 |[`forEach`](#foreach)      | `void` |  |
 |[`has`](#has)      | `boolean` |  |
-|[`entries`](#entries)      | [`Iterator<[T,T]>`](Iterator.md) |  |
-|[`keys`](#keys)      | [`Iterator<T>`](Iterator.md) |  |
-|[`values`](#values)      | [`Iterator<T>`](Iterator.md) |  |
+|[`entries`](#entries)      | [`Iterator<[T,T]>`](iterator.md) |  |
+|[`keys`](#keys)      | [`Iterator<T>`](iterator.md) |  |
+|[`values`](#values)      | [`Iterator<T>`](iterator.md) |  |
 
 
 
@@ -41,7 +41,7 @@ _Type parameters: `<T>`_
 `add(value: T): Set<T>`
 
 #### Returns
-[`Set<T>`](Set.md)
+[`Set<T>`](set.md)
 
 #### Parameters
 
@@ -128,7 +128,7 @@ None
 `entries(): Iterator<[T,T]>`
 
 #### Returns
-[`Iterator<[T,T]>`](Iterator.md)
+[`Iterator<[T,T]>`](iterator.md)
 
 #### Parameters
 None
@@ -142,7 +142,7 @@ None
 `keys(): Iterator<T>`
 
 #### Returns
-[`Iterator<T>`](Iterator.md)
+[`Iterator<T>`](iterator.md)
 
 #### Parameters
 None
@@ -156,7 +156,7 @@ None
 `values(): Iterator<T>`
 
 #### Returns
-[`Iterator<T>`](Iterator.md)
+[`Iterator<T>`](iterator.md)
 
 #### Parameters
 None

@@ -6,7 +6,7 @@ Helper method to create a Slider on the PropertyPane.
 `export function PropertyPaneSlider(targetProperty: string,properties: IPropertyPaneSliderProps): IPropertyPaneField<IPropertyPaneSliderProps>`
 
 #### Returns
-[`IPropertyPaneField<IPropertyPaneSliderProps>`](IPropertyPaneField.md)
+[`IPropertyPaneField<IPropertyPaneSliderProps>`](ipropertypanefield.md)
 
 #### Parameters
 
@@ -14,5 +14,5 @@ Helper method to create a Slider on the PropertyPane.
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `targetProperty`    | `string` |  |
-| `properties`    | [`IPropertyPaneSliderProps`](IPropertyPaneSliderProps.md) |  |
+| `properties`    | [`IPropertyPaneSliderProps`](ipropertypanesliderprops.md) |  |
 

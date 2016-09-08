@@ -14,7 +14,7 @@ has an associated ServiceScope.
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`serviceScope`      | [`ServiceScope`](ServiceScope.md) | Returns a ServiceScope instance that can be used to obtain dependencies  for the current context |
+|`serviceScope`      | [`ServiceScope`](servicescope.md) | Returns a ServiceScope instance that can be used to obtain dependencies  for the current context |
 
 
 

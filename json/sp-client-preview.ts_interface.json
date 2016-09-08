@@ -2,7 +2,7 @@
   "IClientSideWebPartStatusRenderer": {
     "implementsExtendsName": null,
     "genericType": null,
-    "descr": "error messages for a webpart.",
+    "descr": "",
     "properties": {},
     "functions": {},
     "methods": {
@@ -96,7 +96,7 @@
   "IHtmlProperties": {
     "implementsExtendsName": null,
     "genericType": null,
-    "descr": "Structure of the data that a webpart developer can return on the onBeforeSerialize() API. \nThe outcome contains 3 kay/value dictionaries for properties that need to be search indexed. \nBoth keys and values are expected to be strings and will be HTML encoded during serialization. \n \n{ \nsearchableProperties: { 'prop1': 'value_of_prop1' }, \nlinkProperties: { 'prop2': 'http: \nimageLinkPropertes: { 'prop3': 'http: \n} \n \nThis input would get translated to the following HTML string. \n \n\"<div data-sp-prop-name='prop1'>value1</div> \nlink data-sp-prop-name='prop2' href='http: \nimg data-sp-prop-name='prop2' href='http: \n",
+    "descr": "Structure of the data that a webpart developer can return on the onBeforeSerialize() API. \nThe outcome contains 3 kay/value dictionaries for properties that need to be search indexed. \nBoth keys and values are expected to be strings and will be HTML encoded during serialization. \n \n{ \nsearchableProperties: { 'prop1': 'value_of_prop1' }, \nlinkProperties: { 'prop2': 'http://www.contoso.com/page1.aspx' }, \nimageLinkPropertes: { 'prop3': 'http://www.contoso.com/imag.png' } \n} \n \nThis input would get translated to the following HTML string. \n \n\"<div data-sp-prop-name='prop1'>value1</div> \nlink data-sp-prop-name='prop2' href='http://www.contoso.com/page1.aspx'> \nimg data-sp-prop-name='prop2' href='http://www.contoso.com/image.png'>\" \n",
     "properties": {},
     "functions": {},
     "methods": {},
@@ -105,7 +105,7 @@
   "IOdataList": {
     "implementsExtendsName": null,
     "genericType": null,
-    "descr": "Represents an OData SP.List object. For more information about this object \nsee the MSDN documentation here: \nhttps:",
+    "descr": "Represents an OData SP.List object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx",
     "properties": {
       "BaseTemplate": {
         "dataType": "number",
@@ -245,7 +245,7 @@
   "IOdataListItem": {
     "implementsExtendsName": null,
     "genericType": null,
-    "descr": "Represents an OData SP.ListItem object. For more information about this object \nsee the MSDN documentation here: \nhttps:",
+    "descr": "Represents an OData SP.ListItem object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx",
     "properties": {
       "ID": {
         "dataType": "number",
@@ -285,7 +285,7 @@
   "IOdataUser": {
     "implementsExtendsName": null,
     "genericType": null,
-    "descr": "Represents an OData SP.User object. For more information about this object \nsee the MSDN documentation here: \nhttps:",
+    "descr": "Represents an OData SP.User object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx",
     "properties": {
       "Email": {
         "dataType": "string",
@@ -365,7 +365,7 @@
   "IOdataUserId": {
     "implementsExtendsName": null,
     "genericType": null,
-    "descr": "Represents an OData SP.UserId object. For more information about this object \nsee the MSDN documentation here: \nhttps:",
+    "descr": "Represents an OData SP.UserId object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx",
     "properties": {
       "NameId": {
         "dataType": "string",
@@ -465,7 +465,7 @@
         "returnType": "any",
         "assignValue": null,
         "isCollection": false,
-        "descr": "for an individual element. This is because,button click does not result in any property change,and hence \ncannot fire the 'onChange'' event for a property, and ends up becoming a no-op. To avoid this, giving the \ncontrol back to the web part, so that web part can make act acordingly. \n \ntodo: VSO# 233578:PropertyPane Button OnClick event api."
+        "descr": "A callback which is invoked on the button click,which takes in the existing value for the bound property \nand returns the new value and which is then used to update the properties bag. This update will result in \nthe re-render of the PropertyPane with the new props. \n"
       },
       "text": {
         "dataType": "string",
@@ -1514,7 +1514,7 @@
   "IWebPartData": {
     "implementsExtendsName": null,
     "genericType": null,
-    "descr": "a webpart,the output should be this structure. The structure of the 'properties' field is owned by the \nwebpart and is specific to the webpart. Each webpart can decide the set of properties it wants to \nserialialize.",
+    "descr": "",
     "properties": {
       "htmlProperties": {
         "dataType": "string",
@@ -1524,7 +1524,7 @@
         "returnType": null,
         "assignValue": null,
         "isCollection": false,
-        "descr": "Definition: HTML markup equivalent for searchable properties and properties that need link fixup. \nformat: pseudo HTML \nmandatory: no. \ntype: string \nsupported values: a string containing pseudo HTML. \nexample: \"<div>searchable_property_value</div><link href='http: \nexperimental: no"
+        "descr": "Definition: HTML markup equivalent for searchable properties and properties that need link fixup. \nformat: pseudo HTML \nmandatory: no. \ntype: string \nsupported values: a string containing pseudo HTML. \nexample: \"<div>searchable_property_value</div><link href='http://contoso.com/path_of_link.aspx' />\" \nexperimental: no"
       },
       "id": {
         "dataType": "string",
@@ -1574,7 +1574,7 @@
         "returnType": null,
         "assignValue": null,
         "isCollection": false,
-        "descr": "Definition: webpart version. \nUsage: versioning and evolving a webpart safely. \nRequired: yes \nType: string representing a semantic version (http: \nSupported values: MAJOR.MINOR.PATCH \nExample: \"1.0.0\""
+        "descr": "Definition: webpart version. \nUsage: versioning and evolving a webpart safely. \nRequired: yes \nType: string representing a semantic version (http://semver.org) \nSupported values: MAJOR.MINOR.PATCH \nExample: \"1.0.0\""
       }
     },
     "functions": {},

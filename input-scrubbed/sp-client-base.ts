@@ -1,4 +1,4 @@
-
+///<reference path="../typings/tsd.d.ts" />
 
 /**
  * BasicHttpClient implements a basic set of features for performing REST operations.
@@ -12,7 +12,7 @@ declare class BasicHttpClient {
    * Performs a REST service call.  Although the HttpClient subclass adds
    * additional enhancements, the parameters and semantics for BasicHttpClient.fetch()
    * are essentially the same as the WHATWG API standard that is documented here:
-   * https:
+   * https://fetch.spec.whatwg.org/
    * @param url - the URL to fetch
    * @param options - additional options that affect the request
    * @returns a promise that will return the result
@@ -38,19 +38,19 @@ declare class BasicHttpClient {
 
 /**
  * @Copyright (c) Microsoft Corporation.  All rights reserved.
- *
+ * 
  * This class contains various comparison utilities.
- *
+ * 
  * @public
  */
 declare class Compare {
   /**
    * Performs shallow comparison between two objects to determine if they are equal. This method compares
    * only object types.
-   *
+   * 
    * @param objA - the first object to compare.
    * @param objB - the second object to compare.
-   *
+   * 
    */
   public static shallowCompare(objA: Object, objB: Object): boolean;
 }
@@ -79,13 +79,11 @@ declare class CultureInfo {
   public currentUICultureName: string;
 }
 
-/**
- * Display mode enumeration
- */
+// @public
 enum DisplayMode {
-
+  // (undocumented)
   Edit = 2,
-
+  // (undocumented)
   Read = 1
 }
 
@@ -103,9 +101,7 @@ declare class Environment {
   public type: EnvironmentType;
 }
 
-/**
- * Environment type enumeration
- */
+// @public
 enum EnvironmentType {
   ClassicSharePoint,
   Local,
@@ -121,34 +117,34 @@ enum EnvironmentType {
  * for generating a pseudo-random GUID ("version 4" UUID from the RFC);
  * however, be aware that the uniqueness depends on the browser's
  * Math.random() function and may be not be suitable for some applications.
- *
- * @see {@link https:
+ * 
+ * @see {@link https://www.ietf.org/rfc/rfc4122.txt}
  */
 declare class Guid {
 
   /**
    * Compare this instance to another Guid instance
-   *
+   * 
    * @returns A value indicating whether this instance and the specified Guid object
    *   represent the same value
    */
   public equals(guid: Guid): boolean;
   /**
    * Indicates whether a guid is valid (according to RFC4122).
-   *
+   * 
    * @param guid - Test guid.
    * @returns Value indicating whether the guid is valid.
    */
   public static isValid(guid: string): boolean;
   /**
    * Returns a new Guid instance with a pseudo-randomly generated Guid.
-   *
+   * 
    * @returns A new valid unique Guid object
    */
   public static newGuid(randomProvider?: IRandomProvider): Guid;
   /**
    * Object.prototype.toString override
-   *
+   * 
    * @returns The GUID value in lowercase hexadecimal without braces.
    * Example: 'd5369f3b-bd7a-412a-9c0f-7f0650bb5489'
    */
@@ -157,7 +153,7 @@ declare class Guid {
    * Trys to construct a new Guid instance using guid string. The guid argument
    * is normalized and validated. If the argument is not a valid "version 4" UUID from
    * RFC 4122, tryParse will return undefined.
-   *
+   * 
    * @param guid - A guid string
    * @returns If the guid argument was valid, a new Guid instance. Otherwise, undefined.
    */
@@ -168,7 +164,7 @@ declare class Guid {
  * HttpClient is used to perform REST calls against SharePoint.  It adds default
  * headers, manages the digest needed for writes, and collects telemetry that
  * helps the service to monitor the performance of an application.
- *
+ * 
  * For communicating with non-SharePoint services, use the BasicHttpClient
  * class instead.
  * @public
@@ -183,8 +179,8 @@ declare class HttpClient extends BasicHttpClient {
   /**
    * Generally, the parameters and semantics for HttpClient.fetch() are essentially
    * the same as the WHATWG API standard that is documented here:
-   * https:
-   *
+   * https://fetch.spec.whatwg.org/
+   * 
    * The HttpClient subclass adds some additional behaviors that are convenient when
    * working with SharePoint ODATA API's (which can be avoided by using
    * BasicHttpClient instead):
@@ -192,14 +188,14 @@ declare class HttpClient extends BasicHttpClient {
    * - For write operations, an "X-RequestDigest" header is automatically added
    * - The request digest token is automatically fetched and stored in a cache, with
    *   support for preloading
-   *
+   * 
    * For a write operation, HttpClient will automatically add the "X-RequestDigest"
    * header, which may need to be obtained by issuing a seperate request such as
-   * "https:
+   * "https://example.com/sites/sample/_api/contextinfo".  Typically the appropriate
    * SPWeb URL can be guessed by looking for a reserved URL segment such as "_api"
    * in the original URL passed to fetch(); if not, use IHttpClientOptions.webUrl
    * to specify it explicitly.
-   *
+   * 
    * @param url - the URL to fetch
    * @param options - additional options that affect the request
    * @returns a promise that will return the result
@@ -221,8 +217,8 @@ declare class HttpClient extends BasicHttpClient {
    * in order to complete a request.
    * For excample, if the requestUrl is "/sites/site/web/_api/service",
    * the returned URL would be "/sites/site/web".  Or if the requestUrl
-   * is "http:
-   * "http:
+   * is "http://example.com/_layouts/service", the returned URL would be
+   * "http://example.com".
    * @param requestUrl  The URL for a SharePoint REST service
    * @returns the inferred SPWeb URL
    */
@@ -241,15 +237,14 @@ declare class HttpClient extends BasicHttpClient {
  * This interface defines the options for the BasicHttpClient operations such as
  * get(), post(), fetch(), etc.  It is based on the whatwg API standard
  * parameters that are documented here:
- * https:
+ * https://fetch.spec.whatwg.org/
  * @public
- * headers?: HeaderInit|{ [index: string]: string };
  */
 interface IBasicHttpClientOptions extends RequestInit {
   body?: BodyInit;
-  cache?: ILocalizedString|ILocalizedString;
+  cache?: string|RequestCache;
   credentials?: string|RequestCredentials;
-  headers?: HeaderInit;
+  headers?: HeaderInit|{ [index: string]: string };
   method?: string;
   mode?: string|RequestMode;
 }
@@ -371,7 +366,7 @@ interface IClientSideComponentManifest {
  * by calling the "/_api/contextinfo" REST endpoint, and expires after a server configurable amount
  * of time.  For more information, see the MSDN article
  * "Complete basic operations using SharePoint 2013 REST endpoints".
- * @see {@link https:
+ * @see {@link https://msdn.microsoft.com/en-us/library/office/jj164022.aspx }
  * @public
  */
 interface IDigestCache {
@@ -380,7 +375,7 @@ interface IDigestCache {
    * the framework will automatically issue a REST request to fetch the digest when necessary;
    * however, in advanced scenarios addDigestToCache() can be used to avoid the overhead of the
    * REST call.
-   *
+   * 
    * @param webUrl               The URL of the SPWeb that the API call will be issued to.
    *                             This may be a server-relative or absolute URL.
    * @param digestValue          The digest value, which is an opaque that must be generated
@@ -400,7 +395,7 @@ interface IDigestCache {
   /**
    * Clears the cached digest for the specified SPWeb URL.  This operation is useful
    * e.g. if an error indicates that a digest was invalidated prior to its expiration time.
-   *
+   * 
    * @param webUrl               The URL of the SPWeb whose digest should be cleared.
    *                             This may be a server-relative or absolute URL.
    * @returns                    Returns true if a cache entry was found and deleted; false otherwise.
@@ -421,21 +416,21 @@ interface IDigestCache {
  * This interface defines the options for the HttpClient operations such as
  * get(), post(), fetch(), etc.  It is based on the WHATWG API standard
  * parameters that are documented here:
- * https:
+ * https://fetch.spec.whatwg.org/
  * @public
- * headers?: HeaderInit|{ [index: string]: string };
  */
 interface IHttpClientOptions extends IBasicHttpClientOptions {
   body?: BodyInit;
-  cache?: ILocalizedString|ILocalizedString;
+  cache?: string|RequestCache;
   credentials?: string|RequestCredentials;
+  headers?: HeaderInit|{ [index: string]: string };
   method?: string;
   mode?: string|RequestMode;
   /**
    * For a write operation, HttpClient will automatically add the
    * "X-RequestDigest" header, which may need to be fetched using a seperate
-   * request such as "https:
-   * Typically the SPWeb URL ("https:
+   * request such as "https://example.com/sites/sample/_api/contextinfo".
+   * Typically the SPWeb URL ("https://example.com/sites/sample" in this
    * example) can be guessed by looking for a reserved URL segment such
    * as "_api" in the original REST query, however certain REST endpoints
    * do not contain a reserved URL segment; in this case, the webUrl can
@@ -461,8 +456,8 @@ interface IODataBasePermission {
 interface IODataBatchOptions {
   /**
    * ODataBatch will need to perform its POST to an endpoint such as
-   * "http:
-   * ("https:
+   * "http://example.com/sites/sample/_api/$batch". Typically the SPWeb URL
+   * ("https://example.com/sites/sample" in this example) can be guessed by
    * looking for a reserved URL segment such as "_api" in the first URL
    * passed to fetch(), but if not, the webUrl can be explicitly specified
    * using this option.
@@ -472,7 +467,7 @@ interface IODataBatchOptions {
 
 /**
  * Represents an OData SP.ChangeToken object.  For more information about this object
- * @see {@link https:
+ * @see {@link https://msdn.microsoft.com/en-us/library/office/jj860569.aspx}
  * @public
  */
 interface IODataChangeToken {
@@ -484,7 +479,7 @@ interface IODataChangeToken {
 
 /**
  * Represents an OData SP.ContextWebInformation object.  For more information about this object
- * @see {@link https:
+ * @see {@link https://msdn.microsoft.com/en-us/library/office/jj860569.aspx}
  * @public
  */
 interface IODataContextWebInformation {
@@ -516,7 +511,7 @@ interface IODataContextWebInformation {
 
 /**
  * Represents an OData SP.NavigationNode object.
- * https:
+ * https://msdn.microsoft.com/en-us/library/office/jj246311.aspx
  * @public
  */
 interface IODataNavigationNode {
@@ -555,7 +550,7 @@ interface IODataNavigationNode {
 
 /**
  * Represents an OData Microsoft.SharePoint.Navigation.SPNavigation object.
- * https:
+ * https://msdn.microsoft.com/en-us/library/office/ee557907.aspx
  * @public
  */
 interface IODataNavigationNodeCollection {
@@ -574,7 +569,7 @@ interface IODataNavigationNodeCollection {
 /**
  * Represents an OData SP.Web object.  For more information about this object
  * see the MSDN documentation here:
- * https:
+ * https://msdn.microsoft.com/en-us/library/office/jj860569.aspx
  * @public
  */
 interface IODataWeb {
@@ -652,7 +647,7 @@ interface IODataWeb {
   UIVersion?: number;
   /**
    * Gets the absolute URL for the website.
-   * Example: "http:
+   * Example: "http://example.com/sites/PubSite"
    */
   Url?: string;
   /**
@@ -682,7 +677,7 @@ interface IServiceScopeProvider {
  * The Log class provides static methods for logging messages at different levels (verbose,
  * info, warning, error) and with context information. Context information helps identify
  * which component generated the messages and makes the messages useful and filterable.
- *
+ * 
  * @public
  */
 declare class Log {
@@ -736,14 +731,14 @@ declare class Log {
 /**
  * The ODataBatch class accumulates a number of REST service calls and
  * transmits them as a single ODATA batch.  This protocol is documented here:
- * http:
- *
+ * http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html
+ * 
  * The usage is to call ODataBatch.fetch() to queue each individual request,
  * and then call ODataBatch.execute() to execute the batch operation.
  * The execute() method returns a promise that resolves when the real REST
  * call has completed.  Each call to fetch() also returns a promise that will
  * resolve with a Response object for that particular request.
- *
+ * 
  * @public
  */
 declare class ODataBatch {
@@ -756,17 +751,17 @@ declare class ODataBatch {
    * Queues a new request, and returns a promise that can be used to access
    * the server response (after execute() has completed).  The parameters for
    * this function are basically the same as the WHATWG API standard documented here:
-   * https:
-   *
+   * https://fetch.spec.whatwg.org/
+   * 
    * However, be aware that certain REST headers are ignored or not allowed inside
    * a batch.  See the ODATA documentation for details.
-   *
+   * 
    * When execute() is called, it will POST to a URL such as
-   * "http:
+   * "http://example.com/sites/sample/_api/$batch".  Typically ODataBatch can successfully
    * guess the appropriate SPWeb URL by looking for a reserved URL segment such as "_api"
    * in the first URL passed to fetch().  If not, use IODataBatchOptions.webUrl to specify it
    * explicitly.
-   *
+   * 
    * @param url - the URL to fetch, or an already initialized Request object
    * @param options - additional options that affect the request
    * @returns a promise that will return the result
@@ -867,7 +862,7 @@ declare class ServiceKey<T> {
  * ServiceScope provides a formalized way for components to register and consume dependencies
  * ("services"), and to enable different implementations to be registered in different scopes.
  * This improves modularity by decoupling components from their dependencies in an extensible way.
- *
+ * 
  * For example, suppose that various components need access to an IPageManager instance.  We could
  * simply make the PageManager a singleton (i.e. global variable), but this will not work e.g. if
  * we need to create a pop-up dialog that requires a second PageManager instance.  A better solution
@@ -883,7 +878,7 @@ declare class ServiceKey<T> {
  * approach is to make it a dictionary that can look up items for consumers/providers who know the
  * right lookup key (i.e. ServiceKey).  This is the popular "service locator" design pattern,
  * familiar from the SPContext API in classic SharePoint.
- *
+ * 
  * ServiceScope takes this idea a step further in two important ways:  First, it provides a scoping
  * mechanism so that e.g. if we had two different pages, they could each consume a unique PageManager
  * instance while still sharing other common dependencies.  Secondly, it allows for a ServiceKey
@@ -894,7 +889,7 @@ declare class ServiceKey<T> {
  * fix this by requiring each consumer to check for any missing dependencies and handle that case,
  * but it would require a lot of checks.  A better solution is to ensure that a default implementation
  * always exists, perhaps just a trivial behavior, so that components don't have to worry about it.
- *
+ * 
  * Usage: ServiceScope instances are created by calling either ServiceScope.startNewRoot() or
  * ServiceScope.startNewChild().  They are initially in an "unfinished" state, during which provide()
  * can be called to register service keys, but consume() is forbidden.  After ServiceScope.finish()
@@ -979,7 +974,7 @@ declare class ServiceScope {
    * later when the scope is finished.
    * @param callback - A block of code that needs to call ServiceScope.consume()
    */
-          public whenFinished(callback: () => void): void;
+  public whenFinished(callback: () => void): void;
 }
 
 
@@ -988,7 +983,7 @@ declare class ServiceScope {
  * This class can be used to determine if the current user has a requested set of permissions.
  * Specifies the built-in permissions available in SharePoint Foundation
  * Derived from OneDriveWeb/ODBNext/odsp-shared
- * https:
+ * https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx
  * @public
  */
 declare class SPPermission {
@@ -1132,7 +1127,7 @@ declare class SPPermission {
    */
   public static updatePersonalWebParts: SPPermission;
   /**
-   * Use features that launch client applications; otherwise, users must work on documents locally and upload changes.
+   * Use features that launch client applications; otherwise, users must work on documents locally and upload changes. 
    */
   public static useClientIntegration: SPPermission;
   /**
@@ -1168,7 +1163,7 @@ declare class SPPermission {
 /**
  * This class is primarily used with the PageContext class.  It provides contextual
  * information for the SharePoint site collection ("site") that hosts the page.
- *
+ * 
  * @public
  */
 declare class SPSite {
@@ -1182,7 +1177,7 @@ declare class SPSite {
 /**
  * This class is primarily used with the PageContext class.  It provides contextual information
  * for the SharePoint user that is accessing the page.
- *
+ * 
  * @public
  */
 declare class SPUser {
@@ -1208,7 +1203,7 @@ declare class SPWeb {
 
   /**
    * Returns the absolute URL for this SPWeb.
-   * Example: "https:
+   * Example: "https://example.com/sites/PubSite/SubWeb"
    */
   public absoluteUrl: string;
   /**
@@ -1276,7 +1271,7 @@ declare class UrlUtilities {
   /**
    * Converts a variable to an OData string literal and escapes apostrophes.
    * OData specification:
-   * https:
+   * https://tools.oasis-open.org/version-control/
    *   browse/wsvn/odata/trunk/spec/ABNF/odata-abnf-construction-rules.txt
    * SQUOTE-in-string = SQUOTE SQUOTE ; two consecutive single quotes represent one within a string literal
    * Examples:
@@ -1289,7 +1284,7 @@ declare class UrlUtilities {
    * Removes any slash characters from the end of the URL.
    * This function assumes that the input is already a valid absolute or server-relative URL.
    * Examples:
-   *   removeEndSlash('http:
+   *   removeEndSlash('http://example.com/') ---> 'http://example.com'
    *   removeEndSlash('/example')            ---> '/example'
    *   removeEndSlash('/')                   ---> ''
    * @param url the URL to be normalized
@@ -1324,3 +1319,4 @@ declare class Validate {
    */
   public static isTrue(value: boolean, variableName: string): void;
 }
+

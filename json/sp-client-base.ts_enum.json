@@ -1,6 +1,6 @@
 {
   "DisplayMode": {
-    "descr": "Display mode enumeration",
+    "descr": "",
     "values": [
       [
         "Edit",
@@ -15,7 +15,7 @@
     ]
   },
   "EnvironmentType": {
-    "descr": "Environment type enumeration",
+    "descr": "",
     "values": [
       [
         "ClassicSharePoint",

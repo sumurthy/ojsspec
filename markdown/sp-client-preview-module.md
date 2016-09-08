@@ -5,8 +5,8 @@
 
 | Class	   |  Description |
 |:-------------|:---------------|
-| [BaseClientSideWebPart](BaseClientSideWebPart.md)     | This abstract class implements the the base functionality for a client side web part |
-| [MockWebPartContext](MockWebPartContext.md)     |  |
+| [BaseClientSideWebPart](baseclientsidewebpart.md)     | This abstract class implements the the base functionality for a client side web part |
+| [MockWebPartContext](mockwebpartcontext.md)     |  |
 
 
 
@@ -14,34 +14,34 @@
 
 | Class	   |  Description |
 |:-------------|:---------------|
-| [IClientSideWebPartStatusRenderer](IClientSideWebPartStatusRenderer.md)   | error messages for a webpart  |
-| [IHtmlProperties](IHtmlProperties.md)   | Structure of the data that a webpart developer can return on the onBeforeSerialize() API  |
-| [IOdataList](IOdataList.md)   | Represents an OData SP  |
-| [IOdataListItem](IOdataListItem.md)   | Represents an OData SP  |
-| [IOdataUser](IOdataUser.md)   | Represents an OData SP  |
-| [IOdataUserId](IOdataUserId.md)   | Represents an OData SP  |
-| [IPropertyPaneButtonProps](IPropertyPaneButtonProps.md)   |   |
-| [IPropertyPaneCheckboxProps](IPropertyPaneCheckboxProps.md)   |   |
-| [IPropertyPaneChoiceGroupOption](IPropertyPaneChoiceGroupOption.md)   |   |
-| [IPropertyPaneChoiceGroupProps](IPropertyPaneChoiceGroupProps.md)   |   |
-| [IPropertyPaneCustomFieldProps](IPropertyPaneCustomFieldProps.md)   |   |
-| [IPropertyPaneData](IPropertyPaneData.md)   | Web part - PropertyPane data contract  |
-| [IPropertyPaneDropdownOption](IPropertyPaneDropdownOption.md)   |   |
-| [IPropertyPaneDropdownProps](IPropertyPaneDropdownProps.md)   |   |
-| [IPropertyPaneField](IPropertyPaneField.md)   |   |
-| [IPropertyPaneGroup](IPropertyPaneGroup.md)   | PropertyPane group  |
-| [IPropertyPaneLabelProps](IPropertyPaneLabelProps.md)   |   |
-| [IPropertyPaneLinkProps](IPropertyPaneLinkProps.md)   |   |
-| [IPropertyPanePage](IPropertyPanePage.md)   | PropertyPanePage interface  |
-| [IPropertyPanePageHeader](IPropertyPanePageHeader.md)   | PropertyPane header  |
-| [IPropertyPaneSettings](IPropertyPaneSettings.md)   | Web part configuration settings  |
-| [IPropertyPaneSliderProps](IPropertyPaneSliderProps.md)   |   |
-| [IPropertyPaneTextFieldProps](IPropertyPaneTextFieldProps.md)   |   |
-| [IPropertyPaneToggleProps](IPropertyPaneToggleProps.md)   |   |
-| [IWebPartConfigurationEventCallback](IWebPartConfigurationEventCallback.md)   | Configuration event callback  |
-| [IWebPartContext](IWebPartContext.md)   | Web part context interface  |
-| [IWebPartData](IWebPartData.md)   | a webpart,the output should be this structure  |
-| [IWebPartHost](IWebPartHost.md)   | A web part host is a component,control or a page that hosts client side web parts  |
+| [IClientSideWebPartStatusRenderer](iclientsidewebpartstatusrenderer.md)   |   |
+| [IHtmlProperties](ihtmlproperties.md)   | Structure of the data that a webpart developer can return on the onBeforeSerialize() API  |
+| [IOdataList](iodatalist.md)   | Represents an OData SP  |
+| [IOdataListItem](iodatalistitem.md)   | Represents an OData SP  |
+| [IOdataUser](iodatauser.md)   | Represents an OData SP  |
+| [IOdataUserId](iodatauserid.md)   | Represents an OData SP  |
+| [IPropertyPaneButtonProps](ipropertypanebuttonprops.md)   |   |
+| [IPropertyPaneCheckboxProps](ipropertypanecheckboxprops.md)   |   |
+| [IPropertyPaneChoiceGroupOption](ipropertypanechoicegroupoption.md)   |   |
+| [IPropertyPaneChoiceGroupProps](ipropertypanechoicegroupprops.md)   |   |
+| [IPropertyPaneCustomFieldProps](ipropertypanecustomfieldprops.md)   |   |
+| [IPropertyPaneData](ipropertypanedata.md)   | Web part - PropertyPane data contract  |
+| [IPropertyPaneDropdownOption](ipropertypanedropdownoption.md)   |   |
+| [IPropertyPaneDropdownProps](ipropertypanedropdownprops.md)   |   |
+| [IPropertyPaneField](ipropertypanefield.md)   |   |
+| [IPropertyPaneGroup](ipropertypanegroup.md)   | PropertyPane group  |
+| [IPropertyPaneLabelProps](ipropertypanelabelprops.md)   |   |
+| [IPropertyPaneLinkProps](ipropertypanelinkprops.md)   |   |
+| [IPropertyPanePage](ipropertypanepage.md)   | PropertyPanePage interface  |
+| [IPropertyPanePageHeader](ipropertypanepageheader.md)   | PropertyPane header  |
+| [IPropertyPaneSettings](ipropertypanesettings.md)   | Web part configuration settings  |
+| [IPropertyPaneSliderProps](ipropertypanesliderprops.md)   |   |
+| [IPropertyPaneTextFieldProps](ipropertypanetextfieldprops.md)   |   |
+| [IPropertyPaneToggleProps](ipropertypanetoggleprops.md)   |   |
+| [IWebPartConfigurationEventCallback](iwebpartconfigurationeventcallback.md)   | Configuration event callback  |
+| [IWebPartContext](iwebpartcontext.md)   | Web part context interface  |
+| [IWebPartData](iwebpartdata.md)   |   |
+| [IWebPartHost](iwebparthost.md)   | A web part host is a component,control or a page that hosts client side web parts  |
 
 
 
@@ -49,28 +49,28 @@
 
 | Function	   | Returns | Description |
 |:-------------|:------|:---------------|
-| [combineURLPaths](combineURLPaths~vm409.md) |``string` `   | Combines any number of URL paths  |
-| [getPathNameFromAbsoluteUrl](getPathNameFromAbsoluteUrl~LxLU9.md) |``string` `   | Get's the path name from an absolute url  |
-| [PropertyPaneButton](PropertyPaneButton~gfP89.md) |`[`IPropertyPaneField<IPropertyPaneButtonProps>`](IPropertyPaneField.md) `   | Helper method to create a Button on the PropertyPane  |
-| [PropertyPaneCheckbox](PropertyPaneCheckbox~V0849.md) |`[`IPropertyPaneField<IPropertyPaneCheckboxProps>`](IPropertyPaneField.md) `   | Helper method to create a Checkbox on the PropertyPane  |
-| [PropertyPaneChoiceGroup](PropertyPaneChoiceGroup~jUI09.md) |`[`IPropertyPaneField<IPropertyPaneChoiceGroupProps>`](IPropertyPaneField.md) `   | Helper method to create a Choice Group on the PropertyPane  |
-| [PropertyPaneCustomField](PropertyPaneCustomField~QzDs9.md) |`[`IPropertyPaneField<IPropertyPaneCustomFieldProps>`](IPropertyPaneField.md) `   | Helper method to create a Choice Group on the PropertyPane  |
-| [PropertyPaneDropdown](PropertyPaneDropdown~ro4g9.md) |`[`IPropertyPaneField<IPropertyPaneDropdownProps>`](IPropertyPaneField.md) `   | Helper method to create a Dropdown on the PropertyPane  |
-| [PropertyPaneHorizontalRule](PropertyPaneHorizontalRule~c9a89.md) |`[`IPropertyPaneField<void>`](IPropertyPaneField.md) `   | Helper method to create a Horizontal Rule on the PropertyPane  |
-| [PropertyPaneLabel](PropertyPaneLabel~lVOg9.md) |`[`IPropertyPaneField<IPropertyPaneLabelProps>`](IPropertyPaneField.md) `   | Helper method to create a Label on the PropertyPane  |
-| [PropertyPaneLink](PropertyPaneLink~juxg9.md) |`[`IPropertyPaneField<IPropertyPaneLinkProps>`](IPropertyPaneField.md) `   | Helper method to create a Link on the PropertyPane  |
-| [PropertyPaneSlider](PropertyPaneSlider~Bm7g9.md) |`[`IPropertyPaneField<IPropertyPaneSliderProps>`](IPropertyPaneField.md) `   | Helper method to create a Slider on the PropertyPane  |
-| [PropertyPaneTextField](PropertyPaneTextField~Kc9c9.md) |`[`IPropertyPaneField<IPropertyPaneTextFieldProps>`](IPropertyPaneField.md) `   | Helper method to create a TextField on the PropertyPane  |
-| [PropertyPaneToggle](PropertyPaneToggle~dEnY9.md) |`[`IPropertyPaneField<IPropertyPaneToggleProps>`](IPropertyPaneField.md) `   | Helper method to create a Toggle on the PropertyPane  |
+| [combineURLPaths](combineurlpaths~vm409.md) |``string` `   | Combines any number of URL paths  |
+| [getPathNameFromAbsoluteUrl](getpathnamefromabsoluteurl~lxlu9.md) |``string` `   | Get's the path name from an absolute url  |
+| [PropertyPaneButton](propertypanebutton~gfp89.md) |`[`IPropertyPaneField<IPropertyPaneButtonProps>`](ipropertypanefield.md) `   | Helper method to create a Button on the PropertyPane  |
+| [PropertyPaneCheckbox](propertypanecheckbox~v0849.md) |`[`IPropertyPaneField<IPropertyPaneCheckboxProps>`](ipropertypanefield.md) `   | Helper method to create a Checkbox on the PropertyPane  |
+| [PropertyPaneChoiceGroup](propertypanechoicegroup~jui09.md) |`[`IPropertyPaneField<IPropertyPaneChoiceGroupProps>`](ipropertypanefield.md) `   | Helper method to create a Choice Group on the PropertyPane  |
+| [PropertyPaneCustomField](propertypanecustomfield~qzds9.md) |`[`IPropertyPaneField<IPropertyPaneCustomFieldProps>`](ipropertypanefield.md) `   | Helper method to create a Choice Group on the PropertyPane  |
+| [PropertyPaneDropdown](propertypanedropdown~ro4g9.md) |`[`IPropertyPaneField<IPropertyPaneDropdownProps>`](ipropertypanefield.md) `   | Helper method to create a Dropdown on the PropertyPane  |
+| [PropertyPaneHorizontalRule](propertypanehorizontalrule~c9a89.md) |`[`IPropertyPaneField<void>`](ipropertypanefield.md) `   | Helper method to create a Horizontal Rule on the PropertyPane  |
+| [PropertyPaneLabel](propertypanelabel~lvog9.md) |`[`IPropertyPaneField<IPropertyPaneLabelProps>`](ipropertypanefield.md) `   | Helper method to create a Label on the PropertyPane  |
+| [PropertyPaneLink](propertypanelink~juxg9.md) |`[`IPropertyPaneField<IPropertyPaneLinkProps>`](ipropertypanefield.md) `   | Helper method to create a Link on the PropertyPane  |
+| [PropertyPaneSlider](propertypaneslider~bm7g9.md) |`[`IPropertyPaneField<IPropertyPaneSliderProps>`](ipropertypanefield.md) `   | Helper method to create a Slider on the PropertyPane  |
+| [PropertyPaneTextField](propertypanetextfield~kc9c9.md) |`[`IPropertyPaneField<IPropertyPaneTextFieldProps>`](ipropertypanefield.md) `   | Helper method to create a TextField on the PropertyPane  |
+| [PropertyPaneToggle](propertypanetoggle~deny9.md) |`[`IPropertyPaneField<IPropertyPaneToggleProps>`](ipropertypanefield.md) `   | Helper method to create a Toggle on the PropertyPane  |
 
 
 ### Enumerations
 
 | Enumeration	   | Description|
 |:-----------|:------------|
-|[IPropertyPaneFieldType](IPropertyPaneFieldType.md)    |  |
-|[PropertyPaneButtonType](PropertyPaneButtonType.md)    |  |
-|[WebPartConfigurationEvent](WebPartConfigurationEvent.md)    |  |
+|[IPropertyPaneFieldType](ipropertypanefieldtype.md)    |  |
+|[PropertyPaneButtonType](propertypanebuttontype.md)    |  |
+|[WebPartConfigurationEvent](webpartconfigurationevent.md)    |  |
 
 
 

@@ -13,11 +13,11 @@
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
 |`string`     | `referrer:` | `string` |  |
-|`Headers`     | `headers:` | [`Headers`](Headers.md) |  |
-|`string|RequestContext`     | `context:` | `string`,[`RequestContext`](RequestContext.md) |  |
-|`string|RequestMode`     | `mode:` | `string`,[`RequestMode`](RequestMode.md) |  |
-|`string|RequestCredentials`     | `credentials:` | `string`,[`RequestCredentials`](RequestCredentials.md) |  |
-|`string|RequestCache`     | `cache:` | `string`,[`RequestCache`](RequestCache.md) |  |
+|`Headers`     | `headers:` | [`Headers`](headers.md) |  |
+|`string|RequestContext`     | `context:` | `string`,[`RequestContext`](requestcontext.md) |  |
+|`string|RequestMode`     | `mode:` | `string`,[`RequestMode`](requestmode.md) |  |
+|`string|RequestCredentials`     | `credentials:` | `string`,[`RequestCredentials`](requestcredentials.md) |  |
+|`string|RequestCache`     | `cache:` | `string`,[`RequestCache`](requestcache.md) |  |
 
 
 
@@ -26,7 +26,7 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`constructor`](#constructor)     | `public` | [`RequestInit`](RequestInit.md) |  |
+|[`constructor`](#constructor)     | `public` | [`RequestInit`](requestinit.md) |  |
 
 
 
@@ -39,13 +39,13 @@
 `constructor(input: string|Request,init?:RequestInit)`
 
 #### Returns
-[`RequestInit`](RequestInit.md)
+[`RequestInit`](requestinit.md)
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `input`    | `string`,[`Request`](Request.md) |  |
-| `init`    | [`RequestInit`](RequestInit.md) | _Optional._ |
+| `input`    | `string`,[`Request`](request.md) |  |
+| `init`    | [`RequestInit`](requestinit.md) | _Optional._ |
 

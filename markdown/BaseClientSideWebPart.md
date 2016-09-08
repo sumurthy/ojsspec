@@ -23,13 +23,13 @@ Please refer to the documentation of the individual APIs to make the right decis
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
 |`accessibleTitle`     | `protected` | `string` | This property points to the accessible title of web part made available to screen readers |
-|`context`     | `protected` | [`IWebPartContext`](IWebPartContext.md) |  |
+|`context`     | `protected` | [`IWebPartContext`](iwebpartcontext.md) | This property is a pointer to the web part context |
 |`disableReactivePropertyChanges`     | `protected` | `boolean` | This property is used to change the web part's PropertyPane interaction from Reactive to NonReactive |
-|`displayMode`     | `protected` | [`DisplayMode`](DisplayMode.md) | This property is the current display mode of the web part |
+|`displayMode`     | `protected` | [`DisplayMode`](displaymode.md) | This property is the current display mode of the web part |
 |`domElement`     | `protected` | `HTMLElement` | This property is a pointer to the root DOM element of the web part |
 |`previewImageUrl`     | `protected` | `string` | This property points to the preview image for the web part |
 |`properties`     | `protected` | `TProperties` | This property is the pointer to the custom property bag of the web part |
-|`propertyPaneSettings`     | `protected` | [`IPropertyPaneSettings`](IPropertyPaneSettings.md) |  |
+|`propertyPaneSettings`     | `protected` | [`IPropertyPaneSettings`](ipropertypanesettings.md) | This property is the pointer to the web part configuration settings |
 |`renderedFromDefaultProperties`     | `protected` | `boolean` | This property indicates whether the web part was rendered from the default properties,as opposed to using  serialized state from the last time that the web part was saved |
 |`renderedOnce`     | `protected` | `boolean` | This property indicates whether the web part has been rendered once or not |
 
@@ -40,14 +40,14 @@ Please refer to the documentation of the individual APIs to make the right decis
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`constructor`](#constructor)     | `public` | [`IWebPartContext`](IWebPartContext.md) |   e |
+|[`constructor`](#constructor)     | `public` | [`IWebPartContext`](iwebpartcontext.md) | Constructor for the BaseClientSideWebPart class |
 |[`clearError`](#clearerror)     | `protected` | `void` | This API should be used to clear the error message from the web part display area |
-|[`configureStart`](#configurestart)     | `protected` | `void` | if it is not already open |
-|[`deserialize`](#deserialize)     | `protected` | `TProperties` |  |
+|[`configureStart`](#configurestart)     | `protected` | `void` | This API should be used to invoke the PropertyPane to help configure the web part |
+|[`deserialize`](#deserialize)     | `protected` | `TProperties` | This API is called once during the lifetime of the web part during the intial render and just before the onInit  API call |
 |[`dispose`](#dispose)     | `protected` | `void` | This API is called at the end of the web part lifecycle |
-|[`onBeforeSerialize`](#onbeforeserialize)     | `protected` | [`IHtmlProperties`](IHtmlProperties.md) | the documentation of IHtmlProperties interface for more details |
-|[`onDisplayModeChanged`](#ondisplaymodechanged)     | `protected` | `void` |  |
-|[`onInit<T>`](#oninit<t>)     | `protected` | [`Promise<T>`](Promise.md) | This API should be overridden to perform long running operations e |
+|[`onBeforeSerialize`](#onbeforeserialize)     | `protected` | [`IHtmlProperties`](ihtmlproperties.md) | This API is called before a web part is serialized |
+|[`onDisplayModeChanged`](#ondisplaymodechanged)     | `protected` | `void` | This API is called when the display mode of a web part is changed |
+|[`onInit<T>`](#oninit<t>)     | `protected` | [`Promise<T>`](promise.md) | This API should be overridden to perform long running operations e |
 |[`onPropertyChange`](#onpropertychange)     | `protected` | `void` | This API is invoked on property changes in the PropertyPane when the PropertyPane is being used in Reactive mode |
 |[`onPropertyConfigurationComplete`](#onpropertyconfigurationcomplete)     | `protected` | `void` | This API is called when the current web part configuration process is completed |
 |[`onPropertyPaneRendered`](#onpropertypanerendered)     | `protected` | `void` | This API is involed when the PropertyPane is rendered |
@@ -60,26 +60,22 @@ Please refer to the documentation of the individual APIs to make the right decis
 
 ### constructor
 
- 
-e.g. 
-constructor(conext: IWebPartContext) { 
-super(context); 
-. 
-. class specific constructor code .. 
-}
+Constructor for the BaseClientSideWebPart class. 
+If a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor. 
+
 
 #### Signature
 `constructor(ctx: IWebPartContext)`
 
 #### Returns
-[`IWebPartContext`](IWebPartContext.md)
+[`IWebPartContext`](iwebpartcontext.md)
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `ctx`    | [`IWebPartContext`](IWebPartContext.md) |  |
+| `ctx`    | [`IWebPartContext`](iwebpartcontext.md) |  |
 
 
 ### clearError
@@ -98,7 +94,8 @@ None
 
 ### configureStart
 
-if it is not already open.
+This API should be used to invoke the PropertyPane to help configure the web part. 
+
 
 #### Signature
 `protected configureStart(refreshOnly?: boolean): void`
@@ -116,6 +113,12 @@ if it is not already open.
 
 ### deserialize
 
+This API is called once during the lifetime of the web part during the intial render and just before the onInit 
+API call. The purpose of this API is to help a web part developer deserialize the web part data and manage the 
+versioning of their data as the web part code evolves. The web part data may have been persisted with an older 
+or newer version of the web part code. This API gives the web part developer an opportunity to re-structure their 
+data to the appropriate data schema. The persisted data contains the version number information. That information 
+can be used to make decisions on how to re-structure the data. 
 
 
 #### Signature
@@ -129,7 +132,7 @@ if it is not already open.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `data`    | [`IWebPartData`](IWebPartData.md) |  |
+| `data`    | [`IWebPartData`](iwebpartdata.md) |  |
 
 
 ### dispose
@@ -149,13 +152,17 @@ None
 
 ### onBeforeSerialize
 
-the documentation of IHtmlProperties interface for more details.
+This API is called before a web part is serialized. The default implementation is a no-op. A web part developer 
+is expected to override this API when the web part's state is not fully reflected in the property bag i.e. 
+this.properties. In the overridden method, the web part developer is expected to update the state of the web 
+part property bag. This way the web part serialization process will use the upto date state of the web part. 
+
 
 #### Signature
 `protected onBeforeSerialize(): IHtmlProperties`
 
 #### Returns
-[`IHtmlProperties`](IHtmlProperties.md)
+[`IHtmlProperties`](ihtmlproperties.md)
 
 #### Parameters
 None
@@ -163,6 +170,10 @@ None
 
 ### onDisplayModeChanged
 
+This API is called when the display mode of a web part is changed. The default implementation of this API calls 
+the web part render method to re-render the web part with the new display mode. If a web part developer does not 
+want a full re-render to happen on display mode change, they can override this API and perform specific updates 
+to the web part DOM to switch its display mode. 
 
 
 #### Signature
@@ -176,7 +187,7 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `oldDisplayMode`    | [`DisplayMode`](DisplayMode.md) |  |
+| `oldDisplayMode`    | [`DisplayMode`](displaymode.md) |  |
 
 
 ### onInit<T>
@@ -189,7 +200,7 @@ This API is called only once during the lifecycle of a web part.
 `protected onInit<T>(): Promise<T>`
 
 #### Returns
-[`Promise<T>`](Promise.md)
+[`Promise<T>`](promise.md)
 
 #### Parameters
 None

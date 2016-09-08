@@ -40,7 +40,7 @@
         "signature": "public fetch(url: string,options: IBasicHttpClientOptions): Promise<Response>",
         "isStatic": false,
         "isOptional": false,
-        "descr": "Performs a REST service call. Although the HttpClient subclass adds \nadditional enhancements, the parameters and semantics for BasicHttpClient.fetch() \nare essentially the same as the WHATWG API standard that is documented here: \nhttps:",
+        "descr": "Performs a REST service call. Although the HttpClient subclass adds \nadditional enhancements, the parameters and semantics for BasicHttpClient.fetch() \nare essentially the same as the WHATWG API standard that is documented here: \nhttps://fetch.spec.whatwg.org/",
         "genericType": null,
         "returnType": "Promise<Response>",
         "returnDescr": null,
@@ -64,7 +64,7 @@
         "signature": "protected fetchCore(request: Request): Promise<Response>",
         "isStatic": false,
         "isOptional": false,
-        "descr": "Performs a REST service call. Although the HttpClient subclass adds \nadditional enhancements, the parameters and semantics for BasicHttpClient.fetch() \nare essentially the same as the WHATWG API standard that is documented here: \nhttps:",
+        "descr": "Performs a REST service call. Although the HttpClient subclass adds \nadditional enhancements, the parameters and semantics for BasicHttpClient.fetch() \nare essentially the same as the WHATWG API standard that is documented here: \nhttps://fetch.spec.whatwg.org/",
         "genericType": null,
         "returnType": "Promise<Response>",
         "returnDescr": null,
@@ -131,7 +131,7 @@
   "Compare": {
     "implementsExtendsName": null,
     "genericType": null,
-    "descr": " \nThis class contains various comparison utilities. \n",
+    "descr": "",
     "properties": {},
     "functions": {},
     "methods": {
@@ -224,7 +224,7 @@
         "signature": "public equals(guid: Guid): boolean",
         "isStatic": false,
         "isOptional": false,
-        "descr": "represent the same value",
+        "descr": "Compare this instance to another Guid instance \n",
         "genericType": null,
         "returnType": "boolean",
         "returnDescr": null,
@@ -278,7 +278,7 @@
         "signature": "public toString(): string",
         "isStatic": false,
         "isOptional": false,
-        "descr": "Example: 'd5369f3b-bd7a-412a-9c0f-7f0650bb5489'",
+        "descr": "Object.prototype.toString override \n",
         "genericType": null,
         "returnType": "string",
         "returnDescr": null,
@@ -353,7 +353,7 @@
         "signature": "public fetch(url: string,options: IHttpClientOptions): Promise<Response>",
         "isStatic": false,
         "isOptional": false,
-        "descr": "Generally,the parameters and semantics for HttpClient.fetch() are essentially \nthe same as the WHATWG API standard that is documented here: \nhttps: \n \nThe HttpClient subclass adds some additional behaviors that are convenient when \nworking with SharePoint ODATA API's (which can be avoided by using \nBasicHttpClient instead): \n- Default \"Accept\" and \"Content-Type\" headers are added if not explicitly specified. \n- For write operations, an \"X-RequestDigest\" header is automatically added \n- The request digest token is automatically fetched and stored in a cache, with \nsupport for preloading \n \nFor a write operation, HttpClient will automatically add the \"X-RequestDigest\" \nheader, which may need to be obtained by issuing a seperate request such as \n\"https: \nSPWeb URL can be guessed by looking for a reserved URL segment such as \"_api\" \nin the original URL passed to fetch(); if not, use IHttpClientOptions.webUrl \nto specify it explicitly. \n",
+        "descr": "Generally,the parameters and semantics for HttpClient.fetch() are essentially \nthe same as the WHATWG API standard that is documented here: \nhttps://fetch.spec.whatwg.org/ \n \nThe HttpClient subclass adds some additional behaviors that are convenient when \nworking with SharePoint ODATA API's (which can be avoided by using \nBasicHttpClient instead): \n- Default \"Accept\" and \"Content-Type\" headers are added if not explicitly specified. \n- For write operations, an \"X-RequestDigest\" header is automatically added \n- The request digest token is automatically fetched and stored in a cache, with \nsupport for preloading \n \nFor a write operation, HttpClient will automatically add the \"X-RequestDigest\" \nheader, which may need to be obtained by issuing a seperate request such as \n\"https://example.com/sites/sample/_api/contextinfo\". Typically the appropriate \nSPWeb URL can be guessed by looking for a reserved URL segment such as \"_api\" \nin the original URL passed to fetch(); if not, use IHttpClientOptions.webUrl \nto specify it explicitly. \n",
         "genericType": null,
         "returnType": "Promise<Response>",
         "returnDescr": null,
@@ -401,7 +401,7 @@
         "signature": "public getWebUrlFromRequestUrl(requestUrl: string): string",
         "isStatic": true,
         "isOptional": false,
-        "descr": "This uses a heuristic to guess the SPWeb URL associated with the provided \nREST URL. This is necessary for operations such as the X-RequestDigest \nand ODATA batching, which require POSTing to a separate REST endpoint \nin order to complete a request. \nFor excample, if the requestUrl is \"/sites/site/web/_api/service\", \nthe returned URL would be \"/sites/site/web\". Or if the requestUrl \nis \"http: \n\"http:",
+        "descr": "This uses a heuristic to guess the SPWeb URL associated with the provided \nREST URL. This is necessary for operations such as the X-RequestDigest \nand ODATA batching, which require POSTing to a separate REST endpoint \nin order to complete a request. \nFor excample, if the requestUrl is \"/sites/site/web/_api/service\", \nthe returned URL would be \"/sites/site/web\". Or if the requestUrl \nis \"http://example.com/_layouts/service\", the returned URL would be \n\"http://example.com\".",
         "genericType": null,
         "returnType": "string",
         "returnDescr": null,
@@ -453,7 +453,7 @@
         "signature": "public error(source: string,error: Error,scope?: ServiceScope): void",
         "isStatic": true,
         "isOptional": false,
-        "descr": "The source provides context information for the logged error. \nIf the source's length is more than 20, only the first 20 characters are kept.",
+        "descr": "Logs an error",
         "genericType": null,
         "returnType": "void",
         "returnDescr": null,
@@ -483,7 +483,7 @@
         "signature": "public info(source: string,message: string,scope?: ServiceScope): void",
         "isStatic": true,
         "isOptional": false,
-        "descr": "more context information (e.g.,web part information) to the logged message.",
+        "descr": "Logs an informational message",
         "genericType": null,
         "returnType": "void",
         "returnDescr": null,
@@ -513,7 +513,7 @@
         "signature": "public verbose(source: string,message: string,scope?: ServiceScope): void",
         "isStatic": true,
         "isOptional": false,
-        "descr": "more context information (e.g.,web part information) to the logged message.",
+        "descr": "Logs a verbose message",
         "genericType": null,
         "returnType": "void",
         "returnDescr": null,
@@ -543,7 +543,7 @@
         "signature": "public warn(source: string,message: string,scope?: ServiceScope): void",
         "isStatic": true,
         "isOptional": false,
-        "descr": "more context information (e.g.,web part information) to the logged message.",
+        "descr": "Logs a warning",
         "genericType": null,
         "returnType": "void",
         "returnDescr": null,
@@ -574,7 +574,7 @@
   "ODataBatch": {
     "implementsExtendsName": null,
     "genericType": null,
-    "descr": "The ODataBatch class accumulates a number of REST service calls and \ntransmits them as a single ODATA batch. This protocol is documented here: \nhttp: \n \nThe usage is to call ODataBatch.fetch() to queue each individual request, \nand then call ODataBatch.execute() to execute the batch operation. \nThe execute() method returns a promise that resolves when the real REST \ncall has completed. Each call to fetch() also returns a promise that will \nresolve with a Response object for that particular request. \n",
+    "descr": "The ODataBatch class accumulates a number of REST service calls and \ntransmits them as a single ODATA batch. This protocol is documented here: \nhttp://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html \n \nThe usage is to call ODataBatch.fetch() to queue each individual request, \nand then call ODataBatch.execute() to execute the batch operation. \nThe execute() method returns a promise that resolves when the real REST \ncall has completed. Each call to fetch() also returns a promise that will \nresolve with a Response object for that particular request. \n",
     "properties": {},
     "functions": {},
     "methods": {
@@ -618,7 +618,7 @@
         "signature": "public fetch(url: string,options?: IODataBatchRequestOptions): Promise<Response>",
         "isStatic": false,
         "isOptional": false,
-        "descr": "Queues a new request,and returns a promise that can be used to access \nthe server response (after execute() has completed). The parameters for \nthis function are basically the same as the WHATWG API standard documented here: \nhttps: \n \nHowever, be aware that certain REST headers are ignored or not allowed inside \na batch. See the ODATA documentation for details. \n \nWhen execute() is called, it will POST to a URL such as \n\"http: \nguess the appropriate SPWeb URL by looking for a reserved URL segment such as \"_api\" \nin the first URL passed to fetch(). If not, use IODataBatchOptions.webUrl to specify it \nexplicitly. \n",
+        "descr": "Queues a new request,and returns a promise that can be used to access \nthe server response (after execute() has completed). The parameters for \nthis function are basically the same as the WHATWG API standard documented here: \nhttps://fetch.spec.whatwg.org/ \n \nHowever, be aware that certain REST headers are ignored or not allowed inside \na batch. See the ODATA documentation for details. \n \nWhen execute() is called, it will POST to a URL such as \n\"http://example.com/sites/sample/_api/$batch\". Typically ODataBatch can successfully \nguess the appropriate SPWeb URL by looking for a reserved URL segment such as \"_api\" \nin the first URL passed to fetch(). If not, use IODataBatchOptions.webUrl to specify it \nexplicitly. \n",
         "genericType": null,
         "returnType": "Promise<Response>",
         "returnDescr": null,
@@ -780,7 +780,7 @@
         "returnType": null,
         "assignValue": null,
         "isCollection": false,
-        "descr": "your application."
+        "descr": "Constructs a new ServiceKey whose default implementation will be obtained \nby invoking the specified callback."
       },
       "id": {
         "dataType": "string",
@@ -790,7 +790,7 @@
         "returnType": null,
         "assignValue": null,
         "isCollection": false,
-        "descr": "your application."
+        "descr": "Constructs a new ServiceKey whose default implementation will be obtained \nby invoking the specified callback."
       },
       "name": {
         "dataType": "string",
@@ -800,7 +800,7 @@
         "returnType": null,
         "assignValue": null,
         "isCollection": false,
-        "descr": "your application."
+        "descr": "Constructs a new ServiceKey whose default implementation will be obtained \nby invoking the specified callback."
       }
     },
     "functions": {},
@@ -840,7 +840,7 @@
         "signature": "public create<T>(name: string,serviceClass: { new (serviceScope: ServiceScope) }): ServiceKey<T>;",
         "isStatic": true,
         "isOptional": false,
-        "descr": "your application.",
+        "descr": "Constructs a new ServiceKey whose default implementation will be a new instance of \na TypeScript class that accepts the standard constructor parameter. If you want to \nspecify custom constructor parameters, use createCustom() instead.",
         "genericType": "T",
         "returnType": "ServiceKey<T>;",
         "returnDescr": null,
@@ -864,7 +864,7 @@
         "signature": "public createCustom<T>(name: string,defaultCreator: ServiceCreator<T>): ServiceKey<T>",
         "isStatic": true,
         "isOptional": false,
-        "descr": "your application.",
+        "descr": "Constructs a new ServiceKey whose default implementation will be obtained \nby invoking the specified callback.",
         "genericType": "T",
         "returnType": "ServiceKey<T>",
         "returnDescr": null,
@@ -1063,7 +1063,7 @@
   "SPPermission": {
     "implementsExtendsName": null,
     "genericType": null,
-    "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps:",
+    "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx",
     "properties": {
       "addAndCustomizePages": {
         "dataType": "SPPermission",
@@ -1576,7 +1576,7 @@
         "returnType": null,
         "assignValue": null,
         "isCollection": false,
-        "descr": "Returns the absolute URL for this SPWeb. \nExample: \"https:"
+        "descr": "Returns the absolute URL for this SPWeb. \nExample: \"https://example.com/sites/PubSite/SubWeb\""
       },
       "id": {
         "dataType": "Guid",
@@ -1689,7 +1689,7 @@
         "signature": "public convertToODataStringLiteral(value: string): string",
         "isStatic": true,
         "isOptional": false,
-        "descr": "Converts a variable to an OData string literal and escapes apostrophes. \nOData specification: \nhttps: \nbrowse/wsvn/odata/trunk/spec/ABNF/odata-abnf-construction-rules.txt \nSQUOTE-in-string = SQUOTE SQUOTE ; two consecutive single quotes represent one within a string literal \nExamples: \nconvertToODataStringLiteral(\"example's list\") ---> \"'example''s list'\" \nconvertToODataStringLiteral(\"example list\") ---> \"'example list'\" \nconvertToODataStringLiteral(\"'example list'\") ---> \"'''example list'''\"",
+        "descr": "Converts a variable to an OData string literal and escapes apostrophes. \nOData specification: \nhttps://tools.oasis-open.org/version-control/ \nbrowse/wsvn/odata/trunk/spec/ABNF/odata-abnf-construction-rules.txt \nSQUOTE-in-string = SQUOTE SQUOTE ; two consecutive single quotes represent one within a string literal \nExamples: \nconvertToODataStringLiteral(\"example's list\") ---> \"'example''s list'\" \nconvertToODataStringLiteral(\"example list\") ---> \"'example list'\" \nconvertToODataStringLiteral(\"'example list'\") ---> \"'''example list'''\"",
         "genericType": null,
         "returnType": "string",
         "returnDescr": null,
@@ -1707,7 +1707,7 @@
         "signature": "public removeEndSlash(url: string): string",
         "isStatic": true,
         "isOptional": false,
-        "descr": "Removes any slash characters from the end of the URL. \nThis function assumes that the input is already a valid absolute or server-relative URL. \nExamples: \nremoveEndSlash('http: \nremoveEndSlash('/example') ---> '/example' \nremoveEndSlash('/') ---> ''",
+        "descr": "Removes any slash characters from the end of the URL. \nThis function assumes that the input is already a valid absolute or server-relative URL. \nExamples: \nremoveEndSlash('http://example.com/') ---> 'http://example.com' \nremoveEndSlash('/example') ---> '/example' \nremoveEndSlash('/') ---> ''",
         "genericType": null,
         "returnType": "string",
         "returnDescr": null,

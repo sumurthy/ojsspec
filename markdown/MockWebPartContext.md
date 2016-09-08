@@ -12,18 +12,18 @@
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|`basicHttpClient`     | `public` | [`BasicHttpClient`](BasicHttpClient.md) |  |
+|`basicHttpClient`     | `public` | [`BasicHttpClient`](basichttpclient.md) |  |
 |`configureStart`     | `public` | `function` |  |
 |`domElement`     | `public` | `HTMLElement` |  |
-|`environment`     | `public` | [`Environment`](Environment.md) |  |
+|`environment`     | `public` | [`Environment`](environment.md) |  |
 |`eventAggregator`     | `public` | `IEventAggregator` |  |
-|`host`     | `public` | [`IWebPartHost`](IWebPartHost.md) |  |
-|`httpClient`     | `public` | [`HttpClient`](HttpClient.md) |  |
+|`host`     | `public` | [`IWebPartHost`](iwebparthost.md) |  |
+|`httpClient`     | `public` | [`HttpClient`](httpclient.md) |  |
 |`instanceId`     | `public` | `string` |  |
-|`manifest`     | `public` | [`IClientSideWebPartManifestInstance<{}>`](IClientSideWebPartManifestInstance.md) |  |
-|`pageContext`     | `public` | [`PageContext`](PageContext.md) |  |
-|`serviceScope`     | `public` | [`ServiceScope`](ServiceScope.md) |  |
-|`statusRenderer`     | `public` | [`IClientSideWebPartStatusRenderer`](IClientSideWebPartStatusRenderer.md) |  |
+|`manifest`     | `public` | [`IClientSideWebPartManifestInstance<{}>`](iclientsidewebpartmanifestinstance.md) |  |
+|`pageContext`     | `public` | [`PageContext`](pagecontext.md) |  |
+|`serviceScope`     | `public` | [`ServiceScope`](servicescope.md) |  |
+|`statusRenderer`     | `public` | [`IClientSideWebPartStatusRenderer`](iclientsidewebpartstatusrenderer.md) |  |
 |`webPartTag`     | `public` | `string` |  |
 
 

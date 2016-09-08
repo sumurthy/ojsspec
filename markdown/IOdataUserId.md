@@ -6,7 +6,7 @@
 
 Represents an OData SP.UserId object. For more information about this object 
 see the MSDN documentation here: 
-https:
+https://msdn.microsoft.com/en-us/library/office/jj860569.aspx
 
 
 

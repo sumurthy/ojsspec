@@ -16,10 +16,10 @@ interface IBundleReference {
 
 /**
  * @Copyright (c) Microsoft Corporation.  All rights reserved.
- *
+ * 
  * @file Client side component loader configuration.This interface describes how a client side component is to be loaded and initailized by a SharePoint client
  * framework. It contains all data for loading an entrypoint script and its dependency scripts.
- *
+ * 
  * @beta
  */
 interface IClientSideComponentLoaderConfig {
@@ -46,7 +46,7 @@ interface IClientSideComponentLoaderConfig {
    *    - if this field is set to "foo", the value returned by the modue loader is "bar"
    *    - if this field is set to "bar", the value returned by the modue loader is undefined (as "bar" is not a key in
    *        the top-level export).
-   *
+   * 
    * Usage: To reference a field in the top-level export.
    * Required: no
    * Example: mySpWebpart
@@ -116,7 +116,7 @@ interface IClientSideComponentLoaderConfig {
 
 /**
  * A library is defined by this manifest. Libraries currently do not have any additional properties.
- *
+ * 
  * @public
  */
 interface IClientSideLibraryManifest extends IClientSideComponentManifest {
@@ -148,7 +148,7 @@ interface IClientSideLibraryManifest extends IClientSideComponentManifest {
    *  client. It contains an enumeration of scripts that the component requires along with a single entrypoint script.
    * Usage: Loading a component.
    * Required: yes
-   *
+   * 
    * @see IClientSideComponentLoaderConfig.ts for more information and examples.
    */
   loaderConfig: IClientSideComponentLoaderConfig;
@@ -187,7 +187,7 @@ interface IClientSideLibraryManifest extends IClientSideComponentManifest {
  * This interface specifies the set of properties that can be pre-configured by a Web Part developer. Each
  * pre-configured instance of the Web Part will need a copy of these properties. Organization admins and
  * content authors can modify these properties on a need basis.
- *
+ * 
  * @public
  */
 interface IClientSideWebPartManifestEntry<TProperties> {
@@ -212,7 +212,7 @@ interface IClientSideWebPartManifestEntry<TProperties> {
   description: ILocalizedString;
   /**
    * @todo - does this group also affect the webpart gallery in the ClassicPage scenario
-   *
+   * 
    * Definition: This field is used to help decide the Toolbox group for the Web Part in the authoring
    *  experience. In the server rendered page, the Web Part gallery is equivalent of the Toolbox. If no value is
    *  provided, the Web Part will be displayed in the "Custom" group.
@@ -221,7 +221,7 @@ interface IClientSideWebPartManifestEntry<TProperties> {
    * Localized: yes
    * Supported values: string
    * Example: { "default": "Media Web Parts" }
-   *
+   * 
    * @beta
    */
   group ?: ILocalizedString;
@@ -255,7 +255,7 @@ interface IClientSideWebPartManifestEntry<TProperties> {
    *  pass these properties in and out to the Web Parts. The Web Part developer fully controls the schema of these
    *  properties. The Web Part developer should follow versioning rules (@todo: pointer to Web Part versioning document)
    *  to evolve these properties.
-   *
+   * 
    * Usage: rendering of the Web Part.
    * Required: yes
    * Localized: no
@@ -286,13 +286,13 @@ interface IClientSideWebPartManifestEntry<TProperties> {
 
 /**
  * Manifest that is relevant to a Web Part instance.
- *
+ * 
  * @public
  */
 interface IClientSideWebPartManifestInstance<TProperties> extends
- IClientSideComponentManifest,
- IClientSideWebPartManifestSharedProperties,
- IClientSideWebPartManifestEntry<TProperties> {
+  IClientSideComponentManifest,
+  IClientSideWebPartManifestSharedProperties,
+  IClientSideWebPartManifestEntry<TProperties> {
   /**
    * Definition: Type of client side component. Components with the "Application" type are defined by the
    *  "IClientSideApplicationManifest" interface. Components with the "WebPart" type are defined by the
@@ -326,7 +326,7 @@ interface IClientSideWebPartManifestInstance<TProperties> extends
   description: ILocalizedString;
   /**
    * @todo - does this group also affect the webpart gallery in the ClassicPage scenario
-   *
+   * 
    * Definition: This field is used to help decide the Toolbox group for the Web Part in the authoring
    *  experience. In the server rendered page, the Web Part gallery is equivalent of the Toolbox. If no value is
    *  provided, the Web Part will be displayed in the "Custom" group.
@@ -335,7 +335,7 @@ interface IClientSideWebPartManifestInstance<TProperties> extends
    * Localized: yes
    * Supported values: string
    * Example: { "default": "Media Web Parts" }
-   *
+   * 
    * @beta
    */
   group ?: ILocalizedString;
@@ -390,7 +390,7 @@ interface IClientSideWebPartManifestInstance<TProperties> extends
    *  client. It contains an enumeration of scripts that the component requires along with a single entrypoint script.
    * Usage: Loading a component.
    * Required: yes
-   *
+   * 
    * @see IClientSideComponentLoaderConfig.ts for more information and examples.
    */
   loaderConfig: IClientSideComponentLoaderConfig;
@@ -425,7 +425,7 @@ interface IClientSideWebPartManifestInstance<TProperties> extends
    *  pass these properties in and out to the Web Parts. The Web Part developer fully controls the schema of these
    *  properties. The Web Part developer should follow versioning rules (@todo: pointer to Web Part versioning document)
    *  to evolve these properties.
-   *
+   * 
    * Usage: rendering of the Web Part.
    * Required: yes
    * Localized: no
@@ -483,9 +483,9 @@ interface IClientSideWebPartManifestInstance<TProperties> extends
 
 /**
  * This interface specifies the set of common properties that are shared between all instances of the Web Part.
- *
+ * 
  * @todo: refactor this to a structure based model (SPPPLAT VSO#218544).
- *
+ * 
  * @beta
  */
 interface IClientSideWebPartManifestSharedProperties {
@@ -528,7 +528,7 @@ interface IClientSideWebPartManifestSharedProperties {
 /**
  * This is the interface for a script module with the "framework" type. Modules of this type will be provided by the
  *  framework runtime. The key in the "scriptResources" dictionary must be the name of a standard framework library.
- *
+ * 
  * @beta
  */
 interface IFrameworkModuleConfig extends IModuleConfig {
@@ -581,7 +581,7 @@ interface IFrameworkModuleConfig extends IModuleConfig {
 /**
  * This is the interface for a script module with the "internal" type. Modules of this type must be provided by the
  *  component developer.
- *
+ * 
  * @beta
  */
 interface IInternalModuleConfig extends IModuleConfig {
@@ -657,7 +657,7 @@ interface IInternalModuleConfig extends IModuleConfig {
  *  component developer. These script resources are similar to those of the "internal" type, but they may be present
  *  at a number of different paths, to be selected by the user's locale. Paths in this module type are loaded exactly
  *  the same way as "internal" modules are.
- *
+ * 
  * @beta
  */
 interface ILocalizedInternalModuleConfig extends IModuleConfig {
@@ -737,7 +737,7 @@ interface ILocalizedString {
 
 /**
  * This is the base interface for a script module's definition.
- *
+ * 
  * @beta
  */
 interface IModuleConfig {
@@ -768,7 +768,7 @@ interface IModuleConfig {
 /**
  * This is the base interface for a set of debug and non-debug/minimized paths. The paths in this object are
  *  loaded in exactly the same way as any other internal path.
- *
+ * 
  * @beta
  */
 interface IPath {
@@ -815,3 +815,4 @@ interface IStandardLibraryModule {
    */
   preloadId: string;
 }
+

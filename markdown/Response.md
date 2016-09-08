@@ -12,11 +12,11 @@
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|`string|ResponseType`     | `type:` | `string`,[`ResponseType`](ResponseType.md) |  |
+|`string|ResponseType`     | `type:` | `string`,[`ResponseType`](responsetype.md) |  |
 |`string`     | `statusText:` | `string` |  |
 |`number`     | `status:` | `number` |  |
 |`boolean`     | `ok:` | `boolean` |  |
-|`Headers`     | `headers:` | [`Headers`](Headers.md) |  |
+|`Headers`     | `headers:` | [`Headers`](headers.md) |  |
 
 
 
@@ -25,10 +25,10 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`constructor`](#constructor)     | `public` | [`ResponseInit`](ResponseInit.md) |  |
-|[`error`](#error)     | `public` | [`Response`](Response.md) |  |
-|[`redirect`](#redirect)     | `public` | [`Response`](Response.md) |  |
-|[`clone`](#clone)     | `public` | [`Response`](Response.md) |  |
+|[`constructor`](#constructor)     | `public` | [`ResponseInit`](responseinit.md) |  |
+|[`error`](#error)     | `public` | [`Response`](response.md) |  |
+|[`redirect`](#redirect)     | `public` | [`Response`](response.md) |  |
+|[`clone`](#clone)     | `public` | [`Response`](response.md) |  |
 
 
 
@@ -41,7 +41,7 @@
 `constructor(body?: BodyInit,init?: ResponseInit)`
 
 #### Returns
-[`ResponseInit`](ResponseInit.md)
+[`ResponseInit`](responseinit.md)
 
 #### Parameters
 
@@ -49,7 +49,7 @@
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `body`    | `BodyInit` | _Optional._ |
-| `init`    | [`ResponseInit`](ResponseInit.md) | _Optional._ |
+| `init`    | [`ResponseInit`](responseinit.md) | _Optional._ |
 
 
 ### error
@@ -60,7 +60,7 @@
 `error(): Response`
 
 #### Returns
-[`Response`](Response.md)
+[`Response`](response.md)
 
 #### Parameters
 None
@@ -74,7 +74,7 @@ None
 `redirect(url: string,status: number): Response`
 
 #### Returns
-[`Response`](Response.md)
+[`Response`](response.md)
 
 #### Parameters
 
@@ -93,7 +93,7 @@ None
 `clone(): Response`
 
 #### Returns
-[`Response`](Response.md)
+[`Response`](response.md)
 
 #### Parameters
 None

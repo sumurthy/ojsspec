@@ -5,10 +5,10 @@
 
 | Class	   |  Description |
 |:-------------|:---------------|
-| [Request](Request.md)     |  |
-| [Headers](Headers.md)     |  |
-| [Body](Body.md)     |  |
-| [Response](Response.md)     |  |
+| [Request](request.md)     |  |
+| [Headers](headers.md)     |  |
+| [Body](body.md)     |  |
+| [Response](response.md)     |  |
 
 
 
@@ -16,9 +16,9 @@
 
 | Class	   |  Description |
 |:-------------|:---------------|
-| [RequestInit](RequestInit.md)   |   |
-| [ResponseInit](ResponseInit.md)   |   |
-| [Window](Window.md)   |   |
+| [RequestInit](requestinit.md)   |   |
+| [ResponseInit](responseinit.md)   |   |
+| [Window](window.md)   |   |
 
 
 
@@ -26,11 +26,11 @@
 
 | Enumeration	   | Description|
 |:-----------|:------------|
-|[RequestContext](RequestContext.md)    |  |
-|[RequestMode](RequestMode.md)    |  |
-|[RequestCredentials](RequestCredentials.md)    |  |
-|[RequestCache](RequestCache.md)    |  |
-|[ResponseType](ResponseType.md)    |  |
+|[RequestContext](requestcontext.md)    |  |
+|[RequestMode](requestmode.md)    |  |
+|[RequestCredentials](requestcredentials.md)    |  |
+|[RequestCache](requestcache.md)    |  |
+|[ResponseType](responsetype.md)    |  |
 
 
 ### Types

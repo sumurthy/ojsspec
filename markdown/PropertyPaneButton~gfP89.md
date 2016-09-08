@@ -6,7 +6,7 @@ Helper method to create a Button on the PropertyPane.
 `export function PropertyPaneButton(targetProperty: string,properties: IPropertyPaneButtonProps): IPropertyPaneField<IPropertyPaneButtonProps>`
 
 #### Returns
-[`IPropertyPaneField<IPropertyPaneButtonProps>`](IPropertyPaneField.md)
+[`IPropertyPaneField<IPropertyPaneButtonProps>`](ipropertypanefield.md)
 
 #### Parameters
 
@@ -14,5 +14,5 @@ Helper method to create a Button on the PropertyPane.
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `targetProperty`    | `string` |  |
-| `properties`    | [`IPropertyPaneButtonProps`](IPropertyPaneButtonProps.md) |  |
+| `properties`    | [`IPropertyPaneButtonProps`](ipropertypanebuttonprops.md) |  |
 
