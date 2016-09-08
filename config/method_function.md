@@ -7,6 +7,7 @@
 
 #### Returns
 %returntype%
+%returndescr%
 
 #### Parameters
 %noparam%

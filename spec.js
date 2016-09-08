@@ -215,7 +215,7 @@ function processLines(element = '', index = 0, lines = []) {
                         commentObject['param'].push([arr[3], o['descr']])
                     }
                     break;
-                case '@return':
+                case '@returns':
                     var arr = line.split(' ')
                     if (arr[3] !== undefined) {
                         var o = Utils.readCommentAhead(lines, arr.slice(3).join(' '), index)
