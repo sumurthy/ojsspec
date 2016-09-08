@@ -94,7 +94,7 @@ and return the registered service instance. If the instance cannot be found, the
 instance will be autocreated and registered with the root ServiceScope.
 
 #### Signature
-`public consume<T>(serviceKey: ServiceKey<T>): T`
+`consume<T>(serviceKey: ServiceKey<T>): T`
 
 #### Returns
 `T`
@@ -114,7 +114,7 @@ This is a shorthand function that its equivalent to constructing a new instance 
 simpleServiceClass, then registering it by calling ServiceScope.provide().
 
 #### Signature
-`public createAndProvide<T>(serviceKey: ServiceKey<T>,simpleServiceClass: { new (serviceScope: ServiceScope) }): T;`
+`createAndProvide<T>(serviceKey: ServiceKey<T>,simpleServiceClass: { new (serviceScope: ServiceScope) }): T;`
 
 #### Returns
 `T;`
@@ -135,7 +135,7 @@ This is a shorthand function that constructs the default implementation of the s
 serviceKey, and then registers it by calling ServiceScope.provide().
 
 #### Signature
-`public createDefaultAndProvide<T>(serviceKey: ServiceKey<T>): T`
+`createDefaultAndProvide<T>(serviceKey: ServiceKey<T>): T`
 
 #### Returns
 `T`
@@ -160,7 +160,7 @@ with A2, then a subsequent call to Scope2.consume() might return a different res
 the previous call, which would be very confusing for developers.
 
 #### Signature
-`public finish(): void`
+`finish(): void`
 
 #### Returns
 `void`
@@ -175,7 +175,7 @@ None
 Returns the parent of the current ServiceScope,or undefined if this is a root scope.
 
 #### Signature
-`public getParent(): ServiceScope`
+`getParent(): ServiceScope`
 
 #### Returns
 [`ServiceScope`](servicescope.md)
@@ -192,7 +192,7 @@ for the current scope. It may only be used when the ServiceScope is in an "unfin
 state, i.e. before finish() has been called.
 
 #### Signature
-`public provide<T>(serviceKey: ServiceKey<T>,service: T): T`
+`provide<T>(serviceKey: ServiceKey<T>,service: T): T`
 
 #### Returns
 `T`
@@ -214,7 +214,7 @@ that are not explicitly provided by the child scope, the parent hierarchy will b
 consulted.
 
 #### Signature
-`public startNewChild(): ServiceScope`
+`startNewChild(): ServiceScope`
 
 #### Returns
 [`ServiceScope`](servicescope.md)
@@ -230,7 +230,7 @@ Create a new root-level ServiceScope. Only root-level scopes have the ability to
 default implementations of ServiceKeys.
 
 #### Signature
-`public startNewRoot(): ServiceScope`
+`startNewRoot(): ServiceScope`
 
 #### Returns
 [`ServiceScope`](servicescope.md)
@@ -249,7 +249,7 @@ finished, then the callback will be executed immediately; otherwise, it will be 
 later when the scope is finished.
 
 #### Signature
-`public whenFinished(callback: () => void): void`
+`whenFinished(callback: () => void): void`
 
 #### Returns
 `void`

@@ -63,7 +63,7 @@ a TypeScript class that accepts the standard constructor parameter. If you want 
 specify custom constructor parameters, use createCustom() instead.
 
 #### Signature
-`public create<T>(name: string,serviceClass: { new (serviceScope: ServiceScope) }): ServiceKey<T>;`
+`create<T>(name: string,serviceClass: { new (serviceScope: ServiceScope) }): ServiceKey<T>;`
 
 #### Returns
 [`ServiceKey<T>;`](servicekey.md)
@@ -84,7 +84,7 @@ Constructs a new ServiceKey whose default implementation will be obtained
 by invoking the specified callback.
 
 #### Signature
-`public createCustom<T>(name: string,defaultCreator: ServiceCreator<T>): ServiceKey<T>`
+`createCustom<T>(name: string,defaultCreator: ServiceCreator<T>): ServiceKey<T>`
 
 #### Returns
 [`ServiceKey<T>`](servicekey.md)

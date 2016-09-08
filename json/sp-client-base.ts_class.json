@@ -38,7 +38,7 @@
       },
       "fetch~ekuc9": {
         "accessModifier": "public",
-        "signature": "public fetch(url: string,options: IBasicHttpClientOptions): Promise<Response>",
+        "signature": "fetch(url: string,options: IBasicHttpClientOptions): Promise<Response>",
         "isStatic": false,
         "isOptional": false,
         "descr": "Performs a REST service call. Although the HttpClient subclass adds \nadditional enhancements, the parameters and semantics for BasicHttpClient.fetch() \nare essentially the same as the WHATWG API standard that is documented here: \nhttps://fetch.spec.whatwg.org/",
@@ -62,7 +62,7 @@
       },
       "fetchCore~p9z89": {
         "accessModifier": "protected",
-        "signature": "protected fetchCore(request: Request): Promise<Response>",
+        "signature": "fetchCore(request: Request): Promise<Response>",
         "isStatic": false,
         "isOptional": false,
         "descr": "",
@@ -80,7 +80,7 @@
       },
       "get~XkVg9": {
         "accessModifier": "public",
-        "signature": "public get(url: string,options?: IBasicHttpClientOptions): Promise<Response>",
+        "signature": "get(url: string,options?: IBasicHttpClientOptions): Promise<Response>",
         "isStatic": false,
         "isOptional": false,
         "descr": "Calls fetch(),but sets the method to 'GET'.",
@@ -104,7 +104,7 @@
       },
       "post~1DUs9": {
         "accessModifier": "public",
-        "signature": "public post(url: string,options: IBasicHttpClientOptions): Promise<Response>",
+        "signature": "post(url: string,options: IBasicHttpClientOptions): Promise<Response>",
         "isStatic": false,
         "isOptional": false,
         "descr": "Calls fetch(),but sets the method to 'POST'.",
@@ -138,7 +138,7 @@
     "methods": {
       "shallowCompare~bspw9": {
         "accessModifier": "public",
-        "signature": "public shallowCompare(objA: Object,objB: Object): boolean",
+        "signature": "shallowCompare(objA: Object,objB: Object): boolean",
         "isStatic": true,
         "isOptional": false,
         "descr": "Performs shallow comparison between two objects to determine if they are equal. This method compares \nonly object types. \n",
@@ -225,7 +225,7 @@
     "methods": {
       "equals~NHLc9": {
         "accessModifier": "public",
-        "signature": "public equals(guid: Guid): boolean",
+        "signature": "equals(guid: Guid): boolean",
         "isStatic": false,
         "isOptional": false,
         "descr": "Compare this instance to another Guid instance \n",
@@ -243,7 +243,7 @@
       },
       "isValid~HbTk9": {
         "accessModifier": "public",
-        "signature": "public isValid(guid: string): boolean",
+        "signature": "isValid(guid: string): boolean",
         "isStatic": true,
         "isOptional": false,
         "descr": "Indicates whether a guid is valid (according to RFC4122). \n",
@@ -261,7 +261,7 @@
       },
       "constructorGuid~zWNg9": {
         "accessModifier": "public",
-        "signature": "public newGuid(randomProvider?: IRandomProvider): Guid",
+        "signature": "newGuid(randomProvider?: IRandomProvider): Guid",
         "isStatic": true,
         "isOptional": false,
         "descr": "Returns a new Guid instance with a pseudo-randomly generated Guid. \n",
@@ -279,7 +279,7 @@
       },
       "toString~qLKI9": {
         "accessModifier": "public",
-        "signature": "public toString(): string",
+        "signature": "toString(): string",
         "isStatic": false,
         "isOptional": false,
         "descr": "Object.prototype.toString override \n",
@@ -290,7 +290,7 @@
       },
       "tryParse~Rx2E9": {
         "accessModifier": "public",
-        "signature": "public tryParse(guid: string): Guid",
+        "signature": "tryParse(guid: string): Guid",
         "isStatic": true,
         "isOptional": false,
         "descr": "Trys to construct a new Guid instance using guid string. The guid argument \nis normalized and validated. If the argument is not a valid \"version 4\" UUID from \nRFC 4122, tryParse will return undefined. \n",
@@ -336,7 +336,7 @@
       },
       "beginBatch~p9yM9": {
         "accessModifier": "public",
-        "signature": "public beginBatch(batchOptions?: IODataBatchOptions): ODataBatch",
+        "signature": "beginBatch(batchOptions?: IODataBatchOptions): ODataBatch",
         "isStatic": false,
         "isOptional": false,
         "descr": "Begins an ODATA batch,which allows multiple REST queries to be bundled into \na single web request.",
@@ -354,7 +354,7 @@
       },
       "fetch~ekuc9": {
         "accessModifier": "public",
-        "signature": "public fetch(url: string,options: IHttpClientOptions): Promise<Response>",
+        "signature": "fetch(url: string,options: IHttpClientOptions): Promise<Response>",
         "isStatic": false,
         "isOptional": false,
         "descr": "Generally,the parameters and semantics for HttpClient.fetch() are essentially \nthe same as the WHATWG API standard that is documented here: \nhttps://fetch.spec.whatwg.org/ \n \nThe HttpClient subclass adds some additional behaviors that are convenient when \nworking with SharePoint ODATA API's (which can be avoided by using \nBasicHttpClient instead): \n- Default \"Accept\" and \"Content-Type\" headers are added if not explicitly specified. \n- For write operations, an \"X-RequestDigest\" header is automatically added \n- The request digest token is automatically fetched and stored in a cache, with \nsupport for preloading \n \nFor a write operation, HttpClient will automatically add the \"X-RequestDigest\" \nheader, which may need to be obtained by issuing a seperate request such as \n\"https://example.com/sites/sample/_api/contextinfo\". Typically the appropriate \nSPWeb URL can be guessed by looking for a reserved URL segment such as \"_api\" \nin the original URL passed to fetch(); if not, use IHttpClientOptions.webUrl \nto specify it explicitly. \n",
@@ -378,7 +378,7 @@
       },
       "get~XkVg9": {
         "accessModifier": "public",
-        "signature": "public get(url: string,options?: IHttpClientOptions): Promise<Response>",
+        "signature": "get(url: string,options?: IHttpClientOptions): Promise<Response>",
         "isStatic": false,
         "isOptional": false,
         "descr": "Calls fetch(),but sets the method to 'GET'.",
@@ -402,7 +402,7 @@
       },
       "getWebUrlFromRequestUrl~tJa09": {
         "accessModifier": "public",
-        "signature": "public getWebUrlFromRequestUrl(requestUrl: string): string",
+        "signature": "getWebUrlFromRequestUrl(requestUrl: string): string",
         "isStatic": true,
         "isOptional": false,
         "descr": "This uses a heuristic to guess the SPWeb URL associated with the provided \nREST URL. This is necessary for operations such as the X-RequestDigest \nand ODATA batching, which require POSTing to a separate REST endpoint \nin order to complete a request. \nFor excample, if the requestUrl is \"/sites/site/web/_api/service\", \nthe returned URL would be \"/sites/site/web\". Or if the requestUrl \nis \"http://example.com/_layouts/service\", the returned URL would be \n\"http://example.com\".",
@@ -420,7 +420,7 @@
       },
       "post~1DUs9": {
         "accessModifier": "public",
-        "signature": "public post(url: string,options: IHttpClientOptions): Promise<Response>",
+        "signature": "post(url: string,options: IHttpClientOptions): Promise<Response>",
         "isStatic": false,
         "isOptional": false,
         "descr": "Calls fetch(),but sets the method to 'POST'.",
@@ -454,7 +454,7 @@
     "methods": {
       "error~o8Xg9": {
         "accessModifier": "public",
-        "signature": "public error(source: string,error: Error,scope?: ServiceScope): void",
+        "signature": "error(source: string,error: Error,scope?: ServiceScope): void",
         "isStatic": true,
         "isOptional": false,
         "descr": "Logs an error",
@@ -484,7 +484,7 @@
       },
       "info~z4eE9": {
         "accessModifier": "public",
-        "signature": "public info(source: string,message: string,scope?: ServiceScope): void",
+        "signature": "info(source: string,message: string,scope?: ServiceScope): void",
         "isStatic": true,
         "isOptional": false,
         "descr": "Logs an informational message",
@@ -514,7 +514,7 @@
       },
       "verbose~j0n09": {
         "accessModifier": "public",
-        "signature": "public verbose(source: string,message: string,scope?: ServiceScope): void",
+        "signature": "verbose(source: string,message: string,scope?: ServiceScope): void",
         "isStatic": true,
         "isOptional": false,
         "descr": "Logs a verbose message",
@@ -544,7 +544,7 @@
       },
       "warn~L5949": {
         "accessModifier": "public",
-        "signature": "public warn(source: string,message: string,scope?: ServiceScope): void",
+        "signature": "warn(source: string,message: string,scope?: ServiceScope): void",
         "isStatic": true,
         "isOptional": false,
         "descr": "Logs a warning",
@@ -584,7 +584,7 @@
     "methods": {
       "constructor~3EGg9": {
         "accessModifier": "public",
-        "signature": "public constructor(serviceScope: ServiceScope,batchOptions?: IODataBatchOptions)",
+        "signature": "constructor(serviceScope: ServiceScope,batchOptions?: IODataBatchOptions)",
         "isStatic": false,
         "isOptional": false,
         "descr": "",
@@ -608,7 +608,7 @@
       },
       "execute~6ceI9": {
         "accessModifier": "public",
-        "signature": "public execute(): Promise<ODataBatch>",
+        "signature": "execute(): Promise<ODataBatch>",
         "isStatic": false,
         "isOptional": false,
         "descr": "Executes the batched queries that were queued using ODataBatch.fetch().",
@@ -619,7 +619,7 @@
       },
       "fetch~ekuc9": {
         "accessModifier": "public",
-        "signature": "public fetch(url: string,options?: IODataBatchRequestOptions): Promise<Response>",
+        "signature": "fetch(url: string,options?: IODataBatchRequestOptions): Promise<Response>",
         "isStatic": false,
         "isOptional": false,
         "descr": "Queues a new request,and returns a promise that can be used to access \nthe server response (after execute() has completed). The parameters for \nthis function are basically the same as the WHATWG API standard documented here: \nhttps://fetch.spec.whatwg.org/ \n \nHowever, be aware that certain REST headers are ignored or not allowed inside \na batch. See the ODATA documentation for details. \n \nWhen execute() is called, it will POST to a URL such as \n\"http://example.com/sites/sample/_api/$batch\". Typically ODataBatch can successfully \nguess the appropriate SPWeb URL by looking for a reserved URL segment such as \"_api\" \nin the first URL passed to fetch(). If not, use IODataBatchOptions.webUrl to specify it \nexplicitly. \n",
@@ -643,7 +643,7 @@
       },
       "get~XkVg9": {
         "accessModifier": "public",
-        "signature": "public get(url: string,options?: IODataBatchRequestOptions): Promise<Response>",
+        "signature": "get(url: string,options?: IODataBatchRequestOptions): Promise<Response>",
         "isStatic": false,
         "isOptional": false,
         "descr": "Calls fetch(),but sets the method to 'GET'.",
@@ -667,7 +667,7 @@
       },
       "post~1DUs9": {
         "accessModifier": "public",
-        "signature": "public post(url: string,options: IODataBatchRequestOptions): Promise<Response>",
+        "signature": "post(url: string,options: IODataBatchRequestOptions): Promise<Response>",
         "isStatic": false,
         "isOptional": false,
         "descr": "Calls fetch(),but sets the method to 'POST'.",
@@ -849,7 +849,7 @@
       },
       "create<T>~5l6A9": {
         "accessModifier": "public",
-        "signature": "public create<T>(name: string,serviceClass: { new (serviceScope: ServiceScope) }): ServiceKey<T>;",
+        "signature": "create<T>(name: string,serviceClass: { new (serviceScope: ServiceScope) }): ServiceKey<T>;",
         "isStatic": true,
         "isOptional": false,
         "descr": "Constructs a new ServiceKey whose default implementation will be a new instance of \na TypeScript class that accepts the standard constructor parameter. If you want to \nspecify custom constructor parameters, use createCustom() instead.",
@@ -873,7 +873,7 @@
       },
       "createCustom<T>~fPzE9": {
         "accessModifier": "public",
-        "signature": "public createCustom<T>(name: string,defaultCreator: ServiceCreator<T>): ServiceKey<T>",
+        "signature": "createCustom<T>(name: string,defaultCreator: ServiceCreator<T>): ServiceKey<T>",
         "isStatic": true,
         "isOptional": false,
         "descr": "Constructs a new ServiceKey whose default implementation will be obtained \nby invoking the specified callback.",
@@ -925,7 +925,7 @@
       },
       "consume<T>~wJAw9": {
         "accessModifier": "public",
-        "signature": "public consume<T>(serviceKey: ServiceKey<T>): T",
+        "signature": "consume<T>(serviceKey: ServiceKey<T>): T",
         "isStatic": false,
         "isOptional": false,
         "descr": "Components should call this function to \"consume\" a dependency,i.e. look up the serviceKey \nand return the registered service instance. If the instance cannot be found, then a default \ninstance will be autocreated and registered with the root ServiceScope.",
@@ -943,7 +943,7 @@
       },
       "createAndProvide<T>~Lj5g9": {
         "accessModifier": "public",
-        "signature": "public createAndProvide<T>(serviceKey: ServiceKey<T>,simpleServiceClass: { new (serviceScope: ServiceScope) }): T;",
+        "signature": "createAndProvide<T>(serviceKey: ServiceKey<T>,simpleServiceClass: { new (serviceScope: ServiceScope) }): T;",
         "isStatic": false,
         "isOptional": false,
         "descr": "This is a shorthand function that its equivalent to constructing a new instance of the \nsimpleServiceClass, then registering it by calling ServiceScope.provide().",
@@ -967,7 +967,7 @@
       },
       "createDefaultAndProvide<T>~Q7xY9": {
         "accessModifier": "public",
-        "signature": "public createDefaultAndProvide<T>(serviceKey: ServiceKey<T>): T",
+        "signature": "createDefaultAndProvide<T>(serviceKey: ServiceKey<T>): T",
         "isStatic": false,
         "isOptional": false,
         "descr": "This is a shorthand function that constructs the default implementation of the specified \nserviceKey, and then registers it by calling ServiceScope.provide().",
@@ -985,7 +985,7 @@
       },
       "finish~wwNo9": {
         "accessModifier": "public",
-        "signature": "public finish(): void",
+        "signature": "finish(): void",
         "isStatic": false,
         "isOptional": false,
         "descr": "When a ServiceScope is first started,it is in an \"unfinished\" state where provide() is \nallowed but consume() is not allowed. After calling finish(), then consume() is allowed \nbut provide() is not allowed. This formalism completely eliminates a number of tricky bugs \nsuch as: Scope2 is a child of Scope1, and Scope1 provides instance A1 of interface A; \nif someone consumes A1 from Scope2 (via inheritance) before Scope2.provide() is called \nwith A2, then a subsequent call to Scope2.consume() might return a different result than \nthe previous call, which would be very confusing for developers.",
@@ -996,7 +996,7 @@
       },
       "getParent~XEmY9": {
         "accessModifier": "public",
-        "signature": "public getParent(): ServiceScope",
+        "signature": "getParent(): ServiceScope",
         "isStatic": false,
         "isOptional": false,
         "descr": "Returns the parent of the current ServiceScope,or undefined if this is a root scope.",
@@ -1007,7 +1007,7 @@
       },
       "provide<T>~QdN49": {
         "accessModifier": "public",
-        "signature": "public provide<T>(serviceKey: ServiceKey<T>,service: T): T",
+        "signature": "provide<T>(serviceKey: ServiceKey<T>,service: T): T",
         "isStatic": false,
         "isOptional": false,
         "descr": "ServiceScope.provide() is used to register an implemententation of the given serviceKey \nfor the current scope. It may only be used when the ServiceScope is in an \"unfinished\" \nstate, i.e. before finish() has been called.",
@@ -1031,7 +1031,7 @@
       },
       "startNewChild~YzVU9": {
         "accessModifier": "public",
-        "signature": "public startNewChild(): ServiceScope",
+        "signature": "startNewChild(): ServiceScope",
         "isStatic": false,
         "isOptional": false,
         "descr": "Constructs a new ServiceScope that is a child of the current scope. For any keys \nthat are not explicitly provided by the child scope, the parent hierarchy will be \nconsulted.",
@@ -1042,7 +1042,7 @@
       },
       "startNewRoot~TX989": {
         "accessModifier": "public",
-        "signature": "public startNewRoot(): ServiceScope",
+        "signature": "startNewRoot(): ServiceScope",
         "isStatic": true,
         "isOptional": false,
         "descr": "Create a new root-level ServiceScope. Only root-level scopes have the ability to autocreate \ndefault implementations of ServiceKeys.",
@@ -1053,7 +1053,7 @@
       },
       "whenFinished~pzLE9": {
         "accessModifier": "public",
-        "signature": "public whenFinished(callback: () => void): void",
+        "signature": "whenFinished(callback: () => void): void",
         "isStatic": false,
         "isOptional": false,
         "descr": "It is an error to call ServiceScope.consume() before finish() has been called. \nThe most reliable way to protect your component against this error is to perform the \nconsume() calls inside a whenFinished() callback. If the service scope is already \nfinished, then the callback will be executed immediately; otherwise, it will be executed \nlater when the scope is finished.",
@@ -1507,7 +1507,7 @@
       },
       "hasAllPermissions~9qQk9": {
         "accessModifier": "public",
-        "signature": "public hasAllPermissions(...requestedPerms: SPPermission[]): boolean",
+        "signature": "hasAllPermissions(...requestedPerms: SPPermission[]): boolean",
         "isStatic": false,
         "isOptional": false,
         "descr": "Function for determining if a given permission mask has all of the requested permissions.",
@@ -1525,7 +1525,7 @@
       },
       "hasAnyPermissions~KL1k9": {
         "accessModifier": "public",
-        "signature": "public hasAnyPermissions(...requestedPerms: SPPermission[]): boolean",
+        "signature": "hasAnyPermissions(...requestedPerms: SPPermission[]): boolean",
         "isStatic": false,
         "isOptional": false,
         "descr": "Function for determining if a given permission mask has any of the requested permissions.",
@@ -1543,7 +1543,7 @@
       },
       "hasPermission~s9lY9": {
         "accessModifier": "public",
-        "signature": "public hasPermission(requestedPerm: SPPermission): boolean",
+        "signature": "hasPermission(requestedPerm: SPPermission): boolean",
         "isStatic": false,
         "isOptional": false,
         "descr": "Function for checking if a given permission mask has the requested permission.",
@@ -1696,7 +1696,7 @@
       },
       "getValue~fqkA9": {
         "accessModifier": "public",
-        "signature": "public getValue(param: string): string",
+        "signature": "getValue(param: string): string",
         "isStatic": false,
         "isOptional": false,
         "descr": "Returns the value of the first matching query parameter or undefined if the key doesn't exist. \nExamples: this._queryParameterList = [ \n{key: TEST, value: done}, \n{key: DEBUG, value: false}, \n{key: TEST, value: notdone}] \ngetValue('TEST') ---> 'done' \ngetValue('debug') ---> 'false' \ngetValue('lost') ---> undefined",
@@ -1714,7 +1714,7 @@
       },
       "getValues~8n0Q9": {
         "accessModifier": "public",
-        "signature": "public getValues(param: string): string[]",
+        "signature": "getValues(param: string): string[]",
         "isStatic": false,
         "isOptional": false,
         "descr": "Returns the values of all of the matching query parameters or undefined if the key doesn't exist. \nExamples: this._queryParameterList = [ \n{key: TEST, value: done}, \n{key: DEBUG, value: false}, \n{key: TEST, value: notdone}] \ngetValues('TEST') ---> ['done', 'notdone'] \ngetValues('debug') ---> ['false'] \ngetValues('lost') ---> undefined",
@@ -1742,7 +1742,7 @@
     "methods": {
       "convertToODataStringLiteral~Maqc9": {
         "accessModifier": "public",
-        "signature": "public convertToODataStringLiteral(value: string): string",
+        "signature": "convertToODataStringLiteral(value: string): string",
         "isStatic": true,
         "isOptional": false,
         "descr": "Converts a variable to an OData string literal and escapes apostrophes. \nOData specification: \nhttps://tools.oasis-open.org/version-control/ \nbrowse/wsvn/odata/trunk/spec/ABNF/odata-abnf-construction-rules.txt \nSQUOTE-in-string = SQUOTE SQUOTE ; two consecutive single quotes represent one within a string literal \nExamples: \nconvertToODataStringLiteral(\"example's list\") ---> \"'example''s list'\" \nconvertToODataStringLiteral(\"example list\") ---> \"'example list'\" \nconvertToODataStringLiteral(\"'example list'\") ---> \"'''example list'''\"",
@@ -1760,7 +1760,7 @@
       },
       "removeEndSlash~kcNo9": {
         "accessModifier": "public",
-        "signature": "public removeEndSlash(url: string): string",
+        "signature": "removeEndSlash(url: string): string",
         "isStatic": true,
         "isOptional": false,
         "descr": "Removes any slash characters from the end of the URL. \nThis function assumes that the input is already a valid absolute or server-relative URL. \nExamples: \nremoveEndSlash('http://example.com/') ---> 'http://example.com' \nremoveEndSlash('/example') ---> '/example' \nremoveEndSlash('/') ---> ''",
@@ -1788,7 +1788,7 @@
     "methods": {
       "isNonemptyString~P7xU9": {
         "accessModifier": "public",
-        "signature": "public isNonemptyString(value: string,variableName: string): void",
+        "signature": "isNonemptyString(value: string,variableName: string): void",
         "isStatic": true,
         "isOptional": false,
         "descr": "Throws an exception if the specified string is null,undefined,or an empty string.",
@@ -1812,7 +1812,7 @@
       },
       "isNotNullOrUndefined~v0mM9": {
         "accessModifier": "public",
-        "signature": "public isNotNullOrUndefined(value: any,variableName: string): void",
+        "signature": "isNotNullOrUndefined(value: any,variableName: string): void",
         "isStatic": true,
         "isOptional": false,
         "descr": "Throws an exception if the specified value is null or undefined.",
@@ -1836,7 +1836,7 @@
       },
       "isTrue~1EA89": {
         "accessModifier": "public",
-        "signature": "public isTrue(value: boolean,variableName: string): void",
+        "signature": "isTrue(value: boolean,variableName: string): void",
         "isStatic": true,
         "isOptional": false,
         "descr": "Throws an exception if the specified value is not true.",

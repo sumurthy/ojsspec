@@ -61,7 +61,7 @@ getValue('debug') ---> 'false'
 getValue('lost') ---> undefined
 
 #### Signature
-`public getValue(param: string): string`
+`getValue(param: string): string`
 
 #### Returns
 `string`
@@ -87,7 +87,7 @@ getValues('debug') ---> ['false']
 getValues('lost') ---> undefined
 
 #### Signature
-`public getValues(param: string): string[]`
+`getValues(param: string): string[]`
 
 #### Returns
 `string[]`

@@ -59,7 +59,7 @@ are essentially the same as the WHATWG API standard that is documented here:
 https://fetch.spec.whatwg.org/
 
 #### Signature
-`public fetch(url: string,options: IBasicHttpClientOptions): Promise<Response>`
+`fetch(url: string,options: IBasicHttpClientOptions): Promise<Response>`
 
 #### Returns
 [`Promise<Response>`](promise.md)
@@ -79,7 +79,7 @@ a promise that will return the result
 
 
 #### Signature
-`protected fetchCore(request: Request): Promise<Response>`
+`fetchCore(request: Request): Promise<Response>`
 
 #### Returns
 [`Promise<Response>`](promise.md)
@@ -98,7 +98,7 @@ a promise that will return the result
 Calls fetch(),but sets the method to 'GET'.
 
 #### Signature
-`public get(url: string,options?: IBasicHttpClientOptions): Promise<Response>`
+`get(url: string,options?: IBasicHttpClientOptions): Promise<Response>`
 
 #### Returns
 [`Promise<Response>`](promise.md)
@@ -118,7 +118,7 @@ a promise that will return the result
 Calls fetch(),but sets the method to 'POST'.
 
 #### Signature
-`public post(url: string,options: IBasicHttpClientOptions): Promise<Response>`
+`post(url: string,options: IBasicHttpClientOptions): Promise<Response>`
 
 #### Returns
 [`Promise<Response>`](promise.md)

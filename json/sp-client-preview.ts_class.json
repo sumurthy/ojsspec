@@ -137,7 +137,7 @@
       },
       "clearError~XLFc9": {
         "accessModifier": "protected",
-        "signature": "protected clearError(): void",
+        "signature": "clearError(): void",
         "isStatic": false,
         "isOptional": false,
         "descr": "This API should be used to clear the error message from the web part display area.",
@@ -148,7 +148,7 @@
       },
       "configureStart~3kKs9": {
         "accessModifier": "protected",
-        "signature": "protected configureStart(refreshOnly?: boolean): void",
+        "signature": "configureStart(refreshOnly?: boolean): void",
         "isStatic": false,
         "isOptional": false,
         "descr": "This API should be used to invoke the PropertyPane to help configure the web part. \n",
@@ -166,7 +166,7 @@
       },
       "deserialize~n2e89": {
         "accessModifier": "protected",
-        "signature": "protected deserialize(data: IWebPartData): TProperties",
+        "signature": "deserialize(data: IWebPartData): TProperties",
         "isStatic": false,
         "isOptional": false,
         "descr": "This API is called once during the lifetime of the web part during the intial render and just before the onInit \nAPI call. The purpose of this API is to help a web part developer deserialize the web part data and manage the \nversioning of their data as the web part code evolves. The web part data may have been persisted with an older \nor newer version of the web part code. This API gives the web part developer an opportunity to re-structure their \ndata to the appropriate data schema. The persisted data contains the version number information. That information \ncan be used to make decisions on how to re-structure the data. \n",
@@ -184,7 +184,7 @@
       },
       "dispose~Xs8Y9": {
         "accessModifier": "protected",
-        "signature": "protected dispose(): void",
+        "signature": "dispose(): void",
         "isStatic": false,
         "isOptional": false,
         "descr": "This API is called at the end of the web part lifecycle. It should be overridden to dispose any \nresources that the web part is holding onto.",
@@ -195,7 +195,7 @@
       },
       "onBeforeSerialize~jLOk9": {
         "accessModifier": "protected",
-        "signature": "protected onBeforeSerialize(): IHtmlProperties",
+        "signature": "onBeforeSerialize(): IHtmlProperties",
         "isStatic": false,
         "isOptional": false,
         "descr": "This API is called before a web part is serialized. The default implementation is a no-op. A web part developer \nis expected to override this API when the web part's state is not fully reflected in the property bag i.e. \nthis.properties. In the overridden method, the web part developer is expected to update the state of the web \npart property bag. This way the web part serialization process will use the upto date state of the web part. \n",
@@ -206,7 +206,7 @@
       },
       "onDisplayModeChanged~l3vU9": {
         "accessModifier": "protected",
-        "signature": "protected onDisplayModeChanged(oldDisplayMode: DisplayMode): void",
+        "signature": "onDisplayModeChanged(oldDisplayMode: DisplayMode): void",
         "isStatic": false,
         "isOptional": false,
         "descr": "This API is called when the display mode of a web part is changed. The default implementation of this API calls \nthe web part render method to re-render the web part with the new display mode. If a web part developer does not \nwant a full re-render to happen on display mode change, they can override this API and perform specific updates \nto the web part DOM to switch its display mode. \n",
@@ -224,7 +224,7 @@
       },
       "onInit<T>~mxes9": {
         "accessModifier": "protected",
-        "signature": "protected onInit<T>(): Promise<T>",
+        "signature": "onInit<T>(): Promise<T>",
         "isStatic": false,
         "isOptional": false,
         "descr": "This API should be overridden to perform long running operations e.g. data fetching from a remote service before \nthe initial rendering of the web part. The loading indicator is displayed during the lifetime of this method. \nThis API is called only once during the lifecycle of a web part.",
@@ -235,7 +235,7 @@
       },
       "onPropertyChange~Xdzg9": {
         "accessModifier": "protected",
-        "signature": "protected onPropertyChange(propertyPath: string,newValue: any): void",
+        "signature": "onPropertyChange(propertyPath: string,newValue: any): void",
         "isStatic": false,
         "isOptional": false,
         "descr": "This API is invoked on property changes in the PropertyPane when the PropertyPane is being used in Reactive mode. \nThe base implementation of this API updates the web part property bag and re-render the web part. This API also \ninvokes the web part host's setDirty API. \n",
@@ -259,7 +259,7 @@
       },
       "onPropertyConfigurationComplete~64o89": {
         "accessModifier": "protected",
-        "signature": "protected onPropertyConfigurationComplete(): void",
+        "signature": "onPropertyConfigurationComplete(): void",
         "isStatic": false,
         "isOptional": false,
         "descr": "This API is called when the current web part configuration process is completed. ConfigurationComplete event \nis fired when user switches between web parts while the PropertyPane is open, and this event handler is called \nfor the previously selected web part. \n",
@@ -270,7 +270,7 @@
       },
       "onPropertyPaneRendered~9zCU9": {
         "accessModifier": "protected",
-        "signature": "protected onPropertyPaneRendered(): void",
+        "signature": "onPropertyPaneRendered(): void",
         "isStatic": false,
         "isOptional": false,
         "descr": "This API is involed when the PropertyPane is rendered.",
@@ -281,7 +281,7 @@
       },
       "onPropertyPaneSave~Qdfc9": {
         "accessModifier": "protected",
-        "signature": "protected onPropertyPaneSave(): void",
+        "signature": "onPropertyPaneSave(): void",
         "isStatic": false,
         "isOptional": false,
         "descr": "this API is invoked when the the changes are applied on the PropertyPane when the PropertyPane is used in \nNon-Reactive mode. This API is not invoked when the PropertyPane is used in Reactive mode.",
@@ -292,7 +292,7 @@
       },
       "render~u4mg9": {
         "accessModifier": "public",
-        "signature": "public render(): void",
+        "signature": "render(): void",
         "isStatic": false,
         "isOptional": false,
         "descr": "This API is called to render the web part. There is no base implementation of this API and the web part is \nrequired to override this API.",
@@ -303,7 +303,7 @@
       },
       "renderError~VXc09": {
         "accessModifier": "protected",
-        "signature": "protected renderError(error: Error): void",
+        "signature": "renderError(error: Error): void",
         "isStatic": false,
         "isOptional": false,
         "descr": "This API should be used to render an error message in the web part display area. Also logs the error message \nusing the trace logger. \n",

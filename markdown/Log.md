@@ -31,7 +31,7 @@ which component generated the messages and makes the messages useful and filtera
 Logs an error
 
 #### Signature
-`public error(source: string,error: Error,scope?: ServiceScope): void`
+`error(source: string,error: Error,scope?: ServiceScope): void`
 
 #### Returns
 `void`
@@ -52,7 +52,7 @@ Logs an error
 Logs an informational message
 
 #### Signature
-`public info(source: string,message: string,scope?: ServiceScope): void`
+`info(source: string,message: string,scope?: ServiceScope): void`
 
 #### Returns
 `void`
@@ -73,7 +73,7 @@ Logs an informational message
 Logs a verbose message
 
 #### Signature
-`public verbose(source: string,message: string,scope?: ServiceScope): void`
+`verbose(source: string,message: string,scope?: ServiceScope): void`
 
 #### Returns
 `void`
@@ -94,7 +94,7 @@ Logs a verbose message
 Logs a warning
 
 #### Signature
-`public warn(source: string,message: string,scope?: ServiceScope): void`
+`warn(source: string,message: string,scope?: ServiceScope): void`
 
 #### Returns
 `void`

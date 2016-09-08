@@ -92,7 +92,7 @@ https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.
 Function for determining if a given permission mask has all of the requested permissions.
 
 #### Signature
-`public hasAllPermissions(...requestedPerms: SPPermission[]): boolean`
+`hasAllPermissions(...requestedPerms: SPPermission[]): boolean`
 
 #### Returns
 `boolean`
@@ -111,7 +111,7 @@ Function for determining if a given permission mask has all of the requested per
 Function for determining if a given permission mask has any of the requested permissions.
 
 #### Signature
-`public hasAnyPermissions(...requestedPerms: SPPermission[]): boolean`
+`hasAnyPermissions(...requestedPerms: SPPermission[]): boolean`
 
 #### Returns
 `boolean`
@@ -130,7 +130,7 @@ Function for determining if a given permission mask has any of the requested per
 Function for checking if a given permission mask has the requested permission.
 
 #### Signature
-`public hasPermission(requestedPerm: SPPermission): boolean`
+`hasPermission(requestedPerm: SPPermission): boolean`
 
 #### Returns
 `boolean`

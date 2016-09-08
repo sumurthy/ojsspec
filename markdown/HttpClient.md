@@ -55,7 +55,7 @@ Begins an ODATA batch,which allows multiple REST queries to be bundled into
 a single web request.
 
 #### Signature
-`public beginBatch(batchOptions?: IODataBatchOptions): ODataBatch`
+`beginBatch(batchOptions?: IODataBatchOptions): ODataBatch`
 
 #### Returns
 [`ODataBatch`](odatabatch.md)
@@ -92,7 +92,7 @@ to specify it explicitly.
 
 
 #### Signature
-`public fetch(url: string,options: IHttpClientOptions): Promise<Response>`
+`fetch(url: string,options: IHttpClientOptions): Promise<Response>`
 
 #### Returns
 [`Promise<Response>`](promise.md)
@@ -112,7 +112,7 @@ a promise that will return the result
 Calls fetch(),but sets the method to 'GET'.
 
 #### Signature
-`public get(url: string,options?: IHttpClientOptions): Promise<Response>`
+`get(url: string,options?: IHttpClientOptions): Promise<Response>`
 
 #### Returns
 [`Promise<Response>`](promise.md)
@@ -139,7 +139,7 @@ is "http://example.com/_layouts/service", the returned URL would be
 "http://example.com".
 
 #### Signature
-`public getWebUrlFromRequestUrl(requestUrl: string): string`
+`getWebUrlFromRequestUrl(requestUrl: string): string`
 
 #### Returns
 `string`
@@ -158,7 +158,7 @@ the inferred SPWeb URL
 Calls fetch(),but sets the method to 'POST'.
 
 #### Signature
-`public post(url: string,options: IHttpClientOptions): Promise<Response>`
+`post(url: string,options: IHttpClientOptions): Promise<Response>`
 
 #### Returns
 [`Promise<Response>`](promise.md)

@@ -230,12 +230,13 @@ var self = module.exports = {
         return am
     },
     getSignature: (line = '') => {
-        var signature = ''
-        if (line.includes('constructor')) {
-            signature = line
-        } else {
-            signature = line.substr(line.indexOf(" ") + 1);
-        }
+        // var signature = ''
+        // if (line.includes('constructor')) {
+        //     signature = line
+        // } else {
+        //     signature = line.substr(line.indexOf(" ") + 1);
+        // }
+        line = self.stripQualifier(line)
         return line
 
     },

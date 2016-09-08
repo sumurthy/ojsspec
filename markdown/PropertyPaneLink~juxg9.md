@@ -3,7 +3,7 @@
 Helper method to create a Link on the PropertyPane.
 
 #### Signature
-`export function PropertyPaneLink(targetProperty: string,properties: IPropertyPaneLinkProps): IPropertyPaneField<IPropertyPaneLinkProps>`
+`PropertyPaneLink(targetProperty: string,properties: IPropertyPaneLinkProps): IPropertyPaneField<IPropertyPaneLinkProps>`
 
 #### Returns
 [`IPropertyPaneField<IPropertyPaneLinkProps>`](ipropertypanefield.md)

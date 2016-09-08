@@ -84,7 +84,7 @@ If a sub class overrides the constructor, it needs to call super(context) as the
 This API should be used to clear the error message from the web part display area.
 
 #### Signature
-`protected clearError(): void`
+`clearError(): void`
 
 #### Returns
 `void`
@@ -100,7 +100,7 @@ This API should be used to invoke the PropertyPane to help configure the web par
 
 
 #### Signature
-`protected configureStart(refreshOnly?: boolean): void`
+`configureStart(refreshOnly?: boolean): void`
 
 #### Returns
 `void`
@@ -125,7 +125,7 @@ can be used to make decisions on how to re-structure the data.
 
 
 #### Signature
-`protected deserialize(data: IWebPartData): TProperties`
+`deserialize(data: IWebPartData): TProperties`
 
 #### Returns
 `TProperties`
@@ -146,7 +146,7 @@ This API is called at the end of the web part lifecycle. It should be overridden
 resources that the web part is holding onto.
 
 #### Signature
-`protected dispose(): void`
+`dispose(): void`
 
 #### Returns
 `void`
@@ -165,7 +165,7 @@ part property bag. This way the web part serialization process will use the upto
 
 
 #### Signature
-`protected onBeforeSerialize(): IHtmlProperties`
+`onBeforeSerialize(): IHtmlProperties`
 
 #### Returns
 [`IHtmlProperties`](ihtmlproperties.md)
@@ -185,7 +185,7 @@ to the web part DOM to switch its display mode.
 
 
 #### Signature
-`protected onDisplayModeChanged(oldDisplayMode: DisplayMode): void`
+`onDisplayModeChanged(oldDisplayMode: DisplayMode): void`
 
 #### Returns
 `void`
@@ -206,7 +206,7 @@ the initial rendering of the web part. The loading indicator is displayed during
 This API is called only once during the lifecycle of a web part.
 
 #### Signature
-`protected onInit<T>(): Promise<T>`
+`onInit<T>(): Promise<T>`
 
 #### Returns
 [`Promise<T>`](promise.md)
@@ -224,7 +224,7 @@ invokes the web part host's setDirty API.
 
 
 #### Signature
-`protected onPropertyChange(propertyPath: string,newValue: any): void`
+`onPropertyChange(propertyPath: string,newValue: any): void`
 
 #### Returns
 `void`
@@ -247,7 +247,7 @@ for the previously selected web part.
 
 
 #### Signature
-`protected onPropertyConfigurationComplete(): void`
+`onPropertyConfigurationComplete(): void`
 
 #### Returns
 `void`
@@ -262,7 +262,7 @@ None
 This API is involed when the PropertyPane is rendered.
 
 #### Signature
-`protected onPropertyPaneRendered(): void`
+`onPropertyPaneRendered(): void`
 
 #### Returns
 `void`
@@ -278,7 +278,7 @@ this API is invoked when the the changes are applied on the PropertyPane when th
 Non-Reactive mode. This API is not invoked when the PropertyPane is used in Reactive mode.
 
 #### Signature
-`protected onPropertyPaneSave(): void`
+`onPropertyPaneSave(): void`
 
 #### Returns
 `void`
@@ -294,7 +294,7 @@ This API is called to render the web part. There is no base implementation of th
 required to override this API.
 
 #### Signature
-`public render(): void`
+`render(): void`
 
 #### Returns
 `void`
@@ -311,7 +311,7 @@ using the trace logger.
 
 
 #### Signature
-`protected renderError(error: Error): void`
+`renderError(error: Error): void`
 
 #### Returns
 `void`

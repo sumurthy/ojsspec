@@ -35,7 +35,7 @@ convertToODataStringLiteral("example list") ---> "'example list'"
 convertToODataStringLiteral("'example list'") ---> "'''example list'''"
 
 #### Signature
-`public convertToODataStringLiteral(value: string): string`
+`convertToODataStringLiteral(value: string): string`
 
 #### Returns
 `string`
@@ -59,7 +59,7 @@ removeEndSlash('/example') ---> '/example'
 removeEndSlash('/') ---> ''
 
 #### Signature
-`public removeEndSlash(url: string): string`
+`removeEndSlash(url: string): string`
 
 #### Returns
 `string`

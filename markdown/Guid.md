@@ -37,7 +37,7 @@ Compare this instance to another Guid instance
 
 
 #### Signature
-`public equals(guid: Guid): boolean`
+`equals(guid: Guid): boolean`
 
 #### Returns
 `boolean`
@@ -58,7 +58,7 @@ Indicates whether a guid is valid (according to RFC4122).
 
 
 #### Signature
-`public isValid(guid: string): boolean`
+`isValid(guid: string): boolean`
 
 #### Returns
 `boolean`
@@ -78,7 +78,7 @@ Returns a new Guid instance with a pseudo-randomly generated Guid.
 
 
 #### Signature
-`public newGuid(randomProvider?: IRandomProvider): Guid`
+`newGuid(randomProvider?: IRandomProvider): Guid`
 
 #### Returns
 [`Guid`](guid.md)
@@ -98,7 +98,7 @@ Object.prototype.toString override
 
 
 #### Signature
-`public toString(): string`
+`toString(): string`
 
 #### Returns
 `string`
@@ -117,7 +117,7 @@ RFC 4122, tryParse will return undefined.
 
 
 #### Signature
-`public tryParse(guid: string): Guid`
+`tryParse(guid: string): Guid`
 
 #### Returns
 [`Guid`](guid.md)

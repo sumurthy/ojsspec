@@ -5,7 +5,7 @@ the array passed to all can be a mixture of promise-like objects and other objec
 The fulfillment value is an array (in order) of fulfillment values. The rejection value is the first rejection value.
 
 #### Signature
-`function all<R>(promises: (R | Thenable<R>)[]): Promise<R[]>`
+`all<R>(promises: (R | Thenable<R>)[]): Promise<R[]>`
 
 #### Returns
 [`Promise<R[]>`](promise.md)

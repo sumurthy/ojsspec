@@ -1,7 +1,7 @@
 {
   "combineURLPaths~vm409": {
     "accessModifier": "public",
-    "signature": "export function combineURLPaths(...url: string[]): string",
+    "signature": "combineURLPaths(...url: string[]): string",
     "isStatic": false,
     "isOptional": false,
     "descr": "Combines any number of URL paths.",
@@ -19,7 +19,7 @@
   },
   "getPathNameFromAbsoluteUrl~LxLU9": {
     "accessModifier": "public",
-    "signature": "export function getPathNameFromAbsoluteUrl(url: string): string",
+    "signature": "getPathNameFromAbsoluteUrl(url: string): string",
     "isStatic": false,
     "isOptional": false,
     "descr": "Get's the path name from an absolute url. \n",
@@ -37,7 +37,7 @@
   },
   "PropertyPaneButton~gfP89": {
     "accessModifier": "public",
-    "signature": "export function PropertyPaneButton(targetProperty: string,properties: IPropertyPaneButtonProps): IPropertyPaneField<IPropertyPaneButtonProps>",
+    "signature": "PropertyPaneButton(targetProperty: string,properties: IPropertyPaneButtonProps): IPropertyPaneField<IPropertyPaneButtonProps>",
     "isStatic": false,
     "isOptional": false,
     "descr": "Helper method to create a Button on the PropertyPane.",
@@ -61,7 +61,7 @@
   },
   "PropertyPaneCheckbox~V0849": {
     "accessModifier": "public",
-    "signature": "export function PropertyPaneCheckbox(targetProperty: string,properties: IPropertyPaneCheckboxProps): IPropertyPaneField<IPropertyPaneCheckboxProps>",
+    "signature": "PropertyPaneCheckbox(targetProperty: string,properties: IPropertyPaneCheckboxProps): IPropertyPaneField<IPropertyPaneCheckboxProps>",
     "isStatic": false,
     "isOptional": false,
     "descr": "Helper method to create a Checkbox on the PropertyPane.",
@@ -85,7 +85,7 @@
   },
   "PropertyPaneChoiceGroup~jUI09": {
     "accessModifier": "public",
-    "signature": "export function PropertyPaneChoiceGroup(targetProperty: string,properties: IPropertyPaneChoiceGroupProps): IPropertyPaneField<IPropertyPaneChoiceGroupProps>",
+    "signature": "PropertyPaneChoiceGroup(targetProperty: string,properties: IPropertyPaneChoiceGroupProps): IPropertyPaneField<IPropertyPaneChoiceGroupProps>",
     "isStatic": false,
     "isOptional": false,
     "descr": "Helper method to create a Choice Group on the PropertyPane.",
@@ -109,7 +109,7 @@
   },
   "PropertyPaneCustomField~QzDs9": {
     "accessModifier": "public",
-    "signature": "export function PropertyPaneCustomField(targetProperty: string,properties: IPropertyPaneCustomFieldProps): IPropertyPaneField<IPropertyPaneCustomFieldProps>",
+    "signature": "PropertyPaneCustomField(targetProperty: string,properties: IPropertyPaneCustomFieldProps): IPropertyPaneField<IPropertyPaneCustomFieldProps>",
     "isStatic": false,
     "isOptional": false,
     "descr": "Helper method to create a Choice Group on the PropertyPane.",
@@ -133,7 +133,7 @@
   },
   "PropertyPaneDropdown~ro4g9": {
     "accessModifier": "public",
-    "signature": "export function PropertyPaneDropdown(targetProperty: string,properties: IPropertyPaneDropdownProps): IPropertyPaneField<IPropertyPaneDropdownProps>",
+    "signature": "PropertyPaneDropdown(targetProperty: string,properties: IPropertyPaneDropdownProps): IPropertyPaneField<IPropertyPaneDropdownProps>",
     "isStatic": false,
     "isOptional": false,
     "descr": "Helper method to create a Dropdown on the PropertyPane.",
@@ -157,7 +157,7 @@
   },
   "PropertyPaneHorizontalRule~c9a89": {
     "accessModifier": "public",
-    "signature": "export function PropertyPaneHorizontalRule(): IPropertyPaneField<void>",
+    "signature": "PropertyPaneHorizontalRule(): IPropertyPaneField<void>",
     "isStatic": false,
     "isOptional": false,
     "descr": "Helper method to create a Horizontal Rule on the PropertyPane.",
@@ -168,7 +168,7 @@
   },
   "PropertyPaneLabel~lVOg9": {
     "accessModifier": "public",
-    "signature": "export function PropertyPaneLabel(targetProperty: string,properties: IPropertyPaneLabelProps): IPropertyPaneField<IPropertyPaneLabelProps>",
+    "signature": "PropertyPaneLabel(targetProperty: string,properties: IPropertyPaneLabelProps): IPropertyPaneField<IPropertyPaneLabelProps>",
     "isStatic": false,
     "isOptional": false,
     "descr": "Helper method to create a Label on the PropertyPane.",
@@ -192,7 +192,7 @@
   },
   "PropertyPaneLink~juxg9": {
     "accessModifier": "public",
-    "signature": "export function PropertyPaneLink(targetProperty: string,properties: IPropertyPaneLinkProps): IPropertyPaneField<IPropertyPaneLinkProps>",
+    "signature": "PropertyPaneLink(targetProperty: string,properties: IPropertyPaneLinkProps): IPropertyPaneField<IPropertyPaneLinkProps>",
     "isStatic": false,
     "isOptional": false,
     "descr": "Helper method to create a Link on the PropertyPane.",
@@ -216,7 +216,7 @@
   },
   "PropertyPaneSlider~Bm7g9": {
     "accessModifier": "public",
-    "signature": "export function PropertyPaneSlider(targetProperty: string,properties: IPropertyPaneSliderProps): IPropertyPaneField<IPropertyPaneSliderProps>",
+    "signature": "PropertyPaneSlider(targetProperty: string,properties: IPropertyPaneSliderProps): IPropertyPaneField<IPropertyPaneSliderProps>",
     "isStatic": false,
     "isOptional": false,
     "descr": "Helper method to create a Slider on the PropertyPane.",
@@ -240,7 +240,7 @@
   },
   "PropertyPaneTextField~Kc9c9": {
     "accessModifier": "public",
-    "signature": "export function PropertyPaneTextField(targetProperty: string,properties: IPropertyPaneTextFieldProps): IPropertyPaneField<IPropertyPaneTextFieldProps>",
+    "signature": "PropertyPaneTextField(targetProperty: string,properties: IPropertyPaneTextFieldProps): IPropertyPaneField<IPropertyPaneTextFieldProps>",
     "isStatic": false,
     "isOptional": false,
     "descr": "Helper method to create a TextField on the PropertyPane.",
@@ -264,7 +264,7 @@
   },
   "PropertyPaneToggle~dEnY9": {
     "accessModifier": "public",
-    "signature": "export function PropertyPaneToggle(targetProperty: string,properties: IPropertyPaneToggleProps): IPropertyPaneField<IPropertyPaneToggleProps>",
+    "signature": "PropertyPaneToggle(targetProperty: string,properties: IPropertyPaneToggleProps): IPropertyPaneField<IPropertyPaneToggleProps>",
     "isStatic": false,
     "isOptional": false,
     "descr": "Helper method to create a Toggle on the PropertyPane.",

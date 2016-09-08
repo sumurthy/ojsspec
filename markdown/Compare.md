@@ -27,7 +27,7 @@ only object types.
 
 
 #### Signature
-`public shallowCompare(objA: Object,objB: Object): boolean`
+`shallowCompare(objA: Object,objB: Object): boolean`
 
 #### Returns
 `boolean`
