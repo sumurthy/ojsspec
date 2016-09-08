@@ -43,6 +43,7 @@
 #### Returns
 [`ResponseInit`](responseinit.md)
 
+
 #### Parameters
 
 
@@ -62,6 +63,7 @@
 #### Returns
 [`Response`](response.md)
 
+
 #### Parameters
 None
 
@@ -75,6 +77,7 @@ None
 
 #### Returns
 [`Response`](response.md)
+
 
 #### Parameters
 
@@ -94,6 +97,7 @@ None
 
 #### Returns
 [`Response`](response.md)
+
 
 #### Parameters
 None

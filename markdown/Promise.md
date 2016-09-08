@@ -16,7 +16,7 @@ _Type parameters: `<R>`_
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
 |[`constructor`](#constructor)     | `public` | `any => void) => void)` | If you call resolve in the body of the callback passed to the constructor,  your promise is fulfilled with result object passed to resolve |
-|[`then<U>`](#then<u>)     | `public` | [`Promise<U>`](promise.md) | onFulfilled is called when/if "promise" resolves |
+|[`then<U>`](#then<u>)     | `public` | [`Promise<U>`](promise.md) |  |
 |[`catch<U>`](#catch<u>)     | `public` | [`Promise<U>`](promise.md) | Sugar for promise |
 
 
@@ -36,6 +36,7 @@ Any errors thrown in the constructor callback will be implicitly passed to rejec
 #### Returns
 `any => void) => void)`
 
+
 #### Parameters
 
 
@@ -47,11 +48,6 @@ Any errors thrown in the constructor callback will be implicitly passed to rejec
 
 ### then<U>
 
-onFulfilled is called when/if "promise" resolves. onRejected is called when/if "promise" rejects. 
-Both are optional, if either/both are omitted the next onFulfilled/onRejected in the chain is called. 
-Both callbacks have a single parameter , the fulfillment value or rejection reason. 
-"then" returns a new promise equivalent to the value you return from onFulfilled/onRejected after being passed through Promise.resolve. 
-If an error is thrown in the callback, the returned promise rejects with that error. 
 
 
 #### Signature
@@ -59,6 +55,7 @@ If an error is thrown in the callback, the returned promise rejects with that er
 
 #### Returns
 [`Promise<U>`](promise.md)
+
 
 #### Parameters
 
@@ -80,10 +77,11 @@ Sugar for promise.then(undefined,onRejected)
 #### Returns
 [`Promise<U>`](promise.md)
 
+
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `onRejected`    | `(error: any) => U `,[` Thenable<U>`](thenable.md) | _Optional._ |
+| `onRejected`    | `(error: any) => U `,[` Thenable<U>`](thenable.md) | _Optional._called when/if "promise" rejects |
 

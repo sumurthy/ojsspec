@@ -13,7 +13,7 @@
         "returnType": null,
         "assignValue": null,
         "isCollection": false,
-        "descr": "Calls fetch(),but sets the method to 'POST'."
+        "descr": ""
       }
     },
     "functions": {},
@@ -26,7 +26,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "ServiceScope",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "serviceScope",
@@ -44,19 +44,19 @@
         "descr": "Performs a REST service call. Although the HttpClient subclass adds \nadditional enhancements, the parameters and semantics for BasicHttpClient.fetch() \nare essentially the same as the WHATWG API standard that is documented here: \nhttps://fetch.spec.whatwg.org/",
         "genericType": null,
         "returnType": "Promise<Response>",
-        "returnDescr": null,
+        "returnDescr": "a promise that will return the result",
         "params": [
           {
             "name": "url",
             "dataType": "string",
             "isOptional": false,
-            "descr": ""
+            "descr": "- the URL to fetch"
           },
           {
             "name": "options",
             "dataType": "IBasicHttpClientOptions",
             "isOptional": false,
-            "descr": ""
+            "descr": "- additional options that affect the request"
           }
         ]
       },
@@ -65,10 +65,10 @@
         "signature": "protected fetchCore(request: Request): Promise<Response>",
         "isStatic": false,
         "isOptional": false,
-        "descr": "Performs a REST service call. Although the HttpClient subclass adds \nadditional enhancements, the parameters and semantics for BasicHttpClient.fetch() \nare essentially the same as the WHATWG API standard that is documented here: \nhttps://fetch.spec.whatwg.org/",
+        "descr": "",
         "genericType": null,
         "returnType": "Promise<Response>",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "request",
@@ -86,19 +86,19 @@
         "descr": "Calls fetch(),but sets the method to 'GET'.",
         "genericType": null,
         "returnType": "Promise<Response>",
-        "returnDescr": null,
+        "returnDescr": "a promise that will return the result",
         "params": [
           {
             "name": "url",
             "dataType": "string",
             "isOptional": false,
-            "descr": ""
+            "descr": "- the URL to fetch"
           },
           {
             "name": "options",
             "dataType": "IBasicHttpClientOptions",
             "isOptional": true,
-            "descr": ""
+            "descr": "- additional options that affect the request"
           }
         ]
       },
@@ -110,19 +110,19 @@
         "descr": "Calls fetch(),but sets the method to 'POST'.",
         "genericType": null,
         "returnType": "Promise<Response>",
-        "returnDescr": null,
+        "returnDescr": "a promise that will return the result",
         "params": [
           {
             "name": "url",
             "dataType": "string",
             "isOptional": false,
-            "descr": ""
+            "descr": "- the URL to fetch"
           },
           {
             "name": "options",
             "dataType": "IBasicHttpClientOptions",
             "isOptional": false,
-            "descr": ""
+            "descr": "- additional options that affect the request"
           }
         ]
       }
@@ -144,19 +144,19 @@
         "descr": "Performs shallow comparison between two objects to determine if they are equal. This method compares \nonly object types. \n",
         "genericType": null,
         "returnType": "boolean",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "objA",
             "dataType": "Object",
             "isOptional": false,
-            "descr": ""
+            "descr": "- the first object to compare."
           },
           {
             "name": "objB",
             "dataType": "Object",
             "isOptional": false,
-            "descr": ""
+            "descr": "- the second object to compare. \n"
           }
         ]
       }
@@ -231,7 +231,7 @@
         "descr": "Compare this instance to another Guid instance \n",
         "genericType": null,
         "returnType": "boolean",
-        "returnDescr": null,
+        "returnDescr": "A value indicating whether this instance and the specified Guid object \nrepresent the same value",
         "params": [
           {
             "name": "guid",
@@ -249,13 +249,13 @@
         "descr": "Indicates whether a guid is valid (according to RFC4122). \n",
         "genericType": null,
         "returnType": "boolean",
-        "returnDescr": null,
+        "returnDescr": "Value indicating whether the guid is valid.",
         "params": [
           {
             "name": "guid",
             "dataType": "string",
             "isOptional": false,
-            "descr": ""
+            "descr": "- Test guid."
           }
         ]
       },
@@ -267,7 +267,7 @@
         "descr": "Returns a new Guid instance with a pseudo-randomly generated Guid. \n",
         "genericType": null,
         "returnType": "Guid",
-        "returnDescr": null,
+        "returnDescr": "A new valid unique Guid object",
         "params": [
           {
             "name": "randomProvider",
@@ -285,7 +285,7 @@
         "descr": "Object.prototype.toString override \n",
         "genericType": null,
         "returnType": "string",
-        "returnDescr": null,
+        "returnDescr": "The GUID value in lowercase hexadecimal without braces. \nExample: 'd5369f3b-bd7a-412a-9c0f-7f0650bb5489'",
         "params": []
       },
       "tryParse~Rx2E9": {
@@ -296,13 +296,13 @@
         "descr": "Trys to construct a new Guid instance using guid string. The guid argument \nis normalized and validated. If the argument is not a valid \"version 4\" UUID from \nRFC 4122, tryParse will return undefined. \n",
         "genericType": null,
         "returnType": "Guid",
-        "returnDescr": null,
+        "returnDescr": "If the guid argument was valid,a new Guid instance. Otherwise,undefined.",
         "params": [
           {
             "name": "guid",
             "dataType": "string",
             "isOptional": false,
-            "descr": ""
+            "descr": "- A guid string"
           }
         ]
       }
@@ -324,7 +324,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "ServiceScope",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "serviceScope",
@@ -342,7 +342,7 @@
         "descr": "Begins an ODATA batch,which allows multiple REST queries to be bundled into \na single web request.",
         "genericType": null,
         "returnType": "ODataBatch",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "batchOptions",
@@ -360,19 +360,19 @@
         "descr": "Generally,the parameters and semantics for HttpClient.fetch() are essentially \nthe same as the WHATWG API standard that is documented here: \nhttps://fetch.spec.whatwg.org/ \n \nThe HttpClient subclass adds some additional behaviors that are convenient when \nworking with SharePoint ODATA API's (which can be avoided by using \nBasicHttpClient instead): \n- Default \"Accept\" and \"Content-Type\" headers are added if not explicitly specified. \n- For write operations, an \"X-RequestDigest\" header is automatically added \n- The request digest token is automatically fetched and stored in a cache, with \nsupport for preloading \n \nFor a write operation, HttpClient will automatically add the \"X-RequestDigest\" \nheader, which may need to be obtained by issuing a seperate request such as \n\"https://example.com/sites/sample/_api/contextinfo\". Typically the appropriate \nSPWeb URL can be guessed by looking for a reserved URL segment such as \"_api\" \nin the original URL passed to fetch(); if not, use IHttpClientOptions.webUrl \nto specify it explicitly. \n",
         "genericType": null,
         "returnType": "Promise<Response>",
-        "returnDescr": null,
+        "returnDescr": "a promise that will return the result",
         "params": [
           {
             "name": "url",
             "dataType": "string",
             "isOptional": false,
-            "descr": ""
+            "descr": "- the URL to fetch"
           },
           {
             "name": "options",
             "dataType": "IHttpClientOptions",
             "isOptional": false,
-            "descr": ""
+            "descr": "- additional options that affect the request"
           }
         ]
       },
@@ -384,19 +384,19 @@
         "descr": "Calls fetch(),but sets the method to 'GET'.",
         "genericType": null,
         "returnType": "Promise<Response>",
-        "returnDescr": null,
+        "returnDescr": "a promise that will return the result",
         "params": [
           {
             "name": "url",
             "dataType": "string",
             "isOptional": false,
-            "descr": ""
+            "descr": "- the URL to fetch"
           },
           {
             "name": "options",
             "dataType": "IHttpClientOptions",
             "isOptional": true,
-            "descr": ""
+            "descr": "- additional options that affect the request"
           }
         ]
       },
@@ -408,13 +408,13 @@
         "descr": "This uses a heuristic to guess the SPWeb URL associated with the provided \nREST URL. This is necessary for operations such as the X-RequestDigest \nand ODATA batching, which require POSTing to a separate REST endpoint \nin order to complete a request. \nFor excample, if the requestUrl is \"/sites/site/web/_api/service\", \nthe returned URL would be \"/sites/site/web\". Or if the requestUrl \nis \"http://example.com/_layouts/service\", the returned URL would be \n\"http://example.com\".",
         "genericType": null,
         "returnType": "string",
-        "returnDescr": null,
+        "returnDescr": "the inferred SPWeb URL",
         "params": [
           {
             "name": "requestUrl",
             "dataType": "string",
             "isOptional": false,
-            "descr": ""
+            "descr": "The URL for a SharePoint REST service"
           }
         ]
       },
@@ -426,19 +426,19 @@
         "descr": "Calls fetch(),but sets the method to 'POST'.",
         "genericType": null,
         "returnType": "Promise<Response>",
-        "returnDescr": null,
+        "returnDescr": "a promise that will return the result",
         "params": [
           {
             "name": "url",
             "dataType": "string",
             "isOptional": false,
-            "descr": ""
+            "descr": "- the URL to fetch"
           },
           {
             "name": "options",
             "dataType": "IHttpClientOptions",
             "isOptional": false,
-            "descr": ""
+            "descr": "- additional options that affect the request"
           }
         ]
       }
@@ -460,25 +460,25 @@
         "descr": "Logs an error",
         "genericType": null,
         "returnType": "void",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "source",
             "dataType": "string",
             "isOptional": false,
-            "descr": ""
+            "descr": "- the source from where the error is logged,e.g.,the class name. \nThe source provides context information for the logged error. \nIf the source's length is more than 20, only the first 20 characters are kept."
           },
           {
             "name": "error",
             "dataType": "Error",
             "isOptional": false,
-            "descr": ""
+            "descr": "- the error to be logged"
           },
           {
             "name": "scope",
             "dataType": "ServiceScope",
             "isOptional": true,
-            "descr": ""
+            "descr": "- the service scope that the source uses. A service scope can provide \nmore context information (e.g., web part information) to the logged error."
           }
         ]
       },
@@ -490,25 +490,25 @@
         "descr": "Logs an informational message",
         "genericType": null,
         "returnType": "void",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "source",
             "dataType": "string",
             "isOptional": false,
-            "descr": ""
+            "descr": "- the source from where the message is logged,e.g.,the class name. \nThe source provides context information for the logged message. \nIf the source's length is more than 20, only the first 20 characters are kept."
           },
           {
             "name": "message",
             "dataType": "string",
             "isOptional": false,
-            "descr": ""
+            "descr": "- the message to be logged \nIf the message's length is more than 100, only the first 100 characters are kept."
           },
           {
             "name": "scope",
             "dataType": "ServiceScope",
             "isOptional": true,
-            "descr": ""
+            "descr": "- the service scope that the source uses. A service scope can provide \nmore context information (e.g., web part information) to the logged message."
           }
         ]
       },
@@ -520,25 +520,25 @@
         "descr": "Logs a verbose message",
         "genericType": null,
         "returnType": "void",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "source",
             "dataType": "string",
             "isOptional": false,
-            "descr": ""
+            "descr": "- the source from where the message is logged,e.g.,the class name. \nThe source provides context information for the logged message. \nIf the source's length is more than 20, only the first 20 characters are kept."
           },
           {
             "name": "message",
             "dataType": "string",
             "isOptional": false,
-            "descr": ""
+            "descr": "- the message to be logged \nIf the message's length is more than 100, only the first 100 characters are kept."
           },
           {
             "name": "scope",
             "dataType": "ServiceScope",
             "isOptional": true,
-            "descr": ""
+            "descr": "- the service scope that the source uses. A service scope can provide \nmore context information (e.g., web part information) to the logged message."
           }
         ]
       },
@@ -550,25 +550,25 @@
         "descr": "Logs a warning",
         "genericType": null,
         "returnType": "void",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "source",
             "dataType": "string",
             "isOptional": false,
-            "descr": ""
+            "descr": "- the source from where the message is logged,e.g.,the class name. \nThe source provides context information for the logged message. \nIf the source's length is more than 20, only the first 20 characters are kept."
           },
           {
             "name": "message",
             "dataType": "string",
             "isOptional": false,
-            "descr": ""
+            "descr": "- the message to be logged \nIf the message's length is more than 100, only the first 100 characters are kept."
           },
           {
             "name": "scope",
             "dataType": "ServiceScope",
             "isOptional": true,
-            "descr": ""
+            "descr": "- the service scope that the source uses. A service scope can provide \nmore context information (e.g., web part information) to the logged message."
           }
         ]
       }
@@ -590,7 +590,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "IODataBatchOptions",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "serviceScope",
@@ -614,7 +614,7 @@
         "descr": "Executes the batched queries that were queued using ODataBatch.fetch().",
         "genericType": null,
         "returnType": "Promise<ODataBatch>",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": []
       },
       "fetch~ekuc9": {
@@ -625,19 +625,19 @@
         "descr": "Queues a new request,and returns a promise that can be used to access \nthe server response (after execute() has completed). The parameters for \nthis function are basically the same as the WHATWG API standard documented here: \nhttps://fetch.spec.whatwg.org/ \n \nHowever, be aware that certain REST headers are ignored or not allowed inside \na batch. See the ODATA documentation for details. \n \nWhen execute() is called, it will POST to a URL such as \n\"http://example.com/sites/sample/_api/$batch\". Typically ODataBatch can successfully \nguess the appropriate SPWeb URL by looking for a reserved URL segment such as \"_api\" \nin the first URL passed to fetch(). If not, use IODataBatchOptions.webUrl to specify it \nexplicitly. \n",
         "genericType": null,
         "returnType": "Promise<Response>",
-        "returnDescr": null,
+        "returnDescr": "a promise that will return the result",
         "params": [
           {
             "name": "url",
             "dataType": "string",
             "isOptional": false,
-            "descr": ""
+            "descr": "- the URL to fetch,or an already initialized Request object"
           },
           {
             "name": "options",
             "dataType": "IODataBatchRequestOptions",
             "isOptional": true,
-            "descr": ""
+            "descr": "- additional options that affect the request"
           }
         ]
       },
@@ -649,19 +649,19 @@
         "descr": "Calls fetch(),but sets the method to 'GET'.",
         "genericType": null,
         "returnType": "Promise<Response>",
-        "returnDescr": null,
+        "returnDescr": "a promise that will return the result",
         "params": [
           {
             "name": "url",
             "dataType": "string",
             "isOptional": false,
-            "descr": ""
+            "descr": "- the URL to fetch"
           },
           {
             "name": "options",
             "dataType": "IODataBatchRequestOptions",
             "isOptional": true,
-            "descr": ""
+            "descr": "- additional options that affect the request"
           }
         ]
       },
@@ -673,19 +673,19 @@
         "descr": "Calls fetch(),but sets the method to 'POST'.",
         "genericType": null,
         "returnType": "Promise<Response>",
-        "returnDescr": null,
+        "returnDescr": "a promise that will return the result",
         "params": [
           {
             "name": "url",
             "dataType": "string",
             "isOptional": false,
-            "descr": ""
+            "descr": "- the URL to fetch"
           },
           {
             "name": "options",
             "dataType": "IODataBatchRequestOptions",
             "isOptional": false,
-            "descr": ""
+            "descr": "- additional options that affect the request"
           }
         ]
       }
@@ -763,7 +763,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "ServiceScope",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "serviceScope",
@@ -790,7 +790,7 @@
         "returnType": null,
         "assignValue": null,
         "isCollection": false,
-        "descr": "Constructs a new ServiceKey whose default implementation will be obtained \nby invoking the specified callback."
+        "descr": ""
       },
       "id": {
         "dataType": "string",
@@ -801,7 +801,7 @@
         "returnType": null,
         "assignValue": null,
         "isCollection": false,
-        "descr": "Constructs a new ServiceKey whose default implementation will be obtained \nby invoking the specified callback."
+        "descr": ""
       },
       "name": {
         "dataType": "string",
@@ -812,7 +812,7 @@
         "returnType": null,
         "assignValue": null,
         "isCollection": false,
-        "descr": "Constructs a new ServiceKey whose default implementation will be obtained \nby invoking the specified callback."
+        "descr": ""
       }
     },
     "functions": {},
@@ -825,7 +825,7 @@
         "descr": "PRIVATE - Do not call this from your own code.",
         "genericType": null,
         "returnType": "ServiceCreator<T>",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "id",
@@ -855,19 +855,19 @@
         "descr": "Constructs a new ServiceKey whose default implementation will be a new instance of \na TypeScript class that accepts the standard constructor parameter. If you want to \nspecify custom constructor parameters, use createCustom() instead.",
         "genericType": "T",
         "returnType": "ServiceKey<T>;",
-        "returnDescr": null,
+        "returnDescr": "- the newly created ServiceKey",
         "params": [
           {
             "name": "name",
             "dataType": "string",
             "isOptional": false,
-            "descr": ""
+            "descr": "- A name such as \"MyApplication.IMyService\" which should be unique within \nyour application."
           },
           {
             "name": "serviceClass",
             "dataType": "{ new (serviceScope: ServiceScope) }",
             "isOptional": false,
-            "descr": ""
+            "descr": "- the TypeScript class that implements the service."
           }
         ]
       },
@@ -879,19 +879,19 @@
         "descr": "Constructs a new ServiceKey whose default implementation will be obtained \nby invoking the specified callback.",
         "genericType": "T",
         "returnType": "ServiceKey<T>",
-        "returnDescr": null,
+        "returnDescr": "- the newly created ServiceKey",
         "params": [
           {
             "name": "name",
             "dataType": "string",
             "isOptional": false,
-            "descr": ""
+            "descr": "- A name such as \"MyApplication.IMyService\" which should be unique within \nyour application."
           },
           {
             "name": "defaultCreator",
             "dataType": "ServiceCreator<T>",
             "isOptional": false,
-            "descr": ""
+            "descr": "- A callback that returns an object that implements the T interface"
           }
         ]
       }
@@ -913,7 +913,7 @@
         "descr": "PRIVATE CONSTRUCTOR - DO NOT CALL THIS FROM YOUR OWN CODE.",
         "genericType": null,
         "returnType": "ServiceScope",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "parent",
@@ -931,13 +931,13 @@
         "descr": "Components should call this function to \"consume\" a dependency,i.e. look up the serviceKey \nand return the registered service instance. If the instance cannot be found, then a default \ninstance will be autocreated and registered with the root ServiceScope.",
         "genericType": "T",
         "returnType": "T",
-        "returnDescr": null,
+        "returnDescr": "- the service instance",
         "params": [
           {
             "name": "serviceKey",
             "dataType": "ServiceKey<T>",
             "isOptional": false,
-            "descr": ""
+            "descr": "- the key that was used when provide() was called to register the service"
           }
         ]
       },
@@ -949,19 +949,19 @@
         "descr": "This is a shorthand function that its equivalent to constructing a new instance of the \nsimpleServiceClass, then registering it by calling ServiceScope.provide().",
         "genericType": "T",
         "returnType": "T;",
-        "returnDescr": null,
+        "returnDescr": "- a newly constructed instance of simpleServiceClass",
         "params": [
           {
             "name": "serviceKey",
             "dataType": "ServiceKey<T>",
             "isOptional": false,
-            "descr": ""
+            "descr": "- the key that can be used later to consume the service"
           },
           {
             "name": "simpleServiceClass",
             "dataType": "{ new (serviceScope: ServiceScope) }",
             "isOptional": false,
-            "descr": ""
+            "descr": "- the TypeScript class to be constructed"
           }
         ]
       },
@@ -973,13 +973,13 @@
         "descr": "This is a shorthand function that constructs the default implementation of the specified \nserviceKey, and then registers it by calling ServiceScope.provide().",
         "genericType": "T",
         "returnType": "T",
-        "returnDescr": null,
+        "returnDescr": "- a service instance that was constructed using ServiceKey.defaultCreator",
         "params": [
           {
             "name": "serviceKey",
             "dataType": "ServiceKey<T>",
             "isOptional": false,
-            "descr": ""
+            "descr": "- the key that can be used later to consume the service"
           }
         ]
       },
@@ -991,7 +991,7 @@
         "descr": "When a ServiceScope is first started,it is in an \"unfinished\" state where provide() is \nallowed but consume() is not allowed. After calling finish(), then consume() is allowed \nbut provide() is not allowed. This formalism completely eliminates a number of tricky bugs \nsuch as: Scope2 is a child of Scope1, and Scope1 provides instance A1 of interface A; \nif someone consumes A1 from Scope2 (via inheritance) before Scope2.provide() is called \nwith A2, then a subsequent call to Scope2.consume() might return a different result than \nthe previous call, which would be very confusing for developers.",
         "genericType": null,
         "returnType": "void",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": []
       },
       "getParent~XEmY9": {
@@ -1002,7 +1002,7 @@
         "descr": "Returns the parent of the current ServiceScope,or undefined if this is a root scope.",
         "genericType": null,
         "returnType": "ServiceScope",
-        "returnDescr": null,
+        "returnDescr": "- the parent service scope",
         "params": []
       },
       "provide<T>~QdN49": {
@@ -1013,19 +1013,19 @@
         "descr": "ServiceScope.provide() is used to register an implemententation of the given serviceKey \nfor the current scope. It may only be used when the ServiceScope is in an \"unfinished\" \nstate, i.e. before finish() has been called.",
         "genericType": "T",
         "returnType": "T",
-        "returnDescr": null,
+        "returnDescr": "- the same object that was passed as the \"service\" parameter",
         "params": [
           {
             "name": "serviceKey",
             "dataType": "ServiceKey<T>",
             "isOptional": false,
-            "descr": ""
+            "descr": "- the key that will later be used to consume the service"
           },
           {
             "name": "service",
             "dataType": "T",
             "isOptional": false,
-            "descr": ""
+            "descr": "- the service instance that is being registered"
           }
         ]
       },
@@ -1037,7 +1037,7 @@
         "descr": "Constructs a new ServiceScope that is a child of the current scope. For any keys \nthat are not explicitly provided by the child scope, the parent hierarchy will be \nconsulted.",
         "genericType": null,
         "returnType": "ServiceScope",
-        "returnDescr": null,
+        "returnDescr": "- the newly created root ServiceScope",
         "params": []
       },
       "startNewRoot~TX989": {
@@ -1048,7 +1048,7 @@
         "descr": "Create a new root-level ServiceScope. Only root-level scopes have the ability to autocreate \ndefault implementations of ServiceKeys.",
         "genericType": null,
         "returnType": "ServiceScope",
-        "returnDescr": null,
+        "returnDescr": "- the newly created root ServiceScope",
         "params": []
       },
       "whenFinished~pzLE9": {
@@ -1059,13 +1059,13 @@
         "descr": "It is an error to call ServiceScope.consume() before finish() has been called. \nThe most reliable way to protect your component against this error is to perform the \nconsume() calls inside a whenFinished() callback. If the service scope is already \nfinished, then the callback will be executed immediately; otherwise, it will be executed \nlater when the scope is finished.",
         "genericType": null,
         "returnType": "void",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "callback",
             "dataType": "() => void",
             "isOptional": false,
-            "descr": ""
+            "descr": "- A block of code that needs to call ServiceScope.consume()"
           }
         ]
       }
@@ -1495,7 +1495,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "IODataBasePermission",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "value",
@@ -1513,7 +1513,7 @@
         "descr": "Function for determining if a given permission mask has all of the requested permissions.",
         "genericType": null,
         "returnType": "boolean",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "...requestedPerms",
@@ -1531,7 +1531,7 @@
         "descr": "Function for determining if a given permission mask has any of the requested permissions.",
         "genericType": null,
         "returnType": "boolean",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "...requestedPerms",
@@ -1549,13 +1549,13 @@
         "descr": "Function for checking if a given permission mask has the requested permission.",
         "genericType": null,
         "returnType": "boolean",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "requestedPerm",
             "dataType": "SPPermission",
             "isOptional": false,
-            "descr": ""
+            "descr": "- The SPPermission object to be compared against the original"
           }
         ]
       }
@@ -1684,7 +1684,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "string",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "url",
@@ -1702,13 +1702,13 @@
         "descr": "Returns the value of the first matching query parameter or undefined if the key doesn't exist. \nExamples: this._queryParameterList = [ \n{key: TEST, value: done}, \n{key: DEBUG, value: false}, \n{key: TEST, value: notdone}] \ngetValue('TEST') ---> 'done' \ngetValue('debug') ---> 'false' \ngetValue('lost') ---> undefined",
         "genericType": null,
         "returnType": "string",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "param",
             "dataType": "string",
             "isOptional": false,
-            "descr": ""
+            "descr": "the case insensitive key for the desired query parameter value."
           }
         ]
       },
@@ -1720,13 +1720,13 @@
         "descr": "Returns the values of all of the matching query parameters or undefined if the key doesn't exist. \nExamples: this._queryParameterList = [ \n{key: TEST, value: done}, \n{key: DEBUG, value: false}, \n{key: TEST, value: notdone}] \ngetValues('TEST') ---> ['done', 'notdone'] \ngetValues('debug') ---> ['false'] \ngetValues('lost') ---> undefined",
         "genericType": null,
         "returnType": "string[]",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "param",
             "dataType": "string",
             "isOptional": false,
-            "descr": ""
+            "descr": "the case insensitive key for the desired query parameter value."
           }
         ]
       }
@@ -1748,7 +1748,7 @@
         "descr": "Converts a variable to an OData string literal and escapes apostrophes. \nOData specification: \nhttps://tools.oasis-open.org/version-control/ \nbrowse/wsvn/odata/trunk/spec/ABNF/odata-abnf-construction-rules.txt \nSQUOTE-in-string = SQUOTE SQUOTE ; two consecutive single quotes represent one within a string literal \nExamples: \nconvertToODataStringLiteral(\"example's list\") ---> \"'example''s list'\" \nconvertToODataStringLiteral(\"example list\") ---> \"'example list'\" \nconvertToODataStringLiteral(\"'example list'\") ---> \"'''example list'''\"",
         "genericType": null,
         "returnType": "string",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "value",
@@ -1766,13 +1766,13 @@
         "descr": "Removes any slash characters from the end of the URL. \nThis function assumes that the input is already a valid absolute or server-relative URL. \nExamples: \nremoveEndSlash('http://example.com/') ---> 'http://example.com' \nremoveEndSlash('/example') ---> '/example' \nremoveEndSlash('/') ---> ''",
         "genericType": null,
         "returnType": "string",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "url",
             "dataType": "string",
             "isOptional": false,
-            "descr": ""
+            "descr": "the URL to be normalized"
           }
         ]
       }
@@ -1794,19 +1794,19 @@
         "descr": "Throws an exception if the specified string is null,undefined,or an empty string.",
         "genericType": null,
         "returnType": "void",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "value",
             "dataType": "string",
             "isOptional": false,
-            "descr": ""
+            "descr": "- the value to check"
           },
           {
             "name": "variableName",
             "dataType": "string",
             "isOptional": false,
-            "descr": ""
+            "descr": "- the program variable name,which will be mentioned in the error message"
           }
         ]
       },
@@ -1818,19 +1818,19 @@
         "descr": "Throws an exception if the specified value is null or undefined.",
         "genericType": null,
         "returnType": "void",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "value",
             "dataType": "any",
             "isOptional": false,
-            "descr": ""
+            "descr": "- the value to check"
           },
           {
             "name": "variableName",
             "dataType": "string",
             "isOptional": false,
-            "descr": ""
+            "descr": "- the program variable name,which will be mentioned in the error message"
           }
         ]
       },
@@ -1842,19 +1842,19 @@
         "descr": "Throws an exception if the specified value is not true.",
         "genericType": null,
         "returnType": "void",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "value",
             "dataType": "boolean",
             "isOptional": false,
-            "descr": ""
+            "descr": "- the value to check"
           },
           {
             "name": "variableName",
             "dataType": "string",
             "isOptional": false,
-            "descr": ""
+            "descr": "- the program variable name,which will be mentioned in the error message"
           }
         ]
       }

@@ -34,7 +34,7 @@ and each host may want to scope its event aggregation service.
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
 |`serviceScope`      | [`ServiceScope`](servicescope.md) | ServiceScope provides a formalized way for components to register and consume dependencies  ("services"), and to enable different implementations to be registered in different scopes |
-|`setDirty`      | `function` | ServiceScope provides a formalized way for components to register and consume dependencies  ("services"), and to enable different implementations to be registered in different scopes |
+|`setDirty`      | `function` |  |
 |`webPartConfigurationEventCallback`      | [`IWebPartConfigurationEventCallback`](iwebpartconfigurationeventcallback.md) | Web part configuration event callback |
 
 

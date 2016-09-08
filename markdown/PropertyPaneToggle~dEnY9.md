@@ -8,11 +8,12 @@ Helper method to create a Toggle on the PropertyPane.
 #### Returns
 [`IPropertyPaneField<IPropertyPaneToggleProps>`](ipropertypanefield.md)
 
+
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `targetProperty`    | `string` |  |
-| `properties`    | [`IPropertyPaneToggleProps`](ipropertypanetoggleprops.md) |  |
+| `targetProperty`    | `string` | - Target property the toggle is associated to |
+| `properties`    | [`IPropertyPaneToggleProps`](ipropertypanetoggleprops.md) | - Strongly typed Toggle properties |
 

@@ -286,25 +286,25 @@
         "descr": "Inserts a specific request digest value into the cache. Normally this is unnecessary because \nthe framework will automatically issue a REST request to fetch the digest when necessary; \nhowever, in advanced scenarios addDigestToCache() can be used to avoid the overhead of the \nREST call. \n",
         "genericType": null,
         "returnType": "void",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "webUrl",
             "dataType": "string",
             "isOptional": false,
-            "descr": ""
+            "descr": "The URL of the SPWeb that the API call will be issued to. \nThis may be a server-relative or absolute URL."
           },
           {
             "name": "digestValue",
             "dataType": "string",
             "isOptional": false,
-            "descr": ""
+            "descr": "The digest value,which is an opaque that must be generated \nby the SharePoint server. The syntax will look something like \nthis: \"0x0B85...2EAC,29 Jan 2016 01:23:45 -0000\""
           },
           {
             "name": "expirationTimestamp",
             "dataType": "number",
             "isOptional": false,
-            "descr": ""
+            "descr": "A future point in time,as measured by performance.now(),after which \nthe digest value will no longer be valid. \nNOTE: The expirationTime is a DOMHighResTimeStamp value whose units are \nfractional milliseconds; for example, to specify an expiration \n\"5 seconds from right now\", use performance.now()+5000."
           }
         ]
       },
@@ -316,7 +316,7 @@
         "descr": "Clears all values from the cache.",
         "genericType": null,
         "returnType": "void",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": []
       },
       "clearDigest~4Hro9": {
@@ -327,13 +327,13 @@
         "descr": "Clears the cached digest for the specified SPWeb URL. This operation is useful \ne.g. if an error indicates that a digest was invalidated prior to its expiration time. \n",
         "genericType": null,
         "returnType": "boolean",
-        "returnDescr": null,
+        "returnDescr": "Returns true if a cache entry was found and deleted false otherwise.",
         "params": [
           {
             "name": "webUrl",
             "dataType": "string",
             "isOptional": false,
-            "descr": ""
+            "descr": "The URL of the SPWeb whose digest should be cleared. \nThis may be a server-relative or absolute URL."
           }
         ]
       },
@@ -345,13 +345,13 @@
         "descr": "Returns a digest string for the specified SPWeb URL. If the cache already contains a usable value, \nthe promise is fulfilled immediately. Otherwise, the promise will be pending and resolve after \nan HTTP request obtains the digest, which will be added to the cache.",
         "genericType": null,
         "returnType": "Promise<string>",
-        "returnDescr": null,
+        "returnDescr": "A promise that is fulfilled with the digest value.",
         "params": [
           {
             "name": "webUrl",
             "dataType": "string",
             "isOptional": false,
-            "descr": ""
+            "descr": "The URL of the SPWeb that the API call will be issued to. \nThis may be a server-relative or absolute URL."
           }
         ]
       }

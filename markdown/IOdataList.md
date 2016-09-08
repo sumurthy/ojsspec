@@ -17,10 +17,10 @@ https://msdn.microsoft.com/en-us/library/office/jj860569.aspx
 |:-------------|:-------|:-----------|
 |`BaseTemplate`      | `number` |  |
 |`Created`      | `string` | Example: "/Date(1453294804000)/" |
-|`CurrentChangeToken`      | [`IODataChangeToken`](iodatachangetoken.md) | Example: "/Date(1453294804000)/" |
-|`Description`      | `string` | Example: "/Date(1453294804000)/" |
+|`CurrentChangeToken`      | [`IODataChangeToken`](iodatachangetoken.md) |  |
+|`Description`      | `string` |  |
 |`EntityTypeName`      | `string` | Example: "MyListTitleList" |
-|`Hidden`      | `boolean` | Example: "MyListTitleList" |
+|`Hidden`      | `boolean` |  |
 |`Id`      | `string` | Example: "/Guid(9fb9199b-65f2-4a4a-b597-11d1a44422c1)/" |
 |`LastItemDeletedDate`      | `string` | Example: "/Date(1453294809000)/" |
 |`LastItemModifiedDate`      | `string` | Example: "/Date(1453294809000)/" |

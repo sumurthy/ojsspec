@@ -16,12 +16,12 @@ https://msdn.microsoft.com/en-us/library/office/jj860569.aspx
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
 |`Email`      | `string` | Example: "someone@example |
-|`Id`      | `number` | Example: "someone@example |
-|`IsSiteAdmin`      | `boolean` | Example: "someone@example |
+|`Id`      | `number` |  |
+|`IsSiteAdmin`      | `boolean` |  |
 |`LoginName`      | `string` | Example: "i:0# |
-|`PrincipalType`      | `number` | Example: "i:0# |
+|`PrincipalType`      | `number` |  |
 |`Title`      | `string` | Example: "DOMAIN\user" |
-|`UserId`      | [`IOdataUserId`](iodatauserid.md) | Example: "DOMAIN\user" |
+|`UserId`      | [`IOdataUserId`](iodatauserid.md) |  |
 
 
 

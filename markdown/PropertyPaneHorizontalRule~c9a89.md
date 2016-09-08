@@ -8,6 +8,7 @@ Helper method to create a Horizontal Rule on the PropertyPane.
 #### Returns
 [`IPropertyPaneField<void>`](ipropertypanefield.md)
 
+
 #### Parameters
 None
 

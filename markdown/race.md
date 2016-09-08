@@ -8,6 +8,7 @@ Make a Promise that fulfills when any item fulfills,and rejects if any item reje
 #### Returns
 [`Promise<R>`](promise.md)
 
+
 #### Parameters
 
 

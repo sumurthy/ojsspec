@@ -41,6 +41,8 @@ Compare this instance to another Guid instance
 
 #### Returns
 `boolean`
+A value indicating whether this instance and the specified Guid object 
+represent the same value
 
 #### Parameters
 
@@ -60,13 +62,14 @@ Indicates whether a guid is valid (according to RFC4122).
 
 #### Returns
 `boolean`
+Value indicating whether the guid is valid.
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `guid`    | `string` |  |
+| `guid`    | `string` | - Test guid |
 
 
 ### constructorGuid
@@ -79,6 +82,7 @@ Returns a new Guid instance with a pseudo-randomly generated Guid.
 
 #### Returns
 [`Guid`](guid.md)
+A new valid unique Guid object
 
 #### Parameters
 
@@ -98,6 +102,8 @@ Object.prototype.toString override
 
 #### Returns
 `string`
+The GUID value in lowercase hexadecimal without braces. 
+Example: 'd5369f3b-bd7a-412a-9c0f-7f0650bb5489'
 
 #### Parameters
 None
@@ -115,11 +121,12 @@ RFC 4122, tryParse will return undefined.
 
 #### Returns
 [`Guid`](guid.md)
+If the guid argument was valid,a new Guid instance. Otherwise,undefined.
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `guid`    | `string` |  |
+| `guid`    | `string` | - A guid string |
 

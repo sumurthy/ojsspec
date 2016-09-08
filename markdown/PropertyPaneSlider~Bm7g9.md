@@ -8,11 +8,12 @@ Helper method to create a Slider on the PropertyPane.
 #### Returns
 [`IPropertyPaneField<IPropertyPaneSliderProps>`](ipropertypanefield.md)
 
+
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `targetProperty`    | `string` |  |
-| `properties`    | [`IPropertyPaneSliderProps`](ipropertypanesliderprops.md) |  |
+| `targetProperty`    | `string` | - Target property the slider is associated to |
+| `properties`    | [`IPropertyPaneSliderProps`](ipropertypanesliderprops.md) | - Strongly typed Slider properties |
 

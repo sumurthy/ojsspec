@@ -10,6 +10,7 @@ The fulfillment value is an array (in order) of fulfillment values. The rejectio
 #### Returns
 [`Promise<R[]>`](promise.md)
 
+
 #### Parameters
 
 

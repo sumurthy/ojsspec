@@ -8,11 +8,12 @@ Helper method to create a Link on the PropertyPane.
 #### Returns
 [`IPropertyPaneField<IPropertyPaneLinkProps>`](ipropertypanefield.md)
 
+
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `targetProperty`    | `string` |  |
-| `properties`    | [`IPropertyPaneLinkProps`](ipropertypanelinkprops.md) |  |
+| `targetProperty`    | `string` | - Target property the Link is associated to |
+| `properties`    | [`IPropertyPaneLinkProps`](ipropertypanelinkprops.md) | - Strongly typed Link properties |
 

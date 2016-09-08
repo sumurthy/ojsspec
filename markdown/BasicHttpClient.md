@@ -14,7 +14,7 @@ enhancements.
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|`serviceScope`     | `protected` | [`ServiceScope`](servicescope.md) | Calls fetch(),but sets the method to 'POST' |
+|`serviceScope`     | `protected` | [`ServiceScope`](servicescope.md) |  |
 
 
 
@@ -25,7 +25,7 @@ enhancements.
 |:-------------|:----|:-------|:-----------|
 |[`constructor`](#constructor)     | `public` | [`ServiceScope`](servicescope.md) |  |
 |[`fetch`](#fetch)     | `public` | [`Promise<Response>`](promise.md) | Performs a REST service call |
-|[`fetchCore`](#fetchcore)     | `protected` | [`Promise<Response>`](promise.md) | Performs a REST service call |
+|[`fetchCore`](#fetchcore)     | `protected` | [`Promise<Response>`](promise.md) |  |
 |[`get`](#get)     | `public` | [`Promise<Response>`](promise.md) | Calls fetch(),but sets the method to 'GET' |
 |[`post`](#post)     | `public` | [`Promise<Response>`](promise.md) | Calls fetch(),but sets the method to 'POST' |
 
@@ -41,6 +41,7 @@ enhancements.
 
 #### Returns
 [`ServiceScope`](servicescope.md)
+
 
 #### Parameters
 
@@ -62,28 +63,27 @@ https://fetch.spec.whatwg.org/
 
 #### Returns
 [`Promise<Response>`](promise.md)
+a promise that will return the result
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | `string` |  |
-| `options`    | [`IBasicHttpClientOptions`](ibasichttpclientoptions.md) |  |
+| `url`    | `string` | - the URL to fetch |
+| `options`    | [`IBasicHttpClientOptions`](ibasichttpclientoptions.md) | - additional options that affect the request |
 
 
 ### fetchCore
 
-Performs a REST service call. Although the HttpClient subclass adds 
-additional enhancements, the parameters and semantics for BasicHttpClient.fetch() 
-are essentially the same as the WHATWG API standard that is documented here: 
-https://fetch.spec.whatwg.org/
+
 
 #### Signature
 `protected fetchCore(request: Request): Promise<Response>`
 
 #### Returns
 [`Promise<Response>`](promise.md)
+
 
 #### Parameters
 
@@ -102,14 +102,15 @@ Calls fetch(),but sets the method to 'GET'.
 
 #### Returns
 [`Promise<Response>`](promise.md)
+a promise that will return the result
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | `string` |  |
-| `options`    | [`IBasicHttpClientOptions`](ibasichttpclientoptions.md) | _Optional._ |
+| `url`    | `string` | - the URL to fetch |
+| `options`    | [`IBasicHttpClientOptions`](ibasichttpclientoptions.md) | _Optional._- additional options that affect the request |
 
 
 ### post
@@ -121,12 +122,13 @@ Calls fetch(),but sets the method to 'POST'.
 
 #### Returns
 [`Promise<Response>`](promise.md)
+a promise that will return the result
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | `string` |  |
-| `options`    | [`IBasicHttpClientOptions`](ibasichttpclientoptions.md) |  |
+| `url`    | `string` | - the URL to fetch |
+| `options`    | [`IBasicHttpClientOptions`](ibasichttpclientoptions.md) | - additional options that affect the request |
 

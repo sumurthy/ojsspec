@@ -14,7 +14,7 @@
         "descr": "If you call resolve in the body of the callback passed to the constructor, \nyour promise is fulfilled with result object passed to resolve. \nIf you call reject your promise is rejected with the object passed to resolve. \nFor consistency and debugging (eg stack traces), obj should be an instanceof Error. \nAny errors thrown in the constructor callback will be implicitly passed to reject().",
         "genericType": null,
         "returnType": "any => void) => void)",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "callback",
@@ -35,10 +35,10 @@
         "signature": "then<U>(onFulfilled?: (value: R) => U | Thenable<U>,onRejected?: (error: any) => void): Promise<U>",
         "isStatic": false,
         "isOptional": false,
-        "descr": "onFulfilled is called when/if \"promise\" resolves. onRejected is called when/if \"promise\" rejects. \nBoth are optional, if either/both are omitted the next onFulfilled/onRejected in the chain is called. \nBoth callbacks have a single parameter , the fulfillment value or rejection reason. \n\"then\" returns a new promise equivalent to the value you return from onFulfilled/onRejected after being passed through Promise.resolve. \nIf an error is thrown in the callback, the returned promise rejects with that error. \n",
+        "descr": "",
         "genericType": "U",
         "returnType": "Promise<U>",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "onFulfilled",
@@ -62,13 +62,13 @@
         "descr": "Sugar for promise.then(undefined,onRejected) \n",
         "genericType": "U",
         "returnType": "Promise<U>",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "onRejected",
             "dataType": "(error: any) => U | Thenable<U>",
             "isOptional": true,
-            "descr": ""
+            "descr": "called when/if \"promise\" rejects"
           }
         ]
       }

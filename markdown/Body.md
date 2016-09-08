@@ -41,6 +41,7 @@
 #### Returns
 [`Promise<ArrayBuffer>`](promise.md)
 
+
 #### Parameters
 None
 
@@ -54,6 +55,7 @@ None
 
 #### Returns
 [`Promise<Blob>`](promise.md)
+
 
 #### Parameters
 None
@@ -69,6 +71,7 @@ None
 #### Returns
 [`Promise<FormData>`](promise.md)
 
+
 #### Parameters
 None
 
@@ -82,6 +85,7 @@ None
 
 #### Returns
 [`Promise<any>`](promise.md)
+
 
 #### Parameters
 None
@@ -97,6 +101,7 @@ None
 #### Returns
 [`Promise<T>`](promise.md)
 
+
 #### Parameters
 None
 
@@ -110,6 +115,7 @@ None
 
 #### Returns
 [`Promise<string>`](promise.md)
+
 
 #### Parameters
 None

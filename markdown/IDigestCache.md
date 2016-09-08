@@ -42,14 +42,15 @@ REST call.
 #### Returns
 `void`
 
+
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `webUrl`    | `string` |  |
-| `digestValue`    | `string` |  |
-| `expirationTimestamp`    | `number` |  |
+| `webUrl`    | `string` | The URL of the SPWeb that the API call will be issued to |
+| `digestValue`    | `string` | The digest value,which is an opaque that must be generated  by the SharePoint server |
+| `expirationTimestamp`    | `number` | A future point in time,as measured by performance |
 
 
 ### clearAllDigests
@@ -61,6 +62,7 @@ Clears all values from the cache.
 
 #### Returns
 `void`
+
 
 #### Parameters
 None
@@ -77,13 +79,14 @@ e.g. if an error indicates that a digest was invalidated prior to its expiration
 
 #### Returns
 `boolean`
+Returns true if a cache entry was found and deleted false otherwise.
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `webUrl`    | `string` |  |
+| `webUrl`    | `string` | The URL of the SPWeb whose digest should be cleared |
 
 
 ### fetchDigest
@@ -97,11 +100,12 @@ an HTTP request obtains the digest, which will be added to the cache.
 
 #### Returns
 [`Promise<string>`](promise.md)
+A promise that is fulfilled with the digest value.
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `webUrl`    | `string` |  |
+| `webUrl`    | `string` | The URL of the SPWeb that the API call will be issued to |
 

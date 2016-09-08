@@ -33,12 +33,13 @@ Clear the webpart error message.
 #### Returns
 `void`
 
+
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `domElement`    | `HTMLElement` |  |
+| `domElement`    | `HTMLElement` | - the webpart container div |
 
 
 ### clearLoadingIndicator
@@ -51,12 +52,13 @@ Clear the loading indicator.
 #### Returns
 `void`
 
+
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `domElement`    | `Element` |  |
+| `domElement`    | `Element` | - the webpart container div |
 
 
 ### displayLoadingIndicator
@@ -69,13 +71,14 @@ Display a loading spinner.
 #### Returns
 `void`
 
+
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `domElement`    | `Element` |  |
-| `loadingMessage`    | `string` |  |
+| `domElement`    | `Element` | - the webpart container div |
+| `loadingMessage`    | `string` | - the message to be displayed when the loading spinner id displayed |
 
 
 ### renderError
@@ -88,11 +91,12 @@ Render the provided error message in the webpart container div.
 #### Returns
 `void`
 
+
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `domElement`    | `HTMLElement` |  |
-| `error`    | `Error `,` string` |  |
+| `domElement`    | `HTMLElement` | - the webpart container div |
+| `error`    | `Error `,` string` | - the error message |
 

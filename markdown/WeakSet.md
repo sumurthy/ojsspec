@@ -33,6 +33,7 @@ _Type parameters: `<T>`_
 #### Returns
 `boolean`
 
+
 #### Parameters
 
 
@@ -51,6 +52,7 @@ _Type parameters: `<T>`_
 #### Returns
 `void`
 
+
 #### Parameters
 None
 
@@ -64,6 +66,7 @@ None
 
 #### Returns
 [`WeakSet<T>`](weakset.md)
+
 
 #### Parameters
 
@@ -82,6 +85,7 @@ None
 
 #### Returns
 `boolean`
+
 
 #### Parameters
 

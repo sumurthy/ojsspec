@@ -35,13 +35,14 @@ Throws an exception if the specified string is null,undefined,or an empty string
 #### Returns
 `void`
 
+
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | `string` |  |
-| `variableName`    | `string` |  |
+| `value`    | `string` | - the value to check |
+| `variableName`    | `string` | - the program variable name,which will be mentioned in the error message |
 
 
 ### isNotNullOrUndefined
@@ -54,13 +55,14 @@ Throws an exception if the specified value is null or undefined.
 #### Returns
 `void`
 
+
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | `any` |  |
-| `variableName`    | `string` |  |
+| `value`    | `any` | - the value to check |
+| `variableName`    | `string` | - the program variable name,which will be mentioned in the error message |
 
 
 ### isTrue
@@ -73,11 +75,12 @@ Throws an exception if the specified value is not true.
 #### Returns
 `void`
 
+
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | `boolean` |  |
-| `variableName`    | `string` |  |
+| `value`    | `boolean` | - the value to check |
+| `variableName`    | `string` | - the program variable name,which will be mentioned in the error message |
 

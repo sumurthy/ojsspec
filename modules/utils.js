@@ -54,7 +54,6 @@ var self = module.exports = {
         var openBracket = false
         var replaced = false
         var out = []
-
         for (var i = 0, len = line.length; i < len; i++) {
             if (line[i] === '<') openBracket = true
             if (line[i] === '>') openBracket = false
@@ -77,6 +76,7 @@ var self = module.exports = {
      */
 
     buildParamList: (line = '', paramComment = []) => {
+
         var out = []
         // var p = BETWEEN_BRACKETS.exec(line)
         var p = self.inParen(line)
@@ -263,7 +263,7 @@ var self = module.exports = {
             m['returnType'] = lastWord.replace(')', '').trim()
         }
         m['returnDescr'] = (commentObject['returnDescr'] === undefined) ?
-            null : commentObject['returnDescr']
+            '' : commentObject['returnDescr']
         m['params'] = self.buildParamList(line, commentObject['param'])
         return m
     },

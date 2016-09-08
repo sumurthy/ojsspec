@@ -55,6 +55,7 @@ function file_reset() {
 function getLinkForType(type = '') {
 
     var out = ''
+    if (!type) return out
     var splitChar = ','
     var type = Utils.replaceCommaInGenerics(type)
     if (type.includes('|')) {
@@ -266,11 +267,10 @@ function doSubMember(tline = '', member = {}, membername = '', isClass = true, o
             tline = tline.replace('%noparam%', 'None')
         } else {
             tline = tline.replace('%noparam%', '')
-
         }
     }
-
     if (tline.includes('%returntype%')) tline = tline.replace('%returntype%', `${getLinkForType(member['returnType'])}`)
+    if (tline.includes('%returndescr%')) tline = tline.replace('%returndescr%', `${member['returnDescr']}`)
 
     return tline
 }
@@ -419,10 +419,12 @@ function addParams(tline = '', member = {}, targetArray = []) {
         else {
             mline = mline.replace('%optional% ', '')
         }
-            //Get first sentence
+        //Get first sentence
         var descr = e['descr']
         if (descr) {
+            console.log(e + ' --> ' + descr);
             descr = descr.split('.')[0].replace(/\n/g, ' ')
+
         }
         mline = mline.replace('%description%', descr)
             // if (member['parameters'][e]['descr']) {

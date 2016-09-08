@@ -9,6 +9,7 @@ Get's the path name from an absolute url.
 #### Returns
 `string`
 
+
 #### Parameters
 
 

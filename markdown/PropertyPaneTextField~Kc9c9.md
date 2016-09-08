@@ -8,11 +8,12 @@ Helper method to create a TextField on the PropertyPane.
 #### Returns
 [`IPropertyPaneField<IPropertyPaneTextFieldProps>`](ipropertypanefield.md)
 
+
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `targetProperty`    | `string` |  |
-| `properties`    | [`IPropertyPaneTextFieldProps`](ipropertypanetextfieldprops.md) |  |
+| `targetProperty`    | `string` | - Target property the textfield is associated to |
+| `properties`    | [`IPropertyPaneTextFieldProps`](ipropertypanetextfieldprops.md) | - Strongly typed TextField properties |
 

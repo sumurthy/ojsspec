@@ -70,6 +70,7 @@ If a sub class overrides the constructor, it needs to call super(context) as the
 #### Returns
 [`IWebPartContext`](iwebpartcontext.md)
 
+
 #### Parameters
 
 
@@ -88,6 +89,7 @@ This API should be used to clear the error message from the web part display are
 #### Returns
 `void`
 
+
 #### Parameters
 None
 
@@ -102,6 +104,7 @@ This API should be used to invoke the PropertyPane to help configure the web par
 
 #### Returns
 `void`
+
 
 #### Parameters
 
@@ -126,13 +129,15 @@ can be used to make decisions on how to re-structure the data.
 
 #### Returns
 `TProperties`
+- web part property bag. 
+
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `data`    | [`IWebPartData`](iwebpartdata.md) |  |
+| `data`    | [`IWebPartData`](iwebpartdata.md) | - web part persisted data |
 
 
 ### dispose
@@ -145,6 +150,7 @@ resources that the web part is holding onto.
 
 #### Returns
 `void`
+
 
 #### Parameters
 None
@@ -163,6 +169,8 @@ part property bag. This way the web part serialization process will use the upto
 
 #### Returns
 [`IHtmlProperties`](ihtmlproperties.md)
+- reference to searchable properties and properties that need link fixup. Please read 
+the documentation of IHtmlProperties interface for more details.
 
 #### Parameters
 None
@@ -182,12 +190,13 @@ to the web part DOM to switch its display mode.
 #### Returns
 `void`
 
+
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `oldDisplayMode`    | [`DisplayMode`](displaymode.md) |  |
+| `oldDisplayMode`    | [`DisplayMode`](displaymode.md) | - The old display mode |
 
 
 ### onInit<T>
@@ -201,6 +210,7 @@ This API is called only once during the lifecycle of a web part.
 
 #### Returns
 [`Promise<T>`](promise.md)
+
 
 #### Parameters
 None
@@ -219,13 +229,14 @@ invokes the web part host's setDirty API.
 #### Returns
 `void`
 
+
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `propertyPath`    | `string` |  |
-| `newValue`    | `any` |  |
+| `propertyPath`    | `string` | - JSON path of the property in the property bag |
+| `newValue`    | `any` | - New value of the property |
 
 
 ### onPropertyConfigurationComplete
@@ -241,6 +252,7 @@ for the previously selected web part.
 #### Returns
 `void`
 
+
 #### Parameters
 None
 
@@ -254,6 +266,7 @@ This API is involed when the PropertyPane is rendered.
 
 #### Returns
 `void`
+
 
 #### Parameters
 None
@@ -270,6 +283,7 @@ Non-Reactive mode. This API is not invoked when the PropertyPane is used in Reac
 #### Returns
 `void`
 
+
 #### Parameters
 None
 
@@ -284,6 +298,7 @@ required to override this API.
 
 #### Returns
 `void`
+
 
 #### Parameters
 None
@@ -301,10 +316,11 @@ using the trace logger.
 #### Returns
 `void`
 
+
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `error`    | `Error` |  |
+| `error`    | `Error` | - An error object containing the error message to render |
 

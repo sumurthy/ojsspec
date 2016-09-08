@@ -9,6 +9,7 @@ A thenable is promise-like in as far as it has a "then" method.
 #### Returns
 [`Promise<R>`](promise.md)
 
+
 #### Parameters
 
 

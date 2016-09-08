@@ -40,6 +40,7 @@ convertToODataStringLiteral("'example list'") ---> "'''example list'''"
 #### Returns
 `string`
 
+
 #### Parameters
 
 
@@ -63,10 +64,11 @@ removeEndSlash('/') ---> ''
 #### Returns
 `string`
 
+
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | `string` |  |
+| `url`    | `string` | the URL to be normalized |
 

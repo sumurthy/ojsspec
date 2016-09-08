@@ -8,11 +8,12 @@ Helper method to create a Choice Group on the PropertyPane.
 #### Returns
 [`IPropertyPaneField<IPropertyPaneCustomFieldProps>`](ipropertypanefield.md)
 
+
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `targetProperty`    | `string` |  |
-| `properties`    | [`IPropertyPaneCustomFieldProps`](ipropertypanecustomfieldprops.md) |  |
+| `targetProperty`    | `string` | - Target property the choice group is associated to |
+| `properties`    | [`IPropertyPaneCustomFieldProps`](ipropertypanecustomfieldprops.md) | - Strongly typed Choice Group properties |
 

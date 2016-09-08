@@ -37,9 +37,9 @@
 
 | Name	   |  Type |
 |:-----------|:------------|
-|HeaderInit   | `` |
-|BodyInit   | `` |
-|RequestInfo   | `` |
+|HeaderInit   |  |
+|BodyInit   |  |
+|RequestInfo   |  |
 
 
 

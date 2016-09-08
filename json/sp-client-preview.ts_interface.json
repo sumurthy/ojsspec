@@ -14,13 +14,13 @@
         "descr": "Clear the webpart error message.",
         "genericType": null,
         "returnType": "void",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "domElement",
             "dataType": "HTMLElement",
             "isOptional": false,
-            "descr": ""
+            "descr": "- the webpart container div."
           }
         ]
       },
@@ -32,13 +32,13 @@
         "descr": "Clear the loading indicator.",
         "genericType": null,
         "returnType": "void",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "domElement",
             "dataType": "Element",
             "isOptional": false,
-            "descr": ""
+            "descr": "- the webpart container div."
           }
         ]
       },
@@ -50,19 +50,19 @@
         "descr": "Display a loading spinner.",
         "genericType": null,
         "returnType": "void",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "domElement",
             "dataType": "Element",
             "isOptional": false,
-            "descr": ""
+            "descr": "- the webpart container div."
           },
           {
             "name": "loadingMessage",
             "dataType": "string",
             "isOptional": false,
-            "descr": ""
+            "descr": "- the message to be displayed when the loading spinner id displayed."
           }
         ]
       },
@@ -74,19 +74,19 @@
         "descr": "Render the provided error message in the webpart container div.",
         "genericType": null,
         "returnType": "void",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "domElement",
             "dataType": "HTMLElement",
             "isOptional": false,
-            "descr": ""
+            "descr": "- the webpart container div."
           },
           {
             "name": "error",
             "dataType": "Error | string",
             "isOptional": false,
-            "descr": ""
+            "descr": "- the error message."
           }
         ]
       }
@@ -138,7 +138,7 @@
         "returnType": null,
         "assignValue": null,
         "isCollection": false,
-        "descr": "Example: \"/Date(1453294804000)/\""
+        "descr": ""
       },
       "Description": {
         "dataType": "string",
@@ -149,7 +149,7 @@
         "returnType": null,
         "assignValue": null,
         "isCollection": false,
-        "descr": "Example: \"/Date(1453294804000)/\""
+        "descr": ""
       },
       "EntityTypeName": {
         "dataType": "string",
@@ -171,7 +171,7 @@
         "returnType": null,
         "assignValue": null,
         "isCollection": false,
-        "descr": "Example: \"MyListTitleList\""
+        "descr": ""
       },
       "Id": {
         "dataType": "string",
@@ -269,7 +269,7 @@
         "returnType": null,
         "assignValue": null,
         "isCollection": false,
-        "descr": "Example: { StrinValue: \"0x010100C5...\" }"
+        "descr": ""
       },
       "Title": {
         "dataType": "string",
@@ -280,7 +280,7 @@
         "returnType": null,
         "assignValue": null,
         "isCollection": false,
-        "descr": "Example: { StrinValue: \"0x010100C5...\" }"
+        "descr": ""
       },
       "UniqueId": {
         "dataType": "string",
@@ -323,7 +323,7 @@
         "returnType": null,
         "assignValue": null,
         "isCollection": false,
-        "descr": "Example: \"someone@example.com\""
+        "descr": ""
       },
       "IsSiteAdmin": {
         "dataType": "boolean",
@@ -334,7 +334,7 @@
         "returnType": null,
         "assignValue": null,
         "isCollection": false,
-        "descr": "Example: \"someone@example.com\""
+        "descr": ""
       },
       "LoginName": {
         "dataType": "string",
@@ -356,7 +356,7 @@
         "returnType": null,
         "assignValue": null,
         "isCollection": false,
-        "descr": "Example: \"i:0#.w|domain\\user\""
+        "descr": ""
       },
       "Title": {
         "dataType": "string",
@@ -378,7 +378,7 @@
         "returnType": null,
         "assignValue": null,
         "isCollection": false,
-        "descr": "Example: \"DOMAIN\\user\""
+        "descr": ""
       }
     },
     "functions": {},
@@ -1729,7 +1729,7 @@
         "returnType": "void",
         "assignValue": null,
         "isCollection": false,
-        "descr": "ServiceScope provides a formalized way for components to register and consume dependencies \n(\"services\"), and to enable different implementations to be registered in different scopes. \nThis improves modularity by decoupling components from their dependencies in an extensible way. \nserviceScope: ServiceScope;"
+        "descr": ""
       },
       "webPartConfigurationEventCallback": {
         "dataType": "IWebPartConfigurationEventCallback",

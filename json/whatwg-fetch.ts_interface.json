@@ -133,7 +133,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "Promise<Response>",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "url",

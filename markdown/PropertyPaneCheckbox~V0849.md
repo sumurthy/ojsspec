@@ -8,11 +8,12 @@ Helper method to create a Checkbox on the PropertyPane.
 #### Returns
 [`IPropertyPaneField<IPropertyPaneCheckboxProps>`](ipropertypanefield.md)
 
+
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `targetProperty`    | `string` |  |
-| `properties`    | [`IPropertyPaneCheckboxProps`](ipropertypanecheckboxprops.md) |  |
+| `targetProperty`    | `string` | - Target property the checkbox is associated to |
+| `properties`    | [`IPropertyPaneCheckboxProps`](ipropertypanecheckboxprops.md) | - Strongly typed Checkbox properties |
 

@@ -40,6 +40,7 @@ class instead.
 #### Returns
 [`ServiceScope`](servicescope.md)
 
+
 #### Parameters
 
 
@@ -58,6 +59,7 @@ a single web request.
 
 #### Returns
 [`ODataBatch`](odatabatch.md)
+
 
 #### Parameters
 
@@ -94,14 +96,15 @@ to specify it explicitly.
 
 #### Returns
 [`Promise<Response>`](promise.md)
+a promise that will return the result
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | `string` |  |
-| `options`    | [`IHttpClientOptions`](ihttpclientoptions.md) |  |
+| `url`    | `string` | - the URL to fetch |
+| `options`    | [`IHttpClientOptions`](ihttpclientoptions.md) | - additional options that affect the request |
 
 
 ### get
@@ -113,14 +116,15 @@ Calls fetch(),but sets the method to 'GET'.
 
 #### Returns
 [`Promise<Response>`](promise.md)
+a promise that will return the result
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | `string` |  |
-| `options`    | [`IHttpClientOptions`](ihttpclientoptions.md) | _Optional._ |
+| `url`    | `string` | - the URL to fetch |
+| `options`    | [`IHttpClientOptions`](ihttpclientoptions.md) | _Optional._- additional options that affect the request |
 
 
 ### getWebUrlFromRequestUrl
@@ -139,13 +143,14 @@ is "http://example.com/_layouts/service", the returned URL would be
 
 #### Returns
 `string`
+the inferred SPWeb URL
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `requestUrl`    | `string` |  |
+| `requestUrl`    | `string` | The URL for a SharePoint REST service |
 
 
 ### post
@@ -157,12 +162,13 @@ Calls fetch(),but sets the method to 'POST'.
 
 #### Returns
 [`Promise<Response>`](promise.md)
+a promise that will return the result
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | `string` |  |
-| `options`    | [`IHttpClientOptions`](ihttpclientoptions.md) |  |
+| `url`    | `string` | - the URL to fetch |
+| `options`    | [`IHttpClientOptions`](ihttpclientoptions.md) | - additional options that affect the request |
 

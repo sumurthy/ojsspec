@@ -8,6 +8,7 @@ Make a promise that rejects to obj. For consistency and debugging (eg stack trac
 #### Returns
 [`Promise<any>`](promise.md)
 
+
 #### Parameters
 
 

@@ -36,14 +36,15 @@ Logs an error
 #### Returns
 `void`
 
+
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `source`    | `string` |  |
-| `error`    | `Error` |  |
-| `scope`    | [`ServiceScope`](servicescope.md) | _Optional._ |
+| `source`    | `string` | - the source from where the error is logged,e |
+| `error`    | `Error` | - the error to be logged |
+| `scope`    | [`ServiceScope`](servicescope.md) | _Optional._- the service scope that the source uses |
 
 
 ### info
@@ -56,14 +57,15 @@ Logs an informational message
 #### Returns
 `void`
 
+
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `source`    | `string` |  |
-| `message`    | `string` |  |
-| `scope`    | [`ServiceScope`](servicescope.md) | _Optional._ |
+| `source`    | `string` | - the source from where the message is logged,e |
+| `message`    | `string` | - the message to be logged  If the message's length is more than 100, only the first 100 characters are kept |
+| `scope`    | [`ServiceScope`](servicescope.md) | _Optional._- the service scope that the source uses |
 
 
 ### verbose
@@ -76,14 +78,15 @@ Logs a verbose message
 #### Returns
 `void`
 
+
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `source`    | `string` |  |
-| `message`    | `string` |  |
-| `scope`    | [`ServiceScope`](servicescope.md) | _Optional._ |
+| `source`    | `string` | - the source from where the message is logged,e |
+| `message`    | `string` | - the message to be logged  If the message's length is more than 100, only the first 100 characters are kept |
+| `scope`    | [`ServiceScope`](servicescope.md) | _Optional._- the service scope that the source uses |
 
 
 ### warn
@@ -96,12 +99,13 @@ Logs a warning
 #### Returns
 `void`
 
+
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `source`    | `string` |  |
-| `message`    | `string` |  |
-| `scope`    | [`ServiceScope`](servicescope.md) | _Optional._ |
+| `source`    | `string` | - the source from where the message is logged,e |
+| `message`    | `string` | - the message to be logged  If the message's length is more than 100, only the first 100 characters are kept |
+| `scope`    | [`ServiceScope`](servicescope.md) | _Optional._- the service scope that the source uses |
 

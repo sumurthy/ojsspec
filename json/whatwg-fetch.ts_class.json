@@ -81,7 +81,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "RequestInit",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "input",
@@ -115,7 +115,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "void",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "name",
@@ -139,7 +139,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "void",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "name",
@@ -157,7 +157,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "string",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "name",
@@ -175,7 +175,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "Array<string>",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "name",
@@ -193,7 +193,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "boolean",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "name",
@@ -211,7 +211,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "void",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "name",
@@ -235,7 +235,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "void",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "callback",
@@ -275,7 +275,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "Promise<ArrayBuffer>",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": []
       },
       "blob~GuLg9": {
@@ -286,7 +286,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "Promise<Blob>",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": []
       },
       "formData~ZXNA9": {
@@ -297,7 +297,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "Promise<FormData>",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": []
       },
       "json~KJno9": {
@@ -308,7 +308,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "Promise<any>",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": []
       },
       "json<T>~qXBg9": {
@@ -319,7 +319,7 @@
         "descr": "",
         "genericType": "T",
         "returnType": "Promise<T>",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": []
       },
       "text~yydE9": {
@@ -330,7 +330,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "Promise<string>",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": []
       }
     },
@@ -407,7 +407,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "ResponseInit",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "body",
@@ -431,7 +431,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "Response",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": []
       },
       "redirect~iKT49": {
@@ -442,7 +442,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "Response",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "url",
@@ -466,7 +466,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "Response",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": []
       }
     },

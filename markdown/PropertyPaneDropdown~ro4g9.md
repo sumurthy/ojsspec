@@ -8,11 +8,12 @@ Helper method to create a Dropdown on the PropertyPane.
 #### Returns
 [`IPropertyPaneField<IPropertyPaneDropdownProps>`](ipropertypanefield.md)
 
+
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `targetProperty`    | `string` |  |
-| `properties`    | [`IPropertyPaneDropdownProps`](ipropertypanedropdownprops.md) |  |
+| `targetProperty`    | `string` | - Target property the dropdown is associated to |
+| `properties`    | [`IPropertyPaneDropdownProps`](ipropertypanedropdownprops.md) | - Strongly typed Dropdown properties |
 

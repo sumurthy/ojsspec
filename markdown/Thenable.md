@@ -30,6 +30,7 @@ _Type parameters: `<R>`_
 #### Returns
 [`Thenable<U>`](thenable.md)
 
+
 #### Parameters
 
 

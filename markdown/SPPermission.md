@@ -78,6 +78,7 @@ https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.
 #### Returns
 [`IODataBasePermission`](iodatabasepermission.md)
 
+
 #### Parameters
 
 
@@ -95,6 +96,7 @@ Function for determining if a given permission mask has all of the requested per
 
 #### Returns
 `boolean`
+
 
 #### Parameters
 
@@ -114,6 +116,7 @@ Function for determining if a given permission mask has any of the requested per
 #### Returns
 `boolean`
 
+
 #### Parameters
 
 
@@ -132,10 +135,11 @@ Function for checking if a given permission mask has the requested permission.
 #### Returns
 `boolean`
 
+
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `requestedPerm`    | [`SPPermission`](sppermission.md) |  |
+| `requestedPerm`    | [`SPPermission`](sppermission.md) | - The SPPermission object to be compared against the original |
 

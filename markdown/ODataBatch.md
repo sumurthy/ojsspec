@@ -43,6 +43,7 @@ resolve with a Response object for that particular request.
 #### Returns
 [`IODataBatchOptions`](iodatabatchoptions.md)
 
+
 #### Parameters
 
 
@@ -61,6 +62,7 @@ Executes the batched queries that were queued using ODataBatch.fetch().
 
 #### Returns
 [`Promise<ODataBatch>`](promise.md)
+
 
 #### Parameters
 None
@@ -88,14 +90,15 @@ explicitly.
 
 #### Returns
 [`Promise<Response>`](promise.md)
+a promise that will return the result
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | `string` |  |
-| `options`    | `IODataBatchRequestOptions` | _Optional._ |
+| `url`    | `string` | - the URL to fetch,or an already initialized Request object |
+| `options`    | `IODataBatchRequestOptions` | _Optional._- additional options that affect the request |
 
 
 ### get
@@ -107,14 +110,15 @@ Calls fetch(),but sets the method to 'GET'.
 
 #### Returns
 [`Promise<Response>`](promise.md)
+a promise that will return the result
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | `string` |  |
-| `options`    | `IODataBatchRequestOptions` | _Optional._ |
+| `url`    | `string` | - the URL to fetch |
+| `options`    | `IODataBatchRequestOptions` | _Optional._- additional options that affect the request |
 
 
 ### post
@@ -126,12 +130,13 @@ Calls fetch(),but sets the method to 'POST'.
 
 #### Returns
 [`Promise<Response>`](promise.md)
+a promise that will return the result
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | `string` |  |
-| `options`    | `IODataBatchRequestOptions` |  |
+| `url`    | `string` | - the URL to fetch |
+| `options`    | `IODataBatchRequestOptions` | - additional options that affect the request |
 

@@ -78,6 +78,7 @@ PRIVATE CONSTRUCTOR - DO NOT CALL THIS FROM YOUR OWN CODE.
 #### Returns
 [`ServiceScope`](servicescope.md)
 
+
 #### Parameters
 
 
@@ -97,13 +98,14 @@ instance will be autocreated and registered with the root ServiceScope.
 
 #### Returns
 `T`
+- the service instance
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceKey`    | [`ServiceKey<T>`](servicekey.md) |  |
+| `serviceKey`    | [`ServiceKey<T>`](servicekey.md) | - the key that was used when provide() was called to register the service |
 
 
 ### createAndProvide<T>
@@ -116,14 +118,15 @@ simpleServiceClass, then registering it by calling ServiceScope.provide().
 
 #### Returns
 `T;`
+- a newly constructed instance of simpleServiceClass
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceKey`    | [`ServiceKey<T>`](servicekey.md) |  |
-| `simpleServiceClass`    | `{ new (serviceScope: ServiceScope) }` |  |
+| `serviceKey`    | [`ServiceKey<T>`](servicekey.md) | - the key that can be used later to consume the service |
+| `simpleServiceClass`    | `{ new (serviceScope: ServiceScope) }` | - the TypeScript class to be constructed |
 
 
 ### createDefaultAndProvide<T>
@@ -136,13 +139,14 @@ serviceKey, and then registers it by calling ServiceScope.provide().
 
 #### Returns
 `T`
+- a service instance that was constructed using ServiceKey.defaultCreator
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceKey`    | [`ServiceKey<T>`](servicekey.md) |  |
+| `serviceKey`    | [`ServiceKey<T>`](servicekey.md) | - the key that can be used later to consume the service |
 
 
 ### finish
@@ -161,6 +165,7 @@ the previous call, which would be very confusing for developers.
 #### Returns
 `void`
 
+
 #### Parameters
 None
 
@@ -174,6 +179,7 @@ Returns the parent of the current ServiceScope,or undefined if this is a root sc
 
 #### Returns
 [`ServiceScope`](servicescope.md)
+- the parent service scope
 
 #### Parameters
 None
@@ -190,14 +196,15 @@ state, i.e. before finish() has been called.
 
 #### Returns
 `T`
+- the same object that was passed as the "service" parameter
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceKey`    | [`ServiceKey<T>`](servicekey.md) |  |
-| `service`    | `T` |  |
+| `serviceKey`    | [`ServiceKey<T>`](servicekey.md) | - the key that will later be used to consume the service |
+| `service`    | `T` | - the service instance that is being registered |
 
 
 ### startNewChild
@@ -211,6 +218,7 @@ consulted.
 
 #### Returns
 [`ServiceScope`](servicescope.md)
+- the newly created root ServiceScope
 
 #### Parameters
 None
@@ -226,6 +234,7 @@ default implementations of ServiceKeys.
 
 #### Returns
 [`ServiceScope`](servicescope.md)
+- the newly created root ServiceScope
 
 #### Parameters
 None
@@ -245,10 +254,11 @@ later when the scope is finished.
 #### Returns
 `void`
 
+
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `callback`    | `() => void` |  |
+| `callback`    | `() => void` | - A block of code that needs to call ServiceScope |
 

@@ -46,7 +46,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "IteratorResult<T>",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "value",
@@ -64,7 +64,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "IteratorResult<T>",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "value",
@@ -82,7 +82,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "IteratorResult<T>",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "e",
@@ -110,7 +110,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "void",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "callbackfn",
@@ -150,7 +150,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "void",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": []
       },
       "delete~hWgQ9": {
@@ -161,7 +161,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "boolean",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "key",
@@ -179,7 +179,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "void",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "callbackfn",
@@ -203,7 +203,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "V",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "key",
@@ -221,7 +221,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "boolean",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "key",
@@ -239,7 +239,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "Map<K,V>",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "key",
@@ -263,7 +263,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "Iterator<[K,V]>",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": []
       },
       "keys~5ySM9": {
@@ -274,7 +274,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "Iterator<K>",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": []
       },
       "values~bdxE9": {
@@ -285,7 +285,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "Iterator<V>",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": []
       }
     },
@@ -318,7 +318,7 @@
         "descr": "",
         "genericType": "K,V",
         "returnType": "Map<K,V>",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "iterable",
@@ -358,7 +358,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "Set<T>",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "value",
@@ -376,7 +376,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "void",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": []
       },
       "delete~hWgQ9": {
@@ -387,7 +387,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "boolean",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "value",
@@ -405,7 +405,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "void",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "callbackfn",
@@ -429,7 +429,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "boolean",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "value",
@@ -447,7 +447,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "Iterator<[T,T]>",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": []
       },
       "keys~5ySM9": {
@@ -458,7 +458,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "Iterator<T>",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": []
       },
       "values~bdxE9": {
@@ -469,7 +469,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "Iterator<T>",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": []
       }
     },
@@ -502,7 +502,7 @@
         "descr": "",
         "genericType": "T",
         "returnType": "Set<T>",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "iterable",
@@ -530,7 +530,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "boolean",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "key",
@@ -548,7 +548,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "void",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": []
       },
       "get~XkVg9": {
@@ -559,7 +559,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "V",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "key",
@@ -577,7 +577,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "boolean",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "key",
@@ -595,7 +595,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "WeakMap<K,V>",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "key",
@@ -641,7 +641,7 @@
         "descr": "",
         "genericType": "K,V",
         "returnType": "WeakMap<K,V>",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "iterable",
@@ -669,7 +669,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "boolean",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "value",
@@ -687,7 +687,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "void",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": []
       },
       "add~7R2c9": {
@@ -698,7 +698,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "WeakSet<T>",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "value",
@@ -716,7 +716,7 @@
         "descr": "",
         "genericType": null,
         "returnType": "boolean",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "value",
@@ -756,7 +756,7 @@
         "descr": "",
         "genericType": "T",
         "returnType": "WeakSet<T>",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "iterable",

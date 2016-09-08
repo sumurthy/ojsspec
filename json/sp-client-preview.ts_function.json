@@ -7,7 +7,7 @@
     "descr": "Combines any number of URL paths.",
     "genericType": null,
     "returnType": "string",
-    "returnDescr": null,
+    "returnDescr": "",
     "params": [
       {
         "name": "...url",
@@ -25,7 +25,7 @@
     "descr": "Get's the path name from an absolute url. \n",
     "genericType": null,
     "returnType": "string",
-    "returnDescr": null,
+    "returnDescr": "",
     "params": [
       {
         "name": "url",
@@ -43,19 +43,19 @@
     "descr": "Helper method to create a Button on the PropertyPane.",
     "genericType": null,
     "returnType": "IPropertyPaneField<IPropertyPaneButtonProps>",
-    "returnDescr": null,
+    "returnDescr": "",
     "params": [
       {
         "name": "targetProperty",
         "dataType": "string",
         "isOptional": false,
-        "descr": ""
+        "descr": "- Target property the Button is associated to."
       },
       {
         "name": "properties",
         "dataType": "IPropertyPaneButtonProps",
         "isOptional": false,
-        "descr": ""
+        "descr": "- Strongly typed Button properties."
       }
     ]
   },
@@ -67,19 +67,19 @@
     "descr": "Helper method to create a Checkbox on the PropertyPane.",
     "genericType": null,
     "returnType": "IPropertyPaneField<IPropertyPaneCheckboxProps>",
-    "returnDescr": null,
+    "returnDescr": "",
     "params": [
       {
         "name": "targetProperty",
         "dataType": "string",
         "isOptional": false,
-        "descr": ""
+        "descr": "- Target property the checkbox is associated to."
       },
       {
         "name": "properties",
         "dataType": "IPropertyPaneCheckboxProps",
         "isOptional": false,
-        "descr": ""
+        "descr": "- Strongly typed Checkbox properties."
       }
     ]
   },
@@ -91,19 +91,19 @@
     "descr": "Helper method to create a Choice Group on the PropertyPane.",
     "genericType": null,
     "returnType": "IPropertyPaneField<IPropertyPaneChoiceGroupProps>",
-    "returnDescr": null,
+    "returnDescr": "",
     "params": [
       {
         "name": "targetProperty",
         "dataType": "string",
         "isOptional": false,
-        "descr": ""
+        "descr": "- Target property the choice group is associated to."
       },
       {
         "name": "properties",
         "dataType": "IPropertyPaneChoiceGroupProps",
         "isOptional": false,
-        "descr": ""
+        "descr": "- Strongly typed Choice Group properties."
       }
     ]
   },
@@ -115,19 +115,19 @@
     "descr": "Helper method to create a Choice Group on the PropertyPane.",
     "genericType": null,
     "returnType": "IPropertyPaneField<IPropertyPaneCustomFieldProps>",
-    "returnDescr": null,
+    "returnDescr": "",
     "params": [
       {
         "name": "targetProperty",
         "dataType": "string",
         "isOptional": false,
-        "descr": ""
+        "descr": "- Target property the choice group is associated to."
       },
       {
         "name": "properties",
         "dataType": "IPropertyPaneCustomFieldProps",
         "isOptional": false,
-        "descr": ""
+        "descr": "- Strongly typed Choice Group properties."
       }
     ]
   },
@@ -139,19 +139,19 @@
     "descr": "Helper method to create a Dropdown on the PropertyPane.",
     "genericType": null,
     "returnType": "IPropertyPaneField<IPropertyPaneDropdownProps>",
-    "returnDescr": null,
+    "returnDescr": "",
     "params": [
       {
         "name": "targetProperty",
         "dataType": "string",
         "isOptional": false,
-        "descr": ""
+        "descr": "- Target property the dropdown is associated to."
       },
       {
         "name": "properties",
         "dataType": "IPropertyPaneDropdownProps",
         "isOptional": false,
-        "descr": ""
+        "descr": "- Strongly typed Dropdown properties."
       }
     ]
   },
@@ -163,7 +163,7 @@
     "descr": "Helper method to create a Horizontal Rule on the PropertyPane.",
     "genericType": null,
     "returnType": "IPropertyPaneField<void>",
-    "returnDescr": null,
+    "returnDescr": "",
     "params": []
   },
   "PropertyPaneLabel~lVOg9": {
@@ -174,19 +174,19 @@
     "descr": "Helper method to create a Label on the PropertyPane.",
     "genericType": null,
     "returnType": "IPropertyPaneField<IPropertyPaneLabelProps>",
-    "returnDescr": null,
+    "returnDescr": "",
     "params": [
       {
         "name": "targetProperty",
         "dataType": "string",
         "isOptional": false,
-        "descr": ""
+        "descr": "- Target property the label is associated to."
       },
       {
         "name": "properties",
         "dataType": "IPropertyPaneLabelProps",
         "isOptional": false,
-        "descr": ""
+        "descr": "- Strongly typed Label properties."
       }
     ]
   },
@@ -198,19 +198,19 @@
     "descr": "Helper method to create a Link on the PropertyPane.",
     "genericType": null,
     "returnType": "IPropertyPaneField<IPropertyPaneLinkProps>",
-    "returnDescr": null,
+    "returnDescr": "",
     "params": [
       {
         "name": "targetProperty",
         "dataType": "string",
         "isOptional": false,
-        "descr": ""
+        "descr": "- Target property the Link is associated to."
       },
       {
         "name": "properties",
         "dataType": "IPropertyPaneLinkProps",
         "isOptional": false,
-        "descr": ""
+        "descr": "- Strongly typed Link properties."
       }
     ]
   },
@@ -222,19 +222,19 @@
     "descr": "Helper method to create a Slider on the PropertyPane.",
     "genericType": null,
     "returnType": "IPropertyPaneField<IPropertyPaneSliderProps>",
-    "returnDescr": null,
+    "returnDescr": "",
     "params": [
       {
         "name": "targetProperty",
         "dataType": "string",
         "isOptional": false,
-        "descr": ""
+        "descr": "- Target property the slider is associated to."
       },
       {
         "name": "properties",
         "dataType": "IPropertyPaneSliderProps",
         "isOptional": false,
-        "descr": ""
+        "descr": "- Strongly typed Slider properties."
       }
     ]
   },
@@ -246,19 +246,19 @@
     "descr": "Helper method to create a TextField on the PropertyPane.",
     "genericType": null,
     "returnType": "IPropertyPaneField<IPropertyPaneTextFieldProps>",
-    "returnDescr": null,
+    "returnDescr": "",
     "params": [
       {
         "name": "targetProperty",
         "dataType": "string",
         "isOptional": false,
-        "descr": ""
+        "descr": "- Target property the textfield is associated to."
       },
       {
         "name": "properties",
         "dataType": "IPropertyPaneTextFieldProps",
         "isOptional": false,
-        "descr": ""
+        "descr": "- Strongly typed TextField properties."
       }
     ]
   },
@@ -270,19 +270,19 @@
     "descr": "Helper method to create a Toggle on the PropertyPane.",
     "genericType": null,
     "returnType": "IPropertyPaneField<IPropertyPaneToggleProps>",
-    "returnDescr": null,
+    "returnDescr": "",
     "params": [
       {
         "name": "targetProperty",
         "dataType": "string",
         "isOptional": false,
-        "descr": ""
+        "descr": "- Target property the toggle is associated to."
       },
       {
         "name": "properties",
         "dataType": "IPropertyPaneToggleProps",
         "isOptional": false,
-        "descr": ""
+        "descr": "- Strongly typed Toggle properties."
       }
     ]
   }

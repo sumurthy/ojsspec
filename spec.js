@@ -57,10 +57,10 @@ let propObj = {}
 let typeObj = {}
 let variableObj = {}
 let generalDesc = ''
-let commentObject = {
+let commentParent = {
     'param': []
 }
-
+let commentObject = JSON.parse(JSON.stringify(commentParent))
 function file_reset() {
     nClass = 0
     nFunction = 0
@@ -81,9 +81,9 @@ function file_reset() {
     methodObj = {}
     propObj = {}
     generalDesc = ''
-    commentObject = {
-        'param': []
-    }
+    //commentObject = JSON.parse(JSON.stringify(commentParent))
+    commentObject['param'] = []
+    commentObject['returnDescr'] = ''
     comment_reset()
 }
 
@@ -91,9 +91,8 @@ function block_end_reset() {
     methodObj = {}
     propObj = {}
     generalDesc = ''
-    commentObject = {
-        'param': []
-    }
+    commentObject['param'] = []
+    commentObject['returnDescr'] = ''
     interfaceName = ''
     comment_reset()
 }
@@ -102,14 +101,12 @@ function block_begin_reset() {
     generalDesc = ''
     paramEncountered = false
     readonlyProperty = false
-
 }
 
 function comment_reset() {
     block_begin_reset()
-    let commentObject = {
-        'param': []
-    }
+    commentObject['param'] = []
+    commentObject['returnDescr'] = ''
 }
 
 function expandAllTypes() {
@@ -204,21 +201,21 @@ function processLines(element = '', index = 0, lines = []) {
 
             switch (secondWord) {
                 case '@param':
-                    //4th word has param name and 5th has the description. Those are the only important ones to consider
+                    //4th word has param name and 5th+ has the description. Those are the only important ones to consider
                     //* @param  {string}             targetProperty [description]
                     //Split and Remove entries that have empty strings
                     // (since we are compacting the line, we don't have to do ``.map((s) => s.trim()).filter((e) => e)` at the end of the split)
                     var arr = line.split(' ')
-                    if (arr[3] !== undefined) {
-                        var o = Utils.readCommentAhead(lines, arr.slice(4).join(' '), index)
+                    if (arr[2] !== undefined) {
+                        var o = Utils.readCommentAhead(lines, arr.slice(3).join(' '), index)
                         ignore_lines = o['skip']
-                        commentObject['param'].push([arr[3], o['descr']])
+                        commentObject['param'].push([arr[2], o['descr']])
                     }
                     break;
                 case '@returns':
                     var arr = line.split(' ')
-                    if (arr[3] !== undefined) {
-                        var o = Utils.readCommentAhead(lines, arr.slice(3).join(' '), index)
+                    if (arr[2] !== undefined) {
+                        var o = Utils.readCommentAhead(lines, arr.slice(2).join(' '), index)
                         ignore_lines = o['skip']
                         commentObject['returnDescr'] = o['descr']
                     }
@@ -355,6 +352,7 @@ function processLines(element = '', index = 0, lines = []) {
                 }  else {
                     console.log('Error: Cannot determine the case of this line: ' + line);
                 }
+                comment_reset()
                 break;
             case 'CLASS':
                 var memberType = Utils.getMemberType(line)
@@ -384,6 +382,8 @@ function processLines(element = '', index = 0, lines = []) {
                 }  else {
                     console.log('Error: Cannot determine the case of this line: ' + line);
                 }
+                comment_reset()
+
                 break;
             case 'ENUM':
 

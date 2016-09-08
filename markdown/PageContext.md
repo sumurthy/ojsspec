@@ -44,6 +44,7 @@ application cache.
 #### Returns
 [`ServiceScope`](servicescope.md)
 
+
 #### Parameters
 
 

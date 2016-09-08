@@ -14,7 +14,7 @@
         "descr": "",
         "genericType": "U",
         "returnType": "Thenable<U>",
-        "returnDescr": null,
+        "returnDescr": "",
         "params": [
           {
             "name": "onFulfilled",

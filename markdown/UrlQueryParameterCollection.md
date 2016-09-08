@@ -40,6 +40,7 @@ Query param with only equals (www.example.com/?=&debug=on stores empty string ke
 #### Returns
 `string`
 
+
 #### Parameters
 
 
@@ -65,12 +66,13 @@ getValue('lost') ---> undefined
 #### Returns
 `string`
 
+
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `param`    | `string` |  |
+| `param`    | `string` | the case insensitive key for the desired query parameter value |
 
 
 ### getValues
@@ -90,10 +92,11 @@ getValues('lost') ---> undefined
 #### Returns
 `string[]`
 
+
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `param`    | `string` |  |
+| `param`    | `string` | the case insensitive key for the desired query parameter value |
 

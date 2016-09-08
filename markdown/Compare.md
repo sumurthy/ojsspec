@@ -32,11 +32,12 @@ only object types.
 #### Returns
 `boolean`
 
+
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `objA`    | `Object` |  |
-| `objB`    | `Object` |  |
+| `objA`    | `Object` | - the first object to compare |
+| `objB`    | `Object` | - the second object to compare |
 

@@ -41,6 +41,7 @@
 #### Returns
 [`RequestInit`](requestinit.md)
 
+
 #### Parameters
 
 
