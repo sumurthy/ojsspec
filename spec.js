@@ -30,6 +30,7 @@ let ignoreMode = false
 let paramEncountered = false
 let mode = ''
 let cmode = false
+let readonlyProperty = false
 let iBlock = 0
 
 let nClass = 0
@@ -95,12 +96,12 @@ function block_end_reset() {
     }
     interfaceName = ''
     comment_reset()
-
 }
 
 function block_begin_reset() {
     generalDesc = ''
     paramEncountered = false
+    readonlyProperty = false
 
 }
 
@@ -222,6 +223,9 @@ function processLines(element = '', index = 0, lines = []) {
                         commentObject['returnDescr'] = o['descr']
                     }
                     break
+                case '@readonly':
+                    readonlyProperty = true
+                    break;
                 default:
             }
         } else {
@@ -340,7 +344,7 @@ function processLines(element = '', index = 0, lines = []) {
                     var p = {}
                     var name = Utils.getPropName(firstWord, false)
                     p['isCollection'] = (secondWord.includes('[]')) ? true : false
-                    var p = Utils.processProperty(name, line, generalDesc, assignValue, false)
+                    var p = Utils.processProperty(name, line, generalDesc, assignValue, false, readonlyProperty)
                     name = name.replace('?','')
                     iObj[interfaceName]['properties'][name] = p
                 } else if (memberType === 'METHOD') {   //METHOD
@@ -368,7 +372,7 @@ function processLines(element = '', index = 0, lines = []) {
                     else {
                         var name = 'PROPERTYNAMEERROR~99999'
                     }
-                    var p = Utils.processProperty(name, line, generalDesc, assignValue)
+                    var p = Utils.processProperty(name, line, generalDesc, assignValue, true, readonlyProperty)
                     name = name.replace('?','')
                     classObj[className]['properties'][name] = p
                 // } else if (line.includes(')') && line.includes('(')) { // has brackets

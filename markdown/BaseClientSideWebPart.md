@@ -22,16 +22,16 @@ Please refer to the documentation of the individual APIs to make the right decis
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|`accessibleTitle`     | `protected` | `string` | This property points to the accessible title of web part made available to screen readers |
-|`context`     | `protected` | [`IWebPartContext`](iwebpartcontext.md) | This property is a pointer to the web part context |
-|`disableReactivePropertyChanges`     | `protected` | `boolean` | This property is used to change the web part's PropertyPane interaction from Reactive to NonReactive |
-|`displayMode`     | `protected` | [`DisplayMode`](displaymode.md) | This property is the current display mode of the web part |
-|`domElement`     | `protected` | `HTMLElement` | This property is a pointer to the root DOM element of the web part |
-|`previewImageUrl`     | `protected` | `string` | This property points to the preview image for the web part |
-|`properties`     | `protected` | `TProperties` | This property is the pointer to the custom property bag of the web part |
-|`propertyPaneSettings`     | `protected` | [`IPropertyPaneSettings`](ipropertypanesettings.md) | This property is the pointer to the web part configuration settings |
-|`renderedFromDefaultProperties`     | `protected` | `boolean` | This property indicates whether the web part was rendered from the default properties,as opposed to using  serialized state from the last time that the web part was saved |
-|`renderedOnce`     | `protected` | `boolean` | This property indicates whether the web part has been rendered once or not |
+|`accessibleTitle`     | `protected` | `string` | _Read-only._ This property points to the accessible title of web part made available to screen readers |
+|`context`     | `protected` | [`IWebPartContext`](iwebpartcontext.md) | _Read-only._ This property is a pointer to the web part context |
+|`disableReactivePropertyChanges`     | `protected` | `boolean` | _Read-only._ This property is used to change the web part's PropertyPane interaction from Reactive to NonReactive |
+|`displayMode`     | `protected` | [`DisplayMode`](displaymode.md) | _Read-only._ This property is the current display mode of the web part |
+|`domElement`     | `protected` | `HTMLElement` | _Read-only._ This property is a pointer to the root DOM element of the web part |
+|`previewImageUrl`     | `protected` | `string` | _Read-only._ This property points to the preview image for the web part |
+|`properties`     | `protected` | `TProperties` | _Read-only._ This property is the pointer to the custom property bag of the web part |
+|`propertyPaneSettings`     | `protected` | [`IPropertyPaneSettings`](ipropertypanesettings.md) | _Read-only._ This property is the pointer to the web part configuration settings |
+|`renderedFromDefaultProperties`     | `protected` | `boolean` | _Read-only._ This property indicates whether the web part was rendered from the default properties,as opposed to using  serialized state from the last time that the web part was saved |
+|`renderedOnce`     | `protected` | `boolean` | _Read-only._ This property indicates whether the web part has been rendered once or not |
 
 
 

@@ -382,6 +382,12 @@ function addMembers(tline = '', type = '', name = '', localO = {}) {
         else {
             mline = mline.replace('%access%', `\`${o[e]['accessModifier']}\``)
         }
+        if (o[e]['readonly']) {
+            mline = mline.replace('%readonly%', `_Read-only._ `)
+        }
+        else {
+            mline = mline.replace('%readonly%', '')
+        }
         if ((type === 'method') || type === 'imethod') {
             mline = mline.replace('%type%', `${getLinkForType(o[e]['returnType'])}`)
             mline = mline.replace('%name%', `[\`${e.split('~')[0]}\`](#${e.split('~')[0].toLowerCase()})`)

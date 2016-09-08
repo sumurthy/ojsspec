@@ -267,7 +267,7 @@ var self = module.exports = {
         m['params'] = self.buildParamList(line, commentObject['param'])
         return m
     },
-    processProperty: (name = '', line = '', descr = '', assignValue = null, isClass = true) => {
+    processProperty: (name = '', line = '', descr = '', assignValue = null, isClass = true, readonly = false) => {
         var p = {}
         var lastWord = line.split(':').pop()
         var firstWord = line.split(' ')[0]
@@ -284,6 +284,7 @@ var self = module.exports = {
         } else {
             p['isOptional'] = false
         }
+        p['readonly'] = readonly
 
         if (line.includes(')') && line.includes('(')) {
             p['dataType'] = 'function'

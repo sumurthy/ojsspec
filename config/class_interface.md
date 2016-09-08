@@ -3,7 +3,7 @@
 
 %extendsimplements%
 
-%typeparameters% 
+%typeparameters%
 
 %resourcedescription%
 
@@ -15,7 +15,7 @@
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
->|`%name%`     | %access% | %type% | %description% |
+>|`%name%`     | %access% | %type% | %readonly%%description% |
 
 </property>
 
@@ -24,7 +24,7 @@
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
->|`%name%`      | %type% | %description% |
+>|`%name%`      | %type% | %readonly%%description% |
 
 </iproperty>
 
