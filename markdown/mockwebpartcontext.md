@@ -20,7 +20,7 @@
 |`host`     | `public` | [`IWebPartHost`](iwebparthost.md) |  |
 |`httpClient`     | `public` | [`HttpClient`](httpclient.md) |  |
 |`instanceId`     | `public` | `string` |  |
-|`manifest`     | `public` | [`IClientSideWebPartManifestInstance`](iclientsidewebpartmanifestinstance.md),`` |  |
+|`manifest`     | `public` | [`IClientSideWebPartManifestInstance<{}>`](iclientsidewebpartmanifestinstance.md) |  |
 |`pageContext`     | `public` | [`PageContext`](pagecontext.md) |  |
 |`serviceScope`     | `public` | [`ServiceScope`](servicescope.md) |  |
 |`statusRenderer`     | `public` | [`IClientSideWebPartStatusRenderer`](iclientsidewebpartstatusrenderer.md) |  |

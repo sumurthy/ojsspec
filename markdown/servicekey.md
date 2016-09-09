@@ -17,7 +17,7 @@ introduced without inadvertently breaking components that are loaded by an older
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|`defaultCreator`     | `public` | `ServiceCreator`,`T`,`` |  |
+|`defaultCreator`     | `public` | `ServiceCreator<T>` |  |
 |`id`     | `public` | `string` |  |
 |`name`     | `public` | `string` |  |
 
@@ -28,9 +28,9 @@ introduced without inadvertently breaking components that are loaded by an older
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`constructor`](#constructor)     | `public` | `ServiceCreator`,`T`,`` | PRIVATE - Do not call this from your own code |
-|[`create<T>`](#create<t>)     | `public, _static_` | [`ServiceKey`](servicekey.md),`T`,`` | Constructs a new ServiceKey whose default implementation will be a new instance of  a TypeScript class that accepts the standard constructor parameter |
-|[`createCustom<T>`](#createcustom<t>)     | `public, _static_` | [`ServiceKey`](servicekey.md),`T`,`` | Constructs a new ServiceKey whose default implementation will be obtained  by invoking the specified callback |
+|[`constructor`](#constructor)     | `public` | `ServiceCreator<T>` | PRIVATE - Do not call this from your own code |
+|[`create<T>`](#create<t>)     | `public, _static_` | [`ServiceKey<T>;`](servicekey.md) | Constructs a new ServiceKey whose default implementation will be a new instance of  a TypeScript class that accepts the standard constructor parameter |
+|[`createCustom<T>`](#createcustom<t>)     | `public, _static_` | [`ServiceKey<T>`](servicekey.md) | Constructs a new ServiceKey whose default implementation will be obtained  by invoking the specified callback |
 
 
 
@@ -43,7 +43,7 @@ PRIVATE - Do not call this from your own code.
 `constructor(id: string,name: string,defaultCreator: ServiceCreator<T>)`
 
 #### Returns
-`ServiceCreator`,`T`,``
+`ServiceCreator<T>`
 
 
 #### Parameters
@@ -53,7 +53,7 @@ PRIVATE - Do not call this from your own code.
 |:-------------|:---------------|:------------|
 | `id`    | `string` |  |
 | `name`    | `string` |  |
-| `defaultCreator`    | `ServiceCreator`,`T`,`` |  |
+| `defaultCreator`    | `ServiceCreator<T>` |  |
 
 
 ### create<T>
@@ -66,7 +66,7 @@ specify custom constructor parameters, use createCustom() instead.
 `create<T>(name: string,serviceClass: { new (serviceScope: ServiceScope) }): ServiceKey<T>;`
 
 #### Returns
-[`ServiceKey`](servicekey.md),`T`,``
+[`ServiceKey<T>;`](servicekey.md)
 - the newly created ServiceKey
 
 #### Parameters
@@ -75,7 +75,7 @@ specify custom constructor parameters, use createCustom() instead.
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `name`    | `string` | - A name such as "MyApplication |
-| `serviceClass`    | ``,`new`,`serviceScope`,[`ServiceScope`](servicescope.md),`` | - the TypeScript class that implements the service |
+| `serviceClass`    | `{ new (serviceScope: ServiceScope) }` | - the TypeScript class that implements the service |
 
 
 ### createCustom<T>
@@ -87,7 +87,7 @@ by invoking the specified callback.
 `createCustom<T>(name: string,defaultCreator: ServiceCreator<T>): ServiceKey<T>`
 
 #### Returns
-[`ServiceKey`](servicekey.md),`T`,``
+[`ServiceKey<T>`](servicekey.md)
 - the newly created ServiceKey
 
 #### Parameters
@@ -96,5 +96,5 @@ by invoking the specified callback.
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `name`    | `string` | - A name such as "MyApplication |
-| `defaultCreator`    | `ServiceCreator`,`T`,`` | - A callback that returns an object that implements the T interface |
+| `defaultCreator`    | `ServiceCreator<T>` | - A callback that returns an object that implements the T interface |
 

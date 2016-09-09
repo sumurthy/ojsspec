@@ -36,5 +36,5 @@ _Type parameters: `<T>`_
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `callbackfn`    | ``,`value`,`T`,`void` |  |
+| `callbackfn`    | `(value: T) => void` |  |
 

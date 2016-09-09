@@ -6,7 +6,7 @@ Helper method to create a Link on the PropertyPane.
 `PropertyPaneLink(targetProperty: string,properties: IPropertyPaneLinkProps): IPropertyPaneField<IPropertyPaneLinkProps>`
 
 #### Returns
-[`IPropertyPaneField`](ipropertypanefield.md),[`IPropertyPaneLinkProps`](ipropertypanelinkprops.md),``
+[`IPropertyPaneField<IPropertyPaneLinkProps>`](ipropertypanefield.md)
 
 
 #### Parameters

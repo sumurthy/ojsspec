@@ -3,6 +3,7 @@ import SetUp from './modules/setuproutine'
 import Utils from './modules/utils'
 
 let allTypes = []
+let allVarsTypes = {}
 let functionObj = {}
 let iObj = {}
 let classObj = {}
@@ -61,13 +62,16 @@ function getLinkForType(type = '') {
     if (type.includes('|')) {
         splitChar = '|'
     }
-    //type.split(splitChar).forEach((e) => {
-    type.split(/\W+/).forEach((e) => {
+    //type.split(/\W+/).forEach((e) => {
+    type.split(splitChar).forEach((e) => {
         if (allTypes.includes(e.trim())) {
             out = out + `[\`${e.replace(/\^/g, ',')}\`](${Utils.trimGenerics(e).toLowerCase()}.md)` + ','
         }
         else if (allTypes.includes(Utils.trimGenerics(e))) {
             out = out + `[\`${e.replace(/\^/g, ',')}\`](${Utils.trimGenerics(e).toLowerCase()}.md)` + ','
+        }
+        else if (Object.keys(allVarsTypes).includes(Utils.trimGenerics(e))) {
+            out = out + `[\`${e.replace(/\^/g, ',')}\`](${allVarsTypes[Utils.trimGenerics(e)].toLowerCase()})` + ','
         }
         else {
             out = out + '`' + e.replace(/\^/g, ',') + '`' + ','
@@ -628,6 +632,7 @@ try {
 
     var t = JSON.parse(FileOps.loadJson('./json/allTypes.json'))
     allTypes = t['types']
+    allVarsTypes = JSON.parse(FileOps.loadJson('./json/allVarsTypes.json'))
 } catch (e) {
     console.log(`Error Loading config files.`)
     throw e

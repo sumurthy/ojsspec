@@ -21,12 +21,12 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`arrayBuffer`](#arraybuffer)     | `public` | [`Promise`](promise.md),`ArrayBuffer`,`` |  |
-|[`blob`](#blob)     | `public` | [`Promise`](promise.md),`Blob`,`` |  |
-|[`formData`](#formdata)     | `public` | [`Promise`](promise.md),`FormData`,`` |  |
-|[`json`](#json)     | `public` | [`Promise`](promise.md),`any`,`` |  |
-|[`json<T>`](#json<t>)     | `public` | [`Promise`](promise.md),`T`,`` |  |
-|[`text`](#text)     | `public` | [`Promise`](promise.md),`string`,`` |  |
+|[`arrayBuffer`](#arraybuffer)     | `public` | [`Promise<ArrayBuffer>`](promise.md) |  |
+|[`blob`](#blob)     | `public` | [`Promise<Blob>`](promise.md) |  |
+|[`formData`](#formdata)     | `public` | [`Promise<FormData>`](promise.md) |  |
+|[`json`](#json)     | `public` | [`Promise<any>`](promise.md) |  |
+|[`json<T>`](#json<t>)     | `public` | [`Promise<T>`](promise.md) |  |
+|[`text`](#text)     | `public` | [`Promise<string>`](promise.md) |  |
 
 
 
@@ -39,7 +39,7 @@
 `arrayBuffer(): Promise<ArrayBuffer>`
 
 #### Returns
-[`Promise`](promise.md),`ArrayBuffer`,``
+[`Promise<ArrayBuffer>`](promise.md)
 
 
 #### Parameters
@@ -54,7 +54,7 @@ None
 `blob(): Promise<Blob>`
 
 #### Returns
-[`Promise`](promise.md),`Blob`,``
+[`Promise<Blob>`](promise.md)
 
 
 #### Parameters
@@ -69,7 +69,7 @@ None
 `formData(): Promise<FormData>`
 
 #### Returns
-[`Promise`](promise.md),`FormData`,``
+[`Promise<FormData>`](promise.md)
 
 
 #### Parameters
@@ -84,7 +84,7 @@ None
 `json(): Promise<any>`
 
 #### Returns
-[`Promise`](promise.md),`any`,``
+[`Promise<any>`](promise.md)
 
 
 #### Parameters
@@ -99,7 +99,7 @@ None
 `json<T>(): Promise<T>`
 
 #### Returns
-[`Promise`](promise.md),`T`,``
+[`Promise<T>`](promise.md)
 
 
 #### Parameters
@@ -114,7 +114,7 @@ None
 `text(): Promise<string>`
 
 #### Returns
-[`Promise`](promise.md),`string`,``
+[`Promise<string>`](promise.md)
 
 
 #### Parameters

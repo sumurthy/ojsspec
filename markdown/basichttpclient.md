@@ -24,10 +24,10 @@ enhancements.
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
 |[`constructor`](#constructor)     | `public` | [`ServiceScope`](servicescope.md) |  |
-|[`fetch`](#fetch)     | `public` | [`Promise`](promise.md),[`Response`](response.md),`` | Performs a REST service call |
-|[`fetchCore`](#fetchcore)     | `protected` | [`Promise`](promise.md),[`Response`](response.md),`` |  |
-|[`get`](#get)     | `public` | [`Promise`](promise.md),[`Response`](response.md),`` | Calls fetch(),but sets the method to 'GET' |
-|[`post`](#post)     | `public` | [`Promise`](promise.md),[`Response`](response.md),`` | Calls fetch(),but sets the method to 'POST' |
+|[`fetch`](#fetch)     | `public` | [`Promise<Response>`](promise.md) | Performs a REST service call |
+|[`fetchCore`](#fetchcore)     | `protected` | [`Promise<Response>`](promise.md) |  |
+|[`get`](#get)     | `public` | [`Promise<Response>`](promise.md) | Calls fetch(),but sets the method to 'GET' |
+|[`post`](#post)     | `public` | [`Promise<Response>`](promise.md) | Calls fetch(),but sets the method to 'POST' |
 
 
 
@@ -62,7 +62,7 @@ https://fetch.spec.whatwg.org/
 `fetch(url: string,options: IBasicHttpClientOptions): Promise<Response>`
 
 #### Returns
-[`Promise`](promise.md),[`Response`](response.md),``
+[`Promise<Response>`](promise.md)
 a promise that will return the result
 
 #### Parameters
@@ -82,7 +82,7 @@ a promise that will return the result
 `fetchCore(request: Request): Promise<Response>`
 
 #### Returns
-[`Promise`](promise.md),[`Response`](response.md),``
+[`Promise<Response>`](promise.md)
 
 
 #### Parameters
@@ -101,7 +101,7 @@ Calls fetch(),but sets the method to 'GET'.
 `get(url: string,options?: IBasicHttpClientOptions): Promise<Response>`
 
 #### Returns
-[`Promise`](promise.md),[`Response`](response.md),``
+[`Promise<Response>`](promise.md)
 a promise that will return the result
 
 #### Parameters
@@ -121,7 +121,7 @@ Calls fetch(),but sets the method to 'POST'.
 `post(url: string,options: IBasicHttpClientOptions): Promise<Response>`
 
 #### Returns
-[`Promise`](promise.md),[`Response`](response.md),``
+[`Promise<Response>`](promise.md)
 a promise that will return the result
 
 #### Parameters

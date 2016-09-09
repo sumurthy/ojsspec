@@ -16,10 +16,10 @@ https://fetch.spec.whatwg.org/
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`body`      | [`BodyInit`](bodyinit.md) |  |
+|`body`      | [`BodyInit`](whatwg-fetch-module.md) |  |
 |`cache`      | `string`,[`RequestCache`](requestcache.md) |  |
 |`credentials`      | `string`,[`RequestCredentials`](requestcredentials.md) |  |
-|`headers`      | [`HeaderInit`](headerinit.md),`index`,`string`,`string`,`` |  |
+|`headers`      | [`HeaderInit`](whatwg-fetch-module.md),`{ [index: string]: string }` |  |
 |`method`      | `string` |  |
 |`mode`      | `string`,[`RequestMode`](requestmode.md) |  |
 

@@ -20,7 +20,7 @@ _Type parameters: `<K,V>`_
 |[`clear`](#clear)      | `void` |  |
 |[`get`](#get)      | `V` |  |
 |[`has`](#has)      | `boolean` |  |
-|[`set`](#set)      | [`WeakMap`](weakmap.md),`K`,`V`,`` |  |
+|[`set`](#set)      | [`WeakMap<K,V>`](weakmap.md) |  |
 
 
 
@@ -104,7 +104,7 @@ None
 `set(key: K,value?: V): WeakMap<K,V>`
 
 #### Returns
-[`WeakMap`](weakmap.md),`K`,`V`,``
+[`WeakMap<K,V>`](weakmap.md)
 
 
 #### Parameters

@@ -27,10 +27,10 @@ _Type parameters: `<K,V>`_
 |[`forEach`](#foreach)      | `void` |  |
 |[`get`](#get)      | `V` |  |
 |[`has`](#has)      | `boolean` |  |
-|[`set`](#set)      | [`Map`](map.md),`K`,`V`,`` |  |
-|[`entries`](#entries)      | [`Iterator`](iterator.md),`K`,`V`,`` |  |
-|[`keys`](#keys)      | [`Iterator`](iterator.md),`K`,`` |  |
-|[`values`](#values)      | [`Iterator`](iterator.md),`V`,`` |  |
+|[`set`](#set)      | [`Map<K,V>`](map.md) |  |
+|[`entries`](#entries)      | [`Iterator<[K,V]>`](iterator.md) |  |
+|[`keys`](#keys)      | [`Iterator<K>`](iterator.md) |  |
+|[`values`](#values)      | [`Iterator<V>`](iterator.md) |  |
 
 
 
@@ -84,7 +84,7 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `callbackfn`    | ``,`value`,`V`,`index`,`K`,`map`,[`Map`](map.md),`K`,`V`,`void` |  |
+| `callbackfn`    | `(value: V,index: K,map: Map<K,V>) => void` |  |
 | `thisArg`    | `any` | _Optional._ |
 
 
@@ -134,7 +134,7 @@ None
 `set(key: K,value?: V): Map<K,V>`
 
 #### Returns
-[`Map`](map.md),`K`,`V`,``
+[`Map<K,V>`](map.md)
 
 
 #### Parameters
@@ -154,7 +154,7 @@ None
 `entries(): Iterator<[K,V]>`
 
 #### Returns
-[`Iterator`](iterator.md),`K`,`V`,``
+[`Iterator<[K,V]>`](iterator.md)
 
 
 #### Parameters
@@ -169,7 +169,7 @@ None
 `keys(): Iterator<K>`
 
 #### Returns
-[`Iterator`](iterator.md),`K`,``
+[`Iterator<K>`](iterator.md)
 
 
 #### Parameters
@@ -184,7 +184,7 @@ None
 `values(): Iterator<V>`
 
 #### Returns
-[`Iterator`](iterator.md),`V`,``
+[`Iterator<V>`](iterator.md)
 
 
 #### Parameters

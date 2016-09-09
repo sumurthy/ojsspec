@@ -6,7 +6,7 @@ Make a Promise that fulfills when any item fulfills,and rejects if any item reje
 `race<R>(promises: (R | Thenable<R>)[]): Promise<R>`
 
 #### Returns
-[`Promise`](promise.md),`R`,``
+[`Promise<R>`](promise.md)
 
 
 #### Parameters
@@ -14,5 +14,5 @@ Make a Promise that fulfills when any item fulfills,and rejects if any item reje
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `promises`    | ``,`R`,[`Thenable`](thenable.md),`R`,`` |  |
+| `promises`    | `(R `,[` Thenable<R>)[]`](thenable.md) |  |
 

@@ -1,0 +1,10 @@
+{
+  "Map": "es6-collections-module.md",
+  "Set": "es6-collections-module.md",
+  "WeakMap": "es6-collections-module.md",
+  "WeakSet": "es6-collections-module.md",
+  "HeaderInit": "whatwg-fetch-module.md",
+  "BodyInit": "whatwg-fetch-module.md",
+  "RequestInfo": "whatwg-fetch-module.md",
+  "fetch": "whatwg-fetch-module.md"
+}

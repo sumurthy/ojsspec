@@ -32,7 +32,7 @@ let mode = ''
 let cmode = false
 let readonlyProperty = false
 let iBlock = 0
-
+let saveFileName = ''
 let nClass = 0
 let nFunction = 0
 let nEnum = 0
@@ -45,6 +45,7 @@ let nInterface = 0
 let allTypes = {
     types: []
 }
+let allVarsTypes = {}
 let enumObj = {}
 let enumKey = ''
 let classObj = {}
@@ -269,7 +270,7 @@ function processLines(element = '', index = 0, lines = []) {
     else if (line.includes(TYPEDEF)) {
         nType++
         var name = Utils.cleanupName(thirdWord)
-        allTypes.types.push(name)
+        allVarsTypes[name] = saveFileName + '-module.md'
         typeObj[name] = {}
         typeObj[name]['alias'] = line.split('=')[1].trim()
         typeObj[name]['descr'] = generalDesc
@@ -279,7 +280,7 @@ function processLines(element = '', index = 0, lines = []) {
     else if (line.includes(VARIABLEDEF)) {
         nVariable++
         var name = Utils.cleanupName(thirdWord)
-        allTypes.types.push(name)
+        allVarsTypes[name] = saveFileName + '-module.md'
         variableObj[name] = {}
         variableObj[name]['dataType'] = line.split(':')[1].trim()
         variableObj[name]['dataType'] = variableObj[name]['dataType'].replace('typeof ', '')
@@ -422,10 +423,12 @@ SetUp.cleanupOutput('./json')
 
 let files = FileOps.walkFiles('./input-scrubbed')
 files.forEach(processFile)
+FileOps.writeObject(allTypes, `./json/allTypes.json`)
+FileOps.writeObject(allVarsTypes, `./json/allVarsTypes.json`)
 
 function processFile(fileName) {
     console.log(`** Processing ${fileName}`)
-
+    saveFileName = fileName.split('.ts')[0].toLowerCase()
     let lines = FileOps.loadFile(`./input-scrubbed/${fileName}`)
     lines.forEach(processLines);
     FileOps.writeObject(enumObj, `./json/${fileName}_enum.json`)
@@ -435,7 +438,6 @@ function processFile(fileName) {
     FileOps.writeObject(typeObj, `./json/${fileName}_type.json`)
     FileOps.writeObject(variableObj, `./json/${fileName}_variable.json`)
     expandAllTypes()
-    FileOps.writeObject(allTypes, `./json/allTypes.json`)
 
     console.log(`*** interface = ${nInterface}, class = ${nClass}, function = ${nFunction}, enum = ${nEnum}, variable = ${nVariable}, type = ${nType}`);
     file_reset()

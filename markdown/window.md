@@ -16,7 +16,7 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`fetch`](#fetch)      | [`Promise`](promise.md),[`Response`](response.md),`` |  |
+|[`fetch`](#fetch)      | [`Promise<Response>`](promise.md) |  |
 
 
 
@@ -28,7 +28,7 @@
 `fetch(url: string|Request,init?: RequestInit): Promise<Response>`
 
 #### Returns
-[`Promise`](promise.md),[`Response`](response.md),``
+[`Promise<Response>`](promise.md)
 
 
 #### Parameters

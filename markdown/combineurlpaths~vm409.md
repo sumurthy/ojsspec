@@ -14,5 +14,5 @@ Combines any number of URL paths.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `...url`    | `string`,`` |  |
+| `...url`    | `string[]` |  |
 

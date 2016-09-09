@@ -3,7 +3,6 @@
     "BaseClientSideWebPart",
     "BasicHttpClient",
     "Body",
-    "BodyInit",
     "Compare",
     "CultureInfo",
     "DisplayMode",
@@ -11,7 +10,6 @@
     "EnvironmentType",
     "ForEachable",
     "Guid",
-    "HeaderInit",
     "Headers",
     "HttpClient",
     "IBasicHttpClientOptions",
@@ -83,7 +81,6 @@
     "RequestCache",
     "RequestContext",
     "RequestCredentials",
-    "RequestInfo",
     "RequestInit",
     "RequestMode",
     "Response",
@@ -106,7 +103,6 @@
     "WeakSet",
     "WeakSetConstructor",
     "WebPartConfigurationEvent",
-    "Window",
-    "fetch"
+    "Window"
   ]
 }

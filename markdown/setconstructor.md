@@ -13,7 +13,7 @@
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`prototype`      | [`Set`](set.md),`any`,`` |  |
+|`prototype`      | [`Set<any>`](set.md) |  |
 
 
 
@@ -22,7 +22,7 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`constructor<T>`](#constructor<t>)      | [`Set`](set.md),`T`,`` |  |
+|[`constructor<T>`](#constructor<t>)      | [`Set<T>`](set.md) |  |
 
 
 
@@ -34,7 +34,7 @@
 `new<T>(iterable: ForEachable<T>): Set<T>`
 
 #### Returns
-[`Set`](set.md),`T`,``
+[`Set<T>`](set.md)
 
 
 #### Parameters
@@ -42,5 +42,5 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `iterable`    | [`ForEachable`](foreachable.md),`T`,`` |  |
+| `iterable`    | [`ForEachable<T>`](foreachable.md) |  |
 

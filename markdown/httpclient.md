@@ -22,10 +22,10 @@ class instead.
 |:-------------|:----|:-------|:-----------|
 |[`constructor`](#constructor)     | `public` | [`ServiceScope`](servicescope.md) |  |
 |[`beginBatch`](#beginbatch)     | `public` | [`ODataBatch`](odatabatch.md) | Begins an ODATA batch,which allows multiple REST queries to be bundled into  a single web request |
-|[`fetch`](#fetch)     | `public` | [`Promise`](promise.md),[`Response`](response.md),`` | Generally,the parameters and semantics for HttpClient |
-|[`get`](#get)     | `public` | [`Promise`](promise.md),[`Response`](response.md),`` | Calls fetch(),but sets the method to 'GET' |
+|[`fetch`](#fetch)     | `public` | [`Promise<Response>`](promise.md) | Generally,the parameters and semantics for HttpClient |
+|[`get`](#get)     | `public` | [`Promise<Response>`](promise.md) | Calls fetch(),but sets the method to 'GET' |
 |[`getWebUrlFromRequestUrl`](#getweburlfromrequesturl)     | `public, _static_` | `string` | This uses a heuristic to guess the SPWeb URL associated with the provided  REST URL |
-|[`post`](#post)     | `public` | [`Promise`](promise.md),[`Response`](response.md),`` | Calls fetch(),but sets the method to 'POST' |
+|[`post`](#post)     | `public` | [`Promise<Response>`](promise.md) | Calls fetch(),but sets the method to 'POST' |
 
 
 
@@ -95,7 +95,7 @@ to specify it explicitly.
 `fetch(url: string,options: IHttpClientOptions): Promise<Response>`
 
 #### Returns
-[`Promise`](promise.md),[`Response`](response.md),``
+[`Promise<Response>`](promise.md)
 a promise that will return the result
 
 #### Parameters
@@ -115,7 +115,7 @@ Calls fetch(),but sets the method to 'GET'.
 `get(url: string,options?: IHttpClientOptions): Promise<Response>`
 
 #### Returns
-[`Promise`](promise.md),[`Response`](response.md),``
+[`Promise<Response>`](promise.md)
 a promise that will return the result
 
 #### Parameters
@@ -161,7 +161,7 @@ Calls fetch(),but sets the method to 'POST'.
 `post(url: string,options: IHttpClientOptions): Promise<Response>`
 
 #### Returns
-[`Promise`](promise.md),[`Response`](response.md),``
+[`Promise<Response>`](promise.md)
 a promise that will return the result
 
 #### Parameters
