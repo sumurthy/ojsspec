@@ -329,14 +329,14 @@ var self = module.exports = {
         let firstWord = line.split(' ', 1)[0]
         let secondWord = line.split(' ', 2)[1]
         var type = ''
+        console.log(line);
         if (line.includes(BLOCK_BEGIN) && !line.includes(BLOCK_END)) {
             type = 'SKIPBLOCK'
-        } else if (firstWord === 'function')) {
+        } else if (firstWord === 'function') {
             type = 'FUNCTION'
-        }
-        else if (firstWord.startsWith('constructor') || secondWord.startsWith('constructor')) {
+        } else if (firstWord.startsWith('constructor') || secondWord.startsWith('constructor')) {
             type = 'METHOD'
-        } else if (firstWord === 'var')) {
+        } else if (firstWord === 'var') {
             type = 'VARIABLE'
         } else {
             //line = self.stripQualifier(line)

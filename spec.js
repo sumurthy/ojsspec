@@ -343,33 +343,32 @@ function processLines(element = '', index = 0, lines = []) {
 
         switch (mode) {
             case 'MODULE':
-                var memberType = Utils.getMemberType(line, false)
-                if (memberType === 'SKIPBLOCK') {
-                //if (line.includes(BLOCK_BEGIN) && !line.includes(BLOCK_END)) {
-                    // Handle object
-                    var o = Utils.readObjectAhead(lines, index)
-                    ignore_lines = o['skip']
-                    iBlock--
-                //} else if (firstWord.includes(':') && !firstWord.includes('(')) {   //PROPERTY
-                } else if (memberType === 'VARIABLE') {   //PROPERTY
-                    var p = {}
-                    var name = Utils.getPropName(firstWord, false)
-                    p['isCollection'] = (secondWord.includes('[]')) ? true : false
-                    var p = Utils.processProperty(name, line, generalDesc, assignValue, false, readonlyProperty)
-                    name = name.replace('?','')
-                    iObj[interfaceName]['properties'][name] = p
-                } else if (memberType === 'FUNCTION') {   //METHOD
-                //} else if (line.includes(')') && line.includes('(')) { // has brackets
-                    var name = Utils.getMethodName(line) || "ErrorErrorError~99999"
-                    var m = Utils.processMethod(line, generalDesc, commentObject, interfaceName, name, isStatic)
-                    iObj[interfaceName]['methods'][name] = m
-                    var linkvalue = (interfaceName + '.md#' + name.split('~')[0]).toLowerCase()
-                    var linkkey = (interfaceName + '.' + name.split('~')[0]).toLowerCase()
-                    allVarsTypes[linkkey] = linkvalue
-
-                }  else {
-                    console.log('Error: Cannot determine the case of this line: ' + line);
-                }
+                // var memberType = Utils.getMemberType(line, false)
+                // if (memberType === 'SKIPBLOCK') {
+                // //if (line.includes(BLOCK_BEGIN) && !line.includes(BLOCK_END)) {
+                //     // Handle object
+                //     var o = Utils.readObjectAhead(lines, index)
+                //     ignore_lines = o['skip']
+                //     iBlock--
+                // //} else if (firstWord.includes(':') && !firstWord.includes('(')) {   //PROPERTY
+                // } else if (memberType === 'VARIABLE') {   //PROPERTY
+                //     var p = {}
+                //     var name = Utils.getPropName(firstWord, false)
+                //     p['isCollection'] = (secondWord.includes('[]')) ? true : false
+                //     var p = Utils.processProperty(name, line, generalDesc, assignValue, false, readonlyProperty)
+                //     name = name.replace('?','')
+                //     iObj[interfaceName]['properties'][name] = p
+                // } else if (memberType === 'FUNCTION') {   //METHOD
+                // //} else if (line.includes(')') && line.includes('(')) { // has brackets
+                //     var name = Utils.getMethodName(line) || "ErrorErrorError~99999"
+                //     var m = Utils.processMethod(line, generalDesc, commentObject, interfaceName, name, isStatic)
+                //     iObj[interfaceName]['methods'][name] = m
+                //     var linkvalue = (interfaceName + '.md#' + name.split('~')[0]).toLowerCase()
+                //     var linkkey = (interfaceName + '.' + name.split('~')[0]).toLowerCase()
+                //     allVarsTypes[linkkey] = linkvalue
+                // }  else {
+                //     console.log('Error: Cannot determine the case of this line: ' + line);
+                // }
                 comment_reset()
                 break;
             case 'INTERFACE':
