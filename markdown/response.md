@@ -49,7 +49,7 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `body`    | [`BodyInit`](whatwg-fetch-module.md) | _Optional._ |
+| `body`    | [`BodyInit`](whatwg-fetch-module.md#types) | _Optional._ |
 | `init`    | [`ResponseInit`](responseinit.md) | _Optional._ |
 
 

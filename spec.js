@@ -270,7 +270,7 @@ function processLines(element = '', index = 0, lines = []) {
     else if (line.includes(TYPEDEF)) {
         nType++
         var name = Utils.cleanupName(thirdWord)
-        allVarsTypes[name] = saveFileName + '-module.md'
+        allVarsTypes[name] = saveFileName.toLowerCase() + '-module.md#types'
         typeObj[name] = {}
         typeObj[name]['alias'] = line.split('=')[1].trim()
         typeObj[name]['descr'] = generalDesc
@@ -280,7 +280,7 @@ function processLines(element = '', index = 0, lines = []) {
     else if (line.includes(VARIABLEDEF)) {
         nVariable++
         var name = Utils.cleanupName(thirdWord)
-        allVarsTypes[name] = saveFileName + '-module.md'
+        allVarsTypes[name] = saveFileName.toLowerCase() + '-module.md#variables'
         variableObj[name] = {}
         variableObj[name]['dataType'] = line.split(':')[1].trim()
         variableObj[name]['dataType'] = variableObj[name]['dataType'].replace('typeof ', '')
@@ -352,6 +352,10 @@ function processLines(element = '', index = 0, lines = []) {
                     var name = Utils.getMethodName(line) || "ErrorErrorError~99999"
                     var m = Utils.processMethod(line, generalDesc, commentObject, interfaceName, name, isStatic)
                     iObj[interfaceName]['methods'][name] = m
+                    var linkvalue = (interfaceName + '.md#' + name.split('~')[0]).toLowerCase()
+                    var linkkey = (interfaceName + '.' + name.split('~')[0]).toLowerCase()
+                    allVarsTypes[linkkey] = linkvalue
+
                 }  else {
                     console.log('Error: Cannot determine the case of this line: ' + line);
                 }
@@ -382,6 +386,11 @@ function processLines(element = '', index = 0, lines = []) {
                     name = name || "ErrorErrorError~99999"
                     var m = Utils.processMethod(line, generalDesc, commentObject, className, name, isStatic)
                     classObj[className]['methods'][name] = m
+
+                    var linkvalue = (className + '.md#' + name.split('~')[0]).toLowerCase()
+                    var linkkey = (className + '.' + name.split('~')[0]).toLowerCase()
+                    allVarsTypes[linkkey] = linkvalue
+
                 }  else {
                     console.log('Error: Cannot determine the case of this line: ' + line);
                 }

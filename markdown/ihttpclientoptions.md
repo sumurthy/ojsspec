@@ -16,10 +16,10 @@ https://fetch.spec.whatwg.org/
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`body`      | [`BodyInit`](whatwg-fetch-module.md) |  |
+|`body`      | [`BodyInit`](whatwg-fetch-module.md#types) |  |
 |`cache`      | `string`,[`RequestCache`](requestcache.md) |  |
 |`credentials`      | `string`,[`RequestCredentials`](requestcredentials.md) |  |
-|`headers`      | [`HeaderInit`](whatwg-fetch-module.md),`{ [index: string]: string }` |  |
+|`headers`      | [`HeaderInit`](whatwg-fetch-module.md#types),`{ [index: string]: string }` |  |
 |`method`      | `string` |  |
 |`mode`      | `string`,[`RequestMode`](requestmode.md) |  |
 |`webUrl`      | `string` | For a write operation,HttpClient will automatically add the  "X-RequestDigest" header, which may need to be fetched using a seperate  request such as "https://example |

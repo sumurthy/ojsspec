@@ -64,13 +64,20 @@ function getLinkForType(type = '') {
     }
     //type.split(/\W+/).forEach((e) => {
     type.split(splitChar).forEach((e) => {
+        // try as is for a match
         if (allTypes.includes(e.trim())) {
             out = out + `[\`${e.replace(/\^/g, ',')}\`](${Utils.trimGenerics(e).toLowerCase()}.md)` + ','
         }
+        // try trimming the generics
         else if (allTypes.includes(Utils.trimGenerics(e))) {
             out = out + `[\`${e.replace(/\^/g, ',')}\`](${Utils.trimGenerics(e).toLowerCase()}.md)` + ','
         }
+        // variables and types match
         else if (Object.keys(allVarsTypes).includes(Utils.trimGenerics(e))) {
+            out = out + `[\`${e.replace(/\^/g, ',')}\`](${allVarsTypes[Utils.trimGenerics(e)].toLowerCase()})` + ','
+        }
+        // classname.method name match
+        else if (Object.keys(allVarsTypes).includes(Utils.trimGenerics(e.toLowerCase()))) {
             out = out + `[\`${e.replace(/\^/g, ',')}\`](${allVarsTypes[Utils.trimGenerics(e)].toLowerCase()})` + ','
         }
         else {

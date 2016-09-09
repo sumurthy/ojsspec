@@ -47,5 +47,5 @@
 
 | Variable	   | Type|
 |:-----------|:------------|
-|fetch   | `window.fetch` |
+|fetch   | [`window.fetch`](window.md#fetch) |
 
