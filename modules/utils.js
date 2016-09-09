@@ -304,6 +304,16 @@ var self = module.exports = {
         p['descr'] = descr
         return p
     },
+    createModuleObject: (descr = '') => {
+        var o = {}
+        o['class'] = {}
+        o['interface'] = {}
+        o['variable'] = {}
+        o['function'] = {}
+        o['module'] = {}
+        o['type'] = {}
+        return o
+    },
     createClassInterfaceObject: (extendsImplementsName = '', rawGenericsInside = '', descr = '') => {
         var o = {}
         o['implementsExtendsName'] = extendsImplementsName
@@ -348,6 +358,7 @@ var self = module.exports = {
         line = line.replace('protected ', '')
         line = line.replace('static ', '')
         line = line.replace('export ', '')
+        line = line.replace('var ', '')
         return line
     }
 }

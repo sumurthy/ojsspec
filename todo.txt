@@ -16,6 +16,17 @@
 19. IBasicHttpClientOptions - has headers data type problems, no hyperlink for BodyInit
 20. Links to variables and types
 21. Handle {} inside strings.
+22. Need to handle module inside module. Need to handle VAR as parameter
+
+declare module "es6-collections" {
+    var Map: MapConstructor;
+    var Set: SetConstructor;
+    var WeakMap: WeakMapConstructor;
+    var WeakSet: WeakSetConstructor;
+}
+22. Ignore export = lines
+	export = rsvp;
+23. handle module inside module
 
 LONGER TERM:
 19. Make use of dFunction for enum and function file generation

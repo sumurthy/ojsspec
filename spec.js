@@ -16,6 +16,7 @@ const CLASSDEF = 'declare class'
 const TYPEDEF = 'declare type'
 const VARIABLEDEF = 'declare var'
 const INTERFACEDEF = 'interface'
+const MODULEDEF = 'declare module'
 const ENUM = 'enum '
 const FUNCTION = 'function '
 const NEWLINE = '\n  '
@@ -49,9 +50,11 @@ let allVarsTypes = {}
 let enumObj = {}
 let enumKey = ''
 let classObj = {}
+let moduleObject = {}
 let iObj = {}
 let interfaceName = ''
 let className = ''
+let moduleName = ''
 let functionObj = {}
 let methodObj = {}
 let propObj = {}
@@ -237,6 +240,15 @@ function processLines(element = '', index = 0, lines = []) {
     } else if (firstWord === C_END) {
         cmode = false
         return
+    } else if (line.includes(MODULEDEF)) {
+        nClass++
+        mode = 'MODULE'
+        moduleName = line.split(' ')[2].replace(/"/g,'')
+        moduleName = Utils.trimGenerics(moduleName)
+        moduleObject[moduleName] = {}
+        classObj[className] = Utils.createModuleObject(generalDesc)
+        comment_reset()
+        return
     } else if (line.includes(INTERFACEDEF)) {
         nInterface++
         mode = 'INTERFACE'
@@ -266,8 +278,7 @@ function processLines(element = '', index = 0, lines = []) {
         classObj[className] = Utils.createClassInterfaceObject(implementsName, preClassName, generalDesc)
         comment_reset()
         return
-    }
-    else if (line.includes(TYPEDEF)) {
+    } else if (line.includes(TYPEDEF)) {
         nType++
         var name = Utils.cleanupName(thirdWord)
         allVarsTypes[name] = saveFileName.toLowerCase() + '-module.md#types'
