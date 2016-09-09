@@ -331,8 +331,13 @@ var self = module.exports = {
         var type = ''
         if (line.includes(BLOCK_BEGIN) && !line.includes(BLOCK_END)) {
             type = 'SKIPBLOCK'
-        } else if (firstWord.startsWith('constructor') || secondWord.startsWith('constructor')) {
+        } else if (firstWord === 'function')) {
+            type = 'FUNCTION'
+        }
+        else if (firstWord.startsWith('constructor') || secondWord.startsWith('constructor')) {
             type = 'METHOD'
+        } else if (firstWord === 'var')) {
+            type = 'VARIABLE'
         } else {
             //line = self.stripQualifier(line)
             var colon = line.indexOf(':')
