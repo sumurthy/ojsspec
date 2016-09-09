@@ -14,7 +14,7 @@
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
 |`method`      | `string` |  |
-|`headers`      | [`HeaderInit`](headerinit.md),`{ [index: string]: string }` |  |
+|`headers`      | [`HeaderInit`](headerinit.md),`index`,`string`,`string`,`` |  |
 |`body`      | [`BodyInit`](bodyinit.md) |  |
 |`mode`      | `string`,[`RequestMode`](requestmode.md) |  |
 |`credentials`      | `string`,[`RequestCredentials`](requestcredentials.md) |  |

@@ -18,7 +18,7 @@
 |[`append`](#append)     | `public` | `void` |  |
 |[`delete`](#delete)     | `public` | `void` |  |
 |[`get`](#get)     | `public` | `string` |  |
-|[`getAll`](#getall)     | `public` | `Array<string>` |  |
+|[`getAll`](#getall)     | `public` | `Array`,`string`,`` |  |
 |[`has`](#has)     | `public` | `boolean` |  |
 |[`set`](#set)     | `public` | `void` |  |
 |[`forEach`](#foreach)     | `public` | `void` |  |
@@ -92,7 +92,7 @@
 `getAll(name: string): Array<string>`
 
 #### Returns
-`Array<string>`
+`Array`,`string`,``
 
 
 #### Parameters
@@ -158,5 +158,5 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `callback`    | `(value: string,name: string) => void` |  |
+| `callback`    | ``,`value`,`string`,`name`,`string`,`void` |  |
 

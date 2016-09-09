@@ -47,7 +47,7 @@ Please refer to the documentation of the individual APIs to make the right decis
 |[`dispose`](#dispose)     | `protected` | `void` | This API is called at the end of the web part lifecycle |
 |[`onBeforeSerialize`](#onbeforeserialize)     | `protected` | [`IHtmlProperties`](ihtmlproperties.md) | This API is called before a web part is serialized |
 |[`onDisplayModeChanged`](#ondisplaymodechanged)     | `protected` | `void` | This API is called when the display mode of a web part is changed |
-|[`onInit<T>`](#oninit<t>)     | `protected` | [`Promise<T>`](promise.md) | This API should be overridden to perform long running operations e |
+|[`onInit<T>`](#oninit<t>)     | `protected` | [`Promise`](promise.md),`T`,`` | This API should be overridden to perform long running operations e |
 |[`onPropertyChange`](#onpropertychange)     | `protected` | `void` | This API is invoked on property changes in the PropertyPane when the PropertyPane is being used in Reactive mode |
 |[`onPropertyConfigurationComplete`](#onpropertyconfigurationcomplete)     | `protected` | `void` | This API is called when the current web part configuration process is completed |
 |[`onPropertyPaneRendered`](#onpropertypanerendered)     | `protected` | `void` | This API is involed when the PropertyPane is rendered |
@@ -209,7 +209,7 @@ This API is called only once during the lifecycle of a web part.
 `onInit<T>(): Promise<T>`
 
 #### Returns
-[`Promise<T>`](promise.md)
+[`Promise`](promise.md),`T`,``
 
 
 #### Parameters

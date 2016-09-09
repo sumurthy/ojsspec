@@ -16,7 +16,7 @@ _Type parameters: `<R>`_
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`then<U>`](#then<u>)      | [`Thenable<U>`](thenable.md) |  |
+|[`then<U>`](#then<u>)      | [`Thenable`](thenable.md),`U`,`` |  |
 
 
 
@@ -28,7 +28,7 @@ _Type parameters: `<R>`_
 `then<U>(onFulfilled?: (value: R) => U | Thenable<U>,onRejected?: (error: any) => void): Thenable<U>`
 
 #### Returns
-[`Thenable<U>`](thenable.md)
+[`Thenable`](thenable.md),`U`,``
 
 
 #### Parameters
@@ -36,6 +36,6 @@ _Type parameters: `<R>`_
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `onFulfilled`    | `(value: R) => U `,[` Thenable<U>`](thenable.md) | _Optional._ |
-| `onRejected`    | `(error: any) => void` | _Optional._ |
+| `onFulfilled`    | ``,`value`,`R`,`U`,[`Thenable`](thenable.md),`U`,`` | _Optional._ |
+| `onRejected`    | ``,`error`,`any`,`void` | _Optional._ |
 

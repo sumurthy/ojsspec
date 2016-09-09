@@ -56,7 +56,7 @@ serviceScope.whenFinished().
 |:-------------|:----|:-------|:-----------|
 |[`constructor`](#constructor)     | `public` | [`ServiceScope`](servicescope.md) | PRIVATE CONSTRUCTOR - DO NOT CALL THIS FROM YOUR OWN CODE |
 |[`consume<T>`](#consume<t>)     | `public` | `T` | Components should call this function to "consume" a dependency,i |
-|[`createAndProvide<T>`](#createandprovide<t>)     | `public` | `T;` | This is a shorthand function that its equivalent to constructing a new instance of the  simpleServiceClass, then registering it by calling ServiceScope |
+|[`createAndProvide<T>`](#createandprovide<t>)     | `public` | `T`,`` | This is a shorthand function that its equivalent to constructing a new instance of the  simpleServiceClass, then registering it by calling ServiceScope |
 |[`createDefaultAndProvide<T>`](#createdefaultandprovide<t>)     | `public` | `T` | This is a shorthand function that constructs the default implementation of the specified  serviceKey, and then registers it by calling ServiceScope |
 |[`finish`](#finish)     | `public` | `void` | When a ServiceScope is first started,it is in an "unfinished" state where provide() is  allowed but consume() is not allowed |
 |[`getParent`](#getparent)     | `public` | [`ServiceScope`](servicescope.md) | Returns the parent of the current ServiceScope,or undefined if this is a root scope |
@@ -105,7 +105,7 @@ instance will be autocreated and registered with the root ServiceScope.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceKey`    | [`ServiceKey<T>`](servicekey.md) | - the key that was used when provide() was called to register the service |
+| `serviceKey`    | [`ServiceKey`](servicekey.md),`T`,`` | - the key that was used when provide() was called to register the service |
 
 
 ### createAndProvide<T>
@@ -117,7 +117,7 @@ simpleServiceClass, then registering it by calling ServiceScope.provide().
 `createAndProvide<T>(serviceKey: ServiceKey<T>,simpleServiceClass: { new (serviceScope: ServiceScope) }): T;`
 
 #### Returns
-`T;`
+`T`,``
 - a newly constructed instance of simpleServiceClass
 
 #### Parameters
@@ -125,8 +125,8 @@ simpleServiceClass, then registering it by calling ServiceScope.provide().
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceKey`    | [`ServiceKey<T>`](servicekey.md) | - the key that can be used later to consume the service |
-| `simpleServiceClass`    | `{ new (serviceScope: ServiceScope) }` | - the TypeScript class to be constructed |
+| `serviceKey`    | [`ServiceKey`](servicekey.md),`T`,`` | - the key that can be used later to consume the service |
+| `simpleServiceClass`    | ``,`new`,`serviceScope`,[`ServiceScope`](servicescope.md),`` | - the TypeScript class to be constructed |
 
 
 ### createDefaultAndProvide<T>
@@ -146,7 +146,7 @@ serviceKey, and then registers it by calling ServiceScope.provide().
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceKey`    | [`ServiceKey<T>`](servicekey.md) | - the key that can be used later to consume the service |
+| `serviceKey`    | [`ServiceKey`](servicekey.md),`T`,`` | - the key that can be used later to consume the service |
 
 
 ### finish
@@ -203,7 +203,7 @@ state, i.e. before finish() has been called.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceKey`    | [`ServiceKey<T>`](servicekey.md) | - the key that will later be used to consume the service |
+| `serviceKey`    | [`ServiceKey`](servicekey.md),`T`,`` | - the key that will later be used to consume the service |
 | `service`    | `T` | - the service instance that is being registered |
 
 
@@ -260,5 +260,5 @@ later when the scope is finished.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `callback`    | `() => void` | - A block of code that needs to call ServiceScope |
+| `callback`    | ``,`void` | - A block of code that needs to call ServiceScope |
 

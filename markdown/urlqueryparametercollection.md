@@ -25,7 +25,7 @@ Query param with only equals (www.example.com/?=&debug=on stores empty string ke
 |:-------------|:----|:-------|:-----------|
 |[`constructor`](#constructor)     | `public` | `string` |  |
 |[`getValue`](#getvalue)     | `public` | `string` | Returns the value of the first matching query parameter or undefined if the key doesn't exist |
-|[`getValues`](#getvalues)     | `public` | `string[]` | Returns the values of all of the matching query parameters or undefined if the key doesn't exist |
+|[`getValues`](#getvalues)     | `public` | `string`,`` | Returns the values of all of the matching query parameters or undefined if the key doesn't exist |
 
 
 
@@ -90,7 +90,7 @@ getValues('lost') ---> undefined
 `getValues(param: string): string[]`
 
 #### Returns
-`string[]`
+`string`,``
 
 
 #### Parameters

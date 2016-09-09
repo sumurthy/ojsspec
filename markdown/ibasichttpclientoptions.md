@@ -19,7 +19,7 @@ https://fetch.spec.whatwg.org/
 |`body`      | [`BodyInit`](bodyinit.md) |  |
 |`cache`      | `string`,[`RequestCache`](requestcache.md) |  |
 |`credentials`      | `string`,[`RequestCredentials`](requestcredentials.md) |  |
-|`headers`      | [`HeaderInit`](headerinit.md),`{ [index: string]: string }` |  |
+|`headers`      | [`HeaderInit`](headerinit.md),`index`,`string`,`string`,`` |  |
 |`method`      | `string` |  |
 |`mode`      | `string`,[`RequestMode`](requestmode.md) |  |
 

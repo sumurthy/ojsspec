@@ -6,7 +6,7 @@ Helper method to create a Choice Group on the PropertyPane.
 `PropertyPaneChoiceGroup(targetProperty: string,properties: IPropertyPaneChoiceGroupProps): IPropertyPaneField<IPropertyPaneChoiceGroupProps>`
 
 #### Returns
-[`IPropertyPaneField<IPropertyPaneChoiceGroupProps>`](ipropertypanefield.md)
+[`IPropertyPaneField`](ipropertypanefield.md),[`IPropertyPaneChoiceGroupProps`](ipropertypanechoicegroupprops.md),``
 
 
 #### Parameters

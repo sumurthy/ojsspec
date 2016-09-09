@@ -22,14 +22,14 @@ _Type parameters: `<T>`_
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`add`](#add)      | [`Set<T>`](set.md) |  |
+|[`add`](#add)      | [`Set`](set.md),`T`,`` |  |
 |[`clear`](#clear)      | `void` |  |
 |[`delete`](#delete)      | `boolean` |  |
 |[`forEach`](#foreach)      | `void` |  |
 |[`has`](#has)      | `boolean` |  |
-|[`entries`](#entries)      | [`Iterator<[T,T]>`](iterator.md) |  |
-|[`keys`](#keys)      | [`Iterator<T>`](iterator.md) |  |
-|[`values`](#values)      | [`Iterator<T>`](iterator.md) |  |
+|[`entries`](#entries)      | [`Iterator`](iterator.md),`T`,`T`,`` |  |
+|[`keys`](#keys)      | [`Iterator`](iterator.md),`T`,`` |  |
+|[`values`](#values)      | [`Iterator`](iterator.md),`T`,`` |  |
 
 
 
@@ -41,7 +41,7 @@ _Type parameters: `<T>`_
 `add(value: T): Set<T>`
 
 #### Returns
-[`Set<T>`](set.md)
+[`Set`](set.md),`T`,``
 
 
 #### Parameters
@@ -102,7 +102,7 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `callbackfn`    | `(value: T,index: T,set: Set<T>) => void` |  |
+| `callbackfn`    | ``,`value`,`T`,`index`,`T`,`set`,[`Set`](set.md),`T`,`void` |  |
 | `thisArg`    | `any` | _Optional._ |
 
 
@@ -133,7 +133,7 @@ None
 `entries(): Iterator<[T,T]>`
 
 #### Returns
-[`Iterator<[T,T]>`](iterator.md)
+[`Iterator`](iterator.md),`T`,`T`,``
 
 
 #### Parameters
@@ -148,7 +148,7 @@ None
 `keys(): Iterator<T>`
 
 #### Returns
-[`Iterator<T>`](iterator.md)
+[`Iterator`](iterator.md),`T`,``
 
 
 #### Parameters
@@ -163,7 +163,7 @@ None
 `values(): Iterator<T>`
 
 #### Returns
-[`Iterator<T>`](iterator.md)
+[`Iterator`](iterator.md),`T`,``
 
 
 #### Parameters

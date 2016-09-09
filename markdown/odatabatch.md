@@ -25,10 +25,10 @@ resolve with a Response object for that particular request.
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
 |[`constructor`](#constructor)     | `public` | [`IODataBatchOptions`](iodatabatchoptions.md) |  |
-|[`execute`](#execute)     | `public` | [`Promise<ODataBatch>`](promise.md) | Executes the batched queries that were queued using ODataBatch |
-|[`fetch`](#fetch)     | `public` | [`Promise<Response>`](promise.md) | Queues a new request,and returns a promise that can be used to access  the server response (after execute() has completed) |
-|[`get`](#get)     | `public` | [`Promise<Response>`](promise.md) | Calls fetch(),but sets the method to 'GET' |
-|[`post`](#post)     | `public` | [`Promise<Response>`](promise.md) | Calls fetch(),but sets the method to 'POST' |
+|[`execute`](#execute)     | `public` | [`Promise`](promise.md),[`ODataBatch`](odatabatch.md),`` | Executes the batched queries that were queued using ODataBatch |
+|[`fetch`](#fetch)     | `public` | [`Promise`](promise.md),[`Response`](response.md),`` | Queues a new request,and returns a promise that can be used to access  the server response (after execute() has completed) |
+|[`get`](#get)     | `public` | [`Promise`](promise.md),[`Response`](response.md),`` | Calls fetch(),but sets the method to 'GET' |
+|[`post`](#post)     | `public` | [`Promise`](promise.md),[`Response`](response.md),`` | Calls fetch(),but sets the method to 'POST' |
 
 
 
@@ -61,7 +61,7 @@ Executes the batched queries that were queued using ODataBatch.fetch().
 `execute(): Promise<ODataBatch>`
 
 #### Returns
-[`Promise<ODataBatch>`](promise.md)
+[`Promise`](promise.md),[`ODataBatch`](odatabatch.md),``
 
 
 #### Parameters
@@ -89,7 +89,7 @@ explicitly.
 `fetch(url: string,options?: IODataBatchRequestOptions): Promise<Response>`
 
 #### Returns
-[`Promise<Response>`](promise.md)
+[`Promise`](promise.md),[`Response`](response.md),``
 a promise that will return the result
 
 #### Parameters
@@ -109,7 +109,7 @@ Calls fetch(),but sets the method to 'GET'.
 `get(url: string,options?: IODataBatchRequestOptions): Promise<Response>`
 
 #### Returns
-[`Promise<Response>`](promise.md)
+[`Promise`](promise.md),[`Response`](response.md),``
 a promise that will return the result
 
 #### Parameters
@@ -129,7 +129,7 @@ Calls fetch(),but sets the method to 'POST'.
 `post(url: string,options: IODataBatchRequestOptions): Promise<Response>`
 
 #### Returns
-[`Promise<Response>`](promise.md)
+[`Promise`](promise.md),[`Response`](response.md),``
 a promise that will return the result
 
 #### Parameters

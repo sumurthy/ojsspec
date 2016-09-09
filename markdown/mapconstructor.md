@@ -13,7 +13,7 @@
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`prototype`      | [`Map<any,any>`](map.md) |  |
+|`prototype`      | [`Map`](map.md),`any`,`any`,`` |  |
 
 
 
@@ -22,7 +22,7 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`constructor<K,V>`](#constructor<k,v>)      | [`Map<K,V>`](map.md) |  |
+|[`constructor<K,V>`](#constructor<k,v>)      | [`Map`](map.md),`K`,`V`,`` |  |
 
 
 
@@ -34,7 +34,7 @@
 `new<K,V>(iterable: ForEachable<[K,V]>): Map<K,V>`
 
 #### Returns
-[`Map<K,V>`](map.md)
+[`Map`](map.md),`K`,`V`,``
 
 
 #### Parameters
@@ -42,5 +42,5 @@
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `iterable`    | [`ForEachable<[K,V]>`](foreachable.md) |  |
+| `iterable`    | [`ForEachable`](foreachable.md),`K`,`V`,`` |  |
 

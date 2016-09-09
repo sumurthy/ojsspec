@@ -24,7 +24,7 @@ of time. For more information, see the MSDN article
 |[`addDigestToCache`](#adddigesttocache)      | `void` | Inserts a specific request digest value into the cache |
 |[`clearAllDigests`](#clearalldigests)      | `void` | Clears all values from the cache |
 |[`clearDigest`](#cleardigest)      | `boolean` | Clears the cached digest for the specified SPWeb URL |
-|[`fetchDigest`](#fetchdigest)      | [`Promise<string>`](promise.md) | Returns a digest string for the specified SPWeb URL |
+|[`fetchDigest`](#fetchdigest)      | [`Promise`](promise.md),`string`,`` | Returns a digest string for the specified SPWeb URL |
 
 
 
@@ -99,7 +99,7 @@ an HTTP request obtains the digest, which will be added to the cache.
 `fetchDigest(webUrl: string): Promise<string>`
 
 #### Returns
-[`Promise<string>`](promise.md)
+[`Promise`](promise.md),`string`,``
 A promise that is fulfilled with the digest value.
 
 #### Parameters

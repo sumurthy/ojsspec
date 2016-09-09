@@ -6,7 +6,7 @@ Helper method to create a TextField on the PropertyPane.
 `PropertyPaneTextField(targetProperty: string,properties: IPropertyPaneTextFieldProps): IPropertyPaneField<IPropertyPaneTextFieldProps>`
 
 #### Returns
-[`IPropertyPaneField<IPropertyPaneTextFieldProps>`](ipropertypanefield.md)
+[`IPropertyPaneField`](ipropertypanefield.md),[`IPropertyPaneTextFieldProps`](ipropertypanetextfieldprops.md),``
 
 
 #### Parameters

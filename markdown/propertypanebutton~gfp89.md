@@ -6,7 +6,7 @@ Helper method to create a Button on the PropertyPane.
 `PropertyPaneButton(targetProperty: string,properties: IPropertyPaneButtonProps): IPropertyPaneField<IPropertyPaneButtonProps>`
 
 #### Returns
-[`IPropertyPaneField<IPropertyPaneButtonProps>`](ipropertypanefield.md)
+[`IPropertyPaneField`](ipropertypanefield.md),[`IPropertyPaneButtonProps`](ipropertypanebuttonprops.md),``
 
 
 #### Parameters

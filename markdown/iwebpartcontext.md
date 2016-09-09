@@ -1,6 +1,6 @@
 # IWebPartContext interface
 
-_Extends: `IClientSideComponentContext<IClientSideWebPartManifestInstance<any>>`_
+_Extends: `IClientSideComponentContext`,[`IClientSideWebPartManifestInstance`](iclientsidewebpartmanifestinstance.md),`any`,``_
 
 
 

@@ -61,7 +61,8 @@ function getLinkForType(type = '') {
     if (type.includes('|')) {
         splitChar = '|'
     }
-    type.split(splitChar).forEach((e) => {
+    //type.split(splitChar).forEach((e) => {
+    type.split(/\W+/).forEach((e) => {
         if (allTypes.includes(e.trim())) {
             out = out + `[\`${e.replace(/\^/g, ',')}\`](${Utils.trimGenerics(e).toLowerCase()}.md)` + ','
         }

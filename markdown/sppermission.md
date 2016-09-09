@@ -103,7 +103,7 @@ Function for determining if a given permission mask has all of the requested per
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `...requestedPerms`    | `SPPermission[]` |  |
+| `...requestedPerms`    | [`SPPermission`](sppermission.md),`` |  |
 
 
 ### hasAnyPermissions
@@ -122,7 +122,7 @@ Function for determining if a given permission mask has any of the requested per
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `...requestedPerms`    | `SPPermission[]` |  |
+| `...requestedPerms`    | [`SPPermission`](sppermission.md),`` |  |
 
 
 ### hasPermission

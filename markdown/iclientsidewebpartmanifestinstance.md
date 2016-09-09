@@ -14,7 +14,7 @@ Manifest that is relevant to a Web Part instance.
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`componentType`      | `'Application' `,` 'WebPart' `,` 'Library'` | Definition: Type of client side component |
+|`componentType`      | ``,`Application`,`WebPart`,`Library`,`` | Definition: Type of client side component |
 |`description`      | [`ILocalizedString`](ilocalizedstring.md) | Definition: Description of the web part represented as a dictionary of locale keys to description values |
 |`group`      | [`ILocalizedString`](ilocalizedstring.md) |  |
 |`groupId`      | `string` |  |

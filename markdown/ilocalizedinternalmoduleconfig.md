@@ -17,9 +17,9 @@ the same way as "internal" modules are.
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`defaultPath`      | `string `,[` IPath`](ipath.md) | Definition: A path to this module's default locale javascript resource either as a fully-qualified URL or as a  path under the paths provided in the "internalModuleBaseUrls" field |
+|`defaultPath`      | `string`,[`IPath`](ipath.md) | Definition: A path to this module's default locale javascript resource either as a fully-qualified URL or as a  path under the paths provided in the "internalModuleBaseUrls" field |
 |`shouldNotPreload`      | `boolean` | Definition: If set to "true",this module should not be preloaded when loading the component |
-|`type`      | `'internal' `,` 'framework' `,` 'localized'` | Definition: The type of the script block |
+|`type`      | ``,`internal`,`framework`,`localized`,`` | Definition: The type of the script block |
 
 
 
