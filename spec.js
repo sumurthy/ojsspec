@@ -269,6 +269,7 @@ function processLines(element = '', index = 0, lines = []) {
     else if (line.includes(TYPEDEF)) {
         nType++
         var name = Utils.cleanupName(thirdWord)
+        allTypes.types.push(name)
         typeObj[name] = {}
         typeObj[name]['alias'] = line.split('=')[1].trim()
         typeObj[name]['descr'] = generalDesc
@@ -278,6 +279,7 @@ function processLines(element = '', index = 0, lines = []) {
     else if (line.includes(VARIABLEDEF)) {
         nVariable++
         var name = Utils.cleanupName(thirdWord)
+        allTypes.types.push(name)
         variableObj[name] = {}
         variableObj[name]['dataType'] = line.split(':')[1].trim()
         variableObj[name]['dataType'] = variableObj[name]['dataType'].replace('typeof ', '')

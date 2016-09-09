@@ -13,7 +13,10 @@
   }
 5. Check Optional handling ? for methods, params, etc. Need it in markdown.
 17. Can't have random numbers name. Maybe we can do Sha256 strings.
-19. @returns and @param descriptions are not being captured.
+19. IBasicHttpClientOptions - has headers data type problems, no hyperlink for BodyInit
+20. Links to variables and types
+21. Handle {} inside strings.
+
 LONGER TERM:
 19. Make use of dFunction for enum and function file generation
 1. Use TypeScript AST to generate the intermediary JSONs.

@@ -270,8 +270,10 @@ var self = module.exports = {
     },
     processProperty: (name = '', line = '', descr = '', assignValue = null, isClass = true, readonly = false) => {
         var p = {}
-        var lastWord = line.split(':').pop()
         var firstWord = line.split(' ')[0]
+        var start = line.indexOf(':')
+        var lastWord = line.substr(start + 1).trim()
+
         p['dataType'] = lastWord.replace(')', '').trim()
         if (isClass) {
             p['accessModifier'] = firstWord

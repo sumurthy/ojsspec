@@ -38,7 +38,7 @@
         "descr": ""
       },
       "headers": {
-        "dataType": "string }",
+        "dataType": "HeaderInit|{ [index: string]: string }",
         "accessModifier": null,
         "isOptional": true,
         "readonly": false,
@@ -397,7 +397,7 @@
         "descr": ""
       },
       "headers": {
-        "dataType": "string }",
+        "dataType": "HeaderInit|{ [index: string]: string }",
         "accessModifier": null,
         "isOptional": true,
         "readonly": false,
