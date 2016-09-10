@@ -40,7 +40,12 @@ let nEnum = 0
 let nVariable = 0
 let nType = 0
 let nInterface = 0
-
+let isStatic = false
+let hasAssignment = false
+let assignValue = null
+let firstWord = ''
+let secondWord = ''
+let thirdWord = ''
 // GLOBAL - TYPES OF OBJECT
 //
 let allTypes = {
@@ -88,6 +93,7 @@ function file_reset() {
     //commentObject = JSON.parse(JSON.stringify(commentParent))
     commentObject['param'] = []
     commentObject['returnDescr'] = ''
+    commentObject['generalDescr'] = ''
     comment_reset()
 }
 
@@ -97,6 +103,7 @@ function block_end_reset() {
     generalDesc = ''
     commentObject['param'] = []
     commentObject['returnDescr'] = ''
+    commentObject['generalDescr'] = ''
     interfaceName = ''
     comment_reset()
 }
@@ -123,6 +130,104 @@ function expandAllTypes() {
     allTypes['types'] = allTypes['types'].sort().filter((elem, i, arr) => arr.indexOf(elem) === i)
     return
 }
+
+function prepareLine(line='') {
+  line = line.split('//')[0]
+  line = line.replace(/\s+/g, ' ').trim()
+  line = line.replace(/,\s/g, ',').trim()
+  line = line.replace(';','')
+  isStatic = false
+  hasAssignment = false
+  assignValue = null
+  // Should it be ' static ' or 'static '
+  if (line.includes(' static ')) {
+      isStatic = true
+      line = line.replace(' static ', ' ')
+  }
+
+  // If the line has assignment, cut and save that to another location.
+  // Example: public eventAggregator: IEventAggregator = {} as any;
+  // Here, {} as any part is stowed away.
+  //
+  if (line.includes(' = ') && line.includes(':')) {
+      hasAssignment = true
+      assignValue = line.split(' = ').pop()
+      line = line.split(' = ').slice(0, -1).join('')
+  }
+
+  // if (line.includes(BLOCK_BEGIN) && line.includes(BLOCK_END)) {
+  //     return
+  // }
+
+  firstWord = line.split(' ', 1)[0]
+  secondWord = line.split(' ', 2)[1]
+  secondWord = secondWord || 'OBJECTERROR'
+
+  if ((firstWord === 'new') || (firstWord.startsWith('new'))) {
+      firstWord = Utils.getMethodName(line)
+  }
+
+  thirdWord = line.split(' ', 3)[2]
+  lastWord = line.split(':').pop()
+
+
+  return line
+}
+
+function processComment(lines, index) {
+  if (firstWord === C_START) {
+      cmode = true
+      block_begin_reset()
+      comment_reset()
+      return
+  } else if (firstWord === COMMENT) {
+      if (secondWord === undefined) {
+          return
+      } else if (secondWord.startsWith(ATSYMBOL)) {
+          // PROCESS @param, etc.
+          //
+          paramEncountered = true
+
+          switch (secondWord) {
+              case '@param':
+                  //4th word has param name and 5th+ has the description. Those are the only important ones to consider
+                  //* @param  {string}             targetProperty [description]
+                  //Split and Remove entries that have empty strings
+                  // (since we are compacting the line, we don't have to do ``.map((s) => s.trim()).filter((e) => e)` at the end of the split)
+                  var arr = line.split(' ')
+                  if (arr[2] !== undefined) {
+                      var o = Utils.readCommentAhead(lines, arr.slice(3).join(' '), index)
+                      ignore_lines = o['skip']
+                      commentObject['param'].push([arr[2], o['descr']])
+                  }
+                  break;
+              case '@returns':
+                  var arr = line.split(' ')
+                  if (arr[2] !== undefined) {
+                      var o = Utils.readCommentAhead(lines, arr.slice(2).join(' '), index)
+                      ignore_lines = o['skip']
+                      commentObject['returnDescr'] = o['descr']
+                  }
+                  break
+              case '@readonly':
+                  readonlyProperty = true
+                  break;
+              default:
+          }
+      } else {
+          if (!paramEncountered) {
+              var o = Utils.readCommentAhead(lines, line.substr(2), index)
+              ignore_lines = o['skip']
+              generalDesc = o['descr']
+          }
+      }
+      return
+  } else if (firstWord === C_END) {
+      cmode = false
+      return
+  }
+}
+
 /**
  * Process the lines in sequence and control workflow.
  *
@@ -131,48 +236,11 @@ function expandAllTypes() {
  * @return {true}         [returns true]
  */
 function processLines(element = '', index = 0, lines = []) {
-
     if (ignore_lines.includes(index)) {
         return
     }
-    // Trim line, remove ';' and extra spaces after comma, and 1+ white space to 1 whitespace
-    let line = element.split('//')[0]
-    line = line.replace(/\s+/g, ' ').trim()
-    line = line.replace(/,\s/g, ',').trim()
-    line = line.replace(';','')
-    let isStatic = false
-    let hasAssignment = false
-    let assignValue = null
-    // Should it be ' static ' or 'static '
-    if (line.includes(' static ')) {
-        isStatic = true
-        line = line.replace(' static ', ' ')
-    }
-
-    // If the line has assignment, cut and save that to another location.
-    // Example: public eventAggregator: IEventAggregator = {} as any;
-    // Here, {} as any part is stowed away.
-    //
-    if (line.includes(' = ') && line.includes(':')) {
-        hasAssignment = true
-        assignValue = line.split(' = ').pop()
-        line = line.split(' = ').slice(0, -1).join('')
-    }
-
-    // if (line.includes(BLOCK_BEGIN) && line.includes(BLOCK_END)) {
-    //     return
-    // }
-
-    let firstWord = line.split(' ', 1)[0]
-    let secondWord = line.split(' ', 2)[1]
-    secondWord = secondWord || 'OBJECTERROR'
-
-    if ((firstWord === 'new') || (firstWord.startsWith('new'))) {
-        firstWord = Utils.getMethodName(line)
-    }
-
-    let thirdWord = line.split(' ', 3)[2]
-    let lastWord = line.split(':').pop()
+    //prepare the line and sent first, second and third word.
+    var line = prepareLine(element)
     if (!COMMENT_ALL.includes(firstWord)) {
         if (line.includes(BLOCK_BEGIN)) {
             iBlock++;
@@ -181,64 +249,18 @@ function processLines(element = '', index = 0, lines = []) {
             iBlock--;
         }
     }
-    if (SKIP.includes(firstWord)) return
+
+    // Trim line, remove ';' and extra spaces after comma, and 1+ white space to 1 whitespace
+
     // else if (IGNORES.includes(secondWord)) {
     //   ignoreMode = true
     //   return
     // }
+    if (SKIP.includes(firstWord)) return
+
     if (firstWord === BLOCK_END && iBlock == 0) {
         mode = ''
         block_end_reset()
-        return
-    } else if (firstWord === C_START) {
-        cmode = true
-        block_begin_reset()
-        comment_reset()
-        return
-    } else if (firstWord === COMMENT) {
-        if (secondWord === undefined) {
-            return
-        } else if (secondWord.startsWith(ATSYMBOL)) {
-            // PROCESS @param, etc.
-            //
-            paramEncountered = true
-
-            switch (secondWord) {
-                case '@param':
-                    //4th word has param name and 5th+ has the description. Those are the only important ones to consider
-                    //* @param  {string}             targetProperty [description]
-                    //Split and Remove entries that have empty strings
-                    // (since we are compacting the line, we don't have to do ``.map((s) => s.trim()).filter((e) => e)` at the end of the split)
-                    var arr = line.split(' ')
-                    if (arr[2] !== undefined) {
-                        var o = Utils.readCommentAhead(lines, arr.slice(3).join(' '), index)
-                        ignore_lines = o['skip']
-                        commentObject['param'].push([arr[2], o['descr']])
-                    }
-                    break;
-                case '@returns':
-                    var arr = line.split(' ')
-                    if (arr[2] !== undefined) {
-                        var o = Utils.readCommentAhead(lines, arr.slice(2).join(' '), index)
-                        ignore_lines = o['skip']
-                        commentObject['returnDescr'] = o['descr']
-                    }
-                    break
-                case '@readonly':
-                    readonlyProperty = true
-                    break;
-                default:
-            }
-        } else {
-            if (!paramEncountered) {
-                var o = Utils.readCommentAhead(lines, line.substr(2), index)
-                ignore_lines = o['skip']
-                generalDesc = o['descr']
-            }
-        }
-        return
-    } else if (firstWord === C_END) {
-        cmode = false
         return
     } else if (line.includes(MODULEDEF)) {
         nClass++

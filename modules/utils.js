@@ -365,5 +365,8 @@ var self = module.exports = {
         line = line.replace('export ', '')
         line = line.replace('var ', '')
         return line
+    },
+    firstWord: (line='') => {
+
     }
 }
