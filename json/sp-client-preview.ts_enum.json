@@ -1,1 +1,132 @@
-{}
+{
+  "IPropertyPaneFieldType": {
+    "descr": "",
+    "values": [
+      [
+        "Button",
+        "11",
+        ""
+      ],
+      [
+        "CheckBox",
+        "2",
+        ""
+      ],
+      [
+        "ChoiceGroup",
+        "10",
+        ""
+      ],
+      [
+        "Custom",
+        "1",
+        ""
+      ],
+      [
+        "Dropdown",
+        "6",
+        ""
+      ],
+      [
+        "Heading",
+        "9",
+        ""
+      ],
+      [
+        "HorizontalRule",
+        "12",
+        ""
+      ],
+      [
+        "Label",
+        "7",
+        ""
+      ],
+      [
+        "Link",
+        "13",
+        ""
+      ],
+      [
+        "Slider",
+        "8",
+        ""
+      ],
+      [
+        "TextField",
+        "3",
+        ""
+      ],
+      [
+        "Toggle",
+        "5",
+        ""
+      ]
+    ]
+  },
+  "PropertyPaneButtonType": {
+    "descr": "",
+    "values": [
+      [
+        "Command",
+        "",
+        ""
+      ],
+      [
+        "Compound",
+        "",
+        ""
+      ],
+      [
+        "Hero",
+        "",
+        ""
+      ],
+      [
+        "Icon",
+        "",
+        ""
+      ],
+      [
+        "Normal",
+        "",
+        ""
+      ],
+      [
+        "Primary",
+        "",
+        ""
+      ]
+    ]
+  },
+  "WebPartConfigurationEvent": {
+    "descr": "",
+    "values": [
+      [
+        "ApplyClicked",
+        "4",
+        ""
+      ],
+      [
+        "CloseComplete",
+        "3",
+        ""
+      ],
+      [
+        "ConfigurationComplete",
+        "1",
+        ""
+      ],
+      [
+        "LostFocus",
+        "5",
+        ""
+      ],
+      [
+        "OpenComplete",
+        "2",
+        ""
+      ]
+    ]
+  }
+}

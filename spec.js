@@ -238,28 +238,33 @@ function processEnum(index = 0, lines = []) {
     o['descr'] = generalDesc
     o['values'] = []
     for (var i = (index + 1); i < lines.length; i++) {
-        if (ignore_upto >= index) continue
+        if (ignore_upto >= i) continue
         ignore_upto = i
+        let line = prepareLine(lines[i])
+
         if (firstWord === BLOCK_END) {
             block_end_reset()
             return o
-        }
-        let line = prepareLine(lines[i])
-        if (line.includes('=')) {
-            var v = line.replace(',', '').split('=').map((s) => s.trim())
-            v.push(generalDesc)
-            o['values'].push(v)
+        } else if (firstWord === C_START) {
+          processComment(i, lines)
+          continue
         } else {
-            var ea = line.split(',')
-            ea.forEach((en) => {
-                var v = []
-                v[0] = en.replace(/"/g, '').replace(/,/,'').trim()
-                v[1] = ''
-                v[2] = generalDesc
-                if (v[0]) {
-                    o['values'].push(v)
-                }
-            })
+            if (line.includes('=')) {
+                var v = line.replace(',', '').split('=').map((s) => s.trim())
+                v.push(generalDesc)
+                o['values'].push(v)
+            } else {
+                var ea = line.split(',')
+                ea.forEach((en) => {
+                    var v = []
+                    v[0] = en.replace(/"/g, '').replace(/,/,'').trim()
+                    v[1] = ''
+                    v[2] = generalDesc
+                    if (v[0]) {
+                        o['values'].push(v)
+                    }
+                })
+            }
         }
     }
 }

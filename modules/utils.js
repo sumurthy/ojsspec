@@ -194,9 +194,7 @@ var self = module.exports = {
         }
         //name = name + '~' + (Math.floor(Math.random() * 90000) + 10000)
         if (!withOptional) {
-            console.log(name);
             name = name + '~' + self.sha256(line)
-            //console.log('>> ' + name);
             return name
         } else {
             return name
@@ -332,8 +330,8 @@ var self = module.exports = {
         } else if (line.includes(IMPLEMENTS)) {
             extendsImplementsName = line.split('implements ')[1].split(BLOCK_BEGIN)[0].trim()
         }
-        o['implementsExtendsName'] = extendsImplementsName
         if (isClass) {
+        o['implementsExtendsName'] = extendsImplementsName
             var rawGenericsInside = line.split(' ')[2]
         }else {
             var rawGenericsInside = line.split(' ')[2]
