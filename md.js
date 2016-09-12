@@ -237,6 +237,7 @@ function doSubClassInterface(tline = '', localO = {}, localName = '', isClass = 
             tline = tline.replace('%resourcetype%', ' interface')
         }
     }
+    console.log(localO);
     if (tline.includes('%generictype%')) {
         if (localO[localName]['genericType']) {
             tline = tline.replace('%generictype%', ` \`<${localO[localName]['genericType']}>\``)
@@ -306,7 +307,7 @@ var dFunction = {
     },
     moduleGenIndividual: function(e = '') {
         objectName = e
-        //genClassInterfaceView(false, e)
+        genClassInterfaceView(false, e, true)
 
     },
     functionsGenIndividual: function(e = '') {
@@ -459,9 +460,11 @@ function addParams(tline = '', member = {}, targetArray = []) {
 }
 
 
-function genClassInterfaceView(isClass = true, localName = '') {
+function genClassInterfaceView(isClass = true, localName = '', isModule = false) {
     var localO = isClass ? classObj : iObj
-
+    if (isModule) {
+        localO = moduleObj
+    }
     mem_mdout = []
     var o = localO[localName]
         //var o = classObj[objectName]
