@@ -1,8 +1,8 @@
-# Set `<T>` interface
+# Set interface
 
 
 
-_Type parameters: `<T>`_
+
 
 
 

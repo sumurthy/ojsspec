@@ -1,8 +1,8 @@
-# WeakSet `<T>` interface
+# WeakSet interface
 
 
 
-_Type parameters: `<T>`_
+
 
 
 

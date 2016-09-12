@@ -26,19 +26,20 @@ const IMPLEMENTS = 'implements '
 const EXTENDS = 'extends '
 
 let ignore_lines = []
+let ignore_upto = -1
 let cBuffer = {}
 let ignoreMode = false
 let paramEncountered = false
 let mode = ''
 let cmode = false
 let readonlyProperty = false
-let iBlock = 0
 let saveFileName = ''
 let nClass = 0
 let nFunction = 0
 let nEnum = 0
 let nVariable = 0
 let nType = 0
+let nModule = 0
 let nInterface = 0
 let isStatic = false
 let hasAssignment = false
@@ -46,6 +47,7 @@ let assignValue = null
 let firstWord = ''
 let secondWord = ''
 let thirdWord = ''
+let lastWord = ''
 // GLOBAL - TYPES OF OBJECT
 //
 let allTypes = {
@@ -121,7 +123,6 @@ function comment_reset() {
 }
 
 function expandAllTypes() {
-
     allTypes['types'].forEach((e) => {
         if (e.includes('<')) {
             allTypes['types'].push(Utils.trimGenerics(e))
@@ -132,102 +133,216 @@ function expandAllTypes() {
 }
 
 function prepareLine(line='') {
-  line = line.split('//')[0]
-  line = line.replace(/\s+/g, ' ').trim()
-  line = line.replace(/,\s/g, ',').trim()
-  line = line.replace(';','')
-  isStatic = false
-  hasAssignment = false
-  assignValue = null
-  // Should it be ' static ' or 'static '
-  if (line.includes(' static ')) {
+    line = line.split('//')[0]
+    line = line.replace(/\s+/g, ' ').trim()
+    line = line.replace(/,\s/g, ',').trim()
+    line = line.replace(';','')
+    isStatic = false
+    hasAssignment = false
+    assignValue = null
+    // Should it be ' static ' or 'static '
+    if (line.includes(' static ')) {
       isStatic = true
       line = line.replace(' static ', ' ')
-  }
+    }
 
-  // If the line has assignment, cut and save that to another location.
-  // Example: public eventAggregator: IEventAggregator = {} as any;
-  // Here, {} as any part is stowed away.
-  //
-  if (line.includes(' = ') && line.includes(':')) {
+    // If the line has assignment, cut and save that to another location.
+    // Example: public eventAggregator: IEventAggregator = {} as any;
+    // Here, {} as any part is stowed away.
+    //
+    if (line.includes(' = ') && line.includes(':')) {
       hasAssignment = true
       assignValue = line.split(' = ').pop()
       line = line.split(' = ').slice(0, -1).join('')
-  }
+    }
 
-  // if (line.includes(BLOCK_BEGIN) && line.includes(BLOCK_END)) {
-  //     return
-  // }
-
-  firstWord = line.split(' ', 1)[0]
-  secondWord = line.split(' ', 2)[1]
-  secondWord = secondWord || 'OBJECTERROR'
-
-  if ((firstWord === 'new') || (firstWord.startsWith('new'))) {
-      firstWord = Utils.getMethodName(line)
-  }
-
-  thirdWord = line.split(' ', 3)[2]
-  lastWord = line.split(':').pop()
-
-
-  return line
+    // if (line.includes(BLOCK_BEGIN) && line.includes(BLOCK_END)) {
+    //     return
+    // }
+    var o = Utils.splitToWords(line)
+    firstWord = o['f']
+    secondWord = o['s']
+    thirdWord = o['t']
+    lastWord = o['l']
+    return line
 }
 
-function processComment(lines, index) {
-  if (firstWord === C_START) {
-      cmode = true
-      block_begin_reset()
-      comment_reset()
-      return
-  } else if (firstWord === COMMENT) {
-      if (secondWord === undefined) {
-          return
-      } else if (secondWord.startsWith(ATSYMBOL)) {
-          // PROCESS @param, etc.
-          //
-          paramEncountered = true
+function processComment(index = 0, lines = []) {
 
-          switch (secondWord) {
-              case '@param':
-                  //4th word has param name and 5th+ has the description. Those are the only important ones to consider
-                  //* @param  {string}             targetProperty [description]
-                  //Split and Remove entries that have empty strings
-                  // (since we are compacting the line, we don't have to do ``.map((s) => s.trim()).filter((e) => e)` at the end of the split)
-                  var arr = line.split(' ')
-                  if (arr[2] !== undefined) {
-                      var o = Utils.readCommentAhead(lines, arr.slice(3).join(' '), index)
-                      ignore_lines = o['skip']
-                      commentObject['param'].push([arr[2], o['descr']])
-                  }
-                  break;
-              case '@returns':
-                  var arr = line.split(' ')
-                  if (arr[2] !== undefined) {
-                      var o = Utils.readCommentAhead(lines, arr.slice(2).join(' '), index)
-                      ignore_lines = o['skip']
-                      commentObject['returnDescr'] = o['descr']
-                  }
-                  break
-              case '@readonly':
-                  readonlyProperty = true
-                  break;
-              default:
+    for (var i = index; i < lines.length; i++) {
+        ignore_upto = i
+        let line = prepareLine(lines[i])
+        line = line.replace(/\s+/g, ' ').trim()
+        var o = Utils.splitToWords(line)
+        firstWord = o['f']
+        secondWord = o['s']
+        if (firstWord === C_START) {
+          cmode = true
+          block_begin_reset()
+          comment_reset()
+          continue
+        } else if (firstWord === COMMENT) {
+          if (secondWord === undefined) {
+              continue
+          } else if (secondWord.startsWith(ATSYMBOL)) {
+              // PROCESS @param, etc.
+              paramEncountered = true
+              switch (secondWord) {
+                  case '@param':
+                      //4th word has param name and 5th+ has the description. Those are the only important ones to consider
+                      //* @param  {string}             targetProperty [description]
+                      //Split and Remove entries that have empty strings
+                      // (since we are compacting the line, we don't have to do ``.map((s) => s.trim()).filter((e) => e)` at the end of the split)
+                      var arr = line.split(' ')
+                      if (arr[2] !== undefined) {
+                          var oa = Utils.readCommentAhead(lines, arr.slice(3).join(' '), index)
+                          ignore_upto = oa['skip'].pop()
+                          commentObject['param'].push([arr[2], oa['descr']])
+                      }
+                      break;
+                  case '@returns':
+                      var arr = line.split(' ')
+                      if (arr[2] !== undefined) {
+                          var oa = Utils.readCommentAhead(lines, arr.slice(2).join(' '), index)
+                          ignore_upto = oa['skip'].pop()
+                          commentObject['returnDescr'] = oa['descr']
+                      }
+                      break
+                  case '@readonly':
+                      readonlyProperty = true
+                      break;
+
+                  default:
+              }
+          } else {
+              if (!paramEncountered) {
+                  var oa = Utils.readCommentAhead(lines, line.substr(2), index)
+                  ignore_upto = oa['skip'].pop()
+                  generalDesc = oa['descr']
+              }
           }
-      } else {
-          if (!paramEncountered) {
-              var o = Utils.readCommentAhead(lines, line.substr(2), index)
-              ignore_lines = o['skip']
-              generalDesc = o['descr']
-          }
-      }
-      return
-  } else if (firstWord === C_END) {
-      cmode = false
-      return
-  }
+          continue
+        } else if (firstWord === C_END) {
+          cmode = false
+          break
+        }
+    }
+    return
 }
 
+function processEnum(index = 0, lines = []) {
+    let o = {}
+    o['descr'] = generalDesc
+    o['values'] = []
+    for (var i = (index + 1); i < lines.length; i++) {
+        if (ignore_upto >= index) continue
+        ignore_upto = i
+        if (firstWord === BLOCK_END) {
+            block_end_reset()
+            return o
+        }
+        let line = prepareLine(lines[i])
+        if (line.includes('=')) {
+            var v = line.replace(',', '').split('=').map((s) => s.trim())
+            v.push(generalDesc)
+            o['values'].push(v)
+        } else {
+            var ea = line.split(',')
+            ea.forEach((en) => {
+                var v = []
+                v[0] = en.replace(/"/g, '').replace(/,/,'').trim()
+                v[1] = ''
+                v[2] = generalDesc
+                if (v[0]) {
+                    o['values'].push(v)
+                }
+            })
+        }
+    }
+}
+
+function processObject(objectName = '', index = 0, lines = [], isClass) {
+    console.log('In Process object: ' + objectName);
+    let o = Utils.createClassInterfaceObject(lines[index], generalDesc)
+    for (var i = (index + 1); i < lines.length; i++) {
+        console.log('next line: ' + ignore_upto + ' == ' + i);
+        if (ignore_upto >= i) continue
+        ignore_upto = i
+
+        let line = prepareLine(lines[i])
+        console.log('Lines: ' + lines[i] + ' ' + firstWord);
+
+        if (firstWord === BLOCK_END) {
+            console.log('1: Returning block end: ' + objectName);
+            block_end_reset()
+            return o
+        } else if (firstWord === C_START) {
+            console.log('2: comment start');
+            processComment(index, lines)
+            continue
+        } else {
+            var memberType = Utils.getMemberType(line, isClass)
+            console.log('3: memberType ' + memberType);
+            if (memberType === 'SKIPBLOCK') {
+                // Handle object
+                console.log('Skip Block encountered..');
+                var oa = Utils.readObjectAhead(lines, index)
+                ignore_upto = oa['skip'].pop()
+                continue
+            } else if (memberType === 'PROPERTY') {   //PROPERTY
+                var p = {}
+                var name = Utils.getPropName(firstWord, false)
+                p['isCollection'] = (secondWord.includes('[]')) ? true : false
+                var p = Utils.processProperty(name, line, generalDesc, assignValue, false, readonlyProperty)
+                name = name.replace('?','')
+                o['properties'][name] = p
+                continue
+            } else if (memberType === 'METHOD') {   //METHOD
+                var name = Utils.getMethodName(line) || "ErrorErrorError~99999"
+                var m = Utils.processMethod(line, generalDesc, commentObject, interfaceName, name, isStatic)
+                o['methods'][name] = m
+                var linkvalue = (objectName + '.md#' + name.split('~')[0]).toLowerCase()
+                var linkkey = (objectName + '.' + name.split('~')[0]).toLowerCase()
+                allVarsTypes[linkkey] = linkvalue
+                console.log('Done with processing method');
+                continue
+            } else if (memberType === 'FUNCTION') {   //METHOD
+                var name = Utils.getMethodName(line) || "ErrorErrorError~99999"
+                var m = Utils.processMethod(line, generalDesc, commentObject, interfaceName, name, isStatic)
+                o['methods'][name] = m
+                var linkvalue = (objectName + '.md#' + name.split('~')[0]).toLowerCase()
+                var linkkey = (objectName + '.' + name.split('~')[0]).toLowerCase()
+                allVarsTypes[linkkey] = linkvalue
+                contiue
+            } else if (memberType === 'VARIABLE') {
+                nVariable++
+                var name = Utils.cleanupName(thirdWord)
+                allVarsTypes[name] = saveFileName.toLowerCase() + '-module.md#variables'
+                var v = {}
+                v['dataType'] = line.split(':')[1].trim()
+                v['dataType'] = variableObj[name]['dataType'].replace('typeof ', '')
+                v['descr'] = generalDesc
+                o['variables'][name] = v
+                comment_reset()
+                continue
+            } else if (memberType === 'TYPE') {
+                nType++
+                var name = Utils.cleanupName(thirdWord)
+                allVarsTypes[name] = saveFileName.toLowerCase() + '-module.md#types'
+                var t = {}
+                t['alias'] = line.split('=')[1].trim()
+                t['descr'] = generalDesc
+                o['types'][name] = v
+                comment_reset()
+                continue
+            }
+            else {
+                console.log('Error: Cannot determine the case of this line: ' + line);
+            }
+            continue
+        }
+    }
+}
 /**
  * Process the lines in sequence and control workflow.
  *
@@ -236,39 +351,27 @@ function processComment(lines, index) {
  * @return {true}         [returns true]
  */
 function processLines(element = '', index = 0, lines = []) {
-    if (ignore_lines.includes(index)) {
-        return
-    }
+    if (ignore_upto >= index) return
     //prepare the line and sent first, second and third word.
-    var line = prepareLine(element)
-    if (!COMMENT_ALL.includes(firstWord)) {
-        if (line.includes(BLOCK_BEGIN)) {
-            iBlock++;
-        }
-        if (line.includes(BLOCK_END)) {
-            iBlock--;
-        }
-    }
-
+    let line = prepareLine(element)
     // Trim line, remove ';' and extra spaces after comma, and 1+ white space to 1 whitespace
 
-    // else if (IGNORES.includes(secondWord)) {
-    //   ignoreMode = true
-    //   return
-    // }
     if (SKIP.includes(firstWord)) return
 
-    if (firstWord === BLOCK_END && iBlock == 0) {
+    if (firstWord === C_START) {
+        processComment(index, lines)
+        return
+    } else if (firstWord === BLOCK_END) {
         mode = ''
         block_end_reset()
         return
     } else if (line.includes(MODULEDEF)) {
-        nClass++
+        console.log('Module Found!!!');
+        nModule++
         mode = 'MODULE'
         moduleName = line.split(' ')[2].replace(/"/g,'')
         moduleName = Utils.trimGenerics(moduleName)
-        moduleObject[moduleName] = {}
-        classObj[className] = Utils.createModuleObject(generalDesc)
+        moduleObject[moduleName] = processObject('',index, lines, false)
         comment_reset()
         return
     } else if (line.includes(INTERFACEDEF)) {
@@ -276,14 +379,7 @@ function processLines(element = '', index = 0, lines = []) {
         mode = 'INTERFACE'
         interfaceName = Utils.trimGenerics(secondWord)
         allTypes.types.push(interfaceName)
-        var extendsName = null
-        if (line.includes(EXTENDS)) {
-            extendsName = line.split('extends ')[1]
-            extendsName = extendsName.split(BLOCK_BEGIN)[0].trim()
-        }
-        iObj[interfaceName] = {}
-        iObj[interfaceName] = Utils.createClassInterfaceObject(extendsName, secondWord, generalDesc)
-
+        iObj[interfaceName] = processObject(interfaceName, index, lines, false)
         comment_reset()
         return
     } else if (line.includes(CLASSDEF)) {
@@ -292,12 +388,7 @@ function processLines(element = '', index = 0, lines = []) {
         var preClassName = line.split(' ')[2]
         className = Utils.trimGenerics(preClassName)
         allTypes.types.push(className)
-        var implementsName = null
-        if (line.includes(IMPLEMENTS)) {
-            implementsName = line.split('implements ')[1].split(BLOCK_BEGIN)[0].trim()
-        }
-        classObj[className] = {}
-        classObj[className] = Utils.createClassInterfaceObject(implementsName, preClassName, generalDesc)
+        classObj[className] = processObject(className, index, lines, true)
         comment_reset()
         return
     } else if (line.includes(TYPEDEF)) {
@@ -308,7 +399,6 @@ function processLines(element = '', index = 0, lines = []) {
         typeObj[name]['alias'] = line.split('=')[1].trim()
         typeObj[name]['descr'] = generalDesc
         comment_reset()
-
     }
     else if (line.includes(VARIABLEDEF)) {
         nVariable++
@@ -319,7 +409,6 @@ function processLines(element = '', index = 0, lines = []) {
         variableObj[name]['dataType'] = variableObj[name]['dataType'].replace('typeof ', '')
         variableObj[name]['descr'] = generalDesc
         comment_reset()
-
     }
     else if (line.includes(ENUM)) {
         nEnum++
@@ -344,9 +433,7 @@ function processLines(element = '', index = 0, lines = []) {
         }
         else {
             mode = 'ENUM'
-            enumObj[enumKey] = {}
-            enumObj[enumKey]['descr'] = generalDesc
-            enumObj[enumKey]['values'] = []
+            enumObj[enumKey] = processEnum(index, lines)
             block_begin_reset()
         }
         return
@@ -358,131 +445,6 @@ function processLines(element = '', index = 0, lines = []) {
         mode = 'FUNCTION'
         comment_reset()
         return
-    }
-
-    // The Big Else....
-    else {
-
-        switch (mode) {
-            case 'MODULE':
-                // var memberType = Utils.getMemberType(line, false)
-                // if (memberType === 'SKIPBLOCK') {
-                // //if (line.includes(BLOCK_BEGIN) && !line.includes(BLOCK_END)) {
-                //     // Handle object
-                //     var o = Utils.readObjectAhead(lines, index)
-                //     ignore_lines = o['skip']
-                //     iBlock--
-                // //} else if (firstWord.includes(':') && !firstWord.includes('(')) {   //PROPERTY
-                // } else if (memberType === 'VARIABLE') {   //PROPERTY
-                //     var p = {}
-                //     var name = Utils.getPropName(firstWord, false)
-                //     p['isCollection'] = (secondWord.includes('[]')) ? true : false
-                //     var p = Utils.processProperty(name, line, generalDesc, assignValue, false, readonlyProperty)
-                //     name = name.replace('?','')
-                //     iObj[interfaceName]['properties'][name] = p
-                // } else if (memberType === 'FUNCTION') {   //METHOD
-                // //} else if (line.includes(')') && line.includes('(')) { // has brackets
-                //     var name = Utils.getMethodName(line) || "ErrorErrorError~99999"
-                //     var m = Utils.processMethod(line, generalDesc, commentObject, interfaceName, name, isStatic)
-                //     iObj[interfaceName]['methods'][name] = m
-                //     var linkvalue = (interfaceName + '.md#' + name.split('~')[0]).toLowerCase()
-                //     var linkkey = (interfaceName + '.' + name.split('~')[0]).toLowerCase()
-                //     allVarsTypes[linkkey] = linkvalue
-                // }  else {
-                //     console.log('Error: Cannot determine the case of this line: ' + line);
-                // }
-                comment_reset()
-                break;
-            case 'INTERFACE':
-                var memberType = Utils.getMemberType(line, false)
-                if (memberType === 'SKIPBLOCK') {
-                //if (line.includes(BLOCK_BEGIN) && !line.includes(BLOCK_END)) {
-                    // Handle object
-                    var o = Utils.readObjectAhead(lines, index)
-                    ignore_lines = o['skip']
-                    iBlock--
-                //} else if (firstWord.includes(':') && !firstWord.includes('(')) {   //PROPERTY
-                } else if (memberType === 'PROPERTY') {   //PROPERTY
-                    var p = {}
-                    var name = Utils.getPropName(firstWord, false)
-                    p['isCollection'] = (secondWord.includes('[]')) ? true : false
-                    var p = Utils.processProperty(name, line, generalDesc, assignValue, false, readonlyProperty)
-                    name = name.replace('?','')
-                    iObj[interfaceName]['properties'][name] = p
-                } else if (memberType === 'METHOD') {   //METHOD
-                //} else if (line.includes(')') && line.includes('(')) { // has brackets
-                    var name = Utils.getMethodName(line) || "ErrorErrorError~99999"
-                    var m = Utils.processMethod(line, generalDesc, commentObject, interfaceName, name, isStatic)
-                    iObj[interfaceName]['methods'][name] = m
-                    var linkvalue = (interfaceName + '.md#' + name.split('~')[0]).toLowerCase()
-                    var linkkey = (interfaceName + '.' + name.split('~')[0]).toLowerCase()
-                    allVarsTypes[linkkey] = linkvalue
-
-                }  else {
-                    console.log('Error: Cannot determine the case of this line: ' + line);
-                }
-                comment_reset()
-                break;
-            case 'CLASS':
-                var memberType = Utils.getMemberType(line)
-                if (memberType === 'SKIPBLOCK') {
-                //if (line.includes(BLOCK_BEGIN) && !line.includes(BLOCK_END)) {
-                    // Handle object
-                    var o = Utils.readObjectAhead(lines, index)
-                    ignore_lines = o['skip']
-                    iBlock--
-                // } else if (secondWord.includes(':') && !secondWord.includes('(') && (!firstWord.includes('('))) { //PROPERTY
-                } else if (memberType === 'PROPERTY') {   //PROPERTY
-                    if (secondWord) {
-                        var name = Utils.getPropName(secondWord, false)
-                    }
-                    else {
-                        var name = 'PROPERTYNAMEERROR~99999'
-                    }
-                    var p = Utils.processProperty(name, line, generalDesc, assignValue, true, readonlyProperty)
-                    name = name.replace('?','')
-                    classObj[className]['properties'][name] = p
-                // } else if (line.includes(')') && line.includes('(')) { // has brackets
-                } else if (memberType === 'METHOD') {   //METHOD
-                    name = Utils.getMethodName(line)
-                    name = name || "ErrorErrorError~99999"
-                    var m = Utils.processMethod(line, generalDesc, commentObject, className, name, isStatic)
-                    classObj[className]['methods'][name] = m
-
-                    var linkvalue = (className + '.md#' + name.split('~')[0]).toLowerCase()
-                    var linkkey = (className + '.' + name.split('~')[0]).toLowerCase()
-                    allVarsTypes[linkkey] = linkvalue
-
-                }  else {
-                    console.log('Error: Cannot determine the case of this line: ' + line);
-                }
-                comment_reset()
-
-                break;
-            case 'ENUM':
-
-                if (line.includes('=')) {
-                    var v = line.replace(',', '').split('=').map((s) => s.trim())
-                    v.push(generalDesc)
-                    enumObj[enumKey]['values'].push(v)
-                }
-                else {
-                    var ea = line.split(',')
-                    ea.forEach((en) => {
-                        var v = []
-                        v[0] = en.replace(/"/g, '').replace(/,/,'').trim()
-                        v[1] = ''
-                        v[2] = generalDesc
-                        if (v[0]) {
-                            enumObj[enumKey]['values'].push(v)
-                        }
-                    })
-                }
-                break;
-            case 'FUNCTION':
-                break;
-            default:
-        }
     }
 }
 
@@ -503,6 +465,7 @@ function processFile(fileName) {
     let lines = FileOps.loadFile(`./input-scrubbed/${fileName}`)
     lines.forEach(processLines);
     FileOps.writeObject(enumObj, `./json/${fileName}_enum.json`)
+    FileOps.writeObject(moduleObject, `./json/${fileName}_module.json`)
     FileOps.writeObject(functionObj, `./json/${fileName}_function.json`)
     FileOps.writeObject(iObj, `./json/${fileName}_interface.json`)
     FileOps.writeObject(classObj, `./json/${fileName}_class.json`)
@@ -510,6 +473,6 @@ function processFile(fileName) {
     FileOps.writeObject(variableObj, `./json/${fileName}_variable.json`)
     expandAllTypes()
 
-    console.log(`*** interface = ${nInterface}, class = ${nClass}, function = ${nFunction}, enum = ${nEnum}, variable = ${nVariable}, type = ${nType}`);
+    console.log(`*** module = ${nModule}, interface = ${nInterface}, class = ${nClass}, function = ${nFunction}, enum = ${nEnum}, variable = ${nVariable}, type = ${nType}`);
     file_reset()
 }

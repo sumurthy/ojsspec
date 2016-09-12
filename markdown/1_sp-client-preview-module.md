@@ -1,4 +1,4 @@
-# es6-collections external module
+# 1_sp-client-preview external module
 
 
 

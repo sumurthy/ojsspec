@@ -1,8 +1,8 @@
-# ForEachable `<T>` interface
+# ForEachable interface
 
 
 
-_Type parameters: `<T>`_
+
 
 
 

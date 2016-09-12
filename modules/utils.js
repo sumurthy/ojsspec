@@ -6,6 +6,12 @@ const BLOCK_BEGIN = '{'
 const BLOCK_END = '}'
 const STATEMENT_END = [';', '{', '}']
 const SKIP = ['*', '//', '/**', '///', '', '*/', '/*']
+const TYPEDEF = 'declare type'
+const VARIABLEDEF = 'declare var'
+const MODULEDEF = 'module '
+const FUNCTION = 'function '
+const EXTENDS = 'extends '
+const IMPLEMENTS = 'implements '
 
 var self = module.exports = {
     /**
@@ -306,22 +312,34 @@ var self = module.exports = {
     },
     createModuleObject: (descr = '') => {
         var o = {}
-        o['class'] = {}
-        o['interface'] = {}
         o['variable'] = {}
         o['function'] = {}
         o['module'] = {}
-        o['type'] = {}
         return o
     },
-    createClassInterfaceObject: (extendsImplementsName = '', rawGenericsInside = '', descr = '') => {
+    createClassInterfaceObject: (line='', descr = '', isClass=true) => {
         var o = {}
+        var extendsImplementsName = ''
+        if (line.includes(EXTENDS)) {
+            var extendsName = line.split('extends ')[1]
+            extendsImplementsName = extendsName.split(BLOCK_BEGIN)[0].trim()
+        } else if (line.includes(IMPLEMENTS)) {
+            extendsImplementsName = line.split('implements ')[1].split(BLOCK_BEGIN)[0].trim()
+        }
         o['implementsExtendsName'] = extendsImplementsName
+        if (isClass) {
+            var rawGenericsInside = line.split(' ')[2]
+        }else {
+            var rawGenericsInside = line.split(' ')[2]
+        }
         o['genericType'] = self.genericInside(rawGenericsInside)
         o['descr'] = descr
         o['properties'] = {}
         o['functions'] = {}
         o['methods'] = {}
+        o['types'] = {}
+        o['variables'] = {}
+        o['modules'] = {}
         o['objects'] = {}
         return o
     },
@@ -329,15 +347,18 @@ var self = module.exports = {
         let firstWord = line.split(' ', 1)[0]
         let secondWord = line.split(' ', 2)[1]
         var type = ''
-        console.log(line);
         if (line.includes(BLOCK_BEGIN) && !line.includes(BLOCK_END)) {
             type = 'SKIPBLOCK'
-        } else if (firstWord === 'function') {
+        } else if (line.includes(FUNCTION)) {
             type = 'FUNCTION'
         } else if (firstWord.startsWith('constructor') || secondWord.startsWith('constructor')) {
             type = 'METHOD'
-        } else if (firstWord === 'var') {
+        } else if (line.includes(VARIABLEDEF)) {
             type = 'VARIABLE'
+        } else if (line.includes(TYPEDEF)) {
+            type = 'TYPE'
+        } else if (line.includes(MODULEDEF)) {
+            type = 'MODULE'
         } else {
             //line = self.stripQualifier(line)
             var colon = line.indexOf(':')
@@ -366,7 +387,22 @@ var self = module.exports = {
         line = line.replace('var ', '')
         return line
     },
-    firstWord: (line='') => {
+    splitToWords: (line='') => {
+        var o = {}
+        var firstWord = line.split(' ', 1)[0]
+        var secondWord = line.split(' ', 2)[1]
+        secondWord = secondWord || 'OBJECTERROR'
 
+        if ((firstWord === 'new') || (firstWord.startsWith('new'))) {
+            firstWord = self.getMethodName(line)
+        }
+
+        var thirdWord = line.split(' ', 3)[2]
+        var lastWord = line.split(':').pop()
+        o['f'] = firstWord
+        o['s'] = secondWord
+        o['t'] = thirdWord
+        o['l'] = lastWord
+        return o
     }
 }

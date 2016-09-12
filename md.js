@@ -7,6 +7,7 @@ let allVarsTypes = {}
 let functionObj = {}
 let iObj = {}
 let classObj = {}
+let moduleObj = {}
 let enumObj = {}
 let variableObj = {}
 let typeObj = {}
@@ -663,7 +664,10 @@ function loadModule(files = []) {
 
     files.forEach((e) => {
         console.log(`** Processing ${e}`)
-        if (e.includes('_class.json')) {
+        if (e.includes('_module.json')) {
+            moduleObj = JSON.parse(FileOps.loadJson(`./json/${e}`))
+            console.log(`*** Read Class JSON file, ${Object.keys(classObj)}`)
+        } else if (e.includes('_class.json')) {
             classObj = JSON.parse(FileOps.loadJson(`./json/${e}`))
             console.log(`*** Read Class JSON file, ${Object.keys(classObj)}`)
         } else if (e.includes('_interface.json')) {

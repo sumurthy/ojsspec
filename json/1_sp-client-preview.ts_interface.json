@@ -1,7 +1,7 @@
 {
   "IteratorResult": {
-    "implementsExtendsName": null,
-    "genericType": "T",
+    "implementsExtendsName": "",
+    "genericType": null,
     "descr": "",
     "properties": {
       "done": {
@@ -29,11 +29,14 @@
     },
     "functions": {},
     "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
     "objects": {}
   },
   "Iterator": {
-    "implementsExtendsName": null,
-    "genericType": "T",
+    "implementsExtendsName": "",
+    "genericType": null,
     "descr": "",
     "properties": {},
     "functions": {},
@@ -93,11 +96,14 @@
         ]
       }
     },
+    "types": {},
+    "variables": {},
+    "modules": {},
     "objects": {}
   },
   "ForEachable": {
-    "implementsExtendsName": null,
-    "genericType": "T",
+    "implementsExtendsName": "",
+    "genericType": null,
     "descr": "",
     "properties": {},
     "functions": {},
@@ -121,11 +127,14 @@
         ]
       }
     },
+    "types": {},
+    "variables": {},
+    "modules": {},
     "objects": {}
   },
   "Map": {
-    "implementsExtendsName": null,
-    "genericType": "K,V",
+    "implementsExtendsName": "",
+    "genericType": null,
     "descr": "",
     "properties": {
       "size": {
@@ -289,10 +298,13 @@
         "params": []
       }
     },
+    "types": {},
+    "variables": {},
+    "modules": {},
     "objects": {}
   },
   "MapConstructor": {
-    "implementsExtendsName": null,
+    "implementsExtendsName": "",
     "genericType": null,
     "descr": "",
     "properties": {
@@ -329,11 +341,14 @@
         ]
       }
     },
+    "types": {},
+    "variables": {},
+    "modules": {},
     "objects": {}
   },
   "Set": {
-    "implementsExtendsName": null,
-    "genericType": "T",
+    "implementsExtendsName": "",
+    "genericType": null,
     "descr": "",
     "properties": {
       "size": {
@@ -473,10 +488,13 @@
         "params": []
       }
     },
+    "types": {},
+    "variables": {},
+    "modules": {},
     "objects": {}
   },
   "SetConstructor": {
-    "implementsExtendsName": null,
+    "implementsExtendsName": "",
     "genericType": null,
     "descr": "",
     "properties": {
@@ -513,11 +531,14 @@
         ]
       }
     },
+    "types": {},
+    "variables": {},
+    "modules": {},
     "objects": {}
   },
   "WeakMap": {
-    "implementsExtendsName": null,
-    "genericType": "K,V",
+    "implementsExtendsName": "",
+    "genericType": null,
     "descr": "",
     "properties": {},
     "functions": {},
@@ -612,10 +633,13 @@
         ]
       }
     },
+    "types": {},
+    "variables": {},
+    "modules": {},
     "objects": {}
   },
   "WeakMapConstructor": {
-    "implementsExtendsName": null,
+    "implementsExtendsName": "",
     "genericType": null,
     "descr": "",
     "properties": {
@@ -652,11 +676,14 @@
         ]
       }
     },
+    "types": {},
+    "variables": {},
+    "modules": {},
     "objects": {}
   },
   "WeakSet": {
-    "implementsExtendsName": null,
-    "genericType": "T",
+    "implementsExtendsName": "",
+    "genericType": null,
     "descr": "",
     "properties": {},
     "functions": {},
@@ -727,10 +754,13 @@
         ]
       }
     },
+    "types": {},
+    "variables": {},
+    "modules": {},
     "objects": {}
   },
   "WeakSetConstructor": {
-    "implementsExtendsName": null,
+    "implementsExtendsName": "",
     "genericType": null,
     "descr": "",
     "properties": {
@@ -767,6 +797,9 @@
         ]
       }
     },
+    "types": {},
+    "variables": {},
+    "modules": {},
     "objects": {}
   }
 }

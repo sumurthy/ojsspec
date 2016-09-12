@@ -1,0 +1,26 @@
+{
+  "es6-collections": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "",
+    "properties": {
+      "var": {
+        "dataType": "WeakSetConstructor",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  }
+}
