@@ -316,7 +316,11 @@ function processObject(objectName = '', index = 0, lines = [], isClass) {
                 contiue
             } else if (memberType === 'VARIABLE') {
                 nVariable++
-                var name = Utils.cleanupName(thirdWord)
+                if (firstWord === 'declare') {
+                    var name = Utils.cleanupName(thirdWord)
+                } else {
+                    var name = Utils.cleanupName(secondWord)
+                }
                 allVarsTypes[name] = saveFileName.toLowerCase() + '-module.md#variables'
                 var v = {}
                 v['dataType'] = line.split(':')[1].trim()

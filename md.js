@@ -18,7 +18,7 @@ let func_mdout = []
 let enum_mdout = []
 let skipFlag = false
 let moduleName = ''
-let className = ''
+let objectName = ''
 let interfaceName = ''
 
 let moduleT = []
@@ -77,7 +77,7 @@ function getLinkForType(type = '') {
         else if (Object.keys(allVarsTypes).includes(Utils.trimGenerics(e))) {
             out = out + `[\`${e.replace(/\^/g, ',')}\`](${allVarsTypes[Utils.trimGenerics(e)].toLowerCase()})` + ','
         }
-        // classname.method name match
+        // objectName.method name match
         else if (Object.keys(allVarsTypes).includes(Utils.trimGenerics(e.toLowerCase()))) {
             out = out + `[\`${e.replace(/\^/g, ',')}\`](${allVarsTypes[Utils.trimGenerics(e)].toLowerCase()})` + ','
         }
@@ -134,6 +134,11 @@ function set_region(tline = '', obj = {}, localName = '', isClass = true) {
         switch (region) {
             case 'class':
                 if (Object.keys(classObj).length === 0) {
+                    skipFlag = true
+                }
+                break;
+            case 'module':
+                if (Object.keys(moduleObj).length === 0) {
                     skipFlag = true
                 }
                 break;
@@ -215,7 +220,7 @@ function set_region(tline = '', obj = {}, localName = '', isClass = true) {
 
 function doSub(tline = '') {
     if (tline.includes('%module%')) tline = tline.replace('%module%', moduleName)
-    if (tline.includes('%resourcename%')) tline = tline.replace('%resourcename%', className)
+    if (tline.includes('%resourcename%')) tline = tline.replace('%resourcename%', objectName)
 
     return tline
 }
@@ -292,28 +297,27 @@ function doSubMember(tline = '', member = {}, membername = '', isClass = true, o
 var dFunction = {
 
     classGenIndividual: function(e = '') {
-        className = e
+        objectName = e
         genClassInterfaceView(true, e)
     },
-
     interfaceGenIndividual: function(e = '') {
-        className = e
+        objectName = e
+        genClassInterfaceView(false, e)
+    },
+    moduleGenIndividual: function(e = '') {
+        objectName = e
         genClassInterfaceView(false, e)
 
     },
-
     functionsGenIndividual: function(e = '') {
 
     },
-
     enumerationGenIndividual: function(e = '') {
 
     },
-
     typedefGenIndividual: function(e = '') {
 
     },
-
     variableGenIndividual: function(e = '') {
 
     }
@@ -324,6 +328,9 @@ function addRegions(tline = '', type = '') {
     switch (type) {
         case 'class':
             o = classObj
+            break;
+        case 'module':
+            o = moduleObj
             break;
         case 'interface':
             o = iObj
@@ -457,7 +464,7 @@ function genClassInterfaceView(isClass = true, localName = '') {
 
     mem_mdout = []
     var o = localO[localName]
-        //var o = classObj[className]
+        //var o = classObj[objectName]
 
     classInterfaceT.forEach((tline) => {
         tline = tline.trim()
@@ -563,6 +570,7 @@ function genModuleView() {
         } else if (TAKE_REPEAT_ACTION.includes(key)) {
             switch (region) {
                 case 'class':
+                case 'module':
                 case 'functions':
                 case 'interface':
                 case 'enumeration':

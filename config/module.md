@@ -2,6 +2,16 @@
 # %module% external module
 </module>
 
+<module>
+
+## Modules
+
+| Module	   |  Description |
+|:-------------|:---------------|
+>| [%name%](%link%.md)     | %description% |
+
+</module>
+
 <class>
 
 ## Classes
@@ -16,7 +26,7 @@
 
 ## Interfaces
 
-| Class	   |  Description |
+| Interface	   |  Description |
 |:-------------|:---------------|
 >| [%name%](%link%.md)   | %description%  |
 

@@ -353,7 +353,7 @@ var self = module.exports = {
             type = 'FUNCTION'
         } else if (firstWord.startsWith('constructor') || secondWord.startsWith('constructor')) {
             type = 'METHOD'
-        } else if (line.includes(VARIABLEDEF)) {
+        } else if (line.includes(VARIABLEDEF) || (firstWord === 'var')) {
             type = 'VARIABLE'
         } else if (line.includes(TYPEDEF)) {
             type = 'TYPE'

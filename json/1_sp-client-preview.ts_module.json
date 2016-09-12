@@ -3,23 +3,28 @@
     "implementsExtendsName": "",
     "genericType": null,
     "descr": "",
-    "properties": {
-      "var": {
-        "dataType": "WeakSetConstructor",
-        "accessModifier": null,
-        "isOptional": false,
-        "readonly": false,
-        "function": null,
-        "returnType": null,
-        "assignValue": null,
-        "isCollection": false,
-        "descr": ""
-      }
-    },
+    "properties": {},
     "functions": {},
     "methods": {},
     "types": {},
-    "variables": {},
+    "variables": {
+      "Map": {
+        "dataType": "MapConstructor",
+        "descr": ""
+      },
+      "Set": {
+        "dataType": "SetConstructor",
+        "descr": ""
+      },
+      "WeakMap": {
+        "dataType": "WeakMapConstructor",
+        "descr": ""
+      },
+      "WeakSet": {
+        "dataType": "WeakSetConstructor",
+        "descr": ""
+      }
+    },
     "modules": {},
     "objects": {}
   }
