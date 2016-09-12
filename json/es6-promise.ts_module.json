@@ -1,5 +1,5 @@
 {
-  "es6-collections": {
+  "'es6-promise'": {
     "implementsExtendsName": "",
     "genericType": null,
     "descr": "",
@@ -8,20 +8,8 @@
     "methods": {},
     "types": {},
     "variables": {
-      "Map": {
-        "dataType": "MapConstructor",
-        "descr": ""
-      },
-      "Set": {
-        "dataType": "SetConstructor",
-        "descr": ""
-      },
-      "WeakMap": {
-        "dataType": "WeakMapConstructor",
-        "descr": ""
-      },
-      "WeakSet": {
-        "dataType": "WeakSetConstructor",
+      "foo": {
+        "dataType": "Promise",
         "descr": ""
       }
     },

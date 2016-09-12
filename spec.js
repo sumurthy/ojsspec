@@ -57,12 +57,12 @@ let allVarsTypes = {}
 let enumObj = {}
 let enumKey = ''
 let classObj = {}
-let moduleObject = {}
 let iObj = {}
 let interfaceName = ''
 let className = ''
 let moduleName = ''
 let functionObj = {}
+let moduleObj = {}
 let methodObj = {}
 let propObj = {}
 let typeObj = {}
@@ -77,12 +77,15 @@ function file_reset() {
     nFunction = 0
     nEnum = 0
     nInterface = 0
+    ignore_upto = 0
+    nModule = 0
     nVariable = 0
     nType = 0
     mode = ''
     enumObj = {}
     enumKey = ''
     classObj = {}
+    moduleObj = {}
     functionObj = {}
     iObj = {}
     propObj = {}
@@ -319,7 +322,7 @@ function processObject(objectName = '', index = 0, lines = [], isClass) {
                 var linkvalue = (objectName + '.md#' + name.split('~')[0]).toLowerCase()
                 var linkkey = (objectName + '.' + name.split('~')[0]).toLowerCase()
                 allVarsTypes[linkkey] = linkvalue
-                contiue
+                continue
             } else if (memberType === 'VARIABLE') {
                 nVariable++
                 if (firstWord === 'declare') {
@@ -330,7 +333,7 @@ function processObject(objectName = '', index = 0, lines = [], isClass) {
                 allVarsTypes[name] = saveFileName.toLowerCase() + '-module.md#variables'
                 var v = {}
                 v['dataType'] = line.split(':')[1].trim()
-                v['dataType'] = variableObj[name]['dataType'].replace('typeof ', '')
+                v['dataType'] = v['dataType'].replace('typeof ', '')
                 v['descr'] = generalDesc
                 o['variables'][name] = v
                 comment_reset()
@@ -381,7 +384,7 @@ function processLines(element = '', index = 0, lines = []) {
         mode = 'MODULE'
         moduleName = line.split(' ')[2].replace(/"/g,'')
         moduleName = Utils.trimGenerics(moduleName)
-        moduleObject[moduleName] = processObject('',index, lines, false)
+        moduleObj[moduleName] = processObject('',index, lines, false)
         comment_reset()
         return
     } else if (line.includes(INTERFACEDEF)) {
@@ -475,7 +478,7 @@ function processFile(fileName) {
     let lines = FileOps.loadFile(`./input-scrubbed/${fileName}`)
     lines.forEach(processLines);
     FileOps.writeObject(enumObj, `./json/${fileName}_enum.json`)
-    FileOps.writeObject(moduleObject, `./json/${fileName}_module.json`)
+    FileOps.writeObject(moduleObj, `./json/${fileName}_module.json`)
     FileOps.writeObject(functionObj, `./json/${fileName}_function.json`)
     FileOps.writeObject(iObj, `./json/${fileName}_interface.json`)
     FileOps.writeObject(classObj, `./json/${fileName}_class.json`)

@@ -18,7 +18,7 @@ https://msdn.microsoft.com/en-us/library/office/jj860569.aspx
 |:-------------|:-------|:-----------|
 |`BaseTemplate`      | `number` | https:  Represents an OData SP |
 |`Created`      | `string` | Example: "/Date(1453294804000)/"  Example: "/Date(1453294804000)/" |
-|`CurrentChangeToken`      | `IODataChangeToken` | Example: "/Date(1453294804000)/"  Example: "/Date(1453294804000)/" |
+|`CurrentChangeToken`      | [`IODataChangeToken`](iodatachangetoken.md) | Example: "/Date(1453294804000)/"  Example: "/Date(1453294804000)/" |
 |`Description`      | `string` | Example: "/Date(1453294804000)/"  Example: "/Date(1453294804000)/" |
 |`EntityTypeName`      | `string` | Example: "MyListTitleList"  Example: "MyListTitleList" |
 |`Hidden`      | `boolean` | Example: "MyListTitleList"  Example: "MyListTitleList" |

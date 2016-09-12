@@ -299,11 +299,11 @@ var dFunction = {
 
     classGenIndividual: function(e = '') {
         objectName = e
-        genClassInterfaceView(true, e)
+        genClassInterfaceView(true, e, false)
     },
     interfaceGenIndividual: function(e = '') {
         objectName = e
-        genClassInterfaceView(false, e)
+        genClassInterfaceView(false, e, false)
     },
     moduleGenIndividual: function(e = '') {
         objectName = e

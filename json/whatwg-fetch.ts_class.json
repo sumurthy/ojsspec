@@ -1,1 +1,520 @@
-{}
+{
+  "Request": {
+    "implementsExtendsName": "Body",
+    "genericType": null,
+    "descr": "",
+    "properties": {
+      "method": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "url": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "headers": {
+        "dataType": "Headers",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "context": {
+        "dataType": "string|RequestContext",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "referrer": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "mode": {
+        "dataType": "string|RequestMode",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "credentials": {
+        "dataType": "string|RequestCredentials",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "cache": {
+        "dataType": "string|RequestCache",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      }
+    },
+    "functions": {},
+    "methods": {
+      "constructor~3EGg9": {
+        "accessModifier": "public",
+        "signature": "constructor(input: string|Request,init?:RequestInit)",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "RequestInit",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "input",
+            "dataType": "string|Request",
+            "isOptional": false,
+            "descr": ""
+          },
+          {
+            "name": "init",
+            "dataType": "RequestInit",
+            "isOptional": true,
+            "descr": ""
+          }
+        ]
+      }
+    },
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "Headers": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "",
+    "properties": {},
+    "functions": {},
+    "methods": {
+      "append~O9Sk9": {
+        "accessModifier": "public",
+        "signature": "append(name: string,value: string): void",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "name",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": ""
+          },
+          {
+            "name": "value",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": ""
+          }
+        ]
+      },
+      "delete~hWgQ9": {
+        "accessModifier": "public",
+        "signature": "delete(name: string):void",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "name",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": ""
+          }
+        ]
+      },
+      "get~XkVg9": {
+        "accessModifier": "public",
+        "signature": "get(name: string): string",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "string",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "name",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": ""
+          }
+        ]
+      },
+      "getAll~cWR89": {
+        "accessModifier": "public",
+        "signature": "getAll(name: string): Array<string>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "Array<string>",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "name",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": ""
+          }
+        ]
+      },
+      "has~mnOc9": {
+        "accessModifier": "public",
+        "signature": "has(name: string): boolean",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "boolean",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "name",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": ""
+          }
+        ]
+      },
+      "set~9ZyM9": {
+        "accessModifier": "public",
+        "signature": "set(name: string,value: string): void",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "name",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": ""
+          },
+          {
+            "name": "value",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": ""
+          }
+        ]
+      },
+      "forEach~JQFQ9": {
+        "accessModifier": "public",
+        "signature": "forEach(callback: (value: string,name: string) => void): void",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "callback",
+            "dataType": "(value: string,name: string) => void",
+            "isOptional": false,
+            "descr": ""
+          }
+        ]
+      }
+    },
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "Body": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "",
+    "properties": {
+      "bodyUsed": {
+        "dataType": "boolean",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      }
+    },
+    "functions": {},
+    "methods": {
+      "arrayBuffer~3XbQ9": {
+        "accessModifier": "public",
+        "signature": "arrayBuffer(): Promise<ArrayBuffer>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "Promise<ArrayBuffer>",
+        "returnDescr": "",
+        "params": []
+      },
+      "blob~GuLg9": {
+        "accessModifier": "public",
+        "signature": "blob(): Promise<Blob>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "Promise<Blob>",
+        "returnDescr": "",
+        "params": []
+      },
+      "formData~ZXNA9": {
+        "accessModifier": "public",
+        "signature": "formData(): Promise<FormData>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "Promise<FormData>",
+        "returnDescr": "",
+        "params": []
+      },
+      "json~KJno9": {
+        "accessModifier": "public",
+        "signature": "json(): Promise<any>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "Promise<any>",
+        "returnDescr": "",
+        "params": []
+      },
+      "json<T>~qXBg9": {
+        "accessModifier": "public",
+        "signature": "json<T>(): Promise<T>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": "T",
+        "returnType": "Promise<T>",
+        "returnDescr": "",
+        "params": []
+      },
+      "text~yydE9": {
+        "accessModifier": "public",
+        "signature": "text(): Promise<string>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "Promise<string>",
+        "returnDescr": "",
+        "params": []
+      }
+    },
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "Response": {
+    "implementsExtendsName": "Body",
+    "genericType": null,
+    "descr": "",
+    "properties": {
+      "type": {
+        "dataType": "string|ResponseType",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "url": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "status": {
+        "dataType": "number",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "ok": {
+        "dataType": "boolean",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "statusText": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "headers": {
+        "dataType": "Headers",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      }
+    },
+    "functions": {},
+    "methods": {
+      "constructor~3EGg9": {
+        "accessModifier": "public",
+        "signature": "constructor(body?: BodyInit,init?: ResponseInit)",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "ResponseInit",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "body",
+            "dataType": "BodyInit",
+            "isOptional": true,
+            "descr": ""
+          },
+          {
+            "name": "init",
+            "dataType": "ResponseInit",
+            "isOptional": true,
+            "descr": ""
+          }
+        ]
+      },
+      "error~o8Xg9": {
+        "accessModifier": "public",
+        "signature": "error(): Response",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "Response",
+        "returnDescr": "",
+        "params": []
+      },
+      "redirect~iKT49": {
+        "accessModifier": "public",
+        "signature": "redirect(url: string,status: number): Response",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "Response",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "url",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": ""
+          },
+          {
+            "name": "status",
+            "dataType": "number",
+            "isOptional": false,
+            "descr": ""
+          }
+        ]
+      },
+      "clone~mtKw9": {
+        "accessModifier": "public",
+        "signature": "clone(): Response",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "Response",
+        "returnDescr": "",
+        "params": []
+      }
+    },
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  }
+}

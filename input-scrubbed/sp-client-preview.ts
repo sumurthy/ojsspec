@@ -1228,3 +1228,4 @@ LostFocus = 5,
 // (undocumented)
 OpenComplete = 2
 }
+

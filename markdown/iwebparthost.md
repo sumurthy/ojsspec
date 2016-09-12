@@ -1,6 +1,6 @@
 # IWebPartHost interface
 
-_Extends: `IServiceScopeProvider`_
+_Extends: [`IServiceScopeProvider`](iservicescopeprovider.md)_
 
 
 
@@ -34,7 +34,7 @@ and each host may want to scope its event aggregation service.
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`serviceScope`      | `ServiceScope` | serviceScope: ServiceScope  ServiceScope provides a formalized way for components to register and consume dependencies  ("services"), and to enable different implementations to be registered in different scopes |
+|`serviceScope`      | [`ServiceScope`](servicescope.md) | serviceScope: ServiceScope  ServiceScope provides a formalized way for components to register and consume dependencies  ("services"), and to enable different implementations to be registered in different scopes |
 |`setDirty`      | `function` | serviceScope: ServiceScope  ServiceScope provides a formalized way for components to register and consume dependencies  ("services"), and to enable different implementations to be registered in different scopes |
 |`webPartConfigurationEventCallback`      | [`IWebPartConfigurationEventCallback`](iwebpartconfigurationeventcallback.md) | Web part configuration event callback |
 

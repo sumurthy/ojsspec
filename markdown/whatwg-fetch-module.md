@@ -1,16 +1,50 @@
-# whatwg-fetch external module
 
 
-## Modules
 
-| Module	   |  Description |
+## Classes
+
+| Class	   |  Description |
 |:-------------|:---------------|
-| [es6-collections](es6-collections.md)     |  |
+| [Request](request.md)     |  |
+| [Headers](headers.md)     |  |
+| [Body](body.md)     |  |
+| [Response](response.md)     |  |
 
 
 
+## Interfaces
+
+| Interface	   |  Description |
+|:-------------|:---------------|
+| [RequestInit](requestinit.md)   |   |
+| [ResponseInit](responseinit.md)   |   |
+| [Window](window.md)   |   |
 
 
 
+### Enumerations
 
+| Enumeration	   | Description|
+|:-----------|:------------|
+|[RequestMode](requestmode.md)    |  |
+|[RequestCredentials](requestcredentials.md)    |  |
+|[RequestCache](requestcache.md)    |  |
+|[ResponseType](responsetype.md)    |  |
+
+
+### Types
+
+| Name	   |  Type |
+|:-----------|:------------|
+|HeaderInit   |  |
+|BodyInit   |  |
+|RequestInfo   |  |
+
+
+
+### Variables
+
+| Variable	   | Type|
+|:-----------|:------------|
+|fetch   | [`window.fetch`](window.md#fetch) |
 
