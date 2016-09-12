@@ -1,0 +1,26 @@
+{
+  "MockWebPartContext": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "",
+    "properties": {
+      "public": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": "'WebPart.daf0b71c-6de8-4ef7-b511-faae7c388708.0ae4973a-70e3-451e-9f1f-3f25e5455a60'",
+        "isCollection": false,
+        "descr": ""
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  }
+}

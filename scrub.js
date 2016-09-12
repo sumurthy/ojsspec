@@ -36,7 +36,7 @@ function processLines(element = '', index = 0, lines = []) {
     let firstWord = line.trim().split(' ', 1)[0]
     var outLine = ''
 
-    outLine = line
+    outLine = line.trim()
 
     //Don't scrub ENUMS
     if (line.includes(ENUM)) {

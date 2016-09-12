@@ -172,6 +172,8 @@ function processComment(index = 0, lines = []) {
     for (var i = index; i < lines.length; i++) {
         ignore_upto = i
         let line = prepareLine(lines[i])
+        console.log('Comment processing: ' + i + ' ' + line);
+
         line = line.replace(/\s+/g, ' ').trim()
         var o = Utils.splitToWords(line)
         firstWord = o['f']
@@ -227,6 +229,7 @@ function processComment(index = 0, lines = []) {
           break
         }
     }
+    console.log("returning " + ignore_upto);
     return
 }
 
@@ -270,7 +273,9 @@ function processObject(objectName = '', index = 0, lines = [], isClass) {
         ignore_upto = i
 
         let line = prepareLine(lines[i])
-        console.log('Lines: ' + lines[i] + ' ' + firstWord);
+        console.log('Lines::::> ' + lines[i] + ' ' + firstWord);
+
+        if (SKIP.includes(firstWord)) return
 
         if (firstWord === BLOCK_END) {
             console.log('1: Returning block end: ' + objectName);
@@ -278,9 +283,10 @@ function processObject(objectName = '', index = 0, lines = [], isClass) {
             return o
         } else if (firstWord === C_START) {
             console.log('2: comment start');
-            processComment(index, lines)
+            processComment(i, lines)
             continue
         } else {
+            console.log('>> ' + line);
             var memberType = Utils.getMemberType(line, isClass)
             console.log('3: memberType ' + memberType);
             if (memberType === 'SKIPBLOCK') {

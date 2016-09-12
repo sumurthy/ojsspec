@@ -306,7 +306,7 @@ var dFunction = {
     },
     moduleGenIndividual: function(e = '') {
         objectName = e
-        genClassInterfaceView(false, e)
+        //genClassInterfaceView(false, e)
 
     },
     functionsGenIndividual: function(e = '') {
@@ -695,7 +695,7 @@ function loadModule(files = []) {
             console.log(`*** Read Typedef JSON file, ${Object.keys(typeObj)}`)
         }
         else {
-            throw "Unrecognized file in inut JSON folder. Should be *_{class|enum|function|interface).json"
+            throw "Unrecognized file in inut JSON folder. Should be *_{module|class|enum|type|variable|function|interface).json"
         }
 
         })
