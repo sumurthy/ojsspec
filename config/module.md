@@ -8,7 +8,7 @@
 
 | Module	   |  Description |
 |:-------------|:---------------|
->| [%name%](%link%.md)     | %description% |
+>| [%name%](%link%-imodule.md)     | %description% |
 
 </module>
 

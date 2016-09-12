@@ -175,8 +175,6 @@ function processComment(index = 0, lines = []) {
     for (var i = index; i < lines.length; i++) {
         ignore_upto = i
         let line = prepareLine(lines[i])
-        console.log('Comment processing: ' + i + ' ' + line);
-
         line = line.replace(/\s+/g, ' ').trim()
         var o = Utils.splitToWords(line)
         firstWord = o['f']
@@ -232,7 +230,6 @@ function processComment(index = 0, lines = []) {
           break
         }
     }
-    console.log("returning " + ignore_upto);
     return
 }
 
@@ -268,34 +265,25 @@ function processEnum(index = 0, lines = []) {
 }
 
 function processObject(objectName = '', index = 0, lines = [], isClass) {
-    console.log('In Process object: ' + objectName);
     let o = Utils.createClassInterfaceObject(lines[index], generalDesc)
     for (var i = (index + 1); i < lines.length; i++) {
-        console.log('next line: ' + ignore_upto + ' == ' + i);
         if (ignore_upto >= i) continue
         ignore_upto = i
 
         let line = prepareLine(lines[i])
-        console.log('Lines::::> ' + lines[i] + ' ' + firstWord);
 
         if (SKIP.includes(firstWord)) continue
 
         if (firstWord === BLOCK_END) {
-            console.log('1: Returning block end: ' + objectName);
             block_end_reset()
             return o
         } else if (firstWord === C_START) {
-            console.log('2: comment start');
             processComment(i, lines)
-            console.log('Comment over');
             continue
         } else {
-            console.log('>> ' + line);
             var memberType = Utils.getMemberType(line, isClass)
-            console.log('3: memberType ' + memberType);
             if (memberType === 'SKIPBLOCK') {
                 // Handle object
-                console.log('Skip Block encountered..');
                 var oa = Utils.readObjectAhead(lines, index)
                 ignore_upto = oa['skip'].pop()
                 continue
@@ -309,16 +297,15 @@ function processObject(objectName = '', index = 0, lines = [], isClass) {
                 continue
             } else if (memberType === 'METHOD') {   //METHOD
                 var name = Utils.getMethodName(line) || "ErrorErrorError~99999"
-                var m = Utils.processMethod(line, generalDesc, commentObject, interfaceName, name, isStatic)
+                var m = Utils.processMethod(line, generalDesc, commentObject, objectName, name, isStatic)
                 o['methods'][name] = m
                 var linkvalue = (objectName + '.md#' + name.split('~')[0]).toLowerCase()
                 var linkkey = (objectName + '.' + name.split('~')[0]).toLowerCase()
                 allVarsTypes[linkkey] = linkvalue
-                console.log('Done with processing method');
                 continue
             } else if (memberType === 'FUNCTION') {   //METHOD
                 var name = Utils.getMethodName(line) || "ErrorErrorError~99999"
-                var m = Utils.processMethod(line, generalDesc, commentObject, interfaceName, name, isStatic)
+                var m = Utils.processMethod(line, generalDesc, commentObject, objectName, name, isStatic)
                 o['methods'][name] = m
                 var linkvalue = (objectName + '.md#' + name.split('~')[0]).toLowerCase()
                 var linkkey = (objectName + '.' + name.split('~')[0]).toLowerCase()
@@ -373,7 +360,6 @@ function processLines(element = '', index = 0, lines = []) {
     if (SKIP.includes(firstWord)) return
 
     if (firstWord === C_START) {
-        console.log('process comment 0');
         processComment(index, lines)
         return
     } else if (firstWord === BLOCK_END) {
@@ -381,7 +367,6 @@ function processLines(element = '', index = 0, lines = []) {
         block_end_reset()
         return
     } else if (line.includes(MODULEDEF)) {
-        console.log('Module Found!!!');
         nModule++
         mode = 'MODULE'
         moduleName = line.split(' ')[2].replace(/"/g,'')

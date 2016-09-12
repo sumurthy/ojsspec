@@ -23,7 +23,24 @@
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
 |[`constructor<T>`](#constructor<t>)      | [`Set<T>`](set.md) |  |
+|[`constructor<T>`](#constructor<t>)      | [`Set<T>`](set.md) |  |
 
+
+
+
+### constructor<T>
+
+
+
+#### Signature
+`new<T>(): Set<T>`
+
+#### Returns
+[`Set<T>`](set.md)
+
+
+#### Parameters
+None
 
 
 ### constructor<T>

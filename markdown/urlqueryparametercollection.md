@@ -24,9 +24,10 @@ Query param with only equals (www.example.com/?=&debug=on stores empty string ke
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`constructor`](#constructor)     | `public` | `string` | Query param with only equals (www |
+|[`constructor`](#constructor)     | `public` | [`UrlQueryParameterCollection`](urlqueryparametercollection.md) | Query param with only equals (www |
 |[`getValue`](#getvalue)     | `public` | `string` | getValue('lost') ---> undefined  Returns the value of the first matching query parameter or undefined if the key doesn't exist |
 |[`getValues`](#getvalues)     | `public` | `string[]` | getValues('lost') ---> undefined  Returns the values of all of the matching query parameters or undefined if the key doesn't exist |
+
 
 
 
@@ -48,7 +49,7 @@ Query param with only equals (www.example.com/?=&debug=on stores empty string ke
 `constructor(url: string)`
 
 #### Returns
-`string`
+[`UrlQueryParameterCollection`](urlqueryparametercollection.md)
 
 
 #### Parameters

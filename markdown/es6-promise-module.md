@@ -5,8 +5,8 @@
 
 | Module	   |  Description |
 |:-------------|:---------------|
-| [Promise](promise.md)     |  |
-| ['es6-promise']('es6-promise'.md)     |  |
+| [Promise](promise-imodule.md)     |  |
+| ['es6-promise']('es6-promise'-imodule.md)     |  |
 
 
 

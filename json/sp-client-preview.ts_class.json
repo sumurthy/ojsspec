@@ -18,14 +18,14 @@
     },
     "functions": {},
     "methods": {
-      "constructor~3EGg9": {
+      "constructor~whnw9": {
         "accessModifier": "public",
         "signature": "constructor(ctx: IWebPartContext)",
         "isStatic": false,
         "isOptional": false,
         "descr": " \nConstructor for the BaseClientSideWebPart class. \nIf a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor. \n",
         "genericType": null,
-        "returnType": "IWebPartContext",
+        "returnType": "BaseClientSideWebPart",
         "returnDescr": "",
         "params": [
           {
@@ -36,7 +36,7 @@
           }
         ]
       },
-      "clearError~XLFc9": {
+      "clearError~kzpk9": {
         "accessModifier": "protected",
         "signature": "clearError(): void",
         "isStatic": false,
@@ -47,7 +47,7 @@
         "returnDescr": "",
         "params": []
       },
-      "configureStart~3kKs9": {
+      "configureStart~MnWI9": {
         "accessModifier": "protected",
         "signature": "configureStart(refreshOnly?: boolean): void",
         "isStatic": false,
@@ -65,7 +65,7 @@
           }
         ]
       },
-      "deserialize~n2e89": {
+      "deserialize~bHrU9": {
         "accessModifier": "protected",
         "signature": "deserialize(data: IWebPartData): TProperties",
         "isStatic": false,
@@ -83,7 +83,7 @@
           }
         ]
       },
-      "dispose~Xs8Y9": {
+      "dispose~ye9M9": {
         "accessModifier": "protected",
         "signature": "dispose(): void",
         "isStatic": false,
@@ -94,7 +94,7 @@
         "returnDescr": "",
         "params": []
       },
-      "onBeforeSerialize~jLOk9": {
+      "onBeforeSerialize~I7HE9": {
         "accessModifier": "protected",
         "signature": "onBeforeSerialize(): IHtmlProperties",
         "isStatic": false,
@@ -105,7 +105,7 @@
         "returnDescr": "- reference to searchable properties and properties that need link fixup. Please read \nThis API is called before a web part is serialized. The default implementation is a no-op. A web part developer \nis expected to override this API when the web part's state is not fully reflected in the property bag i.e. \nthis.properties. In the overridden method, the web part developer is expected to update the state of the web \npart property bag. This way the web part serialization process will use the upto date state of the web part. \n",
         "params": []
       },
-      "onDisplayModeChanged~l3vU9": {
+      "onDisplayModeChanged~G9TY9": {
         "accessModifier": "protected",
         "signature": "onDisplayModeChanged(oldDisplayMode: DisplayMode): void",
         "isStatic": false,
@@ -123,7 +123,7 @@
           }
         ]
       },
-      "onInit<T>~mxes9": {
+      "onInit<T>~Br489": {
         "accessModifier": "protected",
         "signature": "onInit<T>(): Promise<T>",
         "isStatic": false,
@@ -134,7 +134,7 @@
         "returnDescr": "",
         "params": []
       },
-      "onPropertyChange~Xdzg9": {
+      "onPropertyChange~OyJc9": {
         "accessModifier": "protected",
         "signature": "onPropertyChange(propertyPath: string,newValue: any): void",
         "isStatic": false,
@@ -158,7 +158,7 @@
           }
         ]
       },
-      "onPropertyConfigurationComplete~64o89": {
+      "onPropertyConfigurationComplete~7EQI9": {
         "accessModifier": "protected",
         "signature": "onPropertyConfigurationComplete(): void",
         "isStatic": false,
@@ -169,7 +169,7 @@
         "returnDescr": "",
         "params": []
       },
-      "onPropertyPaneRendered~9zCU9": {
+      "onPropertyPaneRendered~Mmik9": {
         "accessModifier": "protected",
         "signature": "onPropertyPaneRendered(): void",
         "isStatic": false,
@@ -180,7 +180,7 @@
         "returnDescr": "",
         "params": []
       },
-      "onPropertyPaneSave~Qdfc9": {
+      "onPropertyPaneSave~ZYuc9": {
         "accessModifier": "protected",
         "signature": "onPropertyPaneSave(): void",
         "isStatic": false,
@@ -191,7 +191,7 @@
         "returnDescr": "",
         "params": []
       },
-      "render~u4mg9": {
+      "render~tsG49": {
         "accessModifier": "public",
         "signature": "render(): void",
         "isStatic": false,
@@ -202,7 +202,7 @@
         "returnDescr": "",
         "params": []
       },
-      "renderError~VXc09": {
+      "renderError~tgrU9": {
         "accessModifier": "protected",
         "signature": "renderError(error: Error): void",
         "isStatic": false,

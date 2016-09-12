@@ -107,6 +107,7 @@ function set_region_member(tline = '', member = {}, isClass = true) {
                 }
                 break;
             case 'imethod':
+            case 'variable':
             case 'ifunction':
             case 'function':
                 if (isClass) {
@@ -199,6 +200,11 @@ function set_region(tline = '', obj = {}, localName = '', isClass = true) {
                     skipFlag = true
                 }
                 break;
+            case 'variables':
+                if (Object.keys(obj[localName]['variables']).length === 0) {
+                    skipFlag = true
+                }
+                break;
             case 'enumeration':
                 if (Object.keys(enumObj).length === 0) {
                     skipFlag = true
@@ -226,7 +232,7 @@ function doSub(tline = '') {
 }
 
 
-function doSubClassInterface(tline = '', localO = {}, localName = '', isClass = true) {
+function doSubClassInterface(tline = '', localO = {}, localName = '', isClass = true, isModule = false) {
 
     if (tline.includes('%resourcedescription%')) tline = tline.replace('%resourcedescription%', localO[localName]['descr'])
     if (tline.includes('%resourcename%')) tline = tline.replace('%resourcename%', localName)
@@ -234,10 +240,14 @@ function doSubClassInterface(tline = '', localO = {}, localName = '', isClass = 
         if (isClass) {
             tline = tline.replace('%resourcetype%', ' class')
         } else {
-            tline = tline.replace('%resourcetype%', ' interface')
+            if (isModule) {
+                    tline = tline.replace('%resourcetype%', ' module')
+            } else {
+                tline = tline.replace('%resourcetype%', ' interface')
+            }
         }
+
     }
-    console.log(localO);
     if (tline.includes('%generictype%')) {
         if (localO[localName]['genericType']) {
             tline = tline.replace('%generictype%', ` \`<${localO[localName]['genericType']}>\``)
@@ -299,15 +309,15 @@ var dFunction = {
 
     classGenIndividual: function(e = '') {
         objectName = e
-        genClassInterfaceView(true, e, false)
+        genClassInterfaceModuleView(true, e, false)
     },
     interfaceGenIndividual: function(e = '') {
         objectName = e
-        genClassInterfaceView(false, e, false)
+        genClassInterfaceModuleView(false, e, false)
     },
     moduleGenIndividual: function(e = '') {
         objectName = e
-        genClassInterfaceView(false, e, true)
+        genClassInterfaceModuleView(false, e, true)
 
     },
     functionsGenIndividual: function(e = '') {
@@ -391,9 +401,11 @@ function addMembers(tline = '', type = '', name = '', localO = {}) {
         case 'ifunction':
             o = localO[name]['functions']
             break;
+        case 'variables':
+            o = localO[name]['variables']
+            break;
         default:
     }
-
     Object.keys(o).forEach((e) => {
 
         var mline = dclone(tline).substr(1)
@@ -443,7 +455,6 @@ function addParams(tline = '', member = {}, targetArray = []) {
         //Get first sentence
         var descr = e['descr']
         if (descr) {
-            console.log(e + ' --> ' + descr);
             descr = descr.split('.')[0].replace(/\n/g, ' ')
 
         }
@@ -460,7 +471,7 @@ function addParams(tline = '', member = {}, targetArray = []) {
 }
 
 
-function genClassInterfaceView(isClass = true, localName = '', isModule = false) {
+function genClassInterfaceModuleView(isClass = true, localName = '', isModule = false) {
     var localO = isClass ? classObj : iObj
     if (isModule) {
         localO = moduleObj
@@ -486,7 +497,7 @@ function genClassInterfaceView(isClass = true, localName = '', isModule = false)
         var hasVar = tline.includes('%') ? true : false
 
         if (WRITE_BACK.includes(key)) {
-            if (hasVar) tline = doSubClassInterface(tline, localO, localName, isClass)
+            if (hasVar) tline = doSubClassInterface(tline, localO, localName, isClass, isModule)
             mem_mdout.push(tline)
         } else if (TAKE_REPEAT_ACTION.includes(key)) {
             switch (region) {
@@ -494,8 +505,10 @@ function genClassInterfaceView(isClass = true, localName = '', isModule = false)
                 case 'method':
                 case 'function':
                 case 'ifunction':
+                case 'variable':
                 case 'imethod':
                 case 'iproperty':
+                case 'variables':
                     addMembers(tline, region, localName, localO)
                     break;
                 default:
@@ -515,8 +528,14 @@ function genClassInterfaceView(isClass = true, localName = '', isModule = false)
         })
     }
 
-    console.log(`*** Writing Class/Interface file for ${localName}`)
-    FileOps.writeFile(mem_mdout, `./markdown/${Utils.trimGenerics(localName)}.md`)
+    console.log(`*** Writing Class/Interface/Module file for ${localName}`)
+    if (!isModule) {
+        console.log('A');
+        FileOps.writeFile(mem_mdout, `./markdown/${Utils.trimGenerics(localName)}.md`)
+    } else {
+        console.log('B');
+        FileOps.writeFile(mem_mdout, `./markdown/${Utils.trimGenerics(localName)}-imodule.md`)
+    }
 
 }
 
@@ -547,8 +566,8 @@ function genMemberview(memName = '', member = {}, targetArray = [], isClass = tr
     })
 }
 
-function genModuleView() {
-    console.log(`Processing module file creation for ${moduleName}`);
+function genExtModuleView() {
+    console.log(`Processing ext. module file creation for ${moduleName}`);
 
     moduleT.forEach((tline) => {
         tline = tline.trim()
@@ -585,7 +604,7 @@ function genModuleView() {
             }
         }
     })
-    console.log(`*** Writing Module file for ${moduleName}`)
+    console.log(`*** Writing External Module file for ${moduleName}`)
     FileOps.writeFile(mdout, `./markdown/${moduleName}-module.md`)
     genFunctionView()
     genEnumView()
@@ -665,7 +684,7 @@ inputFiles.forEach((e) => {
     loadModule(files)
 
     moduleName = e.split('.')[0]
-    genModuleView()
+    genExtModuleView()
 
     file_reset()
 

@@ -194,7 +194,10 @@ var self = module.exports = {
         }
         //name = name + '~' + (Math.floor(Math.random() * 90000) + 10000)
         if (!withOptional) {
-            return name + '~' + self.sha256(name)
+            console.log(name);
+            name = name + '~' + self.sha256(line)
+            //console.log('>> ' + name);
+            return name
         } else {
             return name
         }
@@ -264,11 +267,14 @@ var self = module.exports = {
 
         m['descr'] = descr
         m['genericType'] = self.genericInside(line.split('(')[0])
-        if (name === 'constructor') {
+        if (name.split('~')[0] === 'constructor') {
             m['returnType'] = parentName.replace(')', '').trim()
         } else {
             m['returnType'] = lastWord.replace(')', '').trim()
+            // var lcolon = line.lastIndexOf(':')
+            // m['returnType'] = line.substr(lcolon+1).trim()
         }
+
         m['returnDescr'] = (commentObject['returnDescr'] === undefined) ?
             '' : commentObject['returnDescr']
         m['params'] = self.buildParamList(line, commentObject['param'])

@@ -21,12 +21,13 @@ class instead.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`constructor`](#constructor)     | `public` | [`ServiceScope`](servicescope.md) | class instead |
+|[`constructor`](#constructor)     | `public` | [`HttpClient`](httpclient.md) | class instead |
 |[`beginBatch`](#beginbatch)     | `public` | [`ODataBatch`](odatabatch.md) | a single web request |
 |[`fetch`](#fetch)     | `public` | [`Promise<Response>`](promise.md) |   Generally, the parameters and semantics for HttpClient |
 |[`get`](#get)     | `public` | [`Promise<Response>`](promise.md) | Calls fetch(),but sets the method to 'GET' |
 |[`getWebUrlFromRequestUrl`](#getweburlfromrequesturl)     | `public, _static_` | `string` | "http:  This uses a heuristic to guess the SPWeb URL associated with the provided  REST URL |
 |[`post`](#post)     | `public` | [`Promise<Response>`](promise.md) | Calls fetch(),but sets the method to 'POST' |
+
 
 
 
@@ -45,7 +46,7 @@ class instead.
 `constructor(serviceScope: ServiceScope)`
 
 #### Returns
-[`ServiceScope`](servicescope.md)
+[`HttpClient`](httpclient.md)
 
 
 #### Parameters

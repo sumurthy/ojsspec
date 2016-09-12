@@ -27,9 +27,10 @@ introduced without inadvertently breaking components that are loaded by an older
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`constructor`](#constructor)     | `public` | `ServiceCreator<T>` | PRIVATE - Do not call this from your own code |
+|[`constructor`](#constructor)     | `public` | [`ServiceKey`](servicekey.md) | PRIVATE - Do not call this from your own code |
 |[`create<T>`](#create<t>)     | `public, _static_` | [`ServiceKey<T>;`](servicekey.md) | specify custom constructor parameters,use createCustom() instead |
 |[`createCustom<T>`](#createcustom<t>)     | `public, _static_` | [`ServiceKey<T>`](servicekey.md) | by invoking the specified callback |
+
 
 
 
@@ -43,7 +44,7 @@ PRIVATE - Do not call this from your own code.
 `constructor(id: string,name: string,defaultCreator: ServiceCreator<T>)`
 
 #### Returns
-`ServiceCreator<T>`
+[`ServiceKey`](servicekey.md)
 
 
 #### Parameters

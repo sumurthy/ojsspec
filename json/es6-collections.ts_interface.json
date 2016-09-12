@@ -41,7 +41,7 @@
     "properties": {},
     "functions": {},
     "methods": {
-      "next~lCLM9": {
+      "next~lO9M9": {
         "accessModifier": "public",
         "signature": "next(value?: any): IteratorResult<T>",
         "isStatic": false,
@@ -59,7 +59,7 @@
           }
         ]
       },
-      "return~77oo9": {
+      "return~2d9Q9": {
         "accessModifier": "public",
         "signature": "return?(value?: any): IteratorResult<T>",
         "isStatic": false,
@@ -77,7 +77,7 @@
           }
         ]
       },
-      "throw~TY949": {
+      "throw~sdJc9": {
         "accessModifier": "public",
         "signature": "throw?(e?: any): IteratorResult<T>",
         "isStatic": false,
@@ -108,7 +108,7 @@
     "properties": {},
     "functions": {},
     "methods": {
-      "forEach~JQFQ9": {
+      "forEach~I8xI9": {
         "accessModifier": "public",
         "signature": "forEach(callbackfn: (value: T) => void): void",
         "isStatic": false,
@@ -151,7 +151,7 @@
     },
     "functions": {},
     "methods": {
-      "clear~n1PQ9": {
+      "clear~xLXs9": {
         "accessModifier": "public",
         "signature": "clear(): void",
         "isStatic": false,
@@ -162,7 +162,7 @@
         "returnDescr": "",
         "params": []
       },
-      "delete~hWgQ9": {
+      "delete~rupo9": {
         "accessModifier": "public",
         "signature": "delete(key: K): boolean",
         "isStatic": false,
@@ -180,7 +180,7 @@
           }
         ]
       },
-      "forEach~JQFQ9": {
+      "forEach~9PMQ9": {
         "accessModifier": "public",
         "signature": "forEach(callbackfn: (value: V,index: K,map: Map<K,V>) => void,thisArg?: any): void",
         "isStatic": false,
@@ -204,7 +204,7 @@
           }
         ]
       },
-      "get~XkVg9": {
+      "get~anSk9": {
         "accessModifier": "public",
         "signature": "get(key: K): V",
         "isStatic": false,
@@ -222,7 +222,7 @@
           }
         ]
       },
-      "has~mnOc9": {
+      "has~8wy89": {
         "accessModifier": "public",
         "signature": "has(key: K): boolean",
         "isStatic": false,
@@ -240,7 +240,7 @@
           }
         ]
       },
-      "set~9ZyM9": {
+      "set~HGwo9": {
         "accessModifier": "public",
         "signature": "set(key: K,value?: V): Map<K,V>",
         "isStatic": false,
@@ -264,7 +264,7 @@
           }
         ]
       },
-      "entries~FmLI9": {
+      "entries~F2iw9": {
         "accessModifier": "public",
         "signature": "entries(): Iterator<[K,V]>",
         "isStatic": false,
@@ -275,7 +275,7 @@
         "returnDescr": "",
         "params": []
       },
-      "keys~5ySM9": {
+      "keys~tXQs9": {
         "accessModifier": "public",
         "signature": "keys(): Iterator<K>",
         "isStatic": false,
@@ -286,7 +286,7 @@
         "returnDescr": "",
         "params": []
       },
-      "values~bdxE9": {
+      "values~v0CQ9": {
         "accessModifier": "public",
         "signature": "values(): Iterator<V>",
         "isStatic": false,
@@ -322,7 +322,18 @@
     },
     "functions": {},
     "methods": {
-      "constructor<K,V>~VNf09": {
+      "constructor<K,V>~QfVI9": {
+        "accessModifier": "public",
+        "signature": "new<K,V>(): Map<K,V>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": "K,V",
+        "returnType": "Map<K,V>",
+        "returnDescr": "",
+        "params": []
+      },
+      "constructor<K,V>~RTrk9": {
         "accessModifier": "public",
         "signature": "new<K,V>(iterable: ForEachable<[K,V]>): Map<K,V>",
         "isStatic": false,
@@ -365,7 +376,7 @@
     },
     "functions": {},
     "methods": {
-      "add~7R2c9": {
+      "add~HBJE9": {
         "accessModifier": "public",
         "signature": "add(value: T): Set<T>",
         "isStatic": false,
@@ -383,7 +394,7 @@
           }
         ]
       },
-      "clear~n1PQ9": {
+      "clear~xLXs9": {
         "accessModifier": "public",
         "signature": "clear(): void",
         "isStatic": false,
@@ -394,7 +405,7 @@
         "returnDescr": "",
         "params": []
       },
-      "delete~hWgQ9": {
+      "delete~OlfE9": {
         "accessModifier": "public",
         "signature": "delete(value: T): boolean",
         "isStatic": false,
@@ -412,7 +423,7 @@
           }
         ]
       },
-      "forEach~JQFQ9": {
+      "forEach~dkLE9": {
         "accessModifier": "public",
         "signature": "forEach(callbackfn: (value: T,index: T,set: Set<T>) => void,thisArg?: any): void",
         "isStatic": false,
@@ -436,7 +447,7 @@
           }
         ]
       },
-      "has~mnOc9": {
+      "has~wh3M9": {
         "accessModifier": "public",
         "signature": "has(value: T): boolean",
         "isStatic": false,
@@ -454,7 +465,7 @@
           }
         ]
       },
-      "entries~FmLI9": {
+      "entries~XGGk9": {
         "accessModifier": "public",
         "signature": "entries(): Iterator<[T,T]>",
         "isStatic": false,
@@ -465,7 +476,7 @@
         "returnDescr": "",
         "params": []
       },
-      "keys~5ySM9": {
+      "keys~OToo9": {
         "accessModifier": "public",
         "signature": "keys(): Iterator<T>",
         "isStatic": false,
@@ -476,7 +487,7 @@
         "returnDescr": "",
         "params": []
       },
-      "values~bdxE9": {
+      "values~XpgE9": {
         "accessModifier": "public",
         "signature": "values(): Iterator<T>",
         "isStatic": false,
@@ -512,7 +523,18 @@
     },
     "functions": {},
     "methods": {
-      "constructor<T>~xWmg9": {
+      "constructor<T>~WZO89": {
+        "accessModifier": "public",
+        "signature": "new<T>(): Set<T>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": "T",
+        "returnType": "Set<T>",
+        "returnDescr": "",
+        "params": []
+      },
+      "constructor<T>~Hf9M9": {
         "accessModifier": "public",
         "signature": "new<T>(iterable: ForEachable<T>): Set<T>",
         "isStatic": false,
@@ -543,7 +565,7 @@
     "properties": {},
     "functions": {},
     "methods": {
-      "delete~hWgQ9": {
+      "delete~rupo9": {
         "accessModifier": "public",
         "signature": "delete(key: K): boolean",
         "isStatic": false,
@@ -561,7 +583,7 @@
           }
         ]
       },
-      "clear~n1PQ9": {
+      "clear~xLXs9": {
         "accessModifier": "public",
         "signature": "clear(): void",
         "isStatic": false,
@@ -572,7 +594,7 @@
         "returnDescr": "",
         "params": []
       },
-      "get~XkVg9": {
+      "get~anSk9": {
         "accessModifier": "public",
         "signature": "get(key: K): V",
         "isStatic": false,
@@ -590,7 +612,7 @@
           }
         ]
       },
-      "has~mnOc9": {
+      "has~8wy89": {
         "accessModifier": "public",
         "signature": "has(key: K): boolean",
         "isStatic": false,
@@ -608,7 +630,7 @@
           }
         ]
       },
-      "set~9ZyM9": {
+      "set~ZxwQ9": {
         "accessModifier": "public",
         "signature": "set(key: K,value?: V): WeakMap<K,V>",
         "isStatic": false,
@@ -657,7 +679,18 @@
     },
     "functions": {},
     "methods": {
-      "constructor<K,V>~VNf09": {
+      "constructor<K,V>~yhDE9": {
+        "accessModifier": "public",
+        "signature": "new<K,V>(): WeakMap<K,V>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": "K,V",
+        "returnType": "WeakMap<K,V>",
+        "returnDescr": "",
+        "params": []
+      },
+      "constructor<K,V>~jbMk9": {
         "accessModifier": "public",
         "signature": "new<K,V>(iterable: ForEachable<[K,V]>): WeakMap<K,V>",
         "isStatic": false,
@@ -688,7 +721,7 @@
     "properties": {},
     "functions": {},
     "methods": {
-      "delete~hWgQ9": {
+      "delete~OlfE9": {
         "accessModifier": "public",
         "signature": "delete(value: T): boolean",
         "isStatic": false,
@@ -706,7 +739,7 @@
           }
         ]
       },
-      "clear~n1PQ9": {
+      "clear~xLXs9": {
         "accessModifier": "public",
         "signature": "clear(): void",
         "isStatic": false,
@@ -717,7 +750,7 @@
         "returnDescr": "",
         "params": []
       },
-      "add~7R2c9": {
+      "add~Et949": {
         "accessModifier": "public",
         "signature": "add(value: T): WeakSet<T>",
         "isStatic": false,
@@ -735,7 +768,7 @@
           }
         ]
       },
-      "has~mnOc9": {
+      "has~wh3M9": {
         "accessModifier": "public",
         "signature": "has(value: T): boolean",
         "isStatic": false,
@@ -778,7 +811,18 @@
     },
     "functions": {},
     "methods": {
-      "constructor<T>~xWmg9": {
+      "constructor<T>~hDok9": {
+        "accessModifier": "public",
+        "signature": "new<T>(): WeakSet<T>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": "T",
+        "returnType": "WeakSet<T>",
+        "returnDescr": "",
+        "params": []
+      },
+      "constructor<T>~uZ049": {
         "accessModifier": "public",
         "signature": "new<T>(iterable: ForEachable<T>): WeakSet<T>",
         "isStatic": false,

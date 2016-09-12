@@ -18,14 +18,14 @@
     },
     "functions": {},
     "methods": {
-      "constructor~3EGg9": {
+      "constructor~8mp89": {
         "accessModifier": "public",
         "signature": "constructor(serviceScope: ServiceScope)",
         "isStatic": false,
         "isOptional": false,
         "descr": "enhancements. \nBasicHttpClient implements a basic set of features for performing REST operations. \nThe subclass HttpClient extends this basic functionality with SharePoint-specific \nenhancements.",
         "genericType": null,
-        "returnType": "ServiceScope",
+        "returnType": "BasicHttpClient",
         "returnDescr": "",
         "params": [
           {
@@ -36,7 +36,7 @@
           }
         ]
       },
-      "fetch~ekuc9": {
+      "fetch~zVBA9": {
         "accessModifier": "public",
         "signature": "fetch(url: string,options: IBasicHttpClientOptions): Promise<Response>",
         "isStatic": false,
@@ -60,7 +60,7 @@
           }
         ]
       },
-      "fetchCore~p9z89": {
+      "fetchCore~kYzk9": {
         "accessModifier": "protected",
         "signature": "fetchCore(request: Request): Promise<Response>",
         "isStatic": false,
@@ -78,7 +78,7 @@
           }
         ]
       },
-      "get~XkVg9": {
+      "get~wQVw9": {
         "accessModifier": "public",
         "signature": "get(url: string,options?: IBasicHttpClientOptions): Promise<Response>",
         "isStatic": false,
@@ -102,7 +102,7 @@
           }
         ]
       },
-      "post~1DUs9": {
+      "post~QZWc9": {
         "accessModifier": "public",
         "signature": "post(url: string,options: IBasicHttpClientOptions): Promise<Response>",
         "isStatic": false,
@@ -139,7 +139,7 @@
     "properties": {},
     "functions": {},
     "methods": {
-      "shallowCompare~bspw9": {
+      "shallowCompare~RhEw9": {
         "accessModifier": "public",
         "signature": "shallowCompare(objA: Object,objB: Object): boolean",
         "isStatic": true,
@@ -224,7 +224,7 @@
     "properties": {},
     "functions": {},
     "methods": {
-      "equals~NHLc9": {
+      "equals~BuYE9": {
         "accessModifier": "public",
         "signature": "equals(guid: Guid): boolean",
         "isStatic": false,
@@ -242,7 +242,7 @@
           }
         ]
       },
-      "isValid~HbTk9": {
+      "isValid~udOU9": {
         "accessModifier": "public",
         "signature": "isValid(guid: string): boolean",
         "isStatic": true,
@@ -260,7 +260,7 @@
           }
         ]
       },
-      "constructorGuid~zWNg9": {
+      "constructorGuid~SYAY9": {
         "accessModifier": "public",
         "signature": "newGuid(randomProvider?: IRandomProvider): Guid",
         "isStatic": true,
@@ -278,7 +278,7 @@
           }
         ]
       },
-      "toString~qLKI9": {
+      "toString~5Z9w9": {
         "accessModifier": "public",
         "signature": "toString(): string",
         "isStatic": false,
@@ -289,7 +289,7 @@
         "returnDescr": "The GUID value in lowercase hexadecimal without braces. \nObject.prototype.toString override \n",
         "params": []
       },
-      "tryParse~Rx2E9": {
+      "tryParse~hyQk9": {
         "accessModifier": "public",
         "signature": "tryParse(guid: string): Guid",
         "isStatic": true,
@@ -320,14 +320,14 @@
     "properties": {},
     "functions": {},
     "methods": {
-      "constructor~3EGg9": {
+      "constructor~8mp89": {
         "accessModifier": "public",
         "signature": "constructor(serviceScope: ServiceScope)",
         "isStatic": false,
         "isOptional": false,
         "descr": "class instead. \nHttpClient is used to perform REST calls against SharePoint. It adds default \nheaders, manages the digest needed for writes, and collects telemetry that \nhelps the service to monitor the performance of an application. \n \nFor communicating with non-SharePoint services, use the BasicHttpClient \nclass instead.",
         "genericType": null,
-        "returnType": "ServiceScope",
+        "returnType": "HttpClient",
         "returnDescr": "",
         "params": [
           {
@@ -338,7 +338,7 @@
           }
         ]
       },
-      "beginBatch~p9yM9": {
+      "beginBatch~Qdz89": {
         "accessModifier": "public",
         "signature": "beginBatch(batchOptions?: IODataBatchOptions): ODataBatch",
         "isStatic": false,
@@ -356,7 +356,7 @@
           }
         ]
       },
-      "fetch~ekuc9": {
+      "fetch~GL3M9": {
         "accessModifier": "public",
         "signature": "fetch(url: string,options: IHttpClientOptions): Promise<Response>",
         "isStatic": false,
@@ -380,7 +380,7 @@
           }
         ]
       },
-      "get~XkVg9": {
+      "get~hBbg9": {
         "accessModifier": "public",
         "signature": "get(url: string,options?: IHttpClientOptions): Promise<Response>",
         "isStatic": false,
@@ -404,7 +404,7 @@
           }
         ]
       },
-      "getWebUrlFromRequestUrl~tJa09": {
+      "getWebUrlFromRequestUrl~j9SA9": {
         "accessModifier": "public",
         "signature": "getWebUrlFromRequestUrl(requestUrl: string): string",
         "isStatic": true,
@@ -422,7 +422,7 @@
           }
         ]
       },
-      "post~1DUs9": {
+      "post~azHU9": {
         "accessModifier": "public",
         "signature": "post(url: string,options: IHttpClientOptions): Promise<Response>",
         "isStatic": false,
@@ -459,7 +459,7 @@
     "properties": {},
     "functions": {},
     "methods": {
-      "error~o8Xg9": {
+      "error~pS309": {
         "accessModifier": "public",
         "signature": "error(source: string,error: Error,scope?: ServiceScope): void",
         "isStatic": true,
@@ -489,7 +489,7 @@
           }
         ]
       },
-      "info~z4eE9": {
+      "info~0jwc9": {
         "accessModifier": "public",
         "signature": "info(source: string,message: string,scope?: ServiceScope): void",
         "isStatic": true,
@@ -519,7 +519,7 @@
           }
         ]
       },
-      "verbose~j0n09": {
+      "verbose~vaBA9": {
         "accessModifier": "public",
         "signature": "verbose(source: string,message: string,scope?: ServiceScope): void",
         "isStatic": true,
@@ -549,7 +549,7 @@
           }
         ]
       },
-      "warn~L5949": {
+      "warn~xzeY9": {
         "accessModifier": "public",
         "signature": "warn(source: string,message: string,scope?: ServiceScope): void",
         "isStatic": true,
@@ -592,14 +592,14 @@
     "properties": {},
     "functions": {},
     "methods": {
-      "constructor~3EGg9": {
+      "constructor~w9vY9": {
         "accessModifier": "public",
         "signature": "constructor(serviceScope: ServiceScope,batchOptions?: IODataBatchOptions)",
         "isStatic": false,
         "isOptional": false,
         "descr": " \nThe ODataBatch class accumulates a number of REST service calls and \ntransmits them as a single ODATA batch. This protocol is documented here: \nhttp://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html \n \nThe usage is to call ODataBatch.fetch() to queue each individual request, \nand then call ODataBatch.execute() to execute the batch operation. \nThe execute() method returns a promise that resolves when the real REST \ncall has completed. Each call to fetch() also returns a promise that will \nresolve with a Response object for that particular request. \n",
         "genericType": null,
-        "returnType": "IODataBatchOptions",
+        "returnType": "ODataBatch",
         "returnDescr": "",
         "params": [
           {
@@ -616,7 +616,7 @@
           }
         ]
       },
-      "execute~6ceI9": {
+      "execute~6jSw9": {
         "accessModifier": "public",
         "signature": "execute(): Promise<ODataBatch>",
         "isStatic": false,
@@ -627,7 +627,7 @@
         "returnDescr": "",
         "params": []
       },
-      "fetch~ekuc9": {
+      "fetch~k9BM9": {
         "accessModifier": "public",
         "signature": "fetch(url: string,options?: IODataBatchRequestOptions): Promise<Response>",
         "isStatic": false,
@@ -651,7 +651,7 @@
           }
         ]
       },
-      "get~XkVg9": {
+      "get~tVJg9": {
         "accessModifier": "public",
         "signature": "get(url: string,options?: IODataBatchRequestOptions): Promise<Response>",
         "isStatic": false,
@@ -675,7 +675,7 @@
           }
         ]
       },
-      "post~1DUs9": {
+      "post~JWiw9": {
         "accessModifier": "public",
         "signature": "post(url: string,options: IODataBatchRequestOptions): Promise<Response>",
         "isStatic": false,
@@ -724,14 +724,14 @@
     },
     "functions": {},
     "methods": {
-      "constructor~3EGg9": {
+      "constructor~8mp89": {
         "accessModifier": "public",
         "signature": "constructor(serviceScope: ServiceScope)",
         "isStatic": false,
         "isOptional": false,
         "descr": "application cache. \nThe page context provides standard definitions for common SharePoint objects \nthat need to be shared between the client-side application, web parts, and other \ncomponents. Typically the data is fetched via REST queries when navigating to a \nnew page, but it can also be preloaded by the web server, or filled from a custom \napplication cache.",
         "genericType": null,
-        "returnType": "ServiceScope",
+        "returnType": "PageContext",
         "returnDescr": "",
         "params": [
           {
@@ -767,14 +767,14 @@
     },
     "functions": {},
     "methods": {
-      "constructor~3EGg9": {
+      "constructor~uorI9": {
         "accessModifier": "public",
         "signature": "constructor(id: string,name: string,defaultCreator: ServiceCreator<T>)",
         "isStatic": false,
         "isOptional": false,
         "descr": "PRIVATE - Do not call this from your own code. \nPRIVATE - Do not call this from your own code.",
         "genericType": null,
-        "returnType": "ServiceCreator<T>",
+        "returnType": "ServiceKey",
         "returnDescr": "",
         "params": [
           {
@@ -797,7 +797,7 @@
           }
         ]
       },
-      "create<T>~5l6A9": {
+      "create<T>~5bhc9": {
         "accessModifier": "public",
         "signature": "create<T>(name: string,serviceClass: { new (serviceScope: ServiceScope) }): ServiceKey<T>;",
         "isStatic": true,
@@ -821,7 +821,7 @@
           }
         ]
       },
-      "createCustom<T>~fPzE9": {
+      "createCustom<T>~F0HQ9": {
         "accessModifier": "public",
         "signature": "createCustom<T>(name: string,defaultCreator: ServiceCreator<T>): ServiceKey<T>",
         "isStatic": true,
@@ -858,7 +858,7 @@
     "properties": {},
     "functions": {},
     "methods": {
-      "constructor~3EGg9": {
+      "constructor~syNo9": {
         "accessModifier": "public",
         "signature": "constructor(parent: ServiceScope)",
         "isStatic": false,
@@ -876,7 +876,7 @@
           }
         ]
       },
-      "consume<T>~wJAw9": {
+      "consume<T>~X1lg9": {
         "accessModifier": "public",
         "signature": "consume<T>(serviceKey: ServiceKey<T>): T",
         "isStatic": false,
@@ -894,7 +894,7 @@
           }
         ]
       },
-      "createAndProvide<T>~Lj5g9": {
+      "createAndProvide<T>~DDq09": {
         "accessModifier": "public",
         "signature": "createAndProvide<T>(serviceKey: ServiceKey<T>,simpleServiceClass: { new (serviceScope: ServiceScope) }): T;",
         "isStatic": false,
@@ -918,7 +918,7 @@
           }
         ]
       },
-      "createDefaultAndProvide<T>~Q7xY9": {
+      "createDefaultAndProvide<T>~bI8M9": {
         "accessModifier": "public",
         "signature": "createDefaultAndProvide<T>(serviceKey: ServiceKey<T>): T",
         "isStatic": false,
@@ -936,7 +936,7 @@
           }
         ]
       },
-      "finish~wwNo9": {
+      "finish~N9F89": {
         "accessModifier": "public",
         "signature": "finish(): void",
         "isStatic": false,
@@ -947,7 +947,7 @@
         "returnDescr": "",
         "params": []
       },
-      "getParent~XEmY9": {
+      "getParent~O7ac9": {
         "accessModifier": "public",
         "signature": "getParent(): ServiceScope",
         "isStatic": false,
@@ -958,7 +958,7 @@
         "returnDescr": "- the parent service scope \nReturns the parent of the current ServiceScope, or undefined if this is a root scope.",
         "params": []
       },
-      "provide<T>~QdN49": {
+      "provide<T>~GSDc9": {
         "accessModifier": "public",
         "signature": "provide<T>(serviceKey: ServiceKey<T>,service: T): T",
         "isStatic": false,
@@ -982,7 +982,7 @@
           }
         ]
       },
-      "startNewChild~YzVU9": {
+      "startNewChild~XAHs9": {
         "accessModifier": "public",
         "signature": "startNewChild(): ServiceScope",
         "isStatic": false,
@@ -993,7 +993,7 @@
         "returnDescr": "- the newly created root ServiceScope \nConstructs a new ServiceScope that is a child of the current scope. For any keys \nthat are not explicitly provided by the child scope, the parent hierarchy will be \nconsulted.",
         "params": []
       },
-      "startNewRoot~TX989": {
+      "startNewRoot~Mqls9": {
         "accessModifier": "public",
         "signature": "startNewRoot(): ServiceScope",
         "isStatic": true,
@@ -1004,7 +1004,7 @@
         "returnDescr": "- the newly created root ServiceScope \nCreate a new root-level ServiceScope. Only root-level scopes have the ability to autocreate \ndefault implementations of ServiceKeys.",
         "params": []
       },
-      "whenFinished~pzLE9": {
+      "whenFinished~L9bA9": {
         "accessModifier": "public",
         "signature": "whenFinished(callback: () => void): void",
         "isStatic": false,
@@ -1047,14 +1047,14 @@
     },
     "functions": {},
     "methods": {
-      "constructor~3EGg9": {
+      "constructor~ORTo9": {
         "accessModifier": "public",
         "signature": "constructor(value: IODataBasePermission)",
         "isStatic": false,
         "isOptional": false,
         "descr": "https: \nThis class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx",
         "genericType": null,
-        "returnType": "IODataBasePermission",
+        "returnType": "SPPermission",
         "returnDescr": "",
         "params": [
           {
@@ -1065,7 +1065,7 @@
           }
         ]
       },
-      "hasAllPermissions~9qQk9": {
+      "hasAllPermissions~e1lY9": {
         "accessModifier": "public",
         "signature": "hasAllPermissions(...requestedPerms: SPPermission[]): boolean",
         "isStatic": false,
@@ -1083,7 +1083,7 @@
           }
         ]
       },
-      "hasAnyPermissions~KL1k9": {
+      "hasAnyPermissions~fXxs9": {
         "accessModifier": "public",
         "signature": "hasAnyPermissions(...requestedPerms: SPPermission[]): boolean",
         "isStatic": false,
@@ -1101,7 +1101,7 @@
           }
         ]
       },
-      "hasPermission~s9lY9": {
+      "hasPermission~sBGA9": {
         "accessModifier": "public",
         "signature": "hasPermission(requestedPerm: SPPermission): boolean",
         "isStatic": false,
@@ -1204,14 +1204,14 @@
     "properties": {},
     "functions": {},
     "methods": {
-      "constructor~3EGg9": {
+      "constructor~mnJI9": {
         "accessModifier": "public",
         "signature": "constructor(url: string)",
         "isStatic": false,
         "isOptional": false,
         "descr": "Query param with only equals (www.example.com/?=&debug=on stores empty string key and value \nClass for storing and retrieving query parameters. \nThe URL can be server-relative and it will parse empty/null strings. \nThe query parameters must start with? to indicate the first query parameter and \nuse & for all subsequent parameters. The class also supports fragments. \nEdge cases behavior: \nEmpty value (www.example.com/?test=) stores key and empty value \nNo equals in queryParam (www.example.com/?test) stores key and undefined value \nEmpty queryParam (www.example.com/?&debug=on) stores undefined key and value \nQuery param with only equals (www.example.com/?=&debug=on stores empty string key and value",
         "genericType": null,
-        "returnType": "string",
+        "returnType": "UrlQueryParameterCollection",
         "returnDescr": "",
         "params": [
           {
@@ -1222,7 +1222,7 @@
           }
         ]
       },
-      "getValue~fqkA9": {
+      "getValue~eNIk9": {
         "accessModifier": "public",
         "signature": "getValue(param: string): string",
         "isStatic": false,
@@ -1240,7 +1240,7 @@
           }
         ]
       },
-      "getValues~8n0Q9": {
+      "getValues~9Dec9": {
         "accessModifier": "public",
         "signature": "getValues(param: string): string[]",
         "isStatic": false,
@@ -1271,7 +1271,7 @@
     "properties": {},
     "functions": {},
     "methods": {
-      "convertToODataStringLiteral~Maqc9": {
+      "convertToODataStringLiteral~neLw9": {
         "accessModifier": "public",
         "signature": "convertToODataStringLiteral(value: string): string",
         "isStatic": true,
@@ -1289,7 +1289,7 @@
           }
         ]
       },
-      "removeEndSlash~kcNo9": {
+      "removeEndSlash~aIsA9": {
         "accessModifier": "public",
         "signature": "removeEndSlash(url: string): string",
         "isStatic": true,
@@ -1320,7 +1320,7 @@
     "properties": {},
     "functions": {},
     "methods": {
-      "isNonemptyString~P7xU9": {
+      "isNonemptyString~tK9c9": {
         "accessModifier": "public",
         "signature": "isNonemptyString(value: string,variableName: string): void",
         "isStatic": true,
@@ -1344,7 +1344,7 @@
           }
         ]
       },
-      "isNotNullOrUndefined~v0mM9": {
+      "isNotNullOrUndefined~KyJc9": {
         "accessModifier": "public",
         "signature": "isNotNullOrUndefined(value: any,variableName: string): void",
         "isStatic": true,
@@ -1368,7 +1368,7 @@
           }
         ]
       },
-      "isTrue~1EA89": {
+      "isTrue~RW4Y9": {
         "accessModifier": "public",
         "signature": "isTrue(value: boolean,variableName: string): void",
         "isStatic": true,

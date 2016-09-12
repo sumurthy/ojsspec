@@ -14,23 +14,22 @@
 5. Check Optional handling ? for methods, params, etc. Need it in markdown.
 17. Can't have random numbers name. Maybe we can do Sha256 strings.
 19. IBasicHttpClientOptions - has headers data type problems, no hyperlink for BodyInit
-20. Links to variables and types
+20. Links to variables and types:
 21. Handle {} inside strings.
 22. Need to handle module inside module. Need to handle VAR as parameter
-
-declare module "es6-collections" {
-    var Map: MapConstructor;
-    var Set: SetConstructor;
-    var WeakMap: WeakMapConstructor;
-    var WeakSet: WeakSetConstructor;
-}
-22. Ignore export = lines
-	export = rsvp;
-23. handle module inside module
+23. isClass mess - fix it
+24. Handle export
+25. md logic is way too complex - fix it
+26. Inline Modules are not supported. Need recursive way to support them.
+27. promise: some methods are not getting right alltypes links
+  ".resolve<r>": ".md#resolve<r>",
+  ".reject": ".md#reject",
+  ".all<r>": ".md#all<r>",
+  ".race<r>": ".md#race<r>",
+  "foo": "es6-promise-module.md#variables",
+28. Markdown links are not right for methods with generics in them [`then<U>`](#then<u>) 
 
 LONGER TERM:
 19. Make use of dFunction for enum and function file generation
 1. Use TypeScript AST to generate the intermediary JSONs.
-3. Modules are not supported. Need recursive way to support them.
-6. properties/methods/functions: [{},{},{}] or {{}, {}, {}} ?
 13. Change allTypes to set instead of an array

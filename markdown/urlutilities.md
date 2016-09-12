@@ -23,6 +23,7 @@ small, and extremely common. Do not add advanced parsing logic to this file.
 
 
 
+
 ### convertToODataStringLiteral
 
 convertToODataStringLiteral("'example list'") ---> "'''example list'''" 

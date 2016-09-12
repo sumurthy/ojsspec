@@ -95,14 +95,14 @@
     },
     "functions": {},
     "methods": {
-      "constructor~3EGg9": {
+      "constructor~sSc49": {
         "accessModifier": "public",
         "signature": "constructor(input: string|Request,init?:RequestInit)",
         "isStatic": false,
         "isOptional": false,
         "descr": "",
         "genericType": null,
-        "returnType": "RequestInit",
+        "returnType": "Request",
         "returnDescr": "",
         "params": [
           {
@@ -132,7 +132,7 @@
     "properties": {},
     "functions": {},
     "methods": {
-      "append~O9Sk9": {
+      "append~0YYI9": {
         "accessModifier": "public",
         "signature": "append(name: string,value: string): void",
         "isStatic": false,
@@ -156,7 +156,7 @@
           }
         ]
       },
-      "delete~hWgQ9": {
+      "delete~KTKE9": {
         "accessModifier": "public",
         "signature": "delete(name: string):void",
         "isStatic": false,
@@ -174,7 +174,7 @@
           }
         ]
       },
-      "get~XkVg9": {
+      "get~E0S09": {
         "accessModifier": "public",
         "signature": "get(name: string): string",
         "isStatic": false,
@@ -192,7 +192,7 @@
           }
         ]
       },
-      "getAll~cWR89": {
+      "getAll~LXjI9": {
         "accessModifier": "public",
         "signature": "getAll(name: string): Array<string>",
         "isStatic": false,
@@ -210,7 +210,7 @@
           }
         ]
       },
-      "has~mnOc9": {
+      "has~AAGU9": {
         "accessModifier": "public",
         "signature": "has(name: string): boolean",
         "isStatic": false,
@@ -228,7 +228,7 @@
           }
         ]
       },
-      "set~9ZyM9": {
+      "set~rLHQ9": {
         "accessModifier": "public",
         "signature": "set(name: string,value: string): void",
         "isStatic": false,
@@ -252,7 +252,7 @@
           }
         ]
       },
-      "forEach~JQFQ9": {
+      "forEach~yX4o9": {
         "accessModifier": "public",
         "signature": "forEach(callback: (value: string,name: string) => void): void",
         "isStatic": false,
@@ -295,7 +295,7 @@
     },
     "functions": {},
     "methods": {
-      "arrayBuffer~3XbQ9": {
+      "arrayBuffer~gzhM9": {
         "accessModifier": "public",
         "signature": "arrayBuffer(): Promise<ArrayBuffer>",
         "isStatic": false,
@@ -306,7 +306,7 @@
         "returnDescr": "",
         "params": []
       },
-      "blob~GuLg9": {
+      "blob~eubc9": {
         "accessModifier": "public",
         "signature": "blob(): Promise<Blob>",
         "isStatic": false,
@@ -317,7 +317,7 @@
         "returnDescr": "",
         "params": []
       },
-      "formData~ZXNA9": {
+      "formData~DLPs9": {
         "accessModifier": "public",
         "signature": "formData(): Promise<FormData>",
         "isStatic": false,
@@ -328,7 +328,7 @@
         "returnDescr": "",
         "params": []
       },
-      "json~KJno9": {
+      "json~9hyk9": {
         "accessModifier": "public",
         "signature": "json(): Promise<any>",
         "isStatic": false,
@@ -339,7 +339,7 @@
         "returnDescr": "",
         "params": []
       },
-      "json<T>~qXBg9": {
+      "json<T>~Ncn49": {
         "accessModifier": "public",
         "signature": "json<T>(): Promise<T>",
         "isStatic": false,
@@ -350,7 +350,7 @@
         "returnDescr": "",
         "params": []
       },
-      "text~yydE9": {
+      "text~10Is9": {
         "accessModifier": "public",
         "signature": "text(): Promise<string>",
         "isStatic": false,
@@ -441,14 +441,14 @@
     },
     "functions": {},
     "methods": {
-      "constructor~3EGg9": {
+      "constructor~OYk89": {
         "accessModifier": "public",
         "signature": "constructor(body?: BodyInit,init?: ResponseInit)",
         "isStatic": false,
         "isOptional": false,
         "descr": "",
         "genericType": null,
-        "returnType": "ResponseInit",
+        "returnType": "Response",
         "returnDescr": "",
         "params": [
           {
@@ -465,7 +465,7 @@
           }
         ]
       },
-      "error~o8Xg9": {
+      "error~s60I9": {
         "accessModifier": "public",
         "signature": "error(): Response",
         "isStatic": false,
@@ -476,7 +476,7 @@
         "returnDescr": "",
         "params": []
       },
-      "redirect~iKT49": {
+      "redirect~3bnQ9": {
         "accessModifier": "public",
         "signature": "redirect(url: string,status: number): Response",
         "isStatic": false,
@@ -500,7 +500,7 @@
           }
         ]
       },
-      "clone~mtKw9": {
+      "clone~3mAQ9": {
         "accessModifier": "public",
         "signature": "clone(): Response",
         "isStatic": false,

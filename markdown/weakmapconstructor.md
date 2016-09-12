@@ -23,7 +23,24 @@
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
 |[`constructor<K,V>`](#constructor<k,v>)      | [`WeakMap<K,V>`](weakmap.md) |  |
+|[`constructor<K,V>`](#constructor<k,v>)      | [`WeakMap<K,V>`](weakmap.md) |  |
 
+
+
+
+### constructor<K,V>
+
+
+
+#### Signature
+`new<K,V>(): WeakMap<K,V>`
+
+#### Returns
+[`WeakMap<K,V>`](weakmap.md)
+
+
+#### Parameters
+None
 
 
 ### constructor<K,V>

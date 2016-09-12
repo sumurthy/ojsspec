@@ -24,11 +24,12 @@ enhancements.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`constructor`](#constructor)     | `public` | [`ServiceScope`](servicescope.md) | enhancements |
+|[`constructor`](#constructor)     | `public` | [`BasicHttpClient`](basichttpclient.md) | enhancements |
 |[`fetch`](#fetch)     | `public` | [`Promise<Response>`](promise.md) | https:  Performs a REST service call |
 |[`fetchCore`](#fetchcore)     | `protected` | [`Promise<Response>`](promise.md) | https:  Performs a REST service call |
 |[`get`](#get)     | `public` | [`Promise<Response>`](promise.md) | Calls fetch(),but sets the method to 'GET' |
 |[`post`](#post)     | `public` | [`Promise<Response>`](promise.md) | Calls fetch(),but sets the method to 'POST' |
+
 
 
 
@@ -44,7 +45,7 @@ enhancements.
 `constructor(serviceScope: ServiceScope)`
 
 #### Returns
-[`ServiceScope`](servicescope.md)
+[`BasicHttpClient`](basichttpclient.md)
 
 
 #### Parameters

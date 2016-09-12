@@ -15,9 +15,11 @@ _Type parameters: `<R>`_
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`constructor`](#constructor)     | `public` | `any => void) => void)` | Any errors thrown in the constructor callback will be implicitly passed to reject() |
+|[`constructor`](#constructor)     | `public` | [`Promise`](promise.md) | Any errors thrown in the constructor callback will be implicitly passed to reject() |
+|[`then<U>`](#then<u>)     | `public` | [`Promise<U>`](promise.md) |   onFulfilled is called when/if "promise" resolves |
 |[`then<U>`](#then<u>)     | `public` | [`Promise<U>`](promise.md) |   onFulfilled is called when/if "promise" resolves |
 |[`catch<U>`](#catch<u>)     | `public` | [`Promise<U>`](promise.md) |   Sugar for promise |
+
 
 
 
@@ -35,7 +37,7 @@ Any errors thrown in the constructor callback will be implicitly passed to rejec
 `constructor(callback: (resolve: (value?: R | Thenable<R>) => void,reject: (error?: any) => void) => void)`
 
 #### Returns
-`any => void) => void)`
+[`Promise`](promise.md)
 
 
 #### Parameters
@@ -45,6 +47,32 @@ Any errors thrown in the constructor callback will be implicitly passed to rejec
 |:-------------|:---------------|:------------|
 | `callback`    | `(resolve: (value?: R `,[` Thenable<R>) => void`](thenable.md) |  |
 | `reject`    | `(error?: any) => void) => void` |  |
+
+
+### then<U>
+
+ 
+onFulfilled is called when/if "promise" resolves. onRejected is called when/if "promise" rejects. 
+Both are optional, if either/both are omitted the next onFulfilled/onRejected in the chain is called. 
+Both callbacks have a single parameter , the fulfillment value or rejection reason. 
+"then" returns a new promise equivalent to the value you return from onFulfilled/onRejected after being passed through Promise.resolve. 
+If an error is thrown in the callback, the returned promise rejects with that error. 
+
+
+#### Signature
+`then<U>(onFulfilled?: (value: R) => U | Thenable<U>,onRejected?: (error: any) => U | Thenable<U>): Promise<U>`
+
+#### Returns
+[`Promise<U>`](promise.md)
+
+
+#### Parameters
+
+
+| Parameter	   | Type    | Description |
+|:-------------|:---------------|:------------|
+| `onFulfilled`    | `(value: R) => U `,[` Thenable<U>`](thenable.md) | _Optional._called when/if "promise" resolves  onFulfilled is called when/if "promise" resolves |
+| `onRejected`    | `(error: any) => U `,[` Thenable<U>`](thenable.md) | _Optional._called when/if "promise" rejects  onFulfilled is called when/if "promise" resolves |
 
 
 ### then<U>

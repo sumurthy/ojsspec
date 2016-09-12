@@ -1,5 +1,5 @@
 {
-  "combineURLPaths~vm409": {
+  "combineURLPaths~JcMs9": {
     "accessModifier": "public",
     "signature": "combineURLPaths(...url: string[]): string",
     "isStatic": false,
@@ -17,7 +17,7 @@
       }
     ]
   },
-  "getPathNameFromAbsoluteUrl~LxLU9": {
+  "getPathNameFromAbsoluteUrl~uobc9": {
     "accessModifier": "public",
     "signature": "getPathNameFromAbsoluteUrl(url: string): string",
     "isStatic": false,
@@ -35,7 +35,7 @@
       }
     ]
   },
-  "PropertyPaneButton~gfP89": {
+  "PropertyPaneButton~1Guo9": {
     "accessModifier": "public",
     "signature": "PropertyPaneButton(targetProperty: string,properties: IPropertyPaneButtonProps): IPropertyPaneField<IPropertyPaneButtonProps>",
     "isStatic": false,
@@ -59,7 +59,7 @@
       }
     ]
   },
-  "PropertyPaneCheckbox~V0849": {
+  "PropertyPaneCheckbox~tNJQ9": {
     "accessModifier": "public",
     "signature": "PropertyPaneCheckbox(targetProperty: string,properties: IPropertyPaneCheckboxProps): IPropertyPaneField<IPropertyPaneCheckboxProps>",
     "isStatic": false,
@@ -83,7 +83,7 @@
       }
     ]
   },
-  "PropertyPaneChoiceGroup~jUI09": {
+  "PropertyPaneChoiceGroup~2m0w9": {
     "accessModifier": "public",
     "signature": "PropertyPaneChoiceGroup(targetProperty: string,properties: IPropertyPaneChoiceGroupProps): IPropertyPaneField<IPropertyPaneChoiceGroupProps>",
     "isStatic": false,
@@ -107,7 +107,7 @@
       }
     ]
   },
-  "PropertyPaneCustomField~QzDs9": {
+  "PropertyPaneCustomField~xR2I9": {
     "accessModifier": "public",
     "signature": "PropertyPaneCustomField(targetProperty: string,properties: IPropertyPaneCustomFieldProps): IPropertyPaneField<IPropertyPaneCustomFieldProps>",
     "isStatic": false,
@@ -131,7 +131,7 @@
       }
     ]
   },
-  "PropertyPaneDropdown~ro4g9": {
+  "PropertyPaneDropdown~eDlQ9": {
     "accessModifier": "public",
     "signature": "PropertyPaneDropdown(targetProperty: string,properties: IPropertyPaneDropdownProps): IPropertyPaneField<IPropertyPaneDropdownProps>",
     "isStatic": false,
@@ -155,7 +155,7 @@
       }
     ]
   },
-  "PropertyPaneHorizontalRule~c9a89": {
+  "PropertyPaneHorizontalRule~VulY9": {
     "accessModifier": "public",
     "signature": "PropertyPaneHorizontalRule(): IPropertyPaneField<void>",
     "isStatic": false,
@@ -166,7 +166,7 @@
     "returnDescr": "",
     "params": []
   },
-  "PropertyPaneLabel~lVOg9": {
+  "PropertyPaneLabel~9uPQ9": {
     "accessModifier": "public",
     "signature": "PropertyPaneLabel(targetProperty: string,properties: IPropertyPaneLabelProps): IPropertyPaneField<IPropertyPaneLabelProps>",
     "isStatic": false,
@@ -190,7 +190,7 @@
       }
     ]
   },
-  "PropertyPaneLink~juxg9": {
+  "PropertyPaneLink~7ses9": {
     "accessModifier": "public",
     "signature": "PropertyPaneLink(targetProperty: string,properties: IPropertyPaneLinkProps): IPropertyPaneField<IPropertyPaneLinkProps>",
     "isStatic": false,
@@ -214,7 +214,7 @@
       }
     ]
   },
-  "PropertyPaneSlider~Bm7g9": {
+  "PropertyPaneSlider~gqcs9": {
     "accessModifier": "public",
     "signature": "PropertyPaneSlider(targetProperty: string,properties: IPropertyPaneSliderProps): IPropertyPaneField<IPropertyPaneSliderProps>",
     "isStatic": false,
@@ -238,7 +238,7 @@
       }
     ]
   },
-  "PropertyPaneTextField~Kc9c9": {
+  "PropertyPaneTextField~ZV7c9": {
     "accessModifier": "public",
     "signature": "PropertyPaneTextField(targetProperty: string,properties: IPropertyPaneTextFieldProps): IPropertyPaneField<IPropertyPaneTextFieldProps>",
     "isStatic": false,
@@ -262,7 +262,7 @@
       }
     ]
   },
-  "PropertyPaneToggle~dEnY9": {
+  "PropertyPaneToggle~3vB09": {
     "accessModifier": "public",
     "signature": "PropertyPaneToggle(targetProperty: string,properties: IPropertyPaneToggleProps): IPropertyPaneField<IPropertyPaneToggleProps>",
     "isStatic": false,

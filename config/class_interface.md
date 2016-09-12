@@ -57,3 +57,13 @@
 >|%name%      | %access% | %type%| %description% |
 
 </ifunction>
+
+<variables>
+
+## Variables
+
+| Variable	   |  Description|
+|:-------------|:----| 
+>|%name%      |  %description% |
+
+</variables>

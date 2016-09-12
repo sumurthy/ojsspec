@@ -5,7 +5,7 @@
 
 | Module	   |  Description |
 |:-------------|:---------------|
-| [es6-collections](es6-collections.md)     |  |
+| [es6-collections](es6-collections-imodule.md)     |  |
 
 
 

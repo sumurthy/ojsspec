@@ -23,7 +23,24 @@
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
 |[`constructor<T>`](#constructor<t>)      | [`WeakSet<T>`](weakset.md) |  |
+|[`constructor<T>`](#constructor<t>)      | [`WeakSet<T>`](weakset.md) |  |
 
+
+
+
+### constructor<T>
+
+
+
+#### Signature
+`new<T>(): WeakSet<T>`
+
+#### Returns
+[`WeakSet<T>`](weakset.md)
+
+
+#### Parameters
+None
 
 
 ### constructor<T>

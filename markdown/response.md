@@ -26,10 +26,11 @@ _Implements: [`Body`](body.md)_
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`constructor`](#constructor)     | `public` | [`ResponseInit`](responseinit.md) |  |
+|[`constructor`](#constructor)     | `public` | [`Response`](response.md) |  |
 |[`error`](#error)     | `public` | [`Response`](response.md) |  |
 |[`redirect`](#redirect)     | `public` | [`Response`](response.md) |  |
 |[`clone`](#clone)     | `public` | [`Response`](response.md) |  |
+
 
 
 
@@ -42,7 +43,7 @@ _Implements: [`Body`](body.md)_
 `constructor(body?: BodyInit,init?: ResponseInit)`
 
 #### Returns
-[`ResponseInit`](responseinit.md)
+[`Response`](response.md)
 
 
 #### Parameters

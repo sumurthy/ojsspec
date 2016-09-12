@@ -32,7 +32,7 @@ Please refer to the documentation of the individual APIs to make the right decis
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`constructor`](#constructor)     | `public` | [`IWebPartContext`](iwebpartcontext.md) |   Constructor for the BaseClientSideWebPart class |
+|[`constructor`](#constructor)     | `public` | [`BaseClientSideWebPart`](baseclientsidewebpart.md) |   Constructor for the BaseClientSideWebPart class |
 |[`clearError`](#clearerror)     | `protected` | `void` | This API should be used to clear the error message from the web part display area |
 |[`configureStart`](#configurestart)     | `protected` | `void` |   This API should be used to invoke the PropertyPane to help configure the web part |
 |[`deserialize`](#deserialize)     | `protected` | `TProperties` |   This API is called once during the lifetime of the web part during the intial render and just before the onInit  API call |
@@ -50,6 +50,7 @@ Please refer to the documentation of the individual APIs to make the right decis
 
 
 
+
 ### constructor
 
  
@@ -61,7 +62,7 @@ If a sub class overrides the constructor, it needs to call super(context) as the
 `constructor(ctx: IWebPartContext)`
 
 #### Returns
-[`IWebPartContext`](iwebpartcontext.md)
+[`BaseClientSideWebPart`](baseclientsidewebpart.md)
 
 
 #### Parameters

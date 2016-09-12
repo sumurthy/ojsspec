@@ -320,7 +320,7 @@
     "properties": {},
     "functions": {},
     "methods": {
-      "addDigestToCache~70fw9": {
+      "addDigestToCache~dLbs9": {
         "accessModifier": "public",
         "signature": "addDigestToCache(webUrl: string,digestValue: string,expirationTimestamp: number): void",
         "isStatic": false,
@@ -350,7 +350,7 @@
           }
         ]
       },
-      "clearAllDigests~KkzA9": {
+      "clearAllDigests~oVNk9": {
         "accessModifier": "public",
         "signature": "clearAllDigests(): void",
         "isStatic": false,
@@ -361,7 +361,7 @@
         "returnDescr": "",
         "params": []
       },
-      "clearDigest~4Hro9": {
+      "clearDigest~HDFI9": {
         "accessModifier": "public",
         "signature": "clearDigest(webUrl: string): boolean",
         "isStatic": false,
@@ -379,7 +379,7 @@
           }
         ]
       },
-      "fetchDigest~XKTc9": {
+      "fetchDigest~dBvU9": {
         "accessModifier": "public",
         "signature": "fetchDigest(webUrl: string): Promise<string>",
         "isStatic": false,

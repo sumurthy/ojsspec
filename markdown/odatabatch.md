@@ -25,11 +25,12 @@ resolve with a Response object for that particular request.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`constructor`](#constructor)     | `public` | [`IODataBatchOptions`](iodatabatchoptions.md) |   The ODataBatch class accumulates a number of REST service calls and  transmits them as a single ODATA batch |
+|[`constructor`](#constructor)     | `public` | [`ODataBatch`](odatabatch.md) |   The ODataBatch class accumulates a number of REST service calls and  transmits them as a single ODATA batch |
 |[`execute`](#execute)     | `public` | [`Promise<ODataBatch>`](promise.md) | Executes the batched queries that were queued using ODataBatch |
 |[`fetch`](#fetch)     | `public` | [`Promise<Response>`](promise.md) |   Queues a new request, and returns a promise that can be used to access  the server response (after execute() has completed) |
 |[`get`](#get)     | `public` | [`Promise<Response>`](promise.md) | Calls fetch(),but sets the method to 'GET' |
 |[`post`](#post)     | `public` | [`Promise<Response>`](promise.md) | Calls fetch(),but sets the method to 'POST' |
+
 
 
 
@@ -52,7 +53,7 @@ resolve with a Response object for that particular request.
 `constructor(serviceScope: ServiceScope,batchOptions?: IODataBatchOptions)`
 
 #### Returns
-[`IODataBatchOptions`](iodatabatchoptions.md)
+[`ODataBatch`](odatabatch.md)
 
 
 #### Parameters

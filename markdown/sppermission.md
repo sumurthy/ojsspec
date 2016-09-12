@@ -25,10 +25,11 @@ https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`constructor`](#constructor)     | `public` | [`IODataBasePermission`](iodatabasepermission.md) | https:  This class can be used to determine if the current user has a requested set of permissions |
+|[`constructor`](#constructor)     | `public` | [`SPPermission`](sppermission.md) | https:  This class can be used to determine if the current user has a requested set of permissions |
 |[`hasAllPermissions`](#hasallpermissions)     | `public` | `boolean` | Function for determining if a given permission mask has all of the requested permissions |
 |[`hasAnyPermissions`](#hasanypermissions)     | `public` | `boolean` | Function for determining if a given permission mask has any of the requested permissions |
 |[`hasPermission`](#haspermission)     | `public` | `boolean` | Function for checking if a given permission mask has the requested permission |
+
 
 
 
@@ -45,7 +46,7 @@ https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.
 `constructor(value: IODataBasePermission)`
 
 #### Returns
-[`IODataBasePermission`](iodatabasepermission.md)
+[`SPPermission`](sppermission.md)
 
 
 #### Parameters

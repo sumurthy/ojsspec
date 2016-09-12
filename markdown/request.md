@@ -28,7 +28,8 @@ _Implements: [`Body`](body.md)_
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`constructor`](#constructor)     | `public` | [`RequestInit`](requestinit.md) |  |
+|[`constructor`](#constructor)     | `public` | [`Request`](request.md) |  |
+
 
 
 
@@ -41,7 +42,7 @@ _Implements: [`Body`](body.md)_
 `constructor(input: string|Request,init?:RequestInit)`
 
 #### Returns
-[`RequestInit`](requestinit.md)
+[`Request`](request.md)
 
 
 #### Parameters

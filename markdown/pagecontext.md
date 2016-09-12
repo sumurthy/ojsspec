@@ -26,7 +26,8 @@ application cache.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`constructor`](#constructor)     | `public` | [`ServiceScope`](servicescope.md) | application cache |
+|[`constructor`](#constructor)     | `public` | [`PageContext`](pagecontext.md) | application cache |
+
 
 
 
@@ -44,7 +45,7 @@ application cache.
 `constructor(serviceScope: ServiceScope)`
 
 #### Returns
-[`ServiceScope`](servicescope.md)
+[`PageContext`](pagecontext.md)
 
 
 #### Parameters
