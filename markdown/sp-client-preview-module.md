@@ -5,6 +5,7 @@
 
 | Class	   |  Description |
 |:-------------|:---------------|
+| [BaseClientSideWebPart](baseclientsidewebpart.md)     | Please refer to the documentation of the individual APIs to make the right decision |
 | [MockWebPartContext](mockwebpartcontext.md)     |  |
 
 
@@ -24,6 +25,7 @@
 | [IPropertyPaneChoiceGroupOption](ipropertypanechoicegroupoption.md)   |   |
 | [IPropertyPaneChoiceGroupProps](ipropertypanechoicegroupprops.md)   |   |
 | [IPropertyPaneCustomFieldProps](ipropertypanecustomfieldprops.md)   |   |
+| [IPropertyPaneData](ipropertypanedata.md)   | Web part - PropertyPane data contract  |
 | [IPropertyPaneDropdownOption](ipropertypanedropdownoption.md)   |   |
 | [IPropertyPaneDropdownProps](ipropertypanedropdownprops.md)   |   |
 | [IPropertyPaneField](ipropertypanefield.md)   |   |
@@ -37,6 +39,7 @@
 | [IPropertyPaneTextFieldProps](ipropertypanetextfieldprops.md)   |   |
 | [IPropertyPaneToggleProps](ipropertypanetoggleprops.md)   |   |
 | [IWebPartConfigurationEventCallback](iwebpartconfigurationeventcallback.md)   | Configuration event callback  Configuration event callback  |
+| [IWebPartContext](iwebpartcontext.md)   | Web part context interface  |
 | [IWebPartData](iwebpartdata.md)   |   |
 | [IWebPartHost](iwebparthost.md)   | and each host may want to scope its event aggregation service  |
 

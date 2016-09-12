@@ -721,6 +721,107 @@
     "modules": {},
     "objects": {}
   },
+  "IPropertyPaneData": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "Web part - PropertyPane data contract. \nWeb part - PropertyPane data contract.",
+    "properties": {
+      "onClose": {
+        "dataType": "function",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": "()",
+        "returnType": "void",
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Event callback for 'Close' click. \nEvent callback for 'Close' click."
+      },
+      "onConfigurationComplete": {
+        "dataType": "function",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": "()",
+        "returnType": "void",
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Event callback fired when the configuration is completed for the web part. \nEvent callback fired when the configuration is completed for the web part."
+      },
+      "onLostFocus": {
+        "dataType": "function",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": "()",
+        "returnType": "void",
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Event callback fired when the focus is handed back to the web part \nEvent callback fired when the focus is handed back to the web part"
+      },
+      "onPropertyChange": {
+        "dataType": "function",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": "(propertyName: string,newValue: any)",
+        "returnType": "void",
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Notification event fired when the property has already been validated and modified. \nNotification event fired when the property has already been validated and modified."
+      },
+      "onRendered": {
+        "dataType": "function",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": "()",
+        "returnType": "void",
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Event callback fired after the PropertyPane is rendered. \nEvent callback fired after the PropertyPane is rendered."
+      },
+      "onSave": {
+        "dataType": "function",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": "()",
+        "returnType": "void",
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Event callback for 'Apply' click. \nEvent callback for 'Apply' click."
+      },
+      "properties": {
+        "dataType": "any",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Property bag from the web part. \nProperty bag from the web part."
+      },
+      "settings": {
+        "dataType": "IPropertyPaneSettings",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Web part configuration settings. \nWeb part configuration settings."
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
   "IPropertyPaneDropdownOption": {
     "implementsExtendsName": "",
     "genericType": null,
@@ -1443,6 +1544,151 @@
     "genericType": null,
     "descr": "Configuration event callback \nConfiguration event callback",
     "properties": {},
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IWebPartContext": {
+    "implementsExtendsName": "IClientSideComponentContext<IClientSideWebPartManifestInstance<any>>",
+    "genericType": null,
+    "descr": "Web part context interface. \nWeb part context interface.",
+    "properties": {
+      "basicHttpClient": {
+        "dataType": "BasicHttpClient",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "BasicHttpClient instance scoped to this web part. \nBasicHttpClient instance scoped to this web part."
+      },
+      "configureStart": {
+        "dataType": "function",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": "(id: string,propertyPaneState?: PropertyPaneState)",
+        "returnType": "void",
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Function to open the PropertyPane to help configure this web part. \nFunction to open the PropertyPane to help configure this web part."
+      },
+      "domElement": {
+        "dataType": "HTMLElement",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Reference to the DOM element that hosts this client side component. \nReference to the DOM element that hosts this client side component."
+      },
+      "environment": {
+        "dataType": "Environment",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Environment that webparts are hosted in. \nEnvironment that webparts are hosted in."
+      },
+      "host": {
+        "dataType": "IWebPartHost",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Web part host. \nWeb part host."
+      },
+      "httpClient": {
+        "dataType": "HttpClient",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "HttpClient instance scoped to this web part. \nHttpClient instance scoped to this web part."
+      },
+      "instanceId": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Web part instance id. This is a globally unique value. \nWeb part instance id. This is a globally unique value."
+      },
+      "manifest": {
+        "dataType": "TManifest",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Client side component manifest. \nClient side component manifest."
+      },
+      "pageContext": {
+        "dataType": "PageContext",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "SharePoint page context. \nSharePoint page context."
+      },
+      "serviceScope": {
+        "dataType": "ServiceScope",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Service scope instance that is scoped to this particular web part. \nService scope instance that is scoped to this particular web part."
+      },
+      "statusRenderer": {
+        "dataType": "IClientSideWebPartStatusRenderer",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Web part status renderer. \nWeb part status renderer."
+      },
+      "webPartTag": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Web part tag to be used for logging and telemetry. \nWeb part tag to be used for logging and telemetry."
+      }
+    },
     "functions": {},
     "methods": {},
     "types": {},

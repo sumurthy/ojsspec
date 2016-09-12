@@ -278,7 +278,7 @@ function processObject(objectName = '', index = 0, lines = [], isClass) {
         let line = prepareLine(lines[i])
         console.log('Lines::::> ' + lines[i] + ' ' + firstWord);
 
-        if (SKIP.includes(firstWord)) return
+        if (SKIP.includes(firstWord)) continue
 
         if (firstWord === BLOCK_END) {
             console.log('1: Returning block end: ' + objectName);
@@ -287,6 +287,7 @@ function processObject(objectName = '', index = 0, lines = [], isClass) {
         } else if (firstWord === C_START) {
             console.log('2: comment start');
             processComment(i, lines)
+            console.log('Comment over');
             continue
         } else {
             console.log('>> ' + line);
@@ -372,6 +373,7 @@ function processLines(element = '', index = 0, lines = []) {
     if (SKIP.includes(firstWord)) return
 
     if (firstWord === C_START) {
+        console.log('process comment 0');
         processComment(index, lines)
         return
     } else if (firstWord === BLOCK_END) {

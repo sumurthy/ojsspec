@@ -169,6 +169,150 @@
     "modules": {},
     "objects": {}
   },
+  "CultureInfo": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "for the current user of the application. \nThis class is primarily used with the PageContext class. It provides culture info \nfor the current user of the application.",
+    "properties": {
+      "public": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "information to translate the word \"hello\" to \"hola\". \nThis string determines the default user interface language. This used for localization and \ntranslation of text. This property may have an empty string, but will never be undefined. \nExample: If the currentUICultureName is \"es-mx\", then the application could use this \ninformation to translate the word \"hello\" to \"hola\"."
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "Environment": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "its components. \nThis class contains contextual information about the enviroment that is hosting the framework and \nits components.",
+    "properties": {
+      "public": {
+        "dataType": "EnvironmentType",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "An enum that describes which type of enviroment the framework is running in. \nAn enum that describes which type of enviroment the framework is running in."
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "Guid": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": " \nThis class represents a globally unique identifier, as described by \nIETF RFC 4122. The input string is normalized and validated by the class \nconstructor, which provides important guarantees that simplify other code \nthat works with the GUID. This class also provides basic functionality \nfor generating a pseudo-random GUID (\"version 4\" UUID from the RFC); \nhowever, be aware that the uniqueness depends on the browser's \nMath.random() function and may be not be suitable for some applications. \n",
+    "properties": {},
+    "functions": {},
+    "methods": {
+      "equals~NHLc9": {
+        "accessModifier": "public",
+        "signature": "equals(guid: Guid): boolean",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": " \nCompare this instance to another Guid instance \n",
+        "genericType": null,
+        "returnType": "boolean",
+        "returnDescr": "A value indicating whether this instance and the specified Guid object \nCompare this instance to another Guid instance \n",
+        "params": [
+          {
+            "name": "guid",
+            "dataType": "Guid",
+            "isOptional": false,
+            "descr": ""
+          }
+        ]
+      },
+      "isValid~HbTk9": {
+        "accessModifier": "public",
+        "signature": "isValid(guid: string): boolean",
+        "isStatic": true,
+        "isOptional": false,
+        "descr": " \nIndicates whether a guid is valid (according to RFC4122). \n",
+        "genericType": null,
+        "returnType": "boolean",
+        "returnDescr": "Value indicating whether the guid is valid. \nIndicates whether a guid is valid (according to RFC4122). \n",
+        "params": [
+          {
+            "name": "guid",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": "- Test guid. \nIndicates whether a guid is valid (according to RFC4122). \n"
+          }
+        ]
+      },
+      "constructorGuid~zWNg9": {
+        "accessModifier": "public",
+        "signature": "newGuid(randomProvider?: IRandomProvider): Guid",
+        "isStatic": true,
+        "isOptional": false,
+        "descr": " \nReturns a new Guid instance with a pseudo-randomly generated Guid. \n",
+        "genericType": null,
+        "returnType": "Guid",
+        "returnDescr": "A new valid unique Guid object \nReturns a new Guid instance with a pseudo-randomly generated Guid. \n",
+        "params": [
+          {
+            "name": "randomProvider",
+            "dataType": "IRandomProvider",
+            "isOptional": true,
+            "descr": ""
+          }
+        ]
+      },
+      "toString~qLKI9": {
+        "accessModifier": "public",
+        "signature": "toString(): string",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": " \nObject.prototype.toString override \n",
+        "genericType": null,
+        "returnType": "string",
+        "returnDescr": "The GUID value in lowercase hexadecimal without braces. \nObject.prototype.toString override \n",
+        "params": []
+      },
+      "tryParse~Rx2E9": {
+        "accessModifier": "public",
+        "signature": "tryParse(guid: string): Guid",
+        "isStatic": true,
+        "isOptional": false,
+        "descr": " \nTrys to construct a new Guid instance using guid string. The guid argument \nis normalized and validated. If the argument is not a valid \"version 4\" UUID from \nRFC 4122, tryParse will return undefined. \n",
+        "genericType": null,
+        "returnType": "Guid",
+        "returnDescr": "If the guid argument was valid,a new Guid instance. Otherwise,undefined. \nTrys to construct a new Guid instance using guid string. The guid argument \nis normalized and validated. If the argument is not a valid \"version 4\" UUID from \nRFC 4122, tryParse will return undefined. \n",
+        "params": [
+          {
+            "name": "guid",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": "- A guid string \nTrys to construct a new Guid instance using guid string. The guid argument \nis normalized and validated. If the argument is not a valid \"version 4\" UUID from \nRFC 4122, tryParse will return undefined. \n"
+          }
+        ]
+      }
+    },
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
   "HttpClient": {
     "implementsExtendsName": "BasicHttpClient",
     "genericType": null,
@@ -561,6 +705,49 @@
     "modules": {},
     "objects": {}
   },
+  "PageContext": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "application cache. \nThe page context provides standard definitions for common SharePoint objects \nthat need to be shared between the client-side application, web parts, and other \ncomponents. Typically the data is fetched via REST queries when navigating to a \nnew page, but it can also be preloaded by the web server, or filled from a custom \napplication cache.",
+    "properties": {
+      "public": {
+        "dataType": "SPWeb",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "will be defined if the PageContext was initialized. \nContextual information for the SharePoint site (\"web\") that is hosting the page. The web object \nwill be defined if the PageContext was initialized."
+      }
+    },
+    "functions": {},
+    "methods": {
+      "constructor~3EGg9": {
+        "accessModifier": "public",
+        "signature": "constructor(serviceScope: ServiceScope)",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "application cache. \nThe page context provides standard definitions for common SharePoint objects \nthat need to be shared between the client-side application, web parts, and other \ncomponents. Typically the data is fetched via REST queries when navigating to a \nnew page, but it can also be preloaded by the web server, or filled from a custom \napplication cache.",
+        "genericType": null,
+        "returnType": "ServiceScope",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "serviceScope",
+            "dataType": "ServiceScope",
+            "isOptional": false,
+            "descr": ""
+          }
+        ]
+      }
+    },
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
   "ServiceKey": {
     "implementsExtendsName": "",
     "genericType": "T",
@@ -933,6 +1120,78 @@
         ]
       }
     },
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "SPSite": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": " \nThis class is primarily used with the PageContext class. It provides contextual \ninformation for the SharePoint site collection (\"site\") that hosts the page. \n",
+    "properties": {
+      "public": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "The GUID that identifies the SPSite on the server. \nThe GUID that identifies the SPSite on the server."
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "SPUser": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": " \nThis class is primarily used with the PageContext class. It provides contextual information \nfor the SharePoint user that is accessing the page. \n",
+    "properties": {
+      "public": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Example: \"example@microsoft.com\" \nThe login name for specified user. \nExample: \"example@microsoft.com\""
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "SPWeb": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "information for the SharePoint site (\"web\") that hosts the page. \nThis class is primarily used with the PageContext class. It provides contextual \ninformation for the SharePoint site (\"web\") that hosts the page.",
+    "properties": {
+      "public": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Returns the title of the SharePoint site. \nReturns the title of the SharePoint site."
+      }
+    },
+    "functions": {},
+    "methods": {},
     "types": {},
     "variables": {},
     "modules": {},
