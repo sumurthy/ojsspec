@@ -64,6 +64,14 @@
 | [PropertyPaneToggle](propertypanetoggle~3vb09.md) |[`IPropertyPaneField<IPropertyPaneToggleProps>`](ipropertypanefield.md)  | Helper method to create a Toggle on the PropertyPane  |
 
 
+### Enumerations
+
+| Enumeration	   | Description|
+|:-----------|:------------|
+|[IPropertyPaneFieldType](ipropertypanefieldtype.md)    |  |
+|[PropertyPaneButtonType](propertypanebuttontype.md)    |  |
+|[WebPartConfigurationEvent](webpartconfigurationevent.md)    |  |
+
 
 
 

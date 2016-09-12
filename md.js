@@ -530,10 +530,8 @@ function genClassInterfaceModuleView(isClass = true, localName = '', isModule = 
 
     console.log(`*** Writing Class/Interface/Module file for ${localName}`)
     if (!isModule) {
-        console.log('A');
         FileOps.writeFile(mem_mdout, `./markdown/${Utils.trimGenerics(localName)}.md`)
     } else {
-        console.log('B');
         FileOps.writeFile(mem_mdout, `./markdown/${Utils.trimGenerics(localName)}-imodule.md`)
     }
 
@@ -567,7 +565,6 @@ function genMemberview(memName = '', member = {}, targetArray = [], isClass = tr
 }
 
 function genExtModuleView() {
-    console.log(`Processing ext. module file creation for ${moduleName}`);
 
     moduleT.forEach((tline) => {
         tline = tline.trim()

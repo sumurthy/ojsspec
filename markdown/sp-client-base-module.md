@@ -46,6 +46,13 @@
 
 
 
+### Enumerations
+
+| Enumeration	   | Description|
+|:-----------|:------------|
+|[DisplayMode](displaymode.md)    |  |
+|[EnvironmentType](environmenttype.md)    |  |
+
 
 
 
