@@ -25,6 +25,7 @@ const OBJECT_INSIDE  = /{(.*?)}/
 const IMPLEMENTS = 'implements '
 const EXTENDS = 'extends '
 
+let anchor = ''
 let ignore_lines = []
 let ignore_upto = -1
 let cBuffer = {}
@@ -50,9 +51,7 @@ let thirdWord = ''
 let lastWord = ''
 // GLOBAL - TYPES OF OBJECT
 //
-let allTypes = {
-    types: []
-}
+let allTypes = {}
 let allVarsTypes = {}
 let enumObj = {}
 let enumKey = ''
@@ -125,15 +124,15 @@ function comment_reset() {
     commentObject['returnDescr'] = ''
 }
 
-function expandAllTypes() {
-    allTypes['types'].forEach((e) => {
-        if (e.includes('<')) {
-            allTypes['types'].push(Utils.trimGenerics(e))
-        }
-    })
-    allTypes['types'] = allTypes['types'].sort().filter((elem, i, arr) => arr.indexOf(elem) === i)
-    return
-}
+// function expandAllTypes() {
+//     Object.keys(allTypes).forEach((e) => {
+//         if (e.includes('<')) {
+//             allTypes['types'].push(Utils.trimGenerics(e))
+//         }
+//     })
+//     allTypes['types'] = allTypes['types'].sort().filter((elem, i, arr) => arr.indexOf(elem) === i)
+//     return
+// }
 
 function prepareLine(line='') {
     line = line.split('//')[0]
@@ -173,7 +172,7 @@ function prepareLine(line='') {
 function processComment(index = 0, lines = []) {
 
     for (var i = index; i < lines.length; i++) {
-        console.log('---> ' + i);
+        if (ignore_upto >= i) continue
         ignore_upto = i
         let line = prepareLine(lines[i])
         line = line.replace(/\s+/g, ' ').trim()
@@ -220,11 +219,9 @@ function processComment(index = 0, lines = []) {
               }
           } else {
               if (!paramEncountered) {
-                  console.log('Calling with index=' + i + ' - ' + line);
                   var oa = Utils.readCommentAhead(lines, line.substr(2), i)
                   ignore_upto = oa['skip'].pop()
                   generalDesc = oa['descr']
-
               }
           }
           continue
@@ -238,8 +235,6 @@ function processComment(index = 0, lines = []) {
 
 function processEnum(index = 0, lines = []) {
     let o = {}
-    console.log('1: ' + generalDesc);
-
     o['descr'] = generalDesc
     o['values'] = []
     comment_reset()
@@ -256,10 +251,8 @@ function processEnum(index = 0, lines = []) {
             return o
         } else if (firstWord === C_START) {
           processComment(i, lines)
-          console.log('2: ' + generalDesc);
 
         } else {
-            console.log(line + ' ==  ' + generalDesc);
             if (line.includes('=')) {
                 var v = line.replace(',', '').split('=').map((s) => s.trim())
                 v.push(generalDesc)
@@ -316,7 +309,7 @@ function processObject(objectName = '', index = 0, lines = [], isClass) {
                 var name = Utils.getMethodName(line) || "ErrorErrorError~99999"
                 var m = Utils.processMethod(line, generalDesc, commentObject, objectName, name, isStatic)
                 o['methods'][name] = m
-                var linkvalue = (objectName + '.md#' + name.split('~')[0]).toLowerCase()
+                var linkvalue = ('../' + anchor + '/' + objectName + '.md#' + name.split('~')[0]).toLowerCase()
                 var linkkey = (objectName + '.' + name.split('~')[0]).toLowerCase()
                 allVarsTypes[linkkey] = linkvalue
                 continue
@@ -324,7 +317,7 @@ function processObject(objectName = '', index = 0, lines = [], isClass) {
                 var name = Utils.getMethodName(line) || "ErrorErrorError~99999"
                 var m = Utils.processMethod(line, generalDesc, commentObject, objectName, name, isStatic)
                 o['methods'][name] = m
-                var linkvalue = (objectName + '.md#' + name.split('~')[0]).toLowerCase()
+                var linkvalue = ('../' + anchor + '/'  + objectName + '.md#' + name.split('~')[0]).toLowerCase()
                 var linkkey = (objectName + '.' + name.split('~')[0]).toLowerCase()
                 allVarsTypes[linkkey] = linkvalue
                 continue
@@ -335,7 +328,7 @@ function processObject(objectName = '', index = 0, lines = [], isClass) {
                 } else {
                     var name = Utils.cleanupName(secondWord)
                 }
-                allVarsTypes[name] = saveFileName.toLowerCase() + '-module.md#variables'
+                allVarsTypes[name] = '../' + anchor + '/' + saveFileName.toLowerCase() + '-module.md#variables'
                 var v = {}
                 v['dataType'] = line.split(':')[1].trim()
                 v['dataType'] = v['dataType'].replace('typeof ', '')
@@ -346,7 +339,7 @@ function processObject(objectName = '', index = 0, lines = [], isClass) {
             } else if (memberType === 'TYPE') {
                 nType++
                 var name = Utils.cleanupName(thirdWord)
-                allVarsTypes[name] = saveFileName.toLowerCase() + '-module.md#types'
+                allVarsTypes[name] = '../' + anchor + '/' + saveFileName.toLowerCase() + '-module.md#types'
                 var t = {}
                 t['alias'] = line.split('=')[1].trim()
                 t['descr'] = generalDesc
@@ -373,11 +366,9 @@ function processLines(element = '', index = 0, lines = []) {
     //prepare the line and sent first, second and third word.
     let line = prepareLine(element)
     // Trim line, remove ';' and extra spaces after comma, and 1+ white space to 1 whitespace
-    console.log('main: ' + line + ' index = ' + index);
     if (SKIP.includes(firstWord)) return
 
     if (firstWord === C_START) {
-      console.log('In mix: ' + index + ' ' + line);
         processComment(index, lines)
         return
     } else if (firstWord === BLOCK_END) {
@@ -396,7 +387,8 @@ function processLines(element = '', index = 0, lines = []) {
         nInterface++
         mode = 'INTERFACE'
         interfaceName = Utils.trimGenerics(secondWord)
-        allTypes.types.push(interfaceName)
+        allTypes[interfaceName] = `../${anchor}/${Utils.trimGenerics(interfaceName).toLowerCase()}.md`
+        allTypes[Utils.trimGenerics(interfaceName)] = `../${anchor}/${Utils.trimGenerics(interfaceName).toLowerCase()}.md`
         iObj[interfaceName] = processObject(interfaceName, index, lines, false)
         comment_reset()
         return
@@ -405,14 +397,16 @@ function processLines(element = '', index = 0, lines = []) {
         mode = 'CLASS'
         var preClassName = line.split(' ')[2]
         className = Utils.trimGenerics(preClassName)
-        allTypes.types.push(className)
+        allTypes[className] = `../${anchor}/${Utils.trimGenerics(className).toLowerCase()}.md`
+        allTypes[Utils.trimGenerics(className)] = `../${anchor}/${Utils.trimGenerics(className).toLowerCase()}.md`
+
         classObj[className] = processObject(className, index, lines, true)
         comment_reset()
         return
     } else if (line.includes(TYPEDEF)) {
         nType++
         var name = Utils.cleanupName(thirdWord)
-        allVarsTypes[name] = saveFileName.toLowerCase() + '-module.md#types'
+        allVarsTypes[name] = '../' + anchor + '/' + saveFileName.toLowerCase() + '-module.md#types'
         typeObj[name] = {}
         typeObj[name]['alias'] = line.split('=')[1].trim()
         typeObj[name]['descr'] = generalDesc
@@ -421,7 +415,7 @@ function processLines(element = '', index = 0, lines = []) {
     else if (line.includes(VARIABLEDEF)) {
         nVariable++
         var name = Utils.cleanupName(thirdWord)
-        allVarsTypes[name] = saveFileName.toLowerCase() + '-module.md#variables'
+        allVarsTypes[name] = '../' + anchor + '/' + saveFileName.toLowerCase() + '-module.md#variables'
         variableObj[name] = {}
         variableObj[name]['dataType'] = line.split(':')[1].trim()
         variableObj[name]['dataType'] = variableObj[name]['dataType'].replace('typeof ', '')
@@ -431,7 +425,7 @@ function processLines(element = '', index = 0, lines = []) {
     else if (line.includes(ENUM)) {
         nEnum++
         enumKey = (firstWord == 'declare') ? thirdWord : secondWord
-        allTypes.types.push(enumKey)
+        allTypes[enumKey] = `../${anchor}/${Utils.trimGenerics(enumKey).toLowerCase()}.md`
 
         if (line.includes(BLOCK_BEGIN) && line.includes(BLOCK_END)) {
             enumObj[enumKey] = {}
@@ -479,6 +473,7 @@ FileOps.writeObject(allVarsTypes, `./json/allVarsTypes.json`)
 
 function processFile(fileName) {
     console.log(`** Processing ${fileName}`)
+    anchor = fileName.split('.ts')[0].toLowerCase()
     saveFileName = fileName.split('.ts')[0].toLowerCase()
     let lines = FileOps.loadFile(`./input-scrubbed/${fileName}`)
     lines.forEach(processLines);
@@ -489,7 +484,7 @@ function processFile(fileName) {
     FileOps.writeObject(classObj, `./json/${fileName}_class.json`)
     FileOps.writeObject(typeObj, `./json/${fileName}_type.json`)
     FileOps.writeObject(variableObj, `./json/${fileName}_variable.json`)
-    expandAllTypes()
+    //expandAllTypes()
 
     console.log(`*** module = ${nModule}, interface = ${nInterface}, class = ${nClass}, function = ${nFunction}, enum = ${nEnum}, variable = ${nVariable}, type = ${nType}`);
     file_reset()

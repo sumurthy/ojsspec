@@ -119,25 +119,21 @@ var self = module.exports = {
 
     readCommentAhead: (lines = [], descr = '', current = 0) => {
         let o = {}
-        o['descr'] = ''
+        o['descr'] = descr
         o['skip'] = []
-        console.log('previous picture ' + JSON.stringify(o));
 
         for (var i = (current + 1); i < lines.length; i++) {
             let line = lines[i]
-            console.log('Next line:' + line);
             line = line.replace(/\s+/g, ' ').trim()
             let fw = line.split(' ', 1)[0]
             let sw = line.split(' ', 2)[1]
             if (fw === '*/' || (sw !== undefined && sw.startsWith('@'))) {
-                console.log('Outgoing: ' + o['descr']);
                 return o
             } else {
                 o['skip'].push(i)
                 o['descr'] = o['descr'] + ' \n' + line.substr(2)
             }
         }
-        console.log('Outgoing: ' + o['descr']);
         return o
     },
 

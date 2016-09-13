@@ -2,7 +2,7 @@ import FileOps from './modules/fileops'
 import SetUp from './modules/setuproutine'
 import Utils from './modules/utils'
 
-let allTypes = []
+let allTypes = {}
 let allVarsTypes = {}
 let functionObj = {}
 let iObj = {}
@@ -25,6 +25,7 @@ let moduleT = []
 let classInterfaceT = []
 let methodfuncT = []
 let enumT = []
+let anchor = ''
 
 let WRITE_BACK = ['#', '|', '*', '_', '%']
 
@@ -66,12 +67,12 @@ function getLinkForType(type = '') {
     //type.split(/\W+/).forEach((e) => {
     type.split(splitChar).forEach((e) => {
         // try as is for a match
-        if (allTypes.includes(e.trim())) {
-            out = out + `[\`${e.replace(/\^/g, ',')}\`](${Utils.trimGenerics(e).toLowerCase()}.md)` + ','
+        if (Object.keys(allTypes).includes(e.trim())) {
+            out = out + `[\`${e.replace(/\^/g, ',')}\`](${allTypes[e.trim()]})` + ','
         }
         // try trimming the generics
-        else if (allTypes.includes(Utils.trimGenerics(e))) {
-            out = out + `[\`${e.replace(/\^/g, ',')}\`](${Utils.trimGenerics(e).toLowerCase()}.md)` + ','
+        else if (Object.keys(allTypes).includes(Utils.trimGenerics(e))) {
+            out = out + `[\`${e.replace(/\^/g, ',')}\`](${allTypes[Utils.trimGenerics(e).trim()]})` + ','
         }
         // variables and types match
         else if (Object.keys(allVarsTypes).includes(Utils.trimGenerics(e))) {
@@ -530,9 +531,9 @@ function genClassInterfaceModuleView(isClass = true, localName = '', isModule = 
 
     console.log(`*** Writing Class/Interface/Module file for ${localName}`)
     if (!isModule) {
-        FileOps.writeFile(mem_mdout, `./markdown/${Utils.trimGenerics(localName)}.md`)
+        FileOps.writeFile(mem_mdout, `./markdown/${anchor}/${Utils.trimGenerics(localName)}.md`)
     } else {
-        FileOps.writeFile(mem_mdout, `./markdown/${Utils.trimGenerics(localName)}-imodule.md`)
+        FileOps.writeFile(mem_mdout, `./markdown/${anchor}/${Utils.trimGenerics(localName)}-imodule.md`)
     }
 
 }
@@ -602,7 +603,7 @@ function genExtModuleView() {
         }
     })
     console.log(`*** Writing External Module file for ${moduleName}`)
-    FileOps.writeFile(mdout, `./markdown/${moduleName}-module.md`)
+    FileOps.writeFile(mdout, `./markdown/${anchor}/${moduleName}-module.md`)
     genFunctionView()
     genEnumView()
 }
@@ -611,7 +612,7 @@ function genFunctionView() {
     Object.keys(functionObj).forEach((e) => {
         genMemberview(e, functionObj[e], func_mdout, false, true)
         console.log(`*** Writing Function file for ${e}`)
-        FileOps.writeFile(func_mdout, `./markdown/${Utils.trimGenerics(e)}.md`)
+        FileOps.writeFile(func_mdout, `./markdown/${anchor}/${Utils.trimGenerics(e)}.md`)
         func_mdout = []
     })
 }
@@ -643,7 +644,7 @@ function genEnumView() {
             }
         })
         console.log(`*** Writing Enum file for ${e}`)
-        FileOps.writeFile(enum_mdout, `./markdown/${Utils.trimGenerics(e)}.md`)
+        FileOps.writeFile(enum_mdout, `./markdown/${anchor}/${Utils.trimGenerics(e)}.md`)
         enum_mdout = []
     })
 }
@@ -657,7 +658,9 @@ function genEnumView() {
 */
 
 console.log('** Starting Program...')
-SetUp.cleanupOutput('./markdown')
+FileOps.removeFolderRec('./markdown')
+console.log('** Removed existing markdown files...')
+FileOps.createFolder('./markdown')
 
 try {
     moduleT = FileOps.loadFile('./config/module.md')
@@ -665,8 +668,7 @@ try {
     methodfuncT = FileOps.loadFile('./config/method_function.md')
     enumT = FileOps.loadFile('./config/enum.md')
 
-    var t = JSON.parse(FileOps.loadJson('./json/allTypes.json'))
-    allTypes = t['types']
+    allTypes = JSON.parse(FileOps.loadJson('./json/allTypes.json'))
     allVarsTypes = JSON.parse(FileOps.loadJson('./json/allVarsTypes.json'))
 } catch (e) {
     console.log(`Error Loading config files.`)
@@ -691,6 +693,8 @@ function loadModule(files = []) {
 
     files.forEach((e) => {
         console.log(`** Processing ${e}`)
+        anchor = e.split('.ts')[0].toLowerCase()
+        FileOps.createFolder(`./markdown/${anchor}`)
         if (e.includes('_module.json')) {
             moduleObj = JSON.parse(FileOps.loadJson(`./json/${e}`))
             console.log(`*** Read Class JSON file, ${Object.keys(classObj)}`)
@@ -716,7 +720,6 @@ function loadModule(files = []) {
         else {
             throw "Unrecognized file in inut JSON folder. Should be *_{module|class|enum|type|variable|function|interface).json"
         }
-
         })
         //
         //  console.log(`interface = ${nInterface}, class = ${nClass}, function = ${nFunction}, enum = ${nEnum}`);

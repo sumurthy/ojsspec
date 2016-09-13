@@ -1,0 +1,1401 @@
+{
+  "BasicHttpClient": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "BasicHttpClient implements a basic set of features for performing REST operations. \nThe subclass HttpClient extends this basic functionality with SharePoint-specific \nenhancements.",
+    "properties": {
+      "protected": {
+        "dataType": "ServiceScope",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "BasicHttpClient implements a basic set of features for performing REST operations. \nThe subclass HttpClient extends this basic functionality with SharePoint-specific \nenhancements."
+      }
+    },
+    "functions": {},
+    "methods": {
+      "constructor~8mp89": {
+        "accessModifier": "public",
+        "signature": "constructor(serviceScope: ServiceScope)",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "BasicHttpClient implements a basic set of features for performing REST operations. \nThe subclass HttpClient extends this basic functionality with SharePoint-specific \nenhancements.",
+        "genericType": null,
+        "returnType": "BasicHttpClient",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "serviceScope",
+            "dataType": "ServiceScope",
+            "isOptional": false,
+            "descr": ""
+          }
+        ]
+      },
+      "fetch~zVBA9": {
+        "accessModifier": "public",
+        "signature": "fetch(url: string,options: IBasicHttpClientOptions): Promise<Response>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "BasicHttpClient implements a basic set of features for performing REST operations. \nThe subclass HttpClient extends this basic functionality with SharePoint-specific \nenhancements.",
+        "genericType": null,
+        "returnType": "Promise<Response>",
+        "returnDescr": "a promise that will return the result \nPerforms a REST service call. Although the HttpClient subclass adds \nadditional enhancements, the parameters and semantics for BasicHttpClient.fetch() \nare essentially the same as the WHATWG API standard that is documented here: \nhttps://fetch.spec.whatwg.org/",
+        "params": [
+          {
+            "name": "url",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": "- the URL to fetch \nPerforms a REST service call. Although the HttpClient subclass adds \nadditional enhancements, the parameters and semantics for BasicHttpClient.fetch() \nare essentially the same as the WHATWG API standard that is documented here: \nhttps://fetch.spec.whatwg.org/"
+          },
+          {
+            "name": "options",
+            "dataType": "IBasicHttpClientOptions",
+            "isOptional": false,
+            "descr": "- additional options that affect the request \nPerforms a REST service call. Although the HttpClient subclass adds \nadditional enhancements, the parameters and semantics for BasicHttpClient.fetch() \nare essentially the same as the WHATWG API standard that is documented here: \nhttps://fetch.spec.whatwg.org/"
+          }
+        ]
+      },
+      "fetchCore~kYzk9": {
+        "accessModifier": "protected",
+        "signature": "fetchCore(request: Request): Promise<Response>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "BasicHttpClient implements a basic set of features for performing REST operations. \nThe subclass HttpClient extends this basic functionality with SharePoint-specific \nenhancements.",
+        "genericType": null,
+        "returnType": "Promise<Response>",
+        "returnDescr": "a promise that will return the result \nPerforms a REST service call. Although the HttpClient subclass adds \nadditional enhancements, the parameters and semantics for BasicHttpClient.fetch() \nare essentially the same as the WHATWG API standard that is documented here: \nhttps://fetch.spec.whatwg.org/",
+        "params": [
+          {
+            "name": "request",
+            "dataType": "Request",
+            "isOptional": false,
+            "descr": ""
+          }
+        ]
+      },
+      "get~wQVw9": {
+        "accessModifier": "public",
+        "signature": "get(url: string,options?: IBasicHttpClientOptions): Promise<Response>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "BasicHttpClient implements a basic set of features for performing REST operations. \nThe subclass HttpClient extends this basic functionality with SharePoint-specific \nenhancements.",
+        "genericType": null,
+        "returnType": "Promise<Response>",
+        "returnDescr": "a promise that will return the result \nCalls fetch(), but sets the method to 'GET'.",
+        "params": [
+          {
+            "name": "url",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": "- the URL to fetch \nCalls fetch(), but sets the method to 'GET'."
+          },
+          {
+            "name": "options",
+            "dataType": "IBasicHttpClientOptions",
+            "isOptional": true,
+            "descr": "- additional options that affect the request \nCalls fetch(), but sets the method to 'GET'."
+          }
+        ]
+      },
+      "post~QZWc9": {
+        "accessModifier": "public",
+        "signature": "post(url: string,options: IBasicHttpClientOptions): Promise<Response>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "BasicHttpClient implements a basic set of features for performing REST operations. \nThe subclass HttpClient extends this basic functionality with SharePoint-specific \nenhancements.",
+        "genericType": null,
+        "returnType": "Promise<Response>",
+        "returnDescr": "a promise that will return the result \nCalls fetch(), but sets the method to 'POST'.",
+        "params": [
+          {
+            "name": "url",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": "- the URL to fetch \nCalls fetch(), but sets the method to 'POST'."
+          },
+          {
+            "name": "options",
+            "dataType": "IBasicHttpClientOptions",
+            "isOptional": false,
+            "descr": "- additional options that affect the request \nCalls fetch(), but sets the method to 'POST'."
+          }
+        ]
+      }
+    },
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "Compare": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "",
+    "properties": {},
+    "functions": {},
+    "methods": {
+      "shallowCompare~RhEw9": {
+        "accessModifier": "public",
+        "signature": "shallowCompare(objA: Object,objB: Object): boolean",
+        "isStatic": true,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "boolean",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "objA",
+            "dataType": "Object",
+            "isOptional": false,
+            "descr": "- the first object to compare. \nPerforms shallow comparison between two objects to determine if they are equal. This method compares \nonly object types. \n"
+          },
+          {
+            "name": "objB",
+            "dataType": "Object",
+            "isOptional": false,
+            "descr": "- the second object to compare. \nPerforms shallow comparison between two objects to determine if they are equal. This method compares \nonly object types. \n"
+          }
+        ]
+      }
+    },
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "CultureInfo": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "This class is primarily used with the PageContext class. It provides culture info \nfor the current user of the application.",
+    "properties": {
+      "public": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "This class is primarily used with the PageContext class. It provides culture info \nfor the current user of the application."
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "Environment": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "This class contains contextual information about the enviroment that is hosting the framework and \nits components.",
+    "properties": {
+      "public": {
+        "dataType": "EnvironmentType",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "This class contains contextual information about the enviroment that is hosting the framework and \nits components."
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "Guid": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "This class represents a globally unique identifier,as described by \nIETF RFC 4122. The input string is normalized and validated by the class \nconstructor, which provides important guarantees that simplify other code \nthat works with the GUID. This class also provides basic functionality \nfor generating a pseudo-random GUID (\"version 4\" UUID from the RFC); \nhowever, be aware that the uniqueness depends on the browser's \nMath.random() function and may be not be suitable for some applications. \n",
+    "properties": {},
+    "functions": {},
+    "methods": {
+      "equals~BuYE9": {
+        "accessModifier": "public",
+        "signature": "equals(guid: Guid): boolean",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "This class represents a globally unique identifier,as described by \nIETF RFC 4122. The input string is normalized and validated by the class \nconstructor, which provides important guarantees that simplify other code \nthat works with the GUID. This class also provides basic functionality \nfor generating a pseudo-random GUID (\"version 4\" UUID from the RFC); \nhowever, be aware that the uniqueness depends on the browser's \nMath.random() function and may be not be suitable for some applications. \n",
+        "genericType": null,
+        "returnType": "boolean",
+        "returnDescr": "A value indicating whether this instance and the specified Guid object \nCompare this instance to another Guid instance \n",
+        "params": [
+          {
+            "name": "guid",
+            "dataType": "Guid",
+            "isOptional": false,
+            "descr": ""
+          }
+        ]
+      },
+      "isValid~udOU9": {
+        "accessModifier": "public",
+        "signature": "isValid(guid: string): boolean",
+        "isStatic": true,
+        "isOptional": false,
+        "descr": "This class represents a globally unique identifier,as described by \nIETF RFC 4122. The input string is normalized and validated by the class \nconstructor, which provides important guarantees that simplify other code \nthat works with the GUID. This class also provides basic functionality \nfor generating a pseudo-random GUID (\"version 4\" UUID from the RFC); \nhowever, be aware that the uniqueness depends on the browser's \nMath.random() function and may be not be suitable for some applications. \n",
+        "genericType": null,
+        "returnType": "boolean",
+        "returnDescr": "Value indicating whether the guid is valid. \nIndicates whether a guid is valid (according to RFC4122). \n",
+        "params": [
+          {
+            "name": "guid",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": "- Test guid. \nIndicates whether a guid is valid (according to RFC4122). \n"
+          }
+        ]
+      },
+      "constructorGuid~SYAY9": {
+        "accessModifier": "public",
+        "signature": "newGuid(randomProvider?: IRandomProvider): Guid",
+        "isStatic": true,
+        "isOptional": false,
+        "descr": "This class represents a globally unique identifier,as described by \nIETF RFC 4122. The input string is normalized and validated by the class \nconstructor, which provides important guarantees that simplify other code \nthat works with the GUID. This class also provides basic functionality \nfor generating a pseudo-random GUID (\"version 4\" UUID from the RFC); \nhowever, be aware that the uniqueness depends on the browser's \nMath.random() function and may be not be suitable for some applications. \n",
+        "genericType": null,
+        "returnType": "Guid",
+        "returnDescr": "A new valid unique Guid object \nReturns a new Guid instance with a pseudo-randomly generated Guid. \n",
+        "params": [
+          {
+            "name": "randomProvider",
+            "dataType": "IRandomProvider",
+            "isOptional": true,
+            "descr": ""
+          }
+        ]
+      },
+      "toString~5Z9w9": {
+        "accessModifier": "public",
+        "signature": "toString(): string",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "This class represents a globally unique identifier,as described by \nIETF RFC 4122. The input string is normalized and validated by the class \nconstructor, which provides important guarantees that simplify other code \nthat works with the GUID. This class also provides basic functionality \nfor generating a pseudo-random GUID (\"version 4\" UUID from the RFC); \nhowever, be aware that the uniqueness depends on the browser's \nMath.random() function and may be not be suitable for some applications. \n",
+        "genericType": null,
+        "returnType": "string",
+        "returnDescr": "The GUID value in lowercase hexadecimal without braces. \nObject.prototype.toString override \n",
+        "params": []
+      },
+      "tryParse~hyQk9": {
+        "accessModifier": "public",
+        "signature": "tryParse(guid: string): Guid",
+        "isStatic": true,
+        "isOptional": false,
+        "descr": "This class represents a globally unique identifier,as described by \nIETF RFC 4122. The input string is normalized and validated by the class \nconstructor, which provides important guarantees that simplify other code \nthat works with the GUID. This class also provides basic functionality \nfor generating a pseudo-random GUID (\"version 4\" UUID from the RFC); \nhowever, be aware that the uniqueness depends on the browser's \nMath.random() function and may be not be suitable for some applications. \n",
+        "genericType": null,
+        "returnType": "Guid",
+        "returnDescr": "If the guid argument was valid,a new Guid instance. Otherwise,undefined. \nTrys to construct a new Guid instance using guid string. The guid argument \nis normalized and validated. If the argument is not a valid \"version 4\" UUID from \nRFC 4122, tryParse will return undefined. \n",
+        "params": [
+          {
+            "name": "guid",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": "- A guid string \nTrys to construct a new Guid instance using guid string. The guid argument \nis normalized and validated. If the argument is not a valid \"version 4\" UUID from \nRFC 4122, tryParse will return undefined. \n"
+          }
+        ]
+      }
+    },
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "HttpClient": {
+    "implementsExtendsName": "BasicHttpClient",
+    "genericType": null,
+    "descr": "HttpClient is used to perform REST calls against SharePoint. It adds default \nheaders, manages the digest needed for writes, and collects telemetry that \nhelps the service to monitor the performance of an application. \n \nFor communicating with non-SharePoint services, use the BasicHttpClient \nclass instead.",
+    "properties": {},
+    "functions": {},
+    "methods": {
+      "constructor~8mp89": {
+        "accessModifier": "public",
+        "signature": "constructor(serviceScope: ServiceScope)",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "HttpClient is used to perform REST calls against SharePoint. It adds default \nheaders, manages the digest needed for writes, and collects telemetry that \nhelps the service to monitor the performance of an application. \n \nFor communicating with non-SharePoint services, use the BasicHttpClient \nclass instead.",
+        "genericType": null,
+        "returnType": "HttpClient",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "serviceScope",
+            "dataType": "ServiceScope",
+            "isOptional": false,
+            "descr": ""
+          }
+        ]
+      },
+      "beginBatch~Qdz89": {
+        "accessModifier": "public",
+        "signature": "beginBatch(batchOptions?: IODataBatchOptions): ODataBatch",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "HttpClient is used to perform REST calls against SharePoint. It adds default \nheaders, manages the digest needed for writes, and collects telemetry that \nhelps the service to monitor the performance of an application. \n \nFor communicating with non-SharePoint services, use the BasicHttpClient \nclass instead.",
+        "genericType": null,
+        "returnType": "ODataBatch",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "batchOptions",
+            "dataType": "IODataBatchOptions",
+            "isOptional": true,
+            "descr": ""
+          }
+        ]
+      },
+      "fetch~GL3M9": {
+        "accessModifier": "public",
+        "signature": "fetch(url: string,options: IHttpClientOptions): Promise<Response>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "HttpClient is used to perform REST calls against SharePoint. It adds default \nheaders, manages the digest needed for writes, and collects telemetry that \nhelps the service to monitor the performance of an application. \n \nFor communicating with non-SharePoint services, use the BasicHttpClient \nclass instead.",
+        "genericType": null,
+        "returnType": "Promise<Response>",
+        "returnDescr": "a promise that will return the result \nGenerally, the parameters and semantics for HttpClient.fetch() are essentially \nthe same as the WHATWG API standard that is documented here: \nhttps://fetch.spec.whatwg.org/ \n \nThe HttpClient subclass adds some additional behaviors that are convenient when \nworking with SharePoint ODATA API's (which can be avoided by using \nBasicHttpClient instead): \n- Default \"Accept\" and \"Content-Type\" headers are added if not explicitly specified. \n- For write operations, an \"X-RequestDigest\" header is automatically added \n- The request digest token is automatically fetched and stored in a cache, with \nsupport for preloading \n \nFor a write operation, HttpClient will automatically add the \"X-RequestDigest\" \nheader, which may need to be obtained by issuing a seperate request such as \n\"https://example.com/sites/sample/_api/contextinfo\". Typically the appropriate \nSPWeb URL can be guessed by looking for a reserved URL segment such as \"_api\" \nin the original URL passed to fetch(); if not, use IHttpClientOptions.webUrl \nto specify it explicitly. \n",
+        "params": [
+          {
+            "name": "url",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": "- the URL to fetch \nGenerally, the parameters and semantics for HttpClient.fetch() are essentially \nthe same as the WHATWG API standard that is documented here: \nhttps://fetch.spec.whatwg.org/ \n \nThe HttpClient subclass adds some additional behaviors that are convenient when \nworking with SharePoint ODATA API's (which can be avoided by using \nBasicHttpClient instead): \n- Default \"Accept\" and \"Content-Type\" headers are added if not explicitly specified. \n- For write operations, an \"X-RequestDigest\" header is automatically added \n- The request digest token is automatically fetched and stored in a cache, with \nsupport for preloading \n \nFor a write operation, HttpClient will automatically add the \"X-RequestDigest\" \nheader, which may need to be obtained by issuing a seperate request such as \n\"https://example.com/sites/sample/_api/contextinfo\". Typically the appropriate \nSPWeb URL can be guessed by looking for a reserved URL segment such as \"_api\" \nin the original URL passed to fetch(); if not, use IHttpClientOptions.webUrl \nto specify it explicitly. \n"
+          },
+          {
+            "name": "options",
+            "dataType": "IHttpClientOptions",
+            "isOptional": false,
+            "descr": "- additional options that affect the request \nGenerally, the parameters and semantics for HttpClient.fetch() are essentially \nthe same as the WHATWG API standard that is documented here: \nhttps://fetch.spec.whatwg.org/ \n \nThe HttpClient subclass adds some additional behaviors that are convenient when \nworking with SharePoint ODATA API's (which can be avoided by using \nBasicHttpClient instead): \n- Default \"Accept\" and \"Content-Type\" headers are added if not explicitly specified. \n- For write operations, an \"X-RequestDigest\" header is automatically added \n- The request digest token is automatically fetched and stored in a cache, with \nsupport for preloading \n \nFor a write operation, HttpClient will automatically add the \"X-RequestDigest\" \nheader, which may need to be obtained by issuing a seperate request such as \n\"https://example.com/sites/sample/_api/contextinfo\". Typically the appropriate \nSPWeb URL can be guessed by looking for a reserved URL segment such as \"_api\" \nin the original URL passed to fetch(); if not, use IHttpClientOptions.webUrl \nto specify it explicitly. \n"
+          }
+        ]
+      },
+      "get~hBbg9": {
+        "accessModifier": "public",
+        "signature": "get(url: string,options?: IHttpClientOptions): Promise<Response>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "HttpClient is used to perform REST calls against SharePoint. It adds default \nheaders, manages the digest needed for writes, and collects telemetry that \nhelps the service to monitor the performance of an application. \n \nFor communicating with non-SharePoint services, use the BasicHttpClient \nclass instead.",
+        "genericType": null,
+        "returnType": "Promise<Response>",
+        "returnDescr": "a promise that will return the result \nCalls fetch(), but sets the method to 'GET'.",
+        "params": [
+          {
+            "name": "url",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": "- the URL to fetch \nCalls fetch(), but sets the method to 'GET'."
+          },
+          {
+            "name": "options",
+            "dataType": "IHttpClientOptions",
+            "isOptional": true,
+            "descr": "- additional options that affect the request \nCalls fetch(), but sets the method to 'GET'."
+          }
+        ]
+      },
+      "getWebUrlFromRequestUrl~j9SA9": {
+        "accessModifier": "public",
+        "signature": "getWebUrlFromRequestUrl(requestUrl: string): string",
+        "isStatic": true,
+        "isOptional": false,
+        "descr": "HttpClient is used to perform REST calls against SharePoint. It adds default \nheaders, manages the digest needed for writes, and collects telemetry that \nhelps the service to monitor the performance of an application. \n \nFor communicating with non-SharePoint services, use the BasicHttpClient \nclass instead.",
+        "genericType": null,
+        "returnType": "string",
+        "returnDescr": "the inferred SPWeb URL \nThis uses a heuristic to guess the SPWeb URL associated with the provided \nREST URL. This is necessary for operations such as the X-RequestDigest \nand ODATA batching, which require POSTing to a separate REST endpoint \nin order to complete a request. \nFor excample, if the requestUrl is \"/sites/site/web/_api/service\", \nthe returned URL would be \"/sites/site/web\". Or if the requestUrl \nis \"http://example.com/_layouts/service\", the returned URL would be \n\"http://example.com\".",
+        "params": [
+          {
+            "name": "requestUrl",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": "The URL for a SharePoint REST service \nThis uses a heuristic to guess the SPWeb URL associated with the provided \nREST URL. This is necessary for operations such as the X-RequestDigest \nand ODATA batching, which require POSTing to a separate REST endpoint \nin order to complete a request. \nFor excample, if the requestUrl is \"/sites/site/web/_api/service\", \nthe returned URL would be \"/sites/site/web\". Or if the requestUrl \nis \"http://example.com/_layouts/service\", the returned URL would be \n\"http://example.com\"."
+          }
+        ]
+      },
+      "post~azHU9": {
+        "accessModifier": "public",
+        "signature": "post(url: string,options: IHttpClientOptions): Promise<Response>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "HttpClient is used to perform REST calls against SharePoint. It adds default \nheaders, manages the digest needed for writes, and collects telemetry that \nhelps the service to monitor the performance of an application. \n \nFor communicating with non-SharePoint services, use the BasicHttpClient \nclass instead.",
+        "genericType": null,
+        "returnType": "Promise<Response>",
+        "returnDescr": "a promise that will return the result \nCalls fetch(), but sets the method to 'POST'.",
+        "params": [
+          {
+            "name": "url",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": "- the URL to fetch \nCalls fetch(), but sets the method to 'POST'."
+          },
+          {
+            "name": "options",
+            "dataType": "IHttpClientOptions",
+            "isOptional": false,
+            "descr": "- additional options that affect the request \nCalls fetch(), but sets the method to 'POST'."
+          }
+        ]
+      }
+    },
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "Log": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "The Log class provides methods for logging messages at different levels (verbose, \ninfo, warning, error) and with context information. Context information helps identify \nwhich component generated the messages and makes the messages useful and filterable. \n",
+    "properties": {},
+    "functions": {},
+    "methods": {
+      "error~pS309": {
+        "accessModifier": "public",
+        "signature": "error(source: string,error: Error,scope?: ServiceScope): void",
+        "isStatic": true,
+        "isOptional": false,
+        "descr": "The Log class provides methods for logging messages at different levels (verbose, \ninfo, warning, error) and with context information. Context information helps identify \nwhich component generated the messages and makes the messages useful and filterable. \n",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "source",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": "- the source from where the error is logged,e.g.,the class name. \nLogs an error"
+          },
+          {
+            "name": "error",
+            "dataType": "Error",
+            "isOptional": false,
+            "descr": "- the error to be logged \nLogs an error"
+          },
+          {
+            "name": "scope",
+            "dataType": "ServiceScope",
+            "isOptional": true,
+            "descr": "- the service scope that the source uses. A service scope can provide \nLogs an error"
+          }
+        ]
+      },
+      "info~0jwc9": {
+        "accessModifier": "public",
+        "signature": "info(source: string,message: string,scope?: ServiceScope): void",
+        "isStatic": true,
+        "isOptional": false,
+        "descr": "The Log class provides methods for logging messages at different levels (verbose, \ninfo, warning, error) and with context information. Context information helps identify \nwhich component generated the messages and makes the messages useful and filterable. \n",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "source",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": "- the source from where the message is logged,e.g.,the class name. \nLogs an informational message"
+          },
+          {
+            "name": "message",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": "- the message to be logged \nLogs an informational message"
+          },
+          {
+            "name": "scope",
+            "dataType": "ServiceScope",
+            "isOptional": true,
+            "descr": "- the service scope that the source uses. A service scope can provide \nLogs an informational message"
+          }
+        ]
+      },
+      "verbose~vaBA9": {
+        "accessModifier": "public",
+        "signature": "verbose(source: string,message: string,scope?: ServiceScope): void",
+        "isStatic": true,
+        "isOptional": false,
+        "descr": "The Log class provides methods for logging messages at different levels (verbose, \ninfo, warning, error) and with context information. Context information helps identify \nwhich component generated the messages and makes the messages useful and filterable. \n",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "source",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": "- the source from where the message is logged,e.g.,the class name. \nLogs a verbose message"
+          },
+          {
+            "name": "message",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": "- the message to be logged \nLogs a verbose message"
+          },
+          {
+            "name": "scope",
+            "dataType": "ServiceScope",
+            "isOptional": true,
+            "descr": "- the service scope that the source uses. A service scope can provide \nLogs a verbose message"
+          }
+        ]
+      },
+      "warn~xzeY9": {
+        "accessModifier": "public",
+        "signature": "warn(source: string,message: string,scope?: ServiceScope): void",
+        "isStatic": true,
+        "isOptional": false,
+        "descr": "The Log class provides methods for logging messages at different levels (verbose, \ninfo, warning, error) and with context information. Context information helps identify \nwhich component generated the messages and makes the messages useful and filterable. \n",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "source",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": "- the source from where the message is logged,e.g.,the class name. \nLogs a warning"
+          },
+          {
+            "name": "message",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": "- the message to be logged \nLogs a warning"
+          },
+          {
+            "name": "scope",
+            "dataType": "ServiceScope",
+            "isOptional": true,
+            "descr": "- the service scope that the source uses. A service scope can provide \nLogs a warning"
+          }
+        ]
+      }
+    },
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "ODataBatch": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "The ODataBatch class accumulates a number of REST service calls and \ntransmits them as a single ODATA batch. This protocol is documented here: \nhttp://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html \n \nThe usage is to call ODataBatch.fetch() to queue each individual request, \nand then call ODataBatch.execute() to execute the batch operation. \nThe execute() method returns a promise that resolves when the real REST \ncall has completed. Each call to fetch() also returns a promise that will \nresolve with a Response object for that particular request. \n",
+    "properties": {},
+    "functions": {},
+    "methods": {
+      "constructor~w9vY9": {
+        "accessModifier": "public",
+        "signature": "constructor(serviceScope: ServiceScope,batchOptions?: IODataBatchOptions)",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "The ODataBatch class accumulates a number of REST service calls and \ntransmits them as a single ODATA batch. This protocol is documented here: \nhttp://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html \n \nThe usage is to call ODataBatch.fetch() to queue each individual request, \nand then call ODataBatch.execute() to execute the batch operation. \nThe execute() method returns a promise that resolves when the real REST \ncall has completed. Each call to fetch() also returns a promise that will \nresolve with a Response object for that particular request. \n",
+        "genericType": null,
+        "returnType": "ODataBatch",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "serviceScope",
+            "dataType": "ServiceScope",
+            "isOptional": false,
+            "descr": ""
+          },
+          {
+            "name": "batchOptions",
+            "dataType": "IODataBatchOptions",
+            "isOptional": true,
+            "descr": ""
+          }
+        ]
+      },
+      "execute~6jSw9": {
+        "accessModifier": "public",
+        "signature": "execute(): Promise<ODataBatch>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "The ODataBatch class accumulates a number of REST service calls and \ntransmits them as a single ODATA batch. This protocol is documented here: \nhttp://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html \n \nThe usage is to call ODataBatch.fetch() to queue each individual request, \nand then call ODataBatch.execute() to execute the batch operation. \nThe execute() method returns a promise that resolves when the real REST \ncall has completed. Each call to fetch() also returns a promise that will \nresolve with a Response object for that particular request. \n",
+        "genericType": null,
+        "returnType": "Promise<ODataBatch>",
+        "returnDescr": "",
+        "params": []
+      },
+      "fetch~k9BM9": {
+        "accessModifier": "public",
+        "signature": "fetch(url: string,options?: IODataBatchRequestOptions): Promise<Response>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "The ODataBatch class accumulates a number of REST service calls and \ntransmits them as a single ODATA batch. This protocol is documented here: \nhttp://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html \n \nThe usage is to call ODataBatch.fetch() to queue each individual request, \nand then call ODataBatch.execute() to execute the batch operation. \nThe execute() method returns a promise that resolves when the real REST \ncall has completed. Each call to fetch() also returns a promise that will \nresolve with a Response object for that particular request. \n",
+        "genericType": null,
+        "returnType": "Promise<Response>",
+        "returnDescr": "a promise that will return the result \nQueues a new request, and returns a promise that can be used to access \nthe server response (after execute() has completed). The parameters for \nthis function are basically the same as the WHATWG API standard documented here: \nhttps://fetch.spec.whatwg.org/ \n \nHowever, be aware that certain REST headers are ignored or not allowed inside \na batch. See the ODATA documentation for details. \n \nWhen execute() is called, it will POST to a URL such as \n\"http://example.com/sites/sample/_api/$batch\". Typically ODataBatch can successfully \nguess the appropriate SPWeb URL by looking for a reserved URL segment such as \"_api\" \nin the first URL passed to fetch(). If not, use IODataBatchOptions.webUrl to specify it \nexplicitly. \n",
+        "params": [
+          {
+            "name": "url",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": "- the URL to fetch,or an already initialized Request object \nQueues a new request, and returns a promise that can be used to access \nthe server response (after execute() has completed). The parameters for \nthis function are basically the same as the WHATWG API standard documented here: \nhttps://fetch.spec.whatwg.org/ \n \nHowever, be aware that certain REST headers are ignored or not allowed inside \na batch. See the ODATA documentation for details. \n \nWhen execute() is called, it will POST to a URL such as \n\"http://example.com/sites/sample/_api/$batch\". Typically ODataBatch can successfully \nguess the appropriate SPWeb URL by looking for a reserved URL segment such as \"_api\" \nin the first URL passed to fetch(). If not, use IODataBatchOptions.webUrl to specify it \nexplicitly. \n"
+          },
+          {
+            "name": "options",
+            "dataType": "IODataBatchRequestOptions",
+            "isOptional": true,
+            "descr": "- additional options that affect the request \nQueues a new request, and returns a promise that can be used to access \nthe server response (after execute() has completed). The parameters for \nthis function are basically the same as the WHATWG API standard documented here: \nhttps://fetch.spec.whatwg.org/ \n \nHowever, be aware that certain REST headers are ignored or not allowed inside \na batch. See the ODATA documentation for details. \n \nWhen execute() is called, it will POST to a URL such as \n\"http://example.com/sites/sample/_api/$batch\". Typically ODataBatch can successfully \nguess the appropriate SPWeb URL by looking for a reserved URL segment such as \"_api\" \nin the first URL passed to fetch(). If not, use IODataBatchOptions.webUrl to specify it \nexplicitly. \n"
+          }
+        ]
+      },
+      "get~tVJg9": {
+        "accessModifier": "public",
+        "signature": "get(url: string,options?: IODataBatchRequestOptions): Promise<Response>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "The ODataBatch class accumulates a number of REST service calls and \ntransmits them as a single ODATA batch. This protocol is documented here: \nhttp://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html \n \nThe usage is to call ODataBatch.fetch() to queue each individual request, \nand then call ODataBatch.execute() to execute the batch operation. \nThe execute() method returns a promise that resolves when the real REST \ncall has completed. Each call to fetch() also returns a promise that will \nresolve with a Response object for that particular request. \n",
+        "genericType": null,
+        "returnType": "Promise<Response>",
+        "returnDescr": "a promise that will return the result \nCalls fetch(), but sets the method to 'GET'.",
+        "params": [
+          {
+            "name": "url",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": "- the URL to fetch \nCalls fetch(), but sets the method to 'GET'."
+          },
+          {
+            "name": "options",
+            "dataType": "IODataBatchRequestOptions",
+            "isOptional": true,
+            "descr": "- additional options that affect the request \nCalls fetch(), but sets the method to 'GET'."
+          }
+        ]
+      },
+      "post~JWiw9": {
+        "accessModifier": "public",
+        "signature": "post(url: string,options: IODataBatchRequestOptions): Promise<Response>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "The ODataBatch class accumulates a number of REST service calls and \ntransmits them as a single ODATA batch. This protocol is documented here: \nhttp://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html \n \nThe usage is to call ODataBatch.fetch() to queue each individual request, \nand then call ODataBatch.execute() to execute the batch operation. \nThe execute() method returns a promise that resolves when the real REST \ncall has completed. Each call to fetch() also returns a promise that will \nresolve with a Response object for that particular request. \n",
+        "genericType": null,
+        "returnType": "Promise<Response>",
+        "returnDescr": "a promise that will return the result \nCalls fetch(), but sets the method to 'POST'.",
+        "params": [
+          {
+            "name": "url",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": "- the URL to fetch \nCalls fetch(), but sets the method to 'POST'."
+          },
+          {
+            "name": "options",
+            "dataType": "IODataBatchRequestOptions",
+            "isOptional": false,
+            "descr": "- additional options that affect the request \nCalls fetch(), but sets the method to 'POST'."
+          }
+        ]
+      }
+    },
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "PageContext": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "The page context provides standard definitions for common SharePoint objects \nthat need to be shared between the client-side application, web parts, and other \ncomponents. Typically the data is fetched via REST queries when navigating to a \nnew page, but it can also be preloaded by the web server, or filled from a custom \napplication cache.",
+    "properties": {
+      "public": {
+        "dataType": "SPWeb",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "The page context provides standard definitions for common SharePoint objects \nthat need to be shared between the client-side application, web parts, and other \ncomponents. Typically the data is fetched via REST queries when navigating to a \nnew page, but it can also be preloaded by the web server, or filled from a custom \napplication cache."
+      }
+    },
+    "functions": {},
+    "methods": {
+      "constructor~8mp89": {
+        "accessModifier": "public",
+        "signature": "constructor(serviceScope: ServiceScope)",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "The page context provides standard definitions for common SharePoint objects \nthat need to be shared between the client-side application, web parts, and other \ncomponents. Typically the data is fetched via REST queries when navigating to a \nnew page, but it can also be preloaded by the web server, or filled from a custom \napplication cache.",
+        "genericType": null,
+        "returnType": "PageContext",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "serviceScope",
+            "dataType": "ServiceScope",
+            "isOptional": false,
+            "descr": ""
+          }
+        ]
+      }
+    },
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "ServiceKey": {
+    "implementsExtendsName": "",
+    "genericType": "T",
+    "descr": "The ServiceKey is a lookup key that is used when calling ServiceScope.consume() \nto fetch a dependency. The key also defines a default implementation of the \ndependency, which will be autocreated by the root scope if the dependency is not found. \nProviding a default implementation ensures that new dependencies can be safely \nintroduced without inadvertently breaking components that are loaded by an older host \n(that does not provide the new dependency).",
+    "properties": {
+      "public": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "The ServiceKey is a lookup key that is used when calling ServiceScope.consume() \nto fetch a dependency. The key also defines a default implementation of the \ndependency, which will be autocreated by the root scope if the dependency is not found. \nProviding a default implementation ensures that new dependencies can be safely \nintroduced without inadvertently breaking components that are loaded by an older host \n(that does not provide the new dependency)."
+      }
+    },
+    "functions": {},
+    "methods": {
+      "constructor~uorI9": {
+        "accessModifier": "public",
+        "signature": "constructor(id: string,name: string,defaultCreator: ServiceCreator<T>)",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "The ServiceKey is a lookup key that is used when calling ServiceScope.consume() \nto fetch a dependency. The key also defines a default implementation of the \ndependency, which will be autocreated by the root scope if the dependency is not found. \nProviding a default implementation ensures that new dependencies can be safely \nintroduced without inadvertently breaking components that are loaded by an older host \n(that does not provide the new dependency).",
+        "genericType": null,
+        "returnType": "ServiceKey",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "id",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": ""
+          },
+          {
+            "name": "name",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": ""
+          },
+          {
+            "name": "defaultCreator",
+            "dataType": "ServiceCreator<T>",
+            "isOptional": false,
+            "descr": ""
+          }
+        ]
+      },
+      "create<T>~5bhc9": {
+        "accessModifier": "public",
+        "signature": "create<T>(name: string,serviceClass: { new (serviceScope: ServiceScope) }): ServiceKey<T>;",
+        "isStatic": true,
+        "isOptional": false,
+        "descr": "The ServiceKey is a lookup key that is used when calling ServiceScope.consume() \nto fetch a dependency. The key also defines a default implementation of the \ndependency, which will be autocreated by the root scope if the dependency is not found. \nProviding a default implementation ensures that new dependencies can be safely \nintroduced without inadvertently breaking components that are loaded by an older host \n(that does not provide the new dependency).",
+        "genericType": "T",
+        "returnType": "ServiceKey<T>;",
+        "returnDescr": "- the newly created ServiceKey \nConstructs a new ServiceKey whose default implementation will be a new instance of \na TypeScript class that accepts the standard constructor parameter. If you want to \nspecify custom constructor parameters, use createCustom() instead.",
+        "params": [
+          {
+            "name": "name",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": "- A name such as \"MyApplication.IMyService\" which should be unique within \nConstructs a new ServiceKey whose default implementation will be a new instance of \na TypeScript class that accepts the standard constructor parameter. If you want to \nspecify custom constructor parameters, use createCustom() instead."
+          },
+          {
+            "name": "serviceClass",
+            "dataType": "{ new (serviceScope: ServiceScope) }",
+            "isOptional": false,
+            "descr": "- the TypeScript class that implements the service. \nConstructs a new ServiceKey whose default implementation will be a new instance of \na TypeScript class that accepts the standard constructor parameter. If you want to \nspecify custom constructor parameters, use createCustom() instead."
+          }
+        ]
+      },
+      "createCustom<T>~F0HQ9": {
+        "accessModifier": "public",
+        "signature": "createCustom<T>(name: string,defaultCreator: ServiceCreator<T>): ServiceKey<T>",
+        "isStatic": true,
+        "isOptional": false,
+        "descr": "The ServiceKey is a lookup key that is used when calling ServiceScope.consume() \nto fetch a dependency. The key also defines a default implementation of the \ndependency, which will be autocreated by the root scope if the dependency is not found. \nProviding a default implementation ensures that new dependencies can be safely \nintroduced without inadvertently breaking components that are loaded by an older host \n(that does not provide the new dependency).",
+        "genericType": "T",
+        "returnType": "ServiceKey<T>",
+        "returnDescr": "- the newly created ServiceKey \nConstructs a new ServiceKey whose default implementation will be obtained \nby invoking the specified callback.",
+        "params": [
+          {
+            "name": "name",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": "- A name such as \"MyApplication.IMyService\" which should be unique within \nConstructs a new ServiceKey whose default implementation will be obtained \nby invoking the specified callback."
+          },
+          {
+            "name": "defaultCreator",
+            "dataType": "ServiceCreator<T>",
+            "isOptional": false,
+            "descr": "- A callback that returns an object that implements the T interface \nConstructs a new ServiceKey whose default implementation will be obtained \nby invoking the specified callback."
+          }
+        ]
+      }
+    },
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "ServiceScope": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "ServiceScope provides a formalized way for components to register and consume dependencies \n(\"services\"), and to enable different implementations to be registered in different scopes. \nThis improves modularity by decoupling components from their dependencies in an extensible way. \n \nFor example, suppose that various components need access to an IPageManager instance. We could \nsimply make the PageManager a singleton (i.e. global variable), but this will not work e.g. if \nwe need to create a pop-up dialog that requires a second PageManager instance. A better solution \nwould be to add the PageManager as a constructor parameter for each component that requires it, \nhowever then we immediately face the problem that any code that calls these constructors \nalso needs a PageManager parameter. In an application with many such dependencies, business \nlogic that ties together many subsystems would eventually pick up a constructor parameter \nfor every possible dependency, which is unwieldy. A natural solution would be to move all the \ndependencies into a class with name like \"ApplicationContext\", and then pass this around as our \nconstructor parameter. This enables the PageManager to be passed to classes that need it \nwithout cluttering the intermediary classes that don't. However, it still has a design problem \nthat \"ApplicationContext\" has hard-coded dependencies on many unrelated things. A more flexible \napproach is to make it a dictionary that can look up items for consumers/providers who know the \nright lookup key (i.e. ServiceKey). This is the popular \"service locator\" design pattern, \nfamiliar from the SPContext API in classic SharePoint. \n \nServiceScope takes this idea a step further in two important ways: First, it provides a scoping \nmechanism so that e.g. if we had two different pages, they could each consume a unique PageManager \ninstance while still sharing other common dependencies. Secondly, it allows for a ServiceKey \nto provide a default implementation of the dependency. This is important for API stability in \nour modular client-side environment: For example, suppose that version 2.0 of our application \nintroduced a new IDiagnosticTracing interface that a version 2.0 component will expect to consume. \nIf the version 2.0 component gets loaded by an older 1.0 application, it would fail. We could \nfix this by requiring each consumer to check for any missing dependencies and handle that case, \nbut it would require a lot of checks. A better solution is to ensure that a default implementation \nalways exists, perhaps just a trivial behavior, so that components don't have to worry about it. \n \nUsage: ServiceScope instances are created by calling either ServiceScope.startNewRoot() or \nServiceScope.startNewChild(). They are initially in an \"unfinished\" state, during which provide() \ncan be called to register service keys, but consume() is forbidden. After ServiceScope.finish() \nis called, consume() is allowed and provide() is now forbidden. These semantics ensure that \nServiceScope.consume() always returns the same result for the same key, and does not depend on \norder of initialization. It also allows us to support circular dependencies without worrying \nabout infinite loops, even when working with external components that were implemented by \nthird parties. To avoid mistakes, it's best to always call consume() inside a callback from \nserviceScope.whenFinished().",
+    "properties": {},
+    "functions": {},
+    "methods": {
+      "constructor~syNo9": {
+        "accessModifier": "public",
+        "signature": "constructor(parent: ServiceScope)",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "ServiceScope provides a formalized way for components to register and consume dependencies \n(\"services\"), and to enable different implementations to be registered in different scopes. \nThis improves modularity by decoupling components from their dependencies in an extensible way. \n \nFor example, suppose that various components need access to an IPageManager instance. We could \nsimply make the PageManager a singleton (i.e. global variable), but this will not work e.g. if \nwe need to create a pop-up dialog that requires a second PageManager instance. A better solution \nwould be to add the PageManager as a constructor parameter for each component that requires it, \nhowever then we immediately face the problem that any code that calls these constructors \nalso needs a PageManager parameter. In an application with many such dependencies, business \nlogic that ties together many subsystems would eventually pick up a constructor parameter \nfor every possible dependency, which is unwieldy. A natural solution would be to move all the \ndependencies into a class with name like \"ApplicationContext\", and then pass this around as our \nconstructor parameter. This enables the PageManager to be passed to classes that need it \nwithout cluttering the intermediary classes that don't. However, it still has a design problem \nthat \"ApplicationContext\" has hard-coded dependencies on many unrelated things. A more flexible \napproach is to make it a dictionary that can look up items for consumers/providers who know the \nright lookup key (i.e. ServiceKey). This is the popular \"service locator\" design pattern, \nfamiliar from the SPContext API in classic SharePoint. \n \nServiceScope takes this idea a step further in two important ways: First, it provides a scoping \nmechanism so that e.g. if we had two different pages, they could each consume a unique PageManager \ninstance while still sharing other common dependencies. Secondly, it allows for a ServiceKey \nto provide a default implementation of the dependency. This is important for API stability in \nour modular client-side environment: For example, suppose that version 2.0 of our application \nintroduced a new IDiagnosticTracing interface that a version 2.0 component will expect to consume. \nIf the version 2.0 component gets loaded by an older 1.0 application, it would fail. We could \nfix this by requiring each consumer to check for any missing dependencies and handle that case, \nbut it would require a lot of checks. A better solution is to ensure that a default implementation \nalways exists, perhaps just a trivial behavior, so that components don't have to worry about it. \n \nUsage: ServiceScope instances are created by calling either ServiceScope.startNewRoot() or \nServiceScope.startNewChild(). They are initially in an \"unfinished\" state, during which provide() \ncan be called to register service keys, but consume() is forbidden. After ServiceScope.finish() \nis called, consume() is allowed and provide() is now forbidden. These semantics ensure that \nServiceScope.consume() always returns the same result for the same key, and does not depend on \norder of initialization. It also allows us to support circular dependencies without worrying \nabout infinite loops, even when working with external components that were implemented by \nthird parties. To avoid mistakes, it's best to always call consume() inside a callback from \nserviceScope.whenFinished().",
+        "genericType": null,
+        "returnType": "ServiceScope",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "parent",
+            "dataType": "ServiceScope",
+            "isOptional": false,
+            "descr": ""
+          }
+        ]
+      },
+      "consume<T>~X1lg9": {
+        "accessModifier": "public",
+        "signature": "consume<T>(serviceKey: ServiceKey<T>): T",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "ServiceScope provides a formalized way for components to register and consume dependencies \n(\"services\"), and to enable different implementations to be registered in different scopes. \nThis improves modularity by decoupling components from their dependencies in an extensible way. \n \nFor example, suppose that various components need access to an IPageManager instance. We could \nsimply make the PageManager a singleton (i.e. global variable), but this will not work e.g. if \nwe need to create a pop-up dialog that requires a second PageManager instance. A better solution \nwould be to add the PageManager as a constructor parameter for each component that requires it, \nhowever then we immediately face the problem that any code that calls these constructors \nalso needs a PageManager parameter. In an application with many such dependencies, business \nlogic that ties together many subsystems would eventually pick up a constructor parameter \nfor every possible dependency, which is unwieldy. A natural solution would be to move all the \ndependencies into a class with name like \"ApplicationContext\", and then pass this around as our \nconstructor parameter. This enables the PageManager to be passed to classes that need it \nwithout cluttering the intermediary classes that don't. However, it still has a design problem \nthat \"ApplicationContext\" has hard-coded dependencies on many unrelated things. A more flexible \napproach is to make it a dictionary that can look up items for consumers/providers who know the \nright lookup key (i.e. ServiceKey). This is the popular \"service locator\" design pattern, \nfamiliar from the SPContext API in classic SharePoint. \n \nServiceScope takes this idea a step further in two important ways: First, it provides a scoping \nmechanism so that e.g. if we had two different pages, they could each consume a unique PageManager \ninstance while still sharing other common dependencies. Secondly, it allows for a ServiceKey \nto provide a default implementation of the dependency. This is important for API stability in \nour modular client-side environment: For example, suppose that version 2.0 of our application \nintroduced a new IDiagnosticTracing interface that a version 2.0 component will expect to consume. \nIf the version 2.0 component gets loaded by an older 1.0 application, it would fail. We could \nfix this by requiring each consumer to check for any missing dependencies and handle that case, \nbut it would require a lot of checks. A better solution is to ensure that a default implementation \nalways exists, perhaps just a trivial behavior, so that components don't have to worry about it. \n \nUsage: ServiceScope instances are created by calling either ServiceScope.startNewRoot() or \nServiceScope.startNewChild(). They are initially in an \"unfinished\" state, during which provide() \ncan be called to register service keys, but consume() is forbidden. After ServiceScope.finish() \nis called, consume() is allowed and provide() is now forbidden. These semantics ensure that \nServiceScope.consume() always returns the same result for the same key, and does not depend on \norder of initialization. It also allows us to support circular dependencies without worrying \nabout infinite loops, even when working with external components that were implemented by \nthird parties. To avoid mistakes, it's best to always call consume() inside a callback from \nserviceScope.whenFinished().",
+        "genericType": "T",
+        "returnType": "T",
+        "returnDescr": "- the service instance \nComponents should call this function to \"consume\" a dependency, i.e. look up the serviceKey \nand return the registered service instance. If the instance cannot be found, then a default \ninstance will be autocreated and registered with the root ServiceScope.",
+        "params": [
+          {
+            "name": "serviceKey",
+            "dataType": "ServiceKey<T>",
+            "isOptional": false,
+            "descr": "- the key that was used when provide() was called to register the service \nComponents should call this function to \"consume\" a dependency, i.e. look up the serviceKey \nand return the registered service instance. If the instance cannot be found, then a default \ninstance will be autocreated and registered with the root ServiceScope."
+          }
+        ]
+      },
+      "createAndProvide<T>~DDq09": {
+        "accessModifier": "public",
+        "signature": "createAndProvide<T>(serviceKey: ServiceKey<T>,simpleServiceClass: { new (serviceScope: ServiceScope) }): T;",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "ServiceScope provides a formalized way for components to register and consume dependencies \n(\"services\"), and to enable different implementations to be registered in different scopes. \nThis improves modularity by decoupling components from their dependencies in an extensible way. \n \nFor example, suppose that various components need access to an IPageManager instance. We could \nsimply make the PageManager a singleton (i.e. global variable), but this will not work e.g. if \nwe need to create a pop-up dialog that requires a second PageManager instance. A better solution \nwould be to add the PageManager as a constructor parameter for each component that requires it, \nhowever then we immediately face the problem that any code that calls these constructors \nalso needs a PageManager parameter. In an application with many such dependencies, business \nlogic that ties together many subsystems would eventually pick up a constructor parameter \nfor every possible dependency, which is unwieldy. A natural solution would be to move all the \ndependencies into a class with name like \"ApplicationContext\", and then pass this around as our \nconstructor parameter. This enables the PageManager to be passed to classes that need it \nwithout cluttering the intermediary classes that don't. However, it still has a design problem \nthat \"ApplicationContext\" has hard-coded dependencies on many unrelated things. A more flexible \napproach is to make it a dictionary that can look up items for consumers/providers who know the \nright lookup key (i.e. ServiceKey). This is the popular \"service locator\" design pattern, \nfamiliar from the SPContext API in classic SharePoint. \n \nServiceScope takes this idea a step further in two important ways: First, it provides a scoping \nmechanism so that e.g. if we had two different pages, they could each consume a unique PageManager \ninstance while still sharing other common dependencies. Secondly, it allows for a ServiceKey \nto provide a default implementation of the dependency. This is important for API stability in \nour modular client-side environment: For example, suppose that version 2.0 of our application \nintroduced a new IDiagnosticTracing interface that a version 2.0 component will expect to consume. \nIf the version 2.0 component gets loaded by an older 1.0 application, it would fail. We could \nfix this by requiring each consumer to check for any missing dependencies and handle that case, \nbut it would require a lot of checks. A better solution is to ensure that a default implementation \nalways exists, perhaps just a trivial behavior, so that components don't have to worry about it. \n \nUsage: ServiceScope instances are created by calling either ServiceScope.startNewRoot() or \nServiceScope.startNewChild(). They are initially in an \"unfinished\" state, during which provide() \ncan be called to register service keys, but consume() is forbidden. After ServiceScope.finish() \nis called, consume() is allowed and provide() is now forbidden. These semantics ensure that \nServiceScope.consume() always returns the same result for the same key, and does not depend on \norder of initialization. It also allows us to support circular dependencies without worrying \nabout infinite loops, even when working with external components that were implemented by \nthird parties. To avoid mistakes, it's best to always call consume() inside a callback from \nserviceScope.whenFinished().",
+        "genericType": "T",
+        "returnType": "T;",
+        "returnDescr": "- a newly constructed instance of simpleServiceClass \nThis is a shorthand function that its equivalent to constructing a new instance of the \nsimpleServiceClass, then registering it by calling ServiceScope.provide().",
+        "params": [
+          {
+            "name": "serviceKey",
+            "dataType": "ServiceKey<T>",
+            "isOptional": false,
+            "descr": "- the key that can be used later to consume the service \nThis is a shorthand function that its equivalent to constructing a new instance of the \nsimpleServiceClass, then registering it by calling ServiceScope.provide()."
+          },
+          {
+            "name": "simpleServiceClass",
+            "dataType": "{ new (serviceScope: ServiceScope) }",
+            "isOptional": false,
+            "descr": "- the TypeScript class to be constructed \nThis is a shorthand function that its equivalent to constructing a new instance of the \nsimpleServiceClass, then registering it by calling ServiceScope.provide()."
+          }
+        ]
+      },
+      "createDefaultAndProvide<T>~bI8M9": {
+        "accessModifier": "public",
+        "signature": "createDefaultAndProvide<T>(serviceKey: ServiceKey<T>): T",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "ServiceScope provides a formalized way for components to register and consume dependencies \n(\"services\"), and to enable different implementations to be registered in different scopes. \nThis improves modularity by decoupling components from their dependencies in an extensible way. \n \nFor example, suppose that various components need access to an IPageManager instance. We could \nsimply make the PageManager a singleton (i.e. global variable), but this will not work e.g. if \nwe need to create a pop-up dialog that requires a second PageManager instance. A better solution \nwould be to add the PageManager as a constructor parameter for each component that requires it, \nhowever then we immediately face the problem that any code that calls these constructors \nalso needs a PageManager parameter. In an application with many such dependencies, business \nlogic that ties together many subsystems would eventually pick up a constructor parameter \nfor every possible dependency, which is unwieldy. A natural solution would be to move all the \ndependencies into a class with name like \"ApplicationContext\", and then pass this around as our \nconstructor parameter. This enables the PageManager to be passed to classes that need it \nwithout cluttering the intermediary classes that don't. However, it still has a design problem \nthat \"ApplicationContext\" has hard-coded dependencies on many unrelated things. A more flexible \napproach is to make it a dictionary that can look up items for consumers/providers who know the \nright lookup key (i.e. ServiceKey). This is the popular \"service locator\" design pattern, \nfamiliar from the SPContext API in classic SharePoint. \n \nServiceScope takes this idea a step further in two important ways: First, it provides a scoping \nmechanism so that e.g. if we had two different pages, they could each consume a unique PageManager \ninstance while still sharing other common dependencies. Secondly, it allows for a ServiceKey \nto provide a default implementation of the dependency. This is important for API stability in \nour modular client-side environment: For example, suppose that version 2.0 of our application \nintroduced a new IDiagnosticTracing interface that a version 2.0 component will expect to consume. \nIf the version 2.0 component gets loaded by an older 1.0 application, it would fail. We could \nfix this by requiring each consumer to check for any missing dependencies and handle that case, \nbut it would require a lot of checks. A better solution is to ensure that a default implementation \nalways exists, perhaps just a trivial behavior, so that components don't have to worry about it. \n \nUsage: ServiceScope instances are created by calling either ServiceScope.startNewRoot() or \nServiceScope.startNewChild(). They are initially in an \"unfinished\" state, during which provide() \ncan be called to register service keys, but consume() is forbidden. After ServiceScope.finish() \nis called, consume() is allowed and provide() is now forbidden. These semantics ensure that \nServiceScope.consume() always returns the same result for the same key, and does not depend on \norder of initialization. It also allows us to support circular dependencies without worrying \nabout infinite loops, even when working with external components that were implemented by \nthird parties. To avoid mistakes, it's best to always call consume() inside a callback from \nserviceScope.whenFinished().",
+        "genericType": "T",
+        "returnType": "T",
+        "returnDescr": "- a service instance that was constructed using ServiceKey.defaultCreator \nThis is a shorthand function that constructs the default implementation of the specified \nserviceKey, and then registers it by calling ServiceScope.provide().",
+        "params": [
+          {
+            "name": "serviceKey",
+            "dataType": "ServiceKey<T>",
+            "isOptional": false,
+            "descr": "- the key that can be used later to consume the service \nThis is a shorthand function that constructs the default implementation of the specified \nserviceKey, and then registers it by calling ServiceScope.provide()."
+          }
+        ]
+      },
+      "finish~N9F89": {
+        "accessModifier": "public",
+        "signature": "finish(): void",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "ServiceScope provides a formalized way for components to register and consume dependencies \n(\"services\"), and to enable different implementations to be registered in different scopes. \nThis improves modularity by decoupling components from their dependencies in an extensible way. \n \nFor example, suppose that various components need access to an IPageManager instance. We could \nsimply make the PageManager a singleton (i.e. global variable), but this will not work e.g. if \nwe need to create a pop-up dialog that requires a second PageManager instance. A better solution \nwould be to add the PageManager as a constructor parameter for each component that requires it, \nhowever then we immediately face the problem that any code that calls these constructors \nalso needs a PageManager parameter. In an application with many such dependencies, business \nlogic that ties together many subsystems would eventually pick up a constructor parameter \nfor every possible dependency, which is unwieldy. A natural solution would be to move all the \ndependencies into a class with name like \"ApplicationContext\", and then pass this around as our \nconstructor parameter. This enables the PageManager to be passed to classes that need it \nwithout cluttering the intermediary classes that don't. However, it still has a design problem \nthat \"ApplicationContext\" has hard-coded dependencies on many unrelated things. A more flexible \napproach is to make it a dictionary that can look up items for consumers/providers who know the \nright lookup key (i.e. ServiceKey). This is the popular \"service locator\" design pattern, \nfamiliar from the SPContext API in classic SharePoint. \n \nServiceScope takes this idea a step further in two important ways: First, it provides a scoping \nmechanism so that e.g. if we had two different pages, they could each consume a unique PageManager \ninstance while still sharing other common dependencies. Secondly, it allows for a ServiceKey \nto provide a default implementation of the dependency. This is important for API stability in \nour modular client-side environment: For example, suppose that version 2.0 of our application \nintroduced a new IDiagnosticTracing interface that a version 2.0 component will expect to consume. \nIf the version 2.0 component gets loaded by an older 1.0 application, it would fail. We could \nfix this by requiring each consumer to check for any missing dependencies and handle that case, \nbut it would require a lot of checks. A better solution is to ensure that a default implementation \nalways exists, perhaps just a trivial behavior, so that components don't have to worry about it. \n \nUsage: ServiceScope instances are created by calling either ServiceScope.startNewRoot() or \nServiceScope.startNewChild(). They are initially in an \"unfinished\" state, during which provide() \ncan be called to register service keys, but consume() is forbidden. After ServiceScope.finish() \nis called, consume() is allowed and provide() is now forbidden. These semantics ensure that \nServiceScope.consume() always returns the same result for the same key, and does not depend on \norder of initialization. It also allows us to support circular dependencies without worrying \nabout infinite loops, even when working with external components that were implemented by \nthird parties. To avoid mistakes, it's best to always call consume() inside a callback from \nserviceScope.whenFinished().",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": "- a service instance that was constructed using ServiceKey.defaultCreator \nThis is a shorthand function that constructs the default implementation of the specified \nserviceKey, and then registers it by calling ServiceScope.provide().",
+        "params": []
+      },
+      "getParent~O7ac9": {
+        "accessModifier": "public",
+        "signature": "getParent(): ServiceScope",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "ServiceScope provides a formalized way for components to register and consume dependencies \n(\"services\"), and to enable different implementations to be registered in different scopes. \nThis improves modularity by decoupling components from their dependencies in an extensible way. \n \nFor example, suppose that various components need access to an IPageManager instance. We could \nsimply make the PageManager a singleton (i.e. global variable), but this will not work e.g. if \nwe need to create a pop-up dialog that requires a second PageManager instance. A better solution \nwould be to add the PageManager as a constructor parameter for each component that requires it, \nhowever then we immediately face the problem that any code that calls these constructors \nalso needs a PageManager parameter. In an application with many such dependencies, business \nlogic that ties together many subsystems would eventually pick up a constructor parameter \nfor every possible dependency, which is unwieldy. A natural solution would be to move all the \ndependencies into a class with name like \"ApplicationContext\", and then pass this around as our \nconstructor parameter. This enables the PageManager to be passed to classes that need it \nwithout cluttering the intermediary classes that don't. However, it still has a design problem \nthat \"ApplicationContext\" has hard-coded dependencies on many unrelated things. A more flexible \napproach is to make it a dictionary that can look up items for consumers/providers who know the \nright lookup key (i.e. ServiceKey). This is the popular \"service locator\" design pattern, \nfamiliar from the SPContext API in classic SharePoint. \n \nServiceScope takes this idea a step further in two important ways: First, it provides a scoping \nmechanism so that e.g. if we had two different pages, they could each consume a unique PageManager \ninstance while still sharing other common dependencies. Secondly, it allows for a ServiceKey \nto provide a default implementation of the dependency. This is important for API stability in \nour modular client-side environment: For example, suppose that version 2.0 of our application \nintroduced a new IDiagnosticTracing interface that a version 2.0 component will expect to consume. \nIf the version 2.0 component gets loaded by an older 1.0 application, it would fail. We could \nfix this by requiring each consumer to check for any missing dependencies and handle that case, \nbut it would require a lot of checks. A better solution is to ensure that a default implementation \nalways exists, perhaps just a trivial behavior, so that components don't have to worry about it. \n \nUsage: ServiceScope instances are created by calling either ServiceScope.startNewRoot() or \nServiceScope.startNewChild(). They are initially in an \"unfinished\" state, during which provide() \ncan be called to register service keys, but consume() is forbidden. After ServiceScope.finish() \nis called, consume() is allowed and provide() is now forbidden. These semantics ensure that \nServiceScope.consume() always returns the same result for the same key, and does not depend on \norder of initialization. It also allows us to support circular dependencies without worrying \nabout infinite loops, even when working with external components that were implemented by \nthird parties. To avoid mistakes, it's best to always call consume() inside a callback from \nserviceScope.whenFinished().",
+        "genericType": null,
+        "returnType": "ServiceScope",
+        "returnDescr": "- the parent service scope \nReturns the parent of the current ServiceScope, or undefined if this is a root scope.",
+        "params": []
+      },
+      "provide<T>~GSDc9": {
+        "accessModifier": "public",
+        "signature": "provide<T>(serviceKey: ServiceKey<T>,service: T): T",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "ServiceScope provides a formalized way for components to register and consume dependencies \n(\"services\"), and to enable different implementations to be registered in different scopes. \nThis improves modularity by decoupling components from their dependencies in an extensible way. \n \nFor example, suppose that various components need access to an IPageManager instance. We could \nsimply make the PageManager a singleton (i.e. global variable), but this will not work e.g. if \nwe need to create a pop-up dialog that requires a second PageManager instance. A better solution \nwould be to add the PageManager as a constructor parameter for each component that requires it, \nhowever then we immediately face the problem that any code that calls these constructors \nalso needs a PageManager parameter. In an application with many such dependencies, business \nlogic that ties together many subsystems would eventually pick up a constructor parameter \nfor every possible dependency, which is unwieldy. A natural solution would be to move all the \ndependencies into a class with name like \"ApplicationContext\", and then pass this around as our \nconstructor parameter. This enables the PageManager to be passed to classes that need it \nwithout cluttering the intermediary classes that don't. However, it still has a design problem \nthat \"ApplicationContext\" has hard-coded dependencies on many unrelated things. A more flexible \napproach is to make it a dictionary that can look up items for consumers/providers who know the \nright lookup key (i.e. ServiceKey). This is the popular \"service locator\" design pattern, \nfamiliar from the SPContext API in classic SharePoint. \n \nServiceScope takes this idea a step further in two important ways: First, it provides a scoping \nmechanism so that e.g. if we had two different pages, they could each consume a unique PageManager \ninstance while still sharing other common dependencies. Secondly, it allows for a ServiceKey \nto provide a default implementation of the dependency. This is important for API stability in \nour modular client-side environment: For example, suppose that version 2.0 of our application \nintroduced a new IDiagnosticTracing interface that a version 2.0 component will expect to consume. \nIf the version 2.0 component gets loaded by an older 1.0 application, it would fail. We could \nfix this by requiring each consumer to check for any missing dependencies and handle that case, \nbut it would require a lot of checks. A better solution is to ensure that a default implementation \nalways exists, perhaps just a trivial behavior, so that components don't have to worry about it. \n \nUsage: ServiceScope instances are created by calling either ServiceScope.startNewRoot() or \nServiceScope.startNewChild(). They are initially in an \"unfinished\" state, during which provide() \ncan be called to register service keys, but consume() is forbidden. After ServiceScope.finish() \nis called, consume() is allowed and provide() is now forbidden. These semantics ensure that \nServiceScope.consume() always returns the same result for the same key, and does not depend on \norder of initialization. It also allows us to support circular dependencies without worrying \nabout infinite loops, even when working with external components that were implemented by \nthird parties. To avoid mistakes, it's best to always call consume() inside a callback from \nserviceScope.whenFinished().",
+        "genericType": "T",
+        "returnType": "T",
+        "returnDescr": "- the same object that was passed as the \"service\" parameter \nServiceScope.provide() is used to register an implemententation of the given serviceKey \nfor the current scope. It may only be used when the ServiceScope is in an \"unfinished\" \nstate, i.e. before finish() has been called.",
+        "params": [
+          {
+            "name": "serviceKey",
+            "dataType": "ServiceKey<T>",
+            "isOptional": false,
+            "descr": "- the key that will later be used to consume the service \nServiceScope.provide() is used to register an implemententation of the given serviceKey \nfor the current scope. It may only be used when the ServiceScope is in an \"unfinished\" \nstate, i.e. before finish() has been called."
+          },
+          {
+            "name": "service",
+            "dataType": "T",
+            "isOptional": false,
+            "descr": "- the service instance that is being registered \nServiceScope.provide() is used to register an implemententation of the given serviceKey \nfor the current scope. It may only be used when the ServiceScope is in an \"unfinished\" \nstate, i.e. before finish() has been called."
+          }
+        ]
+      },
+      "startNewChild~XAHs9": {
+        "accessModifier": "public",
+        "signature": "startNewChild(): ServiceScope",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "ServiceScope provides a formalized way for components to register and consume dependencies \n(\"services\"), and to enable different implementations to be registered in different scopes. \nThis improves modularity by decoupling components from their dependencies in an extensible way. \n \nFor example, suppose that various components need access to an IPageManager instance. We could \nsimply make the PageManager a singleton (i.e. global variable), but this will not work e.g. if \nwe need to create a pop-up dialog that requires a second PageManager instance. A better solution \nwould be to add the PageManager as a constructor parameter for each component that requires it, \nhowever then we immediately face the problem that any code that calls these constructors \nalso needs a PageManager parameter. In an application with many such dependencies, business \nlogic that ties together many subsystems would eventually pick up a constructor parameter \nfor every possible dependency, which is unwieldy. A natural solution would be to move all the \ndependencies into a class with name like \"ApplicationContext\", and then pass this around as our \nconstructor parameter. This enables the PageManager to be passed to classes that need it \nwithout cluttering the intermediary classes that don't. However, it still has a design problem \nthat \"ApplicationContext\" has hard-coded dependencies on many unrelated things. A more flexible \napproach is to make it a dictionary that can look up items for consumers/providers who know the \nright lookup key (i.e. ServiceKey). This is the popular \"service locator\" design pattern, \nfamiliar from the SPContext API in classic SharePoint. \n \nServiceScope takes this idea a step further in two important ways: First, it provides a scoping \nmechanism so that e.g. if we had two different pages, they could each consume a unique PageManager \ninstance while still sharing other common dependencies. Secondly, it allows for a ServiceKey \nto provide a default implementation of the dependency. This is important for API stability in \nour modular client-side environment: For example, suppose that version 2.0 of our application \nintroduced a new IDiagnosticTracing interface that a version 2.0 component will expect to consume. \nIf the version 2.0 component gets loaded by an older 1.0 application, it would fail. We could \nfix this by requiring each consumer to check for any missing dependencies and handle that case, \nbut it would require a lot of checks. A better solution is to ensure that a default implementation \nalways exists, perhaps just a trivial behavior, so that components don't have to worry about it. \n \nUsage: ServiceScope instances are created by calling either ServiceScope.startNewRoot() or \nServiceScope.startNewChild(). They are initially in an \"unfinished\" state, during which provide() \ncan be called to register service keys, but consume() is forbidden. After ServiceScope.finish() \nis called, consume() is allowed and provide() is now forbidden. These semantics ensure that \nServiceScope.consume() always returns the same result for the same key, and does not depend on \norder of initialization. It also allows us to support circular dependencies without worrying \nabout infinite loops, even when working with external components that were implemented by \nthird parties. To avoid mistakes, it's best to always call consume() inside a callback from \nserviceScope.whenFinished().",
+        "genericType": null,
+        "returnType": "ServiceScope",
+        "returnDescr": "- the newly created root ServiceScope \nConstructs a new ServiceScope that is a child of the current scope. For any keys \nthat are not explicitly provided by the child scope, the parent hierarchy will be \nconsulted.",
+        "params": []
+      },
+      "startNewRoot~Mqls9": {
+        "accessModifier": "public",
+        "signature": "startNewRoot(): ServiceScope",
+        "isStatic": true,
+        "isOptional": false,
+        "descr": "ServiceScope provides a formalized way for components to register and consume dependencies \n(\"services\"), and to enable different implementations to be registered in different scopes. \nThis improves modularity by decoupling components from their dependencies in an extensible way. \n \nFor example, suppose that various components need access to an IPageManager instance. We could \nsimply make the PageManager a singleton (i.e. global variable), but this will not work e.g. if \nwe need to create a pop-up dialog that requires a second PageManager instance. A better solution \nwould be to add the PageManager as a constructor parameter for each component that requires it, \nhowever then we immediately face the problem that any code that calls these constructors \nalso needs a PageManager parameter. In an application with many such dependencies, business \nlogic that ties together many subsystems would eventually pick up a constructor parameter \nfor every possible dependency, which is unwieldy. A natural solution would be to move all the \ndependencies into a class with name like \"ApplicationContext\", and then pass this around as our \nconstructor parameter. This enables the PageManager to be passed to classes that need it \nwithout cluttering the intermediary classes that don't. However, it still has a design problem \nthat \"ApplicationContext\" has hard-coded dependencies on many unrelated things. A more flexible \napproach is to make it a dictionary that can look up items for consumers/providers who know the \nright lookup key (i.e. ServiceKey). This is the popular \"service locator\" design pattern, \nfamiliar from the SPContext API in classic SharePoint. \n \nServiceScope takes this idea a step further in two important ways: First, it provides a scoping \nmechanism so that e.g. if we had two different pages, they could each consume a unique PageManager \ninstance while still sharing other common dependencies. Secondly, it allows for a ServiceKey \nto provide a default implementation of the dependency. This is important for API stability in \nour modular client-side environment: For example, suppose that version 2.0 of our application \nintroduced a new IDiagnosticTracing interface that a version 2.0 component will expect to consume. \nIf the version 2.0 component gets loaded by an older 1.0 application, it would fail. We could \nfix this by requiring each consumer to check for any missing dependencies and handle that case, \nbut it would require a lot of checks. A better solution is to ensure that a default implementation \nalways exists, perhaps just a trivial behavior, so that components don't have to worry about it. \n \nUsage: ServiceScope instances are created by calling either ServiceScope.startNewRoot() or \nServiceScope.startNewChild(). They are initially in an \"unfinished\" state, during which provide() \ncan be called to register service keys, but consume() is forbidden. After ServiceScope.finish() \nis called, consume() is allowed and provide() is now forbidden. These semantics ensure that \nServiceScope.consume() always returns the same result for the same key, and does not depend on \norder of initialization. It also allows us to support circular dependencies without worrying \nabout infinite loops, even when working with external components that were implemented by \nthird parties. To avoid mistakes, it's best to always call consume() inside a callback from \nserviceScope.whenFinished().",
+        "genericType": null,
+        "returnType": "ServiceScope",
+        "returnDescr": "- the newly created root ServiceScope \nCreate a new root-level ServiceScope. Only root-level scopes have the ability to autocreate \ndefault implementations of ServiceKeys.",
+        "params": []
+      },
+      "whenFinished~L9bA9": {
+        "accessModifier": "public",
+        "signature": "whenFinished(callback: () => void): void",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "ServiceScope provides a formalized way for components to register and consume dependencies \n(\"services\"), and to enable different implementations to be registered in different scopes. \nThis improves modularity by decoupling components from their dependencies in an extensible way. \n \nFor example, suppose that various components need access to an IPageManager instance. We could \nsimply make the PageManager a singleton (i.e. global variable), but this will not work e.g. if \nwe need to create a pop-up dialog that requires a second PageManager instance. A better solution \nwould be to add the PageManager as a constructor parameter for each component that requires it, \nhowever then we immediately face the problem that any code that calls these constructors \nalso needs a PageManager parameter. In an application with many such dependencies, business \nlogic that ties together many subsystems would eventually pick up a constructor parameter \nfor every possible dependency, which is unwieldy. A natural solution would be to move all the \ndependencies into a class with name like \"ApplicationContext\", and then pass this around as our \nconstructor parameter. This enables the PageManager to be passed to classes that need it \nwithout cluttering the intermediary classes that don't. However, it still has a design problem \nthat \"ApplicationContext\" has hard-coded dependencies on many unrelated things. A more flexible \napproach is to make it a dictionary that can look up items for consumers/providers who know the \nright lookup key (i.e. ServiceKey). This is the popular \"service locator\" design pattern, \nfamiliar from the SPContext API in classic SharePoint. \n \nServiceScope takes this idea a step further in two important ways: First, it provides a scoping \nmechanism so that e.g. if we had two different pages, they could each consume a unique PageManager \ninstance while still sharing other common dependencies. Secondly, it allows for a ServiceKey \nto provide a default implementation of the dependency. This is important for API stability in \nour modular client-side environment: For example, suppose that version 2.0 of our application \nintroduced a new IDiagnosticTracing interface that a version 2.0 component will expect to consume. \nIf the version 2.0 component gets loaded by an older 1.0 application, it would fail. We could \nfix this by requiring each consumer to check for any missing dependencies and handle that case, \nbut it would require a lot of checks. A better solution is to ensure that a default implementation \nalways exists, perhaps just a trivial behavior, so that components don't have to worry about it. \n \nUsage: ServiceScope instances are created by calling either ServiceScope.startNewRoot() or \nServiceScope.startNewChild(). They are initially in an \"unfinished\" state, during which provide() \ncan be called to register service keys, but consume() is forbidden. After ServiceScope.finish() \nis called, consume() is allowed and provide() is now forbidden. These semantics ensure that \nServiceScope.consume() always returns the same result for the same key, and does not depend on \norder of initialization. It also allows us to support circular dependencies without worrying \nabout infinite loops, even when working with external components that were implemented by \nthird parties. To avoid mistakes, it's best to always call consume() inside a callback from \nserviceScope.whenFinished().",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": "- the newly created root ServiceScope \nCreate a new root-level ServiceScope. Only root-level scopes have the ability to autocreate \ndefault implementations of ServiceKeys.",
+        "params": [
+          {
+            "name": "callback",
+            "dataType": "() => void",
+            "isOptional": false,
+            "descr": "- A block of code that needs to call ServiceScope.consume() \nIt is an error to call ServiceScope.consume() before finish() has been called. \nThe most reliable way to protect your component against this error is to perform the \nconsume() calls inside a whenFinished() callback. If the service scope is already \nfinished, then the callback will be executed immediately; otherwise, it will be executed \nlater when the scope is finished."
+          }
+        ]
+      }
+    },
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "SPPermission": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx",
+    "properties": {
+      "public": {
+        "dataType": "SPPermission",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx"
+      }
+    },
+    "functions": {},
+    "methods": {
+      "constructor~ORTo9": {
+        "accessModifier": "public",
+        "signature": "constructor(value: IODataBasePermission)",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx",
+        "genericType": null,
+        "returnType": "SPPermission",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "value",
+            "dataType": "IODataBasePermission",
+            "isOptional": false,
+            "descr": ""
+          }
+        ]
+      },
+      "hasAllPermissions~e1lY9": {
+        "accessModifier": "public",
+        "signature": "hasAllPermissions(...requestedPerms: SPPermission[]): boolean",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx",
+        "genericType": null,
+        "returnType": "boolean",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "...requestedPerms",
+            "dataType": "SPPermission[]",
+            "isOptional": false,
+            "descr": ""
+          }
+        ]
+      },
+      "hasAnyPermissions~fXxs9": {
+        "accessModifier": "public",
+        "signature": "hasAnyPermissions(...requestedPerms: SPPermission[]): boolean",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx",
+        "genericType": null,
+        "returnType": "boolean",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "...requestedPerms",
+            "dataType": "SPPermission[]",
+            "isOptional": false,
+            "descr": ""
+          }
+        ]
+      },
+      "hasPermission~sBGA9": {
+        "accessModifier": "public",
+        "signature": "hasPermission(requestedPerm: SPPermission): boolean",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx",
+        "genericType": null,
+        "returnType": "boolean",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "requestedPerm",
+            "dataType": "SPPermission",
+            "isOptional": false,
+            "descr": "- The SPPermission object to be compared against the original \nFunction for checking if a given permission mask has the requested permission."
+          }
+        ]
+      }
+    },
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "SPSite": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "This class is primarily used with the PageContext class. It provides contextual \ninformation for the SharePoint site collection (\"site\") that hosts the page. \n",
+    "properties": {
+      "public": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "This class is primarily used with the PageContext class. It provides contextual \ninformation for the SharePoint site collection (\"site\") that hosts the page. \n"
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "SPUser": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "This class is primarily used with the PageContext class. It provides contextual information \nfor the SharePoint user that is accessing the page. \n",
+    "properties": {
+      "public": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "This class is primarily used with the PageContext class. It provides contextual information \nfor the SharePoint user that is accessing the page. \n"
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "SPWeb": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "This class is primarily used with the PageContext class. It provides contextual \ninformation for the SharePoint site (\"web\") that hosts the page.",
+    "properties": {
+      "public": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "This class is primarily used with the PageContext class. It provides contextual \ninformation for the SharePoint site (\"web\") that hosts the page."
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "UrlQueryParameterCollection": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "Class for storing and retrieving query parameters. \nThe URL can be server-relative and it will parse empty/null strings. \nThe query parameters must start with? to indicate the first query parameter and \nuse & for all subsequent parameters. The class also supports fragments. \nEdge cases behavior: \nEmpty value (www.example.com/?test=) stores key and empty value \nNo equals in queryParam (www.example.com/?test) stores key and undefined value \nEmpty queryParam (www.example.com/?&debug=on) stores undefined key and value \nQuery param with only equals (www.example.com/?=&debug=on stores empty string key and value",
+    "properties": {},
+    "functions": {},
+    "methods": {
+      "constructor~mnJI9": {
+        "accessModifier": "public",
+        "signature": "constructor(url: string)",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "Class for storing and retrieving query parameters. \nThe URL can be server-relative and it will parse empty/null strings. \nThe query parameters must start with? to indicate the first query parameter and \nuse & for all subsequent parameters. The class also supports fragments. \nEdge cases behavior: \nEmpty value (www.example.com/?test=) stores key and empty value \nNo equals in queryParam (www.example.com/?test) stores key and undefined value \nEmpty queryParam (www.example.com/?&debug=on) stores undefined key and value \nQuery param with only equals (www.example.com/?=&debug=on stores empty string key and value",
+        "genericType": null,
+        "returnType": "UrlQueryParameterCollection",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "url",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": ""
+          }
+        ]
+      },
+      "getValue~eNIk9": {
+        "accessModifier": "public",
+        "signature": "getValue(param: string): string",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "Class for storing and retrieving query parameters. \nThe URL can be server-relative and it will parse empty/null strings. \nThe query parameters must start with? to indicate the first query parameter and \nuse & for all subsequent parameters. The class also supports fragments. \nEdge cases behavior: \nEmpty value (www.example.com/?test=) stores key and empty value \nNo equals in queryParam (www.example.com/?test) stores key and undefined value \nEmpty queryParam (www.example.com/?&debug=on) stores undefined key and value \nQuery param with only equals (www.example.com/?=&debug=on stores empty string key and value",
+        "genericType": null,
+        "returnType": "string",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "param",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": "the case insensitive key for the desired query parameter value. \nReturns the value of the first matching query parameter or undefined if the key doesn't exist. \nExamples: this._queryParameterList = [ \n{key: TEST, value: done}, \n{key: DEBUG, value: false}, \n{key: TEST, value: notdone}] \ngetValue('TEST') ---> 'done' \ngetValue('debug') ---> 'false' \ngetValue('lost') ---> undefined"
+          }
+        ]
+      },
+      "getValues~9Dec9": {
+        "accessModifier": "public",
+        "signature": "getValues(param: string): string[]",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "Class for storing and retrieving query parameters. \nThe URL can be server-relative and it will parse empty/null strings. \nThe query parameters must start with? to indicate the first query parameter and \nuse & for all subsequent parameters. The class also supports fragments. \nEdge cases behavior: \nEmpty value (www.example.com/?test=) stores key and empty value \nNo equals in queryParam (www.example.com/?test) stores key and undefined value \nEmpty queryParam (www.example.com/?&debug=on) stores undefined key and value \nQuery param with only equals (www.example.com/?=&debug=on stores empty string key and value",
+        "genericType": null,
+        "returnType": "string[]",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "param",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": "the case insensitive key for the desired query parameter value. \nReturns the values of all of the matching query parameters or undefined if the key doesn't exist. \nExamples: this._queryParameterList = [ \n{key: TEST, value: done}, \n{key: DEBUG, value: false}, \n{key: TEST, value: notdone}] \ngetValues('TEST') ---> ['done', 'notdone'] \ngetValues('debug') ---> ['false'] \ngetValues('lost') ---> undefined"
+          }
+        ]
+      }
+    },
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "UrlUtilities": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "Common helper functions for working with URLs. These utilities are intended to be simple, \nsmall, and extremely common. Do not add advanced parsing logic to this file.",
+    "properties": {},
+    "functions": {},
+    "methods": {
+      "convertToODataStringLiteral~neLw9": {
+        "accessModifier": "public",
+        "signature": "convertToODataStringLiteral(value: string): string",
+        "isStatic": true,
+        "isOptional": false,
+        "descr": "Common helper functions for working with URLs. These utilities are intended to be simple, \nsmall, and extremely common. Do not add advanced parsing logic to this file.",
+        "genericType": null,
+        "returnType": "string",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "value",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": ""
+          }
+        ]
+      },
+      "removeEndSlash~aIsA9": {
+        "accessModifier": "public",
+        "signature": "removeEndSlash(url: string): string",
+        "isStatic": true,
+        "isOptional": false,
+        "descr": "Common helper functions for working with URLs. These utilities are intended to be simple, \nsmall, and extremely common. Do not add advanced parsing logic to this file.",
+        "genericType": null,
+        "returnType": "string",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "url",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": "the URL to be normalized \nRemoves any slash characters from the end of the URL. \nThis function assumes that the input is already a valid absolute or server-relative URL. \nExamples: \nremoveEndSlash('http://example.com/') ---> 'http://example.com' \nremoveEndSlash('/example') ---> '/example' \nremoveEndSlash('/') ---> ''"
+          }
+        ]
+      }
+    },
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "Validate": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "This class implements provides a standard way to validate properties and function parameters. \nUnlike an assertion, the Validate checks are always performed and will always throw an error, \neven in a production release. As such, be careful not to overuse these checks in a way \nthat might impact performance.",
+    "properties": {},
+    "functions": {},
+    "methods": {
+      "isNonemptyString~tK9c9": {
+        "accessModifier": "public",
+        "signature": "isNonemptyString(value: string,variableName: string): void",
+        "isStatic": true,
+        "isOptional": false,
+        "descr": "This class implements provides a standard way to validate properties and function parameters. \nUnlike an assertion, the Validate checks are always performed and will always throw an error, \neven in a production release. As such, be careful not to overuse these checks in a way \nthat might impact performance.",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "value",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": "- the value to check \nThrows an exception if the specified string is null, undefined, or an empty string."
+          },
+          {
+            "name": "variableName",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": "- the program variable name,which will be mentioned in the error message \nThrows an exception if the specified string is null, undefined, or an empty string."
+          }
+        ]
+      },
+      "isNotNullOrUndefined~KyJc9": {
+        "accessModifier": "public",
+        "signature": "isNotNullOrUndefined(value: any,variableName: string): void",
+        "isStatic": true,
+        "isOptional": false,
+        "descr": "This class implements provides a standard way to validate properties and function parameters. \nUnlike an assertion, the Validate checks are always performed and will always throw an error, \neven in a production release. As such, be careful not to overuse these checks in a way \nthat might impact performance.",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "value",
+            "dataType": "any",
+            "isOptional": false,
+            "descr": "- the value to check \nThrows an exception if the specified value is null or undefined."
+          },
+          {
+            "name": "variableName",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": "- the program variable name,which will be mentioned in the error message \nThrows an exception if the specified value is null or undefined."
+          }
+        ]
+      },
+      "isTrue~RW4Y9": {
+        "accessModifier": "public",
+        "signature": "isTrue(value: boolean,variableName: string): void",
+        "isStatic": true,
+        "isOptional": false,
+        "descr": "This class implements provides a standard way to validate properties and function parameters. \nUnlike an assertion, the Validate checks are always performed and will always throw an error, \neven in a production release. As such, be careful not to overuse these checks in a way \nthat might impact performance.",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "value",
+            "dataType": "boolean",
+            "isOptional": false,
+            "descr": "- the value to check \nThrows an exception if the specified value is not true."
+          },
+          {
+            "name": "variableName",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": "- the program variable name,which will be mentioned in the error message \nThrows an exception if the specified value is not true."
+          }
+        ]
+      }
+    },
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  }
+}

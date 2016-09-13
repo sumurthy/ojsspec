@@ -1,57 +1,289 @@
 {
-  "PropertyPaneCheckbox~vs7w9": {
+  "combineURLPaths~JcMs9": {
     "accessModifier": "public",
-    "signature": "PropertyPaneCheckbox(targetProperty: string,",
+    "signature": "combineURLPaths(...url: string[]): string",
     "isStatic": false,
     "isOptional": false,
-    "descr": "",
+    "descr": "Combines any number of URL paths.",
     "genericType": null,
-    "returnType": "string,",
+    "returnType": "string",
     "returnDescr": "",
-    "params": []
+    "params": [
+      {
+        "name": "...url",
+        "dataType": "string[]",
+        "isOptional": false,
+        "descr": ""
+      }
+    ]
   },
-  "PropertyPaneChoiceGroup~QY5A9": {
+  "getPathNameFromAbsoluteUrl~uobc9": {
     "accessModifier": "public",
-    "signature": "PropertyPaneChoiceGroup(targetProperty: string,",
+    "signature": "getPathNameFromAbsoluteUrl(url: string): string",
     "isStatic": false,
     "isOptional": false,
-    "descr": "",
+    "descr": "Get's the path name from an absolute url. \n",
     "genericType": null,
-    "returnType": "string,",
+    "returnType": "string",
     "returnDescr": "",
-    "params": []
+    "params": [
+      {
+        "name": "url",
+        "dataType": "string",
+        "isOptional": false,
+        "descr": ""
+      }
+    ]
   },
-  "PropertyPaneCustomField~xxbk9": {
+  "PropertyPaneButton~1Guo9": {
     "accessModifier": "public",
-    "signature": "PropertyPaneCustomField(targetProperty: string,",
+    "signature": "PropertyPaneButton(targetProperty: string,properties: IPropertyPaneButtonProps): IPropertyPaneField<IPropertyPaneButtonProps>",
     "isStatic": false,
     "isOptional": false,
-    "descr": "",
+    "descr": "Helper method to create a Button on the PropertyPane.",
     "genericType": null,
-    "returnType": "string,",
+    "returnType": "IPropertyPaneField<IPropertyPaneButtonProps>",
     "returnDescr": "",
-    "params": []
+    "params": [
+      {
+        "name": "targetProperty",
+        "dataType": "string",
+        "isOptional": false,
+        "descr": "- Target property the Button is associated to. \nHelper method to create a Button on the PropertyPane."
+      },
+      {
+        "name": "properties",
+        "dataType": "IPropertyPaneButtonProps",
+        "isOptional": false,
+        "descr": "- Strongly typed Button properties. \nHelper method to create a Button on the PropertyPane."
+      }
+    ]
   },
-  "PropertyPaneDropdown~axKE9": {
+  "PropertyPaneCheckbox~tNJQ9": {
     "accessModifier": "public",
-    "signature": "PropertyPaneDropdown(targetProperty: string,",
+    "signature": "PropertyPaneCheckbox(targetProperty: string,properties: IPropertyPaneCheckboxProps): IPropertyPaneField<IPropertyPaneCheckboxProps>",
     "isStatic": false,
     "isOptional": false,
-    "descr": "",
+    "descr": "Helper method to create a Checkbox on the PropertyPane.",
     "genericType": null,
-    "returnType": "string,",
+    "returnType": "IPropertyPaneField<IPropertyPaneCheckboxProps>",
     "returnDescr": "",
-    "params": []
+    "params": [
+      {
+        "name": "targetProperty",
+        "dataType": "string",
+        "isOptional": false,
+        "descr": "- Target property the checkbox is associated to. \nHelper method to create a Checkbox on the PropertyPane."
+      },
+      {
+        "name": "properties",
+        "dataType": "IPropertyPaneCheckboxProps",
+        "isOptional": false,
+        "descr": "- Strongly typed Checkbox properties. \nHelper method to create a Checkbox on the PropertyPane."
+      }
+    ]
+  },
+  "PropertyPaneChoiceGroup~2m0w9": {
+    "accessModifier": "public",
+    "signature": "PropertyPaneChoiceGroup(targetProperty: string,properties: IPropertyPaneChoiceGroupProps): IPropertyPaneField<IPropertyPaneChoiceGroupProps>",
+    "isStatic": false,
+    "isOptional": false,
+    "descr": "Helper method to create a Choice Group on the PropertyPane.",
+    "genericType": null,
+    "returnType": "IPropertyPaneField<IPropertyPaneChoiceGroupProps>",
+    "returnDescr": "",
+    "params": [
+      {
+        "name": "targetProperty",
+        "dataType": "string",
+        "isOptional": false,
+        "descr": "- Target property the choice group is associated to. \nHelper method to create a Choice Group on the PropertyPane."
+      },
+      {
+        "name": "properties",
+        "dataType": "IPropertyPaneChoiceGroupProps",
+        "isOptional": false,
+        "descr": "- Strongly typed Choice Group properties. \nHelper method to create a Choice Group on the PropertyPane."
+      }
+    ]
+  },
+  "PropertyPaneCustomField~xR2I9": {
+    "accessModifier": "public",
+    "signature": "PropertyPaneCustomField(targetProperty: string,properties: IPropertyPaneCustomFieldProps): IPropertyPaneField<IPropertyPaneCustomFieldProps>",
+    "isStatic": false,
+    "isOptional": false,
+    "descr": "Helper method to create a Choice Group on the PropertyPane.",
+    "genericType": null,
+    "returnType": "IPropertyPaneField<IPropertyPaneCustomFieldProps>",
+    "returnDescr": "",
+    "params": [
+      {
+        "name": "targetProperty",
+        "dataType": "string",
+        "isOptional": false,
+        "descr": "- Target property the choice group is associated to. \nHelper method to create a Choice Group on the PropertyPane."
+      },
+      {
+        "name": "properties",
+        "dataType": "IPropertyPaneCustomFieldProps",
+        "isOptional": false,
+        "descr": "- Strongly typed Choice Group properties. \nHelper method to create a Choice Group on the PropertyPane."
+      }
+    ]
+  },
+  "PropertyPaneDropdown~eDlQ9": {
+    "accessModifier": "public",
+    "signature": "PropertyPaneDropdown(targetProperty: string,properties: IPropertyPaneDropdownProps): IPropertyPaneField<IPropertyPaneDropdownProps>",
+    "isStatic": false,
+    "isOptional": false,
+    "descr": "Helper method to create a Dropdown on the PropertyPane.",
+    "genericType": null,
+    "returnType": "IPropertyPaneField<IPropertyPaneDropdownProps>",
+    "returnDescr": "",
+    "params": [
+      {
+        "name": "targetProperty",
+        "dataType": "string",
+        "isOptional": false,
+        "descr": "- Target property the dropdown is associated to. \nHelper method to create a Dropdown on the PropertyPane."
+      },
+      {
+        "name": "properties",
+        "dataType": "IPropertyPaneDropdownProps",
+        "isOptional": false,
+        "descr": "- Strongly typed Dropdown properties. \nHelper method to create a Dropdown on the PropertyPane."
+      }
+    ]
   },
   "PropertyPaneHorizontalRule~VulY9": {
     "accessModifier": "public",
     "signature": "PropertyPaneHorizontalRule(): IPropertyPaneField<void>",
     "isStatic": false,
     "isOptional": false,
-    "descr": "",
+    "descr": "Helper method to create a Horizontal Rule on the PropertyPane.",
     "genericType": null,
     "returnType": "IPropertyPaneField<void>",
     "returnDescr": "",
     "params": []
+  },
+  "PropertyPaneLabel~9uPQ9": {
+    "accessModifier": "public",
+    "signature": "PropertyPaneLabel(targetProperty: string,properties: IPropertyPaneLabelProps): IPropertyPaneField<IPropertyPaneLabelProps>",
+    "isStatic": false,
+    "isOptional": false,
+    "descr": "Helper method to create a Label on the PropertyPane.",
+    "genericType": null,
+    "returnType": "IPropertyPaneField<IPropertyPaneLabelProps>",
+    "returnDescr": "",
+    "params": [
+      {
+        "name": "targetProperty",
+        "dataType": "string",
+        "isOptional": false,
+        "descr": "- Target property the label is associated to. \nHelper method to create a Label on the PropertyPane."
+      },
+      {
+        "name": "properties",
+        "dataType": "IPropertyPaneLabelProps",
+        "isOptional": false,
+        "descr": "- Strongly typed Label properties. \nHelper method to create a Label on the PropertyPane."
+      }
+    ]
+  },
+  "PropertyPaneLink~7ses9": {
+    "accessModifier": "public",
+    "signature": "PropertyPaneLink(targetProperty: string,properties: IPropertyPaneLinkProps): IPropertyPaneField<IPropertyPaneLinkProps>",
+    "isStatic": false,
+    "isOptional": false,
+    "descr": "Helper method to create a Link on the PropertyPane.",
+    "genericType": null,
+    "returnType": "IPropertyPaneField<IPropertyPaneLinkProps>",
+    "returnDescr": "",
+    "params": [
+      {
+        "name": "targetProperty",
+        "dataType": "string",
+        "isOptional": false,
+        "descr": "- Target property the Link is associated to. \nHelper method to create a Link on the PropertyPane."
+      },
+      {
+        "name": "properties",
+        "dataType": "IPropertyPaneLinkProps",
+        "isOptional": false,
+        "descr": "- Strongly typed Link properties. \nHelper method to create a Link on the PropertyPane."
+      }
+    ]
+  },
+  "PropertyPaneSlider~gqcs9": {
+    "accessModifier": "public",
+    "signature": "PropertyPaneSlider(targetProperty: string,properties: IPropertyPaneSliderProps): IPropertyPaneField<IPropertyPaneSliderProps>",
+    "isStatic": false,
+    "isOptional": false,
+    "descr": "Helper method to create a Slider on the PropertyPane.",
+    "genericType": null,
+    "returnType": "IPropertyPaneField<IPropertyPaneSliderProps>",
+    "returnDescr": "",
+    "params": [
+      {
+        "name": "targetProperty",
+        "dataType": "string",
+        "isOptional": false,
+        "descr": "- Target property the slider is associated to. \nHelper method to create a Slider on the PropertyPane."
+      },
+      {
+        "name": "properties",
+        "dataType": "IPropertyPaneSliderProps",
+        "isOptional": false,
+        "descr": "- Strongly typed Slider properties. \nHelper method to create a Slider on the PropertyPane."
+      }
+    ]
+  },
+  "PropertyPaneTextField~ZV7c9": {
+    "accessModifier": "public",
+    "signature": "PropertyPaneTextField(targetProperty: string,properties: IPropertyPaneTextFieldProps): IPropertyPaneField<IPropertyPaneTextFieldProps>",
+    "isStatic": false,
+    "isOptional": false,
+    "descr": "Helper method to create a TextField on the PropertyPane.",
+    "genericType": null,
+    "returnType": "IPropertyPaneField<IPropertyPaneTextFieldProps>",
+    "returnDescr": "",
+    "params": [
+      {
+        "name": "targetProperty",
+        "dataType": "string",
+        "isOptional": false,
+        "descr": "- Target property the textfield is associated to. \nHelper method to create a TextField on the PropertyPane."
+      },
+      {
+        "name": "properties",
+        "dataType": "IPropertyPaneTextFieldProps",
+        "isOptional": false,
+        "descr": "- Strongly typed TextField properties. \nHelper method to create a TextField on the PropertyPane."
+      }
+    ]
+  },
+  "PropertyPaneToggle~3vB09": {
+    "accessModifier": "public",
+    "signature": "PropertyPaneToggle(targetProperty: string,properties: IPropertyPaneToggleProps): IPropertyPaneField<IPropertyPaneToggleProps>",
+    "isStatic": false,
+    "isOptional": false,
+    "descr": "Helper method to create a Toggle on the PropertyPane.",
+    "genericType": null,
+    "returnType": "IPropertyPaneField<IPropertyPaneToggleProps>",
+    "returnDescr": "",
+    "params": [
+      {
+        "name": "targetProperty",
+        "dataType": "string",
+        "isOptional": false,
+        "descr": "- Target property the toggle is associated to. \nHelper method to create a Toggle on the PropertyPane."
+      },
+      {
+        "name": "properties",
+        "dataType": "IPropertyPaneToggleProps",
+        "isOptional": false,
+        "descr": "- Strongly typed Toggle properties. \nHelper method to create a Toggle on the PropertyPane."
+      }
+    ]
   }
 }

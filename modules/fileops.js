@@ -1,7 +1,7 @@
 let fs = require ('fs')
 let nl = require('os').EOL;
 
-module.exports  = {
+var self = module.exports  = {
   walkFiles: (path='', pattern=null) => {
     try {
         var fl = fs.readdirSync(path)
@@ -63,7 +63,34 @@ module.exports  = {
 			throw e
     }
   },
+  createFolder: (path='') => {
+    try {
+        if (!fs.existsSync(path)){
+            fs.mkdirSync(path);
+        }
+    }
+    catch(e)
+    {
+      console.log(`Error creating folder, path: ${path}`)
+			throw e
+    }
+  },
 
+removeFolderRec: (path='') => {
+    var files = [];
+    if( fs.existsSync(path) ) {
+        files = fs.readdirSync(path);
+        files.forEach((file,index) => {
+            var curPath = path + "/" + file;
+            if(fs.lstatSync(curPath).isDirectory()) {
+                self.removeFolderRec(curPath);
+            } else {
+                fs.unlinkSync(curPath);
+            }
+        });
+        fs.rmdirSync(path);
+    }
+},
   remove: (path='') => {
     try {
         fs.unlinkSync(path)

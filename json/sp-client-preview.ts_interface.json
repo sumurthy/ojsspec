@@ -1,1 +1,1824 @@
-{}
+{
+  "IClientSideWebPartStatusRenderer": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "",
+    "properties": {},
+    "functions": {},
+    "methods": {
+      "clearError~yEto9": {
+        "accessModifier": "public",
+        "signature": "clearError(domElement: HTMLElement): void",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "domElement",
+            "dataType": "HTMLElement",
+            "isOptional": false,
+            "descr": "- the webpart container div. \nClear the webpart error message."
+          }
+        ]
+      },
+      "clearLoadingIndicator~kHpU9": {
+        "accessModifier": "public",
+        "signature": "clearLoadingIndicator(domElement: Element): void",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "domElement",
+            "dataType": "Element",
+            "isOptional": false,
+            "descr": "- the webpart container div. \nClear the loading indicator."
+          }
+        ]
+      },
+      "displayLoadingIndicator~BAYY9": {
+        "accessModifier": "public",
+        "signature": "displayLoadingIndicator(domElement: Element,loadingMessage: string): void",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "domElement",
+            "dataType": "Element",
+            "isOptional": false,
+            "descr": "- the webpart container div. \nDisplay a loading spinner."
+          },
+          {
+            "name": "loadingMessage",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": "- the message to be displayed when the loading spinner id displayed. \nDisplay a loading spinner."
+          }
+        ]
+      },
+      "renderError~aUm89": {
+        "accessModifier": "public",
+        "signature": "renderError(domElement: HTMLElement,error: Error | string): void",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "domElement",
+            "dataType": "HTMLElement",
+            "isOptional": false,
+            "descr": "- the webpart container div. \nRender the provided error message in the webpart container div."
+          },
+          {
+            "name": "error",
+            "dataType": "Error | string",
+            "isOptional": false,
+            "descr": "- the error message. \nRender the provided error message in the webpart container div."
+          }
+        ]
+      }
+    },
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IHtmlProperties": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "Structure of the data that a webpart developer can return on the onBeforeSerialize() API. \nThe outcome contains 3 kay/value dictionaries for properties that need to be search indexed. \nBoth keys and values are expected to be strings and will be HTML encoded during serialization. \n \n{ \nsearchableProperties: { 'prop1': 'value_of_prop1' }, \nlinkProperties: { 'prop2': 'http://www.contoso.com/page1.aspx' }, \nimageLinkPropertes: { 'prop3': 'http://www.contoso.com/imag.png' } \n} \n \nThis input would get translated to the following HTML string. \n \n\"<div data-sp-prop-name='prop1'>value1</div> \nlink data-sp-prop-name='prop2' href='http://www.contoso.com/page1.aspx'> \nimg data-sp-prop-name='prop2' href='http://www.contoso.com/image.png'>\" \n",
+    "properties": {
+      "[": {
+        "dataType": "string ]: string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Structure of the data that a webpart developer can return on the onBeforeSerialize() API. \nThe outcome contains 3 kay/value dictionaries for properties that need to be search indexed. \nBoth keys and values are expected to be strings and will be HTML encoded during serialization. \n \n{ \nsearchableProperties: { 'prop1': 'value_of_prop1' }, \nlinkProperties: { 'prop2': 'http://www.contoso.com/page1.aspx' }, \nimageLinkPropertes: { 'prop3': 'http://www.contoso.com/imag.png' } \n} \n \nThis input would get translated to the following HTML string. \n \n\"<div data-sp-prop-name='prop1'>value1</div> \nlink data-sp-prop-name='prop2' href='http://www.contoso.com/page1.aspx'> \nimg data-sp-prop-name='prop2' href='http://www.contoso.com/image.png'>\" \n"
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IOdataList": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "Represents an OData SP.List object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx",
+    "properties": {
+      "BaseTemplate": {
+        "dataType": "number",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Represents an OData SP.List object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+      },
+      "Created": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Example: \"/Date(1453294804000)/\""
+      },
+      "CurrentChangeToken": {
+        "dataType": "IODataChangeToken",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Example: \"/Date(1453294804000)/\""
+      },
+      "Description": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Example: \"/Date(1453294804000)/\""
+      },
+      "EntityTypeName": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Example: \"MyListTitleList\""
+      },
+      "Hidden": {
+        "dataType": "boolean",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Example: \"MyListTitleList\""
+      },
+      "Id": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Example: \"/Guid(9fb9199b-65f2-4a4a-b597-11d1a44422c1)/\""
+      },
+      "LastItemDeletedDate": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Example: \"/Date(1453294809000)/\""
+      },
+      "LastItemModifiedDate": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Example: \"/Date(1453294809000)/\""
+      },
+      "ListItemEntityTypeFullName": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Example: \"SP.Data.MyListTitleListItem\""
+      },
+      "ParentWebUrl": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Example: \"/sites/PubSite\""
+      },
+      "TemplateFeatureId": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Example: \"/Guid(22a9ef51-737b-4ff2-9346-694633fe4416)/\""
+      },
+      "Title": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Example: \"Pages\""
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IOdataListItem": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "Represents an OData SP.ListItem object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx",
+    "properties": {
+      "StringValue": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Example: { StrinValue: \"0x010100C5...\" }"
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IOdataUser": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "Represents an OData SP.User object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx",
+    "properties": {
+      "Email": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Example: \"someone@example.com\""
+      },
+      "Id": {
+        "dataType": "number",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Example: \"someone@example.com\""
+      },
+      "IsSiteAdmin": {
+        "dataType": "boolean",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Example: \"someone@example.com\""
+      },
+      "LoginName": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Example: \"i:0#.w|domain\\user\""
+      },
+      "PrincipalType": {
+        "dataType": "number",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Example: \"i:0#.w|domain\\user\""
+      },
+      "Title": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Example: \"DOMAIN\\user\""
+      },
+      "UserId": {
+        "dataType": "IOdataUserId",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Example: \"DOMAIN\\user\""
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IOdataUserId": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "Represents an OData SP.UserId object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx",
+    "properties": {
+      "NameId": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Example: \"s-1-5-21-2127521184-1604012920-1887927527-2632426\""
+      },
+      "NameIdIssuer": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Example: \"urn:office:idp:activedirectory\""
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IPropertyPaneButtonProps": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "",
+    "properties": {
+      "ariaDescription": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "ariaLabel": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "buttonType": {
+        "dataType": "PropertyPaneButtonType",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "description": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "disabled": {
+        "dataType": "boolean",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "icon": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "onClick": {
+        "dataType": "function",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": "(value: any)",
+        "returnType": "any",
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "text": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IPropertyPaneCheckboxProps": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "",
+    "properties": {
+      "isChecked": {
+        "dataType": "boolean",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "isEnabled": {
+        "dataType": "boolean",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "text": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IPropertyPaneChoiceGroupOption": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "",
+    "properties": {
+      "imageSrc": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "The src of image for choice field."
+      },
+      "isChecked": {
+        "dataType": "boolean",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Whether the options is checked or not."
+      },
+      "isDisabled": {
+        "dataType": "boolean",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Whether the options is checked or not."
+      },
+      "key": {
+        "dataType": "string | number",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Whether the options is checked or not."
+      },
+      "selectedImageSrc": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Whether the options is checked or not."
+      },
+      "text": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Whether the options is checked or not."
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IPropertyPaneChoiceGroupProps": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "",
+    "properties": {
+      "label": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "options": {
+        "dataType": "IPropertyPaneChoiceGroupOption",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IPropertyPaneCustomFieldProps": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "",
+    "properties": {
+      "onDispose": {
+        "dataType": "function",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": "(elem: HTMLElement)",
+        "returnType": "void",
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "onRender": {
+        "dataType": "function",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": "(elem: HTMLElement)",
+        "returnType": "void",
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IPropertyPaneData": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "Web part - PropertyPane data contract.",
+    "properties": {
+      "onClose": {
+        "dataType": "function",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": "()",
+        "returnType": "void",
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Event callback for 'Close' click."
+      },
+      "onConfigurationComplete": {
+        "dataType": "function",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": "()",
+        "returnType": "void",
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Event callback fired when the configuration is completed for the web part."
+      },
+      "onLostFocus": {
+        "dataType": "function",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": "()",
+        "returnType": "void",
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Event callback fired when the focus is handed back to the web part"
+      },
+      "onPropertyChange": {
+        "dataType": "function",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": "(propertyName: string,newValue: any)",
+        "returnType": "void",
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Notification event fired when the property has already been validated and modified."
+      },
+      "onRendered": {
+        "dataType": "function",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": "()",
+        "returnType": "void",
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Event callback fired after the PropertyPane is rendered."
+      },
+      "onSave": {
+        "dataType": "function",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": "()",
+        "returnType": "void",
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Event callback for 'Apply' click."
+      },
+      "properties": {
+        "dataType": "any",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Property bag from the web part."
+      },
+      "settings": {
+        "dataType": "IPropertyPaneSettings",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Web part configuration settings."
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IPropertyPaneDropdownOption": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "",
+    "properties": {
+      "index": {
+        "dataType": "number",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Index for this option."
+      },
+      "isSelected": {
+        "dataType": "boolean",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Whether this option is currently selected."
+      },
+      "key": {
+        "dataType": "string | number",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "A key to uniquely identify this option."
+      },
+      "text": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Text to render for this option."
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IPropertyPaneDropdownProps": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "",
+    "properties": {
+      "isDisabled": {
+        "dataType": "boolean",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "label": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "options": {
+        "dataType": "IPropertyPaneDropdownOption",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "selectedKey": {
+        "dataType": "string | number",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IPropertyPaneField": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "",
+    "properties": {
+      "properties": {
+        "dataType": "TProperties",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "targetProperty": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "type": {
+        "dataType": "IPropertyPaneFieldType",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IPropertyPaneGroup": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "PropertyPane group. Group is part of the PropertyPanePage.",
+    "properties": {
+      "groupFields": {
+        "dataType": "IPropertyPaneField<any>",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "List of PropertyPane fields."
+      },
+      "groupName": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Display name for the group."
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IPropertyPaneLabelProps": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "",
+    "properties": {
+      "required": {
+        "dataType": "boolean",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "text": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IPropertyPaneLinkProps": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "",
+    "properties": {
+      "href": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "popupWindowProps": {
+        "dataType": "IPopupWindowProps",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "target": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "text": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IPropertyPanePage": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "PropertyPanePage interface.",
+    "properties": {
+      "displayGroupsAsAccordion": {
+        "dataType": "boolean",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Indicates whether the groups on the PropertyPanePage are displayed as accordion or not."
+      },
+      "groups": {
+        "dataType": "IPropertyPaneGroup",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "List of groups to be displayed on the PropertyPane page."
+      },
+      "header": {
+        "dataType": "IPropertyPanePageHeader",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "PropertyPane page header."
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IPropertyPanePageHeader": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "PropertyPane header. \nThis header remains same for all the pages.",
+    "properties": {
+      "description": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Header to display."
+      },
+      "image": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Image url for the background image."
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IPropertyPaneSettings": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "Web part configuration settings",
+    "properties": {
+      "currentPage": {
+        "dataType": "number",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Page to be displayed on the PropertyPane."
+      },
+      "pages": {
+        "dataType": "IPropertyPanePage",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Total number of pages on the PropertyPane."
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IPropertyPaneSliderProps": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "",
+    "properties": {
+      "ariaLabel": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "disabled": {
+        "dataType": "boolean",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "label": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "max": {
+        "dataType": "number",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "min": {
+        "dataType": "number",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "showValue": {
+        "dataType": "boolean",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "step": {
+        "dataType": "number",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "value": {
+        "dataType": "number",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IPropertyPaneTextFieldProps": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "",
+    "properties": {
+      "ariaLabel": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "deferredValidationTime": {
+        "dataType": "number",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "description": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "errorMessage": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "label": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "multiline": {
+        "dataType": "boolean",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "onGetErrorMessage": {
+        "dataType": "function",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": "(value: string)",
+        "returnType": "string | Promise<string>",
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "placeholder": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "resizable": {
+        "dataType": "boolean",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "underlined": {
+        "dataType": "boolean",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "value": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IPropertyPaneToggleProps": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "",
+    "properties": {
+      "checked": {
+        "dataType": "boolean",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "disabled": {
+        "dataType": "boolean",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "key": {
+        "dataType": "string | number",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "label": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "offText": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "onText": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IWebPartConfigurationEventCallback": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "Configuration event callback",
+    "properties": {},
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IWebPartContext": {
+    "implementsExtendsName": "IClientSideComponentContext<IClientSideWebPartManifestInstance<any>>",
+    "genericType": null,
+    "descr": "Web part context interface.",
+    "properties": {
+      "basicHttpClient": {
+        "dataType": "BasicHttpClient",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "BasicHttpClient instance scoped to this web part."
+      },
+      "configureStart": {
+        "dataType": "function",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": "(id: string,propertyPaneState?: PropertyPaneState)",
+        "returnType": "void",
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Function to open the PropertyPane to help configure this web part."
+      },
+      "domElement": {
+        "dataType": "HTMLElement",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Reference to the DOM element that hosts this client side component."
+      },
+      "environment": {
+        "dataType": "Environment",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Environment that webparts are hosted in."
+      },
+      "host": {
+        "dataType": "IWebPartHost",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Web part host."
+      },
+      "httpClient": {
+        "dataType": "HttpClient",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "HttpClient instance scoped to this web part."
+      },
+      "instanceId": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Web part instance id. This is a globally unique value."
+      },
+      "manifest": {
+        "dataType": "TManifest",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Client side component manifest."
+      },
+      "pageContext": {
+        "dataType": "PageContext",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "SharePoint page context."
+      },
+      "serviceScope": {
+        "dataType": "ServiceScope",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Service scope instance that is scoped to this particular web part."
+      },
+      "statusRenderer": {
+        "dataType": "IClientSideWebPartStatusRenderer",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Web part status renderer."
+      },
+      "webPartTag": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Web part tag to be used for logging and telemetry."
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IWebPartData": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "",
+    "properties": {
+      "htmlProperties": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "id": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "instanceId": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "properties": {
+        "dataType": "any",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "title": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      },
+      "version": {
+        "dataType": "string",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": ""
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IWebPartHost": {
+    "implementsExtendsName": "IServiceScopeProvider",
+    "genericType": null,
+    "descr": "A web part host is a component,control or a page that hosts client side web parts. \nThe web part infrastructure provides many features inbuilt e.g. an HttpClient to make \nserver requests and the SPPageContext. The porpose of this interface is not to replicate \nthose feature. This interface outlines the services and features where there needs to be \na direct interaction between the host and the web part infrastructure. This interface also \noutlines some services where the web part host may want to override the default \nimplementations provided by the infrastructure. Let us discuss some examples: \n \n- APIs like setDirty, webPartConfigurationEventCallback help the web part infrastucture \ncommunicate the fact that some web part is in a dirty state or web part communication \nevents to the host. \n \n- In future we expect that this interface will be used to provide services where the host \nmight want to override the default implemenations. e.g. \n- the web part status rendering service. The default implementation of this service \nprovides an office fabric spinny. But a certain host could easily want to show a \ndifferent spinny. \n \n- The event aggregation service. Currently the web part manager hosts a single event \nevent aggregator. But there are possibilities when a page can have multiple hosts \nand each host may want to scope its event aggregation service.",
+    "properties": {
+      "serviceScope": {
+        "dataType": "ServiceScope",
+        "accessModifier": null,
+        "isOptional": false,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "ServiceScope provides a formalized way for components to register and consume dependencies \n(\"services\"), and to enable different implementations to be registered in different scopes. \nThis improves modularity by decoupling components from their dependencies in an extensible way. \nserviceScope: ServiceScope;"
+      },
+      "setDirty": {
+        "dataType": "function",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": "(instanceId: string,data?: any)",
+        "returnType": "void",
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "ServiceScope provides a formalized way for components to register and consume dependencies \n(\"services\"), and to enable different implementations to be registered in different scopes. \nThis improves modularity by decoupling components from their dependencies in an extensible way. \nserviceScope: ServiceScope;"
+      },
+      "webPartConfigurationEventCallback": {
+        "dataType": "IWebPartConfigurationEventCallback",
+        "accessModifier": null,
+        "isOptional": true,
+        "readonly": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "isCollection": false,
+        "descr": "Web part configuration event callback."
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  }
+}
