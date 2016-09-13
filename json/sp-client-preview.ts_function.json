@@ -49,13 +49,13 @@
         "name": "targetProperty",
         "dataType": "string",
         "isOptional": false,
-        "descr": "- Target property the Button is associated to. \nHelper method to create a Button on the PropertyPane."
+        "descr": "- Target property the Button is associated to."
       },
       {
         "name": "properties",
         "dataType": "IPropertyPaneButtonProps",
         "isOptional": false,
-        "descr": "- Strongly typed Button properties. \nHelper method to create a Button on the PropertyPane."
+        "descr": "- Strongly typed Button properties."
       }
     ]
   },
@@ -73,13 +73,13 @@
         "name": "targetProperty",
         "dataType": "string",
         "isOptional": false,
-        "descr": "- Target property the checkbox is associated to. \nHelper method to create a Checkbox on the PropertyPane."
+        "descr": "- Target property the checkbox is associated to."
       },
       {
         "name": "properties",
         "dataType": "IPropertyPaneCheckboxProps",
         "isOptional": false,
-        "descr": "- Strongly typed Checkbox properties. \nHelper method to create a Checkbox on the PropertyPane."
+        "descr": "- Strongly typed Checkbox properties."
       }
     ]
   },
@@ -97,13 +97,13 @@
         "name": "targetProperty",
         "dataType": "string",
         "isOptional": false,
-        "descr": "- Target property the choice group is associated to. \nHelper method to create a Choice Group on the PropertyPane."
+        "descr": "- Target property the choice group is associated to."
       },
       {
         "name": "properties",
         "dataType": "IPropertyPaneChoiceGroupProps",
         "isOptional": false,
-        "descr": "- Strongly typed Choice Group properties. \nHelper method to create a Choice Group on the PropertyPane."
+        "descr": "- Strongly typed Choice Group properties."
       }
     ]
   },
@@ -121,13 +121,13 @@
         "name": "targetProperty",
         "dataType": "string",
         "isOptional": false,
-        "descr": "- Target property the choice group is associated to. \nHelper method to create a Choice Group on the PropertyPane."
+        "descr": "- Target property the choice group is associated to."
       },
       {
         "name": "properties",
         "dataType": "IPropertyPaneCustomFieldProps",
         "isOptional": false,
-        "descr": "- Strongly typed Choice Group properties. \nHelper method to create a Choice Group on the PropertyPane."
+        "descr": "- Strongly typed Choice Group properties."
       }
     ]
   },
@@ -145,13 +145,13 @@
         "name": "targetProperty",
         "dataType": "string",
         "isOptional": false,
-        "descr": "- Target property the dropdown is associated to. \nHelper method to create a Dropdown on the PropertyPane."
+        "descr": "- Target property the dropdown is associated to."
       },
       {
         "name": "properties",
         "dataType": "IPropertyPaneDropdownProps",
         "isOptional": false,
-        "descr": "- Strongly typed Dropdown properties. \nHelper method to create a Dropdown on the PropertyPane."
+        "descr": "- Strongly typed Dropdown properties."
       }
     ]
   },
@@ -180,13 +180,13 @@
         "name": "targetProperty",
         "dataType": "string",
         "isOptional": false,
-        "descr": "- Target property the label is associated to. \nHelper method to create a Label on the PropertyPane."
+        "descr": "- Target property the label is associated to."
       },
       {
         "name": "properties",
         "dataType": "IPropertyPaneLabelProps",
         "isOptional": false,
-        "descr": "- Strongly typed Label properties. \nHelper method to create a Label on the PropertyPane."
+        "descr": "- Strongly typed Label properties."
       }
     ]
   },
@@ -204,13 +204,13 @@
         "name": "targetProperty",
         "dataType": "string",
         "isOptional": false,
-        "descr": "- Target property the Link is associated to. \nHelper method to create a Link on the PropertyPane."
+        "descr": "- Target property the Link is associated to."
       },
       {
         "name": "properties",
         "dataType": "IPropertyPaneLinkProps",
         "isOptional": false,
-        "descr": "- Strongly typed Link properties. \nHelper method to create a Link on the PropertyPane."
+        "descr": "- Strongly typed Link properties."
       }
     ]
   },
@@ -228,13 +228,13 @@
         "name": "targetProperty",
         "dataType": "string",
         "isOptional": false,
-        "descr": "- Target property the slider is associated to. \nHelper method to create a Slider on the PropertyPane."
+        "descr": "- Target property the slider is associated to."
       },
       {
         "name": "properties",
         "dataType": "IPropertyPaneSliderProps",
         "isOptional": false,
-        "descr": "- Strongly typed Slider properties. \nHelper method to create a Slider on the PropertyPane."
+        "descr": "- Strongly typed Slider properties."
       }
     ]
   },
@@ -252,13 +252,13 @@
         "name": "targetProperty",
         "dataType": "string",
         "isOptional": false,
-        "descr": "- Target property the textfield is associated to. \nHelper method to create a TextField on the PropertyPane."
+        "descr": "- Target property the textfield is associated to."
       },
       {
         "name": "properties",
         "dataType": "IPropertyPaneTextFieldProps",
         "isOptional": false,
-        "descr": "- Strongly typed TextField properties. \nHelper method to create a TextField on the PropertyPane."
+        "descr": "- Strongly typed TextField properties."
       }
     ]
   },
@@ -276,13 +276,13 @@
         "name": "targetProperty",
         "dataType": "string",
         "isOptional": false,
-        "descr": "- Target property the toggle is associated to. \nHelper method to create a Toggle on the PropertyPane."
+        "descr": "- Target property the toggle is associated to."
       },
       {
         "name": "properties",
         "dataType": "IPropertyPaneToggleProps",
         "isOptional": false,
-        "descr": "- Strongly typed Toggle properties. \nHelper method to create a Toggle on the PropertyPane."
+        "descr": "- Strongly typed Toggle properties."
       }
     ]
   }

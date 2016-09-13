@@ -22,7 +22,16 @@ Please refer to the documentation of the individual APIs to make the right decis
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|`protected`     | `null` | `boolean` | _Read-only._ Constructor for the BaseClientSideWebPart class |
+|`accessibleTitle`     | `protected` | `string` | _Read-only._ Constructor for the BaseClientSideWebPart class |
+|`context`     | `protected` | [`IWebPartContext`](../sp-client-preview/iwebpartcontext.md) | _Read-only._ Constructor for the BaseClientSideWebPart class |
+|`disableReactivePropertyChanges`     | `protected` | `boolean` | _Read-only._ Constructor for the BaseClientSideWebPart class |
+|`displayMode`     | `protected` | [`DisplayMode`](../sp-client-base/displaymode.md) | _Read-only._ Constructor for the BaseClientSideWebPart class |
+|`domElement`     | `protected` | `HTMLElement` | _Read-only._ Constructor for the BaseClientSideWebPart class |
+|`previewImageUrl`     | `protected` | `string` | _Read-only._ Constructor for the BaseClientSideWebPart class |
+|`properties`     | `protected` | `TProperties` | _Read-only._ Constructor for the BaseClientSideWebPart class |
+|`propertyPaneSettings`     | `protected` | [`IPropertyPaneSettings`](../sp-client-preview/ipropertypanesettings.md) | _Read-only._ Constructor for the BaseClientSideWebPart class |
+|`renderedFromDefaultProperties`     | `protected` | `boolean` | _Read-only._ Constructor for the BaseClientSideWebPart class |
+|`renderedOnce`     | `protected` | `boolean` | _Read-only._ Constructor for the BaseClientSideWebPart class |
 
 
 
@@ -121,12 +130,6 @@ If a sub class overrides the constructor, it needs to call super(context) as the
 #### Returns
 `TProperties`
 - web part property bag. 
-This API is called once during the lifetime of the web part during the intial render and just before the onInit 
-API call. The purpose of this API is to help a web part developer deserialize the web part data and manage the 
-versioning of their data as the web part code evolves. The web part data may have been persisted with an older 
-or newer version of the web part code. This API gives the web part developer an opportunity to re-structure their 
-data to the appropriate data schema. The persisted data contains the version number information. That information 
-can be used to make decisions on how to re-structure the data. 
 
 
 #### Parameters
@@ -149,12 +152,6 @@ If a sub class overrides the constructor, it needs to call super(context) as the
 #### Returns
 `void`
 - web part property bag. 
-This API is called once during the lifetime of the web part during the intial render and just before the onInit 
-API call. The purpose of this API is to help a web part developer deserialize the web part data and manage the 
-versioning of their data as the web part code evolves. The web part data may have been persisted with an older 
-or newer version of the web part code. This API gives the web part developer an opportunity to re-structure their 
-data to the appropriate data schema. The persisted data contains the version number information. That information 
-can be used to make decisions on how to re-structure the data. 
 
 
 #### Parameters
@@ -173,11 +170,7 @@ If a sub class overrides the constructor, it needs to call super(context) as the
 #### Returns
 [`IHtmlProperties`](../sp-client-preview/ihtmlproperties.md)
 - reference to searchable properties and properties that need link fixup. Please read 
-This API is called before a web part is serialized. The default implementation is a no-op. A web part developer 
-is expected to override this API when the web part's state is not fully reflected in the property bag i.e. 
-this.properties. In the overridden method, the web part developer is expected to update the state of the web 
-part property bag. This way the web part serialization process will use the upto date state of the web part. 
-
+the documentation of IHtmlProperties interface for more details.
 
 #### Parameters
 None
@@ -195,11 +188,7 @@ If a sub class overrides the constructor, it needs to call super(context) as the
 #### Returns
 `void`
 - reference to searchable properties and properties that need link fixup. Please read 
-This API is called before a web part is serialized. The default implementation is a no-op. A web part developer 
-is expected to override this API when the web part's state is not fully reflected in the property bag i.e. 
-this.properties. In the overridden method, the web part developer is expected to update the state of the web 
-part property bag. This way the web part serialization process will use the upto date state of the web part. 
-
+the documentation of IHtmlProperties interface for more details.
 
 #### Parameters
 
@@ -221,11 +210,7 @@ If a sub class overrides the constructor, it needs to call super(context) as the
 #### Returns
 [`Promise<T>`](../es6-promise/promise.md)
 - reference to searchable properties and properties that need link fixup. Please read 
-This API is called before a web part is serialized. The default implementation is a no-op. A web part developer 
-is expected to override this API when the web part's state is not fully reflected in the property bag i.e. 
-this.properties. In the overridden method, the web part developer is expected to update the state of the web 
-part property bag. This way the web part serialization process will use the upto date state of the web part. 
-
+the documentation of IHtmlProperties interface for more details.
 
 #### Parameters
 None
@@ -243,11 +228,7 @@ If a sub class overrides the constructor, it needs to call super(context) as the
 #### Returns
 `void`
 - reference to searchable properties and properties that need link fixup. Please read 
-This API is called before a web part is serialized. The default implementation is a no-op. A web part developer 
-is expected to override this API when the web part's state is not fully reflected in the property bag i.e. 
-this.properties. In the overridden method, the web part developer is expected to update the state of the web 
-part property bag. This way the web part serialization process will use the upto date state of the web part. 
-
+the documentation of IHtmlProperties interface for more details.
 
 #### Parameters
 
@@ -270,11 +251,7 @@ If a sub class overrides the constructor, it needs to call super(context) as the
 #### Returns
 `void`
 - reference to searchable properties and properties that need link fixup. Please read 
-This API is called before a web part is serialized. The default implementation is a no-op. A web part developer 
-is expected to override this API when the web part's state is not fully reflected in the property bag i.e. 
-this.properties. In the overridden method, the web part developer is expected to update the state of the web 
-part property bag. This way the web part serialization process will use the upto date state of the web part. 
-
+the documentation of IHtmlProperties interface for more details.
 
 #### Parameters
 None
@@ -292,11 +269,7 @@ If a sub class overrides the constructor, it needs to call super(context) as the
 #### Returns
 `void`
 - reference to searchable properties and properties that need link fixup. Please read 
-This API is called before a web part is serialized. The default implementation is a no-op. A web part developer 
-is expected to override this API when the web part's state is not fully reflected in the property bag i.e. 
-this.properties. In the overridden method, the web part developer is expected to update the state of the web 
-part property bag. This way the web part serialization process will use the upto date state of the web part. 
-
+the documentation of IHtmlProperties interface for more details.
 
 #### Parameters
 None
@@ -314,11 +287,7 @@ If a sub class overrides the constructor, it needs to call super(context) as the
 #### Returns
 `void`
 - reference to searchable properties and properties that need link fixup. Please read 
-This API is called before a web part is serialized. The default implementation is a no-op. A web part developer 
-is expected to override this API when the web part's state is not fully reflected in the property bag i.e. 
-this.properties. In the overridden method, the web part developer is expected to update the state of the web 
-part property bag. This way the web part serialization process will use the upto date state of the web part. 
-
+the documentation of IHtmlProperties interface for more details.
 
 #### Parameters
 None
@@ -336,11 +305,7 @@ If a sub class overrides the constructor, it needs to call super(context) as the
 #### Returns
 `void`
 - reference to searchable properties and properties that need link fixup. Please read 
-This API is called before a web part is serialized. The default implementation is a no-op. A web part developer 
-is expected to override this API when the web part's state is not fully reflected in the property bag i.e. 
-this.properties. In the overridden method, the web part developer is expected to update the state of the web 
-part property bag. This way the web part serialization process will use the upto date state of the web part. 
-
+the documentation of IHtmlProperties interface for more details.
 
 #### Parameters
 None
@@ -358,11 +323,7 @@ If a sub class overrides the constructor, it needs to call super(context) as the
 #### Returns
 `void`
 - reference to searchable properties and properties that need link fixup. Please read 
-This API is called before a web part is serialized. The default implementation is a no-op. A web part developer 
-is expected to override this API when the web part's state is not fully reflected in the property bag i.e. 
-this.properties. In the overridden method, the web part developer is expected to update the state of the web 
-part property bag. This way the web part serialization process will use the upto date state of the web part. 
-
+the documentation of IHtmlProperties interface for more details.
 
 #### Parameters
 

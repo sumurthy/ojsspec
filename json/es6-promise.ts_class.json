@@ -44,13 +44,13 @@
             "name": "onFulfilled",
             "dataType": "(value: R) => U | Thenable<U>",
             "isOptional": true,
-            "descr": "called when/if \"promise\" resolves \nonFulfilled is called when/if \"promise\" resolves. onRejected is called when/if \"promise\" rejects. \nBoth are optional, if either/both are omitted the next onFulfilled/onRejected in the chain is called. \nBoth callbacks have a single parameter , the fulfillment value or rejection reason. \n\"then\" returns a new promise equivalent to the value you return from onFulfilled/onRejected after being passed through Promise.resolve. \nIf an error is thrown in the callback, the returned promise rejects with that error. \n"
+            "descr": "called when/if \"promise\" resolves"
           },
           {
             "name": "onRejected",
             "dataType": "(error: any) => U | Thenable<U>",
             "isOptional": true,
-            "descr": "called when/if \"promise\" rejects \nonFulfilled is called when/if \"promise\" resolves. onRejected is called when/if \"promise\" rejects. \nBoth are optional, if either/both are omitted the next onFulfilled/onRejected in the chain is called. \nBoth callbacks have a single parameter , the fulfillment value or rejection reason. \n\"then\" returns a new promise equivalent to the value you return from onFulfilled/onRejected after being passed through Promise.resolve. \nIf an error is thrown in the callback, the returned promise rejects with that error. \n"
+            "descr": "called when/if \"promise\" rejects"
           }
         ]
       },
@@ -68,13 +68,13 @@
             "name": "onFulfilled",
             "dataType": "(value: R) => U | Thenable<U>",
             "isOptional": true,
-            "descr": "called when/if \"promise\" resolves \nonFulfilled is called when/if \"promise\" resolves. onRejected is called when/if \"promise\" rejects. \nBoth are optional, if either/both are omitted the next onFulfilled/onRejected in the chain is called. \nBoth callbacks have a single parameter , the fulfillment value or rejection reason. \n\"then\" returns a new promise equivalent to the value you return from onFulfilled/onRejected after being passed through Promise.resolve. \nIf an error is thrown in the callback, the returned promise rejects with that error. \n"
+            "descr": "called when/if \"promise\" resolves"
           },
           {
             "name": "onRejected",
             "dataType": "(error: any) => void",
             "isOptional": true,
-            "descr": "called when/if \"promise\" rejects \nonFulfilled is called when/if \"promise\" resolves. onRejected is called when/if \"promise\" rejects. \nBoth are optional, if either/both are omitted the next onFulfilled/onRejected in the chain is called. \nBoth callbacks have a single parameter , the fulfillment value or rejection reason. \n\"then\" returns a new promise equivalent to the value you return from onFulfilled/onRejected after being passed through Promise.resolve. \nIf an error is thrown in the callback, the returned promise rejects with that error. \n"
+            "descr": "called when/if \"promise\" rejects"
           }
         ]
       },
@@ -92,7 +92,7 @@
             "name": "onRejected",
             "dataType": "(error: any) => U | Thenable<U>",
             "isOptional": true,
-            "descr": "called when/if \"promise\" rejects \nSugar for promise.then(undefined, onRejected) \n"
+            "descr": "called when/if \"promise\" rejects"
           }
         ]
       }

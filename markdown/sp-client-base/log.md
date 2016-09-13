@@ -47,7 +47,7 @@ which component generated the messages and makes the messages useful and filtera
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `source`    | `string` | - the source from where the error is logged,e |
-| `error`    | `Error` | - the error to be logged  Logs an error |
+| `error`    | `Error` | - the error to be logged |
 | `scope`    | [`ServiceScope`](../sp-client-base/servicescope.md) | _Optional._- the service scope that the source uses |
 
 
@@ -71,7 +71,7 @@ which component generated the messages and makes the messages useful and filtera
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `source`    | `string` | - the source from where the message is logged,e |
-| `message`    | `string` | - the message to be logged  Logs an informational message |
+| `message`    | `string` | - the message to be logged  If the message's length is more than 100, only the first 100 characters are kept |
 | `scope`    | [`ServiceScope`](../sp-client-base/servicescope.md) | _Optional._- the service scope that the source uses |
 
 
@@ -95,7 +95,7 @@ which component generated the messages and makes the messages useful and filtera
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `source`    | `string` | - the source from where the message is logged,e |
-| `message`    | `string` | - the message to be logged  Logs a verbose message |
+| `message`    | `string` | - the message to be logged  If the message's length is more than 100, only the first 100 characters are kept |
 | `scope`    | [`ServiceScope`](../sp-client-base/servicescope.md) | _Optional._- the service scope that the source uses |
 
 
@@ -119,6 +119,6 @@ which component generated the messages and makes the messages useful and filtera
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `source`    | `string` | - the source from where the message is logged,e |
-| `message`    | `string` | - the message to be logged  Logs a warning |
+| `message`    | `string` | - the message to be logged  If the message's length is more than 100, only the first 100 characters are kept |
 | `scope`    | [`ServiceScope`](../sp-client-base/servicescope.md) | _Optional._- the service scope that the source uses |
 

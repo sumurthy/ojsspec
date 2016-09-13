@@ -51,7 +51,7 @@ of time. For more information, see the MSDN article
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `webUrl`    | `string` | The URL of the SPWeb that the API call will be issued to |
-| `digestValue`    | `string` | The digest value,which is an opaque that must be generated  Inserts a specific request digest value into the cache |
+| `digestValue`    | `string` | The digest value,which is an opaque that must be generated  by the SharePoint server |
 | `expirationTimestamp`    | `number` | A future point in time,as measured by performance |
 
 
@@ -89,10 +89,7 @@ of time. For more information, see the MSDN article
 
 #### Returns
 `boolean`
-Returns true if a cache entry was found and deleted false otherwise. 
-Clears the cached digest for the specified SPWeb URL. This operation is useful 
-e.g. if an error indicates that a digest was invalidated prior to its expiration time. 
-
+Returns true if a cache entry was found and deleted false otherwise.
 
 #### Parameters
 
@@ -116,10 +113,7 @@ of time. For more information, see the MSDN article
 
 #### Returns
 [`Promise<string>`](../es6-promise/promise.md)
-A promise that is fulfilled with the digest value. 
-Returns a digest string for the specified SPWeb URL. If the cache already contains a usable value, 
-the promise is fulfilled immediately. Otherwise, the promise will be pending and resolve after 
-an HTTP request obtains the digest, which will be added to the cache.
+A promise that is fulfilled with the digest value.
 
 #### Parameters
 

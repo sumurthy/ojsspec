@@ -13,7 +13,8 @@ for the current user of the application.
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|`public`     | `null` | `string` | This class is primarily used with the PageContext class |
+|`currentCultureName`     | `public` | `string` | This class is primarily used with the PageContext class |
+|`currentUICultureName`     | `public` | `string` | This class is primarily used with the PageContext class |
 
 
 

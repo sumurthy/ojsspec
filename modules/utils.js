@@ -173,10 +173,13 @@ var self = module.exports = {
         }
     },
 
-    trimGenerics: (str = '') => {
+    trimGenerics: (str = '', replaceSb=false) => {
         var n = str.split('<')[0]
         if (n) {
-            return n.trim()
+            n = n.trim()
+        }
+        if (replaceSb) {
+            return n.replace('[]','')
         } else {
             return n
         }
@@ -200,12 +203,17 @@ var self = module.exports = {
 
     },
 
-    cleanupName: (name = '') => {
-        return name.split(':')[0].split('=')[0].replace('?', '').trim()
+    cleanupName: (name = '', removeOptional = true) => {
+        if (removeOptional) {
+            return name.split(':')[0].split('=')[0].replace('?', '').trim()
+        } else {
+            return name.split(':')[0].split('=')[0].trim()
+        }
     },
 
-    getPropName: (name = '', removeOptional = true) => {
-        var o = name.replace(':', '')
+    getPropName: (line = '', removeOptional = true) => {
+
+        var o = self.cleanupName(self.stripQualifier(line), removeOptional)
         if (removeOptional) {
             return o.replace('?','')
         } else {
@@ -283,14 +291,10 @@ var self = module.exports = {
         var lastWord = line.substr(start + 1).trim()
 
         p['dataType'] = lastWord.replace(')', '').trim()
-        if (isClass) {
-            p['accessModifier'] = firstWord
-        }
-        else {
-            p['accessModifier'] = null
-        }
+        p['accessModifier'] = self.getAccessModifier(line)
 
-        if (name.includes('?')) {
+        if (self.getPropName(line, false).includes('?')) {
+
             p['isOptional'] = true
         } else {
             p['isOptional'] = false
@@ -298,17 +302,18 @@ var self = module.exports = {
         p['readonly'] = readonly
 
         if (line.includes(')') && line.includes('(')) {
+            p['isCollection'] = ''
             p['dataType'] = 'function'
             p['function'] = '(' + self.inParen(line) + ')'
             p['returnType'] = line.split('=>')[1].trim()
         }
         else {
-            p['dataType'] = lastWord.replace('[]', '').replace(')', '').trim()
+            p['isCollection'] = (lastWord.includes('[]')) ? true : false
+            p['dataType'] = lastWord.replace(')', '').trim()
             p['function'] = null
             p['returnType'] = null
         }
         p['assignValue'] = assignValue
-        p['isCollection'] = (name.includes('[]')) ? true : false
         p['descr'] = descr
         return p
     },

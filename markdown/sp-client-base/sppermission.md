@@ -15,7 +15,43 @@ https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|`public`     | `null` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
+|`addAndCustomizePages`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
+|`addDelPrivateWebParts`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
+|`addListItems`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
+|`applyStyleSheets`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
+|`applyThemeAndBorder`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
+|`approveItems`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
+|`browseDirectories`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
+|`browserUserInfo`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
+|`cancelCheckout`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
+|`createAlerts`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
+|`createGroups`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
+|`createSSCSite`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
+|`deleteListItems`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
+|`deleteVersions`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
+|`editListItems`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
+|`editMyUserInfo`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
+|`emptyMask`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
+|`enumeratePermissions`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
+|`fullMask`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
+|`layoutsPage`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
+|`manageAlerts`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
+|`manageLists`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
+|`managePermissions`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
+|`managePersonalViews`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
+|`manageSubwebs`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
+|`manageWeb`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
+|`open`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
+|`openItems`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
+|`updatePersonalWebParts`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
+|`useClientIntegration`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
+|`useRemoteAPIs`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
+|`value`     | `public` | [`IODataBasePermission`](../sp-client-base/iodatabasepermission.md) | This class can be used to determine if the current user has a requested set of permissions |
+|`viewFormPages`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
+|`viewListItems`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
+|`viewPages`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
+|`viewUsageData`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
+|`viewVersions`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
 
 
 
@@ -74,7 +110,7 @@ https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `...requestedPerms`    | `SPPermission[]` |  |
+| `...requestedPerms`    | [`SPPermission[]`](../sp-client-base/sppermission.md) |  |
 
 
 ### hasAnyPermissions
@@ -96,7 +132,7 @@ https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `...requestedPerms`    | `SPPermission[]` |  |
+| `...requestedPerms`    | [`SPPermission[]`](../sp-client-base/sppermission.md) |  |
 
 
 ### hasPermission
@@ -118,5 +154,5 @@ https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `requestedPerm`    | [`SPPermission`](../sp-client-base/sppermission.md) | - The SPPermission object to be compared against the original  Function for checking if a given permission mask has the requested permission |
+| `requestedPerm`    | [`SPPermission`](../sp-client-base/sppermission.md) | - The SPPermission object to be compared against the original |
 

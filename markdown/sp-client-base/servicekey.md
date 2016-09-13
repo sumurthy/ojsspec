@@ -17,7 +17,9 @@ introduced without inadvertently breaking components that are loaded by an older
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|`public`     | `null` | `string` | The ServiceKey is a lookup key that is used when calling ServiceScope |
+|`defaultCreator`     | `public` | `ServiceCreator<T>` | The ServiceKey is a lookup key that is used when calling ServiceScope |
+|`id`     | `public` | `string` | The ServiceKey is a lookup key that is used when calling ServiceScope |
+|`name`     | `public` | `string` | The ServiceKey is a lookup key that is used when calling ServiceScope |
 
 
 
@@ -74,10 +76,7 @@ introduced without inadvertently breaking components that are loaded by an older
 
 #### Returns
 [`ServiceKey<T>;`](../sp-client-base/servicekey.md)
-- the newly created ServiceKey 
-Constructs a new ServiceKey whose default implementation will be a new instance of 
-a TypeScript class that accepts the standard constructor parameter. If you want to 
-specify custom constructor parameters, use createCustom() instead.
+- the newly created ServiceKey
 
 #### Parameters
 
@@ -102,9 +101,7 @@ introduced without inadvertently breaking components that are loaded by an older
 
 #### Returns
 [`ServiceKey<T>`](../sp-client-base/servicekey.md)
-- the newly created ServiceKey 
-Constructs a new ServiceKey whose default implementation will be obtained 
-by invoking the specified callback.
+- the newly created ServiceKey
 
 #### Parameters
 
@@ -112,5 +109,5 @@ by invoking the specified callback.
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `name`    | `string` | - A name such as "MyApplication |
-| `defaultCreator`    | `ServiceCreator<T>` | - A callback that returns an object that implements the T interface  Constructs a new ServiceKey whose default implementation will be obtained  by invoking the specified callback |
+| `defaultCreator`    | `ServiceCreator<T>` | - A callback that returns an object that implements the T interface |
 

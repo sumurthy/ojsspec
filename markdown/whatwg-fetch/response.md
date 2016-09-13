@@ -12,12 +12,12 @@ _Implements: [`Body`](../whatwg-fetch/body.md)_
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|`type`     | `null` | `string`,[`ResponseType`](../whatwg-fetch/responsetype.md) |  |
-|`url`     | `null` | `string` |  |
-|`status`     | `null` | `number` |  |
-|`ok`     | `null` | `boolean` |  |
-|`statusText`     | `null` | `string` |  |
-|`headers`     | `null` | [`Headers`](../whatwg-fetch/headers.md) |  |
+|`type`     | `public` | `string`,[`ResponseType`](../whatwg-fetch/responsetype.md) |  |
+|`url`     | `public` | `string` |  |
+|`status`     | `public` | `number` |  |
+|`ok`     | `public` | `boolean` |  |
+|`statusText`     | `public` | `string` |  |
+|`headers`     | `public` | [`Headers`](../whatwg-fetch/headers.md) |  |
 
 
 

@@ -16,7 +16,11 @@ application cache.
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|`public`     | `null` | [`SPWeb`](../sp-client-base/spweb.md) | The page context provides standard definitions for common SharePoint objects  that need to be shared between the client-side application, web parts, and other  components |
+|`cultureInfo`     | `public` | [`CultureInfo`](../sp-client-base/cultureinfo.md) | The page context provides standard definitions for common SharePoint objects  that need to be shared between the client-side application, web parts, and other  components |
+|`isInitialized`     | `public` | `boolean` | The page context provides standard definitions for common SharePoint objects  that need to be shared between the client-side application, web parts, and other  components |
+|`site`     | `public` | [`SPSite`](../sp-client-base/spsite.md) | The page context provides standard definitions for common SharePoint objects  that need to be shared between the client-side application, web parts, and other  components |
+|`user`     | `public` | [`SPUser`](../sp-client-base/spuser.md) | The page context provides standard definitions for common SharePoint objects  that need to be shared between the client-side application, web parts, and other  components |
+|`web`     | `public` | [`SPWeb`](../sp-client-base/spweb.md) | The page context provides standard definitions for common SharePoint objects  that need to be shared between the client-side application, web parts, and other  components |
 
 
 

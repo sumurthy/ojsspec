@@ -15,7 +15,7 @@
 |:-------------|:-------|:-----------|
 |`isDisabled`      | `boolean` |  |
 |`label`      | `string` |  |
-|`options`      | [`IPropertyPaneDropdownOption`](../sp-client-preview/ipropertypanedropdownoption.md) |  |
+|`options`      | [`IPropertyPaneDropdownOption[]`](../sp-client-preview/ipropertypanedropdownoption.md) |  |
 |`selectedKey`      | `string `,` number` |  |
 
 

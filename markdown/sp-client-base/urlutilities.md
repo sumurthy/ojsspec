@@ -60,5 +60,5 @@ small, and extremely common. Do not add advanced parsing logic to this file.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | `string` | the URL to be normalized  Removes any slash characters from the end of the URL |
+| `url`    | `string` | the URL to be normalized |
 

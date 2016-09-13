@@ -18,7 +18,6 @@ the same way as "internal" modules are.
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
 |`defaultPath`      | `string `,[` IPath`](../sp-module-interfaces/ipath.md) | This is the interface for a script module with the "localized" type |
-|`[`      | `string ]: string `,` IPath}` | This is the interface for a script module with the "localized" type |
 |`shouldNotPreload`      | `boolean` | This is the interface for a script module with the "localized" type |
 |`type`      | `'internal' `,` 'framework' `,` 'localized'` | This is the interface for a script module with the "localized" type |
 

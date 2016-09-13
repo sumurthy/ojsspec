@@ -175,17 +175,14 @@ serviceScope.whenFinished().
 
 #### Returns
 `T`
-- the service instance 
-Components should call this function to "consume" a dependency, i.e. look up the serviceKey 
-and return the registered service instance. If the instance cannot be found, then a default 
-instance will be autocreated and registered with the root ServiceScope.
+- the service instance
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceKey`    | [`ServiceKey<T>`](../sp-client-base/servicekey.md) | - the key that was used when provide() was called to register the service  Components should call this function to "consume" a dependency, i |
+| `serviceKey`    | [`ServiceKey<T>`](../sp-client-base/servicekey.md) | - the key that was used when provide() was called to register the service |
 
 
 ### createAndProvide<T>
@@ -236,17 +233,15 @@ serviceScope.whenFinished().
 
 #### Returns
 `T;`
-- a newly constructed instance of simpleServiceClass 
-This is a shorthand function that its equivalent to constructing a new instance of the 
-simpleServiceClass, then registering it by calling ServiceScope.provide().
+- a newly constructed instance of simpleServiceClass
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceKey`    | [`ServiceKey<T>`](../sp-client-base/servicekey.md) | - the key that can be used later to consume the service  This is a shorthand function that its equivalent to constructing a new instance of the  simpleServiceClass, then registering it by calling ServiceScope |
-| `simpleServiceClass`    | `{ new (serviceScope: ServiceScope) }` | - the TypeScript class to be constructed  This is a shorthand function that its equivalent to constructing a new instance of the  simpleServiceClass, then registering it by calling ServiceScope |
+| `serviceKey`    | [`ServiceKey<T>`](../sp-client-base/servicekey.md) | - the key that can be used later to consume the service |
+| `simpleServiceClass`    | `{ new (serviceScope: ServiceScope) }` | - the TypeScript class to be constructed |
 
 
 ### createDefaultAndProvide<T>
@@ -297,16 +292,14 @@ serviceScope.whenFinished().
 
 #### Returns
 `T`
-- a service instance that was constructed using ServiceKey.defaultCreator 
-This is a shorthand function that constructs the default implementation of the specified 
-serviceKey, and then registers it by calling ServiceScope.provide().
+- a service instance that was constructed using ServiceKey.defaultCreator
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceKey`    | [`ServiceKey<T>`](../sp-client-base/servicekey.md) | - the key that can be used later to consume the service  This is a shorthand function that constructs the default implementation of the specified  serviceKey, and then registers it by calling ServiceScope |
+| `serviceKey`    | [`ServiceKey<T>`](../sp-client-base/servicekey.md) | - the key that can be used later to consume the service |
 
 
 ### finish
@@ -357,9 +350,7 @@ serviceScope.whenFinished().
 
 #### Returns
 `void`
-- a service instance that was constructed using ServiceKey.defaultCreator 
-This is a shorthand function that constructs the default implementation of the specified 
-serviceKey, and then registers it by calling ServiceScope.provide().
+- a service instance that was constructed using ServiceKey.defaultCreator
 
 #### Parameters
 None
@@ -413,8 +404,7 @@ serviceScope.whenFinished().
 
 #### Returns
 [`ServiceScope`](../sp-client-base/servicescope.md)
-- the parent service scope 
-Returns the parent of the current ServiceScope, or undefined if this is a root scope.
+- the parent service scope
 
 #### Parameters
 None
@@ -468,18 +458,15 @@ serviceScope.whenFinished().
 
 #### Returns
 `T`
-- the same object that was passed as the "service" parameter 
-ServiceScope.provide() is used to register an implemententation of the given serviceKey 
-for the current scope. It may only be used when the ServiceScope is in an "unfinished" 
-state, i.e. before finish() has been called.
+- the same object that was passed as the "service" parameter
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceKey`    | [`ServiceKey<T>`](../sp-client-base/servicekey.md) | - the key that will later be used to consume the service  ServiceScope |
-| `service`    | `T` | - the service instance that is being registered  ServiceScope |
+| `serviceKey`    | [`ServiceKey<T>`](../sp-client-base/servicekey.md) | - the key that will later be used to consume the service |
+| `service`    | `T` | - the service instance that is being registered |
 
 
 ### startNewChild
@@ -530,10 +517,7 @@ serviceScope.whenFinished().
 
 #### Returns
 [`ServiceScope`](../sp-client-base/servicescope.md)
-- the newly created root ServiceScope 
-Constructs a new ServiceScope that is a child of the current scope. For any keys 
-that are not explicitly provided by the child scope, the parent hierarchy will be 
-consulted.
+- the newly created root ServiceScope
 
 #### Parameters
 None
@@ -587,9 +571,7 @@ serviceScope.whenFinished().
 
 #### Returns
 [`ServiceScope`](../sp-client-base/servicescope.md)
-- the newly created root ServiceScope 
-Create a new root-level ServiceScope. Only root-level scopes have the ability to autocreate 
-default implementations of ServiceKeys.
+- the newly created root ServiceScope
 
 #### Parameters
 None
@@ -643,9 +625,7 @@ serviceScope.whenFinished().
 
 #### Returns
 `void`
-- the newly created root ServiceScope 
-Create a new root-level ServiceScope. Only root-level scopes have the ability to autocreate 
-default implementations of ServiceKeys.
+- the newly created root ServiceScope
 
 #### Parameters
 

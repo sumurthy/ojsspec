@@ -13,7 +13,10 @@ information for the SharePoint site ("web") that hosts the page.
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|`public`     | `null` | `string` | This class is primarily used with the PageContext class |
+|`absoluteUrl`     | `public` | `string` | This class is primarily used with the PageContext class |
+|`id`     | `public` | [`Guid`](../sp-client-base/guid.md) | This class is primarily used with the PageContext class |
+|`serverRelativeUrl`     | `public` | `string` | This class is primarily used with the PageContext class |
+|`title`     | `public` | `string` | This class is primarily used with the PageContext class |
 
 
 

@@ -69,8 +69,8 @@ If an error is thrown in the callback, the returned promise rejects with that er
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `onFulfilled`    | `(value: R) => U `,[` Thenable<U>`](../es6-promise/thenable.md) | _Optional._called when/if "promise" resolves  onFulfilled is called when/if "promise" resolves |
-| `onRejected`    | `(error: any) => U `,[` Thenable<U>`](../es6-promise/thenable.md) | _Optional._called when/if "promise" rejects  onFulfilled is called when/if "promise" resolves |
+| `onFulfilled`    | `(value: R) => U `,[` Thenable<U>`](../es6-promise/thenable.md) | _Optional._called when/if "promise" resolves |
+| `onRejected`    | `(error: any) => U `,[` Thenable<U>`](../es6-promise/thenable.md) | _Optional._called when/if "promise" rejects |
 
 
 ### then<U>
@@ -94,8 +94,8 @@ If an error is thrown in the callback, the returned promise rejects with that er
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `onFulfilled`    | `(value: R) => U `,[` Thenable<U>`](../es6-promise/thenable.md) | _Optional._called when/if "promise" resolves  onFulfilled is called when/if "promise" resolves |
-| `onRejected`    | `(error: any) => void` | _Optional._called when/if "promise" rejects  onFulfilled is called when/if "promise" resolves |
+| `onFulfilled`    | `(value: R) => U `,[` Thenable<U>`](../es6-promise/thenable.md) | _Optional._called when/if "promise" resolves |
+| `onRejected`    | `(error: any) => void` | _Optional._called when/if "promise" rejects |
 
 
 ### catch<U>
@@ -119,5 +119,5 @@ If an error is thrown in the callback, the returned promise rejects with that er
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `onRejected`    | `(error: any) => U `,[` Thenable<U>`](../es6-promise/thenable.md) | _Optional._called when/if "promise" rejects  Sugar for promise |
+| `onRejected`    | `(error: any) => U `,[` Thenable<U>`](../es6-promise/thenable.md) | _Optional._called when/if "promise" rejects |
 

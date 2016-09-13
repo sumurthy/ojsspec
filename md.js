@@ -71,15 +71,15 @@ function getLinkForType(type = '') {
             out = out + `[\`${e.replace(/\^/g, ',')}\`](${allTypes[e.trim()]})` + ','
         }
         // try trimming the generics
-        else if (Object.keys(allTypes).includes(Utils.trimGenerics(e))) {
-            out = out + `[\`${e.replace(/\^/g, ',')}\`](${allTypes[Utils.trimGenerics(e).trim()]})` + ','
+        else if (Object.keys(allTypes).includes(Utils.trimGenerics(e,true))) {
+            out = out + `[\`${e.replace(/\^/g, ',')}\`](${allTypes[Utils.trimGenerics(e,true).trim()]})` + ','
         }
         // variables and types match
-        else if (Object.keys(allVarsTypes).includes(Utils.trimGenerics(e))) {
-            out = out + `[\`${e.replace(/\^/g, ',')}\`](${allVarsTypes[Utils.trimGenerics(e)].toLowerCase()})` + ','
+        else if (Object.keys(allVarsTypes).includes(Utils.trimGenerics(e,true))) {
+            out = out + `[\`${e.replace(/\^/g, ',')}\`](${allVarsTypes[Utils.trimGenerics(e,true)].toLowerCase()})` + ','
         }
         // objectName.method name match
-        else if (Object.keys(allVarsTypes).includes(Utils.trimGenerics(e.toLowerCase()))) {
+        else if (Object.keys(allVarsTypes).includes(Utils.trimGenerics(e.toLowerCase(),true))) {
             out = out + `[\`${e.replace(/\^/g, ',')}\`](${allVarsTypes[Utils.trimGenerics(e)].toLowerCase()})` + ','
         }
         else {

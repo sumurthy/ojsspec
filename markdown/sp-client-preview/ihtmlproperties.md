@@ -24,12 +24,6 @@ img data-sp-prop-name='prop2' href='http://www.contoso.com/image.png'>"
 
 
 
-### Properties
-
-| Property	   | Type	| Description|
-|:-------------|:-------|:-----------|
-|`[`      | `string ]: string` | Structure of the data that a webpart developer can return on the onBeforeSerialize() API |
-
 
 
 

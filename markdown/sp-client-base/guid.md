@@ -49,8 +49,7 @@ Math.random() function and may be not be suitable for some applications.
 #### Returns
 `boolean`
 A value indicating whether this instance and the specified Guid object 
-Compare this instance to another Guid instance 
-
+represent the same value
 
 #### Parameters
 
@@ -76,9 +75,7 @@ Math.random() function and may be not be suitable for some applications.
 
 #### Returns
 `boolean`
-Value indicating whether the guid is valid. 
-Indicates whether a guid is valid (according to RFC4122). 
-
+Value indicating whether the guid is valid.
 
 #### Parameters
 
@@ -104,9 +101,7 @@ Math.random() function and may be not be suitable for some applications.
 
 #### Returns
 [`Guid`](../sp-client-base/guid.md)
-A new valid unique Guid object 
-Returns a new Guid instance with a pseudo-randomly generated Guid. 
-
+A new valid unique Guid object
 
 #### Parameters
 
@@ -133,8 +128,7 @@ Math.random() function and may be not be suitable for some applications.
 #### Returns
 `string`
 The GUID value in lowercase hexadecimal without braces. 
-Object.prototype.toString override 
-
+Example: 'd5369f3b-bd7a-412a-9c0f-7f0650bb5489'
 
 #### Parameters
 None
@@ -156,16 +150,12 @@ Math.random() function and may be not be suitable for some applications.
 
 #### Returns
 [`Guid`](../sp-client-base/guid.md)
-If the guid argument was valid,a new Guid instance. Otherwise,undefined. 
-Trys to construct a new Guid instance using guid string. The guid argument 
-is normalized and validated. If the argument is not a valid "version 4" UUID from 
-RFC 4122, tryParse will return undefined. 
-
+If the guid argument was valid,a new Guid instance. Otherwise,undefined.
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `guid`    | `string` | - A guid string  Trys to construct a new Guid instance using guid string |
+| `guid`    | `string` | - A guid string |
 

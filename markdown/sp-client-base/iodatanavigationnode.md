@@ -14,7 +14,7 @@ https://msdn.microsoft.com/en-us/library/office/jj246311.aspx
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`Children`      | [`IODataNavigationNode`](../sp-client-base/iodatanavigationnode.md) | Represents an OData SP |
+|`Children`      | [`IODataNavigationNode[]`](../sp-client-base/iodatanavigationnode.md) | Represents an OData SP |
 |`Id`      | `number` | Represents an OData SP |
 |`IsDocLib`      | `boolean` | Represents an OData SP |
 |`IsExternal`      | `boolean` | Represents an OData SP |

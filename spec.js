@@ -198,7 +198,7 @@ function processComment(index = 0, lines = []) {
                       // (since we are compacting the line, we don't have to do ``.map((s) => s.trim()).filter((e) => e)` at the end of the split)
                       var arr = line.split(' ')
                       if (arr[2] !== undefined) {
-                          var oa = Utils.readCommentAhead(lines, arr.slice(3).join(' '), index)
+                          var oa = Utils.readCommentAhead(lines, arr.slice(3).join(' '), i)
                           ignore_upto = oa['skip'].pop()
                           commentObject['param'].push([arr[2], oa['descr']])
                       }
@@ -206,7 +206,7 @@ function processComment(index = 0, lines = []) {
                   case '@returns':
                       var arr = line.split(' ')
                       if (arr[2] !== undefined) {
-                          var oa = Utils.readCommentAhead(lines, arr.slice(2).join(' '), index)
+                          var oa = Utils.readCommentAhead(lines, arr.slice(2).join(' '), i)
                           ignore_upto = oa['skip'].pop()
                           commentObject['returnDescr'] = oa['descr']
                       }
@@ -279,9 +279,7 @@ function processObject(objectName = '', index = 0, lines = [], isClass) {
     for (var i = (index + 1); i < lines.length; i++) {
         if (ignore_upto >= i) continue
         ignore_upto = i
-
         let line = prepareLine(lines[i])
-
         if (SKIP.includes(firstWord)) continue
 
         if (firstWord === BLOCK_END) {
@@ -294,13 +292,12 @@ function processObject(objectName = '', index = 0, lines = [], isClass) {
             var memberType = Utils.getMemberType(line, isClass)
             if (memberType === 'SKIPBLOCK') {
                 // Handle object
-                var oa = Utils.readObjectAhead(lines, index)
+                var oa = Utils.readObjectAhead(lines, i)
                 ignore_upto = oa['skip'].pop()
                 continue
             } else if (memberType === 'PROPERTY') {   //PROPERTY
                 var p = {}
-                var name = Utils.getPropName(firstWord, false)
-                p['isCollection'] = (secondWord.includes('[]')) ? true : false
+                var name = Utils.getPropName(line, false)
                 var p = Utils.processProperty(name, line, generalDesc, assignValue, false, readonlyProperty)
                 name = name.replace('?','')
                 o['properties'][name] = p

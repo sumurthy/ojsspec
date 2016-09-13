@@ -15,7 +15,7 @@ component developer.
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`globalDependencies`      | `string` | This is the interface for a script module with the "internal" type |
+|`globalDependencies`      | `string[]` | This is the interface for a script module with the "internal" type |
 |`globalName`      | `string` | This is the interface for a script module with the "internal" type |
 |`path`      | `string `,[` IPath`](../sp-module-interfaces/ipath.md) | This is the interface for a script module with the "internal" type |
 |`shouldNotPreload`      | `boolean` | This is the interface for a script module with the "internal" type |

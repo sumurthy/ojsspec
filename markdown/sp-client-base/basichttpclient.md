@@ -14,7 +14,7 @@ enhancements.
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|`protected`     | `null` | [`ServiceScope`](../sp-client-base/servicescope.md) | BasicHttpClient implements a basic set of features for performing REST operations |
+|`serviceScope`     | `protected` | [`ServiceScope`](../sp-client-base/servicescope.md) | BasicHttpClient implements a basic set of features for performing REST operations |
 
 
 
@@ -65,19 +65,15 @@ enhancements.
 
 #### Returns
 [`Promise<Response>`](../es6-promise/promise.md)
-a promise that will return the result 
-Performs a REST service call. Although the HttpClient subclass adds 
-additional enhancements, the parameters and semantics for BasicHttpClient.fetch() 
-are essentially the same as the WHATWG API standard that is documented here: 
-https://fetch.spec.whatwg.org/
+a promise that will return the result
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | `string` | - the URL to fetch  Performs a REST service call |
-| `options`    | [`IBasicHttpClientOptions`](../sp-client-base/ibasichttpclientoptions.md) | - additional options that affect the request  Performs a REST service call |
+| `url`    | `string` | - the URL to fetch |
+| `options`    | [`IBasicHttpClientOptions`](../sp-client-base/ibasichttpclientoptions.md) | - additional options that affect the request |
 
 
 ### fetchCore
@@ -91,11 +87,7 @@ enhancements.
 
 #### Returns
 [`Promise<Response>`](../es6-promise/promise.md)
-a promise that will return the result 
-Performs a REST service call. Although the HttpClient subclass adds 
-additional enhancements, the parameters and semantics for BasicHttpClient.fetch() 
-are essentially the same as the WHATWG API standard that is documented here: 
-https://fetch.spec.whatwg.org/
+a promise that will return the result
 
 #### Parameters
 
@@ -116,16 +108,15 @@ enhancements.
 
 #### Returns
 [`Promise<Response>`](../es6-promise/promise.md)
-a promise that will return the result 
-Calls fetch(), but sets the method to 'GET'.
+a promise that will return the result
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | `string` | - the URL to fetch  Calls fetch(), but sets the method to 'GET' |
-| `options`    | [`IBasicHttpClientOptions`](../sp-client-base/ibasichttpclientoptions.md) | _Optional._- additional options that affect the request  Calls fetch(), but sets the method to 'GET' |
+| `url`    | `string` | - the URL to fetch |
+| `options`    | [`IBasicHttpClientOptions`](../sp-client-base/ibasichttpclientoptions.md) | _Optional._- additional options that affect the request |
 
 
 ### post
@@ -139,14 +130,13 @@ enhancements.
 
 #### Returns
 [`Promise<Response>`](../es6-promise/promise.md)
-a promise that will return the result 
-Calls fetch(), but sets the method to 'POST'.
+a promise that will return the result
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `url`    | `string` | - the URL to fetch  Calls fetch(), but sets the method to 'POST' |
-| `options`    | [`IBasicHttpClientOptions`](../sp-client-base/ibasichttpclientoptions.md) | - additional options that affect the request  Calls fetch(), but sets the method to 'POST' |
+| `url`    | `string` | - the URL to fetch |
+| `options`    | [`IBasicHttpClientOptions`](../sp-client-base/ibasichttpclientoptions.md) | - additional options that affect the request |
 

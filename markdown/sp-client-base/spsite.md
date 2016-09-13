@@ -14,7 +14,7 @@ information for the SharePoint site collection ("site") that hosts the page.
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|`public`     | `null` | `string` | This class is primarily used with the PageContext class |
+|`id`     | `public` | `string` | This class is primarily used with the PageContext class |
 
 
 

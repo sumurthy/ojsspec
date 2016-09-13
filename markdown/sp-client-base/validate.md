@@ -45,8 +45,8 @@ that might impact performance.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | `string` | - the value to check  Throws an exception if the specified string is null, undefined, or an empty string |
-| `variableName`    | `string` | - the program variable name,which will be mentioned in the error message  Throws an exception if the specified string is null, undefined, or an empty string |
+| `value`    | `string` | - the value to check |
+| `variableName`    | `string` | - the program variable name,which will be mentioned in the error message |
 
 
 ### isNotNullOrUndefined
@@ -68,8 +68,8 @@ that might impact performance.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | `any` | - the value to check  Throws an exception if the specified value is null or undefined |
-| `variableName`    | `string` | - the program variable name,which will be mentioned in the error message  Throws an exception if the specified value is null or undefined |
+| `value`    | `any` | - the value to check |
+| `variableName`    | `string` | - the program variable name,which will be mentioned in the error message |
 
 
 ### isTrue
@@ -91,6 +91,6 @@ that might impact performance.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `value`    | `boolean` | - the value to check  Throws an exception if the specified value is not true |
-| `variableName`    | `string` | - the program variable name,which will be mentioned in the error message  Throws an exception if the specified value is not true |
+| `value`    | `boolean` | - the value to check |
+| `variableName`    | `string` | - the program variable name,which will be mentioned in the error message |
 

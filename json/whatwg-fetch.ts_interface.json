@@ -6,68 +6,68 @@
     "properties": {
       "method": {
         "dataType": "string",
-        "accessModifier": null,
+        "accessModifier": "public",
         "isOptional": true,
         "readonly": false,
+        "isCollection": false,
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "isCollection": false,
         "descr": ""
       },
       "headers": {
         "dataType": "HeaderInit|{ [index: string]: string }",
-        "accessModifier": null,
+        "accessModifier": "public",
         "isOptional": true,
         "readonly": false,
+        "isCollection": false,
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "isCollection": false,
         "descr": ""
       },
       "body": {
         "dataType": "BodyInit",
-        "accessModifier": null,
+        "accessModifier": "public",
         "isOptional": true,
         "readonly": false,
+        "isCollection": false,
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "isCollection": false,
         "descr": ""
       },
       "mode": {
         "dataType": "string|RequestMode",
-        "accessModifier": null,
+        "accessModifier": "public",
         "isOptional": true,
         "readonly": false,
+        "isCollection": false,
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "isCollection": false,
         "descr": ""
       },
       "credentials": {
         "dataType": "string|RequestCredentials",
-        "accessModifier": null,
+        "accessModifier": "public",
         "isOptional": true,
         "readonly": false,
+        "isCollection": false,
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "isCollection": false,
         "descr": ""
       },
       "cache": {
         "dataType": "string|RequestCache",
-        "accessModifier": null,
+        "accessModifier": "public",
         "isOptional": true,
         "readonly": false,
+        "isCollection": false,
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "isCollection": false,
         "descr": ""
       }
     },
@@ -85,35 +85,35 @@
     "properties": {
       "status": {
         "dataType": "number",
-        "accessModifier": null,
+        "accessModifier": "public",
         "isOptional": false,
         "readonly": false,
+        "isCollection": false,
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "isCollection": false,
         "descr": ""
       },
       "statusText": {
         "dataType": "string",
-        "accessModifier": null,
+        "accessModifier": "public",
         "isOptional": true,
         "readonly": false,
+        "isCollection": false,
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "isCollection": false,
         "descr": ""
       },
       "headers": {
         "dataType": "HeaderInit",
-        "accessModifier": null,
+        "accessModifier": "public",
         "isOptional": true,
         "readonly": false,
+        "isCollection": false,
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "isCollection": false,
         "descr": ""
       }
     },

@@ -12,14 +12,14 @@ _Implements: [`Body`](../whatwg-fetch/body.md)_
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|`method`     | `null` | `string` |  |
-|`url`     | `null` | `string` |  |
-|`headers`     | `null` | [`Headers`](../whatwg-fetch/headers.md) |  |
-|`context`     | `null` | `string`,[`RequestContext`](../whatwg-fetch/requestcontext.md) |  |
-|`referrer`     | `null` | `string` |  |
-|`mode`     | `null` | `string`,[`RequestMode`](../whatwg-fetch/requestmode.md) |  |
-|`credentials`     | `null` | `string`,[`RequestCredentials`](../whatwg-fetch/requestcredentials.md) |  |
-|`cache`     | `null` | `string`,[`RequestCache`](../whatwg-fetch/requestcache.md) |  |
+|`method`     | `public` | `string` |  |
+|`url`     | `public` | `string` |  |
+|`headers`     | `public` | [`Headers`](../whatwg-fetch/headers.md) |  |
+|`context`     | `public` | `string`,[`RequestContext`](../whatwg-fetch/requestcontext.md) |  |
+|`referrer`     | `public` | `string` |  |
+|`mode`     | `public` | `string`,[`RequestMode`](../whatwg-fetch/requestmode.md) |  |
+|`credentials`     | `public` | `string`,[`RequestCredentials`](../whatwg-fetch/requestcredentials.md) |  |
+|`cache`     | `public` | `string`,[`RequestCache`](../whatwg-fetch/requestcache.md) |  |
 
 
 

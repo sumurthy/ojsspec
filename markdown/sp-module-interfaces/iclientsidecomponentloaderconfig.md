@@ -15,8 +15,7 @@
 |:-------------|:-------|:-----------|
 |`entryModuleId`      | `string` |  |
 |`exportedModuleName`      | `string` |  |
-|`internalModuleBaseUrls`      | `string` |  |
-|`[`      | `string ]: IModuleConfig` |  |
+|`internalModuleBaseUrls`      | `string[]` |  |
 
 
 

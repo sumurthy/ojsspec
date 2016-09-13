@@ -14,8 +14,8 @@ https://msdn.microsoft.com/en-us/library/office/ee557907.aspx
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`quickLaunch`      | [`IODataNavigationNode`](../sp-client-base/iodatanavigationnode.md) | Represents an OData Microsoft |
-|`topNav`      | [`IODataNavigationNode`](../sp-client-base/iodatanavigationnode.md) | Represents an OData Microsoft |
+|`quickLaunch`      | [`IODataNavigationNode[]`](../sp-client-base/iodatanavigationnode.md) | Represents an OData Microsoft |
+|`topNav`      | [`IODataNavigationNode[]`](../sp-client-base/iodatanavigationnode.md) | Represents an OData Microsoft |
 
 
 

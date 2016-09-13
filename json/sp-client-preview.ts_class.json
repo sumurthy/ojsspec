@@ -4,15 +4,114 @@
     "genericType": "TProperties",
     "descr": "This abstract class implements the the base functionality for a client side web part. Every client side web part \nneeds to inherit from this class. Along with the base functionality, this class provides some APIs that can be \nused by the web part. These APIs fall in two catagories. \n \nThe first category of APIs provide data and functionality. Example, the web part context (i.e. this.context). This \nAPI should be used to access contextual data relevant to this web part instance. \n \nThe second category of APIs provide a base implementation for the web part lifecycle and can be overridden for an \nupdated implementation. The render() API is the only API that is mandatory to be implemented/overridden by a web \npart. All other life cycle APIs have a base implementation and can be overridden based on the needs of the web part. \nPlease refer to the documentation of the individual APIs to make the right decision.",
     "properties": {
-      "protected": {
-        "dataType": "boolean",
-        "accessModifier": null,
+      "accessibleTitle": {
+        "dataType": "string",
+        "accessModifier": "protected",
         "isOptional": false,
         "readonly": true,
+        "isCollection": false,
         "function": null,
         "returnType": null,
         "assignValue": null,
+        "descr": "Constructor for the BaseClientSideWebPart class. \nIf a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor. \n"
+      },
+      "context": {
+        "dataType": "IWebPartContext",
+        "accessModifier": "protected",
+        "isOptional": false,
+        "readonly": true,
         "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Constructor for the BaseClientSideWebPart class. \nIf a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor. \n"
+      },
+      "disableReactivePropertyChanges": {
+        "dataType": "boolean",
+        "accessModifier": "protected",
+        "isOptional": false,
+        "readonly": true,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Constructor for the BaseClientSideWebPart class. \nIf a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor. \n"
+      },
+      "displayMode": {
+        "dataType": "DisplayMode",
+        "accessModifier": "protected",
+        "isOptional": false,
+        "readonly": true,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Constructor for the BaseClientSideWebPart class. \nIf a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor. \n"
+      },
+      "domElement": {
+        "dataType": "HTMLElement",
+        "accessModifier": "protected",
+        "isOptional": false,
+        "readonly": true,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Constructor for the BaseClientSideWebPart class. \nIf a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor. \n"
+      },
+      "previewImageUrl": {
+        "dataType": "string",
+        "accessModifier": "protected",
+        "isOptional": false,
+        "readonly": true,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Constructor for the BaseClientSideWebPart class. \nIf a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor. \n"
+      },
+      "properties": {
+        "dataType": "TProperties",
+        "accessModifier": "protected",
+        "isOptional": false,
+        "readonly": true,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Constructor for the BaseClientSideWebPart class. \nIf a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor. \n"
+      },
+      "propertyPaneSettings": {
+        "dataType": "IPropertyPaneSettings",
+        "accessModifier": "protected",
+        "isOptional": false,
+        "readonly": true,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Constructor for the BaseClientSideWebPart class. \nIf a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor. \n"
+      },
+      "renderedFromDefaultProperties": {
+        "dataType": "boolean",
+        "accessModifier": "protected",
+        "isOptional": false,
+        "readonly": true,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Constructor for the BaseClientSideWebPart class. \nIf a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor. \n"
+      },
+      "renderedOnce": {
+        "dataType": "boolean",
+        "accessModifier": "protected",
+        "isOptional": false,
+        "readonly": true,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
         "descr": "Constructor for the BaseClientSideWebPart class. \nIf a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor. \n"
       }
     },
@@ -73,13 +172,13 @@
         "descr": "Constructor for the BaseClientSideWebPart class. \nIf a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor. \n",
         "genericType": null,
         "returnType": "TProperties",
-        "returnDescr": "- web part property bag. \nThis API is called once during the lifetime of the web part during the intial render and just before the onInit \nAPI call. The purpose of this API is to help a web part developer deserialize the web part data and manage the \nversioning of their data as the web part code evolves. The web part data may have been persisted with an older \nor newer version of the web part code. This API gives the web part developer an opportunity to re-structure their \ndata to the appropriate data schema. The persisted data contains the version number information. That information \ncan be used to make decisions on how to re-structure the data. \n",
+        "returnDescr": "- web part property bag. \n",
         "params": [
           {
             "name": "data",
             "dataType": "IWebPartData",
             "isOptional": false,
-            "descr": "- web part persisted data. \nThis API is called once during the lifetime of the web part during the intial render and just before the onInit \nAPI call. The purpose of this API is to help a web part developer deserialize the web part data and manage the \nversioning of their data as the web part code evolves. The web part data may have been persisted with an older \nor newer version of the web part code. This API gives the web part developer an opportunity to re-structure their \ndata to the appropriate data schema. The persisted data contains the version number information. That information \ncan be used to make decisions on how to re-structure the data. \n"
+            "descr": "- web part persisted data."
           }
         ]
       },
@@ -91,7 +190,7 @@
         "descr": "Constructor for the BaseClientSideWebPart class. \nIf a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor. \n",
         "genericType": null,
         "returnType": "void",
-        "returnDescr": "- web part property bag. \nThis API is called once during the lifetime of the web part during the intial render and just before the onInit \nAPI call. The purpose of this API is to help a web part developer deserialize the web part data and manage the \nversioning of their data as the web part code evolves. The web part data may have been persisted with an older \nor newer version of the web part code. This API gives the web part developer an opportunity to re-structure their \ndata to the appropriate data schema. The persisted data contains the version number information. That information \ncan be used to make decisions on how to re-structure the data. \n",
+        "returnDescr": "- web part property bag. \n",
         "params": []
       },
       "onBeforeSerialize~I7HE9": {
@@ -102,7 +201,7 @@
         "descr": "Constructor for the BaseClientSideWebPart class. \nIf a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor. \n",
         "genericType": null,
         "returnType": "IHtmlProperties",
-        "returnDescr": "- reference to searchable properties and properties that need link fixup. Please read \nThis API is called before a web part is serialized. The default implementation is a no-op. A web part developer \nis expected to override this API when the web part's state is not fully reflected in the property bag i.e. \nthis.properties. In the overridden method, the web part developer is expected to update the state of the web \npart property bag. This way the web part serialization process will use the upto date state of the web part. \n",
+        "returnDescr": "- reference to searchable properties and properties that need link fixup. Please read \nthe documentation of IHtmlProperties interface for more details.",
         "params": []
       },
       "onDisplayModeChanged~G9TY9": {
@@ -113,13 +212,13 @@
         "descr": "Constructor for the BaseClientSideWebPart class. \nIf a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor. \n",
         "genericType": null,
         "returnType": "void",
-        "returnDescr": "- reference to searchable properties and properties that need link fixup. Please read \nThis API is called before a web part is serialized. The default implementation is a no-op. A web part developer \nis expected to override this API when the web part's state is not fully reflected in the property bag i.e. \nthis.properties. In the overridden method, the web part developer is expected to update the state of the web \npart property bag. This way the web part serialization process will use the upto date state of the web part. \n",
+        "returnDescr": "- reference to searchable properties and properties that need link fixup. Please read \nthe documentation of IHtmlProperties interface for more details.",
         "params": [
           {
             "name": "oldDisplayMode",
             "dataType": "DisplayMode",
             "isOptional": false,
-            "descr": "- The old display mode. \nThis API is called when the display mode of a web part is changed. The default implementation of this API calls \nthe web part render method to re-render the web part with the new display mode. If a web part developer does not \nwant a full re-render to happen on display mode change, they can override this API and perform specific updates \nto the web part DOM to switch its display mode. \n"
+            "descr": "- The old display mode. \n"
           }
         ]
       },
@@ -131,7 +230,7 @@
         "descr": "Constructor for the BaseClientSideWebPart class. \nIf a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor. \n",
         "genericType": "T",
         "returnType": "Promise<T>",
-        "returnDescr": "- reference to searchable properties and properties that need link fixup. Please read \nThis API is called before a web part is serialized. The default implementation is a no-op. A web part developer \nis expected to override this API when the web part's state is not fully reflected in the property bag i.e. \nthis.properties. In the overridden method, the web part developer is expected to update the state of the web \npart property bag. This way the web part serialization process will use the upto date state of the web part. \n",
+        "returnDescr": "- reference to searchable properties and properties that need link fixup. Please read \nthe documentation of IHtmlProperties interface for more details.",
         "params": []
       },
       "onPropertyChange~OyJc9": {
@@ -142,19 +241,19 @@
         "descr": "Constructor for the BaseClientSideWebPart class. \nIf a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor. \n",
         "genericType": null,
         "returnType": "void",
-        "returnDescr": "- reference to searchable properties and properties that need link fixup. Please read \nThis API is called before a web part is serialized. The default implementation is a no-op. A web part developer \nis expected to override this API when the web part's state is not fully reflected in the property bag i.e. \nthis.properties. In the overridden method, the web part developer is expected to update the state of the web \npart property bag. This way the web part serialization process will use the upto date state of the web part. \n",
+        "returnDescr": "- reference to searchable properties and properties that need link fixup. Please read \nthe documentation of IHtmlProperties interface for more details.",
         "params": [
           {
             "name": "propertyPath",
             "dataType": "string",
             "isOptional": false,
-            "descr": "- JSON path of the property in the property bag. \nThis API is invoked on property changes in the PropertyPane when the PropertyPane is being used in Reactive mode. \nThe base implementation of this API updates the web part property bag and re-render the web part. This API also \ninvokes the web part host's setDirty API. \n"
+            "descr": "- JSON path of the property in the property bag."
           },
           {
             "name": "newValue",
             "dataType": "any",
             "isOptional": false,
-            "descr": "- New value of the property. \nThis API is invoked on property changes in the PropertyPane when the PropertyPane is being used in Reactive mode. \nThe base implementation of this API updates the web part property bag and re-render the web part. This API also \ninvokes the web part host's setDirty API. \n"
+            "descr": "- New value of the property."
           }
         ]
       },
@@ -166,7 +265,7 @@
         "descr": "Constructor for the BaseClientSideWebPart class. \nIf a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor. \n",
         "genericType": null,
         "returnType": "void",
-        "returnDescr": "- reference to searchable properties and properties that need link fixup. Please read \nThis API is called before a web part is serialized. The default implementation is a no-op. A web part developer \nis expected to override this API when the web part's state is not fully reflected in the property bag i.e. \nthis.properties. In the overridden method, the web part developer is expected to update the state of the web \npart property bag. This way the web part serialization process will use the upto date state of the web part. \n",
+        "returnDescr": "- reference to searchable properties and properties that need link fixup. Please read \nthe documentation of IHtmlProperties interface for more details.",
         "params": []
       },
       "onPropertyPaneRendered~Mmik9": {
@@ -177,7 +276,7 @@
         "descr": "Constructor for the BaseClientSideWebPart class. \nIf a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor. \n",
         "genericType": null,
         "returnType": "void",
-        "returnDescr": "- reference to searchable properties and properties that need link fixup. Please read \nThis API is called before a web part is serialized. The default implementation is a no-op. A web part developer \nis expected to override this API when the web part's state is not fully reflected in the property bag i.e. \nthis.properties. In the overridden method, the web part developer is expected to update the state of the web \npart property bag. This way the web part serialization process will use the upto date state of the web part. \n",
+        "returnDescr": "- reference to searchable properties and properties that need link fixup. Please read \nthe documentation of IHtmlProperties interface for more details.",
         "params": []
       },
       "onPropertyPaneSave~ZYuc9": {
@@ -188,7 +287,7 @@
         "descr": "Constructor for the BaseClientSideWebPart class. \nIf a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor. \n",
         "genericType": null,
         "returnType": "void",
-        "returnDescr": "- reference to searchable properties and properties that need link fixup. Please read \nThis API is called before a web part is serialized. The default implementation is a no-op. A web part developer \nis expected to override this API when the web part's state is not fully reflected in the property bag i.e. \nthis.properties. In the overridden method, the web part developer is expected to update the state of the web \npart property bag. This way the web part serialization process will use the upto date state of the web part. \n",
+        "returnDescr": "- reference to searchable properties and properties that need link fixup. Please read \nthe documentation of IHtmlProperties interface for more details.",
         "params": []
       },
       "render~tsG49": {
@@ -199,7 +298,7 @@
         "descr": "Constructor for the BaseClientSideWebPart class. \nIf a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor. \n",
         "genericType": null,
         "returnType": "void",
-        "returnDescr": "- reference to searchable properties and properties that need link fixup. Please read \nThis API is called before a web part is serialized. The default implementation is a no-op. A web part developer \nis expected to override this API when the web part's state is not fully reflected in the property bag i.e. \nthis.properties. In the overridden method, the web part developer is expected to update the state of the web \npart property bag. This way the web part serialization process will use the upto date state of the web part. \n",
+        "returnDescr": "- reference to searchable properties and properties that need link fixup. Please read \nthe documentation of IHtmlProperties interface for more details.",
         "params": []
       },
       "renderError~tgrU9": {
@@ -210,13 +309,13 @@
         "descr": "Constructor for the BaseClientSideWebPart class. \nIf a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor. \n",
         "genericType": null,
         "returnType": "void",
-        "returnDescr": "- reference to searchable properties and properties that need link fixup. Please read \nThis API is called before a web part is serialized. The default implementation is a no-op. A web part developer \nis expected to override this API when the web part's state is not fully reflected in the property bag i.e. \nthis.properties. In the overridden method, the web part developer is expected to update the state of the web \npart property bag. This way the web part serialization process will use the upto date state of the web part. \n",
+        "returnDescr": "- reference to searchable properties and properties that need link fixup. Please read \nthe documentation of IHtmlProperties interface for more details.",
         "params": [
           {
             "name": "error",
             "dataType": "Error",
             "isOptional": false,
-            "descr": "- An error object containing the error message to render. \nThis API should be used to render an error message in the web part display area. Also logs the error message \nusing the trace logger. \n"
+            "descr": "- An error object containing the error message to render."
           }
         ]
       }
@@ -231,15 +330,147 @@
     "genericType": null,
     "descr": "",
     "properties": {
-      "public": {
-        "dataType": "string",
-        "accessModifier": null,
+      "basicHttpClient": {
+        "dataType": "BasicHttpClient",
+        "accessModifier": "public",
         "isOptional": false,
         "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": "{} as any",
+        "descr": ""
+      },
+      "configureStart": {
+        "dataType": "function",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": "",
+        "function": "(id: string,propertyPaneState?: PropertyPaneState)",
+        "returnType": "void",
+        "assignValue": "{} as any",
+        "descr": ""
+      },
+      "domElement": {
+        "dataType": "HTMLElement",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": "document.createElement('div')",
+        "descr": ""
+      },
+      "environment": {
+        "dataType": "Environment",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": "{} as any",
+        "descr": ""
+      },
+      "eventAggregator": {
+        "dataType": "IEventAggregator",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": "{} as any",
+        "descr": ""
+      },
+      "host": {
+        "dataType": "IWebPartHost",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": "{} as any",
+        "descr": ""
+      },
+      "httpClient": {
+        "dataType": "HttpClient",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": "{} as any",
+        "descr": ""
+      },
+      "instanceId": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": "'wpInstanceId'",
+        "descr": ""
+      },
+      "manifest": {
+        "dataType": "IClientSideWebPartManifestInstance<{}>",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": "new MockWebPartManifestInstance()",
+        "descr": ""
+      },
+      "pageContext": {
+        "dataType": "PageContext",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": "{} as any",
+        "descr": ""
+      },
+      "serviceScope": {
+        "dataType": "ServiceScope",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": "{} as any",
+        "descr": ""
+      },
+      "statusRenderer": {
+        "dataType": "IClientSideWebPartStatusRenderer",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": "{} as any",
+        "descr": ""
+      },
+      "webPartTag": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
         "function": null,
         "returnType": null,
         "assignValue": "'WebPart.daf0b71c-6de8-4ef7-b511-faae7c388708.0ae4973a-70e3-451e-9f1f-3f25e5455a60'",
-        "isCollection": false,
         "descr": ""
       }
     },

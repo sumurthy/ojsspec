@@ -6,24 +6,24 @@
     "properties": {
       "done": {
         "dataType": "boolean",
-        "accessModifier": null,
+        "accessModifier": "public",
         "isOptional": false,
         "readonly": false,
+        "isCollection": false,
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "isCollection": false,
         "descr": ""
       },
       "value": {
         "dataType": "T",
-        "accessModifier": null,
+        "accessModifier": "public",
         "isOptional": true,
         "readonly": false,
+        "isCollection": false,
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "isCollection": false,
         "descr": ""
       }
     },
@@ -139,13 +139,13 @@
     "properties": {
       "size": {
         "dataType": "number",
-        "accessModifier": null,
+        "accessModifier": "public",
         "isOptional": false,
         "readonly": false,
+        "isCollection": false,
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "isCollection": false,
         "descr": ""
       }
     },
@@ -310,13 +310,13 @@
     "properties": {
       "prototype": {
         "dataType": "Map<any,any>",
-        "accessModifier": null,
+        "accessModifier": "public",
         "isOptional": false,
         "readonly": false,
+        "isCollection": false,
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "isCollection": false,
         "descr": ""
       }
     },
@@ -364,13 +364,13 @@
     "properties": {
       "size": {
         "dataType": "number",
-        "accessModifier": null,
+        "accessModifier": "public",
         "isOptional": false,
         "readonly": false,
+        "isCollection": false,
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "isCollection": false,
         "descr": ""
       }
     },
@@ -511,13 +511,13 @@
     "properties": {
       "prototype": {
         "dataType": "Set<any>",
-        "accessModifier": null,
+        "accessModifier": "public",
         "isOptional": false,
         "readonly": false,
+        "isCollection": false,
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "isCollection": false,
         "descr": ""
       }
     },
@@ -667,13 +667,13 @@
     "properties": {
       "prototype": {
         "dataType": "WeakMap<any,any>",
-        "accessModifier": null,
+        "accessModifier": "public",
         "isOptional": false,
         "readonly": false,
+        "isCollection": false,
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "isCollection": false,
         "descr": ""
       }
     },
@@ -799,13 +799,13 @@
     "properties": {
       "prototype": {
         "dataType": "WeakSet<any>",
-        "accessModifier": null,
+        "accessModifier": "public",
         "isOptional": false,
         "readonly": false,
+        "isCollection": false,
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "isCollection": false,
         "descr": ""
       }
     },

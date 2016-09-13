@@ -27,7 +27,9 @@
   ".all<r>": ".md#all<r>",
   ".race<r>": ".md#race<r>",
   "foo": "es6-promise-module.md#variables",
-28. Markdown links are not right for methods with generics in them [`then<U>`](#then<u>) 
+28. Markdown links are not right for methods with generics in them [`then<U>`](#then<u>)
+29. Handle datatype: public hasAllPermissions(...requestedPerms: SPPermission[]): boolean;
+30. Collection is not captured somehow.
 
 LONGER TERM:
 19. Make use of dFunction for enum and function file generation
