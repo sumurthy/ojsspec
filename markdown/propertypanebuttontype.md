@@ -1,5 +1,6 @@
 # PropertyPaneButtonType enumeration
-
+Sample PropertyPaneButtonType description 
+Sample PropertyPaneButtonType description
 
 | Member	   | Description|
 |:-------------|:-------|

@@ -56,10 +56,10 @@ let allTypes = {
 let allVarsTypes = {}
 let enumObj = {}
 let enumKey = ''
+let className = ''
 let classObj = {}
 let iObj = {}
 let interfaceName = ''
-let className = ''
 let moduleName = ''
 let functionObj = {}
 let moduleObj = {}
@@ -173,6 +173,7 @@ function prepareLine(line='') {
 function processComment(index = 0, lines = []) {
 
     for (var i = index; i < lines.length; i++) {
+        console.log('---> ' + i);
         ignore_upto = i
         let line = prepareLine(lines[i])
         line = line.replace(/\s+/g, ' ').trim()
@@ -219,9 +220,11 @@ function processComment(index = 0, lines = []) {
               }
           } else {
               if (!paramEncountered) {
-                  var oa = Utils.readCommentAhead(lines, line.substr(2), index)
+                  console.log('Calling with index=' + i + ' - ' + line);
+                  var oa = Utils.readCommentAhead(lines, line.substr(2), i)
                   ignore_upto = oa['skip'].pop()
                   generalDesc = oa['descr']
+
               }
           }
           continue
@@ -235,20 +238,28 @@ function processComment(index = 0, lines = []) {
 
 function processEnum(index = 0, lines = []) {
     let o = {}
+    console.log('1: ' + generalDesc);
+
     o['descr'] = generalDesc
     o['values'] = []
+    comment_reset()
+
     for (var i = (index + 1); i < lines.length; i++) {
         if (ignore_upto >= i) continue
         ignore_upto = i
+
         let line = prepareLine(lines[i])
+        if (SKIP.includes(firstWord)) continue
 
         if (firstWord === BLOCK_END) {
             block_end_reset()
             return o
         } else if (firstWord === C_START) {
           processComment(i, lines)
-          continue
+          console.log('2: ' + generalDesc);
+
         } else {
+            console.log(line + ' ==  ' + generalDesc);
             if (line.includes('=')) {
                 var v = line.replace(',', '').split('=').map((s) => s.trim())
                 v.push(generalDesc)
@@ -265,6 +276,7 @@ function processEnum(index = 0, lines = []) {
                     }
                 })
             }
+            comment_reset()
         }
     }
 }
@@ -361,10 +373,11 @@ function processLines(element = '', index = 0, lines = []) {
     //prepare the line and sent first, second and third word.
     let line = prepareLine(element)
     // Trim line, remove ';' and extra spaces after comma, and 1+ white space to 1 whitespace
-
+    console.log('main: ' + line + ' index = ' + index);
     if (SKIP.includes(firstWord)) return
 
     if (firstWord === C_START) {
+      console.log('In mix: ' + index + ' ' + line);
         processComment(index, lines)
         return
     } else if (firstWord === BLOCK_END) {
