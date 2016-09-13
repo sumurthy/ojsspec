@@ -1,0 +1,787 @@
+{
+  "IBundleReference": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "",
+    "properties": {
+      "entryName": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "If present,this is the name of a field on the module returned from the associated bundle that maps to \nthis library. Otherwise, the module returned from the bundle maps to this library."
+      },
+      "id": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "The ID of the module."
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IClientSideComponentLoaderConfig": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "",
+    "properties": {
+      "entryModuleId": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": ""
+      },
+      "exportedModuleName": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": ""
+      },
+      "internalModuleBaseUrls": {
+        "dataType": "string[]",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": true,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": ""
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IClientSideLibraryManifest": {
+    "implementsExtendsName": "IClientSideComponentManifest",
+    "genericType": null,
+    "descr": "A library is defined by this manifest. Libraries currently do not have any additional properties. \n",
+    "properties": {
+      "componentType": {
+        "dataType": "'Application' | 'WebPart' | 'Library'",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "A library is defined by this manifest. Libraries currently do not have any additional properties. \n"
+      },
+      "id": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "A library is defined by this manifest. Libraries currently do not have any additional properties. \n"
+      },
+      "loaderConfig": {
+        "dataType": "IClientSideComponentLoaderConfig",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "A library is defined by this manifest. Libraries currently do not have any additional properties. \n"
+      },
+      "manifestVersion": {
+        "dataType": "number",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "A library is defined by this manifest. Libraries currently do not have any additional properties. \n"
+      },
+      "version": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "A library is defined by this manifest. Libraries currently do not have any additional properties. \n"
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IClientSideWebPartManifestEntry": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "This interface specifies the set of properties that can be pre-configured by a Web Part developer. Each \npre-configured instance of the Web Part will need a copy of these properties. Organization admins and \ncontent authors can modify these properties on a need basis. \n",
+    "properties": {
+      "description": {
+        "dataType": "ILocalizedString",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This interface specifies the set of properties that can be pre-configured by a Web Part developer. Each \npre-configured instance of the Web Part will need a copy of these properties. Organization admins and \ncontent authors can modify these properties on a need basis. \n"
+      },
+      "group": {
+        "dataType": "ILocalizedString",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This interface specifies the set of properties that can be pre-configured by a Web Part developer. Each \npre-configured instance of the Web Part will need a copy of these properties. Organization admins and \ncontent authors can modify these properties on a need basis. \n"
+      },
+      "groupId": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This interface specifies the set of properties that can be pre-configured by a Web Part developer. Each \npre-configured instance of the Web Part will need a copy of these properties. Organization admins and \ncontent authors can modify these properties on a need basis. \n"
+      },
+      "iconImageUrl": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This interface specifies the set of properties that can be pre-configured by a Web Part developer. Each \npre-configured instance of the Web Part will need a copy of these properties. Organization admins and \ncontent authors can modify these properties on a need basis. \n"
+      },
+      "officeFabricIconFontName": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This interface specifies the set of properties that can be pre-configured by a Web Part developer. Each \npre-configured instance of the Web Part will need a copy of these properties. Organization admins and \ncontent authors can modify these properties on a need basis. \n"
+      },
+      "properties": {
+        "dataType": "TProperties",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This interface specifies the set of properties that can be pre-configured by a Web Part developer. Each \npre-configured instance of the Web Part will need a copy of these properties. Organization admins and \ncontent authors can modify these properties on a need basis. \n"
+      },
+      "title": {
+        "dataType": "ILocalizedString",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This interface specifies the set of properties that can be pre-configured by a Web Part developer. Each \npre-configured instance of the Web Part will need a copy of these properties. Organization admins and \ncontent authors can modify these properties on a need basis. \n"
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IClientSideWebPartManifestInstance": {
+    "implementsExtendsName": "",
+    "genericType": "TProperties",
+    "descr": "Manifest that is relevant to a Web Part instance. \n",
+    "properties": {
+      "componentType": {
+        "dataType": "'Application' | 'WebPart' | 'Library'",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Manifest that is relevant to a Web Part instance. \n"
+      },
+      "description": {
+        "dataType": "ILocalizedString",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Manifest that is relevant to a Web Part instance. \n"
+      },
+      "group": {
+        "dataType": "ILocalizedString",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Manifest that is relevant to a Web Part instance. \n"
+      },
+      "groupId": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Manifest that is relevant to a Web Part instance. \n"
+      },
+      "iconImageUrl": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Manifest that is relevant to a Web Part instance. \n"
+      },
+      "id": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Manifest that is relevant to a Web Part instance. \n"
+      },
+      "imageLinkPropertyNames": {
+        "dataType": "string[]",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": true,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Manifest that is relevant to a Web Part instance. \n"
+      },
+      "linkPropertyNames": {
+        "dataType": "string[]",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": true,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Manifest that is relevant to a Web Part instance. \n"
+      },
+      "loaderConfig": {
+        "dataType": "IClientSideComponentLoaderConfig",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Manifest that is relevant to a Web Part instance. \n"
+      },
+      "manifestVersion": {
+        "dataType": "number",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Manifest that is relevant to a Web Part instance. \n"
+      },
+      "officeFabricIconFontName": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Manifest that is relevant to a Web Part instance. \n"
+      },
+      "properties": {
+        "dataType": "TProperties",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Manifest that is relevant to a Web Part instance. \n"
+      },
+      "searchablePropertyNames": {
+        "dataType": "string[]",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": true,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Manifest that is relevant to a Web Part instance. \n"
+      },
+      "title": {
+        "dataType": "ILocalizedString",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Manifest that is relevant to a Web Part instance. \n"
+      },
+      "version": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Manifest that is relevant to a Web Part instance. \n"
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IClientSideWebPartManifestSharedProperties": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "This interface specifies the set of common properties that are shared between all instances of the Web Part. \n",
+    "properties": {
+      "imageLinkPropertyNames": {
+        "dataType": "string[]",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": true,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This interface specifies the set of common properties that are shared between all instances of the Web Part. \n"
+      },
+      "linkPropertyNames": {
+        "dataType": "string[]",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": true,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This interface specifies the set of common properties that are shared between all instances of the Web Part. \n"
+      },
+      "searchablePropertyNames": {
+        "dataType": "string[]",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": true,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This interface specifies the set of common properties that are shared between all instances of the Web Part. \n"
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IFrameworkModuleConfig": {
+    "implementsExtendsName": "IModuleConfig",
+    "genericType": null,
+    "descr": "This is the interface for a script module with the \"framework\" type. Modules of this type will be provided by the \nframework runtime. The key in the \"scriptResources\" dictionary must be the name of a standard framework library. \n",
+    "properties": {
+      "failoverPath": {
+        "dataType": "string | IPath",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This is the interface for a script module with the \"framework\" type. Modules of this type will be provided by the \nframework runtime. The key in the \"scriptResources\" dictionary must be the name of a standard framework library. \n"
+      },
+      "shouldNotPreload": {
+        "dataType": "boolean",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This is the interface for a script module with the \"framework\" type. Modules of this type will be provided by the \nframework runtime. The key in the \"scriptResources\" dictionary must be the name of a standard framework library. \n"
+      },
+      "type": {
+        "dataType": "'internal' | 'framework' | 'localized'",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This is the interface for a script module with the \"framework\" type. Modules of this type will be provided by the \nframework runtime. The key in the \"scriptResources\" dictionary must be the name of a standard framework library. \n"
+      },
+      "version": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This is the interface for a script module with the \"framework\" type. Modules of this type will be provided by the \nframework runtime. The key in the \"scriptResources\" dictionary must be the name of a standard framework library. \n"
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IInternalModuleConfig": {
+    "implementsExtendsName": "IModuleConfig",
+    "genericType": null,
+    "descr": "This is the interface for a script module with the \"internal\" type. Modules of this type must be provided by the \ncomponent developer. \n",
+    "properties": {
+      "globalDependencies": {
+        "dataType": "string[]",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": true,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This is the interface for a script module with the \"internal\" type. Modules of this type must be provided by the \ncomponent developer. \n"
+      },
+      "globalName": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This is the interface for a script module with the \"internal\" type. Modules of this type must be provided by the \ncomponent developer. \n"
+      },
+      "path": {
+        "dataType": "string | IPath",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This is the interface for a script module with the \"internal\" type. Modules of this type must be provided by the \ncomponent developer. \n"
+      },
+      "shouldNotPreload": {
+        "dataType": "boolean",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This is the interface for a script module with the \"internal\" type. Modules of this type must be provided by the \ncomponent developer. \n"
+      },
+      "type": {
+        "dataType": "'internal' | 'framework' | 'localized'",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This is the interface for a script module with the \"internal\" type. Modules of this type must be provided by the \ncomponent developer. \n"
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "ILocalizedInternalModuleConfig": {
+    "implementsExtendsName": "IModuleConfig",
+    "genericType": null,
+    "descr": "This is the interface for a script module with the \"localized\" type. Modules of this type must be provided by the \ncomponent developer. These script resources are similar to those of the \"internal\" type, but they may be present \nat a number of different paths, to be selected by the user's locale. Paths in this module type are loaded exactly \nthe same way as \"internal\" modules are. \n",
+    "properties": {
+      "defaultPath": {
+        "dataType": "string | IPath",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This is the interface for a script module with the \"localized\" type. Modules of this type must be provided by the \ncomponent developer. These script resources are similar to those of the \"internal\" type, but they may be present \nat a number of different paths, to be selected by the user's locale. Paths in this module type are loaded exactly \nthe same way as \"internal\" modules are. \n"
+      },
+      "shouldNotPreload": {
+        "dataType": "boolean",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This is the interface for a script module with the \"localized\" type. Modules of this type must be provided by the \ncomponent developer. These script resources are similar to those of the \"internal\" type, but they may be present \nat a number of different paths, to be selected by the user's locale. Paths in this module type are loaded exactly \nthe same way as \"internal\" modules are. \n"
+      },
+      "type": {
+        "dataType": "'internal' | 'framework' | 'localized'",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This is the interface for a script module with the \"localized\" type. Modules of this type must be provided by the \ncomponent developer. These script resources are similar to those of the \"internal\" type, but they may be present \nat a number of different paths, to be selected by the user's locale. Paths in this module type are loaded exactly \nthe same way as \"internal\" modules are. \n"
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "ILocalizedString": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "Definition: A set of localized strings. \nSupported values: a dictionary of locale keys to strings. Should always have a 'default' key. \nExample: \"My Application\" \n{ \n\"default\": \"My Application\" \n\"en-us\": \"My Application\", \n\"fr-fr\": \"Ma demande\", \n\"zh\": \"我的應用程式\" \n}",
+    "properties": {
+      "default": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Definition: A set of localized strings. \nSupported values: a dictionary of locale keys to strings. Should always have a 'default' key. \nExample: \"My Application\" \n{ \n\"default\": \"My Application\" \n\"en-us\": \"My Application\", \n\"fr-fr\": \"Ma demande\", \n\"zh\": \"我的應用程式\" \n}"
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IModuleConfig": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "This is the base interface for a script module's definition. \n",
+    "properties": {
+      "shouldNotPreload": {
+        "dataType": "boolean",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This is the base interface for a script module's definition. \n"
+      },
+      "type": {
+        "dataType": "'internal' | 'framework' | 'localized'",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This is the base interface for a script module's definition. \n"
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IPath": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "This is the base interface for a set of debug and non-debug/minimized paths. The paths in this object are \nloaded in exactly the same way as any other internal path. \n",
+    "properties": {
+      "debug": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This is the base interface for a set of debug and non-debug/minimized paths. The paths in this object are \nloaded in exactly the same way as any other internal path. \n"
+      },
+      "default": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This is the base interface for a set of debug and non-debug/minimized paths. The paths in this object are \nloaded in exactly the same way as any other internal path. \n"
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IStandardLibraryModule": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "",
+    "properties": {
+      "aliases": {
+        "dataType": "IBundleReference[]",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": true,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "References to modules that are swappable for this module (for example,modules that contain a superset of \nthis module)."
+      },
+      "bundleReference": {
+        "dataType": "IBundleReference",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Reference (id and entryName pair) to the bundle"
+      },
+      "dependentIds": {
+        "dataType": "string[]",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": true,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "The IDs of modules this module depends on."
+      },
+      "preloadId": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "The ID of the bundle to preload."
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  }
+}

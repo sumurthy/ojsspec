@@ -1,0 +1,849 @@
+{
+  "IteratorResult": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "",
+    "properties": {
+      "done": {
+        "dataType": "boolean",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": ""
+      },
+      "value": {
+        "dataType": "T",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": ""
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "Iterator": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "",
+    "properties": {},
+    "functions": {},
+    "methods": {
+      "next~lO9M9": {
+        "accessModifier": "public",
+        "signature": "next(value?: any): IteratorResult<T>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "IteratorResult<T>",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "value",
+            "dataType": "any",
+            "isOptional": true,
+            "descr": ""
+          }
+        ]
+      },
+      "return~2d9Q9": {
+        "accessModifier": "public",
+        "signature": "return?(value?: any): IteratorResult<T>",
+        "isStatic": false,
+        "isOptional": true,
+        "descr": "",
+        "genericType": null,
+        "returnType": "IteratorResult<T>",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "value",
+            "dataType": "any",
+            "isOptional": true,
+            "descr": ""
+          }
+        ]
+      },
+      "throw~sdJc9": {
+        "accessModifier": "public",
+        "signature": "throw?(e?: any): IteratorResult<T>",
+        "isStatic": false,
+        "isOptional": true,
+        "descr": "",
+        "genericType": null,
+        "returnType": "IteratorResult<T>",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "e",
+            "dataType": "any",
+            "isOptional": true,
+            "descr": ""
+          }
+        ]
+      }
+    },
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "ForEachable": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "",
+    "properties": {},
+    "functions": {},
+    "methods": {
+      "forEach~I8xI9": {
+        "accessModifier": "public",
+        "signature": "forEach(callbackfn: (value: T) => void): void",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "callbackfn",
+            "dataType": "(value: T) => void",
+            "isOptional": false,
+            "descr": ""
+          }
+        ]
+      }
+    },
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "Map": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "",
+    "properties": {
+      "size": {
+        "dataType": "number",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": ""
+      }
+    },
+    "functions": {},
+    "methods": {
+      "clear~xLXs9": {
+        "accessModifier": "public",
+        "signature": "clear(): void",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": "",
+        "params": []
+      },
+      "delete~rupo9": {
+        "accessModifier": "public",
+        "signature": "delete(key: K): boolean",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "boolean",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "key",
+            "dataType": "K",
+            "isOptional": false,
+            "descr": ""
+          }
+        ]
+      },
+      "forEach~9PMQ9": {
+        "accessModifier": "public",
+        "signature": "forEach(callbackfn: (value: V,index: K,map: Map<K,V>) => void,thisArg?: any): void",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "callbackfn",
+            "dataType": "(value: V,index: K,map: Map<K,V>) => void",
+            "isOptional": false,
+            "descr": ""
+          },
+          {
+            "name": "thisArg",
+            "dataType": "any",
+            "isOptional": true,
+            "descr": ""
+          }
+        ]
+      },
+      "get~anSk9": {
+        "accessModifier": "public",
+        "signature": "get(key: K): V",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "V",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "key",
+            "dataType": "K",
+            "isOptional": false,
+            "descr": ""
+          }
+        ]
+      },
+      "has~8wy89": {
+        "accessModifier": "public",
+        "signature": "has(key: K): boolean",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "boolean",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "key",
+            "dataType": "K",
+            "isOptional": false,
+            "descr": ""
+          }
+        ]
+      },
+      "set~HGwo9": {
+        "accessModifier": "public",
+        "signature": "set(key: K,value?: V): Map<K,V>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "Map<K,V>",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "key",
+            "dataType": "K",
+            "isOptional": false,
+            "descr": ""
+          },
+          {
+            "name": "value",
+            "dataType": "V",
+            "isOptional": true,
+            "descr": ""
+          }
+        ]
+      },
+      "entries~F2iw9": {
+        "accessModifier": "public",
+        "signature": "entries(): Iterator<[K,V]>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "Iterator<[K,V]>",
+        "returnDescr": "",
+        "params": []
+      },
+      "keys~tXQs9": {
+        "accessModifier": "public",
+        "signature": "keys(): Iterator<K>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "Iterator<K>",
+        "returnDescr": "",
+        "params": []
+      },
+      "values~v0CQ9": {
+        "accessModifier": "public",
+        "signature": "values(): Iterator<V>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "Iterator<V>",
+        "returnDescr": "",
+        "params": []
+      }
+    },
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "MapConstructor": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "",
+    "properties": {
+      "prototype": {
+        "dataType": "Map<any,any>",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": ""
+      }
+    },
+    "functions": {},
+    "methods": {
+      "constructor<K,V>~QfVI9": {
+        "accessModifier": "public",
+        "signature": "new<K,V>(): Map<K,V>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": "K,V",
+        "returnType": "Map<K,V>",
+        "returnDescr": "",
+        "params": []
+      },
+      "constructor<K,V>~RTrk9": {
+        "accessModifier": "public",
+        "signature": "new<K,V>(iterable: ForEachable<[K,V]>): Map<K,V>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": "K,V",
+        "returnType": "Map<K,V>",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "iterable",
+            "dataType": "ForEachable<[K,V]>",
+            "isOptional": false,
+            "descr": ""
+          }
+        ]
+      }
+    },
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "Set": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "",
+    "properties": {
+      "size": {
+        "dataType": "number",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": ""
+      }
+    },
+    "functions": {},
+    "methods": {
+      "add~HBJE9": {
+        "accessModifier": "public",
+        "signature": "add(value: T): Set<T>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "Set<T>",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "value",
+            "dataType": "T",
+            "isOptional": false,
+            "descr": ""
+          }
+        ]
+      },
+      "clear~xLXs9": {
+        "accessModifier": "public",
+        "signature": "clear(): void",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": "",
+        "params": []
+      },
+      "delete~OlfE9": {
+        "accessModifier": "public",
+        "signature": "delete(value: T): boolean",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "boolean",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "value",
+            "dataType": "T",
+            "isOptional": false,
+            "descr": ""
+          }
+        ]
+      },
+      "forEach~dkLE9": {
+        "accessModifier": "public",
+        "signature": "forEach(callbackfn: (value: T,index: T,set: Set<T>) => void,thisArg?: any): void",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "callbackfn",
+            "dataType": "(value: T,index: T,set: Set<T>) => void",
+            "isOptional": false,
+            "descr": ""
+          },
+          {
+            "name": "thisArg",
+            "dataType": "any",
+            "isOptional": true,
+            "descr": ""
+          }
+        ]
+      },
+      "has~wh3M9": {
+        "accessModifier": "public",
+        "signature": "has(value: T): boolean",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "boolean",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "value",
+            "dataType": "T",
+            "isOptional": false,
+            "descr": ""
+          }
+        ]
+      },
+      "entries~XGGk9": {
+        "accessModifier": "public",
+        "signature": "entries(): Iterator<[T,T]>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "Iterator<[T,T]>",
+        "returnDescr": "",
+        "params": []
+      },
+      "keys~OToo9": {
+        "accessModifier": "public",
+        "signature": "keys(): Iterator<T>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "Iterator<T>",
+        "returnDescr": "",
+        "params": []
+      },
+      "values~XpgE9": {
+        "accessModifier": "public",
+        "signature": "values(): Iterator<T>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "Iterator<T>",
+        "returnDescr": "",
+        "params": []
+      }
+    },
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "SetConstructor": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "",
+    "properties": {
+      "prototype": {
+        "dataType": "Set<any>",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": ""
+      }
+    },
+    "functions": {},
+    "methods": {
+      "constructor<T>~WZO89": {
+        "accessModifier": "public",
+        "signature": "new<T>(): Set<T>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": "T",
+        "returnType": "Set<T>",
+        "returnDescr": "",
+        "params": []
+      },
+      "constructor<T>~Hf9M9": {
+        "accessModifier": "public",
+        "signature": "new<T>(iterable: ForEachable<T>): Set<T>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": "T",
+        "returnType": "Set<T>",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "iterable",
+            "dataType": "ForEachable<T>",
+            "isOptional": false,
+            "descr": ""
+          }
+        ]
+      }
+    },
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "WeakMap": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "",
+    "properties": {},
+    "functions": {},
+    "methods": {
+      "delete~rupo9": {
+        "accessModifier": "public",
+        "signature": "delete(key: K): boolean",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "boolean",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "key",
+            "dataType": "K",
+            "isOptional": false,
+            "descr": ""
+          }
+        ]
+      },
+      "clear~xLXs9": {
+        "accessModifier": "public",
+        "signature": "clear(): void",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": "",
+        "params": []
+      },
+      "get~anSk9": {
+        "accessModifier": "public",
+        "signature": "get(key: K): V",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "V",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "key",
+            "dataType": "K",
+            "isOptional": false,
+            "descr": ""
+          }
+        ]
+      },
+      "has~8wy89": {
+        "accessModifier": "public",
+        "signature": "has(key: K): boolean",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "boolean",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "key",
+            "dataType": "K",
+            "isOptional": false,
+            "descr": ""
+          }
+        ]
+      },
+      "set~ZxwQ9": {
+        "accessModifier": "public",
+        "signature": "set(key: K,value?: V): WeakMap<K,V>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "WeakMap<K,V>",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "key",
+            "dataType": "K",
+            "isOptional": false,
+            "descr": ""
+          },
+          {
+            "name": "value",
+            "dataType": "V",
+            "isOptional": true,
+            "descr": ""
+          }
+        ]
+      }
+    },
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "WeakMapConstructor": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "",
+    "properties": {
+      "prototype": {
+        "dataType": "WeakMap<any,any>",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": ""
+      }
+    },
+    "functions": {},
+    "methods": {
+      "constructor<K,V>~yhDE9": {
+        "accessModifier": "public",
+        "signature": "new<K,V>(): WeakMap<K,V>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": "K,V",
+        "returnType": "WeakMap<K,V>",
+        "returnDescr": "",
+        "params": []
+      },
+      "constructor<K,V>~jbMk9": {
+        "accessModifier": "public",
+        "signature": "new<K,V>(iterable: ForEachable<[K,V]>): WeakMap<K,V>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": "K,V",
+        "returnType": "WeakMap<K,V>",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "iterable",
+            "dataType": "ForEachable<[K,V]>",
+            "isOptional": false,
+            "descr": ""
+          }
+        ]
+      }
+    },
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "WeakSet": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "",
+    "properties": {},
+    "functions": {},
+    "methods": {
+      "delete~OlfE9": {
+        "accessModifier": "public",
+        "signature": "delete(value: T): boolean",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "boolean",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "value",
+            "dataType": "T",
+            "isOptional": false,
+            "descr": ""
+          }
+        ]
+      },
+      "clear~xLXs9": {
+        "accessModifier": "public",
+        "signature": "clear(): void",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": "",
+        "params": []
+      },
+      "add~Et949": {
+        "accessModifier": "public",
+        "signature": "add(value: T): WeakSet<T>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "WeakSet<T>",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "value",
+            "dataType": "T",
+            "isOptional": false,
+            "descr": ""
+          }
+        ]
+      },
+      "has~wh3M9": {
+        "accessModifier": "public",
+        "signature": "has(value: T): boolean",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": null,
+        "returnType": "boolean",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "value",
+            "dataType": "T",
+            "isOptional": false,
+            "descr": ""
+          }
+        ]
+      }
+    },
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "WeakSetConstructor": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "",
+    "properties": {
+      "prototype": {
+        "dataType": "WeakSet<any>",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": ""
+      }
+    },
+    "functions": {},
+    "methods": {
+      "constructor<T>~hDok9": {
+        "accessModifier": "public",
+        "signature": "new<T>(): WeakSet<T>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": "T",
+        "returnType": "WeakSet<T>",
+        "returnDescr": "",
+        "params": []
+      },
+      "constructor<T>~uZ049": {
+        "accessModifier": "public",
+        "signature": "new<T>(iterable: ForEachable<T>): WeakSet<T>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "",
+        "genericType": "T",
+        "returnType": "WeakSet<T>",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "iterable",
+            "dataType": "ForEachable<T>",
+            "isOptional": false,
+            "descr": ""
+          }
+        ]
+      }
+    },
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  }
+}

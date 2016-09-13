@@ -340,7 +340,7 @@ function addRegions(tline = '', type = '') {
         case 'class':
             o = classObj
             break;
-        case 'imodule':
+        case 'module':
             o = moduleObj
             break;
         case 'interface':
@@ -381,7 +381,7 @@ function addRegions(tline = '', type = '') {
         }
         mdout.push(mline)
             // Dynamically call the function to generate the individual md files
-
+        console.log(type);
         dFunction[`${type}GenIndividual`](e)
 
     })
@@ -667,8 +667,8 @@ try {
     classInterfaceT = FileOps.loadFile('./config/class_interface.md')
     methodfuncT = FileOps.loadFile('./config/method_function.md')
     enumT = FileOps.loadFile('./config/enum.md')
-    allTypes = JSON.parse(FileOps.loadJson('./json/allTypes.json'))
-    allVarsTypes = JSON.parse(FileOps.loadJson('./json/allVarsTypes.json'))
+    allTypes = JSON.parse(FileOps.loadJson('./types/allTypes.json'))
+    allVarsTypes = JSON.parse(FileOps.loadJson('./types/allVarsTypes.json'))
     console.log('** Config and type files read')
 } catch (e) {
     console.log(`Error Loading config files.`)
@@ -680,21 +680,15 @@ try {
 let inputFiles = FileOps.walkFiles('./input', '.ts')
 inputFiles.forEach((e) => {
     let files = FileOps.walkFiles('./json', e)
-    console.log(files);
     loadModule(files)
     moduleName = e.split('.')[0]
-    console.log(anchor);
     genExtModuleView()
     file_reset()
-
 })
 
 function loadModule(files = []) {
-    console.log('loading module files now ' + files);
     files.forEach((e) => {
-        console.log(`** Processing ${e}`)
         anchor = e.split('.ts')[0].toLowerCase()
-        console.log(e + ' -- ' + anchor);
         FileOps.createFolder(`./markdown/${anchor}`)
         if (e.includes('_module.json')) {
             moduleObj = JSON.parse(FileOps.loadJson(`./json/${e}`))

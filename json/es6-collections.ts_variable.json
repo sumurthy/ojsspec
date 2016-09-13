@@ -1,0 +1,18 @@
+{
+  "Map": {
+    "dataType": "MapConstructor",
+    "descr": ""
+  },
+  "Set": {
+    "dataType": "SetConstructor",
+    "descr": ""
+  },
+  "WeakMap": {
+    "dataType": "WeakMapConstructor",
+    "descr": ""
+  },
+  "WeakSet": {
+    "dataType": "WeakSetConstructor",
+    "descr": ""
+  }
+}

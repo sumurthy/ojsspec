@@ -1,0 +1,985 @@
+{
+  "IBasicHttpClientOptions": {
+    "implementsExtendsName": "RequestInit",
+    "genericType": null,
+    "descr": "This interface defines the options for the BasicHttpClient operations such as \nget(), post(), fetch(), etc. It is based on the whatwg API standard \nparameters that are documented here: \nhttps://fetch.spec.whatwg.org/",
+    "properties": {
+      "body": {
+        "dataType": "BodyInit",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This interface defines the options for the BasicHttpClient operations such as \nget(), post(), fetch(), etc. It is based on the whatwg API standard \nparameters that are documented here: \nhttps://fetch.spec.whatwg.org/"
+      },
+      "cache": {
+        "dataType": "string|RequestCache",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This interface defines the options for the BasicHttpClient operations such as \nget(), post(), fetch(), etc. It is based on the whatwg API standard \nparameters that are documented here: \nhttps://fetch.spec.whatwg.org/"
+      },
+      "credentials": {
+        "dataType": "string|RequestCredentials",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This interface defines the options for the BasicHttpClient operations such as \nget(), post(), fetch(), etc. It is based on the whatwg API standard \nparameters that are documented here: \nhttps://fetch.spec.whatwg.org/"
+      },
+      "headers": {
+        "dataType": "HeaderInit|{ [index: string]: string }",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This interface defines the options for the BasicHttpClient operations such as \nget(), post(), fetch(), etc. It is based on the whatwg API standard \nparameters that are documented here: \nhttps://fetch.spec.whatwg.org/"
+      },
+      "method": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This interface defines the options for the BasicHttpClient operations such as \nget(), post(), fetch(), etc. It is based on the whatwg API standard \nparameters that are documented here: \nhttps://fetch.spec.whatwg.org/"
+      },
+      "mode": {
+        "dataType": "string|RequestMode",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This interface defines the options for the BasicHttpClient operations such as \nget(), post(), fetch(), etc. It is based on the whatwg API standard \nparameters that are documented here: \nhttps://fetch.spec.whatwg.org/"
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IClientSideApplicationManifest": {
+    "implementsExtendsName": "IClientSideComponentManifest",
+    "genericType": null,
+    "descr": "This is is the manifest for a client-side application.",
+    "properties": {
+      "bootstrapModule": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This is is the manifest for a client-side application."
+      },
+      "cssLinks": {
+        "dataType": "string[]",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": true,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This is is the manifest for a client-side application."
+      },
+      "displayName": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This is is the manifest for a client-side application."
+      },
+      "id": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This is is the manifest for a client-side application."
+      },
+      "manifestVersion": {
+        "dataType": "number",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This is is the manifest for a client-side application."
+      },
+      "moduleName": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This is is the manifest for a client-side application."
+      },
+      "platformModule": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This is is the manifest for a client-side application."
+      },
+      "preloadClientSideComponents": {
+        "dataType": "string[]",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": true,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This is is the manifest for a client-side application."
+      },
+      "systemJsModule": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This is is the manifest for a client-side application."
+      },
+      "version": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This is is the manifest for a client-side application."
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IClientSideComponentManifest": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "This is the base interface that is extended by the interfaces \nthat represent the manifest for each kind of client-side component.",
+    "properties": {
+      "bootstrapModule": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This is the base interface that is extended by the interfaces \nthat represent the manifest for each kind of client-side component."
+      },
+      "displayName": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This is the base interface that is extended by the interfaces \nthat represent the manifest for each kind of client-side component."
+      },
+      "id": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This is the base interface that is extended by the interfaces \nthat represent the manifest for each kind of client-side component."
+      },
+      "manifestVersion": {
+        "dataType": "number",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This is the base interface that is extended by the interfaces \nthat represent the manifest for each kind of client-side component."
+      },
+      "moduleName": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This is the base interface that is extended by the interfaces \nthat represent the manifest for each kind of client-side component."
+      },
+      "version": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This is the base interface that is extended by the interfaces \nthat represent the manifest for each kind of client-side component."
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IDigestCache": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "IDigestCache is an internal service used by HttpClient to maintain a cache of request digests \nfor each SPWeb URL. A request digest is a security token that the SharePoint server requires for \nfor any REST write operation, specified via the \"X-RequestDigest\" HTTP header. It is obtained \nby calling the \"/_api/contextinfo\" REST endpoint, and expires after a server configurable amount \nof time. For more information, see the MSDN article \n\"Complete basic operations using SharePoint 2013 REST endpoints\".",
+    "properties": {},
+    "functions": {},
+    "methods": {
+      "addDigestToCache~dLbs9": {
+        "accessModifier": "public",
+        "signature": "addDigestToCache(webUrl: string,digestValue: string,expirationTimestamp: number): void",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "IDigestCache is an internal service used by HttpClient to maintain a cache of request digests \nfor each SPWeb URL. A request digest is a security token that the SharePoint server requires for \nfor any REST write operation, specified via the \"X-RequestDigest\" HTTP header. It is obtained \nby calling the \"/_api/contextinfo\" REST endpoint, and expires after a server configurable amount \nof time. For more information, see the MSDN article \n\"Complete basic operations using SharePoint 2013 REST endpoints\".",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": "",
+        "params": [
+          {
+            "name": "webUrl",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": "The URL of the SPWeb that the API call will be issued to. \nThis may be a server-relative or absolute URL."
+          },
+          {
+            "name": "digestValue",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": "The digest value,which is an opaque that must be generated \nby the SharePoint server. The syntax will look something like \nthis: \"0x0B85...2EAC,29 Jan 2016 01:23:45 -0000\""
+          },
+          {
+            "name": "expirationTimestamp",
+            "dataType": "number",
+            "isOptional": false,
+            "descr": "A future point in time,as measured by performance.now(),after which \nthe digest value will no longer be valid. \nNOTE: The expirationTime is a DOMHighResTimeStamp value whose units are \nfractional milliseconds; for example, to specify an expiration \n\"5 seconds from right now\", use performance.now()+5000."
+          }
+        ]
+      },
+      "clearAllDigests~oVNk9": {
+        "accessModifier": "public",
+        "signature": "clearAllDigests(): void",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "IDigestCache is an internal service used by HttpClient to maintain a cache of request digests \nfor each SPWeb URL. A request digest is a security token that the SharePoint server requires for \nfor any REST write operation, specified via the \"X-RequestDigest\" HTTP header. It is obtained \nby calling the \"/_api/contextinfo\" REST endpoint, and expires after a server configurable amount \nof time. For more information, see the MSDN article \n\"Complete basic operations using SharePoint 2013 REST endpoints\".",
+        "genericType": null,
+        "returnType": "void",
+        "returnDescr": "",
+        "params": []
+      },
+      "clearDigest~HDFI9": {
+        "accessModifier": "public",
+        "signature": "clearDigest(webUrl: string): boolean",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "IDigestCache is an internal service used by HttpClient to maintain a cache of request digests \nfor each SPWeb URL. A request digest is a security token that the SharePoint server requires for \nfor any REST write operation, specified via the \"X-RequestDigest\" HTTP header. It is obtained \nby calling the \"/_api/contextinfo\" REST endpoint, and expires after a server configurable amount \nof time. For more information, see the MSDN article \n\"Complete basic operations using SharePoint 2013 REST endpoints\".",
+        "genericType": null,
+        "returnType": "boolean",
+        "returnDescr": "Returns true if a cache entry was found and deleted false otherwise.",
+        "params": [
+          {
+            "name": "webUrl",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": "The URL of the SPWeb whose digest should be cleared. \nThis may be a server-relative or absolute URL."
+          }
+        ]
+      },
+      "fetchDigest~dBvU9": {
+        "accessModifier": "public",
+        "signature": "fetchDigest(webUrl: string): Promise<string>",
+        "isStatic": false,
+        "isOptional": false,
+        "descr": "IDigestCache is an internal service used by HttpClient to maintain a cache of request digests \nfor each SPWeb URL. A request digest is a security token that the SharePoint server requires for \nfor any REST write operation, specified via the \"X-RequestDigest\" HTTP header. It is obtained \nby calling the \"/_api/contextinfo\" REST endpoint, and expires after a server configurable amount \nof time. For more information, see the MSDN article \n\"Complete basic operations using SharePoint 2013 REST endpoints\".",
+        "genericType": null,
+        "returnType": "Promise<string>",
+        "returnDescr": "A promise that is fulfilled with the digest value.",
+        "params": [
+          {
+            "name": "webUrl",
+            "dataType": "string",
+            "isOptional": false,
+            "descr": "The URL of the SPWeb that the API call will be issued to. \nThis may be a server-relative or absolute URL."
+          }
+        ]
+      }
+    },
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IHttpClientOptions": {
+    "implementsExtendsName": "IBasicHttpClientOptions",
+    "genericType": null,
+    "descr": "This interface defines the options for the HttpClient operations such as \nget(), post(), fetch(), etc. It is based on the WHATWG API standard \nparameters that are documented here: \nhttps://fetch.spec.whatwg.org/",
+    "properties": {
+      "body": {
+        "dataType": "BodyInit",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This interface defines the options for the HttpClient operations such as \nget(), post(), fetch(), etc. It is based on the WHATWG API standard \nparameters that are documented here: \nhttps://fetch.spec.whatwg.org/"
+      },
+      "cache": {
+        "dataType": "string|RequestCache",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This interface defines the options for the HttpClient operations such as \nget(), post(), fetch(), etc. It is based on the WHATWG API standard \nparameters that are documented here: \nhttps://fetch.spec.whatwg.org/"
+      },
+      "credentials": {
+        "dataType": "string|RequestCredentials",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This interface defines the options for the HttpClient operations such as \nget(), post(), fetch(), etc. It is based on the WHATWG API standard \nparameters that are documented here: \nhttps://fetch.spec.whatwg.org/"
+      },
+      "headers": {
+        "dataType": "HeaderInit|{ [index: string]: string }",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This interface defines the options for the HttpClient operations such as \nget(), post(), fetch(), etc. It is based on the WHATWG API standard \nparameters that are documented here: \nhttps://fetch.spec.whatwg.org/"
+      },
+      "method": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This interface defines the options for the HttpClient operations such as \nget(), post(), fetch(), etc. It is based on the WHATWG API standard \nparameters that are documented here: \nhttps://fetch.spec.whatwg.org/"
+      },
+      "mode": {
+        "dataType": "string|RequestMode",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This interface defines the options for the HttpClient operations such as \nget(), post(), fetch(), etc. It is based on the WHATWG API standard \nparameters that are documented here: \nhttps://fetch.spec.whatwg.org/"
+      },
+      "webUrl": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This interface defines the options for the HttpClient operations such as \nget(), post(), fetch(), etc. It is based on the WHATWG API standard \nparameters that are documented here: \nhttps://fetch.spec.whatwg.org/"
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IODataBasePermission": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "Data used for creating a SPPermission object.",
+    "properties": {
+      "High": {
+        "dataType": "number",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Data used for creating a SPPermission object."
+      },
+      "Low": {
+        "dataType": "number",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Data used for creating a SPPermission object."
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IODataBatchOptions": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "This interface is passed to the ODataBatch constructor. It specifies options \nthat affect the entire batch.",
+    "properties": {
+      "webUrl": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This interface is passed to the ODataBatch constructor. It specifies options \nthat affect the entire batch."
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IODataChangeToken": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "Represents an OData SP.ChangeToken object. For more information about this object",
+    "properties": {
+      "StringValue": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Represents an OData SP.ChangeToken object. For more information about this object"
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IODataContextWebInformation": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "Represents an OData SP.ContextWebInformation object. For more information about this object",
+    "properties": {
+      "FormDigestTimeoutSeconds": {
+        "dataType": "number",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Represents an OData SP.ContextWebInformation object. For more information about this object"
+      },
+      "FormDigestValue": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Represents an OData SP.ContextWebInformation object. For more information about this object"
+      },
+      "LibraryVersion": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Represents an OData SP.ContextWebInformation object. For more information about this object"
+      },
+      "SiteFullUrl": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Represents an OData SP.ContextWebInformation object. For more information about this object"
+      },
+      "SupportedSchemaVersions": {
+        "dataType": "string[]",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": true,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Represents an OData SP.ContextWebInformation object. For more information about this object"
+      },
+      "WebFullUrl": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Represents an OData SP.ContextWebInformation object. For more information about this object"
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IODataNavigationNode": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "Represents an OData SP.NavigationNode object. \nhttps://msdn.microsoft.com/en-us/library/office/jj246311.aspx",
+    "properties": {
+      "Children": {
+        "dataType": "IODataNavigationNode[]",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": true,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Represents an OData SP.NavigationNode object. \nhttps://msdn.microsoft.com/en-us/library/office/jj246311.aspx"
+      },
+      "Id": {
+        "dataType": "number",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Represents an OData SP.NavigationNode object. \nhttps://msdn.microsoft.com/en-us/library/office/jj246311.aspx"
+      },
+      "IsDocLib": {
+        "dataType": "boolean",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Represents an OData SP.NavigationNode object. \nhttps://msdn.microsoft.com/en-us/library/office/jj246311.aspx"
+      },
+      "IsExternal": {
+        "dataType": "boolean",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Represents an OData SP.NavigationNode object. \nhttps://msdn.microsoft.com/en-us/library/office/jj246311.aspx"
+      },
+      "IsVisible": {
+        "dataType": "boolean",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Represents an OData SP.NavigationNode object. \nhttps://msdn.microsoft.com/en-us/library/office/jj246311.aspx"
+      },
+      "Title": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Represents an OData SP.NavigationNode object. \nhttps://msdn.microsoft.com/en-us/library/office/jj246311.aspx"
+      },
+      "Url": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Represents an OData SP.NavigationNode object. \nhttps://msdn.microsoft.com/en-us/library/office/jj246311.aspx"
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IODataNavigationNodeCollection": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "Represents an OData Microsoft.SharePoint.Navigation.SPNavigation object. \nhttps://msdn.microsoft.com/en-us/library/office/ee557907.aspx",
+    "properties": {
+      "quickLaunch": {
+        "dataType": "IODataNavigationNode[]",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": true,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Represents an OData Microsoft.SharePoint.Navigation.SPNavigation object. \nhttps://msdn.microsoft.com/en-us/library/office/ee557907.aspx"
+      },
+      "topNav": {
+        "dataType": "IODataNavigationNode[]",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": false,
+        "isCollection": true,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Represents an OData Microsoft.SharePoint.Navigation.SPNavigation object. \nhttps://msdn.microsoft.com/en-us/library/office/ee557907.aspx"
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IODataWeb": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx",
+    "properties": {
+      "Created": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+      },
+      "CurrentChangeToken": {
+        "dataType": "IODataChangeToken",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+      },
+      "CustomMasterUrl": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+      },
+      "Description": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+      },
+      "Id": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+      },
+      "IsMultilingual": {
+        "dataType": "boolean",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+      },
+      "Language": {
+        "dataType": "number",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+      },
+      "LastItemModifiedDate": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+      },
+      "MasterUrl": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+      },
+      "NoCrawl": {
+        "dataType": "boolean",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+      },
+      "QuickLaunchEnabled": {
+        "dataType": "boolean",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+      },
+      "RecycleBinEnabled": {
+        "dataType": "boolean",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+      },
+      "ServerRelativeUrl": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+      },
+      "SiteLogoUrl": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+      },
+      "Title": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+      },
+      "UIVersion": {
+        "dataType": "number",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+      },
+      "Url": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+      },
+      "WebTemplate": {
+        "dataType": "string",
+        "accessModifier": "public",
+        "isOptional": true,
+        "readonly": false,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  },
+  "IServiceScopeProvider": {
+    "implementsExtendsName": "",
+    "genericType": null,
+    "descr": "This is a convenient interface that can be used to indicate that an object \nhas an associated ServiceScope.",
+    "properties": {
+      "serviceScope": {
+        "dataType": "ServiceScope",
+        "accessModifier": "public",
+        "isOptional": false,
+        "readonly": true,
+        "isCollection": false,
+        "function": null,
+        "returnType": null,
+        "assignValue": null,
+        "descr": "This is a convenient interface that can be used to indicate that an object \nhas an associated ServiceScope."
+      }
+    },
+    "functions": {},
+    "methods": {},
+    "types": {},
+    "variables": {},
+    "modules": {},
+    "objects": {}
+  }
+}

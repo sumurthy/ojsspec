@@ -465,8 +465,8 @@ SetUp.cleanupOutput('./json')
 
 let files = FileOps.walkFiles('./input-scrubbed')
 files.forEach(processFile)
-FileOps.writeObject(allTypes, `./json/allTypes.json`)
-FileOps.writeObject(allVarsTypes, `./json/allVarsTypes.json`)
+FileOps.writeObject(allTypes, `./types/allTypes.json`)
+FileOps.writeObject(allVarsTypes, `./types/allVarsTypes.json`)
 
 function processFile(fileName) {
     console.log(`** Processing ${fileName}`)
