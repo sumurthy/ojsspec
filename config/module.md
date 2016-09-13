@@ -2,7 +2,7 @@
 # %module% external module
 </module>
 
-<module>
+<imodule>
 
 ## Modules
 
@@ -10,7 +10,7 @@
 |:-------------|:---------------|
 >| [%name%](%link%-imodule.md)     | %description% |
 
-</module>
+</imodule>
 
 <class>
 

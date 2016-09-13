@@ -41,7 +41,9 @@ var self = module.exports  = {
 		}
 	},
 
-  writeFile:  (lines=[], path='') => {
+  writeFile:(lines=[], path='') => {
+
+    console.log('!!!! ' + path);
     path = path.toLowerCase()
     try {
         fs.writeFileSync(path, lines.join(nl))
@@ -49,7 +51,7 @@ var self = module.exports  = {
     catch(e)
     {
       console.log(`Error loading the input file, path: ${path}, ${e}`)
-			throw e
+	  throw e
     }
   },
 

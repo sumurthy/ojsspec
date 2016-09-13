@@ -16,7 +16,7 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`fetch`](#fetch)      | [`Promise<Response>`](../es6-promise/promise.md) |  |
+|[`fetch`](#fetch)      | `Promise<Response>` |  |
 
 
 
@@ -29,7 +29,7 @@
 `fetch(url: string|Request,init?: RequestInit): Promise<Response>`
 
 #### Returns
-[`Promise<Response>`](../es6-promise/promise.md)
+`Promise<Response>`
 
 
 #### Parameters

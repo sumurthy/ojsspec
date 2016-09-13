@@ -1,4 +1,3 @@
-21. sp-Client-preview.ts
 4. HANDLE OBJECT TYPE OF DATA: (similar to module/object data type support)
   interface IHtmlProperties {
     imageLinkProperties: {
@@ -11,10 +10,6 @@
       [ propName: string ]: string
     }
   }
-5. Check Optional handling ? for methods, params, etc. Need it in markdown.
-17. Can't have random numbers name. Maybe we can do Sha256 strings.
-19. IBasicHttpClientOptions - has headers data type problems, no hyperlink for BodyInit
-20. Links to variables and types:
 21. Handle {} inside strings.
 22. Need to handle module inside module. Need to handle VAR as parameter
 23. isClass mess - fix it
@@ -29,9 +24,7 @@
   "foo": "es6-promise-module.md#variables",
 28. Markdown links are not right for methods with generics in them [`then<U>`](#then<u>)
 29. Handle datatype: public hasAllPermissions(...requestedPerms: SPPermission[]): boolean;
-30. Collection is not captured somehow.
 
 LONGER TERM:
 19. Make use of dFunction for enum and function file generation
 1. Use TypeScript AST to generate the intermediary JSONs.
-13. Change allTypes to set instead of an array

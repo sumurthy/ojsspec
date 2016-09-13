@@ -139,7 +139,7 @@ function set_region(tline = '', obj = {}, localName = '', isClass = true) {
                     skipFlag = true
                 }
                 break;
-            case 'module':
+            case 'imodule':
                 if (Object.keys(moduleObj).length === 0) {
                     skipFlag = true
                 }
@@ -228,7 +228,6 @@ function set_region(tline = '', obj = {}, localName = '', isClass = true) {
 function doSub(tline = '') {
     if (tline.includes('%module%')) tline = tline.replace('%module%', moduleName)
     if (tline.includes('%resourcename%')) tline = tline.replace('%resourcename%', objectName)
-
     return tline
 }
 
@@ -341,7 +340,7 @@ function addRegions(tline = '', type = '') {
         case 'class':
             o = classObj
             break;
-        case 'module':
+        case 'imodule':
             o = moduleObj
             break;
         case 'interface':
@@ -566,7 +565,6 @@ function genMemberview(memName = '', member = {}, targetArray = [], isClass = tr
 }
 
 function genExtModuleView() {
-
     moduleT.forEach((tline) => {
         tline = tline.trim()
         var key = tline[0] || '*'
@@ -586,11 +584,12 @@ function genExtModuleView() {
         if (WRITE_BACK.includes(key)) {
 
             if (hasVar) tline = doSub(tline)
+
             mdout.push(tline)
         } else if (TAKE_REPEAT_ACTION.includes(key)) {
             switch (region) {
                 case 'class':
-                case 'module':
+                case 'imodule':
                 case 'functions':
                 case 'interface':
                 case 'enumeration':
@@ -661,15 +660,16 @@ console.log('** Starting Program...')
 FileOps.removeFolderRec('./markdown')
 console.log('** Removed existing markdown files...')
 FileOps.createFolder('./markdown')
+console.log('** Output setup done')
 
 try {
     moduleT = FileOps.loadFile('./config/module.md')
     classInterfaceT = FileOps.loadFile('./config/class_interface.md')
     methodfuncT = FileOps.loadFile('./config/method_function.md')
     enumT = FileOps.loadFile('./config/enum.md')
-
     allTypes = JSON.parse(FileOps.loadJson('./json/allTypes.json'))
     allVarsTypes = JSON.parse(FileOps.loadJson('./json/allVarsTypes.json'))
+    console.log('** Config and type files read')
 } catch (e) {
     console.log(`Error Loading config files.`)
     throw e
@@ -680,20 +680,21 @@ try {
 let inputFiles = FileOps.walkFiles('./input', '.ts')
 inputFiles.forEach((e) => {
     let files = FileOps.walkFiles('./json', e)
+    console.log(files);
     loadModule(files)
-
     moduleName = e.split('.')[0]
+    console.log(anchor);
     genExtModuleView()
-
     file_reset()
 
 })
 
 function loadModule(files = []) {
-
+    console.log('loading module files now ' + files);
     files.forEach((e) => {
         console.log(`** Processing ${e}`)
         anchor = e.split('.ts')[0].toLowerCase()
+        console.log(e + ' -- ' + anchor);
         FileOps.createFolder(`./markdown/${anchor}`)
         if (e.includes('_module.json')) {
             moduleObj = JSON.parse(FileOps.loadJson(`./json/${e}`))
