@@ -11,7 +11,6 @@ const EXTENDS = ' extends'
 const FUNCTION = 'function '
 const FUNCTIONES6 = '=>'
 
-
 let outputJs = []
 let nFuncInt = 0
 let nMember = 0

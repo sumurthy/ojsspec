@@ -131,7 +131,7 @@
     "properties": {},
     "functions": {},
     "methods": {
-      "fetch~o69A9": {
+      "fetch-o69A9": {
         "accessModifier": "public",
         "signature": "fetch(url: string|Request,init?: RequestInit): Promise<Response>",
         "isStatic": false,

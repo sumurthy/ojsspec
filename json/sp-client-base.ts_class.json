@@ -18,7 +18,7 @@
     },
     "functions": {},
     "methods": {
-      "constructor~8mp89": {
+      "constructor-8mp89": {
         "accessModifier": "public",
         "signature": "constructor(serviceScope: ServiceScope)",
         "isStatic": false,
@@ -36,7 +36,7 @@
           }
         ]
       },
-      "fetch~zVBA9": {
+      "fetch-zVBA9": {
         "accessModifier": "public",
         "signature": "fetch(url: string,options: IBasicHttpClientOptions): Promise<Response>",
         "isStatic": false,
@@ -60,7 +60,7 @@
           }
         ]
       },
-      "fetchCore~kYzk9": {
+      "fetchCore-kYzk9": {
         "accessModifier": "protected",
         "signature": "fetchCore(request: Request): Promise<Response>",
         "isStatic": false,
@@ -78,7 +78,7 @@
           }
         ]
       },
-      "get~wQVw9": {
+      "get-wQVw9": {
         "accessModifier": "public",
         "signature": "get(url: string,options?: IBasicHttpClientOptions): Promise<Response>",
         "isStatic": false,
@@ -102,7 +102,7 @@
           }
         ]
       },
-      "post~QZWc9": {
+      "post-QZWc9": {
         "accessModifier": "public",
         "signature": "post(url: string,options: IBasicHttpClientOptions): Promise<Response>",
         "isStatic": false,
@@ -139,7 +139,7 @@
     "properties": {},
     "functions": {},
     "methods": {
-      "shallowCompare~RhEw9": {
+      "shallowCompare-RhEw9": {
         "accessModifier": "public",
         "signature": "shallowCompare(objA: Object,objB: Object): boolean",
         "isStatic": true,
@@ -235,7 +235,7 @@
     "properties": {},
     "functions": {},
     "methods": {
-      "equals~BuYE9": {
+      "equals-BuYE9": {
         "accessModifier": "public",
         "signature": "equals(guid: Guid): boolean",
         "isStatic": false,
@@ -253,7 +253,7 @@
           }
         ]
       },
-      "isValid~udOU9": {
+      "isValid-udOU9": {
         "accessModifier": "public",
         "signature": "isValid(guid: string): boolean",
         "isStatic": true,
@@ -271,7 +271,7 @@
           }
         ]
       },
-      "constructorGuid~SYAY9": {
+      "constructorGuid-SYAY9": {
         "accessModifier": "public",
         "signature": "newGuid(randomProvider?: IRandomProvider): Guid",
         "isStatic": true,
@@ -289,7 +289,7 @@
           }
         ]
       },
-      "toString~5Z9w9": {
+      "toString-5Z9w9": {
         "accessModifier": "public",
         "signature": "toString(): string",
         "isStatic": false,
@@ -300,7 +300,7 @@
         "returnDescr": "The GUID value in lowercase hexadecimal without braces. \nExample: 'd5369f3b-bd7a-412a-9c0f-7f0650bb5489'",
         "params": []
       },
-      "tryParse~hyQk9": {
+      "tryParse-hyQk9": {
         "accessModifier": "public",
         "signature": "tryParse(guid: string): Guid",
         "isStatic": true,
@@ -331,7 +331,7 @@
     "properties": {},
     "functions": {},
     "methods": {
-      "constructor~8mp89": {
+      "constructor-8mp89": {
         "accessModifier": "public",
         "signature": "constructor(serviceScope: ServiceScope)",
         "isStatic": false,
@@ -349,7 +349,7 @@
           }
         ]
       },
-      "beginBatch~Qdz89": {
+      "beginBatch-Qdz89": {
         "accessModifier": "public",
         "signature": "beginBatch(batchOptions?: IODataBatchOptions): ODataBatch",
         "isStatic": false,
@@ -367,7 +367,7 @@
           }
         ]
       },
-      "fetch~GL3M9": {
+      "fetch-GL3M9": {
         "accessModifier": "public",
         "signature": "fetch(url: string,options: IHttpClientOptions): Promise<Response>",
         "isStatic": false,
@@ -391,7 +391,7 @@
           }
         ]
       },
-      "get~hBbg9": {
+      "get-hBbg9": {
         "accessModifier": "public",
         "signature": "get(url: string,options?: IHttpClientOptions): Promise<Response>",
         "isStatic": false,
@@ -415,7 +415,7 @@
           }
         ]
       },
-      "getWebUrlFromRequestUrl~j9SA9": {
+      "getWebUrlFromRequestUrl-j9SA9": {
         "accessModifier": "public",
         "signature": "getWebUrlFromRequestUrl(requestUrl: string): string",
         "isStatic": true,
@@ -433,7 +433,7 @@
           }
         ]
       },
-      "post~azHU9": {
+      "post-azHU9": {
         "accessModifier": "public",
         "signature": "post(url: string,options: IHttpClientOptions): Promise<Response>",
         "isStatic": false,
@@ -470,7 +470,7 @@
     "properties": {},
     "functions": {},
     "methods": {
-      "error~pS309": {
+      "error-pS309": {
         "accessModifier": "public",
         "signature": "error(source: string,error: Error,scope?: ServiceScope): void",
         "isStatic": true,
@@ -500,7 +500,7 @@
           }
         ]
       },
-      "info~0jwc9": {
+      "info-0jwc9": {
         "accessModifier": "public",
         "signature": "info(source: string,message: string,scope?: ServiceScope): void",
         "isStatic": true,
@@ -530,7 +530,7 @@
           }
         ]
       },
-      "verbose~vaBA9": {
+      "verbose-vaBA9": {
         "accessModifier": "public",
         "signature": "verbose(source: string,message: string,scope?: ServiceScope): void",
         "isStatic": true,
@@ -560,7 +560,7 @@
           }
         ]
       },
-      "warn~xzeY9": {
+      "warn-xzeY9": {
         "accessModifier": "public",
         "signature": "warn(source: string,message: string,scope?: ServiceScope): void",
         "isStatic": true,
@@ -603,7 +603,7 @@
     "properties": {},
     "functions": {},
     "methods": {
-      "constructor~w9vY9": {
+      "constructor-w9vY9": {
         "accessModifier": "public",
         "signature": "constructor(serviceScope: ServiceScope,batchOptions?: IODataBatchOptions)",
         "isStatic": false,
@@ -627,7 +627,7 @@
           }
         ]
       },
-      "execute~6jSw9": {
+      "execute-6jSw9": {
         "accessModifier": "public",
         "signature": "execute(): Promise<ODataBatch>",
         "isStatic": false,
@@ -638,7 +638,7 @@
         "returnDescr": "",
         "params": []
       },
-      "fetch~k9BM9": {
+      "fetch-k9BM9": {
         "accessModifier": "public",
         "signature": "fetch(url: string,options?: IODataBatchRequestOptions): Promise<Response>",
         "isStatic": false,
@@ -662,7 +662,7 @@
           }
         ]
       },
-      "get~tVJg9": {
+      "get-tVJg9": {
         "accessModifier": "public",
         "signature": "get(url: string,options?: IODataBatchRequestOptions): Promise<Response>",
         "isStatic": false,
@@ -686,7 +686,7 @@
           }
         ]
       },
-      "post~JWiw9": {
+      "post-JWiw9": {
         "accessModifier": "public",
         "signature": "post(url: string,options: IODataBatchRequestOptions): Promise<Response>",
         "isStatic": false,
@@ -779,7 +779,7 @@
     },
     "functions": {},
     "methods": {
-      "constructor~8mp89": {
+      "constructor-8mp89": {
         "accessModifier": "public",
         "signature": "constructor(serviceScope: ServiceScope)",
         "isStatic": false,
@@ -844,7 +844,7 @@
     },
     "functions": {},
     "methods": {
-      "constructor~uorI9": {
+      "constructor-uorI9": {
         "accessModifier": "public",
         "signature": "constructor(id: string,name: string,defaultCreator: ServiceCreator<T>)",
         "isStatic": false,
@@ -874,7 +874,7 @@
           }
         ]
       },
-      "create<T>~5bhc9": {
+      "create<T>-5bhc9": {
         "accessModifier": "public",
         "signature": "create<T>(name: string,serviceClass: { new (serviceScope: ServiceScope) }): ServiceKey<T>;",
         "isStatic": true,
@@ -898,7 +898,7 @@
           }
         ]
       },
-      "createCustom<T>~F0HQ9": {
+      "createCustom<T>-F0HQ9": {
         "accessModifier": "public",
         "signature": "createCustom<T>(name: string,defaultCreator: ServiceCreator<T>): ServiceKey<T>",
         "isStatic": true,
@@ -935,7 +935,7 @@
     "properties": {},
     "functions": {},
     "methods": {
-      "constructor~syNo9": {
+      "constructor-syNo9": {
         "accessModifier": "public",
         "signature": "constructor(parent: ServiceScope)",
         "isStatic": false,
@@ -953,7 +953,7 @@
           }
         ]
       },
-      "consume<T>~X1lg9": {
+      "consume<T>-X1lg9": {
         "accessModifier": "public",
         "signature": "consume<T>(serviceKey: ServiceKey<T>): T",
         "isStatic": false,
@@ -971,7 +971,7 @@
           }
         ]
       },
-      "createAndProvide<T>~DDq09": {
+      "createAndProvide<T>-DDq09": {
         "accessModifier": "public",
         "signature": "createAndProvide<T>(serviceKey: ServiceKey<T>,simpleServiceClass: { new (serviceScope: ServiceScope) }): T;",
         "isStatic": false,
@@ -995,7 +995,7 @@
           }
         ]
       },
-      "createDefaultAndProvide<T>~bI8M9": {
+      "createDefaultAndProvide<T>-bI8M9": {
         "accessModifier": "public",
         "signature": "createDefaultAndProvide<T>(serviceKey: ServiceKey<T>): T",
         "isStatic": false,
@@ -1013,7 +1013,7 @@
           }
         ]
       },
-      "finish~N9F89": {
+      "finish-N9F89": {
         "accessModifier": "public",
         "signature": "finish(): void",
         "isStatic": false,
@@ -1024,7 +1024,7 @@
         "returnDescr": "- a service instance that was constructed using ServiceKey.defaultCreator",
         "params": []
       },
-      "getParent~O7ac9": {
+      "getParent-O7ac9": {
         "accessModifier": "public",
         "signature": "getParent(): ServiceScope",
         "isStatic": false,
@@ -1035,7 +1035,7 @@
         "returnDescr": "- the parent service scope",
         "params": []
       },
-      "provide<T>~GSDc9": {
+      "provide<T>-GSDc9": {
         "accessModifier": "public",
         "signature": "provide<T>(serviceKey: ServiceKey<T>,service: T): T",
         "isStatic": false,
@@ -1059,7 +1059,7 @@
           }
         ]
       },
-      "startNewChild~XAHs9": {
+      "startNewChild-XAHs9": {
         "accessModifier": "public",
         "signature": "startNewChild(): ServiceScope",
         "isStatic": false,
@@ -1070,7 +1070,7 @@
         "returnDescr": "- the newly created root ServiceScope",
         "params": []
       },
-      "startNewRoot~Mqls9": {
+      "startNewRoot-Mqls9": {
         "accessModifier": "public",
         "signature": "startNewRoot(): ServiceScope",
         "isStatic": true,
@@ -1081,7 +1081,7 @@
         "returnDescr": "- the newly created root ServiceScope",
         "params": []
       },
-      "whenFinished~L9bA9": {
+      "whenFinished-L9bA9": {
         "accessModifier": "public",
         "signature": "whenFinished(callback: () => void): void",
         "isStatic": false,
@@ -1520,7 +1520,7 @@
     },
     "functions": {},
     "methods": {
-      "constructor~ORTo9": {
+      "constructor-ORTo9": {
         "accessModifier": "public",
         "signature": "constructor(value: IODataBasePermission)",
         "isStatic": false,
@@ -1538,7 +1538,7 @@
           }
         ]
       },
-      "hasAllPermissions~e1lY9": {
+      "hasAllPermissions-e1lY9": {
         "accessModifier": "public",
         "signature": "hasAllPermissions(...requestedPerms: SPPermission[]): boolean",
         "isStatic": false,
@@ -1556,7 +1556,7 @@
           }
         ]
       },
-      "hasAnyPermissions~fXxs9": {
+      "hasAnyPermissions-fXxs9": {
         "accessModifier": "public",
         "signature": "hasAnyPermissions(...requestedPerms: SPPermission[]): boolean",
         "isStatic": false,
@@ -1574,7 +1574,7 @@
           }
         ]
       },
-      "hasPermission~sBGA9": {
+      "hasPermission-sBGA9": {
         "accessModifier": "public",
         "signature": "hasPermission(requestedPerm: SPPermission): boolean",
         "isStatic": false,
@@ -1721,7 +1721,7 @@
     "properties": {},
     "functions": {},
     "methods": {
-      "constructor~mnJI9": {
+      "constructor-mnJI9": {
         "accessModifier": "public",
         "signature": "constructor(url: string)",
         "isStatic": false,
@@ -1739,7 +1739,7 @@
           }
         ]
       },
-      "getValue~eNIk9": {
+      "getValue-eNIk9": {
         "accessModifier": "public",
         "signature": "getValue(param: string): string",
         "isStatic": false,
@@ -1757,7 +1757,7 @@
           }
         ]
       },
-      "getValues~9Dec9": {
+      "getValues-9Dec9": {
         "accessModifier": "public",
         "signature": "getValues(param: string): string[]",
         "isStatic": false,
@@ -1788,7 +1788,7 @@
     "properties": {},
     "functions": {},
     "methods": {
-      "convertToODataStringLiteral~neLw9": {
+      "convertToODataStringLiteral-neLw9": {
         "accessModifier": "public",
         "signature": "convertToODataStringLiteral(value: string): string",
         "isStatic": true,
@@ -1806,7 +1806,7 @@
           }
         ]
       },
-      "removeEndSlash~aIsA9": {
+      "removeEndSlash-aIsA9": {
         "accessModifier": "public",
         "signature": "removeEndSlash(url: string): string",
         "isStatic": true,
@@ -1837,7 +1837,7 @@
     "properties": {},
     "functions": {},
     "methods": {
-      "isNonemptyString~tK9c9": {
+      "isNonemptyString-tK9c9": {
         "accessModifier": "public",
         "signature": "isNonemptyString(value: string,variableName: string): void",
         "isStatic": true,
@@ -1861,7 +1861,7 @@
           }
         ]
       },
-      "isNotNullOrUndefined~KyJc9": {
+      "isNotNullOrUndefined-KyJc9": {
         "accessModifier": "public",
         "signature": "isNotNullOrUndefined(value: any,variableName: string): void",
         "isStatic": true,
@@ -1885,7 +1885,7 @@
           }
         ]
       },
-      "isTrue~RW4Y9": {
+      "isTrue-RW4Y9": {
         "accessModifier": "public",
         "signature": "isTrue(value: boolean,variableName: string): void",
         "isStatic": true,

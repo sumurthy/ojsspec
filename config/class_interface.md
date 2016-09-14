@@ -7,9 +7,7 @@
 
 %resourcedescription%
 
-
 </classheader>
-
 <property>
 ### Properties
 
@@ -63,7 +61,7 @@
 ## Variables
 
 | Variable	   |  Description|
-|:-------------|:----| 
+|:-------------|:----|
 >|%name%      |  %description% |
 
 </variables>

@@ -10,8 +10,6 @@ components. Typically the data is fetched via REST queries when navigating to a
 new page, but it can also be preloaded by the web server, or filled from a custom 
 application cache.
 
-
-
 ### Properties
 
 | Property	   | Access Modifier | Type	| Description|

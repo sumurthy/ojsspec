@@ -27,8 +27,6 @@ event aggregator. But there are possibilities when a page can have multiple host
 and each host may want to scope its event aggregation service.
 
 
-
-
 ### Properties
 
 | Property	   | Type	| Description|

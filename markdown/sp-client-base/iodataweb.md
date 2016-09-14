@@ -9,8 +9,6 @@ see the MSDN documentation here:
 https://msdn.microsoft.com/en-us/library/office/jj860569.aspx
 
 
-
-
 ### Properties
 
 | Property	   | Type	| Description|

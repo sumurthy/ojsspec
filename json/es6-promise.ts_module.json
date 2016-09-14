@@ -6,7 +6,7 @@
     "properties": {},
     "functions": {},
     "methods": {
-      "resolve<R>~hjR49": {
+      "resolve<R>-hjR49": {
         "accessModifier": "public",
         "signature": "resolve<R>(value?: R | Thenable<R>): Promise<R>",
         "isStatic": false,
@@ -24,7 +24,7 @@
           }
         ]
       },
-      "reject~u1UQ9": {
+      "reject-u1UQ9": {
         "accessModifier": "public",
         "signature": "reject(error: any): Promise<any>",
         "isStatic": false,
@@ -42,7 +42,7 @@
           }
         ]
       },
-      "all<R>~O1309": {
+      "all<R>-O1309": {
         "accessModifier": "public",
         "signature": "all<R>(promises: (R | Thenable<R>)[]): Promise<R[]>",
         "isStatic": false,
@@ -60,7 +60,7 @@
           }
         ]
       },
-      "race<R>~EI609": {
+      "race<R>-EI609": {
         "accessModifier": "public",
         "signature": "race<R>(promises: (R | Thenable<R>)[]): Promise<R>",
         "isStatic": false,

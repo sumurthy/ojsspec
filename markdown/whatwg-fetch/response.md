@@ -6,8 +6,6 @@ _Implements: [`Body`](../whatwg-fetch/body.md)_
 
 
 
-
-
 ### Properties
 
 | Property	   | Access Modifier | Type	| Description|

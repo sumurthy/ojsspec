@@ -117,7 +117,7 @@
     },
     "functions": {},
     "methods": {
-      "constructor~whnw9": {
+      "constructor-whnw9": {
         "accessModifier": "public",
         "signature": "constructor(ctx: IWebPartContext)",
         "isStatic": false,
@@ -135,7 +135,7 @@
           }
         ]
       },
-      "clearError~kzpk9": {
+      "clearError-kzpk9": {
         "accessModifier": "protected",
         "signature": "clearError(): void",
         "isStatic": false,
@@ -146,7 +146,7 @@
         "returnDescr": "",
         "params": []
       },
-      "configureStart~MnWI9": {
+      "configureStart-MnWI9": {
         "accessModifier": "protected",
         "signature": "configureStart(refreshOnly?: boolean): void",
         "isStatic": false,
@@ -164,7 +164,7 @@
           }
         ]
       },
-      "deserialize~bHrU9": {
+      "deserialize-bHrU9": {
         "accessModifier": "protected",
         "signature": "deserialize(data: IWebPartData): TProperties",
         "isStatic": false,
@@ -182,7 +182,7 @@
           }
         ]
       },
-      "dispose~ye9M9": {
+      "dispose-ye9M9": {
         "accessModifier": "protected",
         "signature": "dispose(): void",
         "isStatic": false,
@@ -193,7 +193,7 @@
         "returnDescr": "- web part property bag. \n",
         "params": []
       },
-      "onBeforeSerialize~I7HE9": {
+      "onBeforeSerialize-I7HE9": {
         "accessModifier": "protected",
         "signature": "onBeforeSerialize(): IHtmlProperties",
         "isStatic": false,
@@ -204,7 +204,7 @@
         "returnDescr": "- reference to searchable properties and properties that need link fixup. Please read \nthe documentation of IHtmlProperties interface for more details.",
         "params": []
       },
-      "onDisplayModeChanged~G9TY9": {
+      "onDisplayModeChanged-G9TY9": {
         "accessModifier": "protected",
         "signature": "onDisplayModeChanged(oldDisplayMode: DisplayMode): void",
         "isStatic": false,
@@ -222,7 +222,7 @@
           }
         ]
       },
-      "onInit<T>~Br489": {
+      "onInit<T>-Br489": {
         "accessModifier": "protected",
         "signature": "onInit<T>(): Promise<T>",
         "isStatic": false,
@@ -233,7 +233,7 @@
         "returnDescr": "- reference to searchable properties and properties that need link fixup. Please read \nthe documentation of IHtmlProperties interface for more details.",
         "params": []
       },
-      "onPropertyChange~OyJc9": {
+      "onPropertyChange-OyJc9": {
         "accessModifier": "protected",
         "signature": "onPropertyChange(propertyPath: string,newValue: any): void",
         "isStatic": false,
@@ -257,7 +257,7 @@
           }
         ]
       },
-      "onPropertyConfigurationComplete~7EQI9": {
+      "onPropertyConfigurationComplete-7EQI9": {
         "accessModifier": "protected",
         "signature": "onPropertyConfigurationComplete(): void",
         "isStatic": false,
@@ -268,7 +268,7 @@
         "returnDescr": "- reference to searchable properties and properties that need link fixup. Please read \nthe documentation of IHtmlProperties interface for more details.",
         "params": []
       },
-      "onPropertyPaneRendered~Mmik9": {
+      "onPropertyPaneRendered-Mmik9": {
         "accessModifier": "protected",
         "signature": "onPropertyPaneRendered(): void",
         "isStatic": false,
@@ -279,7 +279,7 @@
         "returnDescr": "- reference to searchable properties and properties that need link fixup. Please read \nthe documentation of IHtmlProperties interface for more details.",
         "params": []
       },
-      "onPropertyPaneSave~ZYuc9": {
+      "onPropertyPaneSave-ZYuc9": {
         "accessModifier": "protected",
         "signature": "onPropertyPaneSave(): void",
         "isStatic": false,
@@ -290,7 +290,7 @@
         "returnDescr": "- reference to searchable properties and properties that need link fixup. Please read \nthe documentation of IHtmlProperties interface for more details.",
         "params": []
       },
-      "render~tsG49": {
+      "render-tsG49": {
         "accessModifier": "public",
         "signature": "render(): void",
         "isStatic": false,
@@ -301,7 +301,7 @@
         "returnDescr": "- reference to searchable properties and properties that need link fixup. Please read \nthe documentation of IHtmlProperties interface for more details.",
         "params": []
       },
-      "renderError~tgrU9": {
+      "renderError-tgrU9": {
         "accessModifier": "protected",
         "signature": "renderError(error: Error): void",
         "isStatic": false,

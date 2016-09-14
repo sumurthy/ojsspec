@@ -7,8 +7,6 @@
 Web part - PropertyPane data contract.
 
 
-
-
 ### Properties
 
 | Property	   | Type	| Description|

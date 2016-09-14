@@ -7,8 +7,6 @@
 PropertyPane group. Group is part of the PropertyPanePage.
 
 
-
-
 ### Properties
 
 | Property	   | Type	| Description|

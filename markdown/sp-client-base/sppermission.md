@@ -9,8 +9,6 @@ Specifies the built-in permissions available in SharePoint Foundation
 Derived from OneDriveWeb/ODBNext/odsp-shared 
 https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx
 
-
-
 ### Properties
 
 | Property	   | Access Modifier | Type	| Description|

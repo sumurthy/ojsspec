@@ -12,7 +12,7 @@
 
 | Class	   |  Description |
 |:-------------|:---------------|
-| [Promise](promise.md)     |  |
+| [Promise](./es6-promise/promise.md)     |  |
 
 
 
@@ -20,7 +20,7 @@
 
 | Interface	   |  Description |
 |:-------------|:---------------|
-| [Thenable](thenable.md)   |   |
+| [Thenable](./es6-promise/thenable.md)   |   |
 
 
 

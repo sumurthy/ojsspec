@@ -16,8 +16,6 @@ updated implementation. The render() API is the only API that is mandatory to be
 part. All other life cycle APIs have a base implementation and can be overridden based on the needs of the web part. 
 Please refer to the documentation of the individual APIs to make the right decision.
 
-
-
 ### Properties
 
 | Property	   | Access Modifier | Type	| Description|

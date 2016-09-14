@@ -10,8 +10,6 @@ parameters that are documented here:
 https://fetch.spec.whatwg.org/
 
 
-
-
 ### Properties
 
 | Property	   | Type	| Description|

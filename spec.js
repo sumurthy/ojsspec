@@ -303,19 +303,19 @@ function processObject(objectName = '', index = 0, lines = [], isClass) {
                 o['properties'][name] = p
                 continue
             } else if (memberType === 'METHOD') {   //METHOD
-                var name = Utils.getMethodName(line) || "ErrorErrorError~99999"
+                var name = Utils.getMethodName(line) || "ErrorErrorError-99999"
                 var m = Utils.processMethod(line, generalDesc, commentObject, objectName, name, isStatic)
                 o['methods'][name] = m
-                var linkvalue = ('../' + anchor + '/' + objectName + '.md#' + name.split('~')[0]).toLowerCase()
-                var linkkey = (objectName + '.' + name.split('~')[0]).toLowerCase()
+                var linkvalue = ('../' + anchor + '/' + objectName + '.md#' + name.split('-')[0]).toLowerCase()
+                var linkkey = (objectName + '.' + name.split('-')[0]).toLowerCase()
                 allVarsTypes[linkkey] = linkvalue
                 continue
             } else if (memberType === 'FUNCTION') {   //METHOD
-                var name = Utils.getMethodName(line) || "ErrorErrorError~99999"
+                var name = Utils.getMethodName(line) || "ErrorErrorError-99999"
                 var m = Utils.processMethod(line, generalDesc, commentObject, objectName, name, isStatic)
                 o['methods'][name] = m
-                var linkvalue = ('../' + anchor + '/'  + objectName + '.md#' + name.split('~')[0]).toLowerCase()
-                var linkkey = (objectName + '.' + name.split('~')[0]).toLowerCase()
+                var linkvalue = ('../' + anchor + '/'  + objectName + '.md#' + name.split('-')[0]).toLowerCase()
+                var linkkey = (objectName + '.' + name.split('-')[0]).toLowerCase()
                 allVarsTypes[linkkey] = linkvalue
                 continue
             } else if (memberType === 'VARIABLE') {

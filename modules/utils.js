@@ -195,7 +195,7 @@ var self = module.exports = {
         }
         //name = name + '~' + (Math.floor(Math.random() * 90000) + 10000)
         if (!withOptional) {
-            name = name + '~' + self.sha256(line)
+            name = name + '-' + self.sha256(line)
             return name
         } else {
             return name
@@ -271,7 +271,7 @@ var self = module.exports = {
 
         m['descr'] = descr
         m['genericType'] = self.genericInside(line.split('(')[0])
-        if (name.split('~')[0] === 'constructor') {
+        if (name.split('-')[0] === 'constructor') {
             m['returnType'] = parentName.replace(')', '').trim()
         } else {
             m['returnType'] = lastWord.replace(')', '').trim()

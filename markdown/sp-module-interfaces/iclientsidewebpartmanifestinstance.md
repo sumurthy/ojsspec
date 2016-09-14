@@ -8,8 +8,6 @@ Manifest that is relevant to a Web Part instance.
 
 
 
-
-
 ### Properties
 
 | Property	   | Type	| Description|

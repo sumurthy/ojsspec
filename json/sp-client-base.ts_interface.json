@@ -287,7 +287,7 @@
     "properties": {},
     "functions": {},
     "methods": {
-      "addDigestToCache~dLbs9": {
+      "addDigestToCache-dLbs9": {
         "accessModifier": "public",
         "signature": "addDigestToCache(webUrl: string,digestValue: string,expirationTimestamp: number): void",
         "isStatic": false,
@@ -317,7 +317,7 @@
           }
         ]
       },
-      "clearAllDigests~oVNk9": {
+      "clearAllDigests-oVNk9": {
         "accessModifier": "public",
         "signature": "clearAllDigests(): void",
         "isStatic": false,
@@ -328,7 +328,7 @@
         "returnDescr": "",
         "params": []
       },
-      "clearDigest~HDFI9": {
+      "clearDigest-HDFI9": {
         "accessModifier": "public",
         "signature": "clearDigest(webUrl: string): boolean",
         "isStatic": false,
@@ -346,7 +346,7 @@
           }
         ]
       },
-      "fetchDigest~dBvU9": {
+      "fetchDigest-dBvU9": {
         "accessModifier": "public",
         "signature": "fetchDigest(webUrl: string): Promise<string>",
         "isStatic": false,

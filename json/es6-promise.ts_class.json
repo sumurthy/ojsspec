@@ -6,7 +6,7 @@
     "properties": {},
     "functions": {},
     "methods": {
-      "constructor~wmG49": {
+      "constructor-wmG49": {
         "accessModifier": "public",
         "signature": "constructor(callback: (resolve: (value?: R | Thenable<R>) => void,reject: (error?: any) => void) => void)",
         "isStatic": false,
@@ -30,7 +30,7 @@
           }
         ]
       },
-      "then<U>~6uYU9": {
+      "then<U>-6uYU9": {
         "accessModifier": "public",
         "signature": "then<U>(onFulfilled?: (value: R) => U | Thenable<U>,onRejected?: (error: any) => U | Thenable<U>): Promise<U>",
         "isStatic": false,
@@ -54,7 +54,7 @@
           }
         ]
       },
-      "then<U>~Shnk9": {
+      "then<U>-Shnk9": {
         "accessModifier": "public",
         "signature": "then<U>(onFulfilled?: (value: R) => U | Thenable<U>,onRejected?: (error: any) => void): Promise<U>",
         "isStatic": false,
@@ -78,7 +78,7 @@
           }
         ]
       },
-      "catch<U>~CiNs9": {
+      "catch<U>-CiNs9": {
         "accessModifier": "public",
         "signature": "catch<U>(onRejected?: (error: any) => U | Thenable<U>): Promise<U>",
         "isStatic": false,

@@ -6,7 +6,7 @@
     "properties": {},
     "functions": {},
     "methods": {
-      "then<U>~PiLE9": {
+      "then<U>-PiLE9": {
         "accessModifier": "public",
         "signature": "then<U>(onFulfilled?: (value: R) => U | Thenable<U>,onRejected?: (error: any) => U | Thenable<U>): Thenable<U>",
         "isStatic": false,
@@ -30,7 +30,7 @@
           }
         ]
       },
-      "then<U>~4DeU9": {
+      "then<U>-4DeU9": {
         "accessModifier": "public",
         "signature": "then<U>(onFulfilled?: (value: R) => U | Thenable<U>,onRejected?: (error: any) => void): Thenable<U>",
         "isStatic": false,

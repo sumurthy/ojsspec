@@ -11,8 +11,6 @@ Providing a default implementation ensures that new dependencies can be safely
 introduced without inadvertently breaking components that are loaded by an older host 
 (that does not provide the new dependency).
 
-
-
 ### Properties
 
 | Property	   | Access Modifier | Type	| Description|

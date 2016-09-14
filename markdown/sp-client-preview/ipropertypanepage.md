@@ -7,8 +7,6 @@
 PropertyPanePage interface.
 
 
-
-
 ### Properties
 
 | Property	   | Type	| Description|

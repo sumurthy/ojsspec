@@ -6,7 +6,7 @@
     "properties": {},
     "functions": {},
     "methods": {
-      "clearError~yEto9": {
+      "clearError-yEto9": {
         "accessModifier": "public",
         "signature": "clearError(domElement: HTMLElement): void",
         "isStatic": false,
@@ -24,7 +24,7 @@
           }
         ]
       },
-      "clearLoadingIndicator~kHpU9": {
+      "clearLoadingIndicator-kHpU9": {
         "accessModifier": "public",
         "signature": "clearLoadingIndicator(domElement: Element): void",
         "isStatic": false,
@@ -42,7 +42,7 @@
           }
         ]
       },
-      "displayLoadingIndicator~BAYY9": {
+      "displayLoadingIndicator-BAYY9": {
         "accessModifier": "public",
         "signature": "displayLoadingIndicator(domElement: Element,loadingMessage: string): void",
         "isStatic": false,
@@ -66,7 +66,7 @@
           }
         ]
       },
-      "renderError~aUm89": {
+      "renderError-aUm89": {
         "accessModifier": "public",
         "signature": "renderError(domElement: HTMLElement,error: Error | string): void",
         "isStatic": false,

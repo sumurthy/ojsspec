@@ -287,7 +287,7 @@ function doSubMember(tline = '', member = {}, membername = '', isClass = true, o
             tline = tline.replace('%hashcount%', '###')
         }
     }
-    if (tline.includes('%membername%')) tline = tline.replace('%membername%', membername.split('~')[0])
+    if (tline.includes('%membername%')) tline = tline.replace('%membername%', membername.split('-')[0])
     if (tline.includes('%memberdescription%')) tline = tline.replace('%memberdescription%', member['descr'])
     if (tline.includes('%apisignature%')) tline = tline.replace('%apisignature%', `\`${member['signature']}\``)
 
@@ -364,10 +364,10 @@ function addRegions(tline = '', type = '') {
 
     Object.keys(o).forEach((e) => {
         var mline = dclone(tline).substr(1)
-        mline = mline.replace('%name%', e.split('~')[0])
+        mline = mline.replace('%name%', e.split('-')[0])
         mline = mline.replace('%type%', `${getLinkForType(o[e]['dataType'])}`)
 
-        mline = mline.replace('%link%', `${e.toLowerCase()}`)
+        mline = mline.replace('%link%', `./${anchor}/${e.toLowerCase()}`)
             //Get first sentence
         var descr = o[e]['descr']
         if (descr) {
@@ -381,7 +381,6 @@ function addRegions(tline = '', type = '') {
         }
         mdout.push(mline)
             // Dynamically call the function to generate the individual md files
-        console.log(type);
         dFunction[`${type}GenIndividual`](e)
 
     })
@@ -423,9 +422,9 @@ function addMembers(tline = '', type = '', name = '', localO = {}) {
         }
         if ((type === 'method') || type === 'imethod') {
             mline = mline.replace('%type%', `${getLinkForType(o[e]['returnType'])}`)
-            mline = mline.replace('%name%', `[\`${e.split('~')[0]}\`](#${e.split('~')[0].toLowerCase()})`)
+            mline = mline.replace('%name%', `[\`${e.split('-')[0]}\`](#${e.split('-')[0].toLowerCase()})`)
         } else {
-            mline = mline.replace('%name%', e.split('~')[0])
+            mline = mline.replace('%name%', e.split('-')[0])
             mline = mline.replace('%type%', `${getLinkForType(o[e]['dataType'])}`)
         }
 
@@ -602,7 +601,7 @@ function genExtModuleView() {
         }
     })
     console.log(`*** Writing External Module file for ${moduleName}`)
-    FileOps.writeFile(mdout, `./markdown/${anchor}/${moduleName}-module.md`)
+    FileOps.writeFile(mdout, `./markdown/${moduleName}-module.md`)
     genFunctionView()
     genEnumView()
 }

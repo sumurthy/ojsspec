@@ -8,8 +8,6 @@ A library is defined by this manifest. Libraries currently do not have any addit
 
 
 
-
-
 ### Properties
 
 | Property	   | Type	| Description|

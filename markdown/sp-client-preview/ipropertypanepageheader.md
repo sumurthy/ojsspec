@@ -8,8 +8,6 @@ PropertyPane header.
 This header remains same for all the pages.
 
 
-
-
 ### Properties
 
 | Property	   | Type	| Description|
