@@ -368,7 +368,7 @@ function addRegions(tline = '', type = '') {
         mline = mline.replace('%namehyphen%', e.split('-')[0])
         mline = mline.replace('%type%', `${getLinkForType(o[e]['dataType'])}`)
 
-        mline = mline.replace('%link%', `./${anchor}/${e.toLowerCase()}`)
+        mline = mline.replace('%link%', `./${anchor}/${e.replace(/'/g,'').toLowerCase()}`)
             //Get first sentence
         var descr = o[e]['descr']
         if (descr) {

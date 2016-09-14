@@ -42,7 +42,7 @@ var self = module.exports  = {
 	},
 
   writeFile:(lines=[], path='') => {
-    path = path.toLowerCase()
+    path = path.replace(/'/g,'').toLowerCase()
     try {
         fs.writeFileSync(path, lines.join(nl))
     }
