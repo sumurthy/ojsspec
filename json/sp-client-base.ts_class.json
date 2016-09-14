@@ -874,14 +874,14 @@
           }
         ]
       },
-      "create<T>-5bhc9": {
+      "create<T>-8Kto9": {
         "accessModifier": "public",
-        "signature": "create<T>(name: string,serviceClass: { new (serviceScope: ServiceScope) }): ServiceKey<T>;",
+        "signature": "create<T>(name: string,serviceClass: { new (serviceScope: ServiceScope) }): ServiceKey<T>",
         "isStatic": true,
         "isOptional": false,
         "descr": "The ServiceKey is a lookup key that is used when calling ServiceScope.consume() \nto fetch a dependency. The key also defines a default implementation of the \ndependency, which will be autocreated by the root scope if the dependency is not found. \nProviding a default implementation ensures that new dependencies can be safely \nintroduced without inadvertently breaking components that are loaded by an older host \n(that does not provide the new dependency).",
         "genericType": "T",
-        "returnType": "ServiceKey<T>;",
+        "returnType": "ServiceKey<T>",
         "returnDescr": "- the newly created ServiceKey",
         "params": [
           {
@@ -971,14 +971,14 @@
           }
         ]
       },
-      "createAndProvide<T>-DDq09": {
+      "createAndProvide<T>-GIqQ9": {
         "accessModifier": "public",
-        "signature": "createAndProvide<T>(serviceKey: ServiceKey<T>,simpleServiceClass: { new (serviceScope: ServiceScope) }): T;",
+        "signature": "createAndProvide<T>(serviceKey: ServiceKey<T>,simpleServiceClass: { new (serviceScope: ServiceScope) }): T",
         "isStatic": false,
         "isOptional": false,
         "descr": "ServiceScope provides a formalized way for components to register and consume dependencies \n(\"services\"), and to enable different implementations to be registered in different scopes. \nThis improves modularity by decoupling components from their dependencies in an extensible way. \n \nFor example, suppose that various components need access to an IPageManager instance. We could \nsimply make the PageManager a singleton (i.e. global variable), but this will not work e.g. if \nwe need to create a pop-up dialog that requires a second PageManager instance. A better solution \nwould be to add the PageManager as a constructor parameter for each component that requires it, \nhowever then we immediately face the problem that any code that calls these constructors \nalso needs a PageManager parameter. In an application with many such dependencies, business \nlogic that ties together many subsystems would eventually pick up a constructor parameter \nfor every possible dependency, which is unwieldy. A natural solution would be to move all the \ndependencies into a class with name like \"ApplicationContext\", and then pass this around as our \nconstructor parameter. This enables the PageManager to be passed to classes that need it \nwithout cluttering the intermediary classes that don't. However, it still has a design problem \nthat \"ApplicationContext\" has hard-coded dependencies on many unrelated things. A more flexible \napproach is to make it a dictionary that can look up items for consumers/providers who know the \nright lookup key (i.e. ServiceKey). This is the popular \"service locator\" design pattern, \nfamiliar from the SPContext API in classic SharePoint. \n \nServiceScope takes this idea a step further in two important ways: First, it provides a scoping \nmechanism so that e.g. if we had two different pages, they could each consume a unique PageManager \ninstance while still sharing other common dependencies. Secondly, it allows for a ServiceKey \nto provide a default implementation of the dependency. This is important for API stability in \nour modular client-side environment: For example, suppose that version 2.0 of our application \nintroduced a new IDiagnosticTracing interface that a version 2.0 component will expect to consume. \nIf the version 2.0 component gets loaded by an older 1.0 application, it would fail. We could \nfix this by requiring each consumer to check for any missing dependencies and handle that case, \nbut it would require a lot of checks. A better solution is to ensure that a default implementation \nalways exists, perhaps just a trivial behavior, so that components don't have to worry about it. \n \nUsage: ServiceScope instances are created by calling either ServiceScope.startNewRoot() or \nServiceScope.startNewChild(). They are initially in an \"unfinished\" state, during which provide() \ncan be called to register service keys, but consume() is forbidden. After ServiceScope.finish() \nis called, consume() is allowed and provide() is now forbidden. These semantics ensure that \nServiceScope.consume() always returns the same result for the same key, and does not depend on \norder of initialization. It also allows us to support circular dependencies without worrying \nabout infinite loops, even when working with external components that were implemented by \nthird parties. To avoid mistakes, it's best to always call consume() inside a callback from \nserviceScope.whenFinished().",
         "genericType": "T",
-        "returnType": "T;",
+        "returnType": "T",
         "returnDescr": "- a newly constructed instance of simpleServiceClass",
         "params": [
           {

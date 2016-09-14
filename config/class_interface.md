@@ -9,7 +9,7 @@
 
 </classheader>
 <property>
-### Properties
+## Properties
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
@@ -18,7 +18,7 @@
 </property>
 
 <iproperty>
-### Properties
+## Properties
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|

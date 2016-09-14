@@ -138,7 +138,10 @@ function prepareLine(line='') {
     line = line.split('//')[0]
     line = line.replace(/\s+/g, ' ').trim()
     line = line.replace(/,\s/g, ',').trim()
-    line = line.replace(';','')
+    line = line.replace(/;/g,'')
+    // var c = line.lastIndexOf(';')
+    // line = line.substr(c+1).trim()
+
     isStatic = false
     hasAssignment = false
     assignValue = null
@@ -362,7 +365,6 @@ function processLines(element = '', index = 0, lines = []) {
     if (ignore_upto >= index) return
     //prepare the line and sent first, second and third word.
     let line = prepareLine(element)
-    // Trim line, remove ';' and extra spaces after comma, and 1+ white space to 1 whitespace
     if (SKIP.includes(firstWord)) return
 
     if (firstWord === C_START) {
@@ -377,7 +379,7 @@ function processLines(element = '', index = 0, lines = []) {
         mode = 'MODULE'
         moduleName = line.split(' ')[2].replace(/"/g,'')
         moduleName = Utils.trimGenerics(moduleName)
-        moduleObj[moduleName] = processObject('',index, lines, false)
+        moduleObj[moduleName] = processObject(moduleName,index, lines, false)
         comment_reset()
         return
     } else if (line.includes(INTERFACEDEF)) {

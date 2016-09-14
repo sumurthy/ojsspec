@@ -1,4 +1,3 @@
-# whatwg-fetch external module
 
 
 

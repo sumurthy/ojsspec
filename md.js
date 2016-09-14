@@ -139,7 +139,7 @@ function set_region(tline = '', obj = {}, localName = '', isClass = true) {
                     skipFlag = true
                 }
                 break;
-            case 'imodule':
+            case 'module':
                 if (Object.keys(moduleObj).length === 0) {
                     skipFlag = true
                 }
@@ -364,7 +364,8 @@ function addRegions(tline = '', type = '') {
 
     Object.keys(o).forEach((e) => {
         var mline = dclone(tline).substr(1)
-        mline = mline.replace('%name%', e.split('-')[0])
+        mline = mline.replace('%name%', e)
+        mline = mline.replace('%namehyphen%', e.split('-')[0])
         mline = mline.replace('%type%', `${getLinkForType(o[e]['dataType'])}`)
 
         mline = mline.replace('%link%', `./${anchor}/${e.toLowerCase()}`)
@@ -588,7 +589,7 @@ function genExtModuleView() {
         } else if (TAKE_REPEAT_ACTION.includes(key)) {
             switch (region) {
                 case 'class':
-                case 'imodule':
+                case 'module':
                 case 'functions':
                 case 'interface':
                 case 'enumeration':
@@ -601,7 +602,7 @@ function genExtModuleView() {
         }
     })
     console.log(`*** Writing External Module file for ${moduleName}`)
-    FileOps.writeFile(mdout, `./markdown/${moduleName}-module.md`)
+    FileOps.writeFile(mdout, `./markdown/${moduleName}.md`)
     genFunctionView()
     genEnumView()
 }
@@ -678,6 +679,7 @@ try {
 
 let inputFiles = FileOps.walkFiles('./input', '.ts')
 inputFiles.forEach((e) => {
+    console.log('** Processing: ' + e);
     let files = FileOps.walkFiles('./json', e)
     loadModule(files)
     moduleName = e.split('.')[0]
@@ -687,11 +689,12 @@ inputFiles.forEach((e) => {
 
 function loadModule(files = []) {
     files.forEach((e) => {
+        console.log('*** Processing: ' + e);
         anchor = e.split('.ts')[0].toLowerCase()
         FileOps.createFolder(`./markdown/${anchor}`)
         if (e.includes('_module.json')) {
             moduleObj = JSON.parse(FileOps.loadJson(`./json/${e}`))
-            console.log(`*** Read Class JSON file, ${Object.keys(classObj)}`)
+            console.log(`*** Read Module JSON file, ${Object.keys(moduleObj)}`)
         } else if (e.includes('_class.json')) {
             classObj = JSON.parse(FileOps.loadJson(`./json/${e}`))
             console.log(`*** Read Class JSON file, ${Object.keys(classObj)}`)

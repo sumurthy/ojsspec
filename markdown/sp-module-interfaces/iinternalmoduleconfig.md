@@ -9,7 +9,7 @@ component developer.
 
 
 
-### Properties
+## Properties
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|

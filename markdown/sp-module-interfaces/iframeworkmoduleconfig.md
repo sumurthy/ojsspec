@@ -9,7 +9,7 @@ framework runtime. The key in the "scriptResources" dictionary must be the name 
 
 
 
-### Properties
+## Properties
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|

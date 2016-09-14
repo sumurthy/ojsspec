@@ -10,20 +10,10 @@
       [ propName: string ]: string
     }
   }
-21. Handle {} inside strings.
 22. Need to handle module inside module. Need to handle VAR as parameter
 23. isClass mess - fix it
 24. Handle export
-25. md logic is way too complex - fix it
-26. Inline Modules are not supported. Need recursive way to support them.
-27. promise: some methods are not getting right alltypes links
-  ".resolve<r>": ".md#resolve<r>",
-  ".reject": ".md#reject",
-  ".all<r>": ".md#all<r>",
-  ".race<r>": ".md#race<r>",
-  "foo": "es6-promise-module.md#variables",
 28. Markdown links are not right for methods with generics in them [`then<U>`](#then<u>)
-29. Handle datatype: public hasAllPermissions(...requestedPerms: SPPermission[]): boolean;
 
 LONGER TERM:
 19. Make use of dFunction for enum and function file generation
