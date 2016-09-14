@@ -64,7 +64,7 @@
 | [PropertyPaneToggle](./sp-client-preview/propertypanetoggle-3vb09.md) |[`IPropertyPaneField<IPropertyPaneToggleProps>`](../sp-client-preview/ipropertypanefield.md)  | Helper method to create a Toggle on the PropertyPane  |
 
 
-### Enumerations
+## Enumerations
 
 | Enumeration	   | Description|
 |:-----------|:------------|

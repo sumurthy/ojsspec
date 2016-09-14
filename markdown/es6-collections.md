@@ -31,7 +31,7 @@
 
 
 
-### Variables
+## Variables
 
 | Variable	   | Type|
 |:-----------|:------------|

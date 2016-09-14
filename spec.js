@@ -293,8 +293,9 @@ function processObject(objectName = '', index = 0, lines = [], isClass) {
             continue
         } else {
             var memberType = Utils.getMemberType(line, isClass)
-            if (memberType === 'SKIPBLOCK') {
+            if (memberType === 'OBJECT') {
                 // Handle object
+                console.log(line);
                 var oa = Utils.readObjectAhead(lines, i)
                 ignore_upto = oa['skip'].pop()
                 continue

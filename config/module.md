@@ -43,7 +43,7 @@
 </functions>
 
 <enumeration>
-### Enumerations
+## Enumerations
 
 | Enumeration	   | Description|
 |:-----------|:------------|
@@ -52,7 +52,7 @@
 </enumeration>
 
 <typedef>
-### Types
+## Types
 
 | Name	   |  Type |
 |:-----------|:------------|
@@ -62,7 +62,7 @@
 
 
 <variable>
-### Variables
+## Variables
 
 | Variable	   | Type|
 |:-----------|:------------|

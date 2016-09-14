@@ -355,7 +355,7 @@ var self = module.exports = {
         let secondWord = line.split(' ', 2)[1]
         var type = ''
         if (line.includes(BLOCK_BEGIN) && !line.includes(BLOCK_END)) {
-            type = 'SKIPBLOCK'
+            type = 'OBJECT'
         } else if (line.includes(FUNCTION)) {
             type = 'FUNCTION'
         } else if (firstWord.startsWith('constructor') || secondWord.startsWith('constructor')) {

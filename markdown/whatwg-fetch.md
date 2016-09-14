@@ -22,7 +22,7 @@
 
 
 
-### Enumerations
+## Enumerations
 
 | Enumeration	   | Description|
 |:-----------|:------------|
@@ -33,7 +33,7 @@
 |[ResponseType](./whatwg-fetch/responsetype.md)    |  |
 
 
-### Types
+## Types
 
 | Name	   |  Type |
 |:-----------|:------------|
@@ -43,7 +43,7 @@
 
 
 
-### Variables
+## Variables
 
 | Variable	   | Type|
 |:-----------|:------------|
