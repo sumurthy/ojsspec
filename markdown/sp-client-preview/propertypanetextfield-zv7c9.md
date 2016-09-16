@@ -2,9 +2,9 @@
 
 Helper method to create a TextField on the PropertyPane.
 
-**Signature:** `PropertyPaneTextField(targetProperty: string,properties: IPropertyPaneTextFieldProps): IPropertyPaneField<IPropertyPaneTextFieldProps>`
+**Signature:** ``PropertyPaneTextField(targetProperty: string,properties: IPropertyPaneTextFieldProps): IPropertyPaneField<IPropertyPaneTextFieldProps>``
 
-**Returns**: [`IPropertyPaneField<IPropertyPaneTextFieldProps>`](../sp-client-preview/ipropertypanefield.md)
+**Returns**: `[`IPropertyPaneField<IPropertyPaneTextFieldProps>`](../sp-client-preview/ipropertypanefield.md)`
 
 
 

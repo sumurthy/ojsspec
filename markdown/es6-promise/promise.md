@@ -14,9 +14,9 @@ If you call reject your promise is rejected with the object passed to resolve.
 For consistency and debugging (eg stack traces), obj should be an instanceof Error. 
 Any errors thrown in the constructor callback will be implicitly passed to reject().
 
-**Signature:** constructor(callback: (resolve: (value?: R | Thenable<R>) => void,reject: (error?: any) => void) => void)
+**Signature:** `constructor(callback: (resolve: (value?: R | Thenable<R>) => void,reject: (error?: any) => void) => void)`
 
-**Returns**: Promise
+**Returns**: `Promise`
 
 
 
@@ -53,9 +53,9 @@ Both callbacks have a single parameter , the fulfillment value or rejection reas
 If an error is thrown in the callback, the returned promise rejects with that error. 
 
 
-**Signature:** `then<U>(onFulfilled?: (value: R) => U | Thenable<U>,onRejected?: (error: any) => U | Thenable<U>): Promise<U>`
+**Signature:** ``then<U>(onFulfilled?: (value: R) => U | Thenable<U>,onRejected?: (error: any) => U | Thenable<U>): Promise<U>``
 
-**Returns**: [`Promise<U>`](../es6-promise/promise.md)
+**Returns**: `[`Promise<U>`](../es6-promise/promise.md)`
 
 
 
@@ -72,9 +72,9 @@ If an error is thrown in the callback, the returned promise rejects with that er
 
 
 
-**Signature:** `then<U>(onFulfilled?: (value: R) => U | Thenable<U>,onRejected?: (error: any) => void): Promise<U>`
+**Signature:** ``then<U>(onFulfilled?: (value: R) => U | Thenable<U>,onRejected?: (error: any) => void): Promise<U>``
 
-**Returns**: [`Promise<U>`](../es6-promise/promise.md)
+**Returns**: `[`Promise<U>`](../es6-promise/promise.md)`
 
 
 
@@ -92,9 +92,9 @@ If an error is thrown in the callback, the returned promise rejects with that er
 Sugar for promise.then(undefined,onRejected) 
 
 
-**Signature:** `catch<U>(onRejected?: (error: any) => U | Thenable<U>): Promise<U>`
+**Signature:** ``catch<U>(onRejected?: (error: any) => U | Thenable<U>): Promise<U>``
 
-**Returns**: [`Promise<U>`](../es6-promise/promise.md)
+**Returns**: `[`Promise<U>`](../es6-promise/promise.md)`
 
 
 

@@ -15,9 +15,9 @@ class instead.
 ## Constructor
 
 
-**Signature:** constructor(serviceScope: ServiceScope)
+**Signature:** `constructor(serviceScope: ServiceScope)`
 
-**Returns**: HttpClient
+**Returns**: `HttpClient`
 
 
 
@@ -51,9 +51,9 @@ class instead.
 Begins an ODATA batch,which allows multiple REST queries to be bundled into 
 a single web request.
 
-**Signature:** `beginBatch(batchOptions?: IODataBatchOptions): ODataBatch`
+**Signature:** ``beginBatch(batchOptions?: IODataBatchOptions): ODataBatch``
 
-**Returns**: [`ODataBatch`](../sp-client-base/odatabatch.md)
+**Returns**: `[`ODataBatch`](../sp-client-base/odatabatch.md)`
 
 
 
@@ -87,9 +87,9 @@ in the original URL passed to fetch(); if not, use IHttpClientOptions.webUrl
 to specify it explicitly. 
 
 
-**Signature:** `fetch(url: string,options: IHttpClientOptions): Promise<Response>`
+**Signature:** ``fetch(url: string,options: IHttpClientOptions): Promise<Response>``
 
-**Returns**: [`Promise<Response>`](../es6-promise/promise.md)
+**Returns**: `[`Promise<Response>`](../es6-promise/promise.md)`
 
 a promise that will return the result
 
@@ -106,9 +106,9 @@ a promise that will return the result
 
 Calls fetch(),but sets the method to 'GET'.
 
-**Signature:** `get(url: string,options?: IHttpClientOptions): Promise<Response>`
+**Signature:** ``get(url: string,options?: IHttpClientOptions): Promise<Response>``
 
-**Returns**: [`Promise<Response>`](../es6-promise/promise.md)
+**Returns**: `[`Promise<Response>`](../es6-promise/promise.md)`
 
 a promise that will return the result
 
@@ -132,9 +132,9 @@ the returned URL would be "/sites/site/web". Or if the requestUrl
 is "http://example.com/_layouts/service", the returned URL would be 
 "http://example.com".
 
-**Signature:** `getWebUrlFromRequestUrl(requestUrl: string): string`
+**Signature:** ``getWebUrlFromRequestUrl(requestUrl: string): string``
 
-**Returns**: `string`
+**Returns**: ``string``
 
 the inferred SPWeb URL
 
@@ -150,9 +150,9 @@ the inferred SPWeb URL
 
 Calls fetch(),but sets the method to 'POST'.
 
-**Signature:** `post(url: string,options: IHttpClientOptions): Promise<Response>`
+**Signature:** ``post(url: string,options: IHttpClientOptions): Promise<Response>``
 
-**Returns**: [`Promise<Response>`](../es6-promise/promise.md)
+**Returns**: `[`Promise<Response>`](../es6-promise/promise.md)`
 
 a promise that will return the result
 

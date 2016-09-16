@@ -19,9 +19,9 @@ resolve with a Response object for that particular request.
 ## Constructor
 
 
-**Signature:** constructor(serviceScope: ServiceScope,batchOptions?: IODataBatchOptions)
+**Signature:** `constructor(serviceScope: ServiceScope,batchOptions?: IODataBatchOptions)`
 
-**Returns**: ODataBatch
+**Returns**: `ODataBatch`
 
 
 
@@ -54,9 +54,9 @@ resolve with a Response object for that particular request.
 
 Executes the batched queries that were queued using ODataBatch.fetch().
 
-**Signature:** `execute(): Promise<ODataBatch>`
+**Signature:** ``execute(): Promise<ODataBatch>``
 
-**Returns**: [`Promise<ODataBatch>`](../es6-promise/promise.md)
+**Returns**: `[`Promise<ODataBatch>`](../es6-promise/promise.md)`
 
 
 
@@ -81,9 +81,9 @@ in the first URL passed to fetch(). If not, use IODataBatchOptions.webUrl to spe
 explicitly. 
 
 
-**Signature:** `fetch(url: string,options?: IODataBatchRequestOptions): Promise<Response>`
+**Signature:** ``fetch(url: string,options?: IODataBatchRequestOptions): Promise<Response>``
 
-**Returns**: [`Promise<Response>`](../es6-promise/promise.md)
+**Returns**: `[`Promise<Response>`](../es6-promise/promise.md)`
 
 a promise that will return the result
 
@@ -100,9 +100,9 @@ a promise that will return the result
 
 Calls fetch(),but sets the method to 'GET'.
 
-**Signature:** `get(url: string,options?: IODataBatchRequestOptions): Promise<Response>`
+**Signature:** ``get(url: string,options?: IODataBatchRequestOptions): Promise<Response>``
 
-**Returns**: [`Promise<Response>`](../es6-promise/promise.md)
+**Returns**: `[`Promise<Response>`](../es6-promise/promise.md)`
 
 a promise that will return the result
 
@@ -119,9 +119,9 @@ a promise that will return the result
 
 Calls fetch(),but sets the method to 'POST'.
 
-**Signature:** `post(url: string,options: IODataBatchRequestOptions): Promise<Response>`
+**Signature:** ``post(url: string,options: IODataBatchRequestOptions): Promise<Response>``
 
-**Returns**: [`Promise<Response>`](../es6-promise/promise.md)
+**Returns**: `[`Promise<Response>`](../es6-promise/promise.md)`
 
 a promise that will return the result
 

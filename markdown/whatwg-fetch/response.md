@@ -10,9 +10,9 @@ _Implements: [`Body`](../whatwg-fetch/body.md)_
 ## Constructor
 
 
-**Signature:** constructor(body?: BodyInit,init?: ResponseInit)
+**Signature:** `constructor(body?: BodyInit,init?: ResponseInit)`
 
-**Returns**: Response
+**Returns**: `Response`
 
 
 
@@ -55,9 +55,9 @@ _Implements: [`Body`](../whatwg-fetch/body.md)_
 
 
 
-**Signature:** `error(): Response`
+**Signature:** ``error(): Response``
 
-**Returns**: [`Response`](../whatwg-fetch/response.md)
+**Returns**: `[`Response`](../whatwg-fetch/response.md)`
 
 
 
@@ -69,9 +69,9 @@ None
 
 
 
-**Signature:** `redirect(url: string,status: number): Response`
+**Signature:** ``redirect(url: string,status: number): Response``
 
-**Returns**: [`Response`](../whatwg-fetch/response.md)
+**Returns**: `[`Response`](../whatwg-fetch/response.md)`
 
 
 
@@ -88,9 +88,9 @@ None
 
 
 
-**Signature:** `clone(): Response`
+**Signature:** ``clone(): Response``
 
-**Returns**: [`Response`](../whatwg-fetch/response.md)
+**Returns**: `[`Response`](../whatwg-fetch/response.md)`
 
 
 

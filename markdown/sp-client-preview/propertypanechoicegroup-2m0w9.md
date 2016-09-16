@@ -2,9 +2,9 @@
 
 Helper method to create a Choice Group on the PropertyPane.
 
-**Signature:** `PropertyPaneChoiceGroup(targetProperty: string,properties: IPropertyPaneChoiceGroupProps): IPropertyPaneField<IPropertyPaneChoiceGroupProps>`
+**Signature:** ``PropertyPaneChoiceGroup(targetProperty: string,properties: IPropertyPaneChoiceGroupProps): IPropertyPaneField<IPropertyPaneChoiceGroupProps>``
 
-**Returns**: [`IPropertyPaneField<IPropertyPaneChoiceGroupProps>`](../sp-client-preview/ipropertypanefield.md)
+**Returns**: `[`IPropertyPaneField<IPropertyPaneChoiceGroupProps>`](../sp-client-preview/ipropertypanefield.md)`
 
 
 

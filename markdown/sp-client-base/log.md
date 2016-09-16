@@ -31,9 +31,9 @@ which component generated the messages and makes the messages useful and filtera
 
 Logs an error
 
-**Signature:** `error(source: string,error: Error,scope?: ServiceScope): void`
+**Signature:** ``error(source: string,error: Error,scope?: ServiceScope): void``
 
-**Returns**: `void`
+**Returns**: ``void``
 
 
 
@@ -51,9 +51,9 @@ Logs an error
 
 Logs an informational message
 
-**Signature:** `info(source: string,message: string,scope?: ServiceScope): void`
+**Signature:** ``info(source: string,message: string,scope?: ServiceScope): void``
 
-**Returns**: `void`
+**Returns**: ``void``
 
 
 
@@ -71,9 +71,9 @@ Logs an informational message
 
 Logs a verbose message
 
-**Signature:** `verbose(source: string,message: string,scope?: ServiceScope): void`
+**Signature:** ``verbose(source: string,message: string,scope?: ServiceScope): void``
 
-**Returns**: `void`
+**Returns**: ``void``
 
 
 
@@ -91,9 +91,9 @@ Logs a verbose message
 
 Logs a warning
 
-**Signature:** `warn(source: string,message: string,scope?: ServiceScope): void`
+**Signature:** ``warn(source: string,message: string,scope?: ServiceScope): void``
 
-**Returns**: `void`
+**Returns**: ``void``
 
 
 

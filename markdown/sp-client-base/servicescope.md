@@ -49,9 +49,9 @@ serviceScope.whenFinished().
 ## Constructor
 PRIVATE CONSTRUCTOR - DO NOT CALL THIS FROM YOUR OWN CODE.
 
-**Signature:** constructor(parent: ServiceScope)
+**Signature:** `constructor(parent: ServiceScope)`
 
-**Returns**: ServiceScope
+**Returns**: `ServiceScope`
 
 
 
@@ -90,9 +90,9 @@ Components should call this function to "consume" a dependency,i.e. look up the 
 and return the registered service instance. If the instance cannot be found, then a default 
 instance will be autocreated and registered with the root ServiceScope.
 
-**Signature:** `consume<T>(serviceKey: ServiceKey<T>): T`
+**Signature:** ``consume<T>(serviceKey: ServiceKey<T>): T``
 
-**Returns**: `T`
+**Returns**: ``T``
 
 - the service instance
 
@@ -109,9 +109,9 @@ instance will be autocreated and registered with the root ServiceScope.
 This is a shorthand function that its equivalent to constructing a new instance of the 
 simpleServiceClass, then registering it by calling ServiceScope.provide().
 
-**Signature:** `createAndProvide<T>(serviceKey: ServiceKey<T>,simpleServiceClass: { new (serviceScope: ServiceScope) }): T`
+**Signature:** ``createAndProvide<T>(serviceKey: ServiceKey<T>,simpleServiceClass: { new (serviceScope: ServiceScope) }): T``
 
-**Returns**: `T`
+**Returns**: ``T``
 
 - a newly constructed instance of simpleServiceClass
 
@@ -129,9 +129,9 @@ simpleServiceClass, then registering it by calling ServiceScope.provide().
 This is a shorthand function that constructs the default implementation of the specified 
 serviceKey, and then registers it by calling ServiceScope.provide().
 
-**Signature:** `createDefaultAndProvide<T>(serviceKey: ServiceKey<T>): T`
+**Signature:** ``createDefaultAndProvide<T>(serviceKey: ServiceKey<T>): T``
 
-**Returns**: `T`
+**Returns**: ``T``
 
 - a service instance that was constructed using ServiceKey.defaultCreator
 
@@ -153,9 +153,9 @@ if someone consumes A1 from Scope2 (via inheritance) before Scope2.provide() is 
 with A2, then a subsequent call to Scope2.consume() might return a different result than 
 the previous call, which would be very confusing for developers.
 
-**Signature:** `finish(): void`
+**Signature:** ``finish(): void``
 
-**Returns**: `void`
+**Returns**: ``void``
 
 
 
@@ -167,9 +167,9 @@ None
 
 Returns the parent of the current ServiceScope,or undefined if this is a root scope.
 
-**Signature:** `getParent(): ServiceScope`
+**Signature:** ``getParent(): ServiceScope``
 
-**Returns**: [`ServiceScope`](../sp-client-base/servicescope.md)
+**Returns**: `[`ServiceScope`](../sp-client-base/servicescope.md)`
 
 - the parent service scope
 
@@ -183,9 +183,9 @@ ServiceScope.provide() is used to register an implemententation of the given ser
 for the current scope. It may only be used when the ServiceScope is in an "unfinished" 
 state, i.e. before finish() has been called.
 
-**Signature:** `provide<T>(serviceKey: ServiceKey<T>,service: T): T`
+**Signature:** ``provide<T>(serviceKey: ServiceKey<T>,service: T): T``
 
-**Returns**: `T`
+**Returns**: ``T``
 
 - the same object that was passed as the "service" parameter
 
@@ -204,9 +204,9 @@ Constructs a new ServiceScope that is a child of the current scope. For any keys
 that are not explicitly provided by the child scope, the parent hierarchy will be 
 consulted.
 
-**Signature:** `startNewChild(): ServiceScope`
+**Signature:** ``startNewChild(): ServiceScope``
 
-**Returns**: [`ServiceScope`](../sp-client-base/servicescope.md)
+**Returns**: `[`ServiceScope`](../sp-client-base/servicescope.md)`
 
 - the newly created root ServiceScope
 
@@ -219,9 +219,9 @@ None
 Create a new root-level ServiceScope. Only root-level scopes have the ability to autocreate 
 default implementations of ServiceKeys.
 
-**Signature:** `startNewRoot(): ServiceScope`
+**Signature:** ``startNewRoot(): ServiceScope``
 
-**Returns**: [`ServiceScope`](../sp-client-base/servicescope.md)
+**Returns**: `[`ServiceScope`](../sp-client-base/servicescope.md)`
 
 - the newly created root ServiceScope
 
@@ -237,9 +237,9 @@ consume() calls inside a whenFinished() callback. If the service scope is alread
 finished, then the callback will be executed immediately; otherwise, it will be executed 
 later when the scope is finished.
 
-**Signature:** `whenFinished(callback: () => void): void`
+**Signature:** ``whenFinished(callback: () => void): void``
 
-**Returns**: `void`
+**Returns**: ``void``
 
 
 

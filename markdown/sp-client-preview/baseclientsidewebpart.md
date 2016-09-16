@@ -22,9 +22,9 @@ Constructor for the BaseClientSideWebPart class.
 If a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor. 
 
 
-**Signature:** constructor(ctx: IWebPartContext)
+**Signature:** `constructor(ctx: IWebPartContext)`
 
-**Returns**: BaseClientSideWebPart
+**Returns**: `BaseClientSideWebPart`
 
 
 
@@ -80,9 +80,9 @@ If a sub class overrides the constructor, it needs to call super(context) as the
 
 This API should be used to clear the error message from the web part display area.
 
-**Signature:** `clearError(): void`
+**Signature:** ``clearError(): void``
 
-**Returns**: `void`
+**Returns**: ``void``
 
 
 
@@ -95,9 +95,9 @@ None
 This API should be used to invoke the PropertyPane to help configure the web part. 
 
 
-**Signature:** `configureStart(refreshOnly?: boolean): void`
+**Signature:** ``configureStart(refreshOnly?: boolean): void``
 
-**Returns**: `void`
+**Returns**: ``void``
 
 
 
@@ -119,9 +119,9 @@ data to the appropriate data schema. The persisted data contains the version num
 can be used to make decisions on how to re-structure the data. 
 
 
-**Signature:** `deserialize(data: IWebPartData): TProperties`
+**Signature:** ``deserialize(data: IWebPartData): TProperties``
 
-**Returns**: `TProperties`
+**Returns**: ``TProperties``
 
 - web part property bag. 
 
@@ -139,9 +139,9 @@ can be used to make decisions on how to re-structure the data.
 This API is called at the end of the web part lifecycle. It should be overridden to dispose any 
 resources that the web part is holding onto.
 
-**Signature:** `dispose(): void`
+**Signature:** ``dispose(): void``
 
-**Returns**: `void`
+**Returns**: ``void``
 
 
 
@@ -157,9 +157,9 @@ this.properties. In the overridden method, the web part developer is expected to
 part property bag. This way the web part serialization process will use the upto date state of the web part. 
 
 
-**Signature:** `onBeforeSerialize(): IHtmlProperties`
+**Signature:** ``onBeforeSerialize(): IHtmlProperties``
 
-**Returns**: [`IHtmlProperties`](../sp-client-preview/ihtmlproperties.md)
+**Returns**: `[`IHtmlProperties`](../sp-client-preview/ihtmlproperties.md)`
 
 - reference to searchable properties and properties that need link fixup. Please read 
 the documentation of IHtmlProperties interface for more details.
@@ -176,9 +176,9 @@ want a full re-render to happen on display mode change, they can override this A
 to the web part DOM to switch its display mode. 
 
 
-**Signature:** `onDisplayModeChanged(oldDisplayMode: DisplayMode): void`
+**Signature:** ``onDisplayModeChanged(oldDisplayMode: DisplayMode): void``
 
-**Returns**: `void`
+**Returns**: ``void``
 
 
 
@@ -196,9 +196,9 @@ This API should be overridden to perform long running operations e.g. data fetch
 the initial rendering of the web part. The loading indicator is displayed during the lifetime of this method. 
 This API is called only once during the lifecycle of a web part.
 
-**Signature:** `onInit<T>(): Promise<T>`
+**Signature:** ``onInit<T>(): Promise<T>``
 
-**Returns**: [`Promise<T>`](../es6-promise/promise.md)
+**Returns**: `[`Promise<T>`](../es6-promise/promise.md)`
 
 
 
@@ -213,9 +213,9 @@ The base implementation of this API updates the web part property bag and re-ren
 invokes the web part host's setDirty API. 
 
 
-**Signature:** `onPropertyChange(propertyPath: string,newValue: any): void`
+**Signature:** ``onPropertyChange(propertyPath: string,newValue: any): void``
 
-**Returns**: `void`
+**Returns**: ``void``
 
 
 
@@ -235,9 +235,9 @@ is fired when user switches between web parts while the PropertyPane is open, an
 for the previously selected web part. 
 
 
-**Signature:** `onPropertyConfigurationComplete(): void`
+**Signature:** ``onPropertyConfigurationComplete(): void``
 
-**Returns**: `void`
+**Returns**: ``void``
 
 
 
@@ -249,9 +249,9 @@ None
 
 This API is involed when the PropertyPane is rendered.
 
-**Signature:** `onPropertyPaneRendered(): void`
+**Signature:** ``onPropertyPaneRendered(): void``
 
-**Returns**: `void`
+**Returns**: ``void``
 
 
 
@@ -264,9 +264,9 @@ None
 this API is invoked when the the changes are applied on the PropertyPane when the PropertyPane is used in 
 Non-Reactive mode. This API is not invoked when the PropertyPane is used in Reactive mode.
 
-**Signature:** `onPropertyPaneSave(): void`
+**Signature:** ``onPropertyPaneSave(): void``
 
-**Returns**: `void`
+**Returns**: ``void``
 
 
 
@@ -279,9 +279,9 @@ None
 This API is called to render the web part. There is no base implementation of this API and the web part is 
 required to override this API.
 
-**Signature:** `render(): void`
+**Signature:** ``render(): void``
 
-**Returns**: `void`
+**Returns**: ``void``
 
 
 
@@ -295,9 +295,9 @@ This API should be used to render an error message in the web part display area.
 using the trace logger. 
 
 
-**Signature:** `renderError(error: Error): void`
+**Signature:** ``renderError(error: Error): void``
 
-**Returns**: `void`
+**Returns**: ``void``
 
 
 

@@ -32,9 +32,9 @@
 
 
 
-**Signature:** `new<T>(): WeakSet<T>`
+**Signature:** ``new<T>(): WeakSet<T>``
 
-**Returns**: [`WeakSet<T>`](../es6-collections/weakset.md)
+**Returns**: `[`WeakSet<T>`](../es6-collections/weakset.md)`
 
 
 
@@ -46,9 +46,9 @@ None
 
 
 
-**Signature:** `new<T>(iterable: ForEachable<T>): WeakSet<T>`
+**Signature:** ``new<T>(iterable: ForEachable<T>): WeakSet<T>``
 
-**Returns**: [`WeakSet<T>`](../es6-collections/weakset.md)
+**Returns**: `[`WeakSet<T>`](../es6-collections/weakset.md)`
 
 
 

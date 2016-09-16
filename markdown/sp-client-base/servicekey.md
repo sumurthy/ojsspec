@@ -15,9 +15,9 @@ introduced without inadvertently breaking components that are loaded by an older
 ## Constructor
 PRIVATE - Do not call this from your own code.
 
-**Signature:** constructor(id: string,name: string,defaultCreator: ServiceCreator<T>)
+**Signature:** `constructor(id: string,name: string,defaultCreator: ServiceCreator<T>)`
 
-**Returns**: ServiceKey
+**Returns**: `ServiceKey`
 
 
 
@@ -59,9 +59,9 @@ Constructs a new ServiceKey whose default implementation will be a new instance 
 a TypeScript class that accepts the standard constructor parameter. If you want to 
 specify custom constructor parameters, use createCustom() instead.
 
-**Signature:** `create<T>(name: string,serviceClass: { new (serviceScope: ServiceScope) }): ServiceKey<T>`
+**Signature:** ``create<T>(name: string,serviceClass: { new (serviceScope: ServiceScope) }): ServiceKey<T>``
 
-**Returns**: [`ServiceKey<T>`](../sp-client-base/servicekey.md)
+**Returns**: `[`ServiceKey<T>`](../sp-client-base/servicekey.md)`
 
 - the newly created ServiceKey
 
@@ -79,9 +79,9 @@ specify custom constructor parameters, use createCustom() instead.
 Constructs a new ServiceKey whose default implementation will be obtained 
 by invoking the specified callback.
 
-**Signature:** `createCustom<T>(name: string,defaultCreator: ServiceCreator<T>): ServiceKey<T>`
+**Signature:** ``createCustom<T>(name: string,defaultCreator: ServiceCreator<T>): ServiceKey<T>``
 
-**Returns**: [`ServiceKey<T>`](../sp-client-base/servicekey.md)
+**Returns**: `[`ServiceKey<T>`](../sp-client-base/servicekey.md)`
 
 - the newly created ServiceKey
 

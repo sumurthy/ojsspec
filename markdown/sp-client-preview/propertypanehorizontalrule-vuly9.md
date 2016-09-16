@@ -2,9 +2,9 @@
 
 Helper method to create a Horizontal Rule on the PropertyPane.
 
-**Signature:** `PropertyPaneHorizontalRule(): IPropertyPaneField<void>`
+**Signature:** ``PropertyPaneHorizontalRule(): IPropertyPaneField<void>``
 
-**Returns**: [`IPropertyPaneField<void>`](../sp-client-preview/ipropertypanefield.md)
+**Returns**: `[`IPropertyPaneField<void>`](../sp-client-preview/ipropertypanefield.md)`
 
 
 

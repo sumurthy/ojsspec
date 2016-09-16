@@ -31,9 +31,9 @@
 
 
 
-**Signature:** `append(name: string,value: string): void`
+**Signature:** ``append(name: string,value: string): void``
 
-**Returns**: `void`
+**Returns**: ``void``
 
 
 
@@ -50,9 +50,9 @@
 
 
 
-**Signature:** `delete(name: string):void`
+**Signature:** ``delete(name: string):void``
 
-**Returns**: `void`
+**Returns**: ``void``
 
 
 
@@ -68,9 +68,9 @@
 
 
 
-**Signature:** `get(name: string): string`
+**Signature:** ``get(name: string): string``
 
-**Returns**: `string`
+**Returns**: ``string``
 
 
 
@@ -86,9 +86,9 @@
 
 
 
-**Signature:** `getAll(name: string): Array<string>`
+**Signature:** ``getAll(name: string): Array<string>``
 
-**Returns**: `Array<string>`
+**Returns**: ``Array<string>``
 
 
 
@@ -104,9 +104,9 @@
 
 
 
-**Signature:** `has(name: string): boolean`
+**Signature:** ``has(name: string): boolean``
 
-**Returns**: `boolean`
+**Returns**: ``boolean``
 
 
 
@@ -122,9 +122,9 @@
 
 
 
-**Signature:** `set(name: string,value: string): void`
+**Signature:** ``set(name: string,value: string): void``
 
-**Returns**: `void`
+**Returns**: ``void``
 
 
 
@@ -141,9 +141,9 @@
 
 
 
-**Signature:** `forEach(callback: (value: string,name: string) => void): void`
+**Signature:** ``forEach(callback: (value: string,name: string) => void): void``
 
-**Returns**: `void`
+**Returns**: ``void``
 
 
 
