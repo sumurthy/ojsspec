@@ -447,6 +447,7 @@ function processLines(element = '', index = 0, lines = []) {
                     enumEntry[1] = ""
                     enumEntry[2] = ""
                     enumObj[enumKey]['values'].push(enumEntry)
+                    enumEntry = []
                 })
             }
             block_end_reset()

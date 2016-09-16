@@ -173,12 +173,12 @@
     "descr": "",
     "values": [
       [
-        "cors",
+        "same-origin",
         "",
         ""
       ],
       [
-        "cors",
+        "no-cors",
         "",
         ""
       ],
@@ -193,12 +193,12 @@
     "descr": "",
     "values": [
       [
-        "include",
+        "omit",
         "",
         ""
       ],
       [
-        "include",
+        "same-origin",
         "",
         ""
       ],
@@ -213,27 +213,27 @@
     "descr": "",
     "values": [
       [
-        "only-if-cached",
+        "default",
         "",
         ""
       ],
       [
-        "only-if-cached",
+        "no-store",
         "",
         ""
       ],
       [
-        "only-if-cached",
+        "reload",
         "",
         ""
       ],
       [
-        "only-if-cached",
+        "no-cache",
         "",
         ""
       ],
       [
-        "only-if-cached",
+        "force-cache",
         "",
         ""
       ],
@@ -248,22 +248,22 @@
     "descr": "",
     "values": [
       [
-        "opaque",
+        "basic",
         "",
         ""
       ],
       [
-        "opaque",
+        "cors",
         "",
         ""
       ],
       [
-        "opaque",
+        "default",
         "",
         ""
       ],
       [
-        "opaque",
+        "error",
         "",
         ""
       ],
