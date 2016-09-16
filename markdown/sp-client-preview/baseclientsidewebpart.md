@@ -1,4 +1,4 @@
-# BaseClientSideWebPart `<TProperties>` class
+# BaseClientSideWebPart <TProperties> class
 
 
 

@@ -18,10 +18,10 @@ which component generated the messages and makes the messages useful and filtera
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`error`](#error)     | `public, _static_` | `void` | Logs an error |
-|[`info`](#info)     | `public, _static_` | `void` | Logs an informational message |
-|[`verbose`](#verbose)     | `public, _static_` | `void` | Logs a verbose message |
-|[`warn`](#warn)     | `public, _static_` | `void` | Logs a warning |
+|[`error`](#error)     | `public, static` | `void` | Logs an error |
+|[`info`](#info)     | `public, static` | `void` | Logs an informational message |
+|[`verbose`](#verbose)     | `public, static` | `void` | Logs a verbose message |
+|[`warn`](#warn)     | `public, static` | `void` | Logs a warning |
 
 
 

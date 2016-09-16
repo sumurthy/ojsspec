@@ -1,4 +1,4 @@
-# IClientSideWebPartManifestInstance `<TProperties>` interface
+# IClientSideWebPartManifestInstance <TProperties> interface
 
 
 

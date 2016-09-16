@@ -77,7 +77,7 @@ PRIVATE CONSTRUCTOR - DO NOT CALL THIS FROM YOUR OWN CODE.
 |[`getParent`](#getparent)     | `public` | [`ServiceScope`](../sp-client-base/servicescope.md) | Returns the parent of the current ServiceScope,or undefined if this is a root scope. |
 |[`provide<T>`](#provide<t>)     | `public` | `T` | ServiceScope.provide() is used to register an implemententation of the given serviceKey  for the current scope. It may only be used when the ServiceScope is in an "unfinished"  state, i.e. before finish() has been called. |
 |[`startNewChild`](#startnewchild)     | `public` | [`ServiceScope`](../sp-client-base/servicescope.md) | Constructs a new ServiceScope that is a child of the current scope. For any keys  that are not explicitly provided by the child scope, the parent hierarchy will be  consulted. |
-|[`startNewRoot`](#startnewroot)     | `public, _static_` | [`ServiceScope`](../sp-client-base/servicescope.md) | Create a new root-level ServiceScope. Only root-level scopes have the ability to autocreate  default implementations of ServiceKeys. |
+|[`startNewRoot`](#startnewroot)     | `public, static` | [`ServiceScope`](../sp-client-base/servicescope.md) | Create a new root-level ServiceScope. Only root-level scopes have the ability to autocreate  default implementations of ServiceKeys. |
 |[`whenFinished`](#whenfinished)     | `public` | `void` | It is an error to call ServiceScope.consume() before finish() has been called.  The most reliable way to protect your component against this error is to perform the  consume() calls inside a whenFinished() callback. If the service scope is already  finished, then the callback will be executed immediately; otherwise, it will be executed  later when the scope is finished. |
 
 

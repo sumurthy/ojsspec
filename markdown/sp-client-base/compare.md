@@ -15,7 +15,7 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`shallowCompare`](#shallowcompare)     | `public, _static_` | `boolean` | Performs shallow comparison between two objects to determine if they are equal. This method compares  only object types.   |
+|[`shallowCompare`](#shallowcompare)     | `public, static` | `boolean` | Performs shallow comparison between two objects to determine if they are equal. This method compares  only object types.   |
 
 
 

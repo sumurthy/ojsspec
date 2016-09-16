@@ -18,9 +18,9 @@ that might impact performance.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`isNonemptyString`](#isnonemptystring)     | `public, _static_` | `void` | Throws an exception if the specified string is null,undefined,or an empty string. |
-|[`isNotNullOrUndefined`](#isnotnullorundefined)     | `public, _static_` | `void` | Throws an exception if the specified value is null or undefined. |
-|[`isTrue`](#istrue)     | `public, _static_` | `void` | Throws an exception if the specified value is not true. |
+|[`isNonemptyString`](#isnonemptystring)     | `public, static` | `void` | Throws an exception if the specified string is null,undefined,or an empty string. |
+|[`isNotNullOrUndefined`](#isnotnullorundefined)     | `public, static` | `void` | Throws an exception if the specified value is null or undefined. |
+|[`isTrue`](#istrue)     | `public, static` | `void` | Throws an exception if the specified value is not true. |
 
 
 

@@ -23,10 +23,10 @@ Math.random() function and may be not be suitable for some applications.
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
 |[`equals`](#equals)     | `public` | `boolean` | Compare this instance to another Guid instance   |
-|[`isValid`](#isvalid)     | `public, _static_` | `boolean` | Indicates whether a guid is valid (according to RFC4122).   |
-|[`constructorGuid`](#constructorguid)     | `public, _static_` | [`Guid`](../sp-client-base/guid.md) | Returns a new Guid instance with a pseudo-randomly generated Guid.   |
+|[`isValid`](#isvalid)     | `public, static` | `boolean` | Indicates whether a guid is valid (according to RFC4122).   |
+|[`constructorGuid`](#constructorguid)     | `public, static` | [`Guid`](../sp-client-base/guid.md) | Returns a new Guid instance with a pseudo-randomly generated Guid.   |
 |[`toString`](#tostring)     | `public` | `string` | Object.prototype.toString override   |
-|[`tryParse`](#tryparse)     | `public, _static_` | [`Guid`](../sp-client-base/guid.md) | Trys to construct a new Guid instance using guid string. The guid argument  is normalized and validated. If the argument is not a valid "version 4" UUID from  RFC 4122, tryParse will return undefined.   |
+|[`tryParse`](#tryparse)     | `public, static` | [`Guid`](../sp-client-base/guid.md) | Trys to construct a new Guid instance using guid string. The guid argument  is normalized and validated. If the argument is not a valid "version 4" UUID from  RFC 4122, tryParse will return undefined.   |
 
 
 

@@ -255,7 +255,7 @@ function doSubClassInterface(tline = '', localO = {}, localName = '', isClass = 
     }
     if (tline.includes('%generictype%')) {
         if (localO[localName]['genericType']) {
-            tline = tline.replace('%generictype%', ` \`<${localO[localName]['genericType']}>\``)
+            tline = tline.replace('%generictype%', ` <${localO[localName]['genericType']}>`)
         }
         else {
             tline = tline.replace('%generictype%', '')
@@ -435,7 +435,7 @@ function addMembers(tline = '', type = '', name = '', localO = {}) {
 
         var mline = dclone(tline).substr(1)
         if (o[e]['isStatic']) {
-            mline = mline.replace('%access%', `\`${o[e]['accessModifier']}, _static_\``)
+            mline = mline.replace('%access%', `\`${o[e]['accessModifier']}, static\``)
         }
         else {
             mline = mline.replace('%access%', `\`${o[e]['accessModifier']}\``)
