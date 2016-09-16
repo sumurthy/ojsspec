@@ -15,7 +15,7 @@
 |:-------------|:-------|:-----------|
 |`status`      | `number` |  |
 |`statusText`      | `string` |  |
-|`headers`      | [`HeaderInit`](../whatwg-fetch/whatwg-fetch-module.md#types) |  |
+|`headers`      | [`HeaderInit`](../whatwg-fetch/whatwg-fetch.md#types) |  |
 
 
 

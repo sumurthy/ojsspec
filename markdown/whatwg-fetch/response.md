@@ -21,7 +21,7 @@ _Implements: [`Body`](../whatwg-fetch/body.md)_
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `body`    | [`BodyInit`](../whatwg-fetch/whatwg-fetch-module.md#types) | _Optional._ |
+| `body`    | [`BodyInit`](../whatwg-fetch/whatwg-fetch.md#types) | _Optional._ |
 | `init`    | [`ResponseInit`](../whatwg-fetch/responseinit.md) | _Optional._ |
 
 
