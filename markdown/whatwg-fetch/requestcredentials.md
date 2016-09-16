@@ -3,6 +3,6 @@
 
 | Member	   | Description|
 |:-------------|:-------|
-|`omit`:       |  |
-|`same-origin`:       |  |
-|`include`:       |  |
+|`omit`       |  |
+|`same-origin`       |  |
+|`include`       |  |

@@ -3,8 +3,8 @@
 
 | Member	   | Description|
 |:-------------|:-------|
-|`basic`:       |  |
-|`cors`:       |  |
-|`default`:       |  |
-|`error`:       |  |
-|`opaque`:       |  |
+|`basic`       |  |
+|`cors`       |  |
+|`default`       |  |
+|`error`       |  |
+|`opaque`       |  |

@@ -3,4 +3,4 @@
 
 | Member	   | Description|
 |:-------------|:-------|
->|`%member%`: %value%      | %description% |
+>|`%member%` %value%      | %description% |

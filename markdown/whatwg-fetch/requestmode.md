@@ -3,6 +3,6 @@
 
 | Member	   | Description|
 |:-------------|:-------|
-|`same-origin`:       |  |
-|`no-cors`:       |  |
-|`cors`:       |  |
+|`same-origin`       |  |
+|`no-cors`       |  |
+|`cors`       |  |
