@@ -372,7 +372,8 @@ function addRegions(tline = '', type = '') {
             //Get first sentence
         var descr = o[e]['descr']
         if (descr) {
-            descr = descr.split('.')[0].replace(/\n/g, ' ')
+            //descr = descr.split('.')[0].replace(/\n/g, ' ')
+            descr = descr.replace(/\n/g, ' ')
         }
         mline = mline.replace('%description%', descr)
             // For return function add Markdown HyperLink

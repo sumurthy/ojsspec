@@ -1,6 +1,6 @@
-<module>
+<moduleh>
 # %module% external module
-</module>
+</moduleh>
 
 <module>
 
