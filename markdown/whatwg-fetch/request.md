@@ -12,7 +12,7 @@ _Implements: [`Body`](../whatwg-fetch/body.md)_
 
 **Signature:** `constructor(input: string|Request,init?:RequestInit)`
 
-**Returns**: `Request`
+**Returns**: [`Request`](../whatwg-fetch/request.md)
 
 
 

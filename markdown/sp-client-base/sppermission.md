@@ -15,7 +15,7 @@ https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.
 
 **Signature:** `constructor(value: IODataBasePermission)`
 
-**Returns**: `SPPermission`
+**Returns**: [`SPPermission`](../sp-client-base/sppermission.md)
 
 
 
@@ -90,7 +90,7 @@ Function for determining if a given permission mask has all of the requested per
 
 **Signature:** ``hasAllPermissions(...requestedPerms: SPPermission[]): boolean``
 
-**Returns**: ``boolean``
+**Returns**: `boolean`
 
 
 
@@ -108,7 +108,7 @@ Function for determining if a given permission mask has any of the requested per
 
 **Signature:** ``hasAnyPermissions(...requestedPerms: SPPermission[]): boolean``
 
-**Returns**: ``boolean``
+**Returns**: `boolean`
 
 
 
@@ -126,7 +126,7 @@ Function for checking if a given permission mask has the requested permission.
 
 **Signature:** ``hasPermission(requestedPerm: SPPermission): boolean``
 
-**Returns**: ``boolean``
+**Returns**: `boolean`
 
 
 

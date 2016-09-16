@@ -24,7 +24,7 @@ If a sub class overrides the constructor, it needs to call super(context) as the
 
 **Signature:** `constructor(ctx: IWebPartContext)`
 
-**Returns**: `BaseClientSideWebPart`
+**Returns**: [`BaseClientSideWebPart`](../sp-client-preview/baseclientsidewebpart.md)
 
 
 
@@ -82,7 +82,7 @@ This API should be used to clear the error message from the web part display are
 
 **Signature:** ``clearError(): void``
 
-**Returns**: ``void``
+**Returns**: `void`
 
 
 
@@ -97,7 +97,7 @@ This API should be used to invoke the PropertyPane to help configure the web par
 
 **Signature:** ``configureStart(refreshOnly?: boolean): void``
 
-**Returns**: ``void``
+**Returns**: `void`
 
 
 
@@ -121,7 +121,7 @@ can be used to make decisions on how to re-structure the data.
 
 **Signature:** ``deserialize(data: IWebPartData): TProperties``
 
-**Returns**: ``TProperties``
+**Returns**: `TProperties`
 
 - web part property bag. 
 
@@ -141,7 +141,7 @@ resources that the web part is holding onto.
 
 **Signature:** ``dispose(): void``
 
-**Returns**: ``void``
+**Returns**: `void`
 
 
 
@@ -159,7 +159,7 @@ part property bag. This way the web part serialization process will use the upto
 
 **Signature:** ``onBeforeSerialize(): IHtmlProperties``
 
-**Returns**: `[`IHtmlProperties`](../sp-client-preview/ihtmlproperties.md)`
+**Returns**: [`IHtmlProperties`](../sp-client-preview/ihtmlproperties.md)
 
 - reference to searchable properties and properties that need link fixup. Please read 
 the documentation of IHtmlProperties interface for more details.
@@ -178,7 +178,7 @@ to the web part DOM to switch its display mode.
 
 **Signature:** ``onDisplayModeChanged(oldDisplayMode: DisplayMode): void``
 
-**Returns**: ``void``
+**Returns**: `void`
 
 
 
@@ -198,7 +198,7 @@ This API is called only once during the lifecycle of a web part.
 
 **Signature:** ``onInit<T>(): Promise<T>``
 
-**Returns**: `[`Promise<T>`](../es6-promise/promise.md)`
+**Returns**: [`Promise<T>`](../es6-promise/promise.md)
 
 
 
@@ -215,7 +215,7 @@ invokes the web part host's setDirty API.
 
 **Signature:** ``onPropertyChange(propertyPath: string,newValue: any): void``
 
-**Returns**: ``void``
+**Returns**: `void`
 
 
 
@@ -237,7 +237,7 @@ for the previously selected web part.
 
 **Signature:** ``onPropertyConfigurationComplete(): void``
 
-**Returns**: ``void``
+**Returns**: `void`
 
 
 
@@ -251,7 +251,7 @@ This API is involed when the PropertyPane is rendered.
 
 **Signature:** ``onPropertyPaneRendered(): void``
 
-**Returns**: ``void``
+**Returns**: `void`
 
 
 
@@ -266,7 +266,7 @@ Non-Reactive mode. This API is not invoked when the PropertyPane is used in Reac
 
 **Signature:** ``onPropertyPaneSave(): void``
 
-**Returns**: ``void``
+**Returns**: `void`
 
 
 
@@ -281,7 +281,7 @@ required to override this API.
 
 **Signature:** ``render(): void``
 
-**Returns**: ``void``
+**Returns**: `void`
 
 
 
@@ -297,7 +297,7 @@ using the trace logger.
 
 **Signature:** ``renderError(error: Error): void``
 
-**Returns**: ``void``
+**Returns**: `void`
 
 
 

@@ -37,7 +37,7 @@ convertToODataStringLiteral("'example list'") ---> "'''example list'''"
 
 **Signature:** ``convertToODataStringLiteral(value: string): string``
 
-**Returns**: ``string``
+**Returns**: `string`
 
 
 
@@ -60,7 +60,7 @@ removeEndSlash('/') ---> ''
 
 **Signature:** ``removeEndSlash(url: string): string``
 
-**Returns**: ``string``
+**Returns**: `string`
 
 
 

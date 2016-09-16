@@ -287,7 +287,7 @@ function doSubClassInterface(tline = '', localO = {}, localName = '', isClass = 
         tline = tline.replace('%constsignature%', localO[localName]['constructor']['signature'])
     }
     if (tline.includes('%constrtype%')) {
-        tline = tline.replace('%constrtype%', localO[localName]['constructor']['returnType'])
+        tline = tline.replace('%constrtype%', `${getLinkForType(localO[localName]['constructor']['returnType'])}`)
     }
     if (tline.includes('%constreturndescr%')) {
         tline = tline.replace('%constreturndescr%', localO[localName]['constructor']['returnDescr'])

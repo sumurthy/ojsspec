@@ -39,7 +39,7 @@ REST call.
 
 **Signature:** ``addDigestToCache(webUrl: string,digestValue: string,expirationTimestamp: number): void``
 
-**Returns**: ``void``
+**Returns**: `void`
 
 
 
@@ -59,7 +59,7 @@ Clears all values from the cache.
 
 **Signature:** ``clearAllDigests(): void``
 
-**Returns**: ``void``
+**Returns**: `void`
 
 
 
@@ -75,7 +75,7 @@ e.g. if an error indicates that a digest was invalidated prior to its expiration
 
 **Signature:** ``clearDigest(webUrl: string): boolean``
 
-**Returns**: ``boolean``
+**Returns**: `boolean`
 
 Returns true if a cache entry was found and deleted false otherwise.
 
@@ -95,7 +95,7 @@ an HTTP request obtains the digest, which will be added to the cache.
 
 **Signature:** ``fetchDigest(webUrl: string): Promise<string>``
 
-**Returns**: `[`Promise<string>`](../es6-promise/promise.md)`
+**Returns**: [`Promise<string>`](../es6-promise/promise.md)
 
 A promise that is fulfilled with the digest value.
 

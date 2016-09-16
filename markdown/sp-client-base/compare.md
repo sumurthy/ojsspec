@@ -29,7 +29,7 @@ only object types.
 
 **Signature:** ``shallowCompare(objA: Object,objB: Object): boolean``
 
-**Returns**: ``boolean``
+**Returns**: `boolean`
 
 
 

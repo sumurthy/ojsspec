@@ -31,7 +31,7 @@ A thenable is promise-like in as far as it has a "then" method.
 
 **Signature:** ``resolve<R>(value?: R | Thenable<R>): Promise<R>``
 
-**Returns**: `[`Promise<R>`](../es6-promise/promise.md)`
+**Returns**: [`Promise<R>`](../es6-promise/promise.md)
 
 
 
@@ -49,7 +49,7 @@ Make a promise that rejects to obj. For consistency and debugging (eg stack trac
 
 **Signature:** ``reject(error: any): Promise<any>``
 
-**Returns**: `[`Promise<any>`](../es6-promise/promise.md)`
+**Returns**: [`Promise<any>`](../es6-promise/promise.md)
 
 
 
@@ -69,7 +69,7 @@ The fulfillment value is an array (in order) of fulfillment values. The rejectio
 
 **Signature:** ``all<R>(promises: (R | Thenable<R>)[]): Promise<R[]>``
 
-**Returns**: `[`Promise<R[]>`](../es6-promise/promise.md)`
+**Returns**: [`Promise<R[]>`](../es6-promise/promise.md)
 
 
 
@@ -87,7 +87,7 @@ Make a Promise that fulfills when any item fulfills,and rejects if any item reje
 
 **Signature:** ``race<R>(promises: (R | Thenable<R>)[]): Promise<R>``
 
-**Returns**: `[`Promise<R>`](../es6-promise/promise.md)`
+**Returns**: [`Promise<R>`](../es6-promise/promise.md)
 
 
 

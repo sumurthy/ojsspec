@@ -33,7 +33,7 @@ Logs an error
 
 **Signature:** ``error(source: string,error: Error,scope?: ServiceScope): void``
 
-**Returns**: ``void``
+**Returns**: `void`
 
 
 
@@ -53,7 +53,7 @@ Logs an informational message
 
 **Signature:** ``info(source: string,message: string,scope?: ServiceScope): void``
 
-**Returns**: ``void``
+**Returns**: `void`
 
 
 
@@ -73,7 +73,7 @@ Logs a verbose message
 
 **Signature:** ``verbose(source: string,message: string,scope?: ServiceScope): void``
 
-**Returns**: ``void``
+**Returns**: `void`
 
 
 
@@ -93,7 +93,7 @@ Logs a warning
 
 **Signature:** ``warn(source: string,message: string,scope?: ServiceScope): void``
 
-**Returns**: ``void``
+**Returns**: `void`
 
 
 

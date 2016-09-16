@@ -4,7 +4,7 @@
 
 **Signature:** `%apisignature%`
 
-**Returns**: `%returntype%`
+**Returns**: %returntype%
 
 %returndescr%
 

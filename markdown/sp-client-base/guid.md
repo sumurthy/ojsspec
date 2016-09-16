@@ -39,7 +39,7 @@ Compare this instance to another Guid instance
 
 **Signature:** ``equals(guid: Guid): boolean``
 
-**Returns**: ``boolean``
+**Returns**: `boolean`
 
 A value indicating whether this instance and the specified Guid object 
 represent the same value
@@ -59,7 +59,7 @@ Indicates whether a guid is valid (according to RFC4122).
 
 **Signature:** ``isValid(guid: string): boolean``
 
-**Returns**: ``boolean``
+**Returns**: `boolean`
 
 Value indicating whether the guid is valid.
 
@@ -78,7 +78,7 @@ Returns a new Guid instance with a pseudo-randomly generated Guid.
 
 **Signature:** ``newGuid(randomProvider?: IRandomProvider): Guid``
 
-**Returns**: `[`Guid`](../sp-client-base/guid.md)`
+**Returns**: [`Guid`](../sp-client-base/guid.md)
 
 A new valid unique Guid object
 
@@ -97,7 +97,7 @@ Object.prototype.toString override
 
 **Signature:** ``toString(): string``
 
-**Returns**: ``string``
+**Returns**: `string`
 
 The GUID value in lowercase hexadecimal without braces. 
 Example: 'd5369f3b-bd7a-412a-9c0f-7f0650bb5489'
@@ -115,7 +115,7 @@ RFC 4122, tryParse will return undefined.
 
 **Signature:** ``tryParse(guid: string): Guid``
 
-**Returns**: `[`Guid`](../sp-client-base/guid.md)`
+**Returns**: [`Guid`](../sp-client-base/guid.md)
 
 If the guid argument was valid,a new Guid instance. Otherwise,undefined.
 

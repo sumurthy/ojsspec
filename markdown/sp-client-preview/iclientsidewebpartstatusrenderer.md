@@ -30,7 +30,7 @@ Clear the webpart error message.
 
 **Signature:** ``clearError(domElement: HTMLElement): void``
 
-**Returns**: ``void``
+**Returns**: `void`
 
 
 
@@ -48,7 +48,7 @@ Clear the loading indicator.
 
 **Signature:** ``clearLoadingIndicator(domElement: Element): void``
 
-**Returns**: ``void``
+**Returns**: `void`
 
 
 
@@ -66,7 +66,7 @@ Display a loading spinner.
 
 **Signature:** ``displayLoadingIndicator(domElement: Element,loadingMessage: string): void``
 
-**Returns**: ``void``
+**Returns**: `void`
 
 
 
@@ -85,7 +85,7 @@ Render the provided error message in the webpart container div.
 
 **Signature:** ``renderError(domElement: HTMLElement,error: Error | string): void``
 
-**Returns**: ``void``
+**Returns**: `void`
 
 
 

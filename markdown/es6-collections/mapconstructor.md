@@ -34,7 +34,7 @@
 
 **Signature:** ``new<K,V>(): Map<K,V>``
 
-**Returns**: `[`Map<K,V>`](../es6-collections/map.md)`
+**Returns**: [`Map<K,V>`](../es6-collections/map.md)
 
 
 
@@ -48,7 +48,7 @@ None
 
 **Signature:** ``new<K,V>(iterable: ForEachable<[K,V]>): Map<K,V>``
 
-**Returns**: `[`Map<K,V>`](../es6-collections/map.md)`
+**Returns**: [`Map<K,V>`](../es6-collections/map.md)
 
 
 

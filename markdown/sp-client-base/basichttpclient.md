@@ -14,7 +14,7 @@ enhancements.
 
 **Signature:** `constructor(serviceScope: ServiceScope)`
 
-**Returns**: `BasicHttpClient`
+**Returns**: [`BasicHttpClient`](../sp-client-base/basichttpclient.md)
 
 
 
@@ -57,7 +57,7 @@ https://fetch.spec.whatwg.org/
 
 **Signature:** ``fetch(url: string,options: IBasicHttpClientOptions): Promise<Response>``
 
-**Returns**: `[`Promise<Response>`](../es6-promise/promise.md)`
+**Returns**: [`Promise<Response>`](../es6-promise/promise.md)
 
 a promise that will return the result
 
@@ -76,7 +76,7 @@ a promise that will return the result
 
 **Signature:** ``fetchCore(request: Request): Promise<Response>``
 
-**Returns**: `[`Promise<Response>`](../es6-promise/promise.md)`
+**Returns**: [`Promise<Response>`](../es6-promise/promise.md)
 
 
 
@@ -94,7 +94,7 @@ Calls fetch(),but sets the method to 'GET'.
 
 **Signature:** ``get(url: string,options?: IBasicHttpClientOptions): Promise<Response>``
 
-**Returns**: `[`Promise<Response>`](../es6-promise/promise.md)`
+**Returns**: [`Promise<Response>`](../es6-promise/promise.md)
 
 a promise that will return the result
 
@@ -113,7 +113,7 @@ Calls fetch(),but sets the method to 'POST'.
 
 **Signature:** ``post(url: string,options: IBasicHttpClientOptions): Promise<Response>``
 
-**Returns**: `[`Promise<Response>`](../es6-promise/promise.md)`
+**Returns**: [`Promise<Response>`](../es6-promise/promise.md)
 
 a promise that will return the result
 

@@ -17,7 +17,7 @@ class instead.
 
 **Signature:** `constructor(serviceScope: ServiceScope)`
 
-**Returns**: `HttpClient`
+**Returns**: [`HttpClient`](../sp-client-base/httpclient.md)
 
 
 
@@ -53,7 +53,7 @@ a single web request.
 
 **Signature:** ``beginBatch(batchOptions?: IODataBatchOptions): ODataBatch``
 
-**Returns**: `[`ODataBatch`](../sp-client-base/odatabatch.md)`
+**Returns**: [`ODataBatch`](../sp-client-base/odatabatch.md)
 
 
 
@@ -89,7 +89,7 @@ to specify it explicitly.
 
 **Signature:** ``fetch(url: string,options: IHttpClientOptions): Promise<Response>``
 
-**Returns**: `[`Promise<Response>`](../es6-promise/promise.md)`
+**Returns**: [`Promise<Response>`](../es6-promise/promise.md)
 
 a promise that will return the result
 
@@ -108,7 +108,7 @@ Calls fetch(),but sets the method to 'GET'.
 
 **Signature:** ``get(url: string,options?: IHttpClientOptions): Promise<Response>``
 
-**Returns**: `[`Promise<Response>`](../es6-promise/promise.md)`
+**Returns**: [`Promise<Response>`](../es6-promise/promise.md)
 
 a promise that will return the result
 
@@ -134,7 +134,7 @@ is "http://example.com/_layouts/service", the returned URL would be
 
 **Signature:** ``getWebUrlFromRequestUrl(requestUrl: string): string``
 
-**Returns**: ``string``
+**Returns**: `string`
 
 the inferred SPWeb URL
 
@@ -152,7 +152,7 @@ Calls fetch(),but sets the method to 'POST'.
 
 **Signature:** ``post(url: string,options: IHttpClientOptions): Promise<Response>``
 
-**Returns**: `[`Promise<Response>`](../es6-promise/promise.md)`
+**Returns**: [`Promise<Response>`](../es6-promise/promise.md)
 
 a promise that will return the result
 

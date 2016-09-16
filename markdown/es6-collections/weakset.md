@@ -30,7 +30,7 @@
 
 **Signature:** ``delete(value: T): boolean``
 
-**Returns**: ``boolean``
+**Returns**: `boolean`
 
 
 
@@ -48,7 +48,7 @@
 
 **Signature:** ``clear(): void``
 
-**Returns**: ``void``
+**Returns**: `void`
 
 
 
@@ -62,7 +62,7 @@ None
 
 **Signature:** ``add(value: T): WeakSet<T>``
 
-**Returns**: `[`WeakSet<T>`](../es6-collections/weakset.md)`
+**Returns**: [`WeakSet<T>`](../es6-collections/weakset.md)
 
 
 
@@ -80,7 +80,7 @@ None
 
 **Signature:** ``has(value: T): boolean``
 
-**Returns**: ``boolean``
+**Returns**: `boolean`
 
 
 

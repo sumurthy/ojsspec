@@ -20,7 +20,7 @@ Query param with only equals (www.example.com/?=&debug=on stores empty string ke
 
 **Signature:** `constructor(url: string)`
 
-**Returns**: `UrlQueryParameterCollection`
+**Returns**: [`UrlQueryParameterCollection`](../sp-client-base/urlqueryparametercollection.md)
 
 
 
@@ -59,7 +59,7 @@ getValue('lost') ---> undefined
 
 **Signature:** ``getValue(param: string): string``
 
-**Returns**: ``string``
+**Returns**: `string`
 
 
 
@@ -84,7 +84,7 @@ getValues('lost') ---> undefined
 
 **Signature:** ``getValues(param: string): string[]``
 
-**Returns**: ``string[]``
+**Returns**: `string[]`
 
 
 

@@ -51,7 +51,7 @@ PRIVATE CONSTRUCTOR - DO NOT CALL THIS FROM YOUR OWN CODE.
 
 **Signature:** `constructor(parent: ServiceScope)`
 
-**Returns**: `ServiceScope`
+**Returns**: [`ServiceScope`](../sp-client-base/servicescope.md)
 
 
 
@@ -92,7 +92,7 @@ instance will be autocreated and registered with the root ServiceScope.
 
 **Signature:** ``consume<T>(serviceKey: ServiceKey<T>): T``
 
-**Returns**: ``T``
+**Returns**: `T`
 
 - the service instance
 
@@ -111,7 +111,7 @@ simpleServiceClass, then registering it by calling ServiceScope.provide().
 
 **Signature:** ``createAndProvide<T>(serviceKey: ServiceKey<T>,simpleServiceClass: { new (serviceScope: ServiceScope) }): T``
 
-**Returns**: ``T``
+**Returns**: `T`
 
 - a newly constructed instance of simpleServiceClass
 
@@ -131,7 +131,7 @@ serviceKey, and then registers it by calling ServiceScope.provide().
 
 **Signature:** ``createDefaultAndProvide<T>(serviceKey: ServiceKey<T>): T``
 
-**Returns**: ``T``
+**Returns**: `T`
 
 - a service instance that was constructed using ServiceKey.defaultCreator
 
@@ -155,7 +155,7 @@ the previous call, which would be very confusing for developers.
 
 **Signature:** ``finish(): void``
 
-**Returns**: ``void``
+**Returns**: `void`
 
 
 
@@ -169,7 +169,7 @@ Returns the parent of the current ServiceScope,or undefined if this is a root sc
 
 **Signature:** ``getParent(): ServiceScope``
 
-**Returns**: `[`ServiceScope`](../sp-client-base/servicescope.md)`
+**Returns**: [`ServiceScope`](../sp-client-base/servicescope.md)
 
 - the parent service scope
 
@@ -185,7 +185,7 @@ state, i.e. before finish() has been called.
 
 **Signature:** ``provide<T>(serviceKey: ServiceKey<T>,service: T): T``
 
-**Returns**: ``T``
+**Returns**: `T`
 
 - the same object that was passed as the "service" parameter
 
@@ -206,7 +206,7 @@ consulted.
 
 **Signature:** ``startNewChild(): ServiceScope``
 
-**Returns**: `[`ServiceScope`](../sp-client-base/servicescope.md)`
+**Returns**: [`ServiceScope`](../sp-client-base/servicescope.md)
 
 - the newly created root ServiceScope
 
@@ -221,7 +221,7 @@ default implementations of ServiceKeys.
 
 **Signature:** ``startNewRoot(): ServiceScope``
 
-**Returns**: `[`ServiceScope`](../sp-client-base/servicescope.md)`
+**Returns**: [`ServiceScope`](../sp-client-base/servicescope.md)
 
 - the newly created root ServiceScope
 
@@ -239,7 +239,7 @@ later when the scope is finished.
 
 **Signature:** ``whenFinished(callback: () => void): void``
 
-**Returns**: ``void``
+**Returns**: `void`
 
 
 

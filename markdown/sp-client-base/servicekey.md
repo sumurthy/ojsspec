@@ -17,7 +17,7 @@ PRIVATE - Do not call this from your own code.
 
 **Signature:** `constructor(id: string,name: string,defaultCreator: ServiceCreator<T>)`
 
-**Returns**: `ServiceKey`
+**Returns**: [`ServiceKey`](../sp-client-base/servicekey.md)
 
 
 
@@ -61,7 +61,7 @@ specify custom constructor parameters, use createCustom() instead.
 
 **Signature:** ``create<T>(name: string,serviceClass: { new (serviceScope: ServiceScope) }): ServiceKey<T>``
 
-**Returns**: `[`ServiceKey<T>`](../sp-client-base/servicekey.md)`
+**Returns**: [`ServiceKey<T>`](../sp-client-base/servicekey.md)
 
 - the newly created ServiceKey
 
@@ -81,7 +81,7 @@ by invoking the specified callback.
 
 **Signature:** ``createCustom<T>(name: string,defaultCreator: ServiceCreator<T>): ServiceKey<T>``
 
-**Returns**: `[`ServiceKey<T>`](../sp-client-base/servicekey.md)`
+**Returns**: [`ServiceKey<T>`](../sp-client-base/servicekey.md)
 
 - the newly created ServiceKey
 
