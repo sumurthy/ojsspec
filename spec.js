@@ -337,7 +337,7 @@ function processObject(objectName = '', index = 0, lines = [], isClass) {
                 } else {
                     var name = Utils.cleanupName(secondWord)
                 }
-                allVarsTypes[name] = '../' + anchor + '/' + saveFileName.toLowerCase() + '.md#variables'
+                allVarsTypes[name] = '../' + '/' + saveFileName.toLowerCase() + '.md#variables'
                 var v = {}
                 v['dataType'] = line.split(':')[1].trim()
                 v['dataType'] = v['dataType'].replace('typeof ', '')
@@ -348,7 +348,7 @@ function processObject(objectName = '', index = 0, lines = [], isClass) {
             } else if (memberType === 'TYPE') {
                 nType++
                 var name = Utils.cleanupName(thirdWord)
-                allVarsTypes[name] = '../' + anchor + '/' + saveFileName.toLowerCase() + '.md#types'
+                allVarsTypes[name] = '../'  + '/' + saveFileName.toLowerCase() + '.md#types'
                 var t = {}
                 t['alias'] = line.split('=')[1].trim()
                 t['descr'] = generalDesc
@@ -414,7 +414,7 @@ function processLines(element = '', index = 0, lines = []) {
     } else if (line.includes(TYPEDEF)) {
         nType++
         var name = Utils.cleanupName(thirdWord)
-        allVarsTypes[name] = '../' + anchor + '/' + saveFileName.toLowerCase() + '.md#types'
+        allVarsTypes[name] = '../' +  '/' + saveFileName.toLowerCase() + '.md#types'
         typeObj[name] = {}
         typeObj[name]['alias'] = line.split('=')[1].trim()
         typeObj[name]['descr'] = generalDesc
@@ -423,7 +423,7 @@ function processLines(element = '', index = 0, lines = []) {
     else if (line.includes(VARIABLEDEF)) {
         nVariable++
         var name = Utils.cleanupName(thirdWord)
-        allVarsTypes[name] = '../' + anchor + '/' + saveFileName.toLowerCase() + '.md#variables'
+        allVarsTypes[name] = '../' +  '/' + saveFileName.toLowerCase() + '.md#variables'
         variableObj[name] = {}
         variableObj[name]['dataType'] = line.split(':')[1].trim()
         variableObj[name]['dataType'] = variableObj[name]['dataType'].replace('typeof ', '')
