@@ -50,7 +50,9 @@ serviceScope.whenFinished().
 PRIVATE CONSTRUCTOR - DO NOT CALL THIS FROM YOUR OWN CODE.
 
 **Signature:** constructor(parent: ServiceScope)
+
 **Returns**: ServiceScope
+
 
 
 #### Parameters
@@ -89,7 +91,9 @@ and return the registered service instance. If the instance cannot be found, the
 instance will be autocreated and registered with the root ServiceScope.
 
 **Signature:** `consume<T>(serviceKey: ServiceKey<T>): T`
+
 **Returns**: `T`
+
 - the service instance
 
 #### Parameters
@@ -106,7 +110,9 @@ This is a shorthand function that its equivalent to constructing a new instance 
 simpleServiceClass, then registering it by calling ServiceScope.provide().
 
 **Signature:** `createAndProvide<T>(serviceKey: ServiceKey<T>,simpleServiceClass: { new (serviceScope: ServiceScope) }): T`
+
 **Returns**: `T`
+
 - a newly constructed instance of simpleServiceClass
 
 #### Parameters
@@ -124,7 +130,9 @@ This is a shorthand function that constructs the default implementation of the s
 serviceKey, and then registers it by calling ServiceScope.provide().
 
 **Signature:** `createDefaultAndProvide<T>(serviceKey: ServiceKey<T>): T`
+
 **Returns**: `T`
+
 - a service instance that was constructed using ServiceKey.defaultCreator
 
 #### Parameters
@@ -146,7 +154,9 @@ with A2, then a subsequent call to Scope2.consume() might return a different res
 the previous call, which would be very confusing for developers.
 
 **Signature:** `finish(): void`
+
 **Returns**: `void`
+
 
 
 #### Parameters
@@ -158,7 +168,9 @@ None
 Returns the parent of the current ServiceScope,or undefined if this is a root scope.
 
 **Signature:** `getParent(): ServiceScope`
+
 **Returns**: [`ServiceScope`](../sp-client-base/servicescope.md)
+
 - the parent service scope
 
 #### Parameters
@@ -172,7 +184,9 @@ for the current scope. It may only be used when the ServiceScope is in an "unfin
 state, i.e. before finish() has been called.
 
 **Signature:** `provide<T>(serviceKey: ServiceKey<T>,service: T): T`
+
 **Returns**: `T`
+
 - the same object that was passed as the "service" parameter
 
 #### Parameters
@@ -191,7 +205,9 @@ that are not explicitly provided by the child scope, the parent hierarchy will b
 consulted.
 
 **Signature:** `startNewChild(): ServiceScope`
+
 **Returns**: [`ServiceScope`](../sp-client-base/servicescope.md)
+
 - the newly created root ServiceScope
 
 #### Parameters
@@ -204,7 +220,9 @@ Create a new root-level ServiceScope. Only root-level scopes have the ability to
 default implementations of ServiceKeys.
 
 **Signature:** `startNewRoot(): ServiceScope`
+
 **Returns**: [`ServiceScope`](../sp-client-base/servicescope.md)
+
 - the newly created root ServiceScope
 
 #### Parameters
@@ -220,7 +238,9 @@ finished, then the callback will be executed immediately; otherwise, it will be 
 later when the scope is finished.
 
 **Signature:** `whenFinished(callback: () => void): void`
+
 **Returns**: `void`
+
 
 
 #### Parameters

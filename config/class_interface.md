@@ -14,7 +14,9 @@
 %constdesc%
 
 **Signature:** %constsignature%
+
 **Returns**: %constrtype%
+
 %constreturndescr%
 
 #### Parameters

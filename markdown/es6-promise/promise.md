@@ -15,7 +15,9 @@ For consistency and debugging (eg stack traces), obj should be an instanceof Err
 Any errors thrown in the constructor callback will be implicitly passed to reject().
 
 **Signature:** constructor(callback: (resolve: (value?: R | Thenable<R>) => void,reject: (error?: any) => void) => void)
+
 **Returns**: Promise
+
 
 
 #### Parameters
@@ -52,7 +54,9 @@ If an error is thrown in the callback, the returned promise rejects with that er
 
 
 **Signature:** `then<U>(onFulfilled?: (value: R) => U | Thenable<U>,onRejected?: (error: any) => U | Thenable<U>): Promise<U>`
+
 **Returns**: [`Promise<U>`](../es6-promise/promise.md)
+
 
 
 #### Parameters
@@ -69,7 +73,9 @@ If an error is thrown in the callback, the returned promise rejects with that er
 
 
 **Signature:** `then<U>(onFulfilled?: (value: R) => U | Thenable<U>,onRejected?: (error: any) => void): Promise<U>`
+
 **Returns**: [`Promise<U>`](../es6-promise/promise.md)
+
 
 
 #### Parameters
@@ -87,7 +93,9 @@ Sugar for promise.then(undefined,onRejected)
 
 
 **Signature:** `catch<U>(onRejected?: (error: any) => U | Thenable<U>): Promise<U>`
+
 **Returns**: [`Promise<U>`](../es6-promise/promise.md)
+
 
 
 #### Parameters

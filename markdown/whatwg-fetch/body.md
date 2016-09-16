@@ -37,7 +37,9 @@
 
 
 **Signature:** `arrayBuffer(): Promise<ArrayBuffer>`
+
 **Returns**: [`Promise<ArrayBuffer>`](../es6-promise/promise.md)
+
 
 
 #### Parameters
@@ -49,7 +51,9 @@ None
 
 
 **Signature:** `blob(): Promise<Blob>`
+
 **Returns**: [`Promise<Blob>`](../es6-promise/promise.md)
+
 
 
 #### Parameters
@@ -61,7 +65,9 @@ None
 
 
 **Signature:** `formData(): Promise<FormData>`
+
 **Returns**: [`Promise<FormData>`](../es6-promise/promise.md)
+
 
 
 #### Parameters
@@ -73,7 +79,9 @@ None
 
 
 **Signature:** `json(): Promise<any>`
+
 **Returns**: [`Promise<any>`](../es6-promise/promise.md)
+
 
 
 #### Parameters
@@ -85,7 +93,9 @@ None
 
 
 **Signature:** `json<T>(): Promise<T>`
+
 **Returns**: [`Promise<T>`](../es6-promise/promise.md)
+
 
 
 #### Parameters
@@ -97,7 +107,9 @@ None
 
 
 **Signature:** `text(): Promise<string>`
+
 **Returns**: [`Promise<string>`](../es6-promise/promise.md)
+
 
 
 #### Parameters

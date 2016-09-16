@@ -40,7 +40,9 @@
 
 
 **Signature:** `clear(): void`
+
 **Returns**: `void`
+
 
 
 #### Parameters
@@ -52,7 +54,9 @@ None
 
 
 **Signature:** `delete(key: K): boolean`
+
 **Returns**: `boolean`
+
 
 
 #### Parameters
@@ -68,7 +72,9 @@ None
 
 
 **Signature:** `forEach(callbackfn: (value: V,index: K,map: Map<K,V>) => void,thisArg?: any): void`
+
 **Returns**: `void`
+
 
 
 #### Parameters
@@ -85,7 +91,9 @@ None
 
 
 **Signature:** `get(key: K): V`
+
 **Returns**: `V`
+
 
 
 #### Parameters
@@ -101,7 +109,9 @@ None
 
 
 **Signature:** `has(key: K): boolean`
+
 **Returns**: `boolean`
+
 
 
 #### Parameters
@@ -117,7 +127,9 @@ None
 
 
 **Signature:** `set(key: K,value?: V): Map<K,V>`
+
 **Returns**: [`Map<K,V>`](../es6-collections/map.md)
+
 
 
 #### Parameters
@@ -134,7 +146,9 @@ None
 
 
 **Signature:** `entries(): Iterator<[K,V]>`
+
 **Returns**: [`Iterator<[K,V]>`](../es6-collections/iterator.md)
+
 
 
 #### Parameters
@@ -146,7 +160,9 @@ None
 
 
 **Signature:** `keys(): Iterator<K>`
+
 **Returns**: [`Iterator<K>`](../es6-collections/iterator.md)
+
 
 
 #### Parameters
@@ -158,7 +174,9 @@ None
 
 
 **Signature:** `values(): Iterator<V>`
+
 **Returns**: [`Iterator<V>`](../es6-collections/iterator.md)
+
 
 
 #### Parameters

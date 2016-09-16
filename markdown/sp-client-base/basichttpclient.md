@@ -13,7 +13,9 @@ enhancements.
 
 
 **Signature:** constructor(serviceScope: ServiceScope)
+
 **Returns**: BasicHttpClient
+
 
 
 #### Parameters
@@ -54,7 +56,9 @@ are essentially the same as the WHATWG API standard that is documented here:
 https://fetch.spec.whatwg.org/
 
 **Signature:** `fetch(url: string,options: IBasicHttpClientOptions): Promise<Response>`
+
 **Returns**: [`Promise<Response>`](../es6-promise/promise.md)
+
 a promise that will return the result
 
 #### Parameters
@@ -71,7 +75,9 @@ a promise that will return the result
 
 
 **Signature:** `fetchCore(request: Request): Promise<Response>`
+
 **Returns**: [`Promise<Response>`](../es6-promise/promise.md)
+
 
 
 #### Parameters
@@ -87,7 +93,9 @@ a promise that will return the result
 Calls fetch(),but sets the method to 'GET'.
 
 **Signature:** `get(url: string,options?: IBasicHttpClientOptions): Promise<Response>`
+
 **Returns**: [`Promise<Response>`](../es6-promise/promise.md)
+
 a promise that will return the result
 
 #### Parameters
@@ -104,7 +112,9 @@ a promise that will return the result
 Calls fetch(),but sets the method to 'POST'.
 
 **Signature:** `post(url: string,options: IBasicHttpClientOptions): Promise<Response>`
+
 **Returns**: [`Promise<Response>`](../es6-promise/promise.md)
+
 a promise that will return the result
 
 #### Parameters

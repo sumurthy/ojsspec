@@ -32,7 +32,9 @@
 
 
 **Signature:** `append(name: string,value: string): void`
+
 **Returns**: `void`
+
 
 
 #### Parameters
@@ -49,7 +51,9 @@
 
 
 **Signature:** `delete(name: string):void`
+
 **Returns**: `void`
+
 
 
 #### Parameters
@@ -65,7 +69,9 @@
 
 
 **Signature:** `get(name: string): string`
+
 **Returns**: `string`
+
 
 
 #### Parameters
@@ -81,7 +87,9 @@
 
 
 **Signature:** `getAll(name: string): Array<string>`
+
 **Returns**: `Array<string>`
+
 
 
 #### Parameters
@@ -97,7 +105,9 @@
 
 
 **Signature:** `has(name: string): boolean`
+
 **Returns**: `boolean`
+
 
 
 #### Parameters
@@ -113,7 +123,9 @@
 
 
 **Signature:** `set(name: string,value: string): void`
+
 **Returns**: `void`
+
 
 
 #### Parameters
@@ -130,7 +142,9 @@
 
 
 **Signature:** `forEach(callback: (value: string,name: string) => void): void`
+
 **Returns**: `void`
+
 
 
 #### Parameters

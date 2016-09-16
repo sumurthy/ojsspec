@@ -15,7 +15,9 @@ application cache.
 
 
 **Signature:** constructor(serviceScope: ServiceScope)
+
 **Returns**: PageContext
+
 
 
 #### Parameters

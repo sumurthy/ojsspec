@@ -19,7 +19,9 @@ Query param with only equals (www.example.com/?=&debug=on stores empty string ke
 
 
 **Signature:** constructor(url: string)
+
 **Returns**: UrlQueryParameterCollection
+
 
 
 #### Parameters
@@ -56,7 +58,9 @@ getValue('debug') ---> 'false'
 getValue('lost') ---> undefined
 
 **Signature:** `getValue(param: string): string`
+
 **Returns**: `string`
+
 
 
 #### Parameters
@@ -79,7 +83,9 @@ getValues('debug') ---> ['false']
 getValues('lost') ---> undefined
 
 **Signature:** `getValues(param: string): string[]`
+
 **Returns**: `string[]`
+
 
 
 #### Parameters

@@ -30,7 +30,9 @@
 
 
 **Signature:** `delete(key: K): boolean`
+
 **Returns**: `boolean`
+
 
 
 #### Parameters
@@ -46,7 +48,9 @@
 
 
 **Signature:** `clear(): void`
+
 **Returns**: `void`
+
 
 
 #### Parameters
@@ -58,7 +62,9 @@ None
 
 
 **Signature:** `get(key: K): V`
+
 **Returns**: `V`
+
 
 
 #### Parameters
@@ -74,7 +80,9 @@ None
 
 
 **Signature:** `has(key: K): boolean`
+
 **Returns**: `boolean`
+
 
 
 #### Parameters
@@ -90,7 +98,9 @@ None
 
 
 **Signature:** `set(key: K,value?: V): WeakMap<K,V>`
+
 **Returns**: [`WeakMap<K,V>`](../es6-collections/weakmap.md)
+
 
 
 #### Parameters

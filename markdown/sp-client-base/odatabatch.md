@@ -20,7 +20,9 @@ resolve with a Response object for that particular request.
 
 
 **Signature:** constructor(serviceScope: ServiceScope,batchOptions?: IODataBatchOptions)
+
 **Returns**: ODataBatch
+
 
 
 #### Parameters
@@ -53,7 +55,9 @@ resolve with a Response object for that particular request.
 Executes the batched queries that were queued using ODataBatch.fetch().
 
 **Signature:** `execute(): Promise<ODataBatch>`
+
 **Returns**: [`Promise<ODataBatch>`](../es6-promise/promise.md)
+
 
 
 #### Parameters
@@ -78,7 +82,9 @@ explicitly.
 
 
 **Signature:** `fetch(url: string,options?: IODataBatchRequestOptions): Promise<Response>`
+
 **Returns**: [`Promise<Response>`](../es6-promise/promise.md)
+
 a promise that will return the result
 
 #### Parameters
@@ -95,7 +101,9 @@ a promise that will return the result
 Calls fetch(),but sets the method to 'GET'.
 
 **Signature:** `get(url: string,options?: IODataBatchRequestOptions): Promise<Response>`
+
 **Returns**: [`Promise<Response>`](../es6-promise/promise.md)
+
 a promise that will return the result
 
 #### Parameters
@@ -112,7 +120,9 @@ a promise that will return the result
 Calls fetch(),but sets the method to 'POST'.
 
 **Signature:** `post(url: string,options: IODataBatchRequestOptions): Promise<Response>`
+
 **Returns**: [`Promise<Response>`](../es6-promise/promise.md)
+
 a promise that will return the result
 
 #### Parameters

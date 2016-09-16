@@ -11,7 +11,9 @@ _Implements: [`Body`](../whatwg-fetch/body.md)_
 
 
 **Signature:** constructor(input: string|Request,init?:RequestInit)
+
 **Returns**: Request
+
 
 
 #### Parameters

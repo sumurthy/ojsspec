@@ -28,7 +28,9 @@
 
 
 **Signature:** `next(value?: any): IteratorResult<T>`
+
 **Returns**: [`IteratorResult<T>`](../es6-collections/iteratorresult.md)
+
 
 
 #### Parameters
@@ -44,7 +46,9 @@
 
 
 **Signature:** `return?(value?: any): IteratorResult<T>`
+
 **Returns**: [`IteratorResult<T>`](../es6-collections/iteratorresult.md)
+
 
 
 #### Parameters
@@ -60,7 +64,9 @@
 
 
 **Signature:** `throw?(e?: any): IteratorResult<T>`
+
 **Returns**: [`IteratorResult<T>`](../es6-collections/iteratorresult.md)
+
 
 
 #### Parameters

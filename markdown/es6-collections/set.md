@@ -39,7 +39,9 @@
 
 
 **Signature:** `add(value: T): Set<T>`
+
 **Returns**: [`Set<T>`](../es6-collections/set.md)
+
 
 
 #### Parameters
@@ -55,7 +57,9 @@
 
 
 **Signature:** `clear(): void`
+
 **Returns**: `void`
+
 
 
 #### Parameters
@@ -67,7 +71,9 @@ None
 
 
 **Signature:** `delete(value: T): boolean`
+
 **Returns**: `boolean`
+
 
 
 #### Parameters
@@ -83,7 +89,9 @@ None
 
 
 **Signature:** `forEach(callbackfn: (value: T,index: T,set: Set<T>) => void,thisArg?: any): void`
+
 **Returns**: `void`
+
 
 
 #### Parameters
@@ -100,7 +108,9 @@ None
 
 
 **Signature:** `has(value: T): boolean`
+
 **Returns**: `boolean`
+
 
 
 #### Parameters
@@ -116,7 +126,9 @@ None
 
 
 **Signature:** `entries(): Iterator<[T,T]>`
+
 **Returns**: [`Iterator<[T,T]>`](../es6-collections/iterator.md)
+
 
 
 #### Parameters
@@ -128,7 +140,9 @@ None
 
 
 **Signature:** `keys(): Iterator<T>`
+
 **Returns**: [`Iterator<T>`](../es6-collections/iterator.md)
+
 
 
 #### Parameters
@@ -140,7 +154,9 @@ None
 
 
 **Signature:** `values(): Iterator<T>`
+
 **Returns**: [`Iterator<T>`](../es6-collections/iterator.md)
+
 
 
 #### Parameters

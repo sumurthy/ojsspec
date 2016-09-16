@@ -31,7 +31,9 @@ that might impact performance.
 Throws an exception if the specified string is null,undefined,or an empty string.
 
 **Signature:** `isNonemptyString(value: string,variableName: string): void`
+
 **Returns**: `void`
+
 
 
 #### Parameters
@@ -48,7 +50,9 @@ Throws an exception if the specified string is null,undefined,or an empty string
 Throws an exception if the specified value is null or undefined.
 
 **Signature:** `isNotNullOrUndefined(value: any,variableName: string): void`
+
 **Returns**: `void`
+
 
 
 #### Parameters
@@ -65,7 +69,9 @@ Throws an exception if the specified value is null or undefined.
 Throws an exception if the specified value is not true.
 
 **Signature:** `isTrue(value: boolean,variableName: string): void`
+
 **Returns**: `void`
+
 
 
 #### Parameters

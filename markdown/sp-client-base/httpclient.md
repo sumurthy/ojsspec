@@ -16,7 +16,9 @@ class instead.
 
 
 **Signature:** constructor(serviceScope: ServiceScope)
+
 **Returns**: HttpClient
+
 
 
 #### Parameters
@@ -50,7 +52,9 @@ Begins an ODATA batch,which allows multiple REST queries to be bundled into
 a single web request.
 
 **Signature:** `beginBatch(batchOptions?: IODataBatchOptions): ODataBatch`
+
 **Returns**: [`ODataBatch`](../sp-client-base/odatabatch.md)
+
 
 
 #### Parameters
@@ -84,7 +88,9 @@ to specify it explicitly.
 
 
 **Signature:** `fetch(url: string,options: IHttpClientOptions): Promise<Response>`
+
 **Returns**: [`Promise<Response>`](../es6-promise/promise.md)
+
 a promise that will return the result
 
 #### Parameters
@@ -101,7 +107,9 @@ a promise that will return the result
 Calls fetch(),but sets the method to 'GET'.
 
 **Signature:** `get(url: string,options?: IHttpClientOptions): Promise<Response>`
+
 **Returns**: [`Promise<Response>`](../es6-promise/promise.md)
+
 a promise that will return the result
 
 #### Parameters
@@ -125,7 +133,9 @@ is "http://example.com/_layouts/service", the returned URL would be
 "http://example.com".
 
 **Signature:** `getWebUrlFromRequestUrl(requestUrl: string): string`
+
 **Returns**: `string`
+
 the inferred SPWeb URL
 
 #### Parameters
@@ -141,7 +151,9 @@ the inferred SPWeb URL
 Calls fetch(),but sets the method to 'POST'.
 
 **Signature:** `post(url: string,options: IHttpClientOptions): Promise<Response>`
+
 **Returns**: [`Promise<Response>`](../es6-promise/promise.md)
+
 a promise that will return the result
 
 #### Parameters

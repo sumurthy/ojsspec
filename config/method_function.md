@@ -3,7 +3,9 @@
 %memberdescription%
 
 **Signature:** %apisignature%
+
 **Returns**: %returntype%
+
 %returndescr%
 
 #### Parameters
