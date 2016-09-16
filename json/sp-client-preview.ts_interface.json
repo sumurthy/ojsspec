@@ -11,7 +11,7 @@
         "signature": "clearError(domElement: HTMLElement): void",
         "isStatic": false,
         "isOptional": false,
-        "descr": "",
+        "descr": "Clear the webpart error message.",
         "genericType": null,
         "returnType": "void",
         "returnDescr": "",
@@ -29,7 +29,7 @@
         "signature": "clearLoadingIndicator(domElement: Element): void",
         "isStatic": false,
         "isOptional": false,
-        "descr": "",
+        "descr": "Clear the loading indicator.",
         "genericType": null,
         "returnType": "void",
         "returnDescr": "",
@@ -47,7 +47,7 @@
         "signature": "displayLoadingIndicator(domElement: Element,loadingMessage: string): void",
         "isStatic": false,
         "isOptional": false,
-        "descr": "",
+        "descr": "Display a loading spinner.",
         "genericType": null,
         "returnType": "void",
         "returnDescr": "",
@@ -71,7 +71,7 @@
         "signature": "renderError(domElement: HTMLElement,error: Error | string): void",
         "isStatic": false,
         "isOptional": false,
-        "descr": "",
+        "descr": "Render the provided error message in the webpart container div.",
         "genericType": null,
         "returnType": "void",
         "returnDescr": "",
@@ -91,6 +91,7 @@
         ]
       }
     },
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -103,6 +104,7 @@
     "properties": {},
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -122,7 +124,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Represents an OData SP.List object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+        "descr": ""
       },
       "Created": {
         "dataType": "string",
@@ -144,7 +146,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Example: \"/Date(1453294804000)/\""
+        "descr": ""
       },
       "Description": {
         "dataType": "string",
@@ -155,7 +157,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Example: \"/Date(1453294804000)/\""
+        "descr": ""
       },
       "EntityTypeName": {
         "dataType": "string",
@@ -177,7 +179,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Example: \"MyListTitleList\""
+        "descr": ""
       },
       "Id": {
         "dataType": "string",
@@ -259,6 +261,7 @@
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -278,7 +281,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Example: { StrinValue: \"0x010100C5...\" }"
+        "descr": ""
       },
       "Title": {
         "dataType": "string",
@@ -289,7 +292,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Example: { StrinValue: \"0x010100C5...\" }"
+        "descr": ""
       },
       "UniqueId": {
         "dataType": "string",
@@ -305,6 +308,7 @@
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -335,7 +339,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Example: \"someone@example.com\""
+        "descr": ""
       },
       "IsSiteAdmin": {
         "dataType": "boolean",
@@ -346,7 +350,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Example: \"someone@example.com\""
+        "descr": ""
       },
       "LoginName": {
         "dataType": "string",
@@ -368,7 +372,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Example: \"i:0#.w|domain\\user\""
+        "descr": ""
       },
       "Title": {
         "dataType": "string",
@@ -390,11 +394,12 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Example: \"DOMAIN\\user\""
+        "descr": ""
       }
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -430,6 +435,7 @@
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -449,7 +455,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "Detailed description of the button for the benefit of screen readers. \n \nBesides the compound button, other button types will need more information provided to screen reader."
       },
       "ariaLabel": {
         "dataType": "string",
@@ -460,7 +466,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "The aria label of the button for the benefit of screen readers."
       },
       "buttonType": {
         "dataType": "PropertyPaneButtonType",
@@ -471,7 +477,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "The type of button to render."
       },
       "description": {
         "dataType": "string",
@@ -482,7 +488,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "Description of the action this button takes. \nOnly used for compound buttons."
       },
       "disabled": {
         "dataType": "boolean",
@@ -493,7 +499,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "Whether the button is disabled."
       },
       "icon": {
         "dataType": "string",
@@ -504,7 +510,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "The button icon shown in command or hero type."
       },
       "onClick": {
         "dataType": "function",
@@ -515,7 +521,7 @@
         "function": "(value: any)",
         "returnType": "any",
         "assignValue": null,
-        "descr": ""
+        "descr": "A callback which is invoked on the button click,which takes in the existing value for the bound property \nand returns the new value and which is then used to update the properties bag. This update will result in \nthe re-render of the PropertyPane with the new props. \n"
       },
       "text": {
         "dataType": "string",
@@ -526,11 +532,12 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "Display text of the element."
       }
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -550,7 +557,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "Whether the checkbox is checked or not."
       },
       "isEnabled": {
         "dataType": "boolean",
@@ -561,7 +568,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "Whether the checkbox is enabled or not."
       },
       "text": {
         "dataType": "string",
@@ -572,11 +579,12 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "Label to display next to the checkbox."
       }
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -618,7 +626,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Whether the options is checked or not."
+        "descr": "Whether the option is disabled or not."
       },
       "key": {
         "dataType": "string | number",
@@ -629,7 +637,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Whether the options is checked or not."
+        "descr": "A required key to uniquely identify the option."
       },
       "selectedImageSrc": {
         "dataType": "string",
@@ -640,7 +648,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Whether the options is checked or not."
+        "descr": "The src of image for choice field which is selected."
       },
       "text": {
         "dataType": "string",
@@ -651,11 +659,12 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Whether the options is checked or not."
+        "descr": "The text string for the option."
       }
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -675,7 +684,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "Descriptive label for the choice group."
       },
       "options": {
         "dataType": "IPropertyPaneChoiceGroupOption[]",
@@ -686,11 +695,12 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "The options for the choice group."
       }
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -710,7 +720,7 @@
         "function": "(elem: HTMLElement)",
         "returnType": "void",
         "assignValue": null,
-        "descr": ""
+        "descr": "Event callback for onDispose."
       },
       "onRender": {
         "dataType": "function",
@@ -721,11 +731,12 @@
         "function": "(elem: HTMLElement)",
         "returnType": "void",
         "assignValue": null,
-        "descr": ""
+        "descr": "onRender will be called once the custom field mounted to the host element."
       }
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -827,6 +838,7 @@
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -884,6 +896,7 @@
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -903,7 +916,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "Whether or not the Dropdown is disabled."
       },
       "label": {
         "dataType": "string",
@@ -914,7 +927,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "Descriptive label for the Dropdown."
       },
       "options": {
         "dataType": "IPropertyPaneDropdownOption[]",
@@ -925,7 +938,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "Collection of options for this Dropdown."
       },
       "selectedKey": {
         "dataType": "string | number",
@@ -936,11 +949,12 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "The key of the initially selected option."
       }
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -960,7 +974,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "Strongly typed properties object. Specific to each field type. \nExample: Checkbox has ICheckboxProps, TextField has ITextField props. \n \n"
       },
       "targetProperty": {
         "dataType": "string",
@@ -971,7 +985,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "Target property from the web part's property bag."
       },
       "type": {
         "dataType": "IPropertyPaneFieldType",
@@ -982,11 +996,12 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "Type of the PropertyPane field."
       }
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -1022,6 +1037,7 @@
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -1041,7 +1057,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "Whether the associated form field is required or not. \nIf true, a red asterisk is displayed to the right of the label."
       },
       "text": {
         "dataType": "string",
@@ -1052,11 +1068,12 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "Display text fot the label."
       }
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -1076,7 +1093,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "Location to which the link is targetted to."
       },
       "popupWindowProps": {
         "dataType": "IPopupWindowProps",
@@ -1087,7 +1104,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "The props of pop up window."
       },
       "target": {
         "dataType": "string",
@@ -1098,7 +1115,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "This attribute specifies where to display the linked resource. \nFollowing values can be used: \n_self - (default) Load the response in the current page. \n_blank - Load the response into a new unnamed tab. \n_parent - Load the response in the parent of the current page. \nIf no parent exists, then this option behaves same as '_self' \n_top - Load the response into the original window."
       },
       "text": {
         "dataType": "string",
@@ -1109,11 +1126,12 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "Display text for the link."
       }
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -1160,6 +1178,7 @@
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -1195,6 +1214,7 @@
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -1230,6 +1250,7 @@
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -1249,7 +1270,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "A description of the Slider for the benefit of screen readers."
       },
       "disabled": {
         "dataType": "boolean",
@@ -1260,7 +1281,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "Whether or not the Slider is disabled."
       },
       "label": {
         "dataType": "string",
@@ -1271,7 +1292,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "Description label of the Slider."
       },
       "max": {
         "dataType": "number",
@@ -1282,7 +1303,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "The max value of the Slider."
       },
       "min": {
         "dataType": "number",
@@ -1293,7 +1314,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "The min value of the Slider."
       },
       "showValue": {
         "dataType": "boolean",
@@ -1304,7 +1325,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "Whether to show the value on the right of the Slider. \nIf you want to show the value by yourself, you may want to set this value to false."
       },
       "step": {
         "dataType": "number",
@@ -1315,7 +1336,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "The difference between the two adjacent values of the Slider."
       },
       "value": {
         "dataType": "number",
@@ -1326,11 +1347,12 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "The initial value of the Slider. Use this if you intend to pass in a new value as a result of onChange events. \n"
       }
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -1350,7 +1372,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "Aria Label for textfield,if any."
       },
       "deferredValidationTime": {
         "dataType": "number",
@@ -1361,7 +1383,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "Text field will start to validate after users stop typing for `deferredValidationTime` milliseconds."
       },
       "description": {
         "dataType": "string",
@@ -1372,7 +1394,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "The textfield input description."
       },
       "errorMessage": {
         "dataType": "string",
@@ -1383,7 +1405,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "Default value of the textfield,if any."
       },
       "label": {
         "dataType": "string",
@@ -1394,7 +1416,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "Label for the textfield."
       },
       "multiline": {
         "dataType": "boolean",
@@ -1405,7 +1427,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "Whether or not the textfield is a multiline textfield."
       },
       "onGetErrorMessage": {
         "dataType": "function",
@@ -1416,7 +1438,7 @@
         "function": "(value: string)",
         "returnType": "string | Promise<string>",
         "assignValue": null,
-        "descr": ""
+        "descr": "The method is used to get the validation error message and determine whether the input value is valid or not. \n \nWhen it returns string: \n- If valid, it returns empty string. \n- If invalid, it returns the error message string and the text field will \nshow a red border and show an error message below the text field. \n \nWhen it returns Promise<string>: \n- The resolved value is display as error message. \n- The rejected, the value is thrown away. \n"
       },
       "placeholder": {
         "dataType": "string",
@@ -1427,7 +1449,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "placeholder text to be displayed in the Textfield."
       },
       "resizable": {
         "dataType": "boolean",
@@ -1438,7 +1460,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "Whether or not the multiline textfield is resizable."
       },
       "underlined": {
         "dataType": "boolean",
@@ -1449,7 +1471,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "Whether or not the textfield is underlined."
       },
       "value": {
         "dataType": "string",
@@ -1460,11 +1482,12 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "Current value of the textfield. Only provide this if the textfield is a controlled component where you \nare maintaining its current state."
       }
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -1484,7 +1507,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "Checked state of the toggle. \nIf you are maintaining state yourself, use this property."
       },
       "disabled": {
         "dataType": "boolean",
@@ -1495,7 +1518,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "Optional disabled flag."
       },
       "key": {
         "dataType": "string | number",
@@ -1506,7 +1529,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "A key to uniquely identify the field."
       },
       "label": {
         "dataType": "string",
@@ -1517,7 +1540,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "A label for the toggle."
       },
       "offText": {
         "dataType": "string",
@@ -1528,7 +1551,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "Test display when toggle is OFF."
       },
       "onText": {
         "dataType": "string",
@@ -1539,11 +1562,12 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "Text to display when toggle is ON."
       }
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -1556,6 +1580,7 @@
     "properties": {},
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -1701,6 +1726,7 @@
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -1720,7 +1746,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "Definition: HTML markup equivalent for searchable properties and properties that need link fixup. \nformat: pseudo HTML \nmandatory: no. \ntype: string \nsupported values: a string containing pseudo HTML. \nexample: \"<div>searchable_property_value</div><link href='http://contoso.com/path_of_link.aspx' />\" \nexperimental: no"
       },
       "id": {
         "dataType": "string",
@@ -1731,7 +1757,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "Definition: universally unique webpart Type id. \nUsage: uniquely identify a webpart. \nRequired: yes \nType: GUID \nSupported values: any GUID \nExample: \"dbef608d-3ad5-4f8f-b139-d916f2f0a294\""
       },
       "instanceId": {
         "dataType": "string",
@@ -1742,7 +1768,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "Definition: universally unique instance id of the webpart. A web part can have multiple instances on a page. \nThis id is expected to be universally unique accross time and page boundaries. \nhow used: used by the framework to uniquely identify an instance of a webpart. \nmandatory: yes. \ntype: string \nsupported values: a unique string. Could be GUID or other uniquely identifiable formats. \nexample: [\"dbef608d-3ad5-4f8f-b139-d916f2f0a294\"] \nexperimental: yes"
       },
       "properties": {
         "dataType": "any",
@@ -1753,7 +1779,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "Definition: webpart specific properties. The individual webpart owns the definition of these properties. \nhow used: used by the webpart to manage its internal metadata and config data. The framework code never \ntouches these properties. \nmandatory: yes. \ntype: string \nsupported values: any JSON stringifiable object hierarchy. \nexample: { 'value': 'text value' }"
       },
       "title": {
         "dataType": "string",
@@ -1764,7 +1790,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "Definition: webpart title. \nUsage: display the name of the webpart in the toolbox, webpart gallery and the page. \nRequired: yes \nType: string \nSupported values: string less than 100 characters \nExample: \"Text\""
       },
       "version": {
         "dataType": "string",
@@ -1775,11 +1801,12 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": ""
+        "descr": "Definition: webpart version. \nUsage: versioning and evolving a webpart safely. \nRequired: yes \nType: string representing a semantic version (http://semver.org) \nSupported values: MAJOR.MINOR.PATCH \nExample: \"1.0.0\""
       }
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -1810,7 +1837,7 @@
         "function": "(instanceId: string,data?: any)",
         "returnType": "void",
         "assignValue": null,
-        "descr": "ServiceScope provides a formalized way for components to register and consume dependencies \n(\"services\"), and to enable different implementations to be registered in different scopes. \nThis improves modularity by decoupling components from their dependencies in an extensible way. \nserviceScope: ServiceScope;"
+        "descr": ""
       },
       "webPartConfigurationEventCallback": {
         "dataType": "IWebPartConfigurationEventCallback",
@@ -1826,6 +1853,7 @@
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},

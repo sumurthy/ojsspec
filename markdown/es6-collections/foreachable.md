@@ -10,6 +10,8 @@
 
 
 
+
+
 ## Methods
 
 | Method	   |  Returns	| Description|
@@ -23,11 +25,8 @@
 
 
 
-#### Signature
-`forEach(callbackfn: (value: T) => void): void`
-
-#### Returns
-`void`
+**Signature:** `forEach(callbackfn: (value: T) => void): void`
+**Returns**: `void`
 
 
 #### Parameters

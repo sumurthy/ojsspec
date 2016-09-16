@@ -8,6 +8,24 @@
 %resourcedescription%
 
 </classheader>
+
+<constructor>
+## Constructor
+%constdesc%
+
+**Signature:** %constsignature%
+**Returns**: %constrtype%
+%constreturndescr%
+
+#### Parameters
+%cnoparam%
+
+| Parameter	   | Type    | Description |
+|:-------------|:---------------|:------------|
+>| `%name%`    | %dtype% | %optional% %description% |
+
+</constructor>
+
 <property>
 ## Properties
 

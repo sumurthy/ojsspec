@@ -2,11 +2,8 @@
 
 Combines any number of URL paths.
 
-#### Signature
-`combineURLPaths(...url: string[]): string`
-
-#### Returns
-`string`
+**Signature:** `combineURLPaths(...url: string[]): string`
+**Returns**: `string`
 
 
 #### Parameters

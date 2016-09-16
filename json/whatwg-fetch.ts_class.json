@@ -94,31 +94,30 @@
       }
     },
     "functions": {},
-    "methods": {
-      "constructor-sSc49": {
-        "accessModifier": "public",
-        "signature": "constructor(input: string|Request,init?:RequestInit)",
-        "isStatic": false,
-        "isOptional": false,
-        "descr": "",
-        "genericType": null,
-        "returnType": "Request",
-        "returnDescr": "",
-        "params": [
-          {
-            "name": "input",
-            "dataType": "string|Request",
-            "isOptional": false,
-            "descr": ""
-          },
-          {
-            "name": "init",
-            "dataType": "RequestInit",
-            "isOptional": true,
-            "descr": ""
-          }
-        ]
-      }
+    "methods": {},
+    "constructor": {
+      "accessModifier": "public",
+      "signature": "constructor(input: string|Request,init?:RequestInit)",
+      "isStatic": false,
+      "isOptional": false,
+      "descr": "",
+      "genericType": null,
+      "returnType": "Request",
+      "returnDescr": "",
+      "params": [
+        {
+          "name": "input",
+          "dataType": "string|Request",
+          "isOptional": false,
+          "descr": ""
+        },
+        {
+          "name": "init",
+          "dataType": "RequestInit",
+          "isOptional": true,
+          "descr": ""
+        }
+      ]
     },
     "types": {},
     "variables": {},
@@ -271,6 +270,7 @@
         ]
       }
     },
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -362,6 +362,7 @@
         "params": []
       }
     },
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -441,30 +442,6 @@
     },
     "functions": {},
     "methods": {
-      "constructor-OYk89": {
-        "accessModifier": "public",
-        "signature": "constructor(body?: BodyInit,init?: ResponseInit)",
-        "isStatic": false,
-        "isOptional": false,
-        "descr": "",
-        "genericType": null,
-        "returnType": "Response",
-        "returnDescr": "",
-        "params": [
-          {
-            "name": "body",
-            "dataType": "BodyInit",
-            "isOptional": true,
-            "descr": ""
-          },
-          {
-            "name": "init",
-            "dataType": "ResponseInit",
-            "isOptional": true,
-            "descr": ""
-          }
-        ]
-      },
       "error-s60I9": {
         "accessModifier": "public",
         "signature": "error(): Response",
@@ -511,6 +488,30 @@
         "returnDescr": "",
         "params": []
       }
+    },
+    "constructor": {
+      "accessModifier": "public",
+      "signature": "constructor(body?: BodyInit,init?: ResponseInit)",
+      "isStatic": false,
+      "isOptional": false,
+      "descr": "",
+      "genericType": null,
+      "returnType": "Response",
+      "returnDescr": "",
+      "params": [
+        {
+          "name": "body",
+          "dataType": "BodyInit",
+          "isOptional": true,
+          "descr": ""
+        },
+        {
+          "name": "init",
+          "dataType": "ResponseInit",
+          "isOptional": true,
+          "descr": ""
+        }
+      ]
     },
     "types": {},
     "variables": {},

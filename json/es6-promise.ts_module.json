@@ -79,6 +79,7 @@
         ]
       }
     },
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -91,6 +92,7 @@
     "properties": {},
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {
       "foo": {

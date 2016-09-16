@@ -6,6 +6,23 @@ _Implements: [`Body`](../whatwg-fetch/body.md)_
 
 
 
+
+## Constructor
+
+
+**Signature:** constructor(body?: BodyInit,init?: ResponseInit)
+**Returns**: Response
+
+
+#### Parameters
+
+
+| Parameter	   | Type    | Description |
+|:-------------|:---------------|:------------|
+| `body`    | [`BodyInit`](../whatwg-fetch/whatwg-fetch-module.md#types) | _Optional._ |
+| `init`    | [`ResponseInit`](../whatwg-fetch/responseinit.md) | _Optional._ |
+
+
 ## Properties
 
 | Property	   | Access Modifier | Type	| Description|
@@ -24,7 +41,6 @@ _Implements: [`Body`](../whatwg-fetch/body.md)_
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`constructor`](#constructor)     | `public` | [`Response`](../whatwg-fetch/response.md) |  |
 |[`error`](#error)     | `public` | [`Response`](../whatwg-fetch/response.md) |  |
 |[`redirect`](#redirect)     | `public` | [`Response`](../whatwg-fetch/response.md) |  |
 |[`clone`](#clone)     | `public` | [`Response`](../whatwg-fetch/response.md) |  |
@@ -33,35 +49,12 @@ _Implements: [`Body`](../whatwg-fetch/body.md)_
 
 
 
-### constructor
-
-
-
-#### Signature
-`constructor(body?: BodyInit,init?: ResponseInit)`
-
-#### Returns
-[`Response`](../whatwg-fetch/response.md)
-
-
-#### Parameters
-
-
-| Parameter	   | Type    | Description |
-|:-------------|:---------------|:------------|
-| `body`    | [`BodyInit`](../whatwg-fetch/whatwg-fetch-module.md#types) | _Optional._ |
-| `init`    | [`ResponseInit`](../whatwg-fetch/responseinit.md) | _Optional._ |
-
-
 ### error
 
 
 
-#### Signature
-`error(): Response`
-
-#### Returns
-[`Response`](../whatwg-fetch/response.md)
+**Signature:** `error(): Response`
+**Returns**: [`Response`](../whatwg-fetch/response.md)
 
 
 #### Parameters
@@ -72,11 +65,8 @@ None
 
 
 
-#### Signature
-`redirect(url: string,status: number): Response`
-
-#### Returns
-[`Response`](../whatwg-fetch/response.md)
+**Signature:** `redirect(url: string,status: number): Response`
+**Returns**: [`Response`](../whatwg-fetch/response.md)
 
 
 #### Parameters
@@ -92,11 +82,8 @@ None
 
 
 
-#### Signature
-`clone(): Response`
-
-#### Returns
-[`Response`](../whatwg-fetch/response.md)
+**Signature:** `clone(): Response`
+**Returns**: [`Response`](../whatwg-fetch/response.md)
 
 
 #### Parameters

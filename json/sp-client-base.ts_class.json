@@ -13,35 +13,17 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "BasicHttpClient implements a basic set of features for performing REST operations. \nThe subclass HttpClient extends this basic functionality with SharePoint-specific \nenhancements."
+        "descr": ""
       }
     },
     "functions": {},
     "methods": {
-      "constructor-8mp89": {
-        "accessModifier": "public",
-        "signature": "constructor(serviceScope: ServiceScope)",
-        "isStatic": false,
-        "isOptional": false,
-        "descr": "BasicHttpClient implements a basic set of features for performing REST operations. \nThe subclass HttpClient extends this basic functionality with SharePoint-specific \nenhancements.",
-        "genericType": null,
-        "returnType": "BasicHttpClient",
-        "returnDescr": "",
-        "params": [
-          {
-            "name": "serviceScope",
-            "dataType": "ServiceScope",
-            "isOptional": false,
-            "descr": ""
-          }
-        ]
-      },
       "fetch-zVBA9": {
         "accessModifier": "public",
         "signature": "fetch(url: string,options: IBasicHttpClientOptions): Promise<Response>",
         "isStatic": false,
         "isOptional": false,
-        "descr": "BasicHttpClient implements a basic set of features for performing REST operations. \nThe subclass HttpClient extends this basic functionality with SharePoint-specific \nenhancements.",
+        "descr": "Performs a REST service call. Although the HttpClient subclass adds \nadditional enhancements, the parameters and semantics for BasicHttpClient.fetch() \nare essentially the same as the WHATWG API standard that is documented here: \nhttps://fetch.spec.whatwg.org/",
         "genericType": null,
         "returnType": "Promise<Response>",
         "returnDescr": "a promise that will return the result",
@@ -65,10 +47,10 @@
         "signature": "fetchCore(request: Request): Promise<Response>",
         "isStatic": false,
         "isOptional": false,
-        "descr": "BasicHttpClient implements a basic set of features for performing REST operations. \nThe subclass HttpClient extends this basic functionality with SharePoint-specific \nenhancements.",
+        "descr": "",
         "genericType": null,
         "returnType": "Promise<Response>",
-        "returnDescr": "a promise that will return the result",
+        "returnDescr": "",
         "params": [
           {
             "name": "request",
@@ -83,7 +65,7 @@
         "signature": "get(url: string,options?: IBasicHttpClientOptions): Promise<Response>",
         "isStatic": false,
         "isOptional": false,
-        "descr": "BasicHttpClient implements a basic set of features for performing REST operations. \nThe subclass HttpClient extends this basic functionality with SharePoint-specific \nenhancements.",
+        "descr": "Calls fetch(),but sets the method to 'GET'.",
         "genericType": null,
         "returnType": "Promise<Response>",
         "returnDescr": "a promise that will return the result",
@@ -107,7 +89,7 @@
         "signature": "post(url: string,options: IBasicHttpClientOptions): Promise<Response>",
         "isStatic": false,
         "isOptional": false,
-        "descr": "BasicHttpClient implements a basic set of features for performing REST operations. \nThe subclass HttpClient extends this basic functionality with SharePoint-specific \nenhancements.",
+        "descr": "Calls fetch(),but sets the method to 'POST'.",
         "genericType": null,
         "returnType": "Promise<Response>",
         "returnDescr": "a promise that will return the result",
@@ -127,6 +109,24 @@
         ]
       }
     },
+    "constructor": {
+      "accessModifier": "public",
+      "signature": "constructor(serviceScope: ServiceScope)",
+      "isStatic": false,
+      "isOptional": false,
+      "descr": "",
+      "genericType": null,
+      "returnType": "BasicHttpClient",
+      "returnDescr": "",
+      "params": [
+        {
+          "name": "serviceScope",
+          "dataType": "ServiceScope",
+          "isOptional": false,
+          "descr": ""
+        }
+      ]
+    },
     "types": {},
     "variables": {},
     "modules": {},
@@ -144,7 +144,7 @@
         "signature": "shallowCompare(objA: Object,objB: Object): boolean",
         "isStatic": true,
         "isOptional": false,
-        "descr": "",
+        "descr": "Performs shallow comparison between two objects to determine if they are equal. This method compares \nonly object types. \n",
         "genericType": null,
         "returnType": "boolean",
         "returnDescr": "",
@@ -164,6 +164,7 @@
         ]
       }
     },
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -183,7 +184,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class is primarily used with the PageContext class. It provides culture info \nfor the current user of the application."
+        "descr": "This string determines the language default format for dates,times,numbers,currency values, \nthe sorting order of text, casing conventions, and string comparisons. This property may have \nan empty string, but will never be undefined. \nExample: If the currentCultureName is \"en-au\" then the application could use this information \nto display the date as 1/8 instead of 8/1."
       },
       "currentUICultureName": {
         "dataType": "string",
@@ -194,11 +195,12 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class is primarily used with the PageContext class. It provides culture info \nfor the current user of the application."
+        "descr": "This string determines the default user interface language. This used for localization and \ntranslation of text. This property may have an empty string, but will never be undefined. \nExample: If the currentUICultureName is \"es-mx\", then the application could use this \ninformation to translate the word \"hello\" to \"hola\"."
       }
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -218,11 +220,12 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class contains contextual information about the enviroment that is hosting the framework and \nits components."
+        "descr": "An enum that describes which type of enviroment the framework is running in."
       }
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -240,7 +243,7 @@
         "signature": "equals(guid: Guid): boolean",
         "isStatic": false,
         "isOptional": false,
-        "descr": "This class represents a globally unique identifier,as described by \nIETF RFC 4122. The input string is normalized and validated by the class \nconstructor, which provides important guarantees that simplify other code \nthat works with the GUID. This class also provides basic functionality \nfor generating a pseudo-random GUID (\"version 4\" UUID from the RFC); \nhowever, be aware that the uniqueness depends on the browser's \nMath.random() function and may be not be suitable for some applications. \n",
+        "descr": "Compare this instance to another Guid instance \n",
         "genericType": null,
         "returnType": "boolean",
         "returnDescr": "A value indicating whether this instance and the specified Guid object \nrepresent the same value",
@@ -258,7 +261,7 @@
         "signature": "isValid(guid: string): boolean",
         "isStatic": true,
         "isOptional": false,
-        "descr": "This class represents a globally unique identifier,as described by \nIETF RFC 4122. The input string is normalized and validated by the class \nconstructor, which provides important guarantees that simplify other code \nthat works with the GUID. This class also provides basic functionality \nfor generating a pseudo-random GUID (\"version 4\" UUID from the RFC); \nhowever, be aware that the uniqueness depends on the browser's \nMath.random() function and may be not be suitable for some applications. \n",
+        "descr": "Indicates whether a guid is valid (according to RFC4122). \n",
         "genericType": null,
         "returnType": "boolean",
         "returnDescr": "Value indicating whether the guid is valid.",
@@ -276,7 +279,7 @@
         "signature": "newGuid(randomProvider?: IRandomProvider): Guid",
         "isStatic": true,
         "isOptional": false,
-        "descr": "This class represents a globally unique identifier,as described by \nIETF RFC 4122. The input string is normalized and validated by the class \nconstructor, which provides important guarantees that simplify other code \nthat works with the GUID. This class also provides basic functionality \nfor generating a pseudo-random GUID (\"version 4\" UUID from the RFC); \nhowever, be aware that the uniqueness depends on the browser's \nMath.random() function and may be not be suitable for some applications. \n",
+        "descr": "Returns a new Guid instance with a pseudo-randomly generated Guid. \n",
         "genericType": null,
         "returnType": "Guid",
         "returnDescr": "A new valid unique Guid object",
@@ -294,7 +297,7 @@
         "signature": "toString(): string",
         "isStatic": false,
         "isOptional": false,
-        "descr": "This class represents a globally unique identifier,as described by \nIETF RFC 4122. The input string is normalized and validated by the class \nconstructor, which provides important guarantees that simplify other code \nthat works with the GUID. This class also provides basic functionality \nfor generating a pseudo-random GUID (\"version 4\" UUID from the RFC); \nhowever, be aware that the uniqueness depends on the browser's \nMath.random() function and may be not be suitable for some applications. \n",
+        "descr": "Object.prototype.toString override \n",
         "genericType": null,
         "returnType": "string",
         "returnDescr": "The GUID value in lowercase hexadecimal without braces. \nExample: 'd5369f3b-bd7a-412a-9c0f-7f0650bb5489'",
@@ -305,7 +308,7 @@
         "signature": "tryParse(guid: string): Guid",
         "isStatic": true,
         "isOptional": false,
-        "descr": "This class represents a globally unique identifier,as described by \nIETF RFC 4122. The input string is normalized and validated by the class \nconstructor, which provides important guarantees that simplify other code \nthat works with the GUID. This class also provides basic functionality \nfor generating a pseudo-random GUID (\"version 4\" UUID from the RFC); \nhowever, be aware that the uniqueness depends on the browser's \nMath.random() function and may be not be suitable for some applications. \n",
+        "descr": "Trys to construct a new Guid instance using guid string. The guid argument \nis normalized and validated. If the argument is not a valid \"version 4\" UUID from \nRFC 4122, tryParse will return undefined. \n",
         "genericType": null,
         "returnType": "Guid",
         "returnDescr": "If the guid argument was valid,a new Guid instance. Otherwise,undefined.",
@@ -319,6 +322,7 @@
         ]
       }
     },
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -331,30 +335,12 @@
     "properties": {},
     "functions": {},
     "methods": {
-      "constructor-8mp89": {
-        "accessModifier": "public",
-        "signature": "constructor(serviceScope: ServiceScope)",
-        "isStatic": false,
-        "isOptional": false,
-        "descr": "HttpClient is used to perform REST calls against SharePoint. It adds default \nheaders, manages the digest needed for writes, and collects telemetry that \nhelps the service to monitor the performance of an application. \n \nFor communicating with non-SharePoint services, use the BasicHttpClient \nclass instead.",
-        "genericType": null,
-        "returnType": "HttpClient",
-        "returnDescr": "",
-        "params": [
-          {
-            "name": "serviceScope",
-            "dataType": "ServiceScope",
-            "isOptional": false,
-            "descr": ""
-          }
-        ]
-      },
       "beginBatch-Qdz89": {
         "accessModifier": "public",
         "signature": "beginBatch(batchOptions?: IODataBatchOptions): ODataBatch",
         "isStatic": false,
         "isOptional": false,
-        "descr": "HttpClient is used to perform REST calls against SharePoint. It adds default \nheaders, manages the digest needed for writes, and collects telemetry that \nhelps the service to monitor the performance of an application. \n \nFor communicating with non-SharePoint services, use the BasicHttpClient \nclass instead.",
+        "descr": "Begins an ODATA batch,which allows multiple REST queries to be bundled into \na single web request.",
         "genericType": null,
         "returnType": "ODataBatch",
         "returnDescr": "",
@@ -372,7 +358,7 @@
         "signature": "fetch(url: string,options: IHttpClientOptions): Promise<Response>",
         "isStatic": false,
         "isOptional": false,
-        "descr": "HttpClient is used to perform REST calls against SharePoint. It adds default \nheaders, manages the digest needed for writes, and collects telemetry that \nhelps the service to monitor the performance of an application. \n \nFor communicating with non-SharePoint services, use the BasicHttpClient \nclass instead.",
+        "descr": "Generally,the parameters and semantics for HttpClient.fetch() are essentially \nthe same as the WHATWG API standard that is documented here: \nhttps://fetch.spec.whatwg.org/ \n \nThe HttpClient subclass adds some additional behaviors that are convenient when \nworking with SharePoint ODATA API's (which can be avoided by using \nBasicHttpClient instead): \n- Default \"Accept\" and \"Content-Type\" headers are added if not explicitly specified. \n- For write operations, an \"X-RequestDigest\" header is automatically added \n- The request digest token is automatically fetched and stored in a cache, with \nsupport for preloading \n \nFor a write operation, HttpClient will automatically add the \"X-RequestDigest\" \nheader, which may need to be obtained by issuing a seperate request such as \n\"https://example.com/sites/sample/_api/contextinfo\". Typically the appropriate \nSPWeb URL can be guessed by looking for a reserved URL segment such as \"_api\" \nin the original URL passed to fetch(); if not, use IHttpClientOptions.webUrl \nto specify it explicitly. \n",
         "genericType": null,
         "returnType": "Promise<Response>",
         "returnDescr": "a promise that will return the result",
@@ -396,7 +382,7 @@
         "signature": "get(url: string,options?: IHttpClientOptions): Promise<Response>",
         "isStatic": false,
         "isOptional": false,
-        "descr": "HttpClient is used to perform REST calls against SharePoint. It adds default \nheaders, manages the digest needed for writes, and collects telemetry that \nhelps the service to monitor the performance of an application. \n \nFor communicating with non-SharePoint services, use the BasicHttpClient \nclass instead.",
+        "descr": "Calls fetch(),but sets the method to 'GET'.",
         "genericType": null,
         "returnType": "Promise<Response>",
         "returnDescr": "a promise that will return the result",
@@ -420,7 +406,7 @@
         "signature": "getWebUrlFromRequestUrl(requestUrl: string): string",
         "isStatic": true,
         "isOptional": false,
-        "descr": "HttpClient is used to perform REST calls against SharePoint. It adds default \nheaders, manages the digest needed for writes, and collects telemetry that \nhelps the service to monitor the performance of an application. \n \nFor communicating with non-SharePoint services, use the BasicHttpClient \nclass instead.",
+        "descr": "This uses a heuristic to guess the SPWeb URL associated with the provided \nREST URL. This is necessary for operations such as the X-RequestDigest \nand ODATA batching, which require POSTing to a separate REST endpoint \nin order to complete a request. \nFor excample, if the requestUrl is \"/sites/site/web/_api/service\", \nthe returned URL would be \"/sites/site/web\". Or if the requestUrl \nis \"http://example.com/_layouts/service\", the returned URL would be \n\"http://example.com\".",
         "genericType": null,
         "returnType": "string",
         "returnDescr": "the inferred SPWeb URL",
@@ -438,7 +424,7 @@
         "signature": "post(url: string,options: IHttpClientOptions): Promise<Response>",
         "isStatic": false,
         "isOptional": false,
-        "descr": "HttpClient is used to perform REST calls against SharePoint. It adds default \nheaders, manages the digest needed for writes, and collects telemetry that \nhelps the service to monitor the performance of an application. \n \nFor communicating with non-SharePoint services, use the BasicHttpClient \nclass instead.",
+        "descr": "Calls fetch(),but sets the method to 'POST'.",
         "genericType": null,
         "returnType": "Promise<Response>",
         "returnDescr": "a promise that will return the result",
@@ -458,6 +444,24 @@
         ]
       }
     },
+    "constructor": {
+      "accessModifier": "public",
+      "signature": "constructor(serviceScope: ServiceScope)",
+      "isStatic": false,
+      "isOptional": false,
+      "descr": "",
+      "genericType": null,
+      "returnType": "HttpClient",
+      "returnDescr": "",
+      "params": [
+        {
+          "name": "serviceScope",
+          "dataType": "ServiceScope",
+          "isOptional": false,
+          "descr": ""
+        }
+      ]
+    },
     "types": {},
     "variables": {},
     "modules": {},
@@ -475,7 +479,7 @@
         "signature": "error(source: string,error: Error,scope?: ServiceScope): void",
         "isStatic": true,
         "isOptional": false,
-        "descr": "The Log class provides methods for logging messages at different levels (verbose, \ninfo, warning, error) and with context information. Context information helps identify \nwhich component generated the messages and makes the messages useful and filterable. \n",
+        "descr": "Logs an error",
         "genericType": null,
         "returnType": "void",
         "returnDescr": "",
@@ -505,7 +509,7 @@
         "signature": "info(source: string,message: string,scope?: ServiceScope): void",
         "isStatic": true,
         "isOptional": false,
-        "descr": "The Log class provides methods for logging messages at different levels (verbose, \ninfo, warning, error) and with context information. Context information helps identify \nwhich component generated the messages and makes the messages useful and filterable. \n",
+        "descr": "Logs an informational message",
         "genericType": null,
         "returnType": "void",
         "returnDescr": "",
@@ -535,7 +539,7 @@
         "signature": "verbose(source: string,message: string,scope?: ServiceScope): void",
         "isStatic": true,
         "isOptional": false,
-        "descr": "The Log class provides methods for logging messages at different levels (verbose, \ninfo, warning, error) and with context information. Context information helps identify \nwhich component generated the messages and makes the messages useful and filterable. \n",
+        "descr": "Logs a verbose message",
         "genericType": null,
         "returnType": "void",
         "returnDescr": "",
@@ -565,7 +569,7 @@
         "signature": "warn(source: string,message: string,scope?: ServiceScope): void",
         "isStatic": true,
         "isOptional": false,
-        "descr": "The Log class provides methods for logging messages at different levels (verbose, \ninfo, warning, error) and with context information. Context information helps identify \nwhich component generated the messages and makes the messages useful and filterable. \n",
+        "descr": "Logs a warning",
         "genericType": null,
         "returnType": "void",
         "returnDescr": "",
@@ -591,6 +595,7 @@
         ]
       }
     },
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -603,36 +608,12 @@
     "properties": {},
     "functions": {},
     "methods": {
-      "constructor-w9vY9": {
-        "accessModifier": "public",
-        "signature": "constructor(serviceScope: ServiceScope,batchOptions?: IODataBatchOptions)",
-        "isStatic": false,
-        "isOptional": false,
-        "descr": "The ODataBatch class accumulates a number of REST service calls and \ntransmits them as a single ODATA batch. This protocol is documented here: \nhttp://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html \n \nThe usage is to call ODataBatch.fetch() to queue each individual request, \nand then call ODataBatch.execute() to execute the batch operation. \nThe execute() method returns a promise that resolves when the real REST \ncall has completed. Each call to fetch() also returns a promise that will \nresolve with a Response object for that particular request. \n",
-        "genericType": null,
-        "returnType": "ODataBatch",
-        "returnDescr": "",
-        "params": [
-          {
-            "name": "serviceScope",
-            "dataType": "ServiceScope",
-            "isOptional": false,
-            "descr": ""
-          },
-          {
-            "name": "batchOptions",
-            "dataType": "IODataBatchOptions",
-            "isOptional": true,
-            "descr": ""
-          }
-        ]
-      },
       "execute-6jSw9": {
         "accessModifier": "public",
         "signature": "execute(): Promise<ODataBatch>",
         "isStatic": false,
         "isOptional": false,
-        "descr": "The ODataBatch class accumulates a number of REST service calls and \ntransmits them as a single ODATA batch. This protocol is documented here: \nhttp://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html \n \nThe usage is to call ODataBatch.fetch() to queue each individual request, \nand then call ODataBatch.execute() to execute the batch operation. \nThe execute() method returns a promise that resolves when the real REST \ncall has completed. Each call to fetch() also returns a promise that will \nresolve with a Response object for that particular request. \n",
+        "descr": "Executes the batched queries that were queued using ODataBatch.fetch().",
         "genericType": null,
         "returnType": "Promise<ODataBatch>",
         "returnDescr": "",
@@ -643,7 +624,7 @@
         "signature": "fetch(url: string,options?: IODataBatchRequestOptions): Promise<Response>",
         "isStatic": false,
         "isOptional": false,
-        "descr": "The ODataBatch class accumulates a number of REST service calls and \ntransmits them as a single ODATA batch. This protocol is documented here: \nhttp://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html \n \nThe usage is to call ODataBatch.fetch() to queue each individual request, \nand then call ODataBatch.execute() to execute the batch operation. \nThe execute() method returns a promise that resolves when the real REST \ncall has completed. Each call to fetch() also returns a promise that will \nresolve with a Response object for that particular request. \n",
+        "descr": "Queues a new request,and returns a promise that can be used to access \nthe server response (after execute() has completed). The parameters for \nthis function are basically the same as the WHATWG API standard documented here: \nhttps://fetch.spec.whatwg.org/ \n \nHowever, be aware that certain REST headers are ignored or not allowed inside \na batch. See the ODATA documentation for details. \n \nWhen execute() is called, it will POST to a URL such as \n\"http://example.com/sites/sample/_api/$batch\". Typically ODataBatch can successfully \nguess the appropriate SPWeb URL by looking for a reserved URL segment such as \"_api\" \nin the first URL passed to fetch(). If not, use IODataBatchOptions.webUrl to specify it \nexplicitly. \n",
         "genericType": null,
         "returnType": "Promise<Response>",
         "returnDescr": "a promise that will return the result",
@@ -667,7 +648,7 @@
         "signature": "get(url: string,options?: IODataBatchRequestOptions): Promise<Response>",
         "isStatic": false,
         "isOptional": false,
-        "descr": "The ODataBatch class accumulates a number of REST service calls and \ntransmits them as a single ODATA batch. This protocol is documented here: \nhttp://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html \n \nThe usage is to call ODataBatch.fetch() to queue each individual request, \nand then call ODataBatch.execute() to execute the batch operation. \nThe execute() method returns a promise that resolves when the real REST \ncall has completed. Each call to fetch() also returns a promise that will \nresolve with a Response object for that particular request. \n",
+        "descr": "Calls fetch(),but sets the method to 'GET'.",
         "genericType": null,
         "returnType": "Promise<Response>",
         "returnDescr": "a promise that will return the result",
@@ -691,7 +672,7 @@
         "signature": "post(url: string,options: IODataBatchRequestOptions): Promise<Response>",
         "isStatic": false,
         "isOptional": false,
-        "descr": "The ODataBatch class accumulates a number of REST service calls and \ntransmits them as a single ODATA batch. This protocol is documented here: \nhttp://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html \n \nThe usage is to call ODataBatch.fetch() to queue each individual request, \nand then call ODataBatch.execute() to execute the batch operation. \nThe execute() method returns a promise that resolves when the real REST \ncall has completed. Each call to fetch() also returns a promise that will \nresolve with a Response object for that particular request. \n",
+        "descr": "Calls fetch(),but sets the method to 'POST'.",
         "genericType": null,
         "returnType": "Promise<Response>",
         "returnDescr": "a promise that will return the result",
@@ -710,6 +691,30 @@
           }
         ]
       }
+    },
+    "constructor": {
+      "accessModifier": "public",
+      "signature": "constructor(serviceScope: ServiceScope,batchOptions?: IODataBatchOptions)",
+      "isStatic": false,
+      "isOptional": false,
+      "descr": "",
+      "genericType": null,
+      "returnType": "ODataBatch",
+      "returnDescr": "",
+      "params": [
+        {
+          "name": "serviceScope",
+          "dataType": "ServiceScope",
+          "isOptional": false,
+          "descr": ""
+        },
+        {
+          "name": "batchOptions",
+          "dataType": "IODataBatchOptions",
+          "isOptional": true,
+          "descr": ""
+        }
+      ]
     },
     "types": {},
     "variables": {},
@@ -730,7 +735,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "The page context provides standard definitions for common SharePoint objects \nthat need to be shared between the client-side application, web parts, and other \ncomponents. Typically the data is fetched via REST queries when navigating to a \nnew page, but it can also be preloaded by the web server, or filled from a custom \napplication cache."
+        "descr": "This class is primarily used with the PageContext class. It provides culture info \nfor the current user of the application."
       },
       "isInitialized": {
         "dataType": "boolean",
@@ -741,7 +746,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "The page context provides standard definitions for common SharePoint objects \nthat need to be shared between the client-side application, web parts, and other \ncomponents. Typically the data is fetched via REST queries when navigating to a \nnew page, but it can also be preloaded by the web server, or filled from a custom \napplication cache."
+        "descr": "Returns whether the PageContext has been initialized."
       },
       "site": {
         "dataType": "SPSite",
@@ -752,7 +757,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "The page context provides standard definitions for common SharePoint objects \nthat need to be shared between the client-side application, web parts, and other \ncomponents. Typically the data is fetched via REST queries when navigating to a \nnew page, but it can also be preloaded by the web server, or filled from a custom \napplication cache."
+        "descr": "Contextual information for the SharePoint site collection (\"site\") that is hosting the page. \nThe site object will be defined if the PageContext was initialized."
       },
       "user": {
         "dataType": "SPUser",
@@ -763,7 +768,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "The page context provides standard definitions for common SharePoint objects \nthat need to be shared between the client-side application, web parts, and other \ncomponents. Typically the data is fetched via REST queries when navigating to a \nnew page, but it can also be preloaded by the web server, or filled from a custom \napplication cache."
+        "descr": "This class is primarily used with the PageContext class. It provides contextual information \nfor the SharePoint user that is accessing the page."
       },
       "web": {
         "dataType": "SPWeb",
@@ -774,29 +779,28 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "The page context provides standard definitions for common SharePoint objects \nthat need to be shared between the client-side application, web parts, and other \ncomponents. Typically the data is fetched via REST queries when navigating to a \nnew page, but it can also be preloaded by the web server, or filled from a custom \napplication cache."
+        "descr": "Contextual information for the SharePoint site (\"web\") that is hosting the page. The web object \nwill be defined if the PageContext was initialized."
       }
     },
     "functions": {},
-    "methods": {
-      "constructor-8mp89": {
-        "accessModifier": "public",
-        "signature": "constructor(serviceScope: ServiceScope)",
-        "isStatic": false,
-        "isOptional": false,
-        "descr": "The page context provides standard definitions for common SharePoint objects \nthat need to be shared between the client-side application, web parts, and other \ncomponents. Typically the data is fetched via REST queries when navigating to a \nnew page, but it can also be preloaded by the web server, or filled from a custom \napplication cache.",
-        "genericType": null,
-        "returnType": "PageContext",
-        "returnDescr": "",
-        "params": [
-          {
-            "name": "serviceScope",
-            "dataType": "ServiceScope",
-            "isOptional": false,
-            "descr": ""
-          }
-        ]
-      }
+    "methods": {},
+    "constructor": {
+      "accessModifier": "public",
+      "signature": "constructor(serviceScope: ServiceScope)",
+      "isStatic": false,
+      "isOptional": false,
+      "descr": "",
+      "genericType": null,
+      "returnType": "PageContext",
+      "returnDescr": "",
+      "params": [
+        {
+          "name": "serviceScope",
+          "dataType": "ServiceScope",
+          "isOptional": false,
+          "descr": ""
+        }
+      ]
     },
     "types": {},
     "variables": {},
@@ -817,7 +821,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "The ServiceKey is a lookup key that is used when calling ServiceScope.consume() \nto fetch a dependency. The key also defines a default implementation of the \ndependency, which will be autocreated by the root scope if the dependency is not found. \nProviding a default implementation ensures that new dependencies can be safely \nintroduced without inadvertently breaking components that are loaded by an older host \n(that does not provide the new dependency)."
+        "descr": ""
       },
       "id": {
         "dataType": "string",
@@ -828,7 +832,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "The ServiceKey is a lookup key that is used when calling ServiceScope.consume() \nto fetch a dependency. The key also defines a default implementation of the \ndependency, which will be autocreated by the root scope if the dependency is not found. \nProviding a default implementation ensures that new dependencies can be safely \nintroduced without inadvertently breaking components that are loaded by an older host \n(that does not provide the new dependency)."
+        "descr": ""
       },
       "name": {
         "dataType": "string",
@@ -839,47 +843,17 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "The ServiceKey is a lookup key that is used when calling ServiceScope.consume() \nto fetch a dependency. The key also defines a default implementation of the \ndependency, which will be autocreated by the root scope if the dependency is not found. \nProviding a default implementation ensures that new dependencies can be safely \nintroduced without inadvertently breaking components that are loaded by an older host \n(that does not provide the new dependency)."
+        "descr": ""
       }
     },
     "functions": {},
     "methods": {
-      "constructor-uorI9": {
-        "accessModifier": "public",
-        "signature": "constructor(id: string,name: string,defaultCreator: ServiceCreator<T>)",
-        "isStatic": false,
-        "isOptional": false,
-        "descr": "The ServiceKey is a lookup key that is used when calling ServiceScope.consume() \nto fetch a dependency. The key also defines a default implementation of the \ndependency, which will be autocreated by the root scope if the dependency is not found. \nProviding a default implementation ensures that new dependencies can be safely \nintroduced without inadvertently breaking components that are loaded by an older host \n(that does not provide the new dependency).",
-        "genericType": null,
-        "returnType": "ServiceKey",
-        "returnDescr": "",
-        "params": [
-          {
-            "name": "id",
-            "dataType": "string",
-            "isOptional": false,
-            "descr": ""
-          },
-          {
-            "name": "name",
-            "dataType": "string",
-            "isOptional": false,
-            "descr": ""
-          },
-          {
-            "name": "defaultCreator",
-            "dataType": "ServiceCreator<T>",
-            "isOptional": false,
-            "descr": ""
-          }
-        ]
-      },
       "create<T>-8Kto9": {
         "accessModifier": "public",
         "signature": "create<T>(name: string,serviceClass: { new (serviceScope: ServiceScope) }): ServiceKey<T>",
         "isStatic": true,
         "isOptional": false,
-        "descr": "The ServiceKey is a lookup key that is used when calling ServiceScope.consume() \nto fetch a dependency. The key also defines a default implementation of the \ndependency, which will be autocreated by the root scope if the dependency is not found. \nProviding a default implementation ensures that new dependencies can be safely \nintroduced without inadvertently breaking components that are loaded by an older host \n(that does not provide the new dependency).",
+        "descr": "Constructs a new ServiceKey whose default implementation will be a new instance of \na TypeScript class that accepts the standard constructor parameter. If you want to \nspecify custom constructor parameters, use createCustom() instead.",
         "genericType": "T",
         "returnType": "ServiceKey<T>",
         "returnDescr": "- the newly created ServiceKey",
@@ -903,7 +877,7 @@
         "signature": "createCustom<T>(name: string,defaultCreator: ServiceCreator<T>): ServiceKey<T>",
         "isStatic": true,
         "isOptional": false,
-        "descr": "The ServiceKey is a lookup key that is used when calling ServiceScope.consume() \nto fetch a dependency. The key also defines a default implementation of the \ndependency, which will be autocreated by the root scope if the dependency is not found. \nProviding a default implementation ensures that new dependencies can be safely \nintroduced without inadvertently breaking components that are loaded by an older host \n(that does not provide the new dependency).",
+        "descr": "Constructs a new ServiceKey whose default implementation will be obtained \nby invoking the specified callback.",
         "genericType": "T",
         "returnType": "ServiceKey<T>",
         "returnDescr": "- the newly created ServiceKey",
@@ -923,6 +897,36 @@
         ]
       }
     },
+    "constructor": {
+      "accessModifier": "public",
+      "signature": "constructor(id: string,name: string,defaultCreator: ServiceCreator<T>)",
+      "isStatic": false,
+      "isOptional": false,
+      "descr": "PRIVATE - Do not call this from your own code.",
+      "genericType": null,
+      "returnType": "ServiceKey",
+      "returnDescr": "",
+      "params": [
+        {
+          "name": "id",
+          "dataType": "string",
+          "isOptional": false,
+          "descr": ""
+        },
+        {
+          "name": "name",
+          "dataType": "string",
+          "isOptional": false,
+          "descr": ""
+        },
+        {
+          "name": "defaultCreator",
+          "dataType": "ServiceCreator<T>",
+          "isOptional": false,
+          "descr": ""
+        }
+      ]
+    },
     "types": {},
     "variables": {},
     "modules": {},
@@ -935,30 +939,12 @@
     "properties": {},
     "functions": {},
     "methods": {
-      "constructor-syNo9": {
-        "accessModifier": "public",
-        "signature": "constructor(parent: ServiceScope)",
-        "isStatic": false,
-        "isOptional": false,
-        "descr": "ServiceScope provides a formalized way for components to register and consume dependencies \n(\"services\"), and to enable different implementations to be registered in different scopes. \nThis improves modularity by decoupling components from their dependencies in an extensible way. \n \nFor example, suppose that various components need access to an IPageManager instance. We could \nsimply make the PageManager a singleton (i.e. global variable), but this will not work e.g. if \nwe need to create a pop-up dialog that requires a second PageManager instance. A better solution \nwould be to add the PageManager as a constructor parameter for each component that requires it, \nhowever then we immediately face the problem that any code that calls these constructors \nalso needs a PageManager parameter. In an application with many such dependencies, business \nlogic that ties together many subsystems would eventually pick up a constructor parameter \nfor every possible dependency, which is unwieldy. A natural solution would be to move all the \ndependencies into a class with name like \"ApplicationContext\", and then pass this around as our \nconstructor parameter. This enables the PageManager to be passed to classes that need it \nwithout cluttering the intermediary classes that don't. However, it still has a design problem \nthat \"ApplicationContext\" has hard-coded dependencies on many unrelated things. A more flexible \napproach is to make it a dictionary that can look up items for consumers/providers who know the \nright lookup key (i.e. ServiceKey). This is the popular \"service locator\" design pattern, \nfamiliar from the SPContext API in classic SharePoint. \n \nServiceScope takes this idea a step further in two important ways: First, it provides a scoping \nmechanism so that e.g. if we had two different pages, they could each consume a unique PageManager \ninstance while still sharing other common dependencies. Secondly, it allows for a ServiceKey \nto provide a default implementation of the dependency. This is important for API stability in \nour modular client-side environment: For example, suppose that version 2.0 of our application \nintroduced a new IDiagnosticTracing interface that a version 2.0 component will expect to consume. \nIf the version 2.0 component gets loaded by an older 1.0 application, it would fail. We could \nfix this by requiring each consumer to check for any missing dependencies and handle that case, \nbut it would require a lot of checks. A better solution is to ensure that a default implementation \nalways exists, perhaps just a trivial behavior, so that components don't have to worry about it. \n \nUsage: ServiceScope instances are created by calling either ServiceScope.startNewRoot() or \nServiceScope.startNewChild(). They are initially in an \"unfinished\" state, during which provide() \ncan be called to register service keys, but consume() is forbidden. After ServiceScope.finish() \nis called, consume() is allowed and provide() is now forbidden. These semantics ensure that \nServiceScope.consume() always returns the same result for the same key, and does not depend on \norder of initialization. It also allows us to support circular dependencies without worrying \nabout infinite loops, even when working with external components that were implemented by \nthird parties. To avoid mistakes, it's best to always call consume() inside a callback from \nserviceScope.whenFinished().",
-        "genericType": null,
-        "returnType": "ServiceScope",
-        "returnDescr": "",
-        "params": [
-          {
-            "name": "parent",
-            "dataType": "ServiceScope",
-            "isOptional": false,
-            "descr": ""
-          }
-        ]
-      },
       "consume<T>-X1lg9": {
         "accessModifier": "public",
         "signature": "consume<T>(serviceKey: ServiceKey<T>): T",
         "isStatic": false,
         "isOptional": false,
-        "descr": "ServiceScope provides a formalized way for components to register and consume dependencies \n(\"services\"), and to enable different implementations to be registered in different scopes. \nThis improves modularity by decoupling components from their dependencies in an extensible way. \n \nFor example, suppose that various components need access to an IPageManager instance. We could \nsimply make the PageManager a singleton (i.e. global variable), but this will not work e.g. if \nwe need to create a pop-up dialog that requires a second PageManager instance. A better solution \nwould be to add the PageManager as a constructor parameter for each component that requires it, \nhowever then we immediately face the problem that any code that calls these constructors \nalso needs a PageManager parameter. In an application with many such dependencies, business \nlogic that ties together many subsystems would eventually pick up a constructor parameter \nfor every possible dependency, which is unwieldy. A natural solution would be to move all the \ndependencies into a class with name like \"ApplicationContext\", and then pass this around as our \nconstructor parameter. This enables the PageManager to be passed to classes that need it \nwithout cluttering the intermediary classes that don't. However, it still has a design problem \nthat \"ApplicationContext\" has hard-coded dependencies on many unrelated things. A more flexible \napproach is to make it a dictionary that can look up items for consumers/providers who know the \nright lookup key (i.e. ServiceKey). This is the popular \"service locator\" design pattern, \nfamiliar from the SPContext API in classic SharePoint. \n \nServiceScope takes this idea a step further in two important ways: First, it provides a scoping \nmechanism so that e.g. if we had two different pages, they could each consume a unique PageManager \ninstance while still sharing other common dependencies. Secondly, it allows for a ServiceKey \nto provide a default implementation of the dependency. This is important for API stability in \nour modular client-side environment: For example, suppose that version 2.0 of our application \nintroduced a new IDiagnosticTracing interface that a version 2.0 component will expect to consume. \nIf the version 2.0 component gets loaded by an older 1.0 application, it would fail. We could \nfix this by requiring each consumer to check for any missing dependencies and handle that case, \nbut it would require a lot of checks. A better solution is to ensure that a default implementation \nalways exists, perhaps just a trivial behavior, so that components don't have to worry about it. \n \nUsage: ServiceScope instances are created by calling either ServiceScope.startNewRoot() or \nServiceScope.startNewChild(). They are initially in an \"unfinished\" state, during which provide() \ncan be called to register service keys, but consume() is forbidden. After ServiceScope.finish() \nis called, consume() is allowed and provide() is now forbidden. These semantics ensure that \nServiceScope.consume() always returns the same result for the same key, and does not depend on \norder of initialization. It also allows us to support circular dependencies without worrying \nabout infinite loops, even when working with external components that were implemented by \nthird parties. To avoid mistakes, it's best to always call consume() inside a callback from \nserviceScope.whenFinished().",
+        "descr": "Components should call this function to \"consume\" a dependency,i.e. look up the serviceKey \nand return the registered service instance. If the instance cannot be found, then a default \ninstance will be autocreated and registered with the root ServiceScope.",
         "genericType": "T",
         "returnType": "T",
         "returnDescr": "- the service instance",
@@ -976,7 +962,7 @@
         "signature": "createAndProvide<T>(serviceKey: ServiceKey<T>,simpleServiceClass: { new (serviceScope: ServiceScope) }): T",
         "isStatic": false,
         "isOptional": false,
-        "descr": "ServiceScope provides a formalized way for components to register and consume dependencies \n(\"services\"), and to enable different implementations to be registered in different scopes. \nThis improves modularity by decoupling components from their dependencies in an extensible way. \n \nFor example, suppose that various components need access to an IPageManager instance. We could \nsimply make the PageManager a singleton (i.e. global variable), but this will not work e.g. if \nwe need to create a pop-up dialog that requires a second PageManager instance. A better solution \nwould be to add the PageManager as a constructor parameter for each component that requires it, \nhowever then we immediately face the problem that any code that calls these constructors \nalso needs a PageManager parameter. In an application with many such dependencies, business \nlogic that ties together many subsystems would eventually pick up a constructor parameter \nfor every possible dependency, which is unwieldy. A natural solution would be to move all the \ndependencies into a class with name like \"ApplicationContext\", and then pass this around as our \nconstructor parameter. This enables the PageManager to be passed to classes that need it \nwithout cluttering the intermediary classes that don't. However, it still has a design problem \nthat \"ApplicationContext\" has hard-coded dependencies on many unrelated things. A more flexible \napproach is to make it a dictionary that can look up items for consumers/providers who know the \nright lookup key (i.e. ServiceKey). This is the popular \"service locator\" design pattern, \nfamiliar from the SPContext API in classic SharePoint. \n \nServiceScope takes this idea a step further in two important ways: First, it provides a scoping \nmechanism so that e.g. if we had two different pages, they could each consume a unique PageManager \ninstance while still sharing other common dependencies. Secondly, it allows for a ServiceKey \nto provide a default implementation of the dependency. This is important for API stability in \nour modular client-side environment: For example, suppose that version 2.0 of our application \nintroduced a new IDiagnosticTracing interface that a version 2.0 component will expect to consume. \nIf the version 2.0 component gets loaded by an older 1.0 application, it would fail. We could \nfix this by requiring each consumer to check for any missing dependencies and handle that case, \nbut it would require a lot of checks. A better solution is to ensure that a default implementation \nalways exists, perhaps just a trivial behavior, so that components don't have to worry about it. \n \nUsage: ServiceScope instances are created by calling either ServiceScope.startNewRoot() or \nServiceScope.startNewChild(). They are initially in an \"unfinished\" state, during which provide() \ncan be called to register service keys, but consume() is forbidden. After ServiceScope.finish() \nis called, consume() is allowed and provide() is now forbidden. These semantics ensure that \nServiceScope.consume() always returns the same result for the same key, and does not depend on \norder of initialization. It also allows us to support circular dependencies without worrying \nabout infinite loops, even when working with external components that were implemented by \nthird parties. To avoid mistakes, it's best to always call consume() inside a callback from \nserviceScope.whenFinished().",
+        "descr": "This is a shorthand function that its equivalent to constructing a new instance of the \nsimpleServiceClass, then registering it by calling ServiceScope.provide().",
         "genericType": "T",
         "returnType": "T",
         "returnDescr": "- a newly constructed instance of simpleServiceClass",
@@ -1000,7 +986,7 @@
         "signature": "createDefaultAndProvide<T>(serviceKey: ServiceKey<T>): T",
         "isStatic": false,
         "isOptional": false,
-        "descr": "ServiceScope provides a formalized way for components to register and consume dependencies \n(\"services\"), and to enable different implementations to be registered in different scopes. \nThis improves modularity by decoupling components from their dependencies in an extensible way. \n \nFor example, suppose that various components need access to an IPageManager instance. We could \nsimply make the PageManager a singleton (i.e. global variable), but this will not work e.g. if \nwe need to create a pop-up dialog that requires a second PageManager instance. A better solution \nwould be to add the PageManager as a constructor parameter for each component that requires it, \nhowever then we immediately face the problem that any code that calls these constructors \nalso needs a PageManager parameter. In an application with many such dependencies, business \nlogic that ties together many subsystems would eventually pick up a constructor parameter \nfor every possible dependency, which is unwieldy. A natural solution would be to move all the \ndependencies into a class with name like \"ApplicationContext\", and then pass this around as our \nconstructor parameter. This enables the PageManager to be passed to classes that need it \nwithout cluttering the intermediary classes that don't. However, it still has a design problem \nthat \"ApplicationContext\" has hard-coded dependencies on many unrelated things. A more flexible \napproach is to make it a dictionary that can look up items for consumers/providers who know the \nright lookup key (i.e. ServiceKey). This is the popular \"service locator\" design pattern, \nfamiliar from the SPContext API in classic SharePoint. \n \nServiceScope takes this idea a step further in two important ways: First, it provides a scoping \nmechanism so that e.g. if we had two different pages, they could each consume a unique PageManager \ninstance while still sharing other common dependencies. Secondly, it allows for a ServiceKey \nto provide a default implementation of the dependency. This is important for API stability in \nour modular client-side environment: For example, suppose that version 2.0 of our application \nintroduced a new IDiagnosticTracing interface that a version 2.0 component will expect to consume. \nIf the version 2.0 component gets loaded by an older 1.0 application, it would fail. We could \nfix this by requiring each consumer to check for any missing dependencies and handle that case, \nbut it would require a lot of checks. A better solution is to ensure that a default implementation \nalways exists, perhaps just a trivial behavior, so that components don't have to worry about it. \n \nUsage: ServiceScope instances are created by calling either ServiceScope.startNewRoot() or \nServiceScope.startNewChild(). They are initially in an \"unfinished\" state, during which provide() \ncan be called to register service keys, but consume() is forbidden. After ServiceScope.finish() \nis called, consume() is allowed and provide() is now forbidden. These semantics ensure that \nServiceScope.consume() always returns the same result for the same key, and does not depend on \norder of initialization. It also allows us to support circular dependencies without worrying \nabout infinite loops, even when working with external components that were implemented by \nthird parties. To avoid mistakes, it's best to always call consume() inside a callback from \nserviceScope.whenFinished().",
+        "descr": "This is a shorthand function that constructs the default implementation of the specified \nserviceKey, and then registers it by calling ServiceScope.provide().",
         "genericType": "T",
         "returnType": "T",
         "returnDescr": "- a service instance that was constructed using ServiceKey.defaultCreator",
@@ -1018,10 +1004,10 @@
         "signature": "finish(): void",
         "isStatic": false,
         "isOptional": false,
-        "descr": "ServiceScope provides a formalized way for components to register and consume dependencies \n(\"services\"), and to enable different implementations to be registered in different scopes. \nThis improves modularity by decoupling components from their dependencies in an extensible way. \n \nFor example, suppose that various components need access to an IPageManager instance. We could \nsimply make the PageManager a singleton (i.e. global variable), but this will not work e.g. if \nwe need to create a pop-up dialog that requires a second PageManager instance. A better solution \nwould be to add the PageManager as a constructor parameter for each component that requires it, \nhowever then we immediately face the problem that any code that calls these constructors \nalso needs a PageManager parameter. In an application with many such dependencies, business \nlogic that ties together many subsystems would eventually pick up a constructor parameter \nfor every possible dependency, which is unwieldy. A natural solution would be to move all the \ndependencies into a class with name like \"ApplicationContext\", and then pass this around as our \nconstructor parameter. This enables the PageManager to be passed to classes that need it \nwithout cluttering the intermediary classes that don't. However, it still has a design problem \nthat \"ApplicationContext\" has hard-coded dependencies on many unrelated things. A more flexible \napproach is to make it a dictionary that can look up items for consumers/providers who know the \nright lookup key (i.e. ServiceKey). This is the popular \"service locator\" design pattern, \nfamiliar from the SPContext API in classic SharePoint. \n \nServiceScope takes this idea a step further in two important ways: First, it provides a scoping \nmechanism so that e.g. if we had two different pages, they could each consume a unique PageManager \ninstance while still sharing other common dependencies. Secondly, it allows for a ServiceKey \nto provide a default implementation of the dependency. This is important for API stability in \nour modular client-side environment: For example, suppose that version 2.0 of our application \nintroduced a new IDiagnosticTracing interface that a version 2.0 component will expect to consume. \nIf the version 2.0 component gets loaded by an older 1.0 application, it would fail. We could \nfix this by requiring each consumer to check for any missing dependencies and handle that case, \nbut it would require a lot of checks. A better solution is to ensure that a default implementation \nalways exists, perhaps just a trivial behavior, so that components don't have to worry about it. \n \nUsage: ServiceScope instances are created by calling either ServiceScope.startNewRoot() or \nServiceScope.startNewChild(). They are initially in an \"unfinished\" state, during which provide() \ncan be called to register service keys, but consume() is forbidden. After ServiceScope.finish() \nis called, consume() is allowed and provide() is now forbidden. These semantics ensure that \nServiceScope.consume() always returns the same result for the same key, and does not depend on \norder of initialization. It also allows us to support circular dependencies without worrying \nabout infinite loops, even when working with external components that were implemented by \nthird parties. To avoid mistakes, it's best to always call consume() inside a callback from \nserviceScope.whenFinished().",
+        "descr": "When a ServiceScope is first started,it is in an \"unfinished\" state where provide() is \nallowed but consume() is not allowed. After calling finish(), then consume() is allowed \nbut provide() is not allowed. This formalism completely eliminates a number of tricky bugs \nsuch as: Scope2 is a child of Scope1, and Scope1 provides instance A1 of interface A; \nif someone consumes A1 from Scope2 (via inheritance) before Scope2.provide() is called \nwith A2, then a subsequent call to Scope2.consume() might return a different result than \nthe previous call, which would be very confusing for developers.",
         "genericType": null,
         "returnType": "void",
-        "returnDescr": "- a service instance that was constructed using ServiceKey.defaultCreator",
+        "returnDescr": "",
         "params": []
       },
       "getParent-O7ac9": {
@@ -1029,7 +1015,7 @@
         "signature": "getParent(): ServiceScope",
         "isStatic": false,
         "isOptional": false,
-        "descr": "ServiceScope provides a formalized way for components to register and consume dependencies \n(\"services\"), and to enable different implementations to be registered in different scopes. \nThis improves modularity by decoupling components from their dependencies in an extensible way. \n \nFor example, suppose that various components need access to an IPageManager instance. We could \nsimply make the PageManager a singleton (i.e. global variable), but this will not work e.g. if \nwe need to create a pop-up dialog that requires a second PageManager instance. A better solution \nwould be to add the PageManager as a constructor parameter for each component that requires it, \nhowever then we immediately face the problem that any code that calls these constructors \nalso needs a PageManager parameter. In an application with many such dependencies, business \nlogic that ties together many subsystems would eventually pick up a constructor parameter \nfor every possible dependency, which is unwieldy. A natural solution would be to move all the \ndependencies into a class with name like \"ApplicationContext\", and then pass this around as our \nconstructor parameter. This enables the PageManager to be passed to classes that need it \nwithout cluttering the intermediary classes that don't. However, it still has a design problem \nthat \"ApplicationContext\" has hard-coded dependencies on many unrelated things. A more flexible \napproach is to make it a dictionary that can look up items for consumers/providers who know the \nright lookup key (i.e. ServiceKey). This is the popular \"service locator\" design pattern, \nfamiliar from the SPContext API in classic SharePoint. \n \nServiceScope takes this idea a step further in two important ways: First, it provides a scoping \nmechanism so that e.g. if we had two different pages, they could each consume a unique PageManager \ninstance while still sharing other common dependencies. Secondly, it allows for a ServiceKey \nto provide a default implementation of the dependency. This is important for API stability in \nour modular client-side environment: For example, suppose that version 2.0 of our application \nintroduced a new IDiagnosticTracing interface that a version 2.0 component will expect to consume. \nIf the version 2.0 component gets loaded by an older 1.0 application, it would fail. We could \nfix this by requiring each consumer to check for any missing dependencies and handle that case, \nbut it would require a lot of checks. A better solution is to ensure that a default implementation \nalways exists, perhaps just a trivial behavior, so that components don't have to worry about it. \n \nUsage: ServiceScope instances are created by calling either ServiceScope.startNewRoot() or \nServiceScope.startNewChild(). They are initially in an \"unfinished\" state, during which provide() \ncan be called to register service keys, but consume() is forbidden. After ServiceScope.finish() \nis called, consume() is allowed and provide() is now forbidden. These semantics ensure that \nServiceScope.consume() always returns the same result for the same key, and does not depend on \norder of initialization. It also allows us to support circular dependencies without worrying \nabout infinite loops, even when working with external components that were implemented by \nthird parties. To avoid mistakes, it's best to always call consume() inside a callback from \nserviceScope.whenFinished().",
+        "descr": "Returns the parent of the current ServiceScope,or undefined if this is a root scope.",
         "genericType": null,
         "returnType": "ServiceScope",
         "returnDescr": "- the parent service scope",
@@ -1040,7 +1026,7 @@
         "signature": "provide<T>(serviceKey: ServiceKey<T>,service: T): T",
         "isStatic": false,
         "isOptional": false,
-        "descr": "ServiceScope provides a formalized way for components to register and consume dependencies \n(\"services\"), and to enable different implementations to be registered in different scopes. \nThis improves modularity by decoupling components from their dependencies in an extensible way. \n \nFor example, suppose that various components need access to an IPageManager instance. We could \nsimply make the PageManager a singleton (i.e. global variable), but this will not work e.g. if \nwe need to create a pop-up dialog that requires a second PageManager instance. A better solution \nwould be to add the PageManager as a constructor parameter for each component that requires it, \nhowever then we immediately face the problem that any code that calls these constructors \nalso needs a PageManager parameter. In an application with many such dependencies, business \nlogic that ties together many subsystems would eventually pick up a constructor parameter \nfor every possible dependency, which is unwieldy. A natural solution would be to move all the \ndependencies into a class with name like \"ApplicationContext\", and then pass this around as our \nconstructor parameter. This enables the PageManager to be passed to classes that need it \nwithout cluttering the intermediary classes that don't. However, it still has a design problem \nthat \"ApplicationContext\" has hard-coded dependencies on many unrelated things. A more flexible \napproach is to make it a dictionary that can look up items for consumers/providers who know the \nright lookup key (i.e. ServiceKey). This is the popular \"service locator\" design pattern, \nfamiliar from the SPContext API in classic SharePoint. \n \nServiceScope takes this idea a step further in two important ways: First, it provides a scoping \nmechanism so that e.g. if we had two different pages, they could each consume a unique PageManager \ninstance while still sharing other common dependencies. Secondly, it allows for a ServiceKey \nto provide a default implementation of the dependency. This is important for API stability in \nour modular client-side environment: For example, suppose that version 2.0 of our application \nintroduced a new IDiagnosticTracing interface that a version 2.0 component will expect to consume. \nIf the version 2.0 component gets loaded by an older 1.0 application, it would fail. We could \nfix this by requiring each consumer to check for any missing dependencies and handle that case, \nbut it would require a lot of checks. A better solution is to ensure that a default implementation \nalways exists, perhaps just a trivial behavior, so that components don't have to worry about it. \n \nUsage: ServiceScope instances are created by calling either ServiceScope.startNewRoot() or \nServiceScope.startNewChild(). They are initially in an \"unfinished\" state, during which provide() \ncan be called to register service keys, but consume() is forbidden. After ServiceScope.finish() \nis called, consume() is allowed and provide() is now forbidden. These semantics ensure that \nServiceScope.consume() always returns the same result for the same key, and does not depend on \norder of initialization. It also allows us to support circular dependencies without worrying \nabout infinite loops, even when working with external components that were implemented by \nthird parties. To avoid mistakes, it's best to always call consume() inside a callback from \nserviceScope.whenFinished().",
+        "descr": "ServiceScope.provide() is used to register an implemententation of the given serviceKey \nfor the current scope. It may only be used when the ServiceScope is in an \"unfinished\" \nstate, i.e. before finish() has been called.",
         "genericType": "T",
         "returnType": "T",
         "returnDescr": "- the same object that was passed as the \"service\" parameter",
@@ -1064,7 +1050,7 @@
         "signature": "startNewChild(): ServiceScope",
         "isStatic": false,
         "isOptional": false,
-        "descr": "ServiceScope provides a formalized way for components to register and consume dependencies \n(\"services\"), and to enable different implementations to be registered in different scopes. \nThis improves modularity by decoupling components from their dependencies in an extensible way. \n \nFor example, suppose that various components need access to an IPageManager instance. We could \nsimply make the PageManager a singleton (i.e. global variable), but this will not work e.g. if \nwe need to create a pop-up dialog that requires a second PageManager instance. A better solution \nwould be to add the PageManager as a constructor parameter for each component that requires it, \nhowever then we immediately face the problem that any code that calls these constructors \nalso needs a PageManager parameter. In an application with many such dependencies, business \nlogic that ties together many subsystems would eventually pick up a constructor parameter \nfor every possible dependency, which is unwieldy. A natural solution would be to move all the \ndependencies into a class with name like \"ApplicationContext\", and then pass this around as our \nconstructor parameter. This enables the PageManager to be passed to classes that need it \nwithout cluttering the intermediary classes that don't. However, it still has a design problem \nthat \"ApplicationContext\" has hard-coded dependencies on many unrelated things. A more flexible \napproach is to make it a dictionary that can look up items for consumers/providers who know the \nright lookup key (i.e. ServiceKey). This is the popular \"service locator\" design pattern, \nfamiliar from the SPContext API in classic SharePoint. \n \nServiceScope takes this idea a step further in two important ways: First, it provides a scoping \nmechanism so that e.g. if we had two different pages, they could each consume a unique PageManager \ninstance while still sharing other common dependencies. Secondly, it allows for a ServiceKey \nto provide a default implementation of the dependency. This is important for API stability in \nour modular client-side environment: For example, suppose that version 2.0 of our application \nintroduced a new IDiagnosticTracing interface that a version 2.0 component will expect to consume. \nIf the version 2.0 component gets loaded by an older 1.0 application, it would fail. We could \nfix this by requiring each consumer to check for any missing dependencies and handle that case, \nbut it would require a lot of checks. A better solution is to ensure that a default implementation \nalways exists, perhaps just a trivial behavior, so that components don't have to worry about it. \n \nUsage: ServiceScope instances are created by calling either ServiceScope.startNewRoot() or \nServiceScope.startNewChild(). They are initially in an \"unfinished\" state, during which provide() \ncan be called to register service keys, but consume() is forbidden. After ServiceScope.finish() \nis called, consume() is allowed and provide() is now forbidden. These semantics ensure that \nServiceScope.consume() always returns the same result for the same key, and does not depend on \norder of initialization. It also allows us to support circular dependencies without worrying \nabout infinite loops, even when working with external components that were implemented by \nthird parties. To avoid mistakes, it's best to always call consume() inside a callback from \nserviceScope.whenFinished().",
+        "descr": "Constructs a new ServiceScope that is a child of the current scope. For any keys \nthat are not explicitly provided by the child scope, the parent hierarchy will be \nconsulted.",
         "genericType": null,
         "returnType": "ServiceScope",
         "returnDescr": "- the newly created root ServiceScope",
@@ -1075,7 +1061,7 @@
         "signature": "startNewRoot(): ServiceScope",
         "isStatic": true,
         "isOptional": false,
-        "descr": "ServiceScope provides a formalized way for components to register and consume dependencies \n(\"services\"), and to enable different implementations to be registered in different scopes. \nThis improves modularity by decoupling components from their dependencies in an extensible way. \n \nFor example, suppose that various components need access to an IPageManager instance. We could \nsimply make the PageManager a singleton (i.e. global variable), but this will not work e.g. if \nwe need to create a pop-up dialog that requires a second PageManager instance. A better solution \nwould be to add the PageManager as a constructor parameter for each component that requires it, \nhowever then we immediately face the problem that any code that calls these constructors \nalso needs a PageManager parameter. In an application with many such dependencies, business \nlogic that ties together many subsystems would eventually pick up a constructor parameter \nfor every possible dependency, which is unwieldy. A natural solution would be to move all the \ndependencies into a class with name like \"ApplicationContext\", and then pass this around as our \nconstructor parameter. This enables the PageManager to be passed to classes that need it \nwithout cluttering the intermediary classes that don't. However, it still has a design problem \nthat \"ApplicationContext\" has hard-coded dependencies on many unrelated things. A more flexible \napproach is to make it a dictionary that can look up items for consumers/providers who know the \nright lookup key (i.e. ServiceKey). This is the popular \"service locator\" design pattern, \nfamiliar from the SPContext API in classic SharePoint. \n \nServiceScope takes this idea a step further in two important ways: First, it provides a scoping \nmechanism so that e.g. if we had two different pages, they could each consume a unique PageManager \ninstance while still sharing other common dependencies. Secondly, it allows for a ServiceKey \nto provide a default implementation of the dependency. This is important for API stability in \nour modular client-side environment: For example, suppose that version 2.0 of our application \nintroduced a new IDiagnosticTracing interface that a version 2.0 component will expect to consume. \nIf the version 2.0 component gets loaded by an older 1.0 application, it would fail. We could \nfix this by requiring each consumer to check for any missing dependencies and handle that case, \nbut it would require a lot of checks. A better solution is to ensure that a default implementation \nalways exists, perhaps just a trivial behavior, so that components don't have to worry about it. \n \nUsage: ServiceScope instances are created by calling either ServiceScope.startNewRoot() or \nServiceScope.startNewChild(). They are initially in an \"unfinished\" state, during which provide() \ncan be called to register service keys, but consume() is forbidden. After ServiceScope.finish() \nis called, consume() is allowed and provide() is now forbidden. These semantics ensure that \nServiceScope.consume() always returns the same result for the same key, and does not depend on \norder of initialization. It also allows us to support circular dependencies without worrying \nabout infinite loops, even when working with external components that were implemented by \nthird parties. To avoid mistakes, it's best to always call consume() inside a callback from \nserviceScope.whenFinished().",
+        "descr": "Create a new root-level ServiceScope. Only root-level scopes have the ability to autocreate \ndefault implementations of ServiceKeys.",
         "genericType": null,
         "returnType": "ServiceScope",
         "returnDescr": "- the newly created root ServiceScope",
@@ -1086,10 +1072,10 @@
         "signature": "whenFinished(callback: () => void): void",
         "isStatic": false,
         "isOptional": false,
-        "descr": "ServiceScope provides a formalized way for components to register and consume dependencies \n(\"services\"), and to enable different implementations to be registered in different scopes. \nThis improves modularity by decoupling components from their dependencies in an extensible way. \n \nFor example, suppose that various components need access to an IPageManager instance. We could \nsimply make the PageManager a singleton (i.e. global variable), but this will not work e.g. if \nwe need to create a pop-up dialog that requires a second PageManager instance. A better solution \nwould be to add the PageManager as a constructor parameter for each component that requires it, \nhowever then we immediately face the problem that any code that calls these constructors \nalso needs a PageManager parameter. In an application with many such dependencies, business \nlogic that ties together many subsystems would eventually pick up a constructor parameter \nfor every possible dependency, which is unwieldy. A natural solution would be to move all the \ndependencies into a class with name like \"ApplicationContext\", and then pass this around as our \nconstructor parameter. This enables the PageManager to be passed to classes that need it \nwithout cluttering the intermediary classes that don't. However, it still has a design problem \nthat \"ApplicationContext\" has hard-coded dependencies on many unrelated things. A more flexible \napproach is to make it a dictionary that can look up items for consumers/providers who know the \nright lookup key (i.e. ServiceKey). This is the popular \"service locator\" design pattern, \nfamiliar from the SPContext API in classic SharePoint. \n \nServiceScope takes this idea a step further in two important ways: First, it provides a scoping \nmechanism so that e.g. if we had two different pages, they could each consume a unique PageManager \ninstance while still sharing other common dependencies. Secondly, it allows for a ServiceKey \nto provide a default implementation of the dependency. This is important for API stability in \nour modular client-side environment: For example, suppose that version 2.0 of our application \nintroduced a new IDiagnosticTracing interface that a version 2.0 component will expect to consume. \nIf the version 2.0 component gets loaded by an older 1.0 application, it would fail. We could \nfix this by requiring each consumer to check for any missing dependencies and handle that case, \nbut it would require a lot of checks. A better solution is to ensure that a default implementation \nalways exists, perhaps just a trivial behavior, so that components don't have to worry about it. \n \nUsage: ServiceScope instances are created by calling either ServiceScope.startNewRoot() or \nServiceScope.startNewChild(). They are initially in an \"unfinished\" state, during which provide() \ncan be called to register service keys, but consume() is forbidden. After ServiceScope.finish() \nis called, consume() is allowed and provide() is now forbidden. These semantics ensure that \nServiceScope.consume() always returns the same result for the same key, and does not depend on \norder of initialization. It also allows us to support circular dependencies without worrying \nabout infinite loops, even when working with external components that were implemented by \nthird parties. To avoid mistakes, it's best to always call consume() inside a callback from \nserviceScope.whenFinished().",
+        "descr": "It is an error to call ServiceScope.consume() before finish() has been called. \nThe most reliable way to protect your component against this error is to perform the \nconsume() calls inside a whenFinished() callback. If the service scope is already \nfinished, then the callback will be executed immediately; otherwise, it will be executed \nlater when the scope is finished.",
         "genericType": null,
         "returnType": "void",
-        "returnDescr": "- the newly created root ServiceScope",
+        "returnDescr": "",
         "params": [
           {
             "name": "callback",
@@ -1099,6 +1085,24 @@
           }
         ]
       }
+    },
+    "constructor": {
+      "accessModifier": "public",
+      "signature": "constructor(parent: ServiceScope)",
+      "isStatic": false,
+      "isOptional": false,
+      "descr": "PRIVATE CONSTRUCTOR - DO NOT CALL THIS FROM YOUR OWN CODE.",
+      "genericType": null,
+      "returnType": "ServiceScope",
+      "returnDescr": "",
+      "params": [
+        {
+          "name": "parent",
+          "dataType": "ServiceScope",
+          "isOptional": false,
+          "descr": ""
+        }
+      ]
     },
     "types": {},
     "variables": {},
@@ -1119,7 +1123,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx"
+        "descr": "Add,change,or delete HTML pages or web part Pages,and edit the Web site using a SharePoint \nFoundation–compatible editor."
       },
       "addDelPrivateWebParts": {
         "dataType": "SPPermission",
@@ -1130,7 +1134,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx"
+        "descr": "Add or remove personal web parts on a web part Page."
       },
       "addListItems": {
         "dataType": "SPPermission",
@@ -1141,7 +1145,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx"
+        "descr": "Add items to lists,add documents to document libraries,and add Web discussion comments."
       },
       "applyStyleSheets": {
         "dataType": "SPPermission",
@@ -1152,7 +1156,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx"
+        "descr": "Apply a style sheet (.css file) to the Web site."
       },
       "applyThemeAndBorder": {
         "dataType": "SPPermission",
@@ -1163,7 +1167,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx"
+        "descr": "Apply a theme or borders to the entire Web site."
       },
       "approveItems": {
         "dataType": "SPPermission",
@@ -1174,7 +1178,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx"
+        "descr": "Approve a minor version of a list item or document."
       },
       "browseDirectories": {
         "dataType": "SPPermission",
@@ -1185,7 +1189,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx"
+        "descr": "Enumerate files and folders in a Web site using Microsoft Office SharePoint Designer 2007 and WebDAV interfaces."
       },
       "browserUserInfo": {
         "dataType": "SPPermission",
@@ -1196,7 +1200,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx"
+        "descr": "View information about users of the Web site."
       },
       "cancelCheckout": {
         "dataType": "SPPermission",
@@ -1207,7 +1211,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx"
+        "descr": "Discard or check in a document which is checked out to another user."
       },
       "createAlerts": {
         "dataType": "SPPermission",
@@ -1218,7 +1222,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx"
+        "descr": "Create e-mail alerts."
       },
       "createGroups": {
         "dataType": "SPPermission",
@@ -1229,7 +1233,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx"
+        "descr": "Create a group of users that can be used anywhere within the site collection."
       },
       "createSSCSite": {
         "dataType": "SPPermission",
@@ -1240,7 +1244,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx"
+        "descr": "Create a Web site using Self-Service Site Creation."
       },
       "deleteListItems": {
         "dataType": "SPPermission",
@@ -1251,7 +1255,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx"
+        "descr": "Delete items from a list,documents from a document library,and Web discussion comments in documents."
       },
       "deleteVersions": {
         "dataType": "SPPermission",
@@ -1262,7 +1266,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx"
+        "descr": "Delete past versions of a list item or document."
       },
       "editListItems": {
         "dataType": "SPPermission",
@@ -1273,7 +1277,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx"
+        "descr": "Edit items in lists,edit documents in document libraries,edit Web discussion comments in documents, \nand customize web part Pages in document libraries."
       },
       "editMyUserInfo": {
         "dataType": "SPPermission",
@@ -1284,7 +1288,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx"
+        "descr": "Allows a user to change his or her user information,such as adding a picture."
       },
       "emptyMask": {
         "dataType": "SPPermission",
@@ -1295,7 +1299,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx"
+        "descr": "Has no permissions on the Web site. Not available through the user interface."
       },
       "enumeratePermissions": {
         "dataType": "SPPermission",
@@ -1306,7 +1310,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx"
+        "descr": "Enumerate permissions on the Web site,list,folder,document,or list item."
       },
       "fullMask": {
         "dataType": "SPPermission",
@@ -1317,7 +1321,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx"
+        "descr": "Has all permissions on the Web site. Not available through the user interface."
       },
       "layoutsPage": {
         "dataType": "SPPermission",
@@ -1328,7 +1332,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx"
+        "descr": "View the layouts page?"
       },
       "manageAlerts": {
         "dataType": "SPPermission",
@@ -1339,7 +1343,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx"
+        "descr": "Manage alerts for all users of the Web site."
       },
       "manageLists": {
         "dataType": "SPPermission",
@@ -1350,7 +1354,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx"
+        "descr": "Create and delete lists,add or remove columns in a list,and add or remove public views of a list."
       },
       "managePermissions": {
         "dataType": "SPPermission",
@@ -1361,7 +1365,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx"
+        "descr": "Create and change permission levels on the Web site and assign permissions to users and groups."
       },
       "managePersonalViews": {
         "dataType": "SPPermission",
@@ -1372,7 +1376,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx"
+        "descr": "Create,change,and delete personal views of lists."
       },
       "manageSubwebs": {
         "dataType": "SPPermission",
@@ -1383,7 +1387,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx"
+        "descr": "Create subsites such as team sites,Meeting Workspace sites,and Document Workspace sites."
       },
       "manageWeb": {
         "dataType": "SPPermission",
@@ -1394,7 +1398,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx"
+        "descr": "Grant the ability to perform all administration tasks for the Web site as well as manage content. \nActivate, deactivate,or edit properties of Web site scoped Features through the object model or \nthrough the user interface (UI). When grantedon the root Web site of a site collection, activate, \ndeactivate, or edit properties of site collection scoped Features through the object model. To \nbrowse to the Site Collection Features page and activate or deactivate site collection scoped \nFeatures through the UI, you must be a site collection administrator."
       },
       "open": {
         "dataType": "SPPermission",
@@ -1405,7 +1409,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx"
+        "descr": "Allow users to open a Web site,list,or folder to access items inside that container."
       },
       "openItems": {
         "dataType": "SPPermission",
@@ -1416,7 +1420,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx"
+        "descr": "View the source of documents with server-side file handlers."
       },
       "updatePersonalWebParts": {
         "dataType": "SPPermission",
@@ -1427,7 +1431,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx"
+        "descr": "Update web parts to display personalized information."
       },
       "useClientIntegration": {
         "dataType": "SPPermission",
@@ -1438,7 +1442,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx"
+        "descr": "Use features that launch client applications otherwise,users must work on documents locally and upload changes."
       },
       "useRemoteAPIs": {
         "dataType": "SPPermission",
@@ -1449,7 +1453,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx"
+        "descr": "Use SOAP,WebDAV,or Microsoft Office SharePoint Designer 2007 interfaces to access the Web site."
       },
       "value": {
         "dataType": "IODataBasePermission",
@@ -1460,7 +1464,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx"
+        "descr": "Returns the value of this SPPermission object"
       },
       "viewFormPages": {
         "dataType": "SPPermission",
@@ -1471,7 +1475,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx"
+        "descr": "View forms,views,and application pages,and enumerate lists."
       },
       "viewListItems": {
         "dataType": "SPPermission",
@@ -1482,7 +1486,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx"
+        "descr": "View items in lists,documents in document libraries,and view Web discussion comments."
       },
       "viewPages": {
         "dataType": "SPPermission",
@@ -1493,7 +1497,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx"
+        "descr": "View pages in a Web site."
       },
       "viewUsageData": {
         "dataType": "SPPermission",
@@ -1504,7 +1508,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx"
+        "descr": "View reports on Web site usage."
       },
       "viewVersions": {
         "dataType": "SPPermission",
@@ -1515,35 +1519,17 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx"
+        "descr": "View past versions of a list item or document."
       }
     },
     "functions": {},
     "methods": {
-      "constructor-ORTo9": {
-        "accessModifier": "public",
-        "signature": "constructor(value: IODataBasePermission)",
-        "isStatic": false,
-        "isOptional": false,
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx",
-        "genericType": null,
-        "returnType": "SPPermission",
-        "returnDescr": "",
-        "params": [
-          {
-            "name": "value",
-            "dataType": "IODataBasePermission",
-            "isOptional": false,
-            "descr": ""
-          }
-        ]
-      },
       "hasAllPermissions-e1lY9": {
         "accessModifier": "public",
         "signature": "hasAllPermissions(...requestedPerms: SPPermission[]): boolean",
         "isStatic": false,
         "isOptional": false,
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx",
+        "descr": "Function for determining if a given permission mask has all of the requested permissions.",
         "genericType": null,
         "returnType": "boolean",
         "returnDescr": "",
@@ -1561,7 +1547,7 @@
         "signature": "hasAnyPermissions(...requestedPerms: SPPermission[]): boolean",
         "isStatic": false,
         "isOptional": false,
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx",
+        "descr": "Function for determining if a given permission mask has any of the requested permissions.",
         "genericType": null,
         "returnType": "boolean",
         "returnDescr": "",
@@ -1579,7 +1565,7 @@
         "signature": "hasPermission(requestedPerm: SPPermission): boolean",
         "isStatic": false,
         "isOptional": false,
-        "descr": "This class can be used to determine if the current user has a requested set of permissions. \nSpecifies the built-in permissions available in SharePoint Foundation \nDerived from OneDriveWeb/ODBNext/odsp-shared \nhttps://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx",
+        "descr": "Function for checking if a given permission mask has the requested permission.",
         "genericType": null,
         "returnType": "boolean",
         "returnDescr": "",
@@ -1592,6 +1578,24 @@
           }
         ]
       }
+    },
+    "constructor": {
+      "accessModifier": "public",
+      "signature": "constructor(value: IODataBasePermission)",
+      "isStatic": false,
+      "isOptional": false,
+      "descr": "",
+      "genericType": null,
+      "returnType": "SPPermission",
+      "returnDescr": "",
+      "params": [
+        {
+          "name": "value",
+          "dataType": "IODataBasePermission",
+          "isOptional": false,
+          "descr": ""
+        }
+      ]
     },
     "types": {},
     "variables": {},
@@ -1612,11 +1616,12 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class is primarily used with the PageContext class. It provides contextual \ninformation for the SharePoint site collection (\"site\") that hosts the page. \n"
+        "descr": "The GUID that identifies the SPSite on the server."
       }
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -1636,7 +1641,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class is primarily used with the PageContext class. It provides contextual information \nfor the SharePoint user that is accessing the page. \n"
+        "descr": "The display name for the current user. \nExample: \"John Doe\""
       },
       "loginName": {
         "dataType": "string",
@@ -1647,11 +1652,12 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class is primarily used with the PageContext class. It provides contextual information \nfor the SharePoint user that is accessing the page. \n"
+        "descr": "The login name for specified user. \nExample: \"example@microsoft.com\""
       }
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -1671,7 +1677,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class is primarily used with the PageContext class. It provides contextual \ninformation for the SharePoint site (\"web\") that hosts the page."
+        "descr": "Returns the absolute URL for this SPWeb. \nExample: \"https://example.com/sites/PubSite/SubWeb\""
       },
       "id": {
         "dataType": "Guid",
@@ -1682,7 +1688,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class is primarily used with the PageContext class. It provides contextual \ninformation for the SharePoint site (\"web\") that hosts the page."
+        "descr": "The GUID that identifies the SPWeb on the server or undefined if the Guid string \nvalue is invalid."
       },
       "serverRelativeUrl": {
         "dataType": "string",
@@ -1693,7 +1699,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class is primarily used with the PageContext class. It provides contextual \ninformation for the SharePoint site (\"web\") that hosts the page."
+        "descr": "Returns the server-relative URL for this SPWeb. \nExample: \"/sites/PubSite/SubWeb\""
       },
       "title": {
         "dataType": "string",
@@ -1704,11 +1710,12 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This class is primarily used with the PageContext class. It provides contextual \ninformation for the SharePoint site (\"web\") that hosts the page."
+        "descr": "Returns the title of the SharePoint site."
       }
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -1721,30 +1728,12 @@
     "properties": {},
     "functions": {},
     "methods": {
-      "constructor-mnJI9": {
-        "accessModifier": "public",
-        "signature": "constructor(url: string)",
-        "isStatic": false,
-        "isOptional": false,
-        "descr": "Class for storing and retrieving query parameters. \nThe URL can be server-relative and it will parse empty/null strings. \nThe query parameters must start with? to indicate the first query parameter and \nuse & for all subsequent parameters. The class also supports fragments. \nEdge cases behavior: \nEmpty value (www.example.com/?test=) stores key and empty value \nNo equals in queryParam (www.example.com/?test) stores key and undefined value \nEmpty queryParam (www.example.com/?&debug=on) stores undefined key and value \nQuery param with only equals (www.example.com/?=&debug=on stores empty string key and value",
-        "genericType": null,
-        "returnType": "UrlQueryParameterCollection",
-        "returnDescr": "",
-        "params": [
-          {
-            "name": "url",
-            "dataType": "string",
-            "isOptional": false,
-            "descr": ""
-          }
-        ]
-      },
       "getValue-eNIk9": {
         "accessModifier": "public",
         "signature": "getValue(param: string): string",
         "isStatic": false,
         "isOptional": false,
-        "descr": "Class for storing and retrieving query parameters. \nThe URL can be server-relative and it will parse empty/null strings. \nThe query parameters must start with? to indicate the first query parameter and \nuse & for all subsequent parameters. The class also supports fragments. \nEdge cases behavior: \nEmpty value (www.example.com/?test=) stores key and empty value \nNo equals in queryParam (www.example.com/?test) stores key and undefined value \nEmpty queryParam (www.example.com/?&debug=on) stores undefined key and value \nQuery param with only equals (www.example.com/?=&debug=on stores empty string key and value",
+        "descr": "Returns the value of the first matching query parameter or undefined if the key doesn't exist. \nExamples: this._queryParameterList = [ \n{key: TEST, value: done}, \n{key: DEBUG, value: false}, \n{key: TEST, value: notdone}] \ngetValue('TEST') ---> 'done' \ngetValue('debug') ---> 'false' \ngetValue('lost') ---> undefined",
         "genericType": null,
         "returnType": "string",
         "returnDescr": "",
@@ -1762,7 +1751,7 @@
         "signature": "getValues(param: string): string[]",
         "isStatic": false,
         "isOptional": false,
-        "descr": "Class for storing and retrieving query parameters. \nThe URL can be server-relative and it will parse empty/null strings. \nThe query parameters must start with? to indicate the first query parameter and \nuse & for all subsequent parameters. The class also supports fragments. \nEdge cases behavior: \nEmpty value (www.example.com/?test=) stores key and empty value \nNo equals in queryParam (www.example.com/?test) stores key and undefined value \nEmpty queryParam (www.example.com/?&debug=on) stores undefined key and value \nQuery param with only equals (www.example.com/?=&debug=on stores empty string key and value",
+        "descr": "Returns the values of all of the matching query parameters or undefined if the key doesn't exist. \nExamples: this._queryParameterList = [ \n{key: TEST, value: done}, \n{key: DEBUG, value: false}, \n{key: TEST, value: notdone}] \ngetValues('TEST') ---> ['done', 'notdone'] \ngetValues('debug') ---> ['false'] \ngetValues('lost') ---> undefined",
         "genericType": null,
         "returnType": "string[]",
         "returnDescr": "",
@@ -1775,6 +1764,24 @@
           }
         ]
       }
+    },
+    "constructor": {
+      "accessModifier": "public",
+      "signature": "constructor(url: string)",
+      "isStatic": false,
+      "isOptional": false,
+      "descr": "",
+      "genericType": null,
+      "returnType": "UrlQueryParameterCollection",
+      "returnDescr": "",
+      "params": [
+        {
+          "name": "url",
+          "dataType": "string",
+          "isOptional": false,
+          "descr": ""
+        }
+      ]
     },
     "types": {},
     "variables": {},
@@ -1793,7 +1800,7 @@
         "signature": "convertToODataStringLiteral(value: string): string",
         "isStatic": true,
         "isOptional": false,
-        "descr": "Common helper functions for working with URLs. These utilities are intended to be simple, \nsmall, and extremely common. Do not add advanced parsing logic to this file.",
+        "descr": "Converts a variable to an OData string literal and escapes apostrophes. \nOData specification: \nhttps://tools.oasis-open.org/version-control/ \nbrowse/wsvn/odata/trunk/spec/ABNF/odata-abnf-construction-rules.txt \nSQUOTE-in-string = SQUOTE SQUOTE ; two consecutive single quotes represent one within a string literal \nExamples: \nconvertToODataStringLiteral(\"example's list\") ---> \"'example''s list'\" \nconvertToODataStringLiteral(\"example list\") ---> \"'example list'\" \nconvertToODataStringLiteral(\"'example list'\") ---> \"'''example list'''\"",
         "genericType": null,
         "returnType": "string",
         "returnDescr": "",
@@ -1811,7 +1818,7 @@
         "signature": "removeEndSlash(url: string): string",
         "isStatic": true,
         "isOptional": false,
-        "descr": "Common helper functions for working with URLs. These utilities are intended to be simple, \nsmall, and extremely common. Do not add advanced parsing logic to this file.",
+        "descr": "Removes any slash characters from the end of the URL. \nThis function assumes that the input is already a valid absolute or server-relative URL. \nExamples: \nremoveEndSlash('http://example.com/') ---> 'http://example.com' \nremoveEndSlash('/example') ---> '/example' \nremoveEndSlash('/') ---> ''",
         "genericType": null,
         "returnType": "string",
         "returnDescr": "",
@@ -1825,6 +1832,7 @@
         ]
       }
     },
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -1842,7 +1850,7 @@
         "signature": "isNonemptyString(value: string,variableName: string): void",
         "isStatic": true,
         "isOptional": false,
-        "descr": "This class implements provides a standard way to validate properties and function parameters. \nUnlike an assertion, the Validate checks are always performed and will always throw an error, \neven in a production release. As such, be careful not to overuse these checks in a way \nthat might impact performance.",
+        "descr": "Throws an exception if the specified string is null,undefined,or an empty string.",
         "genericType": null,
         "returnType": "void",
         "returnDescr": "",
@@ -1866,7 +1874,7 @@
         "signature": "isNotNullOrUndefined(value: any,variableName: string): void",
         "isStatic": true,
         "isOptional": false,
-        "descr": "This class implements provides a standard way to validate properties and function parameters. \nUnlike an assertion, the Validate checks are always performed and will always throw an error, \neven in a production release. As such, be careful not to overuse these checks in a way \nthat might impact performance.",
+        "descr": "Throws an exception if the specified value is null or undefined.",
         "genericType": null,
         "returnType": "void",
         "returnDescr": "",
@@ -1890,7 +1898,7 @@
         "signature": "isTrue(value: boolean,variableName: string): void",
         "isStatic": true,
         "isOptional": false,
-        "descr": "This class implements provides a standard way to validate properties and function parameters. \nUnlike an assertion, the Validate checks are always performed and will always throw an error, \neven in a production release. As such, be careful not to overuse these checks in a way \nthat might impact performance.",
+        "descr": "Throws an exception if the specified value is not true.",
         "genericType": null,
         "returnType": "void",
         "returnDescr": "",
@@ -1910,6 +1918,7 @@
         ]
       }
     },
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},

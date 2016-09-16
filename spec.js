@@ -134,36 +134,33 @@ function comment_reset() {
 //     return
 // }
 
-function prepareLine(line='') {
-    line = line.split('//')[0]
-    line = line.replace(/\s+/g, ' ').trim()
-    line = line.replace(/,\s/g, ',').trim()
-    line = line.replace(/;/g,'')
-    // var c = line.lastIndexOf(';')
-    // line = line.substr(c+1).trim()
+function prepareLine(line='', commentLine = false) {
 
     isStatic = false
     hasAssignment = false
     assignValue = null
-    // Should it be ' static ' or 'static '
-    if (line.includes(' static ')) {
-      isStatic = true
-      line = line.replace(' static ', ' ')
-    }
 
-    // If the line has assignment, cut and save that to another location.
-    // Example: public eventAggregator: IEventAggregator = {} as any;
-    // Here, {} as any part is stowed away.
-    //
-    if (line.includes(' = ') && line.includes(':')) {
-      hasAssignment = true
-      assignValue = line.split(' = ').pop()
-      line = line.split(' = ').slice(0, -1).join('')
+    line = line.replace(/\s+/g, ' ').trim()
+    if (!commentLine) {
+        line = line.split('//')[0]
+        line = line.replace(/,\s/g, ',').trim()
+        line = line.replace(/;/g,'')
+        if (line.includes(' static ')) {
+          isStatic = true
+          line = line.replace(' static ', ' ')
+        }
+        // If the line has assignment, cut and save that to another location.
+        // Example: public eventAggregator: IEventAggregator = {} as any;
+        // Here, {} as any part is stowed away.
+        //
+        if (line.includes(' = ') && line.includes(':')) {
+          hasAssignment = true
+          assignValue = line.split(' = ').pop()
+          line = line.split(' = ').slice(0, -1).join('')
+        }
     }
-
-    // if (line.includes(BLOCK_BEGIN) && line.includes(BLOCK_END)) {
-    //     return
-    // }
+    // var c = line.lastIndexOf(';')
+    // line = line.substr(c+1).trim()
     var o = Utils.splitToWords(line)
     firstWord = o['f']
     secondWord = o['s']
@@ -187,10 +184,13 @@ function processComment(index = 0, lines = []) {
           block_begin_reset()
           comment_reset()
           continue
+        } else if (firstWord === C_END) {
+            cmode = false
+            break
         } else if (firstWord === COMMENT) {
-          if (secondWord === undefined) {
-              continue
-          } else if (secondWord.startsWith(ATSYMBOL)) {
+            if (secondWord === undefined) {
+                continue
+            } else if (secondWord.startsWith(ATSYMBOL)) {
               // PROCESS @param, etc.
               paramEncountered = true
               switch (secondWord) {
@@ -228,11 +228,8 @@ function processComment(index = 0, lines = []) {
               }
           }
           continue
-        } else if (firstWord === C_END) {
-          cmode = false
-          break
-        }
-    }
+      }
+  }
     return
 }
 
@@ -253,8 +250,8 @@ function processEnum(index = 0, lines = []) {
             block_end_reset()
             return o
         } else if (firstWord === C_START) {
+          ignore_upto--
           processComment(i, lines)
-
         } else {
             if (line.includes('=')) {
                 var v = line.replace(',', '').split('=').map((s) => s.trim())
@@ -279,6 +276,7 @@ function processEnum(index = 0, lines = []) {
 
 function processObject(objectName = '', index = 0, lines = [], isClass) {
     let o = Utils.createClassInterfaceObject(lines[index], generalDesc)
+    comment_reset()
     for (var i = (index + 1); i < lines.length; i++) {
         if (ignore_upto >= i) continue
         ignore_upto = i
@@ -289,6 +287,7 @@ function processObject(objectName = '', index = 0, lines = [], isClass) {
             block_end_reset()
             return o
         } else if (firstWord === C_START) {
+            ignore_upto--
             processComment(i, lines)
             continue
         } else {
@@ -298,6 +297,7 @@ function processObject(objectName = '', index = 0, lines = [], isClass) {
                 console.log(line);
                 var oa = Utils.readObjectAhead(lines, i)
                 ignore_upto = oa['skip'].pop()
+                comment_reset()
                 continue
             } else if (memberType === 'PROPERTY') {   //PROPERTY
                 var p = {}
@@ -305,14 +305,21 @@ function processObject(objectName = '', index = 0, lines = [], isClass) {
                 var p = Utils.processProperty(name, line, generalDesc, assignValue, false, readonlyProperty)
                 name = name.replace('?','')
                 o['properties'][name] = p
+                comment_reset()
                 continue
             } else if (memberType === 'METHOD') {   //METHOD
                 var name = Utils.getMethodName(line) || "ErrorErrorError-99999"
                 var m = Utils.processMethod(line, generalDesc, commentObject, objectName, name, isStatic)
-                o['methods'][name] = m
+                if (name.split('-')[0] === 'constructor') {
+                    o['constructor'] = m
+                }
+                else {
+                    o['methods'][name] = m
+                }
                 var linkvalue = ('../' + anchor + '/' + objectName + '.md#' + name.split('-')[0]).toLowerCase()
                 var linkkey = (objectName + '.' + name.split('-')[0]).toLowerCase()
                 allVarsTypes[linkkey] = linkvalue
+                comment_reset()
                 continue
             } else if (memberType === 'FUNCTION') {   //METHOD
                 var name = Utils.getMethodName(line) || "ErrorErrorError-99999"
@@ -321,6 +328,7 @@ function processObject(objectName = '', index = 0, lines = [], isClass) {
                 var linkvalue = ('../' + anchor + '/'  + objectName + '.md#' + name.split('-')[0]).toLowerCase()
                 var linkkey = (objectName + '.' + name.split('-')[0]).toLowerCase()
                 allVarsTypes[linkkey] = linkvalue
+                comment_reset()
                 continue
             } else if (memberType === 'VARIABLE') {
                 nVariable++
@@ -369,6 +377,7 @@ function processLines(element = '', index = 0, lines = []) {
     if (SKIP.includes(firstWord)) return
 
     if (firstWord === C_START) {
+        ignore_upto--
         processComment(index, lines)
         return
     } else if (firstWord === BLOCK_END) {
@@ -399,7 +408,6 @@ function processLines(element = '', index = 0, lines = []) {
         className = Utils.trimGenerics(preClassName)
         allTypes[className] = `../${anchor}/${Utils.trimGenerics(className).toLowerCase()}.md`
         allTypes[Utils.trimGenerics(className)] = `../${anchor}/${Utils.trimGenerics(className).toLowerCase()}.md`
-
         classObj[className] = processObject(className, index, lines, true)
         comment_reset()
         return

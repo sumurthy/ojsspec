@@ -73,6 +73,7 @@
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -119,6 +120,7 @@
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -156,6 +158,7 @@
         ]
       }
     },
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},

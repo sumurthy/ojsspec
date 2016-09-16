@@ -168,6 +168,11 @@ function set_region(tline = '', obj = {}, localName = '', isClass = true) {
                     skipFlag = true
                 }
                 break;
+            case 'constructor':
+                if (Object.keys(obj[localName]['constructor']).length === 0) {
+                    skipFlag = true
+                }
+                break;
             case 'method':
                 if (!isClass) {
                     skipFlag = true
@@ -275,6 +280,25 @@ function doSubClassInterface(tline = '', localO = {}, localName = '', isClass = 
             tline = tline.replace('%extendsimplements%', '')
         }
     }
+    if (tline.includes('%constdesc%')) {
+        tline = tline.replace('%constdesc%', localO[localName]['constructor']['descr'])
+    }
+    if (tline.includes('%constsignature%')) {
+        tline = tline.replace('%constsignature%', localO[localName]['constructor']['signature'])
+    }
+    if (tline.includes('%constrtype%')) {
+        tline = tline.replace('%constrtype%', localO[localName]['constructor']['returnType'])
+    }
+    if (tline.includes('%constreturndescr%')) {
+        tline = tline.replace('%constreturndescr%', localO[localName]['constructor']['returnDescr'])
+    }
+    if (tline.includes('%cnoparam%')) {
+        if (localO[localName]['constructor']['params'].length === 0) {
+            tline = tline.replace('%cnoparam%', 'None')
+        } else {
+            tline = tline.replace('%cnoparam%', '')
+        }
+    }
     return tline
 }
 
@@ -369,8 +393,8 @@ function addRegions(tline = '', type = '') {
         mline = mline.replace('%type%', `${getLinkForType(o[e]['dataType'])}`)
 
         mline = mline.replace('%link%', `./${anchor}/${e.replace(/'/g,'').toLowerCase()}`)
-            //Get first sentence
         var descr = o[e]['descr']
+        //Get first sentence
         if (descr) {
             //descr = descr.split('.')[0].replace(/\n/g, ' ')
             descr = descr.replace(/\n/g, ' ')
@@ -430,10 +454,10 @@ function addMembers(tline = '', type = '', name = '', localO = {}) {
             mline = mline.replace('%type%', `${getLinkForType(o[e]['dataType'])}`)
         }
 
-        //Get first sentence
         var descr = o[e]['descr']
         if (descr) {
-            descr = descr.split('.')[0].replace(/\n/g, ' ')
+            //descr = descr.split('.')[0].replace(/\n/g, ' ')
+            descr = descr.replace(/\n/g, ' ')
         }
         mline = mline.replace('%description%', descr)
         mem_mdout.push(mline)
@@ -441,11 +465,9 @@ function addMembers(tline = '', type = '', name = '', localO = {}) {
 }
 
 function addParams(tline = '', member = {}, targetArray = []) {
-
     member['params'].forEach((e) => {
         var mline = dclone(tline).substr(1)
         mline = mline.replace('%name%', e['name'])
-            // }
         mline = mline.replace('%dtype%', `${getLinkForType(e['dataType'])}`)
         if (e['isOptional']) {
             mline = mline.replace('%optional% ', '_Optional._')
@@ -453,11 +475,11 @@ function addParams(tline = '', member = {}, targetArray = []) {
         else {
             mline = mline.replace('%optional% ', '')
         }
-        //Get first sentence
         var descr = e['descr']
+        //Get first sentence
         if (descr) {
-            descr = descr.split('.')[0].replace(/\n/g, ' ')
-
+        //     descr = descr.split('.')[0].replace(/\n/g, ' ')
+            descr = descr.replace(/\n/g, ' ')
         }
         mline = mline.replace('%description%', descr)
             // if (member['parameters'][e]['descr']) {
@@ -470,7 +492,6 @@ function addParams(tline = '', member = {}, targetArray = []) {
         targetArray.push(mline)
     })
 }
-
 
 function genClassInterfaceModuleView(isClass = true, localName = '', isModule = false) {
     var localO = isClass ? classObj : iObj
@@ -485,16 +506,11 @@ function genClassInterfaceModuleView(isClass = true, localName = '', isModule = 
         tline = tline.trim()
         var key = tline[0] || '*'
         var key2 = tline.substring(0, 2)
-
         if (NEW_REGION.includes(key)) {
             set_region(tline, localO, localName, isClass)
             return
         }
-
-        if (skipFlag) {
-            return
-        }
-
+        if (skipFlag) return
         var hasVar = tline.includes('%') ? true : false
 
         if (WRITE_BACK.includes(key)) {
@@ -511,6 +527,9 @@ function genClassInterfaceModuleView(isClass = true, localName = '', isModule = 
                 case 'iproperty':
                 case 'variables':
                     addMembers(tline, region, localName, localO)
+                    break;
+                case 'constructor':
+                    addParams(tline, o['constructor'], mem_mdout)
                     break;
                 default:
             }

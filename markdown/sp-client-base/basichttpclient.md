@@ -8,40 +8,12 @@ BasicHttpClient implements a basic set of features for performing REST operation
 The subclass HttpClient extends this basic functionality with SharePoint-specific 
 enhancements.
 
-## Properties
 
-| Property	   | Access Modifier | Type	| Description|
-|:-------------|:----|:-------|:-----------|
-|`serviceScope`     | `protected` | [`ServiceScope`](../sp-client-base/servicescope.md) | BasicHttpClient implements a basic set of features for performing REST operations |
+## Constructor
 
 
-
-
-## Methods
-
-| Method	   | Access Modifier | Returns	| Description|
-|:-------------|:----|:-------|:-----------|
-|[`constructor`](#constructor)     | `public` | [`BasicHttpClient`](../sp-client-base/basichttpclient.md) | BasicHttpClient implements a basic set of features for performing REST operations |
-|[`fetch`](#fetch)     | `public` | [`Promise<Response>`](../es6-promise/promise.md) | BasicHttpClient implements a basic set of features for performing REST operations |
-|[`fetchCore`](#fetchcore)     | `protected` | [`Promise<Response>`](../es6-promise/promise.md) | BasicHttpClient implements a basic set of features for performing REST operations |
-|[`get`](#get)     | `public` | [`Promise<Response>`](../es6-promise/promise.md) | BasicHttpClient implements a basic set of features for performing REST operations |
-|[`post`](#post)     | `public` | [`Promise<Response>`](../es6-promise/promise.md) | BasicHttpClient implements a basic set of features for performing REST operations |
-
-
-
-
-
-### constructor
-
-BasicHttpClient implements a basic set of features for performing REST operations. 
-The subclass HttpClient extends this basic functionality with SharePoint-specific 
-enhancements.
-
-#### Signature
-`constructor(serviceScope: ServiceScope)`
-
-#### Returns
-[`BasicHttpClient`](../sp-client-base/basichttpclient.md)
+**Signature:** constructor(serviceScope: ServiceScope)
+**Returns**: BasicHttpClient
 
 
 #### Parameters
@@ -52,17 +24,37 @@ enhancements.
 | `serviceScope`    | [`ServiceScope`](../sp-client-base/servicescope.md) |  |
 
 
+## Properties
+
+| Property	   | Access Modifier | Type	| Description|
+|:-------------|:----|:-------|:-----------|
+|`serviceScope`     | `protected` | [`ServiceScope`](../sp-client-base/servicescope.md) |  |
+
+
+
+
+## Methods
+
+| Method	   | Access Modifier | Returns	| Description|
+|:-------------|:----|:-------|:-----------|
+|[`fetch`](#fetch)     | `public` | [`Promise<Response>`](../es6-promise/promise.md) | Performs a REST service call. Although the HttpClient subclass adds  additional enhancements, the parameters and semantics for BasicHttpClient.fetch()  are essentially the same as the WHATWG API standard that is documented here:  https://fetch.spec.whatwg.org/ |
+|[`fetchCore`](#fetchcore)     | `protected` | [`Promise<Response>`](../es6-promise/promise.md) |  |
+|[`get`](#get)     | `public` | [`Promise<Response>`](../es6-promise/promise.md) | Calls fetch(),but sets the method to 'GET'. |
+|[`post`](#post)     | `public` | [`Promise<Response>`](../es6-promise/promise.md) | Calls fetch(),but sets the method to 'POST'. |
+
+
+
+
+
 ### fetch
 
-BasicHttpClient implements a basic set of features for performing REST operations. 
-The subclass HttpClient extends this basic functionality with SharePoint-specific 
-enhancements.
+Performs a REST service call. Although the HttpClient subclass adds 
+additional enhancements, the parameters and semantics for BasicHttpClient.fetch() 
+are essentially the same as the WHATWG API standard that is documented here: 
+https://fetch.spec.whatwg.org/
 
-#### Signature
-`fetch(url: string,options: IBasicHttpClientOptions): Promise<Response>`
-
-#### Returns
-[`Promise<Response>`](../es6-promise/promise.md)
+**Signature:** `fetch(url: string,options: IBasicHttpClientOptions): Promise<Response>`
+**Returns**: [`Promise<Response>`](../es6-promise/promise.md)
 a promise that will return the result
 
 #### Parameters
@@ -76,16 +68,11 @@ a promise that will return the result
 
 ### fetchCore
 
-BasicHttpClient implements a basic set of features for performing REST operations. 
-The subclass HttpClient extends this basic functionality with SharePoint-specific 
-enhancements.
 
-#### Signature
-`fetchCore(request: Request): Promise<Response>`
 
-#### Returns
-[`Promise<Response>`](../es6-promise/promise.md)
-a promise that will return the result
+**Signature:** `fetchCore(request: Request): Promise<Response>`
+**Returns**: [`Promise<Response>`](../es6-promise/promise.md)
+
 
 #### Parameters
 
@@ -97,15 +84,10 @@ a promise that will return the result
 
 ### get
 
-BasicHttpClient implements a basic set of features for performing REST operations. 
-The subclass HttpClient extends this basic functionality with SharePoint-specific 
-enhancements.
+Calls fetch(),but sets the method to 'GET'.
 
-#### Signature
-`get(url: string,options?: IBasicHttpClientOptions): Promise<Response>`
-
-#### Returns
-[`Promise<Response>`](../es6-promise/promise.md)
+**Signature:** `get(url: string,options?: IBasicHttpClientOptions): Promise<Response>`
+**Returns**: [`Promise<Response>`](../es6-promise/promise.md)
 a promise that will return the result
 
 #### Parameters
@@ -119,15 +101,10 @@ a promise that will return the result
 
 ### post
 
-BasicHttpClient implements a basic set of features for performing REST operations. 
-The subclass HttpClient extends this basic functionality with SharePoint-specific 
-enhancements.
+Calls fetch(),but sets the method to 'POST'.
 
-#### Signature
-`post(url: string,options: IBasicHttpClientOptions): Promise<Response>`
-
-#### Returns
-[`Promise<Response>`](../es6-promise/promise.md)
+**Signature:** `post(url: string,options: IBasicHttpClientOptions): Promise<Response>`
+**Returns**: [`Promise<Response>`](../es6-promise/promise.md)
 a promise that will return the result
 
 #### Parameters

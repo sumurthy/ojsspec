@@ -13,7 +13,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This interface defines the options for the BasicHttpClient operations such as \nget(), post(), fetch(), etc. It is based on the whatwg API standard \nparameters that are documented here: \nhttps://fetch.spec.whatwg.org/"
+        "descr": ""
       },
       "cache": {
         "dataType": "string|RequestCache",
@@ -24,7 +24,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This interface defines the options for the BasicHttpClient operations such as \nget(), post(), fetch(), etc. It is based on the whatwg API standard \nparameters that are documented here: \nhttps://fetch.spec.whatwg.org/"
+        "descr": ""
       },
       "credentials": {
         "dataType": "string|RequestCredentials",
@@ -35,7 +35,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This interface defines the options for the BasicHttpClient operations such as \nget(), post(), fetch(), etc. It is based on the whatwg API standard \nparameters that are documented here: \nhttps://fetch.spec.whatwg.org/"
+        "descr": ""
       },
       "headers": {
         "dataType": "HeaderInit|{ [index: string]: string }",
@@ -46,7 +46,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This interface defines the options for the BasicHttpClient operations such as \nget(), post(), fetch(), etc. It is based on the whatwg API standard \nparameters that are documented here: \nhttps://fetch.spec.whatwg.org/"
+        "descr": ""
       },
       "method": {
         "dataType": "string",
@@ -57,7 +57,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This interface defines the options for the BasicHttpClient operations such as \nget(), post(), fetch(), etc. It is based on the whatwg API standard \nparameters that are documented here: \nhttps://fetch.spec.whatwg.org/"
+        "descr": ""
       },
       "mode": {
         "dataType": "string|RequestMode",
@@ -68,11 +68,12 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This interface defines the options for the BasicHttpClient operations such as \nget(), post(), fetch(), etc. It is based on the whatwg API standard \nparameters that are documented here: \nhttps://fetch.spec.whatwg.org/"
+        "descr": ""
       }
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -92,7 +93,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This is is the manifest for a client-side application."
+        "descr": "Represents the boot strap module link of client side application or webpart."
       },
       "cssLinks": {
         "dataType": "string[]",
@@ -103,7 +104,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This is is the manifest for a client-side application."
+        "descr": "Represents the fabric css components links."
       },
       "displayName": {
         "dataType": "string",
@@ -114,7 +115,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This is is the manifest for a client-side application."
+        "descr": "Represents display name of webpart."
       },
       "id": {
         "dataType": "string",
@@ -125,7 +126,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This is is the manifest for a client-side application."
+        "descr": "Represents the application id."
       },
       "manifestVersion": {
         "dataType": "number",
@@ -136,7 +137,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This is is the manifest for a client-side application."
+        "descr": "Represents the manifest version."
       },
       "moduleName": {
         "dataType": "string",
@@ -147,7 +148,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This is is the manifest for a client-side application."
+        "descr": "Represents name of the module which loads application or webpart."
       },
       "platformModule": {
         "dataType": "string",
@@ -158,7 +159,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This is is the manifest for a client-side application."
+        "descr": "Represents the platform js module link of client side application."
       },
       "preloadClientSideComponents": {
         "dataType": "string[]",
@@ -169,7 +170,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This is is the manifest for a client-side application."
+        "descr": "Represents client side components to be preloaded when loading \"this\" component."
       },
       "systemJsModule": {
         "dataType": "string",
@@ -180,7 +181,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This is is the manifest for a client-side application."
+        "descr": "Represents the system js module link of client side application."
       },
       "version": {
         "dataType": "string",
@@ -191,11 +192,12 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This is is the manifest for a client-side application."
+        "descr": "Represents the version of scripts."
       }
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -215,7 +217,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This is the base interface that is extended by the interfaces \nthat represent the manifest for each kind of client-side component."
+        "descr": "Represents the boot strap module link of client side application or webpart."
       },
       "displayName": {
         "dataType": "string",
@@ -226,7 +228,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This is the base interface that is extended by the interfaces \nthat represent the manifest for each kind of client-side component."
+        "descr": "Represents display name of webpart."
       },
       "id": {
         "dataType": "string",
@@ -237,7 +239,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This is the base interface that is extended by the interfaces \nthat represent the manifest for each kind of client-side component."
+        "descr": "Represents the application id."
       },
       "manifestVersion": {
         "dataType": "number",
@@ -248,7 +250,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This is the base interface that is extended by the interfaces \nthat represent the manifest for each kind of client-side component."
+        "descr": "Represents the manifest version."
       },
       "moduleName": {
         "dataType": "string",
@@ -259,7 +261,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This is the base interface that is extended by the interfaces \nthat represent the manifest for each kind of client-side component."
+        "descr": "Represents name of the module which loads application or webpart."
       },
       "version": {
         "dataType": "string",
@@ -270,11 +272,12 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This is the base interface that is extended by the interfaces \nthat represent the manifest for each kind of client-side component."
+        "descr": "Represents the version of scripts."
       }
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -292,7 +295,7 @@
         "signature": "addDigestToCache(webUrl: string,digestValue: string,expirationTimestamp: number): void",
         "isStatic": false,
         "isOptional": false,
-        "descr": "IDigestCache is an internal service used by HttpClient to maintain a cache of request digests \nfor each SPWeb URL. A request digest is a security token that the SharePoint server requires for \nfor any REST write operation, specified via the \"X-RequestDigest\" HTTP header. It is obtained \nby calling the \"/_api/contextinfo\" REST endpoint, and expires after a server configurable amount \nof time. For more information, see the MSDN article \n\"Complete basic operations using SharePoint 2013 REST endpoints\".",
+        "descr": "Inserts a specific request digest value into the cache. Normally this is unnecessary because \nthe framework will automatically issue a REST request to fetch the digest when necessary; \nhowever, in advanced scenarios addDigestToCache() can be used to avoid the overhead of the \nREST call. \n",
         "genericType": null,
         "returnType": "void",
         "returnDescr": "",
@@ -322,7 +325,7 @@
         "signature": "clearAllDigests(): void",
         "isStatic": false,
         "isOptional": false,
-        "descr": "IDigestCache is an internal service used by HttpClient to maintain a cache of request digests \nfor each SPWeb URL. A request digest is a security token that the SharePoint server requires for \nfor any REST write operation, specified via the \"X-RequestDigest\" HTTP header. It is obtained \nby calling the \"/_api/contextinfo\" REST endpoint, and expires after a server configurable amount \nof time. For more information, see the MSDN article \n\"Complete basic operations using SharePoint 2013 REST endpoints\".",
+        "descr": "Clears all values from the cache.",
         "genericType": null,
         "returnType": "void",
         "returnDescr": "",
@@ -333,7 +336,7 @@
         "signature": "clearDigest(webUrl: string): boolean",
         "isStatic": false,
         "isOptional": false,
-        "descr": "IDigestCache is an internal service used by HttpClient to maintain a cache of request digests \nfor each SPWeb URL. A request digest is a security token that the SharePoint server requires for \nfor any REST write operation, specified via the \"X-RequestDigest\" HTTP header. It is obtained \nby calling the \"/_api/contextinfo\" REST endpoint, and expires after a server configurable amount \nof time. For more information, see the MSDN article \n\"Complete basic operations using SharePoint 2013 REST endpoints\".",
+        "descr": "Clears the cached digest for the specified SPWeb URL. This operation is useful \ne.g. if an error indicates that a digest was invalidated prior to its expiration time. \n",
         "genericType": null,
         "returnType": "boolean",
         "returnDescr": "Returns true if a cache entry was found and deleted false otherwise.",
@@ -351,7 +354,7 @@
         "signature": "fetchDigest(webUrl: string): Promise<string>",
         "isStatic": false,
         "isOptional": false,
-        "descr": "IDigestCache is an internal service used by HttpClient to maintain a cache of request digests \nfor each SPWeb URL. A request digest is a security token that the SharePoint server requires for \nfor any REST write operation, specified via the \"X-RequestDigest\" HTTP header. It is obtained \nby calling the \"/_api/contextinfo\" REST endpoint, and expires after a server configurable amount \nof time. For more information, see the MSDN article \n\"Complete basic operations using SharePoint 2013 REST endpoints\".",
+        "descr": "Returns a digest string for the specified SPWeb URL. If the cache already contains a usable value, \nthe promise is fulfilled immediately. Otherwise, the promise will be pending and resolve after \nan HTTP request obtains the digest, which will be added to the cache.",
         "genericType": null,
         "returnType": "Promise<string>",
         "returnDescr": "A promise that is fulfilled with the digest value.",
@@ -365,6 +368,7 @@
         ]
       }
     },
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -384,7 +388,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This interface defines the options for the HttpClient operations such as \nget(), post(), fetch(), etc. It is based on the WHATWG API standard \nparameters that are documented here: \nhttps://fetch.spec.whatwg.org/"
+        "descr": ""
       },
       "cache": {
         "dataType": "string|RequestCache",
@@ -395,7 +399,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This interface defines the options for the HttpClient operations such as \nget(), post(), fetch(), etc. It is based on the WHATWG API standard \nparameters that are documented here: \nhttps://fetch.spec.whatwg.org/"
+        "descr": ""
       },
       "credentials": {
         "dataType": "string|RequestCredentials",
@@ -406,7 +410,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This interface defines the options for the HttpClient operations such as \nget(), post(), fetch(), etc. It is based on the WHATWG API standard \nparameters that are documented here: \nhttps://fetch.spec.whatwg.org/"
+        "descr": ""
       },
       "headers": {
         "dataType": "HeaderInit|{ [index: string]: string }",
@@ -417,7 +421,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This interface defines the options for the HttpClient operations such as \nget(), post(), fetch(), etc. It is based on the WHATWG API standard \nparameters that are documented here: \nhttps://fetch.spec.whatwg.org/"
+        "descr": ""
       },
       "method": {
         "dataType": "string",
@@ -428,7 +432,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This interface defines the options for the HttpClient operations such as \nget(), post(), fetch(), etc. It is based on the WHATWG API standard \nparameters that are documented here: \nhttps://fetch.spec.whatwg.org/"
+        "descr": ""
       },
       "mode": {
         "dataType": "string|RequestMode",
@@ -439,7 +443,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This interface defines the options for the HttpClient operations such as \nget(), post(), fetch(), etc. It is based on the WHATWG API standard \nparameters that are documented here: \nhttps://fetch.spec.whatwg.org/"
+        "descr": ""
       },
       "webUrl": {
         "dataType": "string",
@@ -450,11 +454,12 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This interface defines the options for the HttpClient operations such as \nget(), post(), fetch(), etc. It is based on the WHATWG API standard \nparameters that are documented here: \nhttps://fetch.spec.whatwg.org/"
+        "descr": "For a write operation,HttpClient will automatically add the \n\"X-RequestDigest\" header, which may need to be fetched using a seperate \nrequest such as \"https://example.com/sites/sample/_api/contextinfo\". \nTypically the SPWeb URL (\"https://example.com/sites/sample\" in this \nexample) can be guessed by looking for a reserved URL segment such \nas \"_api\" in the original REST query, however certain REST endpoints \ndo not contain a reserved URL segment; in this case, the webUrl can \nbe explicitly specified using this option."
       }
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -474,7 +479,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Data used for creating a SPPermission object."
+        "descr": ""
       },
       "Low": {
         "dataType": "number",
@@ -485,11 +490,12 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Data used for creating a SPPermission object."
+        "descr": ""
       }
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -509,11 +515,12 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This interface is passed to the ODataBatch constructor. It specifies options \nthat affect the entire batch."
+        "descr": "ODataBatch will need to perform its POST to an endpoint such as \n\"http://example.com/sites/sample/_api/$batch\". Typically the SPWeb URL \n(\"https://example.com/sites/sample\" in this example) can be guessed by \nlooking for a reserved URL segment such as \"_api\" in the first URL \npassed to fetch(), but if not, the webUrl can be explicitly specified \nusing this option."
       }
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -533,11 +540,12 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Represents an OData SP.ChangeToken object. For more information about this object"
+        "descr": "Example: { StringValue: \"139fb9199b-65f2-4a4a-b597-11d1a44422c163589215627913000010721\" }"
       }
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -557,7 +565,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Represents an OData SP.ContextWebInformation object. For more information about this object"
+        "descr": "Example: 1800"
       },
       "FormDigestValue": {
         "dataType": "string",
@@ -568,7 +576,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Represents an OData SP.ContextWebInformation object. For more information about this object"
+        "descr": "Example: \"0x61B31CBF4C76C...B0,20 Jan 2016 02:24:43 -0000\""
       },
       "LibraryVersion": {
         "dataType": "string",
@@ -579,7 +587,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Represents an OData SP.ContextWebInformation object. For more information about this object"
+        "descr": "Example: \"16.0.4919.3000\""
       },
       "SiteFullUrl": {
         "dataType": "string",
@@ -590,7 +598,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Represents an OData SP.ContextWebInformation object. For more information about this object"
+        "descr": "Example: \"http:\\u002f\\u002fexample.com\\u002fsites\\u002fPubSite\""
       },
       "SupportedSchemaVersions": {
         "dataType": "string[]",
@@ -601,7 +609,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Represents an OData SP.ContextWebInformation object. For more information about this object"
+        "descr": "Example: [ \"14.0.0.0\",\"15.0.0.0\" ]"
       },
       "WebFullUrl": {
         "dataType": "string",
@@ -612,11 +620,12 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Represents an OData SP.ContextWebInformation object. For more information about this object"
+        "descr": "Example: \"http:\\u002f\\u002fexample.com\\u002fsites\\u002fPubSite\""
       }
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -636,7 +645,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Represents an OData SP.NavigationNode object. \nhttps://msdn.microsoft.com/en-us/library/office/jj246311.aspx"
+        "descr": "Gets or sets an array of Navigation Nodes that are children to the current node."
       },
       "Id": {
         "dataType": "number",
@@ -647,7 +656,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Represents an OData SP.NavigationNode object. \nhttps://msdn.microsoft.com/en-us/library/office/jj246311.aspx"
+        "descr": "Gets a value that specifies the identifier for the navigation node."
       },
       "IsDocLib": {
         "dataType": "boolean",
@@ -658,7 +667,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Represents an OData SP.NavigationNode object. \nhttps://msdn.microsoft.com/en-us/library/office/jj246311.aspx"
+        "descr": ""
       },
       "IsExternal": {
         "dataType": "boolean",
@@ -669,7 +678,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Represents an OData SP.NavigationNode object. \nhttps://msdn.microsoft.com/en-us/library/office/jj246311.aspx"
+        "descr": "Gets or sets a value that specifies whether the navigation node URL potentially \ncorresponds to pages outside of the site collection."
       },
       "IsVisible": {
         "dataType": "boolean",
@@ -680,7 +689,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Represents an OData SP.NavigationNode object. \nhttps://msdn.microsoft.com/en-us/library/office/jj246311.aspx"
+        "descr": "Gets or sets a value that specifies if the node navigation link should be visible."
       },
       "Title": {
         "dataType": "string",
@@ -691,7 +700,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Represents an OData SP.NavigationNode object. \nhttps://msdn.microsoft.com/en-us/library/office/jj246311.aspx"
+        "descr": "Gets or sets a value that specifies the anchor text for the node navigation link."
       },
       "Url": {
         "dataType": "string",
@@ -702,11 +711,12 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Represents an OData SP.NavigationNode object. \nhttps://msdn.microsoft.com/en-us/library/office/jj246311.aspx"
+        "descr": "Gets or sets a value that specifies the URL to be stored with the navigation node. \nIt must be a URL of relative form if IsExternal is false. It must be a URL of \nrelative or absolute form."
       }
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -726,7 +736,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Represents an OData Microsoft.SharePoint.Navigation.SPNavigation object. \nhttps://msdn.microsoft.com/en-us/library/office/ee557907.aspx"
+        "descr": "Gets an SPNavigationNode object that contains \nthe nodes in the Quick Launch area of the site."
       },
       "topNav": {
         "dataType": "IODataNavigationNode[]",
@@ -737,11 +747,12 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Represents an OData Microsoft.SharePoint.Navigation.SPNavigation object. \nhttps://msdn.microsoft.com/en-us/library/office/ee557907.aspx"
+        "descr": "Gets an SPNavigationNode object that contains the nodes in the top link bar \nfor the website."
       }
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -761,7 +772,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+        "descr": "Gets a value that specifies when the site was created. \nExample: \"/Date(2016,0,20,12,58,7,0)/\""
       },
       "CurrentChangeToken": {
         "dataType": "IODataChangeToken",
@@ -772,7 +783,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+        "descr": "Represents the unique sequential location of a change within the change log."
       },
       "CustomMasterUrl": {
         "dataType": "string",
@@ -783,7 +794,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+        "descr": "Gets or sets the URL for a custom master page file to apply to the website. \nExample: \"/sites/PubSite/_catalogs/masterpage/seattle.master\""
       },
       "Description": {
         "dataType": "string",
@@ -794,7 +805,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+        "descr": "Gets or sets the description for the site."
       },
       "Id": {
         "dataType": "string",
@@ -805,7 +816,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+        "descr": "Gets a value that specifies the site identifier for the site. \nExample: \"/Guid(92ea328e-9f50-49a6-9da5-2f2dd5577041)/\""
       },
       "IsMultilingual": {
         "dataType": "boolean",
@@ -816,7 +827,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+        "descr": "Value that represents if the web was"
       },
       "Language": {
         "dataType": "number",
@@ -827,7 +838,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+        "descr": "Gets a value that specifies the LCID for the language that is used on the site. \nExample: 1033"
       },
       "LastItemModifiedDate": {
         "dataType": "string",
@@ -838,7 +849,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+        "descr": "Gets a value that specifies when an item was last modified in the site. \nExample: \"/Date(1453618828000)/\""
       },
       "MasterUrl": {
         "dataType": "string",
@@ -849,7 +860,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+        "descr": "Gets or sets the URL of the master page that is used for the website. \nExample: \"/sites/PubSite/_catalogs/masterpage/seattle.master\""
       },
       "NoCrawl": {
         "dataType": "boolean",
@@ -860,7 +871,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+        "descr": "Determines if a particular web will be crawled by search or not."
       },
       "QuickLaunchEnabled": {
         "dataType": "boolean",
@@ -871,7 +882,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+        "descr": "Gets or sets a value that specifies whether the Quick Launch area is enabled on the site."
       },
       "RecycleBinEnabled": {
         "dataType": "boolean",
@@ -882,7 +893,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+        "descr": "Gets or sets a value that determines whether the recycle bin is enabled for the website."
       },
       "ServerRelativeUrl": {
         "dataType": "string",
@@ -893,7 +904,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+        "descr": "Gets or sets the server-relative URL for the Web site. \nExample: \"/sites/PubSite\""
       },
       "SiteLogoUrl": {
         "dataType": "string",
@@ -904,7 +915,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+        "descr": "Gets the url for the logo of this particular site."
       },
       "Title": {
         "dataType": "string",
@@ -915,7 +926,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+        "descr": "The title of the web."
       },
       "UIVersion": {
         "dataType": "number",
@@ -926,7 +937,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+        "descr": "Gets or sets the user interface (UI) version of the Web site. \nExample: 15"
       },
       "Url": {
         "dataType": "string",
@@ -937,7 +948,7 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+        "descr": "Gets the absolute URL for the website. \nExample: \"http://example.com/sites/PubSite\""
       },
       "WebTemplate": {
         "dataType": "string",
@@ -948,11 +959,12 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "Represents an OData SP.Web object. For more information about this object \nsee the MSDN documentation here: \nhttps://msdn.microsoft.com/en-us/library/office/jj860569.aspx"
+        "descr": "Gets the name of the site definition or site template that was used to create the site. \nExample: \"BLANKINTERNET\""
       }
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},
@@ -972,11 +984,12 @@
         "function": null,
         "returnType": null,
         "assignValue": null,
-        "descr": "This is a convenient interface that can be used to indicate that an object \nhas an associated ServiceScope."
+        "descr": "Returns a ServiceScope instance that can be used to obtain dependencies \nfor the current context."
       }
     },
     "functions": {},
     "methods": {},
+    "constructor": {},
     "types": {},
     "variables": {},
     "modules": {},

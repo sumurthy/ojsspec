@@ -344,6 +344,7 @@ var self = module.exports = {
         o['properties'] = {}
         o['functions'] = {}
         o['methods'] = {}
+        o['constructor'] = {}
         o['types'] = {}
         o['variables'] = {}
         o['modules'] = {}

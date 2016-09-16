@@ -7,6 +7,8 @@
 
 
 
+
+
 ## Properties
 
 | Property	   | Type	| Description|
@@ -30,11 +32,8 @@
 
 
 
-#### Signature
-`new<T>(): WeakSet<T>`
-
-#### Returns
-[`WeakSet<T>`](../es6-collections/weakset.md)
+**Signature:** `new<T>(): WeakSet<T>`
+**Returns**: [`WeakSet<T>`](../es6-collections/weakset.md)
 
 
 #### Parameters
@@ -45,11 +44,8 @@ None
 
 
 
-#### Signature
-`new<T>(iterable: ForEachable<T>): WeakSet<T>`
-
-#### Returns
-[`WeakSet<T>`](../es6-collections/weakset.md)
+**Signature:** `new<T>(iterable: ForEachable<T>): WeakSet<T>`
+**Returns**: [`WeakSet<T>`](../es6-collections/weakset.md)
 
 
 #### Parameters

@@ -6,6 +6,23 @@ _Implements: [`Body`](../whatwg-fetch/body.md)_
 
 
 
+
+## Constructor
+
+
+**Signature:** constructor(input: string|Request,init?:RequestInit)
+**Returns**: Request
+
+
+#### Parameters
+
+
+| Parameter	   | Type    | Description |
+|:-------------|:---------------|:------------|
+| `input`    | `string`,[`Request`](../whatwg-fetch/request.md) |  |
+| `init`    | [`RequestInit`](../whatwg-fetch/requestinit.md) | _Optional._ |
+
+
 ## Properties
 
 | Property	   | Access Modifier | Type	| Description|
@@ -22,32 +39,5 @@ _Implements: [`Body`](../whatwg-fetch/body.md)_
 
 
 
-## Methods
 
-| Method	   | Access Modifier | Returns	| Description|
-|:-------------|:----|:-------|:-----------|
-|[`constructor`](#constructor)     | `public` | [`Request`](../whatwg-fetch/request.md) |  |
-
-
-
-
-
-### constructor
-
-
-
-#### Signature
-`constructor(input: string|Request,init?:RequestInit)`
-
-#### Returns
-[`Request`](../whatwg-fetch/request.md)
-
-
-#### Parameters
-
-
-| Parameter	   | Type    | Description |
-|:-------------|:---------------|:------------|
-| `input`    | `string`,[`Request`](../whatwg-fetch/request.md) |  |
-| `init`    | [`RequestInit`](../whatwg-fetch/requestinit.md) | _Optional._ |
 
