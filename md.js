@@ -650,7 +650,7 @@ function genEnumView() {
                 enumObj[e]['values'].forEach( (a) => {
                     var mline = dclone(tline).substr(1)
                     if (a[1]) {
-                        mline = mline.replace('%value%', `=${a[1]}`)
+                        mline = mline.replace('%value%', `:=${a[1]}`)
                     }
                     else {
                         mline = mline.replace('%value%', '')
