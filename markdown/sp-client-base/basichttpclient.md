@@ -12,7 +12,7 @@ enhancements.
 ## Constructor
 
 
-**Signature:** `constructor(serviceScope: [ServiceScope](../sp-client-base/servicescope.md))`
+**Signature:** constructor(serviceScope: [ServiceScope](../sp-client-base/servicescope.md))
 
 **Returns**: [`BasicHttpClient`](../sp-client-base/basichttpclient.md)
 

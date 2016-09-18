@@ -15,7 +15,7 @@ introduced without inadvertently breaking components that are loaded by an older
 ## Constructor
 PRIVATE - Do not call this from your own code.
 
-**Signature:** `constructor(id: string,name: string,defaultCreator: ServiceCreator<T>)`
+**Signature:** constructor(id: string,name: string,defaultCreator: ServiceCreator<T>)
 
 **Returns**: [`ServiceKey`](../sp-client-base/servicekey.md)
 

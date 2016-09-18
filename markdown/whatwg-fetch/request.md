@@ -10,7 +10,7 @@ _Implements: [`Body`](../whatwg-fetch/body.md)_
 ## Constructor
 
 
-**Signature:** `constructor(input: string|[Request](../whatwg-fetch/request.md),init?:[RequestInit](../whatwg-fetch/requestinit.md))`
+**Signature:** constructor(input: string|[Request](../whatwg-fetch/request.md),init?:[RequestInit](../whatwg-fetch/requestinit.md))
 
 **Returns**: [`Request`](../whatwg-fetch/request.md)
 

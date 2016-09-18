@@ -18,7 +18,7 @@ Query param with only equals (www.example.com/?=&debug=on stores empty string ke
 ## Constructor
 
 
-**Signature:** `constructor(url: string)`
+**Signature:** constructor(url: string)
 
 **Returns**: [`UrlQueryParameterCollection`](../sp-client-base/urlqueryparametercollection.md)
 

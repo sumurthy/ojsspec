@@ -22,7 +22,7 @@ Constructor for the BaseClientSideWebPart class.
 If a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor. 
 
 
-**Signature:** `constructor(ctx: [IWebPartContext](../sp-client-preview/iwebpartcontext.md))`
+**Signature:** constructor(ctx: [IWebPartContext](../sp-client-preview/iwebpartcontext.md))
 
 **Returns**: [`BaseClientSideWebPart`](../sp-client-preview/baseclientsidewebpart.md)
 

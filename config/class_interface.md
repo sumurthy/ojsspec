@@ -13,7 +13,7 @@
 ## Constructor
 %constdesc%
 
-**Signature:** `%constsignature%`
+**Signature:** %constsignature%
 
 **Returns**: %constrtype%
 

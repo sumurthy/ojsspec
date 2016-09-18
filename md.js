@@ -331,7 +331,7 @@ function doSubMember(tline = '', member = {}, membername = '', isClass = true, o
     //if (tline.includes('%membername%')) tline = tline.replace('%membername%', membername.split('-')[0])
     if (tline.includes('%membername%')) tline = tline.replace('%membername%', member['docName'])
     if (tline.includes('%memberdescription%')) tline = tline.replace('%memberdescription%', member['descr'])
-    if (tline.includes('%apisignature%')) tline = tline.replace('%apisignature%', `${getSmartLink(member['signature'])}`)
+    if (tline.includes('%apisignature%')) tline = tline.replace('%apisignature%', getSmartLink(member['signature']))
 
     if (tline.includes('%noparam%')) {
         if (member['params'].length === 0) {
