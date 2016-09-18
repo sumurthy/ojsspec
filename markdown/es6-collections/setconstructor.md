@@ -32,7 +32,7 @@
 
 
 
-**Signature:** new<T>(): [Set](../es6-collections/set.md)<T>
+**Signature:** _new<T>(): [Set](../es6-collections/set.md)<T>_
 
 **Returns**: [`Set<T>`](../es6-collections/set.md)
 
@@ -46,7 +46,7 @@ None
 
 
 
-**Signature:** new<T>(iterable: [ForEachable](../es6-collections/foreachable.md)<T>): [Set](../es6-collections/set.md)<T>
+**Signature:** _new<T>(iterable: [ForEachable](../es6-collections/foreachable.md)<T>): [Set](../es6-collections/set.md)<T>_
 
 **Returns**: [`Set<T>`](../es6-collections/set.md)
 

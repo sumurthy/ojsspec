@@ -3,7 +3,7 @@
 Get's the path name from an absolute url. 
 
 
-**Signature:** getPathNameFromAbsoluteUrl(url: string): string
+**Signature:** _getPathNameFromAbsoluteUrl(url: string): string_
 
 **Returns**: `string`
 

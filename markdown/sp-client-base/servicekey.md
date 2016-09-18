@@ -59,7 +59,7 @@ Constructs a new ServiceKey whose default implementation will be a new instance 
 a TypeScript class that accepts the standard constructor parameter. If you want to 
 specify custom constructor parameters, use createCustom() instead.
 
-**Signature:** create<T>(name: string,serviceClass: { new (serviceScope: [ServiceScope](../sp-client-base/servicescope.md)) }): [ServiceKey](../sp-client-base/servicekey.md)<T>
+**Signature:** _create<T>(name: string,serviceClass: { new (serviceScope: [ServiceScope](../sp-client-base/servicescope.md)) }): [ServiceKey](../sp-client-base/servicekey.md)<T>_
 
 **Returns**: [`ServiceKey<T>`](../sp-client-base/servicekey.md)
 
@@ -79,7 +79,7 @@ specify custom constructor parameters, use createCustom() instead.
 Constructs a new ServiceKey whose default implementation will be obtained 
 by invoking the specified callback.
 
-**Signature:** createCustom<T>(name: string,defaultCreator: ServiceCreator<T>): [ServiceKey](../sp-client-base/servicekey.md)<T>
+**Signature:** _createCustom<T>(name: string,defaultCreator: ServiceCreator<T>): [ServiceKey](../sp-client-base/servicekey.md)<T>_
 
 **Returns**: [`ServiceKey<T>`](../sp-client-base/servicekey.md)
 

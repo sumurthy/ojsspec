@@ -27,7 +27,7 @@
 
 
 
-**Signature:** next(value?: any): [IteratorResult](../es6-collections/iteratorresult.md)<T>
+**Signature:** _next(value?: any): [IteratorResult](../es6-collections/iteratorresult.md)<T>_
 
 **Returns**: [`IteratorResult<T>`](../es6-collections/iteratorresult.md)
 
@@ -45,7 +45,7 @@
 
 
 
-**Signature:** return?(value?: any): [IteratorResult](../es6-collections/iteratorresult.md)<T>
+**Signature:** _return?(value?: any): [IteratorResult](../es6-collections/iteratorresult.md)<T>_
 
 **Returns**: [`IteratorResult<T>`](../es6-collections/iteratorresult.md)
 
@@ -63,7 +63,7 @@
 
 
 
-**Signature:** throw?(e?: any): [IteratorResult](../es6-collections/iteratorresult.md)<T>
+**Signature:** _throw?(e?: any): [IteratorResult](../es6-collections/iteratorresult.md)<T>_
 
 **Returns**: [`IteratorResult<T>`](../es6-collections/iteratorresult.md)
 

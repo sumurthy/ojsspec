@@ -35,7 +35,7 @@ convertToODataStringLiteral("example's list") ---> "'example''s list'"
 convertToODataStringLiteral("example list") ---> "'example list'" 
 convertToODataStringLiteral("'example list'") ---> "'''example list'''"
 
-**Signature:** convertToODataStringLiteral(value: string): string
+**Signature:** _convertToODataStringLiteral(value: string): string_
 
 **Returns**: `string`
 
@@ -58,7 +58,7 @@ removeEndSlash('http://example.com/') ---> 'http://example.com'
 removeEndSlash('/example') ---> '/example' 
 removeEndSlash('/') ---> ''
 
-**Signature:** removeEndSlash(url: string): string
+**Signature:** _removeEndSlash(url: string): string_
 
 **Returns**: `string`
 

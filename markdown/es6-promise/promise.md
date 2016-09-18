@@ -53,7 +53,7 @@ Both callbacks have a single parameter , the fulfillment value or rejection reas
 If an error is thrown in the callback, the returned promise rejects with that error. 
 
 
-**Signature:** then<U>(onFulfilled?: (value: R) => U | [Thenable](../es6-promise/thenable.md)<U>,onRejected?: (error: any) => U | Thenable<U>): [Promise](../es6-promise/promise.md)<U>
+**Signature:** _then<U>(onFulfilled?: (value: R) => U | [Thenable](../es6-promise/thenable.md)<U>,onRejected?: (error: any) => U | Thenable<U>): [Promise](../es6-promise/promise.md)<U>_
 
 **Returns**: [`Promise<U>`](../es6-promise/promise.md)
 
@@ -72,7 +72,7 @@ If an error is thrown in the callback, the returned promise rejects with that er
 
 
 
-**Signature:** then<U>(onFulfilled?: (value: R) => U | [Thenable](../es6-promise/thenable.md)<U>,onRejected?: (error: any) => void): [Promise](../es6-promise/promise.md)<U>
+**Signature:** _then<U>(onFulfilled?: (value: R) => U | [Thenable](../es6-promise/thenable.md)<U>,onRejected?: (error: any) => void): [Promise](../es6-promise/promise.md)<U>_
 
 **Returns**: [`Promise<U>`](../es6-promise/promise.md)
 
@@ -92,7 +92,7 @@ If an error is thrown in the callback, the returned promise rejects with that er
 Sugar for promise.then(undefined,onRejected) 
 
 
-**Signature:** catch<U>(onRejected?: (error: any) => U | [Thenable](../es6-promise/thenable.md)<U>): [Promise](../es6-promise/promise.md)<U>
+**Signature:** _catch<U>(onRejected?: (error: any) => U | [Thenable](../es6-promise/thenable.md)<U>): [Promise](../es6-promise/promise.md)<U>_
 
 **Returns**: [`Promise<U>`](../es6-promise/promise.md)
 

@@ -32,7 +32,7 @@
 
 
 
-**Signature:** new<T>(): [WeakSet](../es6-collections/weakset.md)<T>
+**Signature:** _new<T>(): [WeakSet](../es6-collections/weakset.md)<T>_
 
 **Returns**: [`WeakSet<T>`](../es6-collections/weakset.md)
 
@@ -46,7 +46,7 @@ None
 
 
 
-**Signature:** new<T>(iterable: [ForEachable](../es6-collections/foreachable.md)<T>): [WeakSet](../es6-collections/weakset.md)<T>
+**Signature:** _new<T>(iterable: [ForEachable](../es6-collections/foreachable.md)<T>): [WeakSet](../es6-collections/weakset.md)<T>_
 
 **Returns**: [`WeakSet<T>`](../es6-collections/weakset.md)
 

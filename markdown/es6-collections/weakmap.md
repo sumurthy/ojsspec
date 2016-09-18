@@ -29,7 +29,7 @@
 
 
 
-**Signature:** delete(key: K): boolean
+**Signature:** _delete(key: K): boolean_
 
 **Returns**: `boolean`
 
@@ -47,7 +47,7 @@
 
 
 
-**Signature:** clear(): void
+**Signature:** _clear(): void_
 
 **Returns**: `void`
 
@@ -61,7 +61,7 @@ None
 
 
 
-**Signature:** get(key: K): V
+**Signature:** _get(key: K): V_
 
 **Returns**: `V`
 
@@ -79,7 +79,7 @@ None
 
 
 
-**Signature:** has(key: K): boolean
+**Signature:** _has(key: K): boolean_
 
 **Returns**: `boolean`
 
@@ -97,7 +97,7 @@ None
 
 
 
-**Signature:** set(key: K,value?: V): [WeakMap](../es6-collections/weakmap.md)<K,V>
+**Signature:** _set(key: K,value?: V): [WeakMap](../es6-collections/weakmap.md)<K,V>_
 
 **Returns**: [`WeakMap<K,V>`](../es6-collections/weakmap.md)
 

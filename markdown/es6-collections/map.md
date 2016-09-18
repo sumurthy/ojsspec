@@ -39,7 +39,7 @@
 
 
 
-**Signature:** clear(): void
+**Signature:** _clear(): void_
 
 **Returns**: `void`
 
@@ -53,7 +53,7 @@ None
 
 
 
-**Signature:** delete(key: K): boolean
+**Signature:** _delete(key: K): boolean_
 
 **Returns**: `boolean`
 
@@ -71,7 +71,7 @@ None
 
 
 
-**Signature:** forEach(callbackfn: (value: V,index: K,map: [Map](../es6-collections/map.md)<K,V>) => void,thisArg?: any): void
+**Signature:** _forEach(callbackfn: (value: V,index: K,map: [Map](../es6-collections/map.md)<K,V>) => void,thisArg?: any): void_
 
 **Returns**: `void`
 
@@ -90,7 +90,7 @@ None
 
 
 
-**Signature:** get(key: K): V
+**Signature:** _get(key: K): V_
 
 **Returns**: `V`
 
@@ -108,7 +108,7 @@ None
 
 
 
-**Signature:** has(key: K): boolean
+**Signature:** _has(key: K): boolean_
 
 **Returns**: `boolean`
 
@@ -126,7 +126,7 @@ None
 
 
 
-**Signature:** set(key: K,value?: V): [Map](../es6-collections/map.md)<K,V>
+**Signature:** _set(key: K,value?: V): [Map](../es6-collections/map.md)<K,V>_
 
 **Returns**: [`Map<K,V>`](../es6-collections/map.md)
 
@@ -145,7 +145,7 @@ None
 
 
 
-**Signature:** entries(): [Iterator](../es6-collections/iterator.md)<[K,V]>
+**Signature:** _entries(): [Iterator](../es6-collections/iterator.md)<[K,V]>_
 
 **Returns**: [`Iterator<[K,V]>`](../es6-collections/iterator.md)
 
@@ -159,7 +159,7 @@ None
 
 
 
-**Signature:** keys(): [Iterator](../es6-collections/iterator.md)<K>
+**Signature:** _keys(): [Iterator](../es6-collections/iterator.md)<K>_
 
 **Returns**: [`Iterator<K>`](../es6-collections/iterator.md)
 
@@ -173,7 +173,7 @@ None
 
 
 
-**Signature:** values(): [Iterator](../es6-collections/iterator.md)<V>
+**Signature:** _values(): [Iterator](../es6-collections/iterator.md)<V>_
 
 **Returns**: [`Iterator<V>`](../es6-collections/iterator.md)
 

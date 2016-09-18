@@ -28,7 +28,7 @@
 
 
 
-**Signature:** delete(value: T): boolean
+**Signature:** _delete(value: T): boolean_
 
 **Returns**: `boolean`
 
@@ -46,7 +46,7 @@
 
 
 
-**Signature:** clear(): void
+**Signature:** _clear(): void_
 
 **Returns**: `void`
 
@@ -60,7 +60,7 @@ None
 
 
 
-**Signature:** add(value: T): [WeakSet](../es6-collections/weakset.md)<T>
+**Signature:** _add(value: T): [WeakSet](../es6-collections/weakset.md)<T>_
 
 **Returns**: [`WeakSet<T>`](../es6-collections/weakset.md)
 
@@ -78,7 +78,7 @@ None
 
 
 
-**Signature:** has(value: T): boolean
+**Signature:** _has(value: T): boolean_
 
 **Returns**: `boolean`
 

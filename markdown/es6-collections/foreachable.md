@@ -25,7 +25,7 @@
 
 
 
-**Signature:** forEach(callbackfn: (value: T) => void): void
+**Signature:** _forEach(callbackfn: (value: T) => void): void_
 
 **Returns**: `void`
 

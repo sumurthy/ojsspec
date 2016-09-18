@@ -2,7 +2,7 @@
 
 %memberdescription%
 
-**Signature:** %apisignature%
+**Signature:** _%apisignature%_
 
 **Returns**: %returntype%
 

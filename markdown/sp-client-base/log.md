@@ -31,7 +31,7 @@ which component generated the messages and makes the messages useful and filtera
 
 Logs an error
 
-**Signature:** error(source: string,error: Error,scope?: [ServiceScope](../sp-client-base/servicescope.md)): void
+**Signature:** _error(source: string,error: Error,scope?: [ServiceScope](../sp-client-base/servicescope.md)): void_
 
 **Returns**: `void`
 
@@ -51,7 +51,7 @@ Logs an error
 
 Logs an informational message
 
-**Signature:** info(source: string,message: string,scope?: [ServiceScope](../sp-client-base/servicescope.md)): void
+**Signature:** _info(source: string,message: string,scope?: [ServiceScope](../sp-client-base/servicescope.md)): void_
 
 **Returns**: `void`
 
@@ -71,7 +71,7 @@ Logs an informational message
 
 Logs a verbose message
 
-**Signature:** verbose(source: string,message: string,scope?: [ServiceScope](../sp-client-base/servicescope.md)): void
+**Signature:** _verbose(source: string,message: string,scope?: [ServiceScope](../sp-client-base/servicescope.md)): void_
 
 **Returns**: `void`
 
@@ -91,7 +91,7 @@ Logs a verbose message
 
 Logs a warning
 
-**Signature:** warn(source: string,message: string,scope?: [ServiceScope](../sp-client-base/servicescope.md)): void
+**Signature:** _warn(source: string,message: string,scope?: [ServiceScope](../sp-client-base/servicescope.md)): void_
 
 **Returns**: `void`
 
