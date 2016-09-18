@@ -57,7 +57,7 @@ getValue('TEST') ---> 'done'
 getValue('debug') ---> 'false' 
 getValue('lost') ---> undefined
 
-**Signature:** ``getValue(param: string): string``
+**Signature:** `getValue(param: string): string`
 
 **Returns**: `string`
 
@@ -82,7 +82,7 @@ getValues('TEST') ---> ['done', 'notdone']
 getValues('debug') ---> ['false'] 
 getValues('lost') ---> undefined
 
-**Signature:** ``getValues(param: string): string[]``
+**Signature:** `getValues(param: string): string[]`
 
 **Returns**: `string[]`
 

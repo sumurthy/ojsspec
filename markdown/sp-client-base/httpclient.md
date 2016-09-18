@@ -51,7 +51,7 @@ class instead.
 Begins an ODATA batch,which allows multiple REST queries to be bundled into 
 a single web request.
 
-**Signature:** ``beginBatch(batchOptions?: [I[ODataBatch](../sp-client-base/odatabatch.md)Options](../sp-client-base/iodatabatchoptions.md)): ODataBatch``
+**Signature:** `beginBatch(batchOptions?: [I[ODataBatch](../sp-client-base/odatabatch.md)Options](../sp-client-base/iodatabatchoptions.md)): ODataBatch`
 
 **Returns**: [`ODataBatch`](../sp-client-base/odatabatch.md)
 
@@ -87,7 +87,7 @@ in the original URL passed to fetch(); if not, use IHttpClientOptions.webUrl
 to specify it explicitly. 
 
 
-**Signature:** ``fetch(url: string,options: [IHttpClientOptions](../sp-client-base/ihttpclientoptions.md)): [Promise](../es6-promise/promise.md)<[Response](../whatwg-fetch/response.md)>``
+**Signature:** `fetch(url: string,options: [IHttpClientOptions](../sp-client-base/ihttpclientoptions.md)): [Promise](../es6-promise/promise.md)<[Response](../whatwg-fetch/response.md)>`
 
 **Returns**: [`Promise<Response>`](../es6-promise/promise.md)
 
@@ -106,7 +106,7 @@ a promise that will return the result
 
 Calls fetch(),but sets the method to 'GET'.
 
-**Signature:** ``get(url: string,options?: [IHttpClientOptions](../sp-client-base/ihttpclientoptions.md)): [Promise](../es6-promise/promise.md)<[Response](../whatwg-fetch/response.md)>``
+**Signature:** `get(url: string,options?: [IHttpClientOptions](../sp-client-base/ihttpclientoptions.md)): [Promise](../es6-promise/promise.md)<[Response](../whatwg-fetch/response.md)>`
 
 **Returns**: [`Promise<Response>`](../es6-promise/promise.md)
 
@@ -132,7 +132,7 @@ the returned URL would be "/sites/site/web". Or if the requestUrl
 is "http://example.com/_layouts/service", the returned URL would be 
 "http://example.com".
 
-**Signature:** ``getWebUrlFromRequestUrl(requestUrl: string): string``
+**Signature:** `getWebUrlFromRequestUrl(requestUrl: string): string`
 
 **Returns**: `string`
 
@@ -150,7 +150,7 @@ the inferred SPWeb URL
 
 Calls fetch(),but sets the method to 'POST'.
 
-**Signature:** ``post(url: string,options: [IHttpClientOptions](../sp-client-base/ihttpclientoptions.md)): [Promise](../es6-promise/promise.md)<[Response](../whatwg-fetch/response.md)>``
+**Signature:** `post(url: string,options: [IHttpClientOptions](../sp-client-base/ihttpclientoptions.md)): [Promise](../es6-promise/promise.md)<[Response](../whatwg-fetch/response.md)>`
 
 **Returns**: [`Promise<Response>`](../es6-promise/promise.md)
 

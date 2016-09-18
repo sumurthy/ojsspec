@@ -55,7 +55,7 @@ additional enhancements, the parameters and semantics for BasicHttpClient.fetch(
 are essentially the same as the WHATWG API standard that is documented here: 
 https://fetch.spec.whatwg.org/
 
-**Signature:** ``fetch(url: string,options: [IBasicHttpClientOptions](../sp-client-base/ibasichttpclientoptions.md)): [Promise](../es6-promise/promise.md)<[Response](../whatwg-fetch/response.md)>``
+**Signature:** `fetch(url: string,options: [IBasicHttpClientOptions](../sp-client-base/ibasichttpclientoptions.md)): [Promise](../es6-promise/promise.md)<[Response](../whatwg-fetch/response.md)>`
 
 **Returns**: [`Promise<Response>`](../es6-promise/promise.md)
 
@@ -74,7 +74,7 @@ a promise that will return the result
 
 
 
-**Signature:** ``fetchCore(request: [Request](../whatwg-fetch/request.md)): [Promise](../es6-promise/promise.md)<[Response](../whatwg-fetch/response.md)>``
+**Signature:** `fetchCore(request: [Request](../whatwg-fetch/request.md)): [Promise](../es6-promise/promise.md)<[Response](../whatwg-fetch/response.md)>`
 
 **Returns**: [`Promise<Response>`](../es6-promise/promise.md)
 
@@ -92,7 +92,7 @@ a promise that will return the result
 
 Calls fetch(),but sets the method to 'GET'.
 
-**Signature:** ``get(url: string,options?: [IBasicHttpClientOptions](../sp-client-base/ibasichttpclientoptions.md)): [Promise](../es6-promise/promise.md)<[Response](../whatwg-fetch/response.md)>``
+**Signature:** `get(url: string,options?: [IBasicHttpClientOptions](../sp-client-base/ibasichttpclientoptions.md)): [Promise](../es6-promise/promise.md)<[Response](../whatwg-fetch/response.md)>`
 
 **Returns**: [`Promise<Response>`](../es6-promise/promise.md)
 
@@ -111,7 +111,7 @@ a promise that will return the result
 
 Calls fetch(),but sets the method to 'POST'.
 
-**Signature:** ``post(url: string,options: [IBasicHttpClientOptions](../sp-client-base/ibasichttpclientoptions.md)): [Promise](../es6-promise/promise.md)<[Response](../whatwg-fetch/response.md)>``
+**Signature:** `post(url: string,options: [IBasicHttpClientOptions](../sp-client-base/ibasichttpclientoptions.md)): [Promise](../es6-promise/promise.md)<[Response](../whatwg-fetch/response.md)>`
 
 **Returns**: [`Promise<Response>`](../es6-promise/promise.md)
 

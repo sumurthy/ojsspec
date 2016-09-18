@@ -36,7 +36,7 @@
 
 
 
-**Signature:** ``arrayBuffer(): [Promise](../es6-promise/promise.md)<ArrayBuffer>``
+**Signature:** `arrayBuffer(): [Promise](../es6-promise/promise.md)<ArrayBuffer>`
 
 **Returns**: [`Promise<ArrayBuffer>`](../es6-promise/promise.md)
 
@@ -50,7 +50,7 @@ None
 
 
 
-**Signature:** ``blob(): [Promise](../es6-promise/promise.md)<Blob>``
+**Signature:** `blob(): [Promise](../es6-promise/promise.md)<Blob>`
 
 **Returns**: [`Promise<Blob>`](../es6-promise/promise.md)
 
@@ -64,7 +64,7 @@ None
 
 
 
-**Signature:** ``formData(): [Promise](../es6-promise/promise.md)<FormData>``
+**Signature:** `formData(): [Promise](../es6-promise/promise.md)<FormData>`
 
 **Returns**: [`Promise<FormData>`](../es6-promise/promise.md)
 
@@ -78,7 +78,7 @@ None
 
 
 
-**Signature:** ``json(): [Promise](../es6-promise/promise.md)<any>``
+**Signature:** `json(): [Promise](../es6-promise/promise.md)<any>`
 
 **Returns**: [`Promise<any>`](../es6-promise/promise.md)
 
@@ -92,7 +92,7 @@ None
 
 
 
-**Signature:** ``json<T>(): [Promise](../es6-promise/promise.md)<T>``
+**Signature:** `json<T>(): [Promise](../es6-promise/promise.md)<T>`
 
 **Returns**: [`Promise<T>`](../es6-promise/promise.md)
 
@@ -106,7 +106,7 @@ None
 
 
 
-**Signature:** ``text(): [Promise](../es6-promise/promise.md)<string>``
+**Signature:** `text(): [Promise](../es6-promise/promise.md)<string>`
 
 **Returns**: [`Promise<string>`](../es6-promise/promise.md)
 

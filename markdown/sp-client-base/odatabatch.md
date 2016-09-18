@@ -54,7 +54,7 @@ resolve with a Response object for that particular request.
 
 Executes the batched queries that were queued using ODataBatch.fetch().
 
-**Signature:** ``execute(): [Promise](../es6-promise/promise.md)<[ODataBatch](../sp-client-base/odatabatch.md)>``
+**Signature:** `execute(): [Promise](../es6-promise/promise.md)<[ODataBatch](../sp-client-base/odatabatch.md)>`
 
 **Returns**: [`Promise<ODataBatch>`](../es6-promise/promise.md)
 
@@ -81,7 +81,7 @@ in the first URL passed to fetch(). If not, use IODataBatchOptions.webUrl to spe
 explicitly. 
 
 
-**Signature:** ``fetch(url: string,options?: IODataBatchRequestOptions): [Promise](../es6-promise/promise.md)<[Response](../whatwg-fetch/response.md)>``
+**Signature:** `fetch(url: string,options?: IODataBatchRequestOptions): [Promise](../es6-promise/promise.md)<[Response](../whatwg-fetch/response.md)>`
 
 **Returns**: [`Promise<Response>`](../es6-promise/promise.md)
 
@@ -100,7 +100,7 @@ a promise that will return the result
 
 Calls fetch(),but sets the method to 'GET'.
 
-**Signature:** ``get(url: string,options?: IODataBatchRequestOptions): [Promise](../es6-promise/promise.md)<[Response](../whatwg-fetch/response.md)>``
+**Signature:** `get(url: string,options?: IODataBatchRequestOptions): [Promise](../es6-promise/promise.md)<[Response](../whatwg-fetch/response.md)>`
 
 **Returns**: [`Promise<Response>`](../es6-promise/promise.md)
 
@@ -119,7 +119,7 @@ a promise that will return the result
 
 Calls fetch(),but sets the method to 'POST'.
 
-**Signature:** ``post(url: string,options: IODataBatchRequestOptions): [Promise](../es6-promise/promise.md)<[Response](../whatwg-fetch/response.md)>``
+**Signature:** `post(url: string,options: IODataBatchRequestOptions): [Promise](../es6-promise/promise.md)<[Response](../whatwg-fetch/response.md)>`
 
 **Returns**: [`Promise<Response>`](../es6-promise/promise.md)
 
