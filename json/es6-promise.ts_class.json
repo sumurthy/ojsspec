@@ -28,7 +28,8 @@
             "isOptional": true,
             "descr": "called when/if \"promise\" rejects"
           }
-        ]
+        ],
+        "docName": "then<U>(onFulfilled,onRejected)"
       },
       "then<U>-Shnk9": {
         "accessModifier": "public",
@@ -52,7 +53,8 @@
             "isOptional": true,
             "descr": ""
           }
-        ]
+        ],
+        "docName": "then<U>(onFulfilled,onRejected)"
       },
       "catch<U>-CiNs9": {
         "accessModifier": "public",
@@ -70,7 +72,8 @@
             "isOptional": true,
             "descr": "called when/if \"promise\" rejects"
           }
-        ]
+        ],
+        "docName": "catch<U>(onRejected)"
       }
     },
     "constructor": {
@@ -95,7 +98,8 @@
           "isOptional": false,
           "descr": ""
         }
-      ]
+      ],
+      "docName": "constructor(callback,reject)"
     },
     "types": {},
     "variables": {},

@@ -22,14 +22,14 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`add`](#add)      | [`Set<T>`](../es6-collections/set.md) |  |
-|[`clear`](#clear)      | `void` |  |
-|[`delete`](#delete)      | `boolean` |  |
-|[`forEach`](#foreach)      | `void` |  |
-|[`has`](#has)      | `boolean` |  |
-|[`entries`](#entries)      | [`Iterator<[T,T]>`](../es6-collections/iterator.md) |  |
-|[`keys`](#keys)      | [`Iterator<T>`](../es6-collections/iterator.md) |  |
-|[`values`](#values)      | [`Iterator<T>`](../es6-collections/iterator.md) |  |
+|o[e]['docName'](add(value))      | [`Set<T>`](../es6-collections/set.md) |  |
+|o[e]['docName'](clear())      | `void` |  |
+|o[e]['docName'](delete(value))      | `boolean` |  |
+|o[e]['docName'](foreach(callbackfn-thisarg))      | `void` |  |
+|o[e]['docName'](has(value))      | `boolean` |  |
+|o[e]['docName'](entries())      | [`Iterator<[T,T]>`](../es6-collections/iterator.md) |  |
+|o[e]['docName'](keys())      | [`Iterator<T>`](../es6-collections/iterator.md) |  |
+|o[e]['docName'](values())      | [`Iterator<T>`](../es6-collections/iterator.md) |  |
 
 
 
@@ -38,7 +38,7 @@
 
 
 
-**Signature:** ``add(value: T): Set<T>``
+**Signature:** ``add(value: T): [Set](../es6-collections/set.md)<T>``
 
 **Returns**: [`Set<T>`](../es6-collections/set.md)
 
@@ -88,7 +88,7 @@ None
 
 
 
-**Signature:** ``forEach(callbackfn: (value: T,index: T,set: Set<T>) => void,thisArg?: any): void``
+**Signature:** ``forEach(callbackfn: (value: T,index: T,set: [Set](../es6-collections/set.md)<T>) => void,thisArg?: any): void``
 
 **Returns**: `void`
 
@@ -125,7 +125,7 @@ None
 
 
 
-**Signature:** ``entries(): Iterator<[T,T]>``
+**Signature:** ``entries(): [Iterator](../es6-collections/iterator.md)<[T,T]>``
 
 **Returns**: [`Iterator<[T,T]>`](../es6-collections/iterator.md)
 
@@ -139,7 +139,7 @@ None
 
 
 
-**Signature:** ``keys(): Iterator<T>``
+**Signature:** ``keys(): [Iterator](../es6-collections/iterator.md)<T>``
 
 **Returns**: [`Iterator<T>`](../es6-collections/iterator.md)
 
@@ -153,7 +153,7 @@ None
 
 
 
-**Signature:** ``values(): Iterator<T>``
+**Signature:** ``values(): [Iterator](../es6-collections/iterator.md)<T>``
 
 **Returns**: [`Iterator<T>`](../es6-collections/iterator.md)
 

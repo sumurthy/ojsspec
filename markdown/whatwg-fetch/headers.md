@@ -15,13 +15,13 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`append`](#append)     | `public` | `void` |  |
-|[`delete`](#delete)     | `public` | `void` |  |
-|[`get`](#get)     | `public` | `string` |  |
-|[`getAll`](#getall)     | `public` | `Array<string>` |  |
-|[`has`](#has)     | `public` | `boolean` |  |
-|[`set`](#set)     | `public` | `void` |  |
-|[`forEach`](#foreach)     | `public` | `void` |  |
+|o[e]['docName'](append(name-value))     | `public` | `void` |  |
+|o[e]['docName'](delete(name))     | `public` | `void` |  |
+|o[e]['docName'](get(name))     | `public` | `string` |  |
+|o[e]['docName'](getall(name))     | `public` | `Array<string>` |  |
+|o[e]['docName'](has(name))     | `public` | `boolean` |  |
+|o[e]['docName'](set(name-value))     | `public` | `void` |  |
+|o[e]['docName'](foreach(callback))     | `public` | `void` |  |
 
 
 

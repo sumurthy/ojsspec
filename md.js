@@ -93,6 +93,24 @@ function getLinkForType(type = '') {
     return out
 }
 
+function getSmartLink(str = '') {
+    var out = ''
+    if (!str) return out
+    var replacePairs = {}
+    str.split(/\W+/).forEach((e) => {
+        if (Object.keys(allTypes).includes(e)) {
+            replacePairs[e] = allTypes[e]
+        } else if (Object.keys(allTypes).includes(e)) {
+            replacePairs[e] = allTypes[e]
+        }
+    })
+    Object.keys(replacePairs).forEach((e) => {
+        str = str.replace(e, `[${e}](${replacePairs[e]})`)
+        console.log('After: ' + str);
+    })
+    return str
+}
+
 
 function set_region_member(tline = '', member = {}, isClass = true) {
     skipFlag = false
@@ -284,7 +302,7 @@ function doSubClassInterface(tline = '', localO = {}, localName = '', isClass = 
         tline = tline.replace('%constdesc%', localO[localName]['constructor']['descr'])
     }
     if (tline.includes('%constsignature%')) {
-        tline = tline.replace('%constsignature%', localO[localName]['constructor']['signature'])
+        tline = tline.replace('%constsignature%', getSmartLink(localO[localName]['constructor']['signature']))
     }
     if (tline.includes('%constrtype%')) {
         tline = tline.replace('%constrtype%', `${getLinkForType(localO[localName]['constructor']['returnType'])}`)
@@ -313,7 +331,7 @@ function doSubMember(tline = '', member = {}, membername = '', isClass = true, o
     }
     if (tline.includes('%membername%')) tline = tline.replace('%membername%', membername.split('-')[0])
     if (tline.includes('%memberdescription%')) tline = tline.replace('%memberdescription%', member['descr'])
-    if (tline.includes('%apisignature%')) tline = tline.replace('%apisignature%', `\`${member['signature']}\``)
+    if (tline.includes('%apisignature%')) tline = tline.replace('%apisignature%', `\`${getSmartLink(member['signature'])}\``)
 
     if (tline.includes('%noparam%')) {
         if (member['params'].length === 0) {
@@ -448,7 +466,8 @@ function addMembers(tline = '', type = '', name = '', localO = {}) {
         }
         if ((type === 'method') || type === 'imethod') {
             mline = mline.replace('%type%', `${getLinkForType(o[e]['returnType'])}`)
-            mline = mline.replace('%name%', `[\`${e.split('-')[0]}\`](#${e.split('-')[0].toLowerCase()})`)
+            ///mline = mline.replace('%name%', `[\`${e.split('-')[0]}\`](#${e.split('-')[0].toLowerCase()})`)
+            mline = mline.replace('%name%', `o[e]['docName'](${o[e]['docName'].toLowerCase().replace(/,/,'-')})`)
         } else {
             mline = mline.replace('%name%', e.split('-')[0])
             mline = mline.replace('%type%', `${getLinkForType(o[e]['dataType'])}`)

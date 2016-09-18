@@ -18,9 +18,9 @@ that might impact performance.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`isNonemptyString`](#isnonemptystring)     | `public, static` | `void` | Throws an exception if the specified string is null,undefined,or an empty string. |
-|[`isNotNullOrUndefined`](#isnotnullorundefined)     | `public, static` | `void` | Throws an exception if the specified value is null or undefined. |
-|[`isTrue`](#istrue)     | `public, static` | `void` | Throws an exception if the specified value is not true. |
+|o[e]['docName'](isnonemptystring(value-variablename))     | `public, static` | `void` | Throws an exception if the specified string is null,undefined,or an empty string. |
+|o[e]['docName'](isnotnullorundefined(value-variablename))     | `public, static` | `void` | Throws an exception if the specified value is null or undefined. |
+|o[e]['docName'](istrue(value-variablename))     | `public, static` | `void` | Throws an exception if the specified value is not true. |
 
 
 

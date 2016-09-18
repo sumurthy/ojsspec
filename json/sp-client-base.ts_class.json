@@ -40,7 +40,8 @@
             "isOptional": false,
             "descr": "- additional options that affect the request"
           }
-        ]
+        ],
+        "docName": "fetch(url,options)"
       },
       "fetchCore-kYzk9": {
         "accessModifier": "protected",
@@ -58,7 +59,8 @@
             "isOptional": false,
             "descr": ""
           }
-        ]
+        ],
+        "docName": "fetchCore(request)"
       },
       "get-wQVw9": {
         "accessModifier": "public",
@@ -82,7 +84,8 @@
             "isOptional": true,
             "descr": "- additional options that affect the request"
           }
-        ]
+        ],
+        "docName": "get(url,options)"
       },
       "post-QZWc9": {
         "accessModifier": "public",
@@ -106,7 +109,8 @@
             "isOptional": false,
             "descr": "- additional options that affect the request"
           }
-        ]
+        ],
+        "docName": "post(url,options)"
       }
     },
     "constructor": {
@@ -125,7 +129,8 @@
           "isOptional": false,
           "descr": ""
         }
-      ]
+      ],
+      "docName": "constructor(serviceScope)"
     },
     "types": {},
     "variables": {},
@@ -161,7 +166,8 @@
             "isOptional": false,
             "descr": "- the second object to compare. \n"
           }
-        ]
+        ],
+        "docName": "shallowCompare(objA,objB)"
       }
     },
     "constructor": {},
@@ -254,7 +260,8 @@
             "isOptional": false,
             "descr": ""
           }
-        ]
+        ],
+        "docName": "equals(guid)"
       },
       "isValid-udOU9": {
         "accessModifier": "public",
@@ -272,7 +279,8 @@
             "isOptional": false,
             "descr": "- Test guid."
           }
-        ]
+        ],
+        "docName": "isValid(guid)"
       },
       "constructorGuid-SYAY9": {
         "accessModifier": "public",
@@ -290,7 +298,8 @@
             "isOptional": true,
             "descr": ""
           }
-        ]
+        ],
+        "docName": "constructorGuid(randomProvider)"
       },
       "toString-5Z9w9": {
         "accessModifier": "public",
@@ -301,7 +310,8 @@
         "genericType": null,
         "returnType": "string",
         "returnDescr": "The GUID value in lowercase hexadecimal without braces. \nExample: 'd5369f3b-bd7a-412a-9c0f-7f0650bb5489'",
-        "params": []
+        "params": [],
+        "docName": "toString()"
       },
       "tryParse-hyQk9": {
         "accessModifier": "public",
@@ -319,7 +329,8 @@
             "isOptional": false,
             "descr": "- A guid string"
           }
-        ]
+        ],
+        "docName": "tryParse(guid)"
       }
     },
     "constructor": {},
@@ -351,7 +362,8 @@
             "isOptional": true,
             "descr": ""
           }
-        ]
+        ],
+        "docName": "beginBatch(batchOptions)"
       },
       "fetch-GL3M9": {
         "accessModifier": "public",
@@ -375,7 +387,8 @@
             "isOptional": false,
             "descr": "- additional options that affect the request"
           }
-        ]
+        ],
+        "docName": "fetch(url,options)"
       },
       "get-hBbg9": {
         "accessModifier": "public",
@@ -399,7 +412,8 @@
             "isOptional": true,
             "descr": "- additional options that affect the request"
           }
-        ]
+        ],
+        "docName": "get(url,options)"
       },
       "getWebUrlFromRequestUrl-j9SA9": {
         "accessModifier": "public",
@@ -417,7 +431,8 @@
             "isOptional": false,
             "descr": "The URL for a SharePoint REST service"
           }
-        ]
+        ],
+        "docName": "getWebUrlFromRequestUrl(requestUrl)"
       },
       "post-azHU9": {
         "accessModifier": "public",
@@ -441,7 +456,8 @@
             "isOptional": false,
             "descr": "- additional options that affect the request"
           }
-        ]
+        ],
+        "docName": "post(url,options)"
       }
     },
     "constructor": {
@@ -460,7 +476,8 @@
           "isOptional": false,
           "descr": ""
         }
-      ]
+      ],
+      "docName": "constructor(serviceScope)"
     },
     "types": {},
     "variables": {},
@@ -502,7 +519,8 @@
             "isOptional": true,
             "descr": "- the service scope that the source uses. A service scope can provide \nmore context information (e.g., web part information) to the logged error."
           }
-        ]
+        ],
+        "docName": "error(source,error,scope)"
       },
       "info-0jwc9": {
         "accessModifier": "public",
@@ -532,7 +550,8 @@
             "isOptional": true,
             "descr": "- the service scope that the source uses. A service scope can provide \nmore context information (e.g., web part information) to the logged message."
           }
-        ]
+        ],
+        "docName": "info(source,message,scope)"
       },
       "verbose-vaBA9": {
         "accessModifier": "public",
@@ -562,7 +581,8 @@
             "isOptional": true,
             "descr": "- the service scope that the source uses. A service scope can provide \nmore context information (e.g., web part information) to the logged message."
           }
-        ]
+        ],
+        "docName": "verbose(source,message,scope)"
       },
       "warn-xzeY9": {
         "accessModifier": "public",
@@ -592,7 +612,8 @@
             "isOptional": true,
             "descr": "- the service scope that the source uses. A service scope can provide \nmore context information (e.g., web part information) to the logged message."
           }
-        ]
+        ],
+        "docName": "warn(source,message,scope)"
       }
     },
     "constructor": {},
@@ -617,7 +638,8 @@
         "genericType": null,
         "returnType": "Promise<ODataBatch>",
         "returnDescr": "",
-        "params": []
+        "params": [],
+        "docName": "execute()"
       },
       "fetch-k9BM9": {
         "accessModifier": "public",
@@ -641,7 +663,8 @@
             "isOptional": true,
             "descr": "- additional options that affect the request"
           }
-        ]
+        ],
+        "docName": "fetch(url,options)"
       },
       "get-tVJg9": {
         "accessModifier": "public",
@@ -665,7 +688,8 @@
             "isOptional": true,
             "descr": "- additional options that affect the request"
           }
-        ]
+        ],
+        "docName": "get(url,options)"
       },
       "post-JWiw9": {
         "accessModifier": "public",
@@ -689,7 +713,8 @@
             "isOptional": false,
             "descr": "- additional options that affect the request"
           }
-        ]
+        ],
+        "docName": "post(url,options)"
       }
     },
     "constructor": {
@@ -714,7 +739,8 @@
           "isOptional": true,
           "descr": ""
         }
-      ]
+      ],
+      "docName": "constructor(serviceScope,batchOptions)"
     },
     "types": {},
     "variables": {},
@@ -800,7 +826,8 @@
           "isOptional": false,
           "descr": ""
         }
-      ]
+      ],
+      "docName": "constructor(serviceScope)"
     },
     "types": {},
     "variables": {},
@@ -870,7 +897,8 @@
             "isOptional": false,
             "descr": "- the TypeScript class that implements the service."
           }
-        ]
+        ],
+        "docName": "create<T>(name,serviceClass)"
       },
       "createCustom<T>-F0HQ9": {
         "accessModifier": "public",
@@ -894,7 +922,8 @@
             "isOptional": false,
             "descr": "- A callback that returns an object that implements the T interface"
           }
-        ]
+        ],
+        "docName": "createCustom<T>(name,defaultCreator)"
       }
     },
     "constructor": {
@@ -925,7 +954,8 @@
           "isOptional": false,
           "descr": ""
         }
-      ]
+      ],
+      "docName": "constructor(id,name,defaultCreator)"
     },
     "types": {},
     "variables": {},
@@ -955,7 +985,8 @@
             "isOptional": false,
             "descr": "- the key that was used when provide() was called to register the service"
           }
-        ]
+        ],
+        "docName": "consume<T>(serviceKey)"
       },
       "createAndProvide<T>-GIqQ9": {
         "accessModifier": "public",
@@ -979,7 +1010,8 @@
             "isOptional": false,
             "descr": "- the TypeScript class to be constructed"
           }
-        ]
+        ],
+        "docName": "createAndProvide<T>(serviceKey,simpleServiceClass)"
       },
       "createDefaultAndProvide<T>-bI8M9": {
         "accessModifier": "public",
@@ -997,7 +1029,8 @@
             "isOptional": false,
             "descr": "- the key that can be used later to consume the service"
           }
-        ]
+        ],
+        "docName": "createDefaultAndProvide<T>(serviceKey)"
       },
       "finish-N9F89": {
         "accessModifier": "public",
@@ -1008,7 +1041,8 @@
         "genericType": null,
         "returnType": "void",
         "returnDescr": "",
-        "params": []
+        "params": [],
+        "docName": "finish()"
       },
       "getParent-O7ac9": {
         "accessModifier": "public",
@@ -1019,7 +1053,8 @@
         "genericType": null,
         "returnType": "ServiceScope",
         "returnDescr": "- the parent service scope",
-        "params": []
+        "params": [],
+        "docName": "getParent()"
       },
       "provide<T>-GSDc9": {
         "accessModifier": "public",
@@ -1043,7 +1078,8 @@
             "isOptional": false,
             "descr": "- the service instance that is being registered"
           }
-        ]
+        ],
+        "docName": "provide<T>(serviceKey,service)"
       },
       "startNewChild-XAHs9": {
         "accessModifier": "public",
@@ -1054,7 +1090,8 @@
         "genericType": null,
         "returnType": "ServiceScope",
         "returnDescr": "- the newly created root ServiceScope",
-        "params": []
+        "params": [],
+        "docName": "startNewChild()"
       },
       "startNewRoot-Mqls9": {
         "accessModifier": "public",
@@ -1065,7 +1102,8 @@
         "genericType": null,
         "returnType": "ServiceScope",
         "returnDescr": "- the newly created root ServiceScope",
-        "params": []
+        "params": [],
+        "docName": "startNewRoot()"
       },
       "whenFinished-L9bA9": {
         "accessModifier": "public",
@@ -1083,7 +1121,8 @@
             "isOptional": false,
             "descr": "- A block of code that needs to call ServiceScope.consume()"
           }
-        ]
+        ],
+        "docName": "whenFinished(callback)"
       }
     },
     "constructor": {
@@ -1102,7 +1141,8 @@
           "isOptional": false,
           "descr": ""
         }
-      ]
+      ],
+      "docName": "constructor(parent)"
     },
     "types": {},
     "variables": {},
@@ -1540,7 +1580,8 @@
             "isOptional": false,
             "descr": ""
           }
-        ]
+        ],
+        "docName": "hasAllPermissions(...requestedPerms)"
       },
       "hasAnyPermissions-fXxs9": {
         "accessModifier": "public",
@@ -1558,7 +1599,8 @@
             "isOptional": false,
             "descr": ""
           }
-        ]
+        ],
+        "docName": "hasAnyPermissions(...requestedPerms)"
       },
       "hasPermission-sBGA9": {
         "accessModifier": "public",
@@ -1576,7 +1618,8 @@
             "isOptional": false,
             "descr": "- The SPPermission object to be compared against the original"
           }
-        ]
+        ],
+        "docName": "hasPermission(requestedPerm)"
       }
     },
     "constructor": {
@@ -1595,7 +1638,8 @@
           "isOptional": false,
           "descr": ""
         }
-      ]
+      ],
+      "docName": "constructor(value)"
     },
     "types": {},
     "variables": {},
@@ -1744,7 +1788,8 @@
             "isOptional": false,
             "descr": "the case insensitive key for the desired query parameter value."
           }
-        ]
+        ],
+        "docName": "getValue(param)"
       },
       "getValues-9Dec9": {
         "accessModifier": "public",
@@ -1762,7 +1807,8 @@
             "isOptional": false,
             "descr": "the case insensitive key for the desired query parameter value."
           }
-        ]
+        ],
+        "docName": "getValues(param)"
       }
     },
     "constructor": {
@@ -1781,7 +1827,8 @@
           "isOptional": false,
           "descr": ""
         }
-      ]
+      ],
+      "docName": "constructor(url)"
     },
     "types": {},
     "variables": {},
@@ -1811,7 +1858,8 @@
             "isOptional": false,
             "descr": ""
           }
-        ]
+        ],
+        "docName": "convertToODataStringLiteral(value)"
       },
       "removeEndSlash-aIsA9": {
         "accessModifier": "public",
@@ -1829,7 +1877,8 @@
             "isOptional": false,
             "descr": "the URL to be normalized"
           }
-        ]
+        ],
+        "docName": "removeEndSlash(url)"
       }
     },
     "constructor": {},
@@ -1867,7 +1916,8 @@
             "isOptional": false,
             "descr": "- the program variable name,which will be mentioned in the error message"
           }
-        ]
+        ],
+        "docName": "isNonemptyString(value,variableName)"
       },
       "isNotNullOrUndefined-KyJc9": {
         "accessModifier": "public",
@@ -1891,7 +1941,8 @@
             "isOptional": false,
             "descr": "- the program variable name,which will be mentioned in the error message"
           }
-        ]
+        ],
+        "docName": "isNotNullOrUndefined(value,variableName)"
       },
       "isTrue-RW4Y9": {
         "accessModifier": "public",
@@ -1915,7 +1966,8 @@
             "isOptional": false,
             "descr": "- the program variable name,which will be mentioned in the error message"
           }
-        ]
+        ],
+        "docName": "isTrue(value,variableName)"
       }
     },
     "constructor": {},

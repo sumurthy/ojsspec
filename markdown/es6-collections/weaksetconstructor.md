@@ -22,8 +22,8 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`constructor<T>`](#constructor<t>)      | [`WeakSet<T>`](../es6-collections/weakset.md) |  |
-|[`constructor<T>`](#constructor<t>)      | [`WeakSet<T>`](../es6-collections/weakset.md) |  |
+|o[e]['docName'](constructor<t>())      | [`WeakSet<T>`](../es6-collections/weakset.md) |  |
+|o[e]['docName'](constructor<t>(iterable))      | [`WeakSet<T>`](../es6-collections/weakset.md) |  |
 
 
 
@@ -32,7 +32,7 @@
 
 
 
-**Signature:** ``new<T>(): WeakSet<T>``
+**Signature:** ``new<T>(): [WeakSet](../es6-collections/weakset.md)<T>``
 
 **Returns**: [`WeakSet<T>`](../es6-collections/weakset.md)
 
@@ -46,7 +46,7 @@ None
 
 
 
-**Signature:** ``new<T>(iterable: ForEachable<T>): WeakSet<T>``
+**Signature:** ``new<T>(iterable: [ForEachable](../es6-collections/foreachable.md)<T>): [WeakSet](../es6-collections/weakset.md)<T>``
 
 **Returns**: [`WeakSet<T>`](../es6-collections/weakset.md)
 

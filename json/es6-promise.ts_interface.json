@@ -28,7 +28,8 @@
             "isOptional": true,
             "descr": ""
           }
-        ]
+        ],
+        "docName": "then<U>(onFulfilled,onRejected)"
       },
       "then<U>-4DeU9": {
         "accessModifier": "public",
@@ -52,7 +53,8 @@
             "isOptional": true,
             "descr": ""
           }
-        ]
+        ],
+        "docName": "then<U>(onFulfilled,onRejected)"
       }
     },
     "constructor": {},

@@ -46,8 +46,8 @@ PRIVATE - Do not call this from your own code.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`create<T>`](#create<t>)     | `public, static` | [`ServiceKey<T>`](../sp-client-base/servicekey.md) | Constructs a new ServiceKey whose default implementation will be a new instance of  a TypeScript class that accepts the standard constructor parameter. If you want to  specify custom constructor parameters, use createCustom() instead. |
-|[`createCustom<T>`](#createcustom<t>)     | `public, static` | [`ServiceKey<T>`](../sp-client-base/servicekey.md) | Constructs a new ServiceKey whose default implementation will be obtained  by invoking the specified callback. |
+|o[e]['docName'](create<t>(name-serviceclass))     | `public, static` | [`ServiceKey<T>`](../sp-client-base/servicekey.md) | Constructs a new ServiceKey whose default implementation will be a new instance of  a TypeScript class that accepts the standard constructor parameter. If you want to  specify custom constructor parameters, use createCustom() instead. |
+|o[e]['docName'](createcustom<t>(name-defaultcreator))     | `public, static` | [`ServiceKey<T>`](../sp-client-base/servicekey.md) | Constructs a new ServiceKey whose default implementation will be obtained  by invoking the specified callback. |
 
 
 
@@ -59,7 +59,7 @@ Constructs a new ServiceKey whose default implementation will be a new instance 
 a TypeScript class that accepts the standard constructor parameter. If you want to 
 specify custom constructor parameters, use createCustom() instead.
 
-**Signature:** ``create<T>(name: string,serviceClass: { new (serviceScope: ServiceScope) }): ServiceKey<T>``
+**Signature:** ``create<T>(name: string,serviceClass: { new (serviceScope: [ServiceScope](../sp-client-base/servicescope.md)) }): [ServiceKey](../sp-client-base/servicekey.md)<T>``
 
 **Returns**: [`ServiceKey<T>`](../sp-client-base/servicekey.md)
 
@@ -79,7 +79,7 @@ specify custom constructor parameters, use createCustom() instead.
 Constructs a new ServiceKey whose default implementation will be obtained 
 by invoking the specified callback.
 
-**Signature:** ``createCustom<T>(name: string,defaultCreator: ServiceCreator<T>): ServiceKey<T>``
+**Signature:** ``createCustom<T>(name: string,defaultCreator: ServiceCreator<T>): [ServiceKey](../sp-client-base/servicekey.md)<T>``
 
 **Returns**: [`ServiceKey<T>`](../sp-client-base/servicekey.md)
 

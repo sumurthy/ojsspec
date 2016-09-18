@@ -2,7 +2,7 @@
 
 Helper method to create a Link on the PropertyPane.
 
-**Signature:** ``PropertyPaneLink(targetProperty: string,properties: IPropertyPaneLinkProps): IPropertyPaneField<IPropertyPaneLinkProps>``
+**Signature:** ``PropertyPaneLink(targetProperty: string,properties: [IPropertyPaneLinkProps](../sp-client-preview/ipropertypanelinkprops.md)): [IPropertyPaneField](../sp-client-preview/ipropertypanefield.md)<IPropertyPaneLinkProps>``
 
 **Returns**: [`IPropertyPaneField<IPropertyPaneLinkProps>`](../sp-client-preview/ipropertypanefield.md)
 

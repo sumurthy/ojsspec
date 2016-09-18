@@ -117,7 +117,8 @@
           "isOptional": true,
           "descr": ""
         }
-      ]
+      ],
+      "docName": "constructor(input,init)"
     },
     "types": {},
     "variables": {},
@@ -153,7 +154,8 @@
             "isOptional": false,
             "descr": ""
           }
-        ]
+        ],
+        "docName": "append(name,value)"
       },
       "delete-KTKE9": {
         "accessModifier": "public",
@@ -171,7 +173,8 @@
             "isOptional": false,
             "descr": ""
           }
-        ]
+        ],
+        "docName": "delete(name)"
       },
       "get-E0S09": {
         "accessModifier": "public",
@@ -189,7 +192,8 @@
             "isOptional": false,
             "descr": ""
           }
-        ]
+        ],
+        "docName": "get(name)"
       },
       "getAll-LXjI9": {
         "accessModifier": "public",
@@ -207,7 +211,8 @@
             "isOptional": false,
             "descr": ""
           }
-        ]
+        ],
+        "docName": "getAll(name)"
       },
       "has-AAGU9": {
         "accessModifier": "public",
@@ -225,7 +230,8 @@
             "isOptional": false,
             "descr": ""
           }
-        ]
+        ],
+        "docName": "has(name)"
       },
       "set-rLHQ9": {
         "accessModifier": "public",
@@ -249,7 +255,8 @@
             "isOptional": false,
             "descr": ""
           }
-        ]
+        ],
+        "docName": "set(name,value)"
       },
       "forEach-yX4o9": {
         "accessModifier": "public",
@@ -267,7 +274,8 @@
             "isOptional": false,
             "descr": ""
           }
-        ]
+        ],
+        "docName": "forEach(callback)"
       }
     },
     "constructor": {},
@@ -304,7 +312,8 @@
         "genericType": null,
         "returnType": "Promise<ArrayBuffer>",
         "returnDescr": "",
-        "params": []
+        "params": [],
+        "docName": "arrayBuffer()"
       },
       "blob-eubc9": {
         "accessModifier": "public",
@@ -315,7 +324,8 @@
         "genericType": null,
         "returnType": "Promise<Blob>",
         "returnDescr": "",
-        "params": []
+        "params": [],
+        "docName": "blob()"
       },
       "formData-DLPs9": {
         "accessModifier": "public",
@@ -326,7 +336,8 @@
         "genericType": null,
         "returnType": "Promise<FormData>",
         "returnDescr": "",
-        "params": []
+        "params": [],
+        "docName": "formData()"
       },
       "json-9hyk9": {
         "accessModifier": "public",
@@ -337,7 +348,8 @@
         "genericType": null,
         "returnType": "Promise<any>",
         "returnDescr": "",
-        "params": []
+        "params": [],
+        "docName": "json()"
       },
       "json<T>-Ncn49": {
         "accessModifier": "public",
@@ -348,7 +360,8 @@
         "genericType": "T",
         "returnType": "Promise<T>",
         "returnDescr": "",
-        "params": []
+        "params": [],
+        "docName": "json<T>()"
       },
       "text-10Is9": {
         "accessModifier": "public",
@@ -359,7 +372,8 @@
         "genericType": null,
         "returnType": "Promise<string>",
         "returnDescr": "",
-        "params": []
+        "params": [],
+        "docName": "text()"
       }
     },
     "constructor": {},
@@ -451,7 +465,8 @@
         "genericType": null,
         "returnType": "Response",
         "returnDescr": "",
-        "params": []
+        "params": [],
+        "docName": "error()"
       },
       "redirect-3bnQ9": {
         "accessModifier": "public",
@@ -475,7 +490,8 @@
             "isOptional": false,
             "descr": ""
           }
-        ]
+        ],
+        "docName": "redirect(url,status)"
       },
       "clone-3mAQ9": {
         "accessModifier": "public",
@@ -486,7 +502,8 @@
         "genericType": null,
         "returnType": "Response",
         "returnDescr": "",
-        "params": []
+        "params": [],
+        "docName": "clone()"
       }
     },
     "constructor": {
@@ -511,7 +528,8 @@
           "isOptional": true,
           "descr": ""
         }
-      ]
+      ],
+      "docName": "constructor(body,init)"
     },
     "types": {},
     "variables": {},

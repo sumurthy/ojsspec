@@ -16,10 +16,10 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`delete`](#delete)      | `boolean` |  |
-|[`clear`](#clear)      | `void` |  |
-|[`add`](#add)      | [`WeakSet<T>`](../es6-collections/weakset.md) |  |
-|[`has`](#has)      | `boolean` |  |
+|o[e]['docName'](delete(value))      | `boolean` |  |
+|o[e]['docName'](clear())      | `void` |  |
+|o[e]['docName'](add(value))      | [`WeakSet<T>`](../es6-collections/weakset.md) |  |
+|o[e]['docName'](has(value))      | `boolean` |  |
 
 
 
@@ -60,7 +60,7 @@ None
 
 
 
-**Signature:** ``add(value: T): WeakSet<T>``
+**Signature:** ``add(value: T): [WeakSet](../es6-collections/weakset.md)<T>``
 
 **Returns**: [`WeakSet<T>`](../es6-collections/weakset.md)
 

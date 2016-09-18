@@ -22,7 +22,8 @@
             "isOptional": true,
             "descr": ""
           }
-        ]
+        ],
+        "docName": "resolve<R>(value)"
       },
       "reject-u1UQ9": {
         "accessModifier": "public",
@@ -40,7 +41,8 @@
             "isOptional": false,
             "descr": ""
           }
-        ]
+        ],
+        "docName": "reject(error)"
       },
       "all<R>-O1309": {
         "accessModifier": "public",
@@ -58,7 +60,8 @@
             "isOptional": false,
             "descr": ""
           }
-        ]
+        ],
+        "docName": "all<R>(promises)"
       },
       "race<R>-EI609": {
         "accessModifier": "public",
@@ -76,7 +79,8 @@
             "isOptional": false,
             "descr": ""
           }
-        ]
+        ],
+        "docName": "race<R>(promises)"
       }
     },
     "constructor": {},

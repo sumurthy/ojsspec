@@ -19,7 +19,7 @@ resolve with a Response object for that particular request.
 ## Constructor
 
 
-**Signature:** `constructor(serviceScope: ServiceScope,batchOptions?: IODataBatchOptions)`
+**Signature:** `constructor(serviceScope: [ServiceScope](../sp-client-base/servicescope.md),batchOptions?: [IODataBatchOptions](../sp-client-base/iodatabatchoptions.md))`
 
 **Returns**: [`ODataBatch`](../sp-client-base/odatabatch.md)
 
@@ -41,10 +41,10 @@ resolve with a Response object for that particular request.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`execute`](#execute)     | `public` | [`Promise<ODataBatch>`](../es6-promise/promise.md) | Executes the batched queries that were queued using ODataBatch.fetch(). |
-|[`fetch`](#fetch)     | `public` | [`Promise<Response>`](../es6-promise/promise.md) | Queues a new request,and returns a promise that can be used to access  the server response (after execute() has completed). The parameters for  this function are basically the same as the WHATWG API standard documented here:  https://fetch.spec.whatwg.org/    However, be aware that certain REST headers are ignored or not allowed inside  a batch. See the ODATA documentation for details.    When execute() is called, it will POST to a URL such as  "http://example.com/sites/sample/_api/$batch". Typically ODataBatch can successfully  guess the appropriate SPWeb URL by looking for a reserved URL segment such as "_api"  in the first URL passed to fetch(). If not, use IODataBatchOptions.webUrl to specify it  explicitly.   |
-|[`get`](#get)     | `public` | [`Promise<Response>`](../es6-promise/promise.md) | Calls fetch(),but sets the method to 'GET'. |
-|[`post`](#post)     | `public` | [`Promise<Response>`](../es6-promise/promise.md) | Calls fetch(),but sets the method to 'POST'. |
+|o[e]['docName'](execute())     | `public` | [`Promise<ODataBatch>`](../es6-promise/promise.md) | Executes the batched queries that were queued using ODataBatch.fetch(). |
+|o[e]['docName'](fetch(url-options))     | `public` | [`Promise<Response>`](../es6-promise/promise.md) | Queues a new request,and returns a promise that can be used to access  the server response (after execute() has completed). The parameters for  this function are basically the same as the WHATWG API standard documented here:  https://fetch.spec.whatwg.org/    However, be aware that certain REST headers are ignored or not allowed inside  a batch. See the ODATA documentation for details.    When execute() is called, it will POST to a URL such as  "http://example.com/sites/sample/_api/$batch". Typically ODataBatch can successfully  guess the appropriate SPWeb URL by looking for a reserved URL segment such as "_api"  in the first URL passed to fetch(). If not, use IODataBatchOptions.webUrl to specify it  explicitly.   |
+|o[e]['docName'](get(url-options))     | `public` | [`Promise<Response>`](../es6-promise/promise.md) | Calls fetch(),but sets the method to 'GET'. |
+|o[e]['docName'](post(url-options))     | `public` | [`Promise<Response>`](../es6-promise/promise.md) | Calls fetch(),but sets the method to 'POST'. |
 
 
 
@@ -54,7 +54,7 @@ resolve with a Response object for that particular request.
 
 Executes the batched queries that were queued using ODataBatch.fetch().
 
-**Signature:** ``execute(): Promise<ODataBatch>``
+**Signature:** ``execute(): [Promise](../es6-promise/promise.md)<[ODataBatch](../sp-client-base/odatabatch.md)>``
 
 **Returns**: [`Promise<ODataBatch>`](../es6-promise/promise.md)
 
@@ -81,7 +81,7 @@ in the first URL passed to fetch(). If not, use IODataBatchOptions.webUrl to spe
 explicitly. 
 
 
-**Signature:** ``fetch(url: string,options?: IODataBatchRequestOptions): Promise<Response>``
+**Signature:** ``fetch(url: string,options?: IODataBatchRequestOptions): [Promise](../es6-promise/promise.md)<[Response](../whatwg-fetch/response.md)>``
 
 **Returns**: [`Promise<Response>`](../es6-promise/promise.md)
 
@@ -100,7 +100,7 @@ a promise that will return the result
 
 Calls fetch(),but sets the method to 'GET'.
 
-**Signature:** ``get(url: string,options?: IODataBatchRequestOptions): Promise<Response>``
+**Signature:** ``get(url: string,options?: IODataBatchRequestOptions): [Promise](../es6-promise/promise.md)<[Response](../whatwg-fetch/response.md)>``
 
 **Returns**: [`Promise<Response>`](../es6-promise/promise.md)
 
@@ -119,7 +119,7 @@ a promise that will return the result
 
 Calls fetch(),but sets the method to 'POST'.
 
-**Signature:** ``post(url: string,options: IODataBatchRequestOptions): Promise<Response>``
+**Signature:** ``post(url: string,options: IODataBatchRequestOptions): [Promise](../es6-promise/promise.md)<[Response](../whatwg-fetch/response.md)>``
 
 **Returns**: [`Promise<Response>`](../es6-promise/promise.md)
 

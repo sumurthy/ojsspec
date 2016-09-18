@@ -16,7 +16,7 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`fetch`](#fetch)      | [`Promise<Response>`](../es6-promise/promise.md) |  |
+|o[e]['docName'](fetch(url-init))      | [`Promise<Response>`](../es6-promise/promise.md) |  |
 
 
 
@@ -25,7 +25,7 @@
 
 
 
-**Signature:** ``fetch(url: string|Request,init?: RequestInit): Promise<Response>``
+**Signature:** ``fetch(url: string|[Request](../whatwg-fetch/request.md),init?: [RequestInit](../whatwg-fetch/requestinit.md)): [Promise](../es6-promise/promise.md)<[Response](../whatwg-fetch/response.md)>``
 
 **Returns**: [`Promise<Response>`](../es6-promise/promise.md)
 

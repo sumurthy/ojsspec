@@ -18,10 +18,10 @@ which component generated the messages and makes the messages useful and filtera
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`error`](#error)     | `public, static` | `void` | Logs an error |
-|[`info`](#info)     | `public, static` | `void` | Logs an informational message |
-|[`verbose`](#verbose)     | `public, static` | `void` | Logs a verbose message |
-|[`warn`](#warn)     | `public, static` | `void` | Logs a warning |
+|o[e]['docName'](error(source-error,scope))     | `public, static` | `void` | Logs an error |
+|o[e]['docName'](info(source-message,scope))     | `public, static` | `void` | Logs an informational message |
+|o[e]['docName'](verbose(source-message,scope))     | `public, static` | `void` | Logs a verbose message |
+|o[e]['docName'](warn(source-message,scope))     | `public, static` | `void` | Logs a warning |
 
 
 
@@ -31,7 +31,7 @@ which component generated the messages and makes the messages useful and filtera
 
 Logs an error
 
-**Signature:** ``error(source: string,error: Error,scope?: ServiceScope): void``
+**Signature:** ``error(source: string,error: Error,scope?: [ServiceScope](../sp-client-base/servicescope.md)): void``
 
 **Returns**: `void`
 
@@ -51,7 +51,7 @@ Logs an error
 
 Logs an informational message
 
-**Signature:** ``info(source: string,message: string,scope?: ServiceScope): void``
+**Signature:** ``info(source: string,message: string,scope?: [ServiceScope](../sp-client-base/servicescope.md)): void``
 
 **Returns**: `void`
 
@@ -71,7 +71,7 @@ Logs an informational message
 
 Logs a verbose message
 
-**Signature:** ``verbose(source: string,message: string,scope?: ServiceScope): void``
+**Signature:** ``verbose(source: string,message: string,scope?: [ServiceScope](../sp-client-base/servicescope.md)): void``
 
 **Returns**: `void`
 
@@ -91,7 +91,7 @@ Logs a verbose message
 
 Logs a warning
 
-**Signature:** ``warn(source: string,message: string,scope?: ServiceScope): void``
+**Signature:** ``warn(source: string,message: string,scope?: [ServiceScope](../sp-client-base/servicescope.md)): void``
 
 **Returns**: `void`
 

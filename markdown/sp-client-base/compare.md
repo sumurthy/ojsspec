@@ -15,7 +15,7 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`shallowCompare`](#shallowcompare)     | `public, static` | `boolean` | Performs shallow comparison between two objects to determine if they are equal. This method compares  only object types.   |
+|o[e]['docName'](shallowcompare(obja-objb))     | `public, static` | `boolean` | Performs shallow comparison between two objects to determine if they are equal. This method compares  only object types.   |
 
 
 

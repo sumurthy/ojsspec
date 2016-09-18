@@ -155,7 +155,8 @@
             "isOptional": true,
             "descr": ""
           }
-        ]
+        ],
+        "docName": "fetch(url,init)"
       }
     },
     "constructor": {},

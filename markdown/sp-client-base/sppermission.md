@@ -13,7 +13,7 @@ https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.
 ## Constructor
 
 
-**Signature:** `constructor(value: IODataBasePermission)`
+**Signature:** `constructor(value: [IODataBasePermission](../sp-client-base/iodatabasepermission.md))`
 
 **Returns**: [`SPPermission`](../sp-client-base/sppermission.md)
 
@@ -76,9 +76,9 @@ https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`hasAllPermissions`](#hasallpermissions)     | `public` | `boolean` | Function for determining if a given permission mask has all of the requested permissions. |
-|[`hasAnyPermissions`](#hasanypermissions)     | `public` | `boolean` | Function for determining if a given permission mask has any of the requested permissions. |
-|[`hasPermission`](#haspermission)     | `public` | `boolean` | Function for checking if a given permission mask has the requested permission. |
+|o[e]['docName'](hasallpermissions(...requestedperms))     | `public` | `boolean` | Function for determining if a given permission mask has all of the requested permissions. |
+|o[e]['docName'](hasanypermissions(...requestedperms))     | `public` | `boolean` | Function for determining if a given permission mask has any of the requested permissions. |
+|o[e]['docName'](haspermission(requestedperm))     | `public` | `boolean` | Function for checking if a given permission mask has the requested permission. |
 
 
 
@@ -88,7 +88,7 @@ https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.
 
 Function for determining if a given permission mask has all of the requested permissions.
 
-**Signature:** ``hasAllPermissions(...requestedPerms: SPPermission[]): boolean``
+**Signature:** ``hasAllPermissions(...requestedPerms: [SPPermission](../sp-client-base/sppermission.md)[]): boolean``
 
 **Returns**: `boolean`
 
@@ -106,7 +106,7 @@ Function for determining if a given permission mask has all of the requested per
 
 Function for determining if a given permission mask has any of the requested permissions.
 
-**Signature:** ``hasAnyPermissions(...requestedPerms: SPPermission[]): boolean``
+**Signature:** ``hasAnyPermissions(...requestedPerms: [SPPermission](../sp-client-base/sppermission.md)[]): boolean``
 
 **Returns**: `boolean`
 
@@ -124,7 +124,7 @@ Function for determining if a given permission mask has any of the requested per
 
 Function for checking if a given permission mask has the requested permission.
 
-**Signature:** ``hasPermission(requestedPerm: SPPermission): boolean``
+**Signature:** ``hasPermission(requestedPerm: [SPPermission](../sp-client-base/sppermission.md)): boolean``
 
 **Returns**: `boolean`
 

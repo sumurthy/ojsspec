@@ -253,7 +253,7 @@ var self = module.exports = {
         return line
 
     },
-    processMethod: (line = '', descr = '', commentObject = {}, parentName = '', name = ' ', isStatic = false) => {
+    processMethod: (line = '', descr = '', commentObject = {}, parentName = '', name = '', isStatic = false) => {
         var m = {}
         var firstWord = line.split(' ', 1)[0]
         var secondWord = line.split(' ', 2)[1]
@@ -282,6 +282,12 @@ var self = module.exports = {
         m['returnDescr'] = (commentObject['returnDescr'] === undefined) ?
             '' : commentObject['returnDescr']
         m['params'] = self.buildParamList(line, commentObject['param'])
+        var list = ''
+        m['params'].forEach((e) => {
+            list = list + e['name'] + ','
+        })
+        if (list) list = list.slice(0,-1)
+        m['docName'] = name.split('-')[0] + '(' + list + ')'
         return m
     },
     processProperty: (name = '', line = '', descr = '', assignValue = null, isClass = true, readonly = false) => {

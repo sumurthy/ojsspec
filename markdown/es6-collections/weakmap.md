@@ -16,11 +16,11 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`delete`](#delete)      | `boolean` |  |
-|[`clear`](#clear)      | `void` |  |
-|[`get`](#get)      | `V` |  |
-|[`has`](#has)      | `boolean` |  |
-|[`set`](#set)      | [`WeakMap<K,V>`](../es6-collections/weakmap.md) |  |
+|o[e]['docName'](delete(key))      | `boolean` |  |
+|o[e]['docName'](clear())      | `void` |  |
+|o[e]['docName'](get(key))      | `V` |  |
+|o[e]['docName'](has(key))      | `boolean` |  |
+|o[e]['docName'](set(key-value))      | [`WeakMap<K,V>`](../es6-collections/weakmap.md) |  |
 
 
 
@@ -97,7 +97,7 @@ None
 
 
 
-**Signature:** ``set(key: K,value?: V): WeakMap<K,V>``
+**Signature:** ``set(key: K,value?: V): [WeakMap](../es6-collections/weakmap.md)<K,V>``
 
 **Returns**: [`WeakMap<K,V>`](../es6-collections/weakmap.md)
 
