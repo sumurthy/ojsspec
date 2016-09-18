@@ -8,7 +8,7 @@
 
 | Module	   |  Description |
 |:-------------|:---------------|
->| [%name%](%link%-imodule.md)     | %description% |
+>| [`%name%`](%link%-imodule.md)     | %description% |
 
 </module>
 
@@ -18,7 +18,7 @@
 
 | Class	   |  Description |
 |:-------------|:---------------|
->| [%name%](%link%.md)     | %description% |
+>| [`%name%`](%link%.md)     | %description% |
 
 </class>
 
@@ -28,7 +28,7 @@
 
 | Interface	   |  Description |
 |:-------------|:---------------|
->| [%name%](%link%.md)   | %description%  |
+>| [`%name%`](%link%.md)   | %description%  |
 
 </interface>
 
@@ -38,7 +38,7 @@
 
 | Function	   | Returns | Description |
 |:-------------|:------|:---------------|
->| [%namehyphen%](%link%.md) |%returns%  | %description%  |
+>| [`%namehyphen%`](%link%.md) |%returns%  | %description%  |
 
 </functions>
 
@@ -47,7 +47,7 @@
 
 | Enumeration	   | Description|
 |:-----------|:------------|
->|[%name%](%link%.md)    | %description% |
+>|[`%name%`](%link%.md)    | %description% |
 
 </enumeration>
 
