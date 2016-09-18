@@ -16,9 +16,9 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|o[e]['docName'](next(value))      | [`IteratorResult<T>`](../es6-collections/iteratorresult.md) |  |
-|o[e]['docName'](return(value))      | [`IteratorResult<T>`](../es6-collections/iteratorresult.md) |  |
-|o[e]['docName'](throw(e))      | [`IteratorResult<T>`](../es6-collections/iteratorresult.md) |  |
+|[next(value)](next(value))      | [`IteratorResult<T>`](../es6-collections/iteratorresult.md) |  |
+|[return(value)](return(value))      | [`IteratorResult<T>`](../es6-collections/iteratorresult.md) |  |
+|[throw(e)](throw(e))      | [`IteratorResult<T>`](../es6-collections/iteratorresult.md) |  |
 
 
 

@@ -22,8 +22,8 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|o[e]['docName'](constructor<k-v>())      | [`Map<K,V>`](../es6-collections/map.md) |  |
-|o[e]['docName'](constructor<k-v>(iterable))      | [`Map<K,V>`](../es6-collections/map.md) |  |
+|[constructor<K,V>()](constructor<k-v>())      | [`Map<K,V>`](../es6-collections/map.md) |  |
+|[constructor<K,V>(iterable)](constructor<k-v>(iterable))      | [`Map<K,V>`](../es6-collections/map.md) |  |
 
 
 

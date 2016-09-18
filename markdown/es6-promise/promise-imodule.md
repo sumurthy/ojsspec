@@ -16,10 +16,10 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|o[e]['docName'](resolve<r>(value))      | [`Promise<R>`](../es6-promise/promise.md) | Make a new promise from the thenable.  A thenable is promise-like in as far as it has a "then" method. |
-|o[e]['docName'](reject(error))      | [`Promise<any>`](../es6-promise/promise.md) | Make a promise that rejects to obj. For consistency and debugging (eg stack traces),obj should be an instanceof Error |
-|o[e]['docName'](all<r>(promises))      | [`Promise<R[]>`](../es6-promise/promise.md) | Make a promise that fulfills when every item in the array fulfills,and rejects if (and when) any item rejects.  the array passed to all can be a mixture of promise-like objects and other objects.  The fulfillment value is an array (in order) of fulfillment values. The rejection value is the first rejection value. |
-|o[e]['docName'](race<r>(promises))      | [`Promise<R>`](../es6-promise/promise.md) | Make a Promise that fulfills when any item fulfills,and rejects if any item rejects. |
+|[resolve<R>(value)](resolve<r>(value))      | [`Promise<R>`](../es6-promise/promise.md) | Make a new promise from the thenable.  A thenable is promise-like in as far as it has a "then" method. |
+|[reject(error)](reject(error))      | [`Promise<any>`](../es6-promise/promise.md) | Make a promise that rejects to obj. For consistency and debugging (eg stack traces),obj should be an instanceof Error |
+|[all<R>(promises)](all<r>(promises))      | [`Promise<R[]>`](../es6-promise/promise.md) | Make a promise that fulfills when every item in the array fulfills,and rejects if (and when) any item rejects.  the array passed to all can be a mixture of promise-like objects and other objects.  The fulfillment value is an array (in order) of fulfillment values. The rejection value is the first rejection value. |
+|[race<R>(promises)](race<r>(promises))      | [`Promise<R>`](../es6-promise/promise.md) | Make a Promise that fulfills when any item fulfills,and rejects if any item rejects. |
 
 
 

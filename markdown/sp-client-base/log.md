@@ -18,10 +18,10 @@ which component generated the messages and makes the messages useful and filtera
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|o[e]['docName'](error(source-error,scope))     | `public, static` | `void` | Logs an error |
-|o[e]['docName'](info(source-message,scope))     | `public, static` | `void` | Logs an informational message |
-|o[e]['docName'](verbose(source-message,scope))     | `public, static` | `void` | Logs a verbose message |
-|o[e]['docName'](warn(source-message,scope))     | `public, static` | `void` | Logs a warning |
+|[error(source,error,scope)](error(source-error,scope))     | `public, static` | `void` | Logs an error |
+|[info(source,message,scope)](info(source-message,scope))     | `public, static` | `void` | Logs an informational message |
+|[verbose(source,message,scope)](verbose(source-message,scope))     | `public, static` | `void` | Logs a verbose message |
+|[warn(source,message,scope)](warn(source-message,scope))     | `public, static` | `void` | Logs a warning |
 
 
 

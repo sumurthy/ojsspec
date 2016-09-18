@@ -22,11 +22,11 @@ Math.random() function and may be not be suitable for some applications.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|o[e]['docName'](equals(guid))     | `public` | `boolean` | Compare this instance to another Guid instance   |
-|o[e]['docName'](isvalid(guid))     | `public, static` | `boolean` | Indicates whether a guid is valid (according to RFC4122).   |
-|o[e]['docName'](constructorguid(randomprovider))     | `public, static` | [`Guid`](../sp-client-base/guid.md) | Returns a new Guid instance with a pseudo-randomly generated Guid.   |
-|o[e]['docName'](tostring())     | `public` | `string` | Object.prototype.toString override   |
-|o[e]['docName'](tryparse(guid))     | `public, static` | [`Guid`](../sp-client-base/guid.md) | Trys to construct a new Guid instance using guid string. The guid argument  is normalized and validated. If the argument is not a valid "version 4" UUID from  RFC 4122, tryParse will return undefined.   |
+|[equals(guid)](equals(guid))     | `public` | `boolean` | Compare this instance to another Guid instance   |
+|[isValid(guid)](isvalid(guid))     | `public, static` | `boolean` | Indicates whether a guid is valid (according to RFC4122).   |
+|[constructorGuid(randomProvider)](constructorguid(randomprovider))     | `public, static` | [`Guid`](../sp-client-base/guid.md) | Returns a new Guid instance with a pseudo-randomly generated Guid.   |
+|[toString()](tostring())     | `public` | `string` | Object.prototype.toString override   |
+|[tryParse(guid)](tryparse(guid))     | `public, static` | [`Guid`](../sp-client-base/guid.md) | Trys to construct a new Guid instance using guid string. The guid argument  is normalized and validated. If the argument is not a valid "version 4" UUID from  RFC 4122, tryParse will return undefined.   |
 
 
 

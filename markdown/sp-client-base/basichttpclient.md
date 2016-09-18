@@ -39,10 +39,10 @@ enhancements.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|o[e]['docName'](fetch(url-options))     | `public` | [`Promise<Response>`](../es6-promise/promise.md) | Performs a REST service call. Although the HttpClient subclass adds  additional enhancements, the parameters and semantics for BasicHttpClient.fetch()  are essentially the same as the WHATWG API standard that is documented here:  https://fetch.spec.whatwg.org/ |
-|o[e]['docName'](fetchcore(request))     | `protected` | [`Promise<Response>`](../es6-promise/promise.md) |  |
-|o[e]['docName'](get(url-options))     | `public` | [`Promise<Response>`](../es6-promise/promise.md) | Calls fetch(),but sets the method to 'GET'. |
-|o[e]['docName'](post(url-options))     | `public` | [`Promise<Response>`](../es6-promise/promise.md) | Calls fetch(),but sets the method to 'POST'. |
+|[fetch(url,options)](fetch(url-options))     | `public` | [`Promise<Response>`](../es6-promise/promise.md) | Performs a REST service call. Although the HttpClient subclass adds  additional enhancements, the parameters and semantics for BasicHttpClient.fetch()  are essentially the same as the WHATWG API standard that is documented here:  https://fetch.spec.whatwg.org/ |
+|[fetchCore(request)](fetchcore(request))     | `protected` | [`Promise<Response>`](../es6-promise/promise.md) |  |
+|[get(url,options)](get(url-options))     | `public` | [`Promise<Response>`](../es6-promise/promise.md) | Calls fetch(),but sets the method to 'GET'. |
+|[post(url,options)](post(url-options))     | `public` | [`Promise<Response>`](../es6-promise/promise.md) | Calls fetch(),but sets the method to 'POST'. |
 
 
 

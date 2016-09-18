@@ -22,15 +22,15 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|o[e]['docName'](clear())      | `void` |  |
-|o[e]['docName'](delete(key))      | `boolean` |  |
-|o[e]['docName'](foreach(callbackfn-thisarg))      | `void` |  |
-|o[e]['docName'](get(key))      | `V` |  |
-|o[e]['docName'](has(key))      | `boolean` |  |
-|o[e]['docName'](set(key-value))      | [`Map<K,V>`](../es6-collections/map.md) |  |
-|o[e]['docName'](entries())      | [`Iterator<[K,V]>`](../es6-collections/iterator.md) |  |
-|o[e]['docName'](keys())      | [`Iterator<K>`](../es6-collections/iterator.md) |  |
-|o[e]['docName'](values())      | [`Iterator<V>`](../es6-collections/iterator.md) |  |
+|[clear()](clear())      | `void` |  |
+|[delete(key)](delete(key))      | `boolean` |  |
+|[forEach(callbackfn,thisArg)](foreach(callbackfn-thisarg))      | `void` |  |
+|[get(key)](get(key))      | `V` |  |
+|[has(key)](has(key))      | `boolean` |  |
+|[set(key,value)](set(key-value))      | [`Map<K,V>`](../es6-collections/map.md) |  |
+|[entries()](entries())      | [`Iterator<[K,V]>`](../es6-collections/iterator.md) |  |
+|[keys()](keys())      | [`Iterator<K>`](../es6-collections/iterator.md) |  |
+|[values()](values())      | [`Iterator<V>`](../es6-collections/iterator.md) |  |
 
 
 

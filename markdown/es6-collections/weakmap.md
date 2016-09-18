@@ -16,11 +16,11 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|o[e]['docName'](delete(key))      | `boolean` |  |
-|o[e]['docName'](clear())      | `void` |  |
-|o[e]['docName'](get(key))      | `V` |  |
-|o[e]['docName'](has(key))      | `boolean` |  |
-|o[e]['docName'](set(key-value))      | [`WeakMap<K,V>`](../es6-collections/weakmap.md) |  |
+|[delete(key)](delete(key))      | `boolean` |  |
+|[clear()](clear())      | `void` |  |
+|[get(key)](get(key))      | `V` |  |
+|[has(key)](has(key))      | `boolean` |  |
+|[set(key,value)](set(key-value))      | [`WeakMap<K,V>`](../es6-collections/weakmap.md) |  |
 
 
 

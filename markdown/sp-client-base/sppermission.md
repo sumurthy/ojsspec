@@ -76,9 +76,9 @@ https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|o[e]['docName'](hasallpermissions(...requestedperms))     | `public` | `boolean` | Function for determining if a given permission mask has all of the requested permissions. |
-|o[e]['docName'](hasanypermissions(...requestedperms))     | `public` | `boolean` | Function for determining if a given permission mask has any of the requested permissions. |
-|o[e]['docName'](haspermission(requestedperm))     | `public` | `boolean` | Function for checking if a given permission mask has the requested permission. |
+|[hasAllPermissions(...requestedPerms)](hasallpermissions(...requestedperms))     | `public` | `boolean` | Function for determining if a given permission mask has all of the requested permissions. |
+|[hasAnyPermissions(...requestedPerms)](hasanypermissions(...requestedperms))     | `public` | `boolean` | Function for determining if a given permission mask has any of the requested permissions. |
+|[hasPermission(requestedPerm)](haspermission(requestedperm))     | `public` | `boolean` | Function for checking if a given permission mask has the requested permission. |
 
 
 

@@ -22,14 +22,14 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|o[e]['docName'](add(value))      | [`Set<T>`](../es6-collections/set.md) |  |
-|o[e]['docName'](clear())      | `void` |  |
-|o[e]['docName'](delete(value))      | `boolean` |  |
-|o[e]['docName'](foreach(callbackfn-thisarg))      | `void` |  |
-|o[e]['docName'](has(value))      | `boolean` |  |
-|o[e]['docName'](entries())      | [`Iterator<[T,T]>`](../es6-collections/iterator.md) |  |
-|o[e]['docName'](keys())      | [`Iterator<T>`](../es6-collections/iterator.md) |  |
-|o[e]['docName'](values())      | [`Iterator<T>`](../es6-collections/iterator.md) |  |
+|[add(value)](add(value))      | [`Set<T>`](../es6-collections/set.md) |  |
+|[clear()](clear())      | `void` |  |
+|[delete(value)](delete(value))      | `boolean` |  |
+|[forEach(callbackfn,thisArg)](foreach(callbackfn-thisarg))      | `void` |  |
+|[has(value)](has(value))      | `boolean` |  |
+|[entries()](entries())      | [`Iterator<[T,T]>`](../es6-collections/iterator.md) |  |
+|[keys()](keys())      | [`Iterator<T>`](../es6-collections/iterator.md) |  |
+|[values()](values())      | [`Iterator<T>`](../es6-collections/iterator.md) |  |
 
 
 

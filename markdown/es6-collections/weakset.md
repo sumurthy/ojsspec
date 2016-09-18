@@ -16,10 +16,10 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|o[e]['docName'](delete(value))      | `boolean` |  |
-|o[e]['docName'](clear())      | `void` |  |
-|o[e]['docName'](add(value))      | [`WeakSet<T>`](../es6-collections/weakset.md) |  |
-|o[e]['docName'](has(value))      | `boolean` |  |
+|[delete(value)](delete(value))      | `boolean` |  |
+|[clear()](clear())      | `void` |  |
+|[add(value)](add(value))      | [`WeakSet<T>`](../es6-collections/weakset.md) |  |
+|[has(value)](has(value))      | `boolean` |  |
 
 
 

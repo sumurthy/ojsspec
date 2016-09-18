@@ -16,7 +16,7 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|o[e]['docName'](foreach(callbackfn))      | `void` |  |
+|[forEach(callbackfn)](foreach(callbackfn))      | `void` |  |
 
 
 

@@ -36,9 +36,9 @@ Any errors thrown in the constructor callback will be implicitly passed to rejec
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|o[e]['docName'](then<u>(onfulfilled-onrejected))     | `public` | [`Promise<U>`](../es6-promise/promise.md) | onFulfilled is called when/if "promise" resolves. onRejected is called when/if "promise" rejects.  Both are optional, if either/both are omitted the next onFulfilled/onRejected in the chain is called.  Both callbacks have a single parameter , the fulfillment value or rejection reason.  "then" returns a new promise equivalent to the value you return from onFulfilled/onRejected after being passed through Promise.resolve.  If an error is thrown in the callback, the returned promise rejects with that error.   |
-|o[e]['docName'](then<u>(onfulfilled-onrejected))     | `public` | [`Promise<U>`](../es6-promise/promise.md) |  |
-|o[e]['docName'](catch<u>(onrejected))     | `public` | [`Promise<U>`](../es6-promise/promise.md) | Sugar for promise.then(undefined,onRejected)   |
+|[then<U>(onFulfilled,onRejected)](then<u>(onfulfilled-onrejected))     | `public` | [`Promise<U>`](../es6-promise/promise.md) | onFulfilled is called when/if "promise" resolves. onRejected is called when/if "promise" rejects.  Both are optional, if either/both are omitted the next onFulfilled/onRejected in the chain is called.  Both callbacks have a single parameter , the fulfillment value or rejection reason.  "then" returns a new promise equivalent to the value you return from onFulfilled/onRejected after being passed through Promise.resolve.  If an error is thrown in the callback, the returned promise rejects with that error.   |
+|[then<U>(onFulfilled,onRejected)](then<u>(onfulfilled-onrejected))     | `public` | [`Promise<U>`](../es6-promise/promise.md) |  |
+|[catch<U>(onRejected)](catch<u>(onrejected))     | `public` | [`Promise<U>`](../es6-promise/promise.md) | Sugar for promise.then(undefined,onRejected)   |
 
 
 
