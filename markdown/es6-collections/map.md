@@ -22,20 +22,20 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[clear ()](#clear-)      | `void` |  |
-|[delete (key,)](#delete-key)      | `boolean` |  |
-|[forEach (callbackfn, thisArg,)](#foreach-callbackfn thisarg)      | `void` |  |
-|[get (key,)](#get-key)      | `V` |  |
-|[has (key,)](#has-key)      | `boolean` |  |
-|[set (key, value,)](#set-key value)      | [`Map<K,V>`](../es6-collections/map.md) |  |
-|[entries ()](#entries-)      | [`Iterator<[K,V]>`](../es6-collections/iterator.md) |  |
-|[keys ()](#keys-)      | [`Iterator<K>`](../es6-collections/iterator.md) |  |
-|[values ()](#values-)      | [`Iterator<V>`](../es6-collections/iterator.md) |  |
+|[clear()](#clear)      | `void` |  |
+|[delete(key)](#deletekey)      | `boolean` |  |
+|[forEach(callbackfn,thisArg)](#foreachcallbackfnthisarg)      | `void` |  |
+|[get(key)](#getkey)      | `V` |  |
+|[has(key)](#haskey)      | `boolean` |  |
+|[set(key,value)](#setkeyvalue)      | [`Map<K,V>`](../es6-collections/map.md) |  |
+|[entries()](#entries)      | [`Iterator<[K,V]>`](../es6-collections/iterator.md) |  |
+|[keys()](#keys)      | [`Iterator<K>`](../es6-collections/iterator.md) |  |
+|[values()](#values)      | [`Iterator<V>`](../es6-collections/iterator.md) |  |
 
 
 
 
-### clear ()
+### clear()
 
 
 
@@ -49,7 +49,7 @@
 None
 
 
-### delete (key,)
+### delete(key)
 
 
 
@@ -67,7 +67,7 @@ None
 | `key`    | `K` |  |
 
 
-### forEach (callbackfn, thisArg,)
+### forEach(callbackfn,thisArg)
 
 
 
@@ -86,7 +86,7 @@ None
 | `thisArg`    | `any` | _Optional._ |
 
 
-### get (key,)
+### get(key)
 
 
 
@@ -104,7 +104,7 @@ None
 | `key`    | `K` |  |
 
 
-### has (key,)
+### has(key)
 
 
 
@@ -122,7 +122,7 @@ None
 | `key`    | `K` |  |
 
 
-### set (key, value,)
+### set(key,value)
 
 
 
@@ -141,7 +141,7 @@ None
 | `value`    | `V` | _Optional._ |
 
 
-### entries ()
+### entries()
 
 
 
@@ -155,7 +155,7 @@ None
 None
 
 
-### keys ()
+### keys()
 
 
 
@@ -169,7 +169,7 @@ None
 None
 
 
-### values ()
+### values()
 
 
 

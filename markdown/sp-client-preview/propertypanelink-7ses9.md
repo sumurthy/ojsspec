@@ -1,4 +1,4 @@
-# PropertyPaneLink (targetProperty, properties,)
+# PropertyPaneLink(targetProperty,properties)
 
 Helper method to create a Link on the PropertyPane.
 

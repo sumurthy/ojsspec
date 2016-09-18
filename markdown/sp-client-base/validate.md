@@ -18,15 +18,15 @@ that might impact performance.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[isNonemptyString (value, variableName,)](#isnonemptystring-value variablename)     | `public, static` | `void` | Throws an exception if the specified string is null,undefined,or an empty string. |
-|[isNotNullOrUndefined (value, variableName,)](#isnotnullorundefined-value variablename)     | `public, static` | `void` | Throws an exception if the specified value is null or undefined. |
-|[isTrue (value, variableName,)](#istrue-value variablename)     | `public, static` | `void` | Throws an exception if the specified value is not true. |
+|[isNonemptyString(value,variableName)](#isnonemptystringvaluevariablename)     | `public, static` | `void` | Throws an exception if the specified string is null,undefined,or an empty string. |
+|[isNotNullOrUndefined(value,variableName)](#isnotnullorundefinedvaluevariablename)     | `public, static` | `void` | Throws an exception if the specified value is null or undefined. |
+|[isTrue(value,variableName)](#istruevaluevariablename)     | `public, static` | `void` | Throws an exception if the specified value is not true. |
 
 
 
 
 
-### isNonemptyString (value, variableName,)
+### isNonemptyString(value,variableName)
 
 Throws an exception if the specified string is null,undefined,or an empty string.
 
@@ -45,7 +45,7 @@ Throws an exception if the specified string is null,undefined,or an empty string
 | `variableName`    | `string` | - the program variable name,which will be mentioned in the error message |
 
 
-### isNotNullOrUndefined (value, variableName,)
+### isNotNullOrUndefined(value,variableName)
 
 Throws an exception if the specified value is null or undefined.
 
@@ -64,7 +64,7 @@ Throws an exception if the specified value is null or undefined.
 | `variableName`    | `string` | - the program variable name,which will be mentioned in the error message |
 
 
-### isTrue (value, variableName,)
+### isTrue(value,variableName)
 
 Throws an exception if the specified value is not true.
 

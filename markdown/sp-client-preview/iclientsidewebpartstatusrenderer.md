@@ -16,15 +16,15 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[clearError (domElement,)](#clearerror-domelement)      | `void` | Clear the webpart error message. |
-|[clearLoadingIndicator (domElement,)](#clearloadingindicator-domelement)      | `void` | Clear the loading indicator. |
-|[displayLoadingIndicator (domElement, loadingMessage,)](#displayloadingindicator-domelement loadingmessage)      | `void` | Display a loading spinner. |
-|[renderError (domElement, error,)](#rendererror-domelement error)      | `void` | Render the provided error message in the webpart container div. |
+|[clearError(domElement)](#clearerrordomelement)      | `void` | Clear the webpart error message. |
+|[clearLoadingIndicator(domElement)](#clearloadingindicatordomelement)      | `void` | Clear the loading indicator. |
+|[displayLoadingIndicator(domElement,loadingMessage)](#displayloadingindicatordomelementloadingmessage)      | `void` | Display a loading spinner. |
+|[renderError(domElement,error)](#rendererrordomelementerror)      | `void` | Render the provided error message in the webpart container div. |
 
 
 
 
-### clearError (domElement,)
+### clearError(domElement)
 
 Clear the webpart error message.
 
@@ -42,7 +42,7 @@ Clear the webpart error message.
 | `domElement`    | `HTMLElement` | - the webpart container div. |
 
 
-### clearLoadingIndicator (domElement,)
+### clearLoadingIndicator(domElement)
 
 Clear the loading indicator.
 
@@ -60,7 +60,7 @@ Clear the loading indicator.
 | `domElement`    | `Element` | - the webpart container div. |
 
 
-### displayLoadingIndicator (domElement, loadingMessage,)
+### displayLoadingIndicator(domElement,loadingMessage)
 
 Display a loading spinner.
 
@@ -79,7 +79,7 @@ Display a loading spinner.
 | `loadingMessage`    | `string` | - the message to be displayed when the loading spinner id displayed. |
 
 
-### renderError (domElement, error,)
+### renderError(domElement,error)
 
 Render the provided error message in the webpart container div.
 

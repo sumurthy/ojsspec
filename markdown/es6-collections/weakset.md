@@ -16,15 +16,15 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[delete (value,)](#delete-value)      | `boolean` |  |
-|[clear ()](#clear-)      | `void` |  |
-|[add (value,)](#add-value)      | [`WeakSet<T>`](../es6-collections/weakset.md) |  |
-|[has (value,)](#has-value)      | `boolean` |  |
+|[delete(value)](#deletevalue)      | `boolean` |  |
+|[clear()](#clear)      | `void` |  |
+|[add(value)](#addvalue)      | [`WeakSet<T>`](../es6-collections/weakset.md) |  |
+|[has(value)](#hasvalue)      | `boolean` |  |
 
 
 
 
-### delete (value,)
+### delete(value)
 
 
 
@@ -42,7 +42,7 @@
 | `value`    | `T` |  |
 
 
-### clear ()
+### clear()
 
 
 
@@ -56,7 +56,7 @@
 None
 
 
-### add (value,)
+### add(value)
 
 
 
@@ -74,7 +74,7 @@ None
 | `value`    | `T` |  |
 
 
-### has (value,)
+### has(value)
 
 
 

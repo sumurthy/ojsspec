@@ -16,14 +16,14 @@ small, and extremely common. Do not add advanced parsing logic to this file.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[convertToODataStringLiteral (value,)](#converttoodatastringliteral-value)     | `public, static` | `string` | Converts a variable to an OData string literal and escapes apostrophes.  OData specification:  https://tools.oasis-open.org/version-control/  browse/wsvn/odata/trunk/spec/ABNF/odata-abnf-construction-rules.txt  SQUOTE-in-string = SQUOTE SQUOTE ; two consecutive single quotes represent one within a string literal  Examples:  convertToODataStringLiteral("example's list") ---> "'example''s list'"  convertToODataStringLiteral("example list") ---> "'example list'"  convertToODataStringLiteral("'example list'") ---> "'''example list'''" |
-|[removeEndSlash (url,)](#removeendslash-url)     | `public, static` | `string` | Removes any slash characters from the end of the URL.  This function assumes that the input is already a valid absolute or server-relative URL.  Examples:  removeEndSlash('http://example.com/') ---> 'http://example.com'  removeEndSlash('/example') ---> '/example'  removeEndSlash('/') ---> '' |
+|[convertToODataStringLiteral(value)](#converttoodatastringliteralvalue)     | `public, static` | `string` | Converts a variable to an OData string literal and escapes apostrophes.  OData specification:  https://tools.oasis-open.org/version-control/  browse/wsvn/odata/trunk/spec/ABNF/odata-abnf-construction-rules.txt  SQUOTE-in-string = SQUOTE SQUOTE ; two consecutive single quotes represent one within a string literal  Examples:  convertToODataStringLiteral("example's list") ---> "'example''s list'"  convertToODataStringLiteral("example list") ---> "'example list'"  convertToODataStringLiteral("'example list'") ---> "'''example list'''" |
+|[removeEndSlash(url)](#removeendslashurl)     | `public, static` | `string` | Removes any slash characters from the end of the URL.  This function assumes that the input is already a valid absolute or server-relative URL.  Examples:  removeEndSlash('http://example.com/') ---> 'http://example.com'  removeEndSlash('/example') ---> '/example'  removeEndSlash('/') ---> '' |
 
 
 
 
 
-### convertToODataStringLiteral (value,)
+### convertToODataStringLiteral(value)
 
 Converts a variable to an OData string literal and escapes apostrophes. 
 OData specification: 
@@ -49,7 +49,7 @@ convertToODataStringLiteral("'example list'") ---> "'''example list'''"
 | `value`    | `string` |  |
 
 
-### removeEndSlash (url,)
+### removeEndSlash(url)
 
 Removes any slash characters from the end of the URL. 
 This function assumes that the input is already a valid absolute or server-relative URL. 

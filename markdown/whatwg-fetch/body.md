@@ -21,18 +21,18 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[arrayBuffer ()](#arraybuffer-)     | `public` | [`Promise<ArrayBuffer>`](../es6-promise/promise.md) |  |
-|[blob ()](#blob-)     | `public` | [`Promise<Blob>`](../es6-promise/promise.md) |  |
-|[formData ()](#formdata-)     | `public` | [`Promise<FormData>`](../es6-promise/promise.md) |  |
-|[json ()](#json-)     | `public` | [`Promise<any>`](../es6-promise/promise.md) |  |
-|[json<T> ()](#json<t>-)     | `public` | [`Promise<T>`](../es6-promise/promise.md) |  |
-|[text ()](#text-)     | `public` | [`Promise<string>`](../es6-promise/promise.md) |  |
+|[arrayBuffer()](#arraybuffer)     | `public` | [`Promise<ArrayBuffer>`](../es6-promise/promise.md) |  |
+|[blob()](#blob)     | `public` | [`Promise<Blob>`](../es6-promise/promise.md) |  |
+|[formData()](#formdata)     | `public` | [`Promise<FormData>`](../es6-promise/promise.md) |  |
+|[json()](#json)     | `public` | [`Promise<any>`](../es6-promise/promise.md) |  |
+|[json<T>()](#json<t>)     | `public` | [`Promise<T>`](../es6-promise/promise.md) |  |
+|[text()](#text)     | `public` | [`Promise<string>`](../es6-promise/promise.md) |  |
 
 
 
 
 
-### arrayBuffer ()
+### arrayBuffer()
 
 
 
@@ -46,7 +46,7 @@
 None
 
 
-### blob ()
+### blob()
 
 
 
@@ -60,7 +60,7 @@ None
 None
 
 
-### formData ()
+### formData()
 
 
 
@@ -74,7 +74,7 @@ None
 None
 
 
-### json ()
+### json()
 
 
 
@@ -88,7 +88,7 @@ None
 None
 
 
-### json<T> ()
+### json<T>()
 
 
 
@@ -102,7 +102,7 @@ None
 None
 
 
-### text ()
+### text()
 
 
 

@@ -22,13 +22,13 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[constructor<T> ()](#constructor<t>-)      | [`Set<T>`](../es6-collections/set.md) |  |
-|[constructor<T> (iterable,)](#constructor<t>-iterable)      | [`Set<T>`](../es6-collections/set.md) |  |
+|[constructor<T>()](#constructor<t>)      | [`Set<T>`](../es6-collections/set.md) |  |
+|[constructor<T>(iterable)](#constructor<t>iterable)      | [`Set<T>`](../es6-collections/set.md) |  |
 
 
 
 
-### constructor<T> ()
+### constructor<T>()
 
 
 
@@ -42,7 +42,7 @@
 None
 
 
-### constructor<T> (iterable,)
+### constructor<T>(iterable)
 
 
 

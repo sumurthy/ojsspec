@@ -22,13 +22,13 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[constructor<K,V> ()](#constructor<kv>-)      | [`WeakMap<K,V>`](../es6-collections/weakmap.md) |  |
-|[constructor<K,V> (iterable,)](#constructor<kv>-iterable)      | [`WeakMap<K,V>`](../es6-collections/weakmap.md) |  |
+|[constructor<K,V>()](#constructor<kv>)      | [`WeakMap<K,V>`](../es6-collections/weakmap.md) |  |
+|[constructor<K,V>(iterable)](#constructor<kv>iterable)      | [`WeakMap<K,V>`](../es6-collections/weakmap.md) |  |
 
 
 
 
-### constructor<K,V> ()
+### constructor<K,V>()
 
 
 
@@ -42,7 +42,7 @@
 None
 
 
-### constructor<K,V> (iterable,)
+### constructor<K,V>(iterable)
 
 
 

@@ -16,13 +16,13 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[then<U> (onFulfilled, onRejected,)](#then<u>-onfulfilled onrejected)      | [`Thenable<U>`](../es6-promise/thenable.md) |  |
-|[then<U> (onFulfilled, onRejected,)](#then<u>-onfulfilled onrejected)      | [`Thenable<U>`](../es6-promise/thenable.md) |  |
+|[then<U>(onFulfilled,onRejected)](#then<u>onfulfilledonrejected)      | [`Thenable<U>`](../es6-promise/thenable.md) |  |
+|[then<U>(onFulfilled,onRejected)](#then<u>onfulfilledonrejected)      | [`Thenable<U>`](../es6-promise/thenable.md) |  |
 
 
 
 
-### then<U> (onFulfilled, onRejected,)
+### then<U>(onFulfilled,onRejected)
 
 
 
@@ -41,7 +41,7 @@
 | `onRejected`    | `(error: any) => U `,[` Thenable<U>`](../es6-promise/thenable.md) | _Optional._ |
 
 
-### then<U> (onFulfilled, onRejected,)
+### then<U>(onFulfilled,onRejected)
 
 
 

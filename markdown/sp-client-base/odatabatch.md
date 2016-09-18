@@ -41,16 +41,16 @@ resolve with a Response object for that particular request.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[execute ()](#execute-)     | `public` | [`Promise<ODataBatch>`](../es6-promise/promise.md) | Executes the batched queries that were queued using ODataBatch.fetch(). |
-|[fetch (url, options,)](#fetch-url options)     | `public` | [`Promise<Response>`](../es6-promise/promise.md) | Queues a new request,and returns a promise that can be used to access  the server response (after execute() has completed). The parameters for  this function are basically the same as the WHATWG API standard documented here:  https://fetch.spec.whatwg.org/    However, be aware that certain REST headers are ignored or not allowed inside  a batch. See the ODATA documentation for details.    When execute() is called, it will POST to a URL such as  "http://example.com/sites/sample/_api/$batch". Typically ODataBatch can successfully  guess the appropriate SPWeb URL by looking for a reserved URL segment such as "_api"  in the first URL passed to fetch(). If not, use IODataBatchOptions.webUrl to specify it  explicitly.   |
-|[get (url, options,)](#get-url options)     | `public` | [`Promise<Response>`](../es6-promise/promise.md) | Calls fetch(),but sets the method to 'GET'. |
-|[post (url, options,)](#post-url options)     | `public` | [`Promise<Response>`](../es6-promise/promise.md) | Calls fetch(),but sets the method to 'POST'. |
+|[execute()](#execute)     | `public` | [`Promise<ODataBatch>`](../es6-promise/promise.md) | Executes the batched queries that were queued using ODataBatch.fetch(). |
+|[fetch(url,options)](#fetchurloptions)     | `public` | [`Promise<Response>`](../es6-promise/promise.md) | Queues a new request,and returns a promise that can be used to access  the server response (after execute() has completed). The parameters for  this function are basically the same as the WHATWG API standard documented here:  https://fetch.spec.whatwg.org/    However, be aware that certain REST headers are ignored or not allowed inside  a batch. See the ODATA documentation for details.    When execute() is called, it will POST to a URL such as  "http://example.com/sites/sample/_api/$batch". Typically ODataBatch can successfully  guess the appropriate SPWeb URL by looking for a reserved URL segment such as "_api"  in the first URL passed to fetch(). If not, use IODataBatchOptions.webUrl to specify it  explicitly.   |
+|[get(url,options)](#geturloptions)     | `public` | [`Promise<Response>`](../es6-promise/promise.md) | Calls fetch(),but sets the method to 'GET'. |
+|[post(url,options)](#posturloptions)     | `public` | [`Promise<Response>`](../es6-promise/promise.md) | Calls fetch(),but sets the method to 'POST'. |
 
 
 
 
 
-### execute ()
+### execute()
 
 Executes the batched queries that were queued using ODataBatch.fetch().
 
@@ -64,7 +64,7 @@ Executes the batched queries that were queued using ODataBatch.fetch().
 None
 
 
-### fetch (url, options,)
+### fetch(url,options)
 
 Queues a new request,and returns a promise that can be used to access 
 the server response (after execute() has completed). The parameters for 
@@ -96,7 +96,7 @@ a promise that will return the result
 | `options`    | `IODataBatchRequestOptions` | _Optional._- additional options that affect the request |
 
 
-### get (url, options,)
+### get(url,options)
 
 Calls fetch(),but sets the method to 'GET'.
 
@@ -115,7 +115,7 @@ a promise that will return the result
 | `options`    | `IODataBatchRequestOptions` | _Optional._- additional options that affect the request |
 
 
-### post (url, options,)
+### post(url,options)
 
 Calls fetch(),but sets the method to 'POST'.
 

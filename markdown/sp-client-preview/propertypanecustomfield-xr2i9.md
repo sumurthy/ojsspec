@@ -1,4 +1,4 @@
-# PropertyPaneCustomField (targetProperty, properties,)
+# PropertyPaneCustomField(targetProperty,properties)
 
 Helper method to create a Choice Group on the PropertyPane.
 

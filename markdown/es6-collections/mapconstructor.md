@@ -22,13 +22,13 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[constructor<K,V> ()](#constructor<kv>-)      | [`Map<K,V>`](../es6-collections/map.md) |  |
-|[constructor<K,V> (iterable,)](#constructor<kv>-iterable)      | [`Map<K,V>`](../es6-collections/map.md) |  |
+|[constructor<K,V>()](#constructor<kv>)      | [`Map<K,V>`](../es6-collections/map.md) |  |
+|[constructor<K,V>(iterable)](#constructor<kv>iterable)      | [`Map<K,V>`](../es6-collections/map.md) |  |
 
 
 
 
-### constructor<K,V> ()
+### constructor<K,V>()
 
 
 
@@ -42,7 +42,7 @@
 None
 
 
-### constructor<K,V> (iterable,)
+### constructor<K,V>(iterable)
 
 
 

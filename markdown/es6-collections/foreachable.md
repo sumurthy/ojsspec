@@ -16,12 +16,12 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[forEach (callbackfn,)](#foreach-callbackfn)      | `void` |  |
+|[forEach(callbackfn)](#foreachcallbackfn)      | `void` |  |
 
 
 
 
-### forEach (callbackfn,)
+### forEach(callbackfn)
 
 
 
