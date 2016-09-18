@@ -32,7 +32,7 @@
 
 
 
-**Signature:** `new<K,V>(): [WeakMap](../es6-collections/weakmap.md)<K,V>`
+**Signature:** new<K,V>(): [WeakMap](../es6-collections/weakmap.md)<K,V>
 
 **Returns**: [`WeakMap<K,V>`](../es6-collections/weakmap.md)
 
@@ -46,7 +46,7 @@ None
 
 
 
-**Signature:** `new<K,V>(iterable: [ForEachable](../es6-collections/foreachable.md)<[K,V]>): [WeakMap](../es6-collections/weakmap.md)<K,V>`
+**Signature:** new<K,V>(iterable: [ForEachable](../es6-collections/foreachable.md)<[K,V]>): [WeakMap](../es6-collections/weakmap.md)<K,V>
 
 **Returns**: [`WeakMap<K,V>`](../es6-collections/weakmap.md)
 

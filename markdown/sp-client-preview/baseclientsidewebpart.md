@@ -80,7 +80,7 @@ If a sub class overrides the constructor, it needs to call super(context) as the
 
 This API should be used to clear the error message from the web part display area.
 
-**Signature:** `clearError(): void`
+**Signature:** clearError(): void
 
 **Returns**: `void`
 
@@ -95,7 +95,7 @@ None
 This API should be used to invoke the PropertyPane to help configure the web part. 
 
 
-**Signature:** `configureStart(refreshOnly?: boolean): void`
+**Signature:** configureStart(refreshOnly?: boolean): void
 
 **Returns**: `void`
 
@@ -119,7 +119,7 @@ data to the appropriate data schema. The persisted data contains the version num
 can be used to make decisions on how to re-structure the data. 
 
 
-**Signature:** `deserialize(data: [IWebPartData](../sp-client-preview/iwebpartdata.md)): TProperties`
+**Signature:** deserialize(data: [IWebPartData](../sp-client-preview/iwebpartdata.md)): TProperties
 
 **Returns**: `TProperties`
 
@@ -139,7 +139,7 @@ can be used to make decisions on how to re-structure the data.
 This API is called at the end of the web part lifecycle. It should be overridden to dispose any 
 resources that the web part is holding onto.
 
-**Signature:** `dispose(): void`
+**Signature:** dispose(): void
 
 **Returns**: `void`
 
@@ -157,7 +157,7 @@ this.properties. In the overridden method, the web part developer is expected to
 part property bag. This way the web part serialization process will use the upto date state of the web part. 
 
 
-**Signature:** `onBeforeSerialize(): [IHtmlProperties](../sp-client-preview/ihtmlproperties.md)`
+**Signature:** onBeforeSerialize(): [IHtmlProperties](../sp-client-preview/ihtmlproperties.md)
 
 **Returns**: [`IHtmlProperties`](../sp-client-preview/ihtmlproperties.md)
 
@@ -176,7 +176,7 @@ want a full re-render to happen on display mode change, they can override this A
 to the web part DOM to switch its display mode. 
 
 
-**Signature:** `on[DisplayMode](../sp-client-base/displaymode.md)Changed(oldDisplayMode: DisplayMode): void`
+**Signature:** on[DisplayMode](../sp-client-base/displaymode.md)Changed(oldDisplayMode: DisplayMode): void
 
 **Returns**: `void`
 
@@ -196,7 +196,7 @@ This API should be overridden to perform long running operations e.g. data fetch
 the initial rendering of the web part. The loading indicator is displayed during the lifetime of this method. 
 This API is called only once during the lifecycle of a web part.
 
-**Signature:** `onInit<T>(): [Promise](../es6-promise/promise.md)<T>`
+**Signature:** onInit<T>(): [Promise](../es6-promise/promise.md)<T>
 
 **Returns**: [`Promise<T>`](../es6-promise/promise.md)
 
@@ -213,7 +213,7 @@ The base implementation of this API updates the web part property bag and re-ren
 invokes the web part host's setDirty API. 
 
 
-**Signature:** `onPropertyChange(propertyPath: string,newValue: any): void`
+**Signature:** onPropertyChange(propertyPath: string,newValue: any): void
 
 **Returns**: `void`
 
@@ -235,7 +235,7 @@ is fired when user switches between web parts while the PropertyPane is open, an
 for the previously selected web part. 
 
 
-**Signature:** `onPropertyConfigurationComplete(): void`
+**Signature:** onPropertyConfigurationComplete(): void
 
 **Returns**: `void`
 
@@ -249,7 +249,7 @@ None
 
 This API is involed when the PropertyPane is rendered.
 
-**Signature:** `onPropertyPaneRendered(): void`
+**Signature:** onPropertyPaneRendered(): void
 
 **Returns**: `void`
 
@@ -264,7 +264,7 @@ None
 this API is invoked when the the changes are applied on the PropertyPane when the PropertyPane is used in 
 Non-Reactive mode. This API is not invoked when the PropertyPane is used in Reactive mode.
 
-**Signature:** `onPropertyPaneSave(): void`
+**Signature:** onPropertyPaneSave(): void
 
 **Returns**: `void`
 
@@ -279,7 +279,7 @@ None
 This API is called to render the web part. There is no base implementation of this API and the web part is 
 required to override this API.
 
-**Signature:** `render(): void`
+**Signature:** render(): void
 
 **Returns**: `void`
 
@@ -295,7 +295,7 @@ This API should be used to render an error message in the web part display area.
 using the trace logger. 
 
 
-**Signature:** `renderError(error: Error): void`
+**Signature:** renderError(error: Error): void
 
 **Returns**: `void`
 

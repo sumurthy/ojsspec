@@ -37,7 +37,7 @@ however, in advanced scenarios addDigestToCache() can be used to avoid the overh
 REST call. 
 
 
-**Signature:** `addDigestToCache(webUrl: string,digestValue: string,expirationTimestamp: number): void`
+**Signature:** addDigestToCache(webUrl: string,digestValue: string,expirationTimestamp: number): void
 
 **Returns**: `void`
 
@@ -57,7 +57,7 @@ REST call.
 
 Clears all values from the cache.
 
-**Signature:** `clearAllDigests(): void`
+**Signature:** clearAllDigests(): void
 
 **Returns**: `void`
 
@@ -73,7 +73,7 @@ Clears the cached digest for the specified SPWeb URL. This operation is useful
 e.g. if an error indicates that a digest was invalidated prior to its expiration time. 
 
 
-**Signature:** `clearDigest(webUrl: string): boolean`
+**Signature:** clearDigest(webUrl: string): boolean
 
 **Returns**: `boolean`
 
@@ -93,7 +93,7 @@ Returns a digest string for the specified SPWeb URL. If the cache already contai
 the promise is fulfilled immediately. Otherwise, the promise will be pending and resolve after 
 an HTTP request obtains the digest, which will be added to the cache.
 
-**Signature:** `fetchDigest(webUrl: string): [Promise](../es6-promise/promise.md)<string>`
+**Signature:** fetchDigest(webUrl: string): [Promise](../es6-promise/promise.md)<string>
 
 **Returns**: [`Promise<string>`](../es6-promise/promise.md)
 

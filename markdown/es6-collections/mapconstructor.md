@@ -32,7 +32,7 @@
 
 
 
-**Signature:** `new<K,V>(): [Map](../es6-collections/map.md)<K,V>`
+**Signature:** new<K,V>(): [Map](../es6-collections/map.md)<K,V>
 
 **Returns**: [`Map<K,V>`](../es6-collections/map.md)
 
@@ -46,7 +46,7 @@ None
 
 
 
-**Signature:** `new<K,V>(iterable: [ForEachable](../es6-collections/foreachable.md)<[K,V]>): [Map](../es6-collections/map.md)<K,V>`
+**Signature:** new<K,V>(iterable: [ForEachable](../es6-collections/foreachable.md)<[K,V]>): [Map](../es6-collections/map.md)<K,V>
 
 **Returns**: [`Map<K,V>`](../es6-collections/map.md)
 

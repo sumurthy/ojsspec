@@ -55,7 +55,7 @@ _Implements: [`Body`](../whatwg-fetch/body.md)_
 
 
 
-**Signature:** `error(): [Response](../whatwg-fetch/response.md)`
+**Signature:** error(): [Response](../whatwg-fetch/response.md)
 
 **Returns**: [`Response`](../whatwg-fetch/response.md)
 
@@ -69,7 +69,7 @@ None
 
 
 
-**Signature:** `redirect(url: string,status: number): [Response](../whatwg-fetch/response.md)`
+**Signature:** redirect(url: string,status: number): [Response](../whatwg-fetch/response.md)
 
 **Returns**: [`Response`](../whatwg-fetch/response.md)
 
@@ -88,7 +88,7 @@ None
 
 
 
-**Signature:** `clone(): [Response](../whatwg-fetch/response.md)`
+**Signature:** clone(): [Response](../whatwg-fetch/response.md)
 
 **Returns**: [`Response`](../whatwg-fetch/response.md)
 

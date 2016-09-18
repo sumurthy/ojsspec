@@ -2,7 +2,7 @@
 
 Combines any number of URL paths.
 
-**Signature:** `combineURLPaths(...url: string[]): string`
+**Signature:** combineURLPaths(...url: string[]): string
 
 **Returns**: `string`
 
