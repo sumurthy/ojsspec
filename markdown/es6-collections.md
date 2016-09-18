@@ -35,8 +35,8 @@
 
 | Variable	   | Type|
 |:-----------|:------------|
-|Map   | [`MapConstructor`](../es6-collections/mapconstructor.md) |
-|Set   | [`SetConstructor`](../es6-collections/setconstructor.md) |
-|WeakMap   | [`WeakMapConstructor`](../es6-collections/weakmapconstructor.md) |
-|WeakSet   | [`WeakSetConstructor`](../es6-collections/weaksetconstructor.md) |
+|`Map`   | [`MapConstructor`](../es6-collections/mapconstructor.md) |
+|`Set`   | [`SetConstructor`](../es6-collections/setconstructor.md) |
+|`WeakMap`   | [`WeakMapConstructor`](../es6-collections/weakmapconstructor.md) |
+|`WeakSet`   | [`WeakSetConstructor`](../es6-collections/weaksetconstructor.md) |
 

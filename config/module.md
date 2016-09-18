@@ -56,7 +56,7 @@
 
 | Name	   |  Type |
 |:-----------|:------------|
->|%name%   | %type% |
+>|`%name%`   | %type% |
 
 </typedef>
 
@@ -66,6 +66,6 @@
 
 | Variable	   | Type|
 |:-----------|:------------|
->|%name%   | %type% |
+>|`%name%`   | %type% |
 
 </variable>

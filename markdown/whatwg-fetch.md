@@ -38,9 +38,9 @@
 
 | Name	   |  Type |
 |:-----------|:------------|
-|HeaderInit   |  |
-|BodyInit   |  |
-|RequestInfo   |  |
+|`HeaderInit`   |  |
+|`BodyInit`   |  |
+|`RequestInfo`   |  |
 
 
 
@@ -48,5 +48,5 @@
 
 | Variable	   | Type|
 |:-----------|:------------|
-|fetch   | [`window.fetch`](../whatwg-fetch/window.md#fetch) |
+|`fetch`   | [`window.fetch`](../whatwg-fetch/window.md#fetch) |
 
