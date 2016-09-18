@@ -27,7 +27,7 @@
 
 
 
-### append
+### append(name,value)
 
 
 
@@ -46,7 +46,7 @@
 | `value`    | `string` |  |
 
 
-### delete
+### delete(name)
 
 
 
@@ -64,7 +64,7 @@
 | `name`    | `string` |  |
 
 
-### get
+### get(name)
 
 
 
@@ -82,7 +82,7 @@
 | `name`    | `string` |  |
 
 
-### getAll
+### getAll(name)
 
 
 
@@ -100,7 +100,7 @@
 | `name`    | `string` |  |
 
 
-### has
+### has(name)
 
 
 
@@ -118,7 +118,7 @@
 | `name`    | `string` |  |
 
 
-### set
+### set(name,value)
 
 
 
@@ -137,7 +137,7 @@
 | `value`    | `string` |  |
 
 
-### forEach
+### forEach(callback)
 
 
 

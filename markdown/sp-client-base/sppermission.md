@@ -84,7 +84,7 @@ https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.
 
 
 
-### hasAllPermissions
+### hasAllPermissions(...requestedPerms)
 
 Function for determining if a given permission mask has all of the requested permissions.
 
@@ -102,7 +102,7 @@ Function for determining if a given permission mask has all of the requested per
 | `...requestedPerms`    | [`SPPermission[]`](../sp-client-base/sppermission.md) |  |
 
 
-### hasAnyPermissions
+### hasAnyPermissions(...requestedPerms)
 
 Function for determining if a given permission mask has any of the requested permissions.
 
@@ -120,7 +120,7 @@ Function for determining if a given permission mask has any of the requested per
 | `...requestedPerms`    | [`SPPermission[]`](../sp-client-base/sppermission.md) |  |
 
 
-### hasPermission
+### hasPermission(requestedPerm)
 
 Function for checking if a given permission mask has the requested permission.
 

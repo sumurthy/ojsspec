@@ -24,7 +24,7 @@
 
 
 
-### delete
+### delete(value)
 
 
 
@@ -42,7 +42,7 @@
 | `value`    | `T` |  |
 
 
-### clear
+### clear()
 
 
 
@@ -56,7 +56,7 @@
 None
 
 
-### add
+### add(value)
 
 
 
@@ -74,7 +74,7 @@ None
 | `value`    | `T` |  |
 
 
-### has
+### has(value)
 
 
 

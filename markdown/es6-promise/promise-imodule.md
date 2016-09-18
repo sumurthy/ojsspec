@@ -24,7 +24,7 @@
 
 
 
-### resolve<R>
+### resolve<R>(value)
 
 Make a new promise from the thenable. 
 A thenable is promise-like in as far as it has a "then" method.
@@ -43,7 +43,7 @@ A thenable is promise-like in as far as it has a "then" method.
 | `value`    | `R `,[` Thenable<R>`](../es6-promise/thenable.md) | _Optional._ |
 
 
-### reject
+### reject(error)
 
 Make a promise that rejects to obj. For consistency and debugging (eg stack traces),obj should be an instanceof Error
 
@@ -61,7 +61,7 @@ Make a promise that rejects to obj. For consistency and debugging (eg stack trac
 | `error`    | `any` |  |
 
 
-### all<R>
+### all<R>(promises)
 
 Make a promise that fulfills when every item in the array fulfills,and rejects if (and when) any item rejects. 
 the array passed to all can be a mixture of promise-like objects and other objects. 
@@ -81,7 +81,7 @@ The fulfillment value is an array (in order) of fulfillment values. The rejectio
 | `promises`    | `(R `,[` Thenable<R>)[]`](../es6-promise/thenable.md) |  |
 
 
-### race<R>
+### race<R>(promises)
 
 Make a Promise that fulfills when any item fulfills,and rejects if any item rejects.
 

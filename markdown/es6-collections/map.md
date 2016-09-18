@@ -35,7 +35,7 @@
 
 
 
-### clear
+### clear()
 
 
 
@@ -49,7 +49,7 @@
 None
 
 
-### delete
+### delete(key)
 
 
 
@@ -67,7 +67,7 @@ None
 | `key`    | `K` |  |
 
 
-### forEach
+### forEach(callbackfn,thisArg)
 
 
 
@@ -86,7 +86,7 @@ None
 | `thisArg`    | `any` | _Optional._ |
 
 
-### get
+### get(key)
 
 
 
@@ -104,7 +104,7 @@ None
 | `key`    | `K` |  |
 
 
-### has
+### has(key)
 
 
 
@@ -122,7 +122,7 @@ None
 | `key`    | `K` |  |
 
 
-### set
+### set(key,value)
 
 
 
@@ -141,7 +141,7 @@ None
 | `value`    | `V` | _Optional._ |
 
 
-### entries
+### entries()
 
 
 
@@ -155,7 +155,7 @@ None
 None
 
 
-### keys
+### keys()
 
 
 
@@ -169,7 +169,7 @@ None
 None
 
 
-### values
+### values()
 
 
 

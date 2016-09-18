@@ -23,7 +23,7 @@
 
 
 
-### next
+### next(value)
 
 
 
@@ -41,7 +41,7 @@
 | `value`    | `any` | _Optional._ |
 
 
-### return
+### return(value)
 
 
 
@@ -59,7 +59,7 @@
 | `value`    | `any` | _Optional._ |
 
 
-### throw
+### throw(e)
 
 
 

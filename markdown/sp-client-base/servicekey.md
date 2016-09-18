@@ -53,7 +53,7 @@ PRIVATE - Do not call this from your own code.
 
 
 
-### create<T>
+### create<T>(name,serviceClass)
 
 Constructs a new ServiceKey whose default implementation will be a new instance of 
 a TypeScript class that accepts the standard constructor parameter. If you want to 
@@ -74,7 +74,7 @@ specify custom constructor parameters, use createCustom() instead.
 | `serviceClass`    | `{ new (serviceScope: ServiceScope) }` | - the TypeScript class that implements the service. |
 
 
-### createCustom<T>
+### createCustom<T>(name,defaultCreator)
 
 Constructs a new ServiceKey whose default implementation will be obtained 
 by invoking the specified callback.

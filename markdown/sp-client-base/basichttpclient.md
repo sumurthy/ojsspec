@@ -48,7 +48,7 @@ enhancements.
 
 
 
-### fetch
+### fetch(url,options)
 
 Performs a REST service call. Although the HttpClient subclass adds 
 additional enhancements, the parameters and semantics for BasicHttpClient.fetch() 
@@ -70,7 +70,7 @@ a promise that will return the result
 | `options`    | [`IBasicHttpClientOptions`](../sp-client-base/ibasichttpclientoptions.md) | - additional options that affect the request |
 
 
-### fetchCore
+### fetchCore(request)
 
 
 
@@ -88,7 +88,7 @@ a promise that will return the result
 | `request`    | [`Request`](../whatwg-fetch/request.md) |  |
 
 
-### get
+### get(url,options)
 
 Calls fetch(),but sets the method to 'GET'.
 
@@ -107,7 +107,7 @@ a promise that will return the result
 | `options`    | [`IBasicHttpClientOptions`](../sp-client-base/ibasichttpclientoptions.md) | _Optional._- additional options that affect the request |
 
 
-### post
+### post(url,options)
 
 Calls fetch(),but sets the method to 'POST'.
 

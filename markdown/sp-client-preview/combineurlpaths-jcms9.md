@@ -1,4 +1,4 @@
-# combineURLPaths
+# combineURLPaths(...url)
 
 Combines any number of URL paths.
 

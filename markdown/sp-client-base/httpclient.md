@@ -46,7 +46,7 @@ class instead.
 
 
 
-### beginBatch
+### beginBatch(batchOptions)
 
 Begins an ODATA batch,which allows multiple REST queries to be bundled into 
 a single web request.
@@ -65,7 +65,7 @@ a single web request.
 | `batchOptions`    | [`IODataBatchOptions`](../sp-client-base/iodatabatchoptions.md) | _Optional._ |
 
 
-### fetch
+### fetch(url,options)
 
 Generally,the parameters and semantics for HttpClient.fetch() are essentially 
 the same as the WHATWG API standard that is documented here: 
@@ -102,7 +102,7 @@ a promise that will return the result
 | `options`    | [`IHttpClientOptions`](../sp-client-base/ihttpclientoptions.md) | - additional options that affect the request |
 
 
-### get
+### get(url,options)
 
 Calls fetch(),but sets the method to 'GET'.
 
@@ -121,7 +121,7 @@ a promise that will return the result
 | `options`    | [`IHttpClientOptions`](../sp-client-base/ihttpclientoptions.md) | _Optional._- additional options that affect the request |
 
 
-### getWebUrlFromRequestUrl
+### getWebUrlFromRequestUrl(requestUrl)
 
 This uses a heuristic to guess the SPWeb URL associated with the provided 
 REST URL. This is necessary for operations such as the X-RequestDigest 
@@ -146,7 +146,7 @@ the inferred SPWeb URL
 | `requestUrl`    | `string` | The URL for a SharePoint REST service |
 
 
-### post
+### post(url,options)
 
 Calls fetch(),but sets the method to 'POST'.
 

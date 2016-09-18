@@ -46,7 +46,7 @@ Query param with only equals (www.example.com/?=&debug=on stores empty string ke
 
 
 
-### getValue
+### getValue(param)
 
 Returns the value of the first matching query parameter or undefined if the key doesn't exist. 
 Examples: this._queryParameterList = [ 
@@ -71,7 +71,7 @@ getValue('lost') ---> undefined
 | `param`    | `string` | the case insensitive key for the desired query parameter value. |
 
 
-### getValues
+### getValues(param)
 
 Returns the values of all of the matching query parameters or undefined if the key doesn't exist. 
 Examples: this._queryParameterList = [ 

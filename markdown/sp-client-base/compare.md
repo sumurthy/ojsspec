@@ -21,7 +21,7 @@
 
 
 
-### shallowCompare
+### shallowCompare(objA,objB)
 
 Performs shallow comparison between two objects to determine if they are equal. This method compares 
 only object types. 

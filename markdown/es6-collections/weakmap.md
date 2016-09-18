@@ -25,7 +25,7 @@
 
 
 
-### delete
+### delete(key)
 
 
 
@@ -43,7 +43,7 @@
 | `key`    | `K` |  |
 
 
-### clear
+### clear()
 
 
 
@@ -57,7 +57,7 @@
 None
 
 
-### get
+### get(key)
 
 
 
@@ -75,7 +75,7 @@ None
 | `key`    | `K` |  |
 
 
-### has
+### has(key)
 
 
 
@@ -93,7 +93,7 @@ None
 | `key`    | `K` |  |
 
 
-### set
+### set(key,value)
 
 
 

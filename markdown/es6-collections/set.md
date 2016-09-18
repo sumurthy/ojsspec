@@ -34,7 +34,7 @@
 
 
 
-### add
+### add(value)
 
 
 
@@ -52,7 +52,7 @@
 | `value`    | `T` |  |
 
 
-### clear
+### clear()
 
 
 
@@ -66,7 +66,7 @@
 None
 
 
-### delete
+### delete(value)
 
 
 
@@ -84,7 +84,7 @@ None
 | `value`    | `T` |  |
 
 
-### forEach
+### forEach(callbackfn,thisArg)
 
 
 
@@ -103,7 +103,7 @@ None
 | `thisArg`    | `any` | _Optional._ |
 
 
-### has
+### has(value)
 
 
 
@@ -121,7 +121,7 @@ None
 | `value`    | `T` |  |
 
 
-### entries
+### entries()
 
 
 
@@ -135,7 +135,7 @@ None
 None
 
 
-### keys
+### keys()
 
 
 
@@ -149,7 +149,7 @@ None
 None
 
 
-### values
+### values()
 
 
 

@@ -23,7 +23,7 @@ small, and extremely common. Do not add advanced parsing logic to this file.
 
 
 
-### convertToODataStringLiteral
+### convertToODataStringLiteral(value)
 
 Converts a variable to an OData string literal and escapes apostrophes. 
 OData specification: 
@@ -49,7 +49,7 @@ convertToODataStringLiteral("'example list'") ---> "'''example list'''"
 | `value`    | `string` |  |
 
 
-### removeEndSlash
+### removeEndSlash(url)
 
 Removes any slash characters from the end of the URL. 
 This function assumes that the input is already a valid absolute or server-relative URL. 

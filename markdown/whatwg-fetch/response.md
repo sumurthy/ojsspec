@@ -51,7 +51,7 @@ _Implements: [`Body`](../whatwg-fetch/body.md)_
 
 
 
-### error
+### error()
 
 
 
@@ -65,7 +65,7 @@ _Implements: [`Body`](../whatwg-fetch/body.md)_
 None
 
 
-### redirect
+### redirect(url,status)
 
 
 
@@ -84,7 +84,7 @@ None
 | `status`    | `number` |  |
 
 
-### clone
+### clone()
 
 
 

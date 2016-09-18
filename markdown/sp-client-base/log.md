@@ -27,7 +27,7 @@ which component generated the messages and makes the messages useful and filtera
 
 
 
-### error
+### error(source,error,scope)
 
 Logs an error
 
@@ -47,7 +47,7 @@ Logs an error
 | `scope`    | [`ServiceScope`](../sp-client-base/servicescope.md) | _Optional._- the service scope that the source uses. A service scope can provide  more context information (e.g., web part information) to the logged error. |
 
 
-### info
+### info(source,message,scope)
 
 Logs an informational message
 
@@ -67,7 +67,7 @@ Logs an informational message
 | `scope`    | [`ServiceScope`](../sp-client-base/servicescope.md) | _Optional._- the service scope that the source uses. A service scope can provide  more context information (e.g., web part information) to the logged message. |
 
 
-### verbose
+### verbose(source,message,scope)
 
 Logs a verbose message
 
@@ -87,7 +87,7 @@ Logs a verbose message
 | `scope`    | [`ServiceScope`](../sp-client-base/servicescope.md) | _Optional._- the service scope that the source uses. A service scope can provide  more context information (e.g., web part information) to the logged message. |
 
 
-### warn
+### warn(source,message,scope)
 
 Logs a warning
 

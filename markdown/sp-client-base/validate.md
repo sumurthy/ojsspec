@@ -26,7 +26,7 @@ that might impact performance.
 
 
 
-### isNonemptyString
+### isNonemptyString(value,variableName)
 
 Throws an exception if the specified string is null,undefined,or an empty string.
 
@@ -45,7 +45,7 @@ Throws an exception if the specified string is null,undefined,or an empty string
 | `variableName`    | `string` | - the program variable name,which will be mentioned in the error message |
 
 
-### isNotNullOrUndefined
+### isNotNullOrUndefined(value,variableName)
 
 Throws an exception if the specified value is null or undefined.
 
@@ -64,7 +64,7 @@ Throws an exception if the specified value is null or undefined.
 | `variableName`    | `string` | - the program variable name,which will be mentioned in the error message |
 
 
-### isTrue
+### isTrue(value,variableName)
 
 Throws an exception if the specified value is not true.
 

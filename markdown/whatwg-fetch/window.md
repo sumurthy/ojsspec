@@ -21,7 +21,7 @@
 
 
 
-### fetch
+### fetch(url,init)
 
 
 

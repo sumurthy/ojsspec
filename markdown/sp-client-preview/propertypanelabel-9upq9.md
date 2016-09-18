@@ -1,4 +1,4 @@
-# PropertyPaneLabel
+# PropertyPaneLabel(targetProperty,properties)
 
 Helper method to create a Label on the PropertyPane.
 

@@ -1,4 +1,4 @@
-# PropertyPaneDropdown
+# PropertyPaneDropdown(targetProperty,properties)
 
 Helper method to create a Dropdown on the PropertyPane.
 

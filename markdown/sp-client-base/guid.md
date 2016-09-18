@@ -32,7 +32,7 @@ Math.random() function and may be not be suitable for some applications.
 
 
 
-### equals
+### equals(guid)
 
 Compare this instance to another Guid instance 
 
@@ -52,7 +52,7 @@ represent the same value
 | `guid`    | [`Guid`](../sp-client-base/guid.md) |  |
 
 
-### isValid
+### isValid(guid)
 
 Indicates whether a guid is valid (according to RFC4122). 
 
@@ -71,7 +71,7 @@ Value indicating whether the guid is valid.
 | `guid`    | `string` | - Test guid. |
 
 
-### constructorGuid
+### constructorGuid(randomProvider)
 
 Returns a new Guid instance with a pseudo-randomly generated Guid. 
 
@@ -90,7 +90,7 @@ A new valid unique Guid object
 | `randomProvider`    | `IRandomProvider` | _Optional._ |
 
 
-### toString
+### toString()
 
 Object.prototype.toString override 
 
@@ -106,7 +106,7 @@ Example: 'd5369f3b-bd7a-412a-9c0f-7f0650bb5489'
 None
 
 
-### tryParse
+### tryParse(guid)
 
 Trys to construct a new Guid instance using guid string. The guid argument 
 is normalized and validated. If the argument is not a valid "version 4" UUID from 

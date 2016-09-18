@@ -28,7 +28,7 @@
 
 
 
-### constructor<T>
+### constructor<T>()
 
 
 
@@ -42,7 +42,7 @@
 None
 
 
-### constructor<T>
+### constructor<T>(iterable)
 
 
 

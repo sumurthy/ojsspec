@@ -22,7 +22,7 @@
 
 
 
-### then<U>
+### then<U>(onFulfilled,onRejected)
 
 
 
@@ -41,7 +41,7 @@
 | `onRejected`    | `(error: any) => U `,[` Thenable<U>`](../es6-promise/thenable.md) | _Optional._ |
 
 
-### then<U>
+### then<U>(onFulfilled,onRejected)
 
 
 

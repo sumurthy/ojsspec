@@ -50,7 +50,7 @@ resolve with a Response object for that particular request.
 
 
 
-### execute
+### execute()
 
 Executes the batched queries that were queued using ODataBatch.fetch().
 
@@ -64,7 +64,7 @@ Executes the batched queries that were queued using ODataBatch.fetch().
 None
 
 
-### fetch
+### fetch(url,options)
 
 Queues a new request,and returns a promise that can be used to access 
 the server response (after execute() has completed). The parameters for 
@@ -96,7 +96,7 @@ a promise that will return the result
 | `options`    | `IODataBatchRequestOptions` | _Optional._- additional options that affect the request |
 
 
-### get
+### get(url,options)
 
 Calls fetch(),but sets the method to 'GET'.
 
@@ -115,7 +115,7 @@ a promise that will return the result
 | `options`    | `IODataBatchRequestOptions` | _Optional._- additional options that affect the request |
 
 
-### post
+### post(url,options)
 
 Calls fetch(),but sets the method to 'POST'.
 

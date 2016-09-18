@@ -28,7 +28,7 @@
 
 
 
-### constructor<K,V>
+### constructor<K,V>()
 
 
 
@@ -42,7 +42,7 @@
 None
 
 
-### constructor<K,V>
+### constructor<K,V>(iterable)
 
 
 

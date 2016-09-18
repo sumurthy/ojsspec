@@ -1,4 +1,4 @@
-# PropertyPaneToggle
+# PropertyPaneToggle(targetProperty,properties)
 
 Helper method to create a Toggle on the PropertyPane.
 

@@ -329,7 +329,8 @@ function doSubMember(tline = '', member = {}, membername = '', isClass = true, o
             tline = tline.replace('%hashcount%', '###')
         }
     }
-    if (tline.includes('%membername%')) tline = tline.replace('%membername%', membername.split('-')[0])
+    //if (tline.includes('%membername%')) tline = tline.replace('%membername%', membername.split('-')[0])
+    if (tline.includes('%membername%')) tline = tline.replace('%membername%', member['docName'])
     if (tline.includes('%memberdescription%')) tline = tline.replace('%memberdescription%', member['descr'])
     if (tline.includes('%apisignature%')) tline = tline.replace('%apisignature%', `\`${getSmartLink(member['signature'])}\``)
 

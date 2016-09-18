@@ -32,7 +32,7 @@
 
 
 
-### arrayBuffer
+### arrayBuffer()
 
 
 
@@ -46,7 +46,7 @@
 None
 
 
-### blob
+### blob()
 
 
 
@@ -60,7 +60,7 @@ None
 None
 
 
-### formData
+### formData()
 
 
 
@@ -74,7 +74,7 @@ None
 None
 
 
-### json
+### json()
 
 
 
@@ -88,7 +88,7 @@ None
 None
 
 
-### json<T>
+### json<T>()
 
 
 
@@ -102,7 +102,7 @@ None
 None
 
 
-### text
+### text()
 
 
 

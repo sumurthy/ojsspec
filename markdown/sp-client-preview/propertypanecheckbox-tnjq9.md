@@ -1,4 +1,4 @@
-# PropertyPaneCheckbox
+# PropertyPaneCheckbox(targetProperty,properties)
 
 Helper method to create a Checkbox on the PropertyPane.
 
