@@ -29,8 +29,8 @@
             "descr": "called when/if \"promise\" rejects"
           }
         ],
-        "docName": "then<U> (onFulfilled, onRejected,)",
-        "mdLink": "then<u>-onfulfilled onrejected"
+        "docName": "then<U>(onFulfilled,onRejected)",
+        "mdLink": "then<u>onfulfilledonrejected"
       },
       "then<U>-Shnk9": {
         "accessModifier": "public",
@@ -55,8 +55,8 @@
             "descr": ""
           }
         ],
-        "docName": "then<U> (onFulfilled, onRejected,)",
-        "mdLink": "then<u>-onfulfilled onrejected"
+        "docName": "then<U>(onFulfilled,onRejected)",
+        "mdLink": "then<u>onfulfilledonrejected"
       },
       "catch<U>-CiNs9": {
         "accessModifier": "public",
@@ -75,8 +75,8 @@
             "descr": "called when/if \"promise\" rejects"
           }
         ],
-        "docName": "catch<U> (onRejected,)",
-        "mdLink": "catch<u>-onrejected"
+        "docName": "catch<U>(onRejected)",
+        "mdLink": "catch<u>onrejected"
       }
     },
     "constructor": {
@@ -102,8 +102,8 @@
           "descr": ""
         }
       ],
-      "docName": "constructor (callback, reject,)",
-      "mdLink": "constructor-callback reject"
+      "docName": "constructor(callback,reject)",
+      "mdLink": "constructorcallbackreject"
     },
     "types": {},
     "variables": {},

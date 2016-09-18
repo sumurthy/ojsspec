@@ -16,8 +16,8 @@
         "descr": ""
       }
     ],
-    "docName": "combineURLPaths (...url,)",
-    "mdLink": "combineurlpaths-...url"
+    "docName": "combineURLPaths(...url)",
+    "mdLink": "combineurlpaths...url"
   },
   "getPathNameFromAbsoluteUrl-uobc9": {
     "accessModifier": "public",
@@ -36,8 +36,8 @@
         "descr": ""
       }
     ],
-    "docName": "getPathNameFromAbsoluteUrl (url,)",
-    "mdLink": "getpathnamefromabsoluteurl-url"
+    "docName": "getPathNameFromAbsoluteUrl(url)",
+    "mdLink": "getpathnamefromabsoluteurlurl"
   },
   "PropertyPaneButton-1Guo9": {
     "accessModifier": "public",
@@ -62,8 +62,8 @@
         "descr": "- Strongly typed Button properties."
       }
     ],
-    "docName": "PropertyPaneButton (targetProperty, properties,)",
-    "mdLink": "propertypanebutton-targetproperty properties"
+    "docName": "PropertyPaneButton(targetProperty,properties)",
+    "mdLink": "propertypanebuttontargetpropertyproperties"
   },
   "PropertyPaneCheckbox-tNJQ9": {
     "accessModifier": "public",
@@ -88,8 +88,8 @@
         "descr": "- Strongly typed Checkbox properties."
       }
     ],
-    "docName": "PropertyPaneCheckbox (targetProperty, properties,)",
-    "mdLink": "propertypanecheckbox-targetproperty properties"
+    "docName": "PropertyPaneCheckbox(targetProperty,properties)",
+    "mdLink": "propertypanecheckboxtargetpropertyproperties"
   },
   "PropertyPaneChoiceGroup-2m0w9": {
     "accessModifier": "public",
@@ -114,8 +114,8 @@
         "descr": "- Strongly typed Choice Group properties."
       }
     ],
-    "docName": "PropertyPaneChoiceGroup (targetProperty, properties,)",
-    "mdLink": "propertypanechoicegroup-targetproperty properties"
+    "docName": "PropertyPaneChoiceGroup(targetProperty,properties)",
+    "mdLink": "propertypanechoicegrouptargetpropertyproperties"
   },
   "PropertyPaneCustomField-xR2I9": {
     "accessModifier": "public",
@@ -140,8 +140,8 @@
         "descr": "- Strongly typed Choice Group properties."
       }
     ],
-    "docName": "PropertyPaneCustomField (targetProperty, properties,)",
-    "mdLink": "propertypanecustomfield-targetproperty properties"
+    "docName": "PropertyPaneCustomField(targetProperty,properties)",
+    "mdLink": "propertypanecustomfieldtargetpropertyproperties"
   },
   "PropertyPaneDropdown-eDlQ9": {
     "accessModifier": "public",
@@ -166,8 +166,8 @@
         "descr": "- Strongly typed Dropdown properties."
       }
     ],
-    "docName": "PropertyPaneDropdown (targetProperty, properties,)",
-    "mdLink": "propertypanedropdown-targetproperty properties"
+    "docName": "PropertyPaneDropdown(targetProperty,properties)",
+    "mdLink": "propertypanedropdowntargetpropertyproperties"
   },
   "PropertyPaneHorizontalRule-VulY9": {
     "accessModifier": "public",
@@ -179,8 +179,8 @@
     "returnType": "IPropertyPaneField<void>",
     "returnDescr": "",
     "params": [],
-    "docName": "PropertyPaneHorizontalRule ()",
-    "mdLink": "propertypanehorizontalrule-"
+    "docName": "PropertyPaneHorizontalRule()",
+    "mdLink": "propertypanehorizontalrule"
   },
   "PropertyPaneLabel-9uPQ9": {
     "accessModifier": "public",
@@ -205,8 +205,8 @@
         "descr": "- Strongly typed Label properties."
       }
     ],
-    "docName": "PropertyPaneLabel (targetProperty, properties,)",
-    "mdLink": "propertypanelabel-targetproperty properties"
+    "docName": "PropertyPaneLabel(targetProperty,properties)",
+    "mdLink": "propertypanelabeltargetpropertyproperties"
   },
   "PropertyPaneLink-7ses9": {
     "accessModifier": "public",
@@ -231,8 +231,8 @@
         "descr": "- Strongly typed Link properties."
       }
     ],
-    "docName": "PropertyPaneLink (targetProperty, properties,)",
-    "mdLink": "propertypanelink-targetproperty properties"
+    "docName": "PropertyPaneLink(targetProperty,properties)",
+    "mdLink": "propertypanelinktargetpropertyproperties"
   },
   "PropertyPaneSlider-gqcs9": {
     "accessModifier": "public",
@@ -257,8 +257,8 @@
         "descr": "- Strongly typed Slider properties."
       }
     ],
-    "docName": "PropertyPaneSlider (targetProperty, properties,)",
-    "mdLink": "propertypaneslider-targetproperty properties"
+    "docName": "PropertyPaneSlider(targetProperty,properties)",
+    "mdLink": "propertypaneslidertargetpropertyproperties"
   },
   "PropertyPaneTextField-ZV7c9": {
     "accessModifier": "public",
@@ -283,8 +283,8 @@
         "descr": "- Strongly typed TextField properties."
       }
     ],
-    "docName": "PropertyPaneTextField (targetProperty, properties,)",
-    "mdLink": "propertypanetextfield-targetproperty properties"
+    "docName": "PropertyPaneTextField(targetProperty,properties)",
+    "mdLink": "propertypanetextfieldtargetpropertyproperties"
   },
   "PropertyPaneToggle-3vB09": {
     "accessModifier": "public",
@@ -309,7 +309,7 @@
         "descr": "- Strongly typed Toggle properties."
       }
     ],
-    "docName": "PropertyPaneToggle (targetProperty, properties,)",
-    "mdLink": "propertypanetoggle-targetproperty properties"
+    "docName": "PropertyPaneToggle(targetProperty,properties)",
+    "mdLink": "propertypanetoggletargetpropertyproperties"
   }
 }

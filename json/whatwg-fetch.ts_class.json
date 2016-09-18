@@ -118,8 +118,8 @@
           "descr": ""
         }
       ],
-      "docName": "constructor (input, init,)",
-      "mdLink": "constructor-input init"
+      "docName": "constructor(input,init)",
+      "mdLink": "constructorinputinit"
     },
     "types": {},
     "variables": {},
@@ -156,8 +156,8 @@
             "descr": ""
           }
         ],
-        "docName": "append (name, value,)",
-        "mdLink": "append-name value"
+        "docName": "append(name,value)",
+        "mdLink": "appendnamevalue"
       },
       "delete-KTKE9": {
         "accessModifier": "public",
@@ -176,8 +176,8 @@
             "descr": ""
           }
         ],
-        "docName": "delete (name,)",
-        "mdLink": "delete-name"
+        "docName": "delete(name)",
+        "mdLink": "deletename"
       },
       "get-E0S09": {
         "accessModifier": "public",
@@ -196,8 +196,8 @@
             "descr": ""
           }
         ],
-        "docName": "get (name,)",
-        "mdLink": "get-name"
+        "docName": "get(name)",
+        "mdLink": "getname"
       },
       "getAll-LXjI9": {
         "accessModifier": "public",
@@ -216,8 +216,8 @@
             "descr": ""
           }
         ],
-        "docName": "getAll (name,)",
-        "mdLink": "getall-name"
+        "docName": "getAll(name)",
+        "mdLink": "getallname"
       },
       "has-AAGU9": {
         "accessModifier": "public",
@@ -236,8 +236,8 @@
             "descr": ""
           }
         ],
-        "docName": "has (name,)",
-        "mdLink": "has-name"
+        "docName": "has(name)",
+        "mdLink": "hasname"
       },
       "set-rLHQ9": {
         "accessModifier": "public",
@@ -262,8 +262,8 @@
             "descr": ""
           }
         ],
-        "docName": "set (name, value,)",
-        "mdLink": "set-name value"
+        "docName": "set(name,value)",
+        "mdLink": "setnamevalue"
       },
       "forEach-yX4o9": {
         "accessModifier": "public",
@@ -282,8 +282,8 @@
             "descr": ""
           }
         ],
-        "docName": "forEach (callback,)",
-        "mdLink": "foreach-callback"
+        "docName": "forEach(callback)",
+        "mdLink": "foreachcallback"
       }
     },
     "constructor": {},
@@ -321,8 +321,8 @@
         "returnType": "Promise<ArrayBuffer>",
         "returnDescr": "",
         "params": [],
-        "docName": "arrayBuffer ()",
-        "mdLink": "arraybuffer-"
+        "docName": "arrayBuffer()",
+        "mdLink": "arraybuffer"
       },
       "blob-eubc9": {
         "accessModifier": "public",
@@ -334,8 +334,8 @@
         "returnType": "Promise<Blob>",
         "returnDescr": "",
         "params": [],
-        "docName": "blob ()",
-        "mdLink": "blob-"
+        "docName": "blob()",
+        "mdLink": "blob"
       },
       "formData-DLPs9": {
         "accessModifier": "public",
@@ -347,8 +347,8 @@
         "returnType": "Promise<FormData>",
         "returnDescr": "",
         "params": [],
-        "docName": "formData ()",
-        "mdLink": "formdata-"
+        "docName": "formData()",
+        "mdLink": "formdata"
       },
       "json-9hyk9": {
         "accessModifier": "public",
@@ -360,8 +360,8 @@
         "returnType": "Promise<any>",
         "returnDescr": "",
         "params": [],
-        "docName": "json ()",
-        "mdLink": "json-"
+        "docName": "json()",
+        "mdLink": "json"
       },
       "json<T>-Ncn49": {
         "accessModifier": "public",
@@ -373,8 +373,8 @@
         "returnType": "Promise<T>",
         "returnDescr": "",
         "params": [],
-        "docName": "json<T> ()",
-        "mdLink": "json<t>-"
+        "docName": "json<T>()",
+        "mdLink": "json<t>"
       },
       "text-10Is9": {
         "accessModifier": "public",
@@ -386,8 +386,8 @@
         "returnType": "Promise<string>",
         "returnDescr": "",
         "params": [],
-        "docName": "text ()",
-        "mdLink": "text-"
+        "docName": "text()",
+        "mdLink": "text"
       }
     },
     "constructor": {},
@@ -480,8 +480,8 @@
         "returnType": "Response",
         "returnDescr": "",
         "params": [],
-        "docName": "error ()",
-        "mdLink": "error-"
+        "docName": "error()",
+        "mdLink": "error"
       },
       "redirect-3bnQ9": {
         "accessModifier": "public",
@@ -506,8 +506,8 @@
             "descr": ""
           }
         ],
-        "docName": "redirect (url, status,)",
-        "mdLink": "redirect-url status"
+        "docName": "redirect(url,status)",
+        "mdLink": "redirecturlstatus"
       },
       "clone-3mAQ9": {
         "accessModifier": "public",
@@ -519,8 +519,8 @@
         "returnType": "Response",
         "returnDescr": "",
         "params": [],
-        "docName": "clone ()",
-        "mdLink": "clone-"
+        "docName": "clone()",
+        "mdLink": "clone"
       }
     },
     "constructor": {
@@ -546,8 +546,8 @@
           "descr": ""
         }
       ],
-      "docName": "constructor (body, init,)",
-      "mdLink": "constructor-body init"
+      "docName": "constructor(body,init)",
+      "mdLink": "constructorbodyinit"
     },
     "types": {},
     "variables": {},

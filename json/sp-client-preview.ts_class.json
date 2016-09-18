@@ -127,8 +127,8 @@
         "returnType": "void",
         "returnDescr": "",
         "params": [],
-        "docName": "clearError ()",
-        "mdLink": "clearerror-"
+        "docName": "clearError()",
+        "mdLink": "clearerror"
       },
       "configureStart-MnWI9": {
         "accessModifier": "protected",
@@ -147,8 +147,8 @@
             "descr": ""
           }
         ],
-        "docName": "configureStart (refreshOnly,)",
-        "mdLink": "configurestart-refreshonly"
+        "docName": "configureStart(refreshOnly)",
+        "mdLink": "configurestartrefreshonly"
       },
       "deserialize-bHrU9": {
         "accessModifier": "protected",
@@ -167,8 +167,8 @@
             "descr": "- web part persisted data."
           }
         ],
-        "docName": "deserialize (data,)",
-        "mdLink": "deserialize-data"
+        "docName": "deserialize(data)",
+        "mdLink": "deserializedata"
       },
       "dispose-ye9M9": {
         "accessModifier": "protected",
@@ -180,8 +180,8 @@
         "returnType": "void",
         "returnDescr": "",
         "params": [],
-        "docName": "dispose ()",
-        "mdLink": "dispose-"
+        "docName": "dispose()",
+        "mdLink": "dispose"
       },
       "onBeforeSerialize-I7HE9": {
         "accessModifier": "protected",
@@ -193,8 +193,8 @@
         "returnType": "IHtmlProperties",
         "returnDescr": "- reference to searchable properties and properties that need link fixup. Please read \nthe documentation of IHtmlProperties interface for more details.",
         "params": [],
-        "docName": "onBeforeSerialize ()",
-        "mdLink": "onbeforeserialize-"
+        "docName": "onBeforeSerialize()",
+        "mdLink": "onbeforeserialize"
       },
       "onDisplayModeChanged-G9TY9": {
         "accessModifier": "protected",
@@ -213,8 +213,8 @@
             "descr": "- The old display mode. \n"
           }
         ],
-        "docName": "onDisplayModeChanged (oldDisplayMode,)",
-        "mdLink": "ondisplaymodechanged-olddisplaymode"
+        "docName": "onDisplayModeChanged(oldDisplayMode)",
+        "mdLink": "ondisplaymodechangedolddisplaymode"
       },
       "onInit<T>-Br489": {
         "accessModifier": "protected",
@@ -226,8 +226,8 @@
         "returnType": "Promise<T>",
         "returnDescr": "",
         "params": [],
-        "docName": "onInit<T> ()",
-        "mdLink": "oninit<t>-"
+        "docName": "onInit<T>()",
+        "mdLink": "oninit<t>"
       },
       "onPropertyChange-OyJc9": {
         "accessModifier": "protected",
@@ -252,8 +252,8 @@
             "descr": "- New value of the property."
           }
         ],
-        "docName": "onPropertyChange (propertyPath, newValue,)",
-        "mdLink": "onpropertychange-propertypath newvalue"
+        "docName": "onPropertyChange(propertyPath,newValue)",
+        "mdLink": "onpropertychangepropertypathnewvalue"
       },
       "onPropertyConfigurationComplete-7EQI9": {
         "accessModifier": "protected",
@@ -265,8 +265,8 @@
         "returnType": "void",
         "returnDescr": "",
         "params": [],
-        "docName": "onPropertyConfigurationComplete ()",
-        "mdLink": "onpropertyconfigurationcomplete-"
+        "docName": "onPropertyConfigurationComplete()",
+        "mdLink": "onpropertyconfigurationcomplete"
       },
       "onPropertyPaneRendered-Mmik9": {
         "accessModifier": "protected",
@@ -278,8 +278,8 @@
         "returnType": "void",
         "returnDescr": "",
         "params": [],
-        "docName": "onPropertyPaneRendered ()",
-        "mdLink": "onpropertypanerendered-"
+        "docName": "onPropertyPaneRendered()",
+        "mdLink": "onpropertypanerendered"
       },
       "onPropertyPaneSave-ZYuc9": {
         "accessModifier": "protected",
@@ -291,8 +291,8 @@
         "returnType": "void",
         "returnDescr": "",
         "params": [],
-        "docName": "onPropertyPaneSave ()",
-        "mdLink": "onpropertypanesave-"
+        "docName": "onPropertyPaneSave()",
+        "mdLink": "onpropertypanesave"
       },
       "render-tsG49": {
         "accessModifier": "public",
@@ -304,8 +304,8 @@
         "returnType": "void",
         "returnDescr": "",
         "params": [],
-        "docName": "render ()",
-        "mdLink": "render-"
+        "docName": "render()",
+        "mdLink": "render"
       },
       "renderError-tgrU9": {
         "accessModifier": "protected",
@@ -324,8 +324,8 @@
             "descr": "- An error object containing the error message to render."
           }
         ],
-        "docName": "renderError (error,)",
-        "mdLink": "rendererror-error"
+        "docName": "renderError(error)",
+        "mdLink": "rendererrorerror"
       }
     },
     "constructor": {
@@ -345,8 +345,8 @@
           "descr": ""
         }
       ],
-      "docName": "constructor (ctx,)",
-      "mdLink": "constructor-ctx"
+      "docName": "constructor(ctx)",
+      "mdLink": "constructorctx"
     },
     "types": {},
     "variables": {},
