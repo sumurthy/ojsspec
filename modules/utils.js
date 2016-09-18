@@ -288,6 +288,9 @@ var self = module.exports = {
         })
         if (list) list = list.slice(0,-1)
         m['docName'] = name.split('-')[0] + '(' + list + ')'
+        // Create markdown in-line page link. Makes it easy to display...
+        m['mdLink'] = m['docName'].toLowerCase().replace(/,|\(|\)/g,'')
+
         return m
     },
     processProperty: (name = '', line = '', descr = '', assignValue = null, isClass = true, readonly = false) => {

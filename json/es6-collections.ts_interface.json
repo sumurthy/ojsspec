@@ -59,7 +59,8 @@
             "descr": ""
           }
         ],
-        "docName": "next(value)"
+        "docName": "next(value)",
+        "mdLink": "nextvalue"
       },
       "return-2d9Q9": {
         "accessModifier": "public",
@@ -78,7 +79,8 @@
             "descr": ""
           }
         ],
-        "docName": "return(value)"
+        "docName": "return(value)",
+        "mdLink": "returnvalue"
       },
       "throw-sdJc9": {
         "accessModifier": "public",
@@ -97,7 +99,8 @@
             "descr": ""
           }
         ],
-        "docName": "throw(e)"
+        "docName": "throw(e)",
+        "mdLink": "throwe"
       }
     },
     "constructor": {},
@@ -130,7 +133,8 @@
             "descr": ""
           }
         ],
-        "docName": "forEach(callbackfn)"
+        "docName": "forEach(callbackfn)",
+        "mdLink": "foreachcallbackfn"
       }
     },
     "constructor": {},
@@ -168,7 +172,8 @@
         "returnType": "void",
         "returnDescr": "",
         "params": [],
-        "docName": "clear()"
+        "docName": "clear()",
+        "mdLink": "clear"
       },
       "delete-rupo9": {
         "accessModifier": "public",
@@ -187,7 +192,8 @@
             "descr": ""
           }
         ],
-        "docName": "delete(key)"
+        "docName": "delete(key)",
+        "mdLink": "deletekey"
       },
       "forEach-9PMQ9": {
         "accessModifier": "public",
@@ -212,7 +218,8 @@
             "descr": ""
           }
         ],
-        "docName": "forEach(callbackfn,thisArg)"
+        "docName": "forEach(callbackfn,thisArg)",
+        "mdLink": "foreachcallbackfnthisarg"
       },
       "get-anSk9": {
         "accessModifier": "public",
@@ -231,7 +238,8 @@
             "descr": ""
           }
         ],
-        "docName": "get(key)"
+        "docName": "get(key)",
+        "mdLink": "getkey"
       },
       "has-8wy89": {
         "accessModifier": "public",
@@ -250,7 +258,8 @@
             "descr": ""
           }
         ],
-        "docName": "has(key)"
+        "docName": "has(key)",
+        "mdLink": "haskey"
       },
       "set-HGwo9": {
         "accessModifier": "public",
@@ -275,7 +284,8 @@
             "descr": ""
           }
         ],
-        "docName": "set(key,value)"
+        "docName": "set(key,value)",
+        "mdLink": "setkeyvalue"
       },
       "entries-F2iw9": {
         "accessModifier": "public",
@@ -287,7 +297,8 @@
         "returnType": "Iterator<[K,V]>",
         "returnDescr": "",
         "params": [],
-        "docName": "entries()"
+        "docName": "entries()",
+        "mdLink": "entries"
       },
       "keys-tXQs9": {
         "accessModifier": "public",
@@ -299,7 +310,8 @@
         "returnType": "Iterator<K>",
         "returnDescr": "",
         "params": [],
-        "docName": "keys()"
+        "docName": "keys()",
+        "mdLink": "keys"
       },
       "values-v0CQ9": {
         "accessModifier": "public",
@@ -311,7 +323,8 @@
         "returnType": "Iterator<V>",
         "returnDescr": "",
         "params": [],
-        "docName": "values()"
+        "docName": "values()",
+        "mdLink": "values"
       }
     },
     "constructor": {},
@@ -349,7 +362,8 @@
         "returnType": "Map<K,V>",
         "returnDescr": "",
         "params": [],
-        "docName": "constructor<K,V>()"
+        "docName": "constructor<K,V>()",
+        "mdLink": "constructor<kv>"
       },
       "constructor<K,V>-RTrk9": {
         "accessModifier": "public",
@@ -368,7 +382,8 @@
             "descr": ""
           }
         ],
-        "docName": "constructor<K,V>(iterable)"
+        "docName": "constructor<K,V>(iterable)",
+        "mdLink": "constructor<kv>iterable"
       }
     },
     "constructor": {},
@@ -413,7 +428,8 @@
             "descr": ""
           }
         ],
-        "docName": "add(value)"
+        "docName": "add(value)",
+        "mdLink": "addvalue"
       },
       "clear-xLXs9": {
         "accessModifier": "public",
@@ -425,7 +441,8 @@
         "returnType": "void",
         "returnDescr": "",
         "params": [],
-        "docName": "clear()"
+        "docName": "clear()",
+        "mdLink": "clear"
       },
       "delete-OlfE9": {
         "accessModifier": "public",
@@ -444,7 +461,8 @@
             "descr": ""
           }
         ],
-        "docName": "delete(value)"
+        "docName": "delete(value)",
+        "mdLink": "deletevalue"
       },
       "forEach-dkLE9": {
         "accessModifier": "public",
@@ -469,7 +487,8 @@
             "descr": ""
           }
         ],
-        "docName": "forEach(callbackfn,thisArg)"
+        "docName": "forEach(callbackfn,thisArg)",
+        "mdLink": "foreachcallbackfnthisarg"
       },
       "has-wh3M9": {
         "accessModifier": "public",
@@ -488,7 +507,8 @@
             "descr": ""
           }
         ],
-        "docName": "has(value)"
+        "docName": "has(value)",
+        "mdLink": "hasvalue"
       },
       "entries-XGGk9": {
         "accessModifier": "public",
@@ -500,7 +520,8 @@
         "returnType": "Iterator<[T,T]>",
         "returnDescr": "",
         "params": [],
-        "docName": "entries()"
+        "docName": "entries()",
+        "mdLink": "entries"
       },
       "keys-OToo9": {
         "accessModifier": "public",
@@ -512,7 +533,8 @@
         "returnType": "Iterator<T>",
         "returnDescr": "",
         "params": [],
-        "docName": "keys()"
+        "docName": "keys()",
+        "mdLink": "keys"
       },
       "values-XpgE9": {
         "accessModifier": "public",
@@ -524,7 +546,8 @@
         "returnType": "Iterator<T>",
         "returnDescr": "",
         "params": [],
-        "docName": "values()"
+        "docName": "values()",
+        "mdLink": "values"
       }
     },
     "constructor": {},
@@ -562,7 +585,8 @@
         "returnType": "Set<T>",
         "returnDescr": "",
         "params": [],
-        "docName": "constructor<T>()"
+        "docName": "constructor<T>()",
+        "mdLink": "constructor<t>"
       },
       "constructor<T>-Hf9M9": {
         "accessModifier": "public",
@@ -581,7 +605,8 @@
             "descr": ""
           }
         ],
-        "docName": "constructor<T>(iterable)"
+        "docName": "constructor<T>(iterable)",
+        "mdLink": "constructor<t>iterable"
       }
     },
     "constructor": {},
@@ -614,7 +639,8 @@
             "descr": ""
           }
         ],
-        "docName": "delete(key)"
+        "docName": "delete(key)",
+        "mdLink": "deletekey"
       },
       "clear-xLXs9": {
         "accessModifier": "public",
@@ -626,7 +652,8 @@
         "returnType": "void",
         "returnDescr": "",
         "params": [],
-        "docName": "clear()"
+        "docName": "clear()",
+        "mdLink": "clear"
       },
       "get-anSk9": {
         "accessModifier": "public",
@@ -645,7 +672,8 @@
             "descr": ""
           }
         ],
-        "docName": "get(key)"
+        "docName": "get(key)",
+        "mdLink": "getkey"
       },
       "has-8wy89": {
         "accessModifier": "public",
@@ -664,7 +692,8 @@
             "descr": ""
           }
         ],
-        "docName": "has(key)"
+        "docName": "has(key)",
+        "mdLink": "haskey"
       },
       "set-ZxwQ9": {
         "accessModifier": "public",
@@ -689,7 +718,8 @@
             "descr": ""
           }
         ],
-        "docName": "set(key,value)"
+        "docName": "set(key,value)",
+        "mdLink": "setkeyvalue"
       }
     },
     "constructor": {},
@@ -727,7 +757,8 @@
         "returnType": "WeakMap<K,V>",
         "returnDescr": "",
         "params": [],
-        "docName": "constructor<K,V>()"
+        "docName": "constructor<K,V>()",
+        "mdLink": "constructor<kv>"
       },
       "constructor<K,V>-jbMk9": {
         "accessModifier": "public",
@@ -746,7 +777,8 @@
             "descr": ""
           }
         ],
-        "docName": "constructor<K,V>(iterable)"
+        "docName": "constructor<K,V>(iterable)",
+        "mdLink": "constructor<kv>iterable"
       }
     },
     "constructor": {},
@@ -779,7 +811,8 @@
             "descr": ""
           }
         ],
-        "docName": "delete(value)"
+        "docName": "delete(value)",
+        "mdLink": "deletevalue"
       },
       "clear-xLXs9": {
         "accessModifier": "public",
@@ -791,7 +824,8 @@
         "returnType": "void",
         "returnDescr": "",
         "params": [],
-        "docName": "clear()"
+        "docName": "clear()",
+        "mdLink": "clear"
       },
       "add-Et949": {
         "accessModifier": "public",
@@ -810,7 +844,8 @@
             "descr": ""
           }
         ],
-        "docName": "add(value)"
+        "docName": "add(value)",
+        "mdLink": "addvalue"
       },
       "has-wh3M9": {
         "accessModifier": "public",
@@ -829,7 +864,8 @@
             "descr": ""
           }
         ],
-        "docName": "has(value)"
+        "docName": "has(value)",
+        "mdLink": "hasvalue"
       }
     },
     "constructor": {},
@@ -867,7 +903,8 @@
         "returnType": "WeakSet<T>",
         "returnDescr": "",
         "params": [],
-        "docName": "constructor<T>()"
+        "docName": "constructor<T>()",
+        "mdLink": "constructor<t>"
       },
       "constructor<T>-uZ049": {
         "accessModifier": "public",
@@ -886,7 +923,8 @@
             "descr": ""
           }
         ],
-        "docName": "constructor<T>(iterable)"
+        "docName": "constructor<T>(iterable)",
+        "mdLink": "constructor<t>iterable"
       }
     },
     "constructor": {},

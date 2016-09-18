@@ -16,10 +16,10 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[clearError(domElement)](clearerror(domelement))      | `void` | Clear the webpart error message. |
-|[clearLoadingIndicator(domElement)](clearloadingindicator(domelement))      | `void` | Clear the loading indicator. |
-|[displayLoadingIndicator(domElement,loadingMessage)](displayloadingindicator(domelement-loadingmessage))      | `void` | Display a loading spinner. |
-|[renderError(domElement,error)](rendererror(domelement-error))      | `void` | Render the provided error message in the webpart container div. |
+|[clearError(domElement)](clearerrordomelement)      | `void` | Clear the webpart error message. |
+|[clearLoadingIndicator(domElement)](clearloadingindicatordomelement)      | `void` | Clear the loading indicator. |
+|[displayLoadingIndicator(domElement,loadingMessage)](displayloadingindicatordomelementloadingmessage)      | `void` | Display a loading spinner. |
+|[renderError(domElement,error)](rendererrordomelementerror)      | `void` | Render the provided error message in the webpart container div. |
 
 
 

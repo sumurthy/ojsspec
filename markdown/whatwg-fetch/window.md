@@ -16,7 +16,7 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[fetch(url,init)](fetch(url-init))      | [`Promise<Response>`](../es6-promise/promise.md) |  |
+|[fetch(url,init)](fetchurlinit)      | [`Promise<Response>`](../es6-promise/promise.md) |  |
 
 
 

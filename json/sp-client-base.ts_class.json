@@ -41,7 +41,8 @@
             "descr": "- additional options that affect the request"
           }
         ],
-        "docName": "fetch(url,options)"
+        "docName": "fetch(url,options)",
+        "mdLink": "fetchurloptions"
       },
       "fetchCore-kYzk9": {
         "accessModifier": "protected",
@@ -60,7 +61,8 @@
             "descr": ""
           }
         ],
-        "docName": "fetchCore(request)"
+        "docName": "fetchCore(request)",
+        "mdLink": "fetchcorerequest"
       },
       "get-wQVw9": {
         "accessModifier": "public",
@@ -85,7 +87,8 @@
             "descr": "- additional options that affect the request"
           }
         ],
-        "docName": "get(url,options)"
+        "docName": "get(url,options)",
+        "mdLink": "geturloptions"
       },
       "post-QZWc9": {
         "accessModifier": "public",
@@ -110,7 +113,8 @@
             "descr": "- additional options that affect the request"
           }
         ],
-        "docName": "post(url,options)"
+        "docName": "post(url,options)",
+        "mdLink": "posturloptions"
       }
     },
     "constructor": {
@@ -130,7 +134,8 @@
           "descr": ""
         }
       ],
-      "docName": "constructor(serviceScope)"
+      "docName": "constructor(serviceScope)",
+      "mdLink": "constructorservicescope"
     },
     "types": {},
     "variables": {},
@@ -167,7 +172,8 @@
             "descr": "- the second object to compare. \n"
           }
         ],
-        "docName": "shallowCompare(objA,objB)"
+        "docName": "shallowCompare(objA,objB)",
+        "mdLink": "shallowcompareobjaobjb"
       }
     },
     "constructor": {},
@@ -261,7 +267,8 @@
             "descr": ""
           }
         ],
-        "docName": "equals(guid)"
+        "docName": "equals(guid)",
+        "mdLink": "equalsguid"
       },
       "isValid-udOU9": {
         "accessModifier": "public",
@@ -280,7 +287,8 @@
             "descr": "- Test guid."
           }
         ],
-        "docName": "isValid(guid)"
+        "docName": "isValid(guid)",
+        "mdLink": "isvalidguid"
       },
       "constructorGuid-SYAY9": {
         "accessModifier": "public",
@@ -299,7 +307,8 @@
             "descr": ""
           }
         ],
-        "docName": "constructorGuid(randomProvider)"
+        "docName": "constructorGuid(randomProvider)",
+        "mdLink": "constructorguidrandomprovider"
       },
       "toString-5Z9w9": {
         "accessModifier": "public",
@@ -311,7 +320,8 @@
         "returnType": "string",
         "returnDescr": "The GUID value in lowercase hexadecimal without braces. \nExample: 'd5369f3b-bd7a-412a-9c0f-7f0650bb5489'",
         "params": [],
-        "docName": "toString()"
+        "docName": "toString()",
+        "mdLink": "tostring"
       },
       "tryParse-hyQk9": {
         "accessModifier": "public",
@@ -330,7 +340,8 @@
             "descr": "- A guid string"
           }
         ],
-        "docName": "tryParse(guid)"
+        "docName": "tryParse(guid)",
+        "mdLink": "tryparseguid"
       }
     },
     "constructor": {},
@@ -363,7 +374,8 @@
             "descr": ""
           }
         ],
-        "docName": "beginBatch(batchOptions)"
+        "docName": "beginBatch(batchOptions)",
+        "mdLink": "beginbatchbatchoptions"
       },
       "fetch-GL3M9": {
         "accessModifier": "public",
@@ -388,7 +400,8 @@
             "descr": "- additional options that affect the request"
           }
         ],
-        "docName": "fetch(url,options)"
+        "docName": "fetch(url,options)",
+        "mdLink": "fetchurloptions"
       },
       "get-hBbg9": {
         "accessModifier": "public",
@@ -413,7 +426,8 @@
             "descr": "- additional options that affect the request"
           }
         ],
-        "docName": "get(url,options)"
+        "docName": "get(url,options)",
+        "mdLink": "geturloptions"
       },
       "getWebUrlFromRequestUrl-j9SA9": {
         "accessModifier": "public",
@@ -432,7 +446,8 @@
             "descr": "The URL for a SharePoint REST service"
           }
         ],
-        "docName": "getWebUrlFromRequestUrl(requestUrl)"
+        "docName": "getWebUrlFromRequestUrl(requestUrl)",
+        "mdLink": "getweburlfromrequesturlrequesturl"
       },
       "post-azHU9": {
         "accessModifier": "public",
@@ -457,7 +472,8 @@
             "descr": "- additional options that affect the request"
           }
         ],
-        "docName": "post(url,options)"
+        "docName": "post(url,options)",
+        "mdLink": "posturloptions"
       }
     },
     "constructor": {
@@ -477,7 +493,8 @@
           "descr": ""
         }
       ],
-      "docName": "constructor(serviceScope)"
+      "docName": "constructor(serviceScope)",
+      "mdLink": "constructorservicescope"
     },
     "types": {},
     "variables": {},
@@ -520,7 +537,8 @@
             "descr": "- the service scope that the source uses. A service scope can provide \nmore context information (e.g., web part information) to the logged error."
           }
         ],
-        "docName": "error(source,error,scope)"
+        "docName": "error(source,error,scope)",
+        "mdLink": "errorsourceerrorscope"
       },
       "info-0jwc9": {
         "accessModifier": "public",
@@ -551,7 +569,8 @@
             "descr": "- the service scope that the source uses. A service scope can provide \nmore context information (e.g., web part information) to the logged message."
           }
         ],
-        "docName": "info(source,message,scope)"
+        "docName": "info(source,message,scope)",
+        "mdLink": "infosourcemessagescope"
       },
       "verbose-vaBA9": {
         "accessModifier": "public",
@@ -582,7 +601,8 @@
             "descr": "- the service scope that the source uses. A service scope can provide \nmore context information (e.g., web part information) to the logged message."
           }
         ],
-        "docName": "verbose(source,message,scope)"
+        "docName": "verbose(source,message,scope)",
+        "mdLink": "verbosesourcemessagescope"
       },
       "warn-xzeY9": {
         "accessModifier": "public",
@@ -613,7 +633,8 @@
             "descr": "- the service scope that the source uses. A service scope can provide \nmore context information (e.g., web part information) to the logged message."
           }
         ],
-        "docName": "warn(source,message,scope)"
+        "docName": "warn(source,message,scope)",
+        "mdLink": "warnsourcemessagescope"
       }
     },
     "constructor": {},
@@ -639,7 +660,8 @@
         "returnType": "Promise<ODataBatch>",
         "returnDescr": "",
         "params": [],
-        "docName": "execute()"
+        "docName": "execute()",
+        "mdLink": "execute"
       },
       "fetch-k9BM9": {
         "accessModifier": "public",
@@ -664,7 +686,8 @@
             "descr": "- additional options that affect the request"
           }
         ],
-        "docName": "fetch(url,options)"
+        "docName": "fetch(url,options)",
+        "mdLink": "fetchurloptions"
       },
       "get-tVJg9": {
         "accessModifier": "public",
@@ -689,7 +712,8 @@
             "descr": "- additional options that affect the request"
           }
         ],
-        "docName": "get(url,options)"
+        "docName": "get(url,options)",
+        "mdLink": "geturloptions"
       },
       "post-JWiw9": {
         "accessModifier": "public",
@@ -714,7 +738,8 @@
             "descr": "- additional options that affect the request"
           }
         ],
-        "docName": "post(url,options)"
+        "docName": "post(url,options)",
+        "mdLink": "posturloptions"
       }
     },
     "constructor": {
@@ -740,7 +765,8 @@
           "descr": ""
         }
       ],
-      "docName": "constructor(serviceScope,batchOptions)"
+      "docName": "constructor(serviceScope,batchOptions)",
+      "mdLink": "constructorservicescopebatchoptions"
     },
     "types": {},
     "variables": {},
@@ -827,7 +853,8 @@
           "descr": ""
         }
       ],
-      "docName": "constructor(serviceScope)"
+      "docName": "constructor(serviceScope)",
+      "mdLink": "constructorservicescope"
     },
     "types": {},
     "variables": {},
@@ -898,7 +925,8 @@
             "descr": "- the TypeScript class that implements the service."
           }
         ],
-        "docName": "create<T>(name,serviceClass)"
+        "docName": "create<T>(name,serviceClass)",
+        "mdLink": "create<t>nameserviceclass"
       },
       "createCustom<T>-F0HQ9": {
         "accessModifier": "public",
@@ -923,7 +951,8 @@
             "descr": "- A callback that returns an object that implements the T interface"
           }
         ],
-        "docName": "createCustom<T>(name,defaultCreator)"
+        "docName": "createCustom<T>(name,defaultCreator)",
+        "mdLink": "createcustom<t>namedefaultcreator"
       }
     },
     "constructor": {
@@ -955,7 +984,8 @@
           "descr": ""
         }
       ],
-      "docName": "constructor(id,name,defaultCreator)"
+      "docName": "constructor(id,name,defaultCreator)",
+      "mdLink": "constructoridnamedefaultcreator"
     },
     "types": {},
     "variables": {},
@@ -986,7 +1016,8 @@
             "descr": "- the key that was used when provide() was called to register the service"
           }
         ],
-        "docName": "consume<T>(serviceKey)"
+        "docName": "consume<T>(serviceKey)",
+        "mdLink": "consume<t>servicekey"
       },
       "createAndProvide<T>-GIqQ9": {
         "accessModifier": "public",
@@ -1011,7 +1042,8 @@
             "descr": "- the TypeScript class to be constructed"
           }
         ],
-        "docName": "createAndProvide<T>(serviceKey,simpleServiceClass)"
+        "docName": "createAndProvide<T>(serviceKey,simpleServiceClass)",
+        "mdLink": "createandprovide<t>servicekeysimpleserviceclass"
       },
       "createDefaultAndProvide<T>-bI8M9": {
         "accessModifier": "public",
@@ -1030,7 +1062,8 @@
             "descr": "- the key that can be used later to consume the service"
           }
         ],
-        "docName": "createDefaultAndProvide<T>(serviceKey)"
+        "docName": "createDefaultAndProvide<T>(serviceKey)",
+        "mdLink": "createdefaultandprovide<t>servicekey"
       },
       "finish-N9F89": {
         "accessModifier": "public",
@@ -1042,7 +1075,8 @@
         "returnType": "void",
         "returnDescr": "",
         "params": [],
-        "docName": "finish()"
+        "docName": "finish()",
+        "mdLink": "finish"
       },
       "getParent-O7ac9": {
         "accessModifier": "public",
@@ -1054,7 +1088,8 @@
         "returnType": "ServiceScope",
         "returnDescr": "- the parent service scope",
         "params": [],
-        "docName": "getParent()"
+        "docName": "getParent()",
+        "mdLink": "getparent"
       },
       "provide<T>-GSDc9": {
         "accessModifier": "public",
@@ -1079,7 +1114,8 @@
             "descr": "- the service instance that is being registered"
           }
         ],
-        "docName": "provide<T>(serviceKey,service)"
+        "docName": "provide<T>(serviceKey,service)",
+        "mdLink": "provide<t>servicekeyservice"
       },
       "startNewChild-XAHs9": {
         "accessModifier": "public",
@@ -1091,7 +1127,8 @@
         "returnType": "ServiceScope",
         "returnDescr": "- the newly created root ServiceScope",
         "params": [],
-        "docName": "startNewChild()"
+        "docName": "startNewChild()",
+        "mdLink": "startnewchild"
       },
       "startNewRoot-Mqls9": {
         "accessModifier": "public",
@@ -1103,7 +1140,8 @@
         "returnType": "ServiceScope",
         "returnDescr": "- the newly created root ServiceScope",
         "params": [],
-        "docName": "startNewRoot()"
+        "docName": "startNewRoot()",
+        "mdLink": "startnewroot"
       },
       "whenFinished-L9bA9": {
         "accessModifier": "public",
@@ -1122,7 +1160,8 @@
             "descr": "- A block of code that needs to call ServiceScope.consume()"
           }
         ],
-        "docName": "whenFinished(callback)"
+        "docName": "whenFinished(callback)",
+        "mdLink": "whenfinishedcallback"
       }
     },
     "constructor": {
@@ -1142,7 +1181,8 @@
           "descr": ""
         }
       ],
-      "docName": "constructor(parent)"
+      "docName": "constructor(parent)",
+      "mdLink": "constructorparent"
     },
     "types": {},
     "variables": {},
@@ -1581,7 +1621,8 @@
             "descr": ""
           }
         ],
-        "docName": "hasAllPermissions(...requestedPerms)"
+        "docName": "hasAllPermissions(...requestedPerms)",
+        "mdLink": "hasallpermissions...requestedperms"
       },
       "hasAnyPermissions-fXxs9": {
         "accessModifier": "public",
@@ -1600,7 +1641,8 @@
             "descr": ""
           }
         ],
-        "docName": "hasAnyPermissions(...requestedPerms)"
+        "docName": "hasAnyPermissions(...requestedPerms)",
+        "mdLink": "hasanypermissions...requestedperms"
       },
       "hasPermission-sBGA9": {
         "accessModifier": "public",
@@ -1619,7 +1661,8 @@
             "descr": "- The SPPermission object to be compared against the original"
           }
         ],
-        "docName": "hasPermission(requestedPerm)"
+        "docName": "hasPermission(requestedPerm)",
+        "mdLink": "haspermissionrequestedperm"
       }
     },
     "constructor": {
@@ -1639,7 +1682,8 @@
           "descr": ""
         }
       ],
-      "docName": "constructor(value)"
+      "docName": "constructor(value)",
+      "mdLink": "constructorvalue"
     },
     "types": {},
     "variables": {},
@@ -1789,7 +1833,8 @@
             "descr": "the case insensitive key for the desired query parameter value."
           }
         ],
-        "docName": "getValue(param)"
+        "docName": "getValue(param)",
+        "mdLink": "getvalueparam"
       },
       "getValues-9Dec9": {
         "accessModifier": "public",
@@ -1808,7 +1853,8 @@
             "descr": "the case insensitive key for the desired query parameter value."
           }
         ],
-        "docName": "getValues(param)"
+        "docName": "getValues(param)",
+        "mdLink": "getvaluesparam"
       }
     },
     "constructor": {
@@ -1828,7 +1874,8 @@
           "descr": ""
         }
       ],
-      "docName": "constructor(url)"
+      "docName": "constructor(url)",
+      "mdLink": "constructorurl"
     },
     "types": {},
     "variables": {},
@@ -1859,7 +1906,8 @@
             "descr": ""
           }
         ],
-        "docName": "convertToODataStringLiteral(value)"
+        "docName": "convertToODataStringLiteral(value)",
+        "mdLink": "converttoodatastringliteralvalue"
       },
       "removeEndSlash-aIsA9": {
         "accessModifier": "public",
@@ -1878,7 +1926,8 @@
             "descr": "the URL to be normalized"
           }
         ],
-        "docName": "removeEndSlash(url)"
+        "docName": "removeEndSlash(url)",
+        "mdLink": "removeendslashurl"
       }
     },
     "constructor": {},
@@ -1917,7 +1966,8 @@
             "descr": "- the program variable name,which will be mentioned in the error message"
           }
         ],
-        "docName": "isNonemptyString(value,variableName)"
+        "docName": "isNonemptyString(value,variableName)",
+        "mdLink": "isnonemptystringvaluevariablename"
       },
       "isNotNullOrUndefined-KyJc9": {
         "accessModifier": "public",
@@ -1942,7 +1992,8 @@
             "descr": "- the program variable name,which will be mentioned in the error message"
           }
         ],
-        "docName": "isNotNullOrUndefined(value,variableName)"
+        "docName": "isNotNullOrUndefined(value,variableName)",
+        "mdLink": "isnotnullorundefinedvaluevariablename"
       },
       "isTrue-RW4Y9": {
         "accessModifier": "public",
@@ -1967,7 +2018,8 @@
             "descr": "- the program variable name,which will be mentioned in the error message"
           }
         ],
-        "docName": "isTrue(value,variableName)"
+        "docName": "isTrue(value,variableName)",
+        "mdLink": "istruevaluevariablename"
       }
     },
     "constructor": {},

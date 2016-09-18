@@ -29,7 +29,8 @@
             "descr": ""
           }
         ],
-        "docName": "then<U>(onFulfilled,onRejected)"
+        "docName": "then<U>(onFulfilled,onRejected)",
+        "mdLink": "then<u>onfulfilledonrejected"
       },
       "then<U>-4DeU9": {
         "accessModifier": "public",
@@ -54,7 +55,8 @@
             "descr": ""
           }
         ],
-        "docName": "then<U>(onFulfilled,onRejected)"
+        "docName": "then<U>(onFulfilled,onRejected)",
+        "mdLink": "then<u>onfulfilledonrejected"
       }
     },
     "constructor": {},

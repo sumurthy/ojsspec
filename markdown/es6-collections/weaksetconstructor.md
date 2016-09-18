@@ -22,8 +22,8 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[constructor<T>()](constructor<t>())      | [`WeakSet<T>`](../es6-collections/weakset.md) |  |
-|[constructor<T>(iterable)](constructor<t>(iterable))      | [`WeakSet<T>`](../es6-collections/weakset.md) |  |
+|[constructor<T>()](constructor<t>)      | [`WeakSet<T>`](../es6-collections/weakset.md) |  |
+|[constructor<T>(iterable)](constructor<t>iterable)      | [`WeakSet<T>`](../es6-collections/weakset.md) |  |
 
 
 

@@ -23,7 +23,8 @@
             "descr": ""
           }
         ],
-        "docName": "resolve<R>(value)"
+        "docName": "resolve<R>(value)",
+        "mdLink": "resolve<r>value"
       },
       "reject-u1UQ9": {
         "accessModifier": "public",
@@ -42,7 +43,8 @@
             "descr": ""
           }
         ],
-        "docName": "reject(error)"
+        "docName": "reject(error)",
+        "mdLink": "rejecterror"
       },
       "all<R>-O1309": {
         "accessModifier": "public",
@@ -61,7 +63,8 @@
             "descr": ""
           }
         ],
-        "docName": "all<R>(promises)"
+        "docName": "all<R>(promises)",
+        "mdLink": "all<r>promises"
       },
       "race<R>-EI609": {
         "accessModifier": "public",
@@ -80,7 +83,8 @@
             "descr": ""
           }
         ],
-        "docName": "race<R>(promises)"
+        "docName": "race<R>(promises)",
+        "mdLink": "race<r>promises"
       }
     },
     "constructor": {},

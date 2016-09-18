@@ -156,7 +156,8 @@
             "descr": ""
           }
         ],
-        "docName": "fetch(url,init)"
+        "docName": "fetch(url,init)",
+        "mdLink": "fetchurlinit"
       }
     },
     "constructor": {},

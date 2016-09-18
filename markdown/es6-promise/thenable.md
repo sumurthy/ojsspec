@@ -16,8 +16,8 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[then<U>(onFulfilled,onRejected)](then<u>(onfulfilled-onrejected))      | [`Thenable<U>`](../es6-promise/thenable.md) |  |
-|[then<U>(onFulfilled,onRejected)](then<u>(onfulfilled-onrejected))      | [`Thenable<U>`](../es6-promise/thenable.md) |  |
+|[then<U>(onFulfilled,onRejected)](then<u>onfulfilledonrejected)      | [`Thenable<U>`](../es6-promise/thenable.md) |  |
+|[then<U>(onFulfilled,onRejected)](then<u>onfulfilledonrejected)      | [`Thenable<U>`](../es6-promise/thenable.md) |  |
 
 
 
