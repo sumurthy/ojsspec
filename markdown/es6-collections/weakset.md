@@ -16,10 +16,10 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[delete(value)](#deletevalue)      | `boolean` |  |
-|[clear()](#clear)      | `void` |  |
-|[add(value)](#addvalue)      | [`WeakSet<T>`](../es6-collections/weakset.md) |  |
-|[has(value)](#hasvalue)      | `boolean` |  |
+|[`delete(value)`](#deletevalue)      | `boolean` |  |
+|[`clear()`](#clear)      | `void` |  |
+|[`add(value)`](#addvalue)      | [`WeakSet<T>`](../es6-collections/weakset.md) |  |
+|[`has(value)`](#hasvalue)      | `boolean` |  |
 
 
 

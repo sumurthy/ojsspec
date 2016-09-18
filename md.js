@@ -467,7 +467,7 @@ function addMembers(tline = '', type = '', name = '', localO = {}) {
         if ((type === 'method') || type === 'imethod') {
             mline = mline.replace('%type%', `${getLinkForType(o[e]['returnType'])}`)
             ///mline = mline.replace('%name%', `[\`${e.split('-')[0]}\`](#${e.split('-')[0].toLowerCase()})`)
-            mline = mline.replace('%name%', `[${o[e]['docName']}](#${o[e]['mdLink']})`)
+            mline = mline.replace('%name%', `[\`${o[e]['docName']}\`](#${o[e]['mdLink']})`)
         } else {
             mline = mline.replace('%name%', e.split('-')[0])
             mline = mline.replace('%type%', `${getLinkForType(o[e]['dataType'])}`)

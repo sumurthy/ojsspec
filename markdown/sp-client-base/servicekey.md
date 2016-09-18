@@ -46,8 +46,8 @@ PRIVATE - Do not call this from your own code.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[create<T>(name,serviceClass)](#create<t>nameserviceclass)     | `public, static` | [`ServiceKey<T>`](../sp-client-base/servicekey.md) | Constructs a new ServiceKey whose default implementation will be a new instance of  a TypeScript class that accepts the standard constructor parameter. If you want to  specify custom constructor parameters, use createCustom() instead. |
-|[createCustom<T>(name,defaultCreator)](#createcustom<t>namedefaultcreator)     | `public, static` | [`ServiceKey<T>`](../sp-client-base/servicekey.md) | Constructs a new ServiceKey whose default implementation will be obtained  by invoking the specified callback. |
+|[`create<T>(name,serviceClass)`](#create<t>nameserviceclass)     | `public, static` | [`ServiceKey<T>`](../sp-client-base/servicekey.md) | Constructs a new ServiceKey whose default implementation will be a new instance of  a TypeScript class that accepts the standard constructor parameter. If you want to  specify custom constructor parameters, use createCustom() instead. |
+|[`createCustom<T>(name,defaultCreator)`](#createcustom<t>namedefaultcreator)     | `public, static` | [`ServiceKey<T>`](../sp-client-base/servicekey.md) | Constructs a new ServiceKey whose default implementation will be obtained  by invoking the specified callback. |
 
 
 

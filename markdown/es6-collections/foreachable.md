@@ -16,7 +16,7 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[forEach(callbackfn)](#foreachcallbackfn)      | `void` |  |
+|[`forEach(callbackfn)`](#foreachcallbackfn)      | `void` |  |
 
 
 

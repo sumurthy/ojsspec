@@ -16,9 +16,9 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[next(value)](#nextvalue)      | [`IteratorResult<T>`](../es6-collections/iteratorresult.md) |  |
-|[return(value)](#returnvalue)      | [`IteratorResult<T>`](../es6-collections/iteratorresult.md) |  |
-|[throw(e)](#throwe)      | [`IteratorResult<T>`](../es6-collections/iteratorresult.md) |  |
+|[`next(value)`](#nextvalue)      | [`IteratorResult<T>`](../es6-collections/iteratorresult.md) |  |
+|[`return(value)`](#returnvalue)      | [`IteratorResult<T>`](../es6-collections/iteratorresult.md) |  |
+|[`throw(e)`](#throwe)      | [`IteratorResult<T>`](../es6-collections/iteratorresult.md) |  |
 
 
 

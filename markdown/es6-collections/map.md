@@ -22,15 +22,15 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[clear()](#clear)      | `void` |  |
-|[delete(key)](#deletekey)      | `boolean` |  |
-|[forEach(callbackfn,thisArg)](#foreachcallbackfnthisarg)      | `void` |  |
-|[get(key)](#getkey)      | `V` |  |
-|[has(key)](#haskey)      | `boolean` |  |
-|[set(key,value)](#setkeyvalue)      | [`Map<K,V>`](../es6-collections/map.md) |  |
-|[entries()](#entries)      | [`Iterator<[K,V]>`](../es6-collections/iterator.md) |  |
-|[keys()](#keys)      | [`Iterator<K>`](../es6-collections/iterator.md) |  |
-|[values()](#values)      | [`Iterator<V>`](../es6-collections/iterator.md) |  |
+|[`clear()`](#clear)      | `void` |  |
+|[`delete(key)`](#deletekey)      | `boolean` |  |
+|[`forEach(callbackfn,thisArg)`](#foreachcallbackfnthisarg)      | `void` |  |
+|[`get(key)`](#getkey)      | `V` |  |
+|[`has(key)`](#haskey)      | `boolean` |  |
+|[`set(key,value)`](#setkeyvalue)      | [`Map<K,V>`](../es6-collections/map.md) |  |
+|[`entries()`](#entries)      | [`Iterator<[K,V]>`](../es6-collections/iterator.md) |  |
+|[`keys()`](#keys)      | [`Iterator<K>`](../es6-collections/iterator.md) |  |
+|[`values()`](#values)      | [`Iterator<V>`](../es6-collections/iterator.md) |  |
 
 
 

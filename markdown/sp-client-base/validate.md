@@ -18,9 +18,9 @@ that might impact performance.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[isNonemptyString(value,variableName)](#isnonemptystringvaluevariablename)     | `public, static` | `void` | Throws an exception if the specified string is null,undefined,or an empty string. |
-|[isNotNullOrUndefined(value,variableName)](#isnotnullorundefinedvaluevariablename)     | `public, static` | `void` | Throws an exception if the specified value is null or undefined. |
-|[isTrue(value,variableName)](#istruevaluevariablename)     | `public, static` | `void` | Throws an exception if the specified value is not true. |
+|[`isNonemptyString(value,variableName)`](#isnonemptystringvaluevariablename)     | `public, static` | `void` | Throws an exception if the specified string is null,undefined,or an empty string. |
+|[`isNotNullOrUndefined(value,variableName)`](#isnotnullorundefinedvaluevariablename)     | `public, static` | `void` | Throws an exception if the specified value is null or undefined. |
+|[`isTrue(value,variableName)`](#istruevaluevariablename)     | `public, static` | `void` | Throws an exception if the specified value is not true. |
 
 
 
