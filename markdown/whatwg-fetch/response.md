@@ -43,15 +43,15 @@ _Implements: [`Body`](../whatwg-fetch/body.md)_
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[error()](error)     | `public` | [`Response`](../whatwg-fetch/response.md) |  |
-|[redirect(url,status)](redirecturlstatus)     | `public` | [`Response`](../whatwg-fetch/response.md) |  |
-|[clone()](clone)     | `public` | [`Response`](../whatwg-fetch/response.md) |  |
+|[error ()](#error-)     | `public` | [`Response`](../whatwg-fetch/response.md) |  |
+|[redirect (url, status,)](#redirect-url status)     | `public` | [`Response`](../whatwg-fetch/response.md) |  |
+|[clone ()](#clone-)     | `public` | [`Response`](../whatwg-fetch/response.md) |  |
 
 
 
 
 
-### error()
+### error ()
 
 
 
@@ -65,7 +65,7 @@ _Implements: [`Body`](../whatwg-fetch/body.md)_
 None
 
 
-### redirect(url,status)
+### redirect (url, status,)
 
 
 
@@ -84,7 +84,7 @@ None
 | `status`    | `number` |  |
 
 
-### clone()
+### clone ()
 
 
 

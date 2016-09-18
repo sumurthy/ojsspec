@@ -1,4 +1,4 @@
-# PropertyPaneTextField(targetProperty,properties)
+# PropertyPaneTextField (targetProperty, properties,)
 
 Helper method to create a TextField on the PropertyPane.
 

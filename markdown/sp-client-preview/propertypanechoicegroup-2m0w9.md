@@ -1,4 +1,4 @@
-# PropertyPaneChoiceGroup(targetProperty,properties)
+# PropertyPaneChoiceGroup (targetProperty, properties,)
 
 Helper method to create a Choice Group on the PropertyPane.
 

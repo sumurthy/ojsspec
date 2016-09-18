@@ -1,4 +1,4 @@
-# PropertyPaneSlider(targetProperty,properties)
+# PropertyPaneSlider (targetProperty, properties,)
 
 Helper method to create a Slider on the PropertyPane.
 

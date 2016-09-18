@@ -15,19 +15,19 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[append(name,value)](appendnamevalue)     | `public` | `void` |  |
-|[delete(name)](deletename)     | `public` | `void` |  |
-|[get(name)](getname)     | `public` | `string` |  |
-|[getAll(name)](getallname)     | `public` | `Array<string>` |  |
-|[has(name)](hasname)     | `public` | `boolean` |  |
-|[set(name,value)](setnamevalue)     | `public` | `void` |  |
-|[forEach(callback)](foreachcallback)     | `public` | `void` |  |
+|[append (name, value,)](#append-name value)     | `public` | `void` |  |
+|[delete (name,)](#delete-name)     | `public` | `void` |  |
+|[get (name,)](#get-name)     | `public` | `string` |  |
+|[getAll (name,)](#getall-name)     | `public` | `Array<string>` |  |
+|[has (name,)](#has-name)     | `public` | `boolean` |  |
+|[set (name, value,)](#set-name value)     | `public` | `void` |  |
+|[forEach (callback,)](#foreach-callback)     | `public` | `void` |  |
 
 
 
 
 
-### append(name,value)
+### append (name, value,)
 
 
 
@@ -46,7 +46,7 @@
 | `value`    | `string` |  |
 
 
-### delete(name)
+### delete (name,)
 
 
 
@@ -64,7 +64,7 @@
 | `name`    | `string` |  |
 
 
-### get(name)
+### get (name,)
 
 
 
@@ -82,7 +82,7 @@
 | `name`    | `string` |  |
 
 
-### getAll(name)
+### getAll (name,)
 
 
 
@@ -100,7 +100,7 @@
 | `name`    | `string` |  |
 
 
-### has(name)
+### has (name,)
 
 
 
@@ -118,7 +118,7 @@
 | `name`    | `string` |  |
 
 
-### set(name,value)
+### set (name, value,)
 
 
 
@@ -137,7 +137,7 @@
 | `value`    | `string` |  |
 
 
-### forEach(callback)
+### forEach (callback,)
 
 
 

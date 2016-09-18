@@ -23,8 +23,8 @@
             "descr": "- the webpart container div."
           }
         ],
-        "docName": "clearError(domElement)",
-        "mdLink": "clearerrordomelement"
+        "docName": "clearError (domElement,)",
+        "mdLink": "clearerror-domelement"
       },
       "clearLoadingIndicator-kHpU9": {
         "accessModifier": "public",
@@ -43,8 +43,8 @@
             "descr": "- the webpart container div."
           }
         ],
-        "docName": "clearLoadingIndicator(domElement)",
-        "mdLink": "clearloadingindicatordomelement"
+        "docName": "clearLoadingIndicator (domElement,)",
+        "mdLink": "clearloadingindicator-domelement"
       },
       "displayLoadingIndicator-BAYY9": {
         "accessModifier": "public",
@@ -69,8 +69,8 @@
             "descr": "- the message to be displayed when the loading spinner id displayed."
           }
         ],
-        "docName": "displayLoadingIndicator(domElement,loadingMessage)",
-        "mdLink": "displayloadingindicatordomelementloadingmessage"
+        "docName": "displayLoadingIndicator (domElement, loadingMessage,)",
+        "mdLink": "displayloadingindicator-domelement loadingmessage"
       },
       "renderError-aUm89": {
         "accessModifier": "public",
@@ -95,8 +95,8 @@
             "descr": "- the error message."
           }
         ],
-        "docName": "renderError(domElement,error)",
-        "mdLink": "rendererrordomelementerror"
+        "docName": "renderError (domElement, error,)",
+        "mdLink": "rendererror-domelement error"
       }
     },
     "constructor": {},

@@ -1,4 +1,4 @@
-# PropertyPaneButton(targetProperty,properties)
+# PropertyPaneButton (targetProperty, properties,)
 
 Helper method to create a Button on the PropertyPane.
 

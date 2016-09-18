@@ -284,12 +284,12 @@ var self = module.exports = {
         m['params'] = self.buildParamList(line, commentObject['param'])
         var list = ''
         m['params'].forEach((e) => {
-            list = list + e['name'] + ','
+            list = list + e['name'] + ', '
         })
         if (list) list = list.slice(0,-1)
-        m['docName'] = name.split('-')[0] + '(' + list + ')'
+        m['docName'] = name.split('-')[0] + ' (' + list + ')'
         // Create markdown in-line page link. Makes it easy to display...
-        m['mdLink'] = m['docName'].toLowerCase().replace(/,|\(|\)/g,'')
+        m['mdLink'] = m['docName'].toLowerCase().replace(/,|\(|\)/g,'').replace(/\s+/,'-')
 
         return m
     },
