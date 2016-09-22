@@ -55,7 +55,14 @@ function file_reset() {
     skipFlag = false
 }
 
-function getLinkForType(type = '') {
+function adjustMdLink(val='', adjustLink=false) {
+    if (adjustLink && val) {
+        val = val.replace('..','.')
+    }
+    return val
+}
+
+function getLinkForType(type = '', adjustLink = false) {
 
     var out = ''
     if (!type) return out
@@ -66,19 +73,24 @@ function getLinkForType(type = '') {
     }
     //type.split(/\W+/).forEach((e) => {
     type.split(splitChar).forEach((e) => {
+        var targetLink = allTypes[e.trim()]
+        targetLink = adjustMdLink(targetLink, adjustLink)
         // try as is for a match
         if (Object.keys(allTypes).includes(e.trim())) {
-            out = out + `[\`${e}\`](${allTypes[e.trim()]})` + ','
+            out = out + `[\`${e}\`](${targetLink})` + ','
         }
         // try trimming the generics
         else if (Object.keys(allTypes).includes(Utils.trimGenerics(e,true))) {
-            var o = Utils.trimGenerics(e,true) //first part 
+            var o = Utils.trimGenerics(e,true) //first part
             var g = Utils.inParen(e,true) //generics link
-            e = e.replace(o, `[\`${o}\`](${allTypes[o]})`)
 
+            targetLink = adjustMdLink(allTypes[e.trim()], adjustLink)
+            e = e.replace(o, `[\`${o}\`](${allTypes[o]})`)
             if (g) {
+                targetLink = allTypes[g]
+                targetLink = adjustMdLink(targetLink, adjustLink)
                 if (Object.keys(allTypes).includes(g)) {
-                    e = e.replace(g, `[\`${g}\`](${allTypes[g]})`)
+                    e = e.replace(g, `[\`${g}\`](${targetLink})`)
                 }
             }
             out = out + e + ','
@@ -429,7 +441,7 @@ function addRegions(tline = '', type = '') {
         mline = mline.replace('%description%', descr)
             // For return function add Markdown HyperLink
         if (type === 'functions') {
-            var returnLink = getLinkForType(o[e]['returnType'])
+            var returnLink = getLinkForType(o[e]['returnType'], true)
             mline = mline.replace('%returns%', returnLink)
         }
         mdout.push(mline)
