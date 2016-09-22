@@ -84,7 +84,7 @@ function getLinkForType(type = '', adjustLink = false) {
             var o = Utils.trimGenerics(e,true) //first part
             var g = Utils.inParen(e,true) //generics link
 
-            targetLink = adjustMdLink(allTypes[e.trim()], adjustLink)
+            targetLink = adjustMdLink(allTypes[o], adjustLink)
             e = e.replace(o, `[\`${o}\`](${targetLink})`)
             if (g) {
                 targetLink = allTypes[g]
