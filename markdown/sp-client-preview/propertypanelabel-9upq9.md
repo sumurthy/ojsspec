@@ -4,7 +4,7 @@ Helper method to create a Label on the PropertyPane.
 
 **Signature:** _PropertyPaneLabel(targetProperty: string,properties: [IPropertyPaneLabelProps](../sp-client-preview/ipropertypanelabelprops.md)): [IPropertyPaneField](../sp-client-preview/ipropertypanefield.md)<IPropertyPaneLabelProps>_
 
-**Returns**: [`IPropertyPaneField`](targetLink)<[`IPropertyPaneLabelProps`](../sp-client-preview/ipropertypanelabelprops.md)>
+**Returns**: [`IPropertyPaneField`]()<[`IPropertyPaneLabelProps`](../sp-client-preview/ipropertypanelabelprops.md)>
 
 
 

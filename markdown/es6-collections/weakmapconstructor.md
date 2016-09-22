@@ -13,7 +13,7 @@
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`prototype`      | [`WeakMap`](targetLink)<any,any> |  |
+|`prototype`      | [`WeakMap`]()<any,any> |  |
 
 
 
@@ -22,8 +22,8 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`constructor<K,V>()`](#constructor<kv>)      | [`WeakMap`](targetLink)<K,V> |  |
-|[`constructor<K,V>(iterable)`](#constructor<kv>iterable)      | [`WeakMap`](targetLink)<K,V> |  |
+|[`constructor<K,V>()`](#constructor<kv>)      | [`WeakMap`]()<K,V> |  |
+|[`constructor<K,V>(iterable)`](#constructor<kv>iterable)      | [`WeakMap`]()<K,V> |  |
 
 
 
@@ -34,7 +34,7 @@
 
 **Signature:** _new<K,V>(): [WeakMap](../es6-collections/weakmap.md)<K,V>_
 
-**Returns**: [`WeakMap`](targetLink)<K,V>
+**Returns**: [`WeakMap`]()<K,V>
 
 
 
@@ -48,7 +48,7 @@ None
 
 **Signature:** _new<K,V>(iterable: [ForEachable](../es6-collections/foreachable.md)<[K,V]>): [WeakMap](../es6-collections/weakmap.md)<K,V>_
 
-**Returns**: [`WeakMap`](targetLink)<K,V>
+**Returns**: [`WeakMap`]()<K,V>
 
 
 
@@ -57,5 +57,5 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `iterable`    | [`ForEachable`](targetLink)<[K,V]> |  |
+| `iterable`    | [`ForEachable`]()<[K,V]> |  |
 

@@ -4,7 +4,7 @@ Helper method to create a Slider on the PropertyPane.
 
 **Signature:** _PropertyPaneSlider(targetProperty: string,properties: [IPropertyPaneSliderProps](../sp-client-preview/ipropertypanesliderprops.md)): [IPropertyPaneField](../sp-client-preview/ipropertypanefield.md)<IPropertyPaneSliderProps>_
 
-**Returns**: [`IPropertyPaneField`](targetLink)<[`IPropertyPaneSliderProps`](../sp-client-preview/ipropertypanesliderprops.md)>
+**Returns**: [`IPropertyPaneField`]()<[`IPropertyPaneSliderProps`](../sp-client-preview/ipropertypanesliderprops.md)>
 
 
 

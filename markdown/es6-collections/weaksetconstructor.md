@@ -13,7 +13,7 @@
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`prototype`      | [`WeakSet`](targetLink)<any> |  |
+|`prototype`      | [`WeakSet`]()<any> |  |
 
 
 
@@ -22,8 +22,8 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`constructor<T>()`](#constructor<t>)      | [`WeakSet`](targetLink)<T> |  |
-|[`constructor<T>(iterable)`](#constructor<t>iterable)      | [`WeakSet`](targetLink)<T> |  |
+|[`constructor<T>()`](#constructor<t>)      | [`WeakSet`]()<T> |  |
+|[`constructor<T>(iterable)`](#constructor<t>iterable)      | [`WeakSet`]()<T> |  |
 
 
 
@@ -34,7 +34,7 @@
 
 **Signature:** _new<T>(): [WeakSet](../es6-collections/weakset.md)<T>_
 
-**Returns**: [`WeakSet`](targetLink)<T>
+**Returns**: [`WeakSet`]()<T>
 
 
 
@@ -48,7 +48,7 @@ None
 
 **Signature:** _new<T>(iterable: [ForEachable](../es6-collections/foreachable.md)<T>): [WeakSet](../es6-collections/weakset.md)<T>_
 
-**Returns**: [`WeakSet`](targetLink)<T>
+**Returns**: [`WeakSet`]()<T>
 
 
 
@@ -57,5 +57,5 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `iterable`    | [`ForEachable`](targetLink)<T> |  |
+| `iterable`    | [`ForEachable`]()<T> |  |
 

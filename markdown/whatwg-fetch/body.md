@@ -21,12 +21,12 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`arrayBuffer()`](#arraybuffer)     | `public` | [`Promise`](targetLink)<ArrayBuffer> |  |
-|[`blob()`](#blob)     | `public` | [`Promise`](targetLink)<Blob> |  |
-|[`formData()`](#formdata)     | `public` | [`Promise`](targetLink)<FormData> |  |
-|[`json()`](#json)     | `public` | [`Promise`](targetLink)<any> |  |
-|[`json<T>()`](#json<t>)     | `public` | [`Promise`](targetLink)<T> |  |
-|[`text()`](#text)     | `public` | [`Promise`](targetLink)<string> |  |
+|[`arrayBuffer()`](#arraybuffer)     | `public` | [`Promise`]()<ArrayBuffer> |  |
+|[`blob()`](#blob)     | `public` | [`Promise`]()<Blob> |  |
+|[`formData()`](#formdata)     | `public` | [`Promise`]()<FormData> |  |
+|[`json()`](#json)     | `public` | [`Promise`]()<any> |  |
+|[`json<T>()`](#json<t>)     | `public` | [`Promise`]()<T> |  |
+|[`text()`](#text)     | `public` | [`Promise`]()<string> |  |
 
 
 
@@ -38,7 +38,7 @@
 
 **Signature:** _arrayBuffer(): [Promise](../es6-promise/promise.md)<ArrayBuffer>_
 
-**Returns**: [`Promise`](targetLink)<ArrayBuffer>
+**Returns**: [`Promise`]()<ArrayBuffer>
 
 
 
@@ -52,7 +52,7 @@ None
 
 **Signature:** _blob(): [Promise](../es6-promise/promise.md)<Blob>_
 
-**Returns**: [`Promise`](targetLink)<Blob>
+**Returns**: [`Promise`]()<Blob>
 
 
 
@@ -66,7 +66,7 @@ None
 
 **Signature:** _formData(): [Promise](../es6-promise/promise.md)<FormData>_
 
-**Returns**: [`Promise`](targetLink)<FormData>
+**Returns**: [`Promise`]()<FormData>
 
 
 
@@ -80,7 +80,7 @@ None
 
 **Signature:** _json(): [Promise](../es6-promise/promise.md)<any>_
 
-**Returns**: [`Promise`](targetLink)<any>
+**Returns**: [`Promise`]()<any>
 
 
 
@@ -94,7 +94,7 @@ None
 
 **Signature:** _json<T>(): [Promise](../es6-promise/promise.md)<T>_
 
-**Returns**: [`Promise`](targetLink)<T>
+**Returns**: [`Promise`]()<T>
 
 
 
@@ -108,7 +108,7 @@ None
 
 **Signature:** _text(): [Promise](../es6-promise/promise.md)<string>_
 
-**Returns**: [`Promise`](targetLink)<string>
+**Returns**: [`Promise`]()<string>
 
 
 

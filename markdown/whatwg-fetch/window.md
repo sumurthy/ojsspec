@@ -16,7 +16,7 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`fetch(url,init)`](#fetchurlinit)      | [`Promise`](targetLink)<[`Response`](../whatwg-fetch/response.md)> |  |
+|[`fetch(url,init)`](#fetchurlinit)      | [`Promise`]()<[`Response`](../whatwg-fetch/response.md)> |  |
 
 
 
@@ -27,7 +27,7 @@
 
 **Signature:** _fetch(url: string|[Request](../whatwg-fetch/request.md),init?: [RequestInit](../whatwg-fetch/requestinit.md)): [Promise](../es6-promise/promise.md)<[Response](../whatwg-fetch/response.md)>_
 
-**Returns**: [`Promise`](targetLink)<[`Response`](../whatwg-fetch/response.md)>
+**Returns**: [`Promise`]()<[`Response`](../whatwg-fetch/response.md)>
 
 
 

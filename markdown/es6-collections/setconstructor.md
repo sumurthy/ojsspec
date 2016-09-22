@@ -13,7 +13,7 @@
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`prototype`      | [`Set`](targetLink)<any> |  |
+|`prototype`      | [`Set`]()<any> |  |
 
 
 
@@ -22,8 +22,8 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`constructor<T>()`](#constructor<t>)      | [`Set`](targetLink)<T> |  |
-|[`constructor<T>(iterable)`](#constructor<t>iterable)      | [`Set`](targetLink)<T> |  |
+|[`constructor<T>()`](#constructor<t>)      | [`Set`]()<T> |  |
+|[`constructor<T>(iterable)`](#constructor<t>iterable)      | [`Set`]()<T> |  |
 
 
 
@@ -34,7 +34,7 @@
 
 **Signature:** _new<T>(): [Set](../es6-collections/set.md)<T>_
 
-**Returns**: [`Set`](targetLink)<T>
+**Returns**: [`Set`]()<T>
 
 
 
@@ -48,7 +48,7 @@ None
 
 **Signature:** _new<T>(iterable: [ForEachable](../es6-collections/foreachable.md)<T>): [Set](../es6-collections/set.md)<T>_
 
-**Returns**: [`Set`](targetLink)<T>
+**Returns**: [`Set`]()<T>
 
 
 
@@ -57,5 +57,5 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `iterable`    | [`ForEachable`](targetLink)<T> |  |
+| `iterable`    | [`ForEachable`]()<T> |  |
 

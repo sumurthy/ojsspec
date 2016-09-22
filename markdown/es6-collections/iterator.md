@@ -16,9 +16,9 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`next(value)`](#nextvalue)      | [`IteratorResult`](targetLink)<T> |  |
-|[`return(value)`](#returnvalue)      | [`IteratorResult`](targetLink)<T> |  |
-|[`throw(e)`](#throwe)      | [`IteratorResult`](targetLink)<T> |  |
+|[`next(value)`](#nextvalue)      | [`IteratorResult`]()<T> |  |
+|[`return(value)`](#returnvalue)      | [`IteratorResult`]()<T> |  |
+|[`throw(e)`](#throwe)      | [`IteratorResult`]()<T> |  |
 
 
 
@@ -29,7 +29,7 @@
 
 **Signature:** _next(value?: any): [IteratorResult](../es6-collections/iteratorresult.md)<T>_
 
-**Returns**: [`IteratorResult`](targetLink)<T>
+**Returns**: [`IteratorResult`]()<T>
 
 
 
@@ -47,7 +47,7 @@
 
 **Signature:** _return?(value?: any): [IteratorResult](../es6-collections/iteratorresult.md)<T>_
 
-**Returns**: [`IteratorResult`](targetLink)<T>
+**Returns**: [`IteratorResult`]()<T>
 
 
 
@@ -65,7 +65,7 @@
 
 **Signature:** _throw?(e?: any): [IteratorResult](../es6-collections/iteratorresult.md)<T>_
 
-**Returns**: [`IteratorResult`](targetLink)<T>
+**Returns**: [`IteratorResult`]()<T>
 
 
 
