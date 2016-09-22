@@ -11,10 +11,10 @@
     }
   }
 22. Need to handle module inside module. Need to handle VAR as parameter
-23. isClass mess - fix it
 24. Handle export
-28. Markdown links are not right for methods with generics in them [`then<U>`](#then<u>)
 
 LONGER TERM:
+------------
 19. Make use of dFunction for enum and function file generation
 1. Use TypeScript AST to generate the intermediary JSONs.
+23. isClass mess - fix it

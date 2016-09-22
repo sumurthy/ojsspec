@@ -68,29 +68,38 @@ function getLinkForType(type = '') {
     type.split(splitChar).forEach((e) => {
         // try as is for a match
         if (Object.keys(allTypes).includes(e.trim())) {
-            out = out + `[\`${e.replace(/\^/g, ',')}\`](${allTypes[e.trim()]})` + ','
+            out = out + `[\`${e}\`](${allTypes[e.trim()]})` + ','
         }
         // try trimming the generics
         else if (Object.keys(allTypes).includes(Utils.trimGenerics(e,true))) {
-            out = out + `[\`${e.replace(/\^/g, ',')}\`](${allTypes[Utils.trimGenerics(e,true).trim()]})` + ','
+            var o = Utils.trimGenerics(e,true) //first part 
+            var g = Utils.inParen(e,true) //generics link
+            e = e.replace(o, `[\`${o}\`](${allTypes[o]})`)
+
+            if (g) {
+                if (Object.keys(allTypes).includes(g)) {
+                    e = e.replace(g, `[\`${g}\`](${allTypes[g]})`)
+                }
+            }
+            out = out + e + ','
         }
         // variables and types match
         else if (Object.keys(allVarsTypes).includes(Utils.trimGenerics(e,true))) {
-            out = out + `[\`${e.replace(/\^/g, ',')}\`](${allVarsTypes[Utils.trimGenerics(e,true)].toLowerCase()})` + ','
+            out = out + `[\`${e}\`](${allVarsTypes[Utils.trimGenerics(e,true)].toLowerCase()})` + ','
         }
         // objectName.method name match
         else if (Object.keys(allVarsTypes).includes(Utils.trimGenerics(e.toLowerCase(),true))) {
-            out = out + `[\`${e.replace(/\^/g, ',')}\`](${allVarsTypes[Utils.trimGenerics(e)].toLowerCase()})` + ','
+            out = out + `[\`${e}\`](${allVarsTypes[Utils.trimGenerics(e)].toLowerCase()})` + ','
         }
         else {
-            out = out + '`' + e.replace(/\^/g, ',') + '`' + ','
+            out = out + '`' + e + '`' + ','
         }
     })
     out = out.trim()
     if (out.endsWith(',')) {
         out = out.substring(0, out.length - 1)
     }
-    return out
+    return out.replace(/\^/g, ',')
 }
 
 function getSmartLink(str = '') {
