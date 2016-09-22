@@ -13,7 +13,7 @@
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`prototype`      | [`Map`](../es6-collections/map.md)<any,any> |  |
+|`prototype`      | [`Map`](targetLink)<any,any> |  |
 
 
 
@@ -22,8 +22,8 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`constructor<K,V>()`](#constructor<kv>)      | [`Map`](../es6-collections/map.md)<K,V> |  |
-|[`constructor<K,V>(iterable)`](#constructor<kv>iterable)      | [`Map`](../es6-collections/map.md)<K,V> |  |
+|[`constructor<K,V>()`](#constructor<kv>)      | [`Map`](targetLink)<K,V> |  |
+|[`constructor<K,V>(iterable)`](#constructor<kv>iterable)      | [`Map`](targetLink)<K,V> |  |
 
 
 
@@ -34,7 +34,7 @@
 
 **Signature:** _new<K,V>(): [Map](../es6-collections/map.md)<K,V>_
 
-**Returns**: [`Map`](../es6-collections/map.md)<K,V>
+**Returns**: [`Map`](targetLink)<K,V>
 
 
 
@@ -48,7 +48,7 @@ None
 
 **Signature:** _new<K,V>(iterable: [ForEachable](../es6-collections/foreachable.md)<[K,V]>): [Map](../es6-collections/map.md)<K,V>_
 
-**Returns**: [`Map`](../es6-collections/map.md)<K,V>
+**Returns**: [`Map`](targetLink)<K,V>
 
 
 
@@ -57,5 +57,5 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `iterable`    | [`ForEachable`](../es6-collections/foreachable.md)<[K,V]> |  |
+| `iterable`    | [`ForEachable`](targetLink)<[K,V]> |  |
 

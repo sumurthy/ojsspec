@@ -18,7 +18,7 @@
 |:-------------|:-------|:-----------|
 |[`delete(value)`](#deletevalue)      | `boolean` |  |
 |[`clear()`](#clear)      | `void` |  |
-|[`add(value)`](#addvalue)      | [`WeakSet`](../es6-collections/weakset.md)<T> |  |
+|[`add(value)`](#addvalue)      | [`WeakSet`](targetLink)<T> |  |
 |[`has(value)`](#hasvalue)      | `boolean` |  |
 
 
@@ -62,7 +62,7 @@ None
 
 **Signature:** _add(value: T): [WeakSet](../es6-collections/weakset.md)<T>_
 
-**Returns**: [`WeakSet`](../es6-collections/weakset.md)<T>
+**Returns**: [`WeakSet`](targetLink)<T>
 
 
 

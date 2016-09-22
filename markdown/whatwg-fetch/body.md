@@ -21,12 +21,12 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`arrayBuffer()`](#arraybuffer)     | `public` | [`Promise`](../es6-promise/promise.md)<ArrayBuffer> |  |
-|[`blob()`](#blob)     | `public` | [`Promise`](../es6-promise/promise.md)<Blob> |  |
-|[`formData()`](#formdata)     | `public` | [`Promise`](../es6-promise/promise.md)<FormData> |  |
-|[`json()`](#json)     | `public` | [`Promise`](../es6-promise/promise.md)<any> |  |
-|[`json<T>()`](#json<t>)     | `public` | [`Promise`](../es6-promise/promise.md)<T> |  |
-|[`text()`](#text)     | `public` | [`Promise`](../es6-promise/promise.md)<string> |  |
+|[`arrayBuffer()`](#arraybuffer)     | `public` | [`Promise`](targetLink)<ArrayBuffer> |  |
+|[`blob()`](#blob)     | `public` | [`Promise`](targetLink)<Blob> |  |
+|[`formData()`](#formdata)     | `public` | [`Promise`](targetLink)<FormData> |  |
+|[`json()`](#json)     | `public` | [`Promise`](targetLink)<any> |  |
+|[`json<T>()`](#json<t>)     | `public` | [`Promise`](targetLink)<T> |  |
+|[`text()`](#text)     | `public` | [`Promise`](targetLink)<string> |  |
 
 
 
@@ -38,7 +38,7 @@
 
 **Signature:** _arrayBuffer(): [Promise](../es6-promise/promise.md)<ArrayBuffer>_
 
-**Returns**: [`Promise`](../es6-promise/promise.md)<ArrayBuffer>
+**Returns**: [`Promise`](targetLink)<ArrayBuffer>
 
 
 
@@ -52,7 +52,7 @@ None
 
 **Signature:** _blob(): [Promise](../es6-promise/promise.md)<Blob>_
 
-**Returns**: [`Promise`](../es6-promise/promise.md)<Blob>
+**Returns**: [`Promise`](targetLink)<Blob>
 
 
 
@@ -66,7 +66,7 @@ None
 
 **Signature:** _formData(): [Promise](../es6-promise/promise.md)<FormData>_
 
-**Returns**: [`Promise`](../es6-promise/promise.md)<FormData>
+**Returns**: [`Promise`](targetLink)<FormData>
 
 
 
@@ -80,7 +80,7 @@ None
 
 **Signature:** _json(): [Promise](../es6-promise/promise.md)<any>_
 
-**Returns**: [`Promise`](../es6-promise/promise.md)<any>
+**Returns**: [`Promise`](targetLink)<any>
 
 
 
@@ -94,7 +94,7 @@ None
 
 **Signature:** _json<T>(): [Promise](../es6-promise/promise.md)<T>_
 
-**Returns**: [`Promise`](../es6-promise/promise.md)<T>
+**Returns**: [`Promise`](targetLink)<T>
 
 
 
@@ -108,7 +108,7 @@ None
 
 **Signature:** _text(): [Promise](../es6-promise/promise.md)<string>_
 
-**Returns**: [`Promise`](../es6-promise/promise.md)<string>
+**Returns**: [`Promise`](targetLink)<string>
 
 
 
