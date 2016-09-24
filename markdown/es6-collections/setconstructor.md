@@ -27,35 +27,3 @@
 
 
 
-
-### constructor<T>()
-
-
-
-**Signature:** _new<T>(): [Set](../es6-collections/set.md)<T>_
-
-**Returns**: [`Set`](../es6-collections/set.md)<T>
-
-
-
-#### Parameters
-None
-
-
-### constructor<T>(iterable)
-
-
-
-**Signature:** _new<T>(iterable: [ForEachable](../es6-collections/foreachable.md)<T>): [Set](../es6-collections/set.md)<T>_
-
-**Returns**: [`Set`](../es6-collections/set.md)<T>
-
-
-
-#### Parameters
-
-
-| Parameter	   | Type    | Description |
-|:-------------|:---------------|:------------|
-| `iterable`    | [`ForEachable`](../es6-collections/foreachable.md)<T> |  |
-

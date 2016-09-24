@@ -578,7 +578,11 @@ function genClassInterfaceModuleView(isClass = true, localName = '', isModule = 
 
     if (Object.keys(localO[localName]['methods']).length > 0) {
         Object.keys(localO[localName]['methods']).forEach((e) => {
-            genMemberview(e, localO[localName]['methods'][e], mem_mdout, isClass)
+            // genMemberview(e, localO[localName]['methods'][e], mem_mdout, isClass)
+            genMemberview(e, localO[localName]['methods'][e], func_mdout, isClass, true)
+            console.log(`*** Writing Method file for ${e}`)
+            FileOps.writeFile(func_mdout, `./markdown/${anchor}/${Utils.trimGenerics(e)}.md`)
+            func_mdout = []
         })
     }
 

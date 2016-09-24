@@ -27,35 +27,3 @@
 
 
 
-
-### constructor<K,V>()
-
-
-
-**Signature:** _new<K,V>(): [Map](../es6-collections/map.md)<K,V>_
-
-**Returns**: [`Map`](../es6-collections/map.md)<K,V>
-
-
-
-#### Parameters
-None
-
-
-### constructor<K,V>(iterable)
-
-
-
-**Signature:** _new<K,V>(iterable: [ForEachable](../es6-collections/foreachable.md)<[K,V]>): [Map](../es6-collections/map.md)<K,V>_
-
-**Returns**: [`Map`](../es6-collections/map.md)<K,V>
-
-
-
-#### Parameters
-
-
-| Parameter	   | Type    | Description |
-|:-------------|:---------------|:------------|
-| `iterable`    | [`ForEachable`](../es6-collections/foreachable.md)<[K,V]> |  |
-
