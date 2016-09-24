@@ -38,7 +38,7 @@
 
 | Function	   | Returns | Description |
 |:-------------|:------|:---------------|
->| %name% |%returns%  | %description%  |
+>| %namefunc% |%returns%  | %description%  |
 
 </functions>
 

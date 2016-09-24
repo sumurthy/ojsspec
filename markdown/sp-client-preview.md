@@ -50,19 +50,19 @@
 
 | Function	   | Returns | Description |
 |:-------------|:------|:---------------|
-| combineURLPaths-JcMs9 |`string`  | Combines any number of URL paths.  |
-| getPathNameFromAbsoluteUrl-uobc9 |`string`  | Get's the path name from an absolute url.    |
-| PropertyPaneButton-1Guo9 |[`IPropertyPaneField`](./sp-client-preview/ipropertypanefield.md)<[`IPropertyPaneButtonProps`](./sp-client-preview/ipropertypanebuttonprops.md)>  | Helper method to create a Button on the PropertyPane.  |
-| PropertyPaneCheckbox-tNJQ9 |[`IPropertyPaneField`](./sp-client-preview/ipropertypanefield.md)<[`IPropertyPaneCheckboxProps`](./sp-client-preview/ipropertypanecheckboxprops.md)>  | Helper method to create a Checkbox on the PropertyPane.  |
-| PropertyPaneChoiceGroup-2m0w9 |[`IPropertyPaneField`](./sp-client-preview/ipropertypanefield.md)<[`IPropertyPaneChoiceGroupProps`](./sp-client-preview/ipropertypanechoicegroupprops.md)>  | Helper method to create a Choice Group on the PropertyPane.  |
-| PropertyPaneCustomField-xR2I9 |[`IPropertyPaneField`](./sp-client-preview/ipropertypanefield.md)<[`IPropertyPaneCustomFieldProps`](./sp-client-preview/ipropertypanecustomfieldprops.md)>  | Helper method to create a Choice Group on the PropertyPane.  |
-| PropertyPaneDropdown-eDlQ9 |[`IPropertyPaneField`](./sp-client-preview/ipropertypanefield.md)<[`IPropertyPaneDropdownProps`](./sp-client-preview/ipropertypanedropdownprops.md)>  | Helper method to create a Dropdown on the PropertyPane.  |
-| PropertyPaneHorizontalRule-VulY9 |[`IPropertyPaneField`](./sp-client-preview/ipropertypanefield.md)<void>  | Helper method to create a Horizontal Rule on the PropertyPane.  |
-| PropertyPaneLabel-9uPQ9 |[`IPropertyPaneField`](./sp-client-preview/ipropertypanefield.md)<[`IPropertyPaneLabelProps`](./sp-client-preview/ipropertypanelabelprops.md)>  | Helper method to create a Label on the PropertyPane.  |
-| PropertyPaneLink-7ses9 |[`IPropertyPaneField`](./sp-client-preview/ipropertypanefield.md)<[`IPropertyPaneLinkProps`](./sp-client-preview/ipropertypanelinkprops.md)>  | Helper method to create a Link on the PropertyPane.  |
-| PropertyPaneSlider-gqcs9 |[`IPropertyPaneField`](./sp-client-preview/ipropertypanefield.md)<[`IPropertyPaneSliderProps`](./sp-client-preview/ipropertypanesliderprops.md)>  | Helper method to create a Slider on the PropertyPane.  |
-| PropertyPaneTextField-ZV7c9 |[`IPropertyPaneField`](./sp-client-preview/ipropertypanefield.md)<[`IPropertyPaneTextFieldProps`](./sp-client-preview/ipropertypanetextfieldprops.md)>  | Helper method to create a TextField on the PropertyPane.  |
-| PropertyPaneToggle-3vB09 |[`IPropertyPaneField`](./sp-client-preview/ipropertypanefield.md)<[`IPropertyPaneToggleProps`](./sp-client-preview/ipropertypanetoggleprops.md)>  | Helper method to create a Toggle on the PropertyPane.  |
+| [`combineURLPaths(...url)`](#combineurlpaths...url) |`string`  | Combines any number of URL paths.  |
+| [`getPathNameFromAbsoluteUrl(url)`](#getpathnamefromabsoluteurlurl) |`string`  | Get's the path name from an absolute url.    |
+| [`PropertyPaneButton(targetProperty,properties)`](#propertypanebuttontargetpropertyproperties) |[`IPropertyPaneField`](./sp-client-preview/ipropertypanefield.md)<[`IPropertyPaneButtonProps`](./sp-client-preview/ipropertypanebuttonprops.md)>  | Helper method to create a Button on the PropertyPane.  |
+| [`PropertyPaneCheckbox(targetProperty,properties)`](#propertypanecheckboxtargetpropertyproperties) |[`IPropertyPaneField`](./sp-client-preview/ipropertypanefield.md)<[`IPropertyPaneCheckboxProps`](./sp-client-preview/ipropertypanecheckboxprops.md)>  | Helper method to create a Checkbox on the PropertyPane.  |
+| [`PropertyPaneChoiceGroup(targetProperty,properties)`](#propertypanechoicegrouptargetpropertyproperties) |[`IPropertyPaneField`](./sp-client-preview/ipropertypanefield.md)<[`IPropertyPaneChoiceGroupProps`](./sp-client-preview/ipropertypanechoicegroupprops.md)>  | Helper method to create a Choice Group on the PropertyPane.  |
+| [`PropertyPaneCustomField(targetProperty,properties)`](#propertypanecustomfieldtargetpropertyproperties) |[`IPropertyPaneField`](./sp-client-preview/ipropertypanefield.md)<[`IPropertyPaneCustomFieldProps`](./sp-client-preview/ipropertypanecustomfieldprops.md)>  | Helper method to create a Choice Group on the PropertyPane.  |
+| [`PropertyPaneDropdown(targetProperty,properties)`](#propertypanedropdowntargetpropertyproperties) |[`IPropertyPaneField`](./sp-client-preview/ipropertypanefield.md)<[`IPropertyPaneDropdownProps`](./sp-client-preview/ipropertypanedropdownprops.md)>  | Helper method to create a Dropdown on the PropertyPane.  |
+| [`PropertyPaneHorizontalRule()`](#propertypanehorizontalrule) |[`IPropertyPaneField`](./sp-client-preview/ipropertypanefield.md)<void>  | Helper method to create a Horizontal Rule on the PropertyPane.  |
+| [`PropertyPaneLabel(targetProperty,properties)`](#propertypanelabeltargetpropertyproperties) |[`IPropertyPaneField`](./sp-client-preview/ipropertypanefield.md)<[`IPropertyPaneLabelProps`](./sp-client-preview/ipropertypanelabelprops.md)>  | Helper method to create a Label on the PropertyPane.  |
+| [`PropertyPaneLink(targetProperty,properties)`](#propertypanelinktargetpropertyproperties) |[`IPropertyPaneField`](./sp-client-preview/ipropertypanefield.md)<[`IPropertyPaneLinkProps`](./sp-client-preview/ipropertypanelinkprops.md)>  | Helper method to create a Link on the PropertyPane.  |
+| [`PropertyPaneSlider(targetProperty,properties)`](#propertypaneslidertargetpropertyproperties) |[`IPropertyPaneField`](./sp-client-preview/ipropertypanefield.md)<[`IPropertyPaneSliderProps`](./sp-client-preview/ipropertypanesliderprops.md)>  | Helper method to create a Slider on the PropertyPane.  |
+| [`PropertyPaneTextField(targetProperty,properties)`](#propertypanetextfieldtargetpropertyproperties) |[`IPropertyPaneField`](./sp-client-preview/ipropertypanefield.md)<[`IPropertyPaneTextFieldProps`](./sp-client-preview/ipropertypanetextfieldprops.md)>  | Helper method to create a TextField on the PropertyPane.  |
+| [`PropertyPaneToggle(targetProperty,properties)`](#propertypanetoggletargetpropertyproperties) |[`IPropertyPaneField`](./sp-client-preview/ipropertypanefield.md)<[`IPropertyPaneToggleProps`](./sp-client-preview/ipropertypanetoggleprops.md)>  | Helper method to create a Toggle on the PropertyPane.  |
 
 
 ## Enumerations
