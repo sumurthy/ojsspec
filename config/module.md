@@ -38,7 +38,7 @@
 
 | Function	   | Returns | Description |
 |:-------------|:------|:---------------|
->| [`%namehyphen%`](%link%.md) |%returns%  | %description%  |
+>| [`%name%`](%link%.md) |%returns%  | %description%  |
 
 </functions>
 

@@ -5,7 +5,7 @@
 
 | Module	   |  Description |
 |:-------------|:---------------|
-| [`es6-collections`](./es6-collections/es6-collections-imodule.md)     |  |
+| [`[`undefined`](#undefined)`](./es6-collections/es6-collections-imodule.md)     |  |
 
 
 
@@ -14,17 +14,17 @@
 
 | Interface	   |  Description |
 |:-------------|:---------------|
-| [`IteratorResult`](./es6-collections/iteratorresult.md)   |   |
-| [`Iterator`](./es6-collections/iterator.md)   |   |
-| [`ForEachable`](./es6-collections/foreachable.md)   |   |
-| [`Map`](./es6-collections/map.md)   |   |
-| [`MapConstructor`](./es6-collections/mapconstructor.md)   |   |
-| [`Set`](./es6-collections/set.md)   |   |
-| [`SetConstructor`](./es6-collections/setconstructor.md)   |   |
-| [`WeakMap`](./es6-collections/weakmap.md)   |   |
-| [`WeakMapConstructor`](./es6-collections/weakmapconstructor.md)   |   |
-| [`WeakSet`](./es6-collections/weakset.md)   |   |
-| [`WeakSetConstructor`](./es6-collections/weaksetconstructor.md)   |   |
+| [`[`undefined`](#undefined)`](./es6-collections/iteratorresult.md)   |   |
+| [`[`undefined`](#undefined)`](./es6-collections/iterator.md)   |   |
+| [`[`undefined`](#undefined)`](./es6-collections/foreachable.md)   |   |
+| [`[`undefined`](#undefined)`](./es6-collections/map.md)   |   |
+| [`[`undefined`](#undefined)`](./es6-collections/mapconstructor.md)   |   |
+| [`[`undefined`](#undefined)`](./es6-collections/set.md)   |   |
+| [`[`undefined`](#undefined)`](./es6-collections/setconstructor.md)   |   |
+| [`[`undefined`](#undefined)`](./es6-collections/weakmap.md)   |   |
+| [`[`undefined`](#undefined)`](./es6-collections/weakmapconstructor.md)   |   |
+| [`[`undefined`](#undefined)`](./es6-collections/weakset.md)   |   |
+| [`[`undefined`](#undefined)`](./es6-collections/weaksetconstructor.md)   |   |
 
 
 
@@ -35,8 +35,8 @@
 
 | Variable	   | Type|
 |:-----------|:------------|
-|`Map`   | [`MapConstructor`](../es6-collections/mapconstructor.md) |
-|`Set`   | [`SetConstructor`](../es6-collections/setconstructor.md) |
-|`WeakMap`   | [`WeakMapConstructor`](../es6-collections/weakmapconstructor.md) |
-|`WeakSet`   | [`WeakSetConstructor`](../es6-collections/weaksetconstructor.md) |
+|`[`undefined`](#undefined)`   | [`MapConstructor`](../es6-collections/mapconstructor.md) |
+|`[`undefined`](#undefined)`   | [`SetConstructor`](../es6-collections/setconstructor.md) |
+|`[`undefined`](#undefined)`   | [`WeakMapConstructor`](../es6-collections/weakmapconstructor.md) |
+|`[`undefined`](#undefined)`   | [`WeakSetConstructor`](../es6-collections/weaksetconstructor.md) |
 
