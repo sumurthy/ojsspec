@@ -47,7 +47,7 @@
 
 | Enumeration	   | Description|
 |:-----------|:------------|
->|[`%name%`](%link%.md)    | %description% |
+>|[%name%](%link%.md)    | %description% |
 
 </enumeration>
 

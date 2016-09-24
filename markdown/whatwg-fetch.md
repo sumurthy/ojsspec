@@ -27,11 +27,11 @@
 
 | Enumeration	   | Description|
 |:-----------|:------------|
-|[`[`undefined`](#undefined)`](./whatwg-fetch/requestcontext.md)    |  |
-|[`[`undefined`](#undefined)`](./whatwg-fetch/requestmode.md)    |  |
-|[`[`undefined`](#undefined)`](./whatwg-fetch/requestcredentials.md)    |  |
-|[`[`undefined`](#undefined)`](./whatwg-fetch/requestcache.md)    |  |
-|[`[`undefined`](#undefined)`](./whatwg-fetch/responsetype.md)    |  |
+|[[`undefined`](#undefined)](./whatwg-fetch/requestcontext.md)    |  |
+|[[`undefined`](#undefined)](./whatwg-fetch/requestmode.md)    |  |
+|[[`undefined`](#undefined)](./whatwg-fetch/requestcredentials.md)    |  |
+|[[`undefined`](#undefined)](./whatwg-fetch/requestcache.md)    |  |
+|[[`undefined`](#undefined)](./whatwg-fetch/responsetype.md)    |  |
 
 
 ## Types

@@ -69,9 +69,9 @@
 
 | Enumeration	   | Description|
 |:-----------|:------------|
-|[`[`undefined`](#undefined)`](./sp-client-preview/ipropertypanefieldtype.md)    | Sample IPropertypanefieldtype description |
-|[`[`undefined`](#undefined)`](./sp-client-preview/propertypanebuttontype.md)    | Sample PropertyPaneButtonType description |
-|[`[`undefined`](#undefined)`](./sp-client-preview/webpartconfigurationevent.md)    | Sample WebPartConfigurationEvent description |
+|[[`undefined`](#undefined)](./sp-client-preview/ipropertypanefieldtype.md)    | Sample IPropertypanefieldtype description |
+|[[`undefined`](#undefined)](./sp-client-preview/propertypanebuttontype.md)    | Sample PropertyPaneButtonType description |
+|[[`undefined`](#undefined)](./sp-client-preview/webpartconfigurationevent.md)    | Sample WebPartConfigurationEvent description |
 
 
 

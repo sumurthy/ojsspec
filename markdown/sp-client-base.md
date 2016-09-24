@@ -51,8 +51,8 @@
 
 | Enumeration	   | Description|
 |:-----------|:------------|
-|[`[`undefined`](#undefined)`](./sp-client-base/displaymode.md)    |  |
-|[`[`undefined`](#undefined)`](./sp-client-base/environmenttype.md)    |  |
+|[[`undefined`](#undefined)](./sp-client-base/displaymode.md)    |  |
+|[[`undefined`](#undefined)](./sp-client-base/environmenttype.md)    |  |
 
 
 
