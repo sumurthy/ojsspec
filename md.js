@@ -429,7 +429,7 @@ function addRegions(tline = '', type = '') {
         var mline = dclone(tline).substr(1)
         mline = mline.replace('%name%', e)
         // mline = mline.replace('%namehyphen%', e.split('-')[0])
-        mline = mline.replace('%namefunc%', `[\`${o[e]['docName']}\`](#${o[e]['mdLink']})`)
+        mline = mline.replace('%namefunc%', `${o[e]['docName']}`)
         mline = mline.replace('%type%', `${getLinkForType(o[e]['dataType'])}`)
 
         mline = mline.replace('%link%', `./${anchor}/${e.replace(/'/g,'').toLowerCase()}`)
