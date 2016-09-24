@@ -43,9 +43,9 @@ _Implements: [`Body`](../whatwg-fetch/body.md)_
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`error()`](error-s60I9.md)     | `public` | [`Response`](../whatwg-fetch/response.md) |  |
-|[`redirect(url,status)`](redirect-3bnQ9.md)     | `public` | [`Response`](../whatwg-fetch/response.md) |  |
-|[`clone()`](clone-3mAQ9.md)     | `public` | [`Response`](../whatwg-fetch/response.md) |  |
+|[`error()`](error-s60i9.md)     | `public` | [`Response`](../whatwg-fetch/response.md) |  |
+|[`redirect(url,status)`](redirect-3bnq9.md)     | `public` | [`Response`](../whatwg-fetch/response.md) |  |
+|[`clone()`](clone-3maq9.md)     | `public` | [`Response`](../whatwg-fetch/response.md) |  |
 
 
 

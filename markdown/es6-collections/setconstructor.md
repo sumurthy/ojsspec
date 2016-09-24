@@ -22,8 +22,8 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`constructor<T>()`](constructor<T>-WZO89.md)      | [`Set`](../es6-collections/set.md)<T> |  |
-|[`constructor<T>(iterable)`](constructor<T>-Hf9M9.md)      | [`Set`](../es6-collections/set.md)<T> |  |
+|[`constructor<T>()`](constructor<t>-wzo89.md)      | [`Set`](../es6-collections/set.md)<T> |  |
+|[`constructor<T>(iterable)`](constructor<t>-hf9m9.md)      | [`Set`](../es6-collections/set.md)<T> |  |
 
 
 

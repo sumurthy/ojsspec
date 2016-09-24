@@ -18,10 +18,10 @@ which component generated the messages and makes the messages useful and filtera
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`error(source,error,scope)`](error-pS309.md)     | `public, static` | `void` | Logs an error |
+|[`error(source,error,scope)`](error-ps309.md)     | `public, static` | `void` | Logs an error |
 |[`info(source,message,scope)`](info-0jwc9.md)     | `public, static` | `void` | Logs an informational message |
-|[`verbose(source,message,scope)`](verbose-vaBA9.md)     | `public, static` | `void` | Logs a verbose message |
-|[`warn(source,message,scope)`](warn-xzeY9.md)     | `public, static` | `void` | Logs a warning |
+|[`verbose(source,message,scope)`](verbose-vaba9.md)     | `public, static` | `void` | Logs a verbose message |
+|[`warn(source,message,scope)`](warn-xzey9.md)     | `public, static` | `void` | Logs a warning |
 
 
 

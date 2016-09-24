@@ -15,13 +15,13 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`append(name,value)`](append-0YYI9.md)     | `public` | `void` |  |
-|[`delete(name)`](delete-KTKE9.md)     | `public` | `void` |  |
-|[`get(name)`](get-E0S09.md)     | `public` | `string` |  |
-|[`getAll(name)`](getAll-LXjI9.md)     | `public` | `Array<string>` |  |
-|[`has(name)`](has-AAGU9.md)     | `public` | `boolean` |  |
-|[`set(name,value)`](set-rLHQ9.md)     | `public` | `void` |  |
-|[`forEach(callback)`](forEach-yX4o9.md)     | `public` | `void` |  |
+|[`append(name,value)`](append-0yyi9.md)     | `public` | `void` |  |
+|[`delete(name)`](delete-ktke9.md)     | `public` | `void` |  |
+|[`get(name)`](get-e0s09.md)     | `public` | `string` |  |
+|[`getAll(name)`](getall-lxji9.md)     | `public` | `Array<string>` |  |
+|[`has(name)`](has-aagu9.md)     | `public` | `boolean` |  |
+|[`set(name,value)`](set-rlhq9.md)     | `public` | `void` |  |
+|[`forEach(callback)`](foreach-yx4o9.md)     | `public` | `void` |  |
 
 
 
