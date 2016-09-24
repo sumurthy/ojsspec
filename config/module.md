@@ -38,7 +38,7 @@
 
 | Function	   | Returns | Description |
 |:-------------|:------|:---------------|
->| [`%name%`](%link%.md) |%returns%  | %description%  |
+>| %name% |%returns%  | %description%  |
 
 </functions>
 
@@ -47,7 +47,7 @@
 
 | Enumeration	   | Description|
 |:-----------|:------------|
->|[%name%](%link%.md)    | %description% |
+>|[`%name%`](%link%.md)    | %description% |
 
 </enumeration>
 

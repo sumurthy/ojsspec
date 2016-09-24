@@ -6,10 +6,10 @@
 
 | Class	   |  Description |
 |:-------------|:---------------|
-| [`[`undefined`](#undefined)`](./whatwg-fetch/request.md)     |  |
-| [`[`undefined`](#undefined)`](./whatwg-fetch/headers.md)     |  |
-| [`[`undefined`](#undefined)`](./whatwg-fetch/body.md)     |  |
-| [`[`undefined`](#undefined)`](./whatwg-fetch/response.md)     |  |
+| [`Request`](./whatwg-fetch/request.md)     |  |
+| [`Headers`](./whatwg-fetch/headers.md)     |  |
+| [`Body`](./whatwg-fetch/body.md)     |  |
+| [`Response`](./whatwg-fetch/response.md)     |  |
 
 
 
@@ -17,9 +17,9 @@
 
 | Interface	   |  Description |
 |:-------------|:---------------|
-| [`[`undefined`](#undefined)`](./whatwg-fetch/requestinit.md)   |   |
-| [`[`undefined`](#undefined)`](./whatwg-fetch/responseinit.md)   |   |
-| [`[`undefined`](#undefined)`](./whatwg-fetch/window.md)   |   |
+| [`RequestInit`](./whatwg-fetch/requestinit.md)   |   |
+| [`ResponseInit`](./whatwg-fetch/responseinit.md)   |   |
+| [`Window`](./whatwg-fetch/window.md)   |   |
 
 
 
@@ -27,20 +27,20 @@
 
 | Enumeration	   | Description|
 |:-----------|:------------|
-|[[`undefined`](#undefined)](./whatwg-fetch/requestcontext.md)    |  |
-|[[`undefined`](#undefined)](./whatwg-fetch/requestmode.md)    |  |
-|[[`undefined`](#undefined)](./whatwg-fetch/requestcredentials.md)    |  |
-|[[`undefined`](#undefined)](./whatwg-fetch/requestcache.md)    |  |
-|[[`undefined`](#undefined)](./whatwg-fetch/responsetype.md)    |  |
+|[`RequestContext`](./whatwg-fetch/requestcontext.md)    |  |
+|[`RequestMode`](./whatwg-fetch/requestmode.md)    |  |
+|[`RequestCredentials`](./whatwg-fetch/requestcredentials.md)    |  |
+|[`RequestCache`](./whatwg-fetch/requestcache.md)    |  |
+|[`ResponseType`](./whatwg-fetch/responsetype.md)    |  |
 
 
 ## Types
 
 | Name	   |  Type |
 |:-----------|:------------|
-|`[`undefined`](#undefined)`   |  |
-|`[`undefined`](#undefined)`   |  |
-|`[`undefined`](#undefined)`   |  |
+|`HeaderInit`   |  |
+|`BodyInit`   |  |
+|`RequestInfo`   |  |
 
 
 
@@ -48,5 +48,5 @@
 
 | Variable	   | Type|
 |:-----------|:------------|
-|`[`undefined`](#undefined)`   | [`window.fetch`](../whatwg-fetch/window.md#fetch) |
+|`fetch`   | [`window.fetch`](../whatwg-fetch/window.md#fetch) |
 
