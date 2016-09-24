@@ -22,8 +22,8 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`constructor<K,V>()`](#constructor<kv>)      | [`Map`](../es6-collections/map.md)<K,V> |  |
-|[`constructor<K,V>(iterable)`](#constructor<kv>iterable)      | [`Map`](../es6-collections/map.md)<K,V> |  |
+|[`constructor<K,V>()`](constructor<K,V>-QfVI9.md)      | [`Map`](../es6-collections/map.md)<K,V> |  |
+|[`constructor<K,V>(iterable)`](constructor<K,V>-RTrk9.md)      | [`Map`](../es6-collections/map.md)<K,V> |  |
 
 
 

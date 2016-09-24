@@ -21,12 +21,12 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`arrayBuffer()`](#arraybuffer)     | `public` | [`Promise`](../es6-promise/promise.md)<ArrayBuffer> |  |
-|[`blob()`](#blob)     | `public` | [`Promise`](../es6-promise/promise.md)<Blob> |  |
-|[`formData()`](#formdata)     | `public` | [`Promise`](../es6-promise/promise.md)<FormData> |  |
-|[`json()`](#json)     | `public` | [`Promise`](../es6-promise/promise.md)<any> |  |
-|[`json<T>()`](#json<t>)     | `public` | [`Promise`](../es6-promise/promise.md)<T> |  |
-|[`text()`](#text)     | `public` | [`Promise`](../es6-promise/promise.md)<string> |  |
+|[`arrayBuffer()`](arrayBuffer-gzhM9.md)     | `public` | [`Promise`](../es6-promise/promise.md)<ArrayBuffer> |  |
+|[`blob()`](blob-eubc9.md)     | `public` | [`Promise`](../es6-promise/promise.md)<Blob> |  |
+|[`formData()`](formData-DLPs9.md)     | `public` | [`Promise`](../es6-promise/promise.md)<FormData> |  |
+|[`json()`](json-9hyk9.md)     | `public` | [`Promise`](../es6-promise/promise.md)<any> |  |
+|[`json<T>()`](json<T>-Ncn49.md)     | `public` | [`Promise`](../es6-promise/promise.md)<T> |  |
+|[`text()`](text-10Is9.md)     | `public` | [`Promise`](../es6-promise/promise.md)<string> |  |
 
 
 

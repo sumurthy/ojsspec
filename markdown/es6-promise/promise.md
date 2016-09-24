@@ -36,9 +36,9 @@ Any errors thrown in the constructor callback will be implicitly passed to rejec
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`then<U>(onFulfilled,onRejected)`](#then<u>onfulfilledonrejected)     | `public` | [`Promise`](../es6-promise/promise.md)<U> | onFulfilled is called when/if "promise" resolves. onRejected is called when/if "promise" rejects.  Both are optional, if either/both are omitted the next onFulfilled/onRejected in the chain is called.  Both callbacks have a single parameter , the fulfillment value or rejection reason.  "then" returns a new promise equivalent to the value you return from onFulfilled/onRejected after being passed through Promise.resolve.  If an error is thrown in the callback, the returned promise rejects with that error.   |
-|[`then<U>(onFulfilled,onRejected)`](#then<u>onfulfilledonrejected)     | `public` | [`Promise`](../es6-promise/promise.md)<U> |  |
-|[`catch<U>(onRejected)`](#catch<u>onrejected)     | `public` | [`Promise`](../es6-promise/promise.md)<U> | Sugar for promise.then(undefined,onRejected)   |
+|[`then<U>(onFulfilled,onRejected)`](then<U>-6uYU9.md)     | `public` | [`Promise`](../es6-promise/promise.md)<U> | onFulfilled is called when/if "promise" resolves. onRejected is called when/if "promise" rejects.  Both are optional, if either/both are omitted the next onFulfilled/onRejected in the chain is called.  Both callbacks have a single parameter , the fulfillment value or rejection reason.  "then" returns a new promise equivalent to the value you return from onFulfilled/onRejected after being passed through Promise.resolve.  If an error is thrown in the callback, the returned promise rejects with that error.   |
+|[`then<U>(onFulfilled,onRejected)`](then<U>-Shnk9.md)     | `public` | [`Promise`](../es6-promise/promise.md)<U> |  |
+|[`catch<U>(onRejected)`](catch<U>-CiNs9.md)     | `public` | [`Promise`](../es6-promise/promise.md)<U> | Sugar for promise.then(undefined,onRejected)   |
 
 
 
