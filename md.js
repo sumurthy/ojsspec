@@ -14,7 +14,7 @@ let typeObj = {}
 let region = ''
 let mdout = []
 let mem_mdout = []
-let func_mdout = []
+let funcMthd_mdout = []
 let enum_mdout = []
 let skipFlag = false
 let moduleName = ''
@@ -50,7 +50,7 @@ function file_reset() {
     region = ''
     mdout = []
     mem_mdout = []
-    func_mdout = []
+    funcMthd_mdout = []
     enum_mdout = []
     skipFlag = false
 }
@@ -384,7 +384,10 @@ var dFunction = {
 
     },
     functionsGenIndividual: function(e = '') {
-
+        genMemberview(e, functionObj[e], funcMthd_mdout, false, true)
+        console.log(`*** Writing Function file for ${e}`)
+        FileOps.writeFile(funcMthd_mdout, `./markdown/${anchor}/${Utils.trimGenerics(e)}.md`)
+        funcMthd_mdout = []
     },
     enumerationGenIndividual: function(e = '') {
 
@@ -447,6 +450,7 @@ function addRegions(tline = '', type = '') {
         }
         mdout.push(mline)
             // Dynamically call the function to generate the individual md files
+            console.log('--------------> ' + type);
         dFunction[`${type}GenIndividual`](e)
 
     })
@@ -581,10 +585,10 @@ function genClassInterfaceModuleView(isClass = true, localName = '', isModule = 
     if (Object.keys(localO[localName]['methods']).length > 0) {
         Object.keys(localO[localName]['methods']).forEach((e) => {
             // genMemberview(e, localO[localName]['methods'][e], mem_mdout, isClass)
-            genMemberview(e, localO[localName]['methods'][e], func_mdout, isClass, true)
+            genMemberview(e, localO[localName]['methods'][e], funcMthd_mdout, isClass, true)
             console.log(`*** Writing Method file for ${e}`)
-            FileOps.writeFile(func_mdout, `./markdown/${anchor}/${Utils.trimGenerics(e)}.md`)
-            func_mdout = []
+            FileOps.writeFile(funcMthd_mdout, `./markdown/${anchor}/${Utils.trimGenerics(e)}.md`)
+            funcMthd_mdout = []
         })
     }
 
@@ -669,16 +673,19 @@ function genExtModuleView() {
     })
     console.log(`*** Writing External Module file for ${moduleName}`)
     FileOps.writeFile(mdout, `./markdown/${moduleName}.md`)
-    genFunctionView()
+    //genFunctionView()
     genEnumView()
 }
-
+/**
+ * Not used -- remove
+ * @return {[type]} [description]
+ */
 function genFunctionView() {
     Object.keys(functionObj).forEach((e) => {
-        genMemberview(e, functionObj[e], func_mdout, false, true)
+        genMemberview(e, functionObj[e], funcMthd_mdout, false, true)
         console.log(`*** Writing Function file for ${e}`)
-        FileOps.writeFile(func_mdout, `./markdown/${anchor}/${Utils.trimGenerics(e)}.md`)
-        func_mdout = []
+        FileOps.writeFile(funcMthd_mdout, `./markdown/${anchor}/${Utils.trimGenerics(e)}.md`)
+        funcMthd_mdout = []
     })
 }
 
