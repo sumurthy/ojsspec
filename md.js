@@ -393,32 +393,7 @@ var dFunction = {
         return
     },
     enumerationGenIndividual: function(e = '') {
-        enumT.forEach((tline) => {
-            tline = tline.trim()
-            var key = tline[0] || '*'
-            if (WRITE_BACK.includes(key)) {
-                tline = tline.replace('%enumname%', e)
-                tline = tline.replace('%description%', enumObj[e]['descr'])
-                enum_mdout.push(tline)
-            } else if (TAKE_REPEAT_ACTION.includes(key)) {
-                enumObj[e]['values'].forEach( (a) => {
-                    var mline = dclone(tline).substr(1)
-                    if (a[1]) {
-                        mline = mline.replace('%value%', `:=${a[1]}`)
-                    }
-                    else {
-                        mline = mline.replace('%value%', '')
-
-                    }
-                    mline = mline.replace('%member%', a[0])
-                    mline = mline.replace('%description%', a[2])
-                    enum_mdout.push(mline)
-                })
-            }
-        })
-        console.log(`*** Writing Enum file for ${e}`)
-        FileOps.writeFile(enum_mdout, `./markdown/${anchor}/${Utils.trimGenerics(e)}.md`)
-        enum_mdout = []
+        genEnumView(e)
         return
     },
     typedefGenIndividual: function(e = '') {
@@ -479,7 +454,6 @@ function addRegions(tline = '', type = '') {
         }
         mdout.push(mline)
             // Dynamically call the function to generate the individual md files
-            console.log('--------------> ' + type);
         dFunction[`${type}GenIndividual`](e)
 
     })
@@ -719,45 +693,40 @@ function genExtModuleView() {
 // }
 
 
-function genEnumView() {
-    Object.keys(enumObj).forEach((e) => {
-        enumT.forEach((tline) => {
-            tline = tline.trim()
-            var key = tline[0] || '*'
-            if (WRITE_BACK.includes(key)) {
-                tline = tline.replace('%enumname%', e)
-                tline = tline.replace('%description%', enumObj[e]['descr'])
-                enum_mdout.push(tline)
-            } else if (TAKE_REPEAT_ACTION.includes(key)) {
-                enumObj[e]['values'].forEach( (a) => {
-                    var mline = dclone(tline).substr(1)
-                    if (a[1]) {
-                        mline = mline.replace('%value%', `:=${a[1]}`)
-                    }
-                    else {
-                        mline = mline.replace('%value%', '')
+function genEnumView(e='') {
+    enumT.forEach((tline) => {
+        tline = tline.trim()
+        var key = tline[0] || '*'
+        if (WRITE_BACK.includes(key)) {
+            tline = tline.replace('%enumname%', e)
+            tline = tline.replace('%description%', enumObj[e]['descr'])
+            enum_mdout.push(tline)
+        } else if (TAKE_REPEAT_ACTION.includes(key)) {
+            enumObj[e]['values'].forEach( (a) => {
+                var mline = dclone(tline).substr(1)
+                if (a[1]) {
+                    mline = mline.replace('%value%', `:=${a[1]}`)
+                }
+                else {
+                    mline = mline.replace('%value%', '')
 
-                    }
-                    mline = mline.replace('%member%', a[0])
-                    mline = mline.replace('%description%', a[2])
-                    enum_mdout.push(mline)
-                })
-            }
-        })
-        console.log(`*** Writing Enum file for ${e}`)
-        FileOps.writeFile(enum_mdout, `./markdown/${anchor}/${Utils.trimGenerics(e)}.md`)
-        enum_mdout = []
+                }
+                mline = mline.replace('%member%', a[0])
+                mline = mline.replace('%description%', a[2])
+                enum_mdout.push(mline)
+            })
+        }
     })
+    console.log(`*** Writing Enum file for ${e}`)
+    FileOps.writeFile(enum_mdout, `./markdown/${anchor}/${Utils.trimGenerics(e)}.md`)
+    enum_mdout = []
+    return
 }
-
-
 /**
 * START OF THE PROGRAM
 *
 *
-( )
 */
-
 console.log('** Starting Program...')
 FileOps.removeFolderRec('./markdown')
 console.log('** Removed existing markdown files...')
