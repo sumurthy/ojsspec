@@ -373,24 +373,53 @@ var dFunction = {
     classGenIndividual: function(e = '') {
         objectName = e
         genClassInterfaceModuleView(true, e, false)
+        return
     },
     interfaceGenIndividual: function(e = '') {
         objectName = e
         genClassInterfaceModuleView(false, e, false)
+        return
     },
     moduleGenIndividual: function(e = '') {
         objectName = e
         genClassInterfaceModuleView(false, e, true)
-
+        return
     },
     functionsGenIndividual: function(e = '') {
         genMemberview(e, functionObj[e], funcMthd_mdout, false, true)
         console.log(`*** Writing Function file for ${e}`)
         FileOps.writeFile(funcMthd_mdout, `./markdown/${anchor}/${Utils.trimGenerics(e)}.md`)
         funcMthd_mdout = []
+        return
     },
     enumerationGenIndividual: function(e = '') {
+        enumT.forEach((tline) => {
+            tline = tline.trim()
+            var key = tline[0] || '*'
+            if (WRITE_BACK.includes(key)) {
+                tline = tline.replace('%enumname%', e)
+                tline = tline.replace('%description%', enumObj[e]['descr'])
+                enum_mdout.push(tline)
+            } else if (TAKE_REPEAT_ACTION.includes(key)) {
+                enumObj[e]['values'].forEach( (a) => {
+                    var mline = dclone(tline).substr(1)
+                    if (a[1]) {
+                        mline = mline.replace('%value%', `:=${a[1]}`)
+                    }
+                    else {
+                        mline = mline.replace('%value%', '')
 
+                    }
+                    mline = mline.replace('%member%', a[0])
+                    mline = mline.replace('%description%', a[2])
+                    enum_mdout.push(mline)
+                })
+            }
+        })
+        console.log(`*** Writing Enum file for ${e}`)
+        FileOps.writeFile(enum_mdout, `./markdown/${anchor}/${Utils.trimGenerics(e)}.md`)
+        enum_mdout = []
+        return
     },
     typedefGenIndividual: function(e = '') {
 
@@ -674,20 +703,20 @@ function genExtModuleView() {
     console.log(`*** Writing External Module file for ${moduleName}`)
     FileOps.writeFile(mdout, `./markdown/${moduleName}.md`)
     //genFunctionView()
-    genEnumView()
+    //genEnumView()
 }
 /**
  * Not used -- remove
  * @return {[type]} [description]
  */
-function genFunctionView() {
-    Object.keys(functionObj).forEach((e) => {
-        genMemberview(e, functionObj[e], funcMthd_mdout, false, true)
-        console.log(`*** Writing Function file for ${e}`)
-        FileOps.writeFile(funcMthd_mdout, `./markdown/${anchor}/${Utils.trimGenerics(e)}.md`)
-        funcMthd_mdout = []
-    })
-}
+// function genFunctionView() {
+//     Object.keys(functionObj).forEach((e) => {
+//         genMemberview(e, functionObj[e], funcMthd_mdout, false, true)
+//         console.log(`*** Writing Function file for ${e}`)
+//         FileOps.writeFile(funcMthd_mdout, `./markdown/${anchor}/${Utils.trimGenerics(e)}.md`)
+//         funcMthd_mdout = []
+//     })
+// }
 
 
 function genEnumView() {
